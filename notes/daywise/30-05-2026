@@ -1,0 +1,65 @@
+# Day 2 30/05/2026 - Model Comparison
+
+## Concepts Learned
+
+Today I learned that different machine learning algorithms learn patterns differently.
+
+### Linear Regression
+
+Linear Regression assumes a linear relationship between inputs and outputs.
+
+It is simple, fast, and easy to understand.
+
+### Decision Tree
+
+Decision Trees make predictions by asking a series of questions.
+
+Example:
+
+If Previous Close > X
+
+Then predict Y
+
+Else predict Z
+
+Decision Trees can learn complex patterns but may overfit.
+
+### Random Forest
+
+Random Forest combines many Decision Trees.
+
+Instead of relying on a single tree, multiple trees vote together.
+
+This approach is called Ensemble Learning.
+
+### Ensemble Learning
+
+Many models work together to improve prediction quality.
+
+This often produces more stable and accurate results.
+
+### Bias vs Variance
+
+Bias:
+Model is too simple and cannot learn enough patterns.
+
+Variance:
+Model learns too many details and memorizes data.
+
+The goal is to balance bias and variance.
+
+## Practical Goal
+
+Compare:
+
+1. Linear Regression
+2. Decision Tree
+3. Random Forest
+
+using:
+
+* MAE
+* RMSE
+* R² Score
+
+and determine which model performs best on stock forecasting data.
