@@ -1,0 +1,130 @@
+Description,Category
+Uber Ride,Travel
+Ola Cab,Travel
+Flight Ticket,Travel
+Train Ticket,Travel
+Metro Card Recharge,Travel
+Airport Taxi,Travel
+Hotel Booking,Travel
+Business Travel Expense,Travel
+Cab Fare,Travel
+Taxi Bill,Travel
+Auto Rickshaw Fare,Travel
+Railway Booking,Travel
+Air India Ticket,Travel
+Indigo Flight Booking,Travel
+Travel Reimbursement,Travel
+
+Electricity Bill,Utilities
+Water Bill,Utilities
+Internet Bill,Utilities
+Airtel Broadband,Utilities
+Jio Fiber Payment,Utilities
+BSNL Bill,Utilities
+Office Electricity Payment,Utilities
+Utility Expense,Utilities
+Power Bill,Utilities
+Internet Recharge,Utilities
+WiFi Charges,Utilities
+Telephone Bill,Utilities
+Mobile Bill,Utilities
+Data Connection Charges,Utilities
+Electricity Charges,Utilities
+
+Salary Payment,Payroll
+Employee Salary,Payroll
+Staff Salary,Payroll
+Monthly Payroll,Payroll
+Salary Transfer,Payroll
+Payroll Expense,Payroll
+Wages Payment,Payroll
+Bonus Payment,Payroll
+HR Salary Transfer,Payroll
+Employee Reimbursement,Payroll
+Payroll Processing,Payroll
+Staff Wages,Payroll
+Salary Credit,Payroll
+Payroll Settlement,Payroll
+Worker Salary,Payroll
+
+Amazon Office Supplies,Office Expense
+Printer Purchase,Office Expense
+Laptop Purchase,Office Expense
+Office Chair Purchase,Office Expense
+Office Desk Purchase,Office Expense
+Stationery Purchase,Office Expense
+Office Equipment,Office Expense
+Printer Ink Purchase,Office Expense
+Computer Accessories,Office Expense
+Office Furniture,Office Expense
+Whiteboard Purchase,Office Expense
+Office Supplies Order,Office Expense
+Keyboard Purchase,Office Expense
+Mouse Purchase,Office Expense
+Office Maintenance,Office Expense
+
+Restaurant Client Meeting,Business Meeting
+Business Lunch,Business Meeting
+Client Dinner,Business Meeting
+Meeting Expense,Business Meeting
+Conference Lunch,Business Meeting
+Business Breakfast,Business Meeting
+Customer Meeting Expense,Business Meeting
+Sales Meeting Lunch,Business Meeting
+Project Discussion Dinner,Business Meeting
+Corporate Lunch,Business Meeting
+
+Google Ads Payment,Marketing
+Facebook Ads Payment,Marketing
+LinkedIn Ads,Marketing
+Marketing Campaign Expense,Marketing
+Promotional Expense,Marketing
+SEO Service Payment,Marketing
+Digital Marketing Charges,Marketing
+Advertisement Expense,Marketing
+Social Media Marketing,Marketing
+Marketing Agency Payment,Marketing
+
+Office Rent,Rent
+Monthly Rent,Rent
+Building Rent,Rent
+Workspace Rent,Rent
+Commercial Rent,Rent
+Office Lease Payment,Rent
+Rent Transfer,Rent
+Rental Expense,Rent
+Property Rent,Rent
+Office Space Rent,Rent
+
+ChatGPT Subscription,Software
+GitHub Subscription,Software
+Zoom Subscription,Software
+Microsoft 365,Software
+Canva Subscription,Software
+Adobe Subscription,Software
+Software License Fee,Software
+Cloud Hosting Fee,Software
+AWS Subscription,Software
+Google Workspace,Software
+
+GST Payment,GST
+CGST Payment,GST
+SGST Payment,GST
+IGST Payment,GST
+GST Challan,GST
+GST Liability Payment,GST
+GST Return Filing,GST
+Tax Payment GST,GST
+GST Expense,GST
+GST Settlement,GST
+
+Bank Charges,Bank Charges
+ATM Charges,Bank Charges
+Cheque Bounce Charges,Bank Charges
+Processing Charges,Bank Charges
+Account Maintenance Charges,Bank Charges
+RTGS Charges,Bank Charges
+NEFT Charges,Bank Charges
+Bank Service Fee,Bank Charges
+Transaction Charges,Bank Charges
+Bank Penalty,Bank Charges

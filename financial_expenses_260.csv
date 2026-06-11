@@ -1,0 +1,236 @@
+Description,Category
+Uber Ride,Travel
+Ola Cab,Travel
+Flight Ticket,Travel
+Train Ticket,Travel
+Metro Card Recharge,Travel
+Airport Taxi,Travel
+Hotel Booking,Travel
+Business Travel Expense,Travel
+Cab Fare,Travel
+Taxi Bill,Travel
+Auto Rickshaw Fare,Travel
+Railway Booking,Travel
+Air India Ticket,Travel
+Indigo Flight Booking,Travel
+Travel Reimbursement,Travel
+Corporate Taxi,Travel
+Airport Pickup,Travel
+Airport Drop,Travel
+Client Visit Travel,Travel
+Business Flight Booking,Travel
+Local Travel Expense,Travel
+Travel Advance,Travel
+Hotel Stay Expense,Travel
+Outstation Travel,Travel
+Cab Booking Expense,Travel
+Electricity Bill,Utilities
+Water Bill,Utilities
+Internet Bill,Utilities
+Airtel Broadband,Utilities
+Jio Fiber Payment,Utilities
+BSNL Bill,Utilities
+Office Electricity Payment,Utilities
+Utility Expense,Utilities
+Power Bill,Utilities
+Internet Recharge,Utilities
+WiFi Charges,Utilities
+Telephone Bill,Utilities
+Mobile Bill,Utilities
+Data Connection Charges,Utilities
+Electricity Charges,Utilities
+Office Water Charges,Utilities
+Electric Meter Recharge,Utilities
+Fiber Internet Bill,Utilities
+Broadband Renewal,Utilities
+Utility Service Charges,Utilities
+Office Mobile Recharge,Utilities
+Landline Bill,Utilities
+Network Charges,Utilities
+Data Pack Recharge,Utilities
+Internet Service Provider Bill,Utilities
+Salary Payment,Payroll
+Employee Salary,Payroll
+Staff Salary,Payroll
+Monthly Payroll,Payroll
+Salary Transfer,Payroll
+Payroll Expense,Payroll
+Wages Payment,Payroll
+Bonus Payment,Payroll
+HR Salary Transfer,Payroll
+Employee Reimbursement,Payroll
+Payroll Processing,Payroll
+Staff Wages,Payroll
+Salary Credit,Payroll
+Payroll Settlement,Payroll
+Worker Salary,Payroll
+Contractor Payment,Payroll
+Employee Bonus,Payroll
+Festival Bonus,Payroll
+Salary Advance,Payroll
+Payroll Adjustment,Payroll
+Attendance Incentive,Payroll
+Overtime Payment,Payroll
+Staff Allowance,Payroll
+Employee Benefits,Payroll
+HR Payroll Expense,Payroll
+Amazon Office Supplies,Office Expense
+Printer Purchase,Office Expense
+Laptop Purchase,Office Expense
+Office Chair Purchase,Office Expense
+Office Desk Purchase,Office Expense
+Stationery Purchase,Office Expense
+Office Equipment,Office Expense
+Printer Ink Purchase,Office Expense
+Computer Accessories,Office Expense
+Office Furniture,Office Expense
+Whiteboard Purchase,Office Expense
+Office Supplies Order,Office Expense
+Keyboard Purchase,Office Expense
+Mouse Purchase,Office Expense
+Office Maintenance,Office Expense
+Monitor Purchase,Office Expense
+Scanner Purchase,Office Expense
+UPS Purchase,Office Expense
+Office Cleaning Expense,Office Expense
+Office Repair Expense,Office Expense
+Projector Purchase,Office Expense
+Printer Repair,Office Expense
+Paper Purchase,Office Expense
+Stapler Purchase,Office Expense
+Office Consumables,Office Expense
+Restaurant Client Meeting,Business Meeting
+Business Lunch,Business Meeting
+Client Dinner,Business Meeting
+Meeting Expense,Business Meeting
+Conference Lunch,Business Meeting
+Business Breakfast,Business Meeting
+Customer Meeting Expense,Business Meeting
+Sales Meeting Lunch,Business Meeting
+Project Discussion Dinner,Business Meeting
+Corporate Lunch,Business Meeting
+Management Meeting,Business Meeting
+Board Meeting Lunch,Business Meeting
+Executive Dinner,Business Meeting
+Investor Meeting,Business Meeting
+Client Coffee Meeting,Business Meeting
+Business Networking Event,Business Meeting
+Vendor Meeting Lunch,Business Meeting
+Sales Presentation Lunch,Business Meeting
+Project Review Meeting,Business Meeting
+Business Conference Dinner,Business Meeting
+Google Ads Payment,Marketing
+Facebook Ads Payment,Marketing
+LinkedIn Ads,Marketing
+Marketing Campaign Expense,Marketing
+Promotional Expense,Marketing
+SEO Service Payment,Marketing
+Digital Marketing Charges,Marketing
+Advertisement Expense,Marketing
+Social Media Marketing,Marketing
+Marketing Agency Payment,Marketing
+Google Search Ads,Marketing
+Instagram Ads,Marketing
+YouTube Ads,Marketing
+Email Marketing Service,Marketing
+Marketing Consultant Fee,Marketing
+Lead Generation Expense,Marketing
+Brand Promotion Expense,Marketing
+Influencer Marketing,Marketing
+Online Advertising,Marketing
+Campaign Management Fee,Marketing
+Office Rent,Rent
+Monthly Rent,Rent
+Building Rent,Rent
+Workspace Rent,Rent
+Commercial Rent,Rent
+Office Lease Payment,Rent
+Rent Transfer,Rent
+Rental Expense,Rent
+Property Rent,Rent
+Office Space Rent,Rent
+Warehouse Rent,Rent
+Storage Rent,Rent
+Shop Rent,Rent
+Office Rental Charges,Rent
+Premises Rent,Rent
+ChatGPT Subscription,Software
+GitHub Subscription,Software
+Zoom Subscription,Software
+Microsoft 365,Software
+Canva Subscription,Software
+Adobe Subscription,Software
+Software License Fee,Software
+Cloud Hosting Fee,Software
+AWS Subscription,Software
+Google Workspace,Software
+OpenAI API Charges,Software
+Cursor Subscription,Software
+Claude Subscription,Software
+Figma Subscription,Software
+Notion Subscription,Software
+DigitalOcean Hosting,Software
+VPS Hosting Charges,Software
+Domain Renewal,Software
+SSL Certificate Renewal,Software
+Software Maintenance Fee,Software
+GST Payment,GST
+CGST Payment,GST
+SGST Payment,GST
+IGST Payment,GST
+GST Challan,GST
+GST Liability Payment,GST
+GST Return Filing,GST
+Tax Payment GST,GST
+GST Expense,GST
+GST Settlement,GST
+GST Interest Payment,GST
+GST Late Fee,GST
+GST Demand Payment,GST
+GST Adjustment,GST
+GST Refund Processing,GST
+GST Filing Charges,GST
+GST Portal Payment,GST
+GST Penalty,GST
+GST Reconciliation Expense,GST
+GST Assessment Payment,GST
+Bank Charges,Bank Charges
+ATM Charges,Bank Charges
+Cheque Bounce Charges,Bank Charges
+Processing Charges,Bank Charges
+Account Maintenance Charges,Bank Charges
+RTGS Charges,Bank Charges
+NEFT Charges,Bank Charges
+Bank Service Fee,Bank Charges
+Transaction Charges,Bank Charges
+Bank Penalty,Bank Charges
+Bank SMS Charges,Bank Charges
+Debit Card Annual Fee,Bank Charges
+Credit Card Charges,Bank Charges
+Bank Processing Fee,Bank Charges
+Account Statement Charges,Bank Charges
+Cash Deposit Charges,Bank Charges
+Cheque Book Charges,Bank Charges
+Bank Documentation Charges,Bank Charges
+Online Banking Charges,Bank Charges
+Bank Transaction Fee,Bank Charges
+Vendor Payment,Vendor Payment
+Supplier Payment,Vendor Payment
+Raw Material Purchase,Vendor Payment
+Vendor Settlement,Vendor Payment
+Purchase Invoice Payment,Vendor Payment
+Contractor Invoice Payment,Vendor Payment
+Supplier Transfer,Vendor Payment
+Vendor Advance,Vendor Payment
+Vendor Bill Payment,Vendor Payment
+Material Purchase Expense,Vendor Payment
+Health Insurance Premium,Insurance
+Vehicle Insurance,Insurance
+Office Insurance,Insurance
+Group Insurance Policy,Insurance
+Professional Liability Insurance,Insurance
+Fire Insurance Premium,Insurance
+Business Insurance,Insurance
+Employee Insurance,Insurance
+Insurance Renewal,Insurance
+Insurance Claim Charges,Insurance
