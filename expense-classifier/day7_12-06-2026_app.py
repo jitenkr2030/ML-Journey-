@@ -7,9 +7,13 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from sklearn.naive_bayes import MultinomialNB
 
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix
+)
 
-print("\nFinancial Expense Classification - Day 6")
+print("\nFinancial Expense Classification - Day 7")
 
 # ==================================
 # LOAD DATASET
@@ -18,7 +22,7 @@ print("\nFinancial Expense Classification - Day 6")
 print("\nLoading CSV Dataset...")
 
 df = pd.read_csv(
-    "financial_expenses_260.csv"
+    "financial_expenses_1000.csv"
 )
 
 print("\nDataset Preview:")
@@ -42,7 +46,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
     test_size=0.20,
-    random_state=42
+    random_state=20
 )
 
 print("\nTraining Records :", len(X_train))
@@ -88,7 +92,7 @@ predictions = model.predict(
 )
 
 # ==================================
-# EVALUATION
+# ACCURACY
 # ==================================
 
 accuracy = accuracy_score(
@@ -99,17 +103,77 @@ accuracy = accuracy_score(
 print("\nModel Accuracy :", round(accuracy, 4))
 
 # ==================================
+# CLASSIFICATION REPORT
+# ==================================
+
+print("\n" + "=" * 60)
+print("CLASSIFICATION REPORT")
+print("=" * 60)
+
+print(
+    classification_report(
+        y_test,
+        predictions
+    )
+)
+
+# ==================================
+# CONFUSION MATRIX
+# ==================================
+
+print("\n" + "=" * 60)
+print("CONFUSION MATRIX")
+print("=" * 60)
+
+cm = confusion_matrix(
+    y_test,
+    predictions
+)
+
+print(cm)
+
+# ==================================
+# WRONG PREDICTIONS
+# ==================================
+
+print("\n" + "=" * 60)
+print("WRONG PREDICTIONS")
+print("=" * 60)
+
+results = pd.DataFrame({
+    "Description": X_test.values,
+    "Actual": y_test.values,
+    "Predicted": predictions
+})
+
+wrong_predictions = results[
+    results["Actual"] != results["Predicted"]
+]
+
+if len(wrong_predictions) > 0:
+
+    print(
+        wrong_predictions.head(10)
+    )
+
+else:
+
+    print(
+        "No Wrong Predictions Found!"
+    )
+
+# ==================================
 # SAVE MODEL
 # ==================================
 
 joblib.dump(
     model,
-    "expense-classifier/expense_classifier.pkl"
+    "expense-classifier/expense_classifier_day7.pkl"
 )
 
 joblib.dump(
     vectorizer,
-    "expense-classifier/tfidf_vectorizer.pkl"
+    "expense-classifier/tfidf_vectorizer_day7.pkl"
 )
 
 print("\nModel Saved Successfully!")
@@ -119,11 +183,11 @@ print("\nModel Saved Successfully!")
 # ==================================
 
 loaded_model = joblib.load(
-    "expense-classifier/expense_classifier.pkl"
+    "expense-classifier/expense_classifier_day7.pkl"
 )
 
 loaded_vectorizer = joblib.load(
-    "expense-classifier/tfidf_vectorizer.pkl"
+    "expense-classifier/tfidf_vectorizer_day7.pkl"
 )
 
 print("Model Loaded Successfully!")
@@ -148,8 +212,11 @@ sample_expenses = [
 
     "Facebook Advertisement",
 
-    "GST Payment"
+    "GST Payment",
 
+    "Bank Service Charges",
+
+    "AWS Cloud Hosting"
 ]
 
 sample_vector = loaded_vectorizer.transform(
@@ -160,7 +227,9 @@ sample_predictions = loaded_model.predict(
     sample_vector
 )
 
-print("\nExpense Predictions")
+print("\n" + "=" * 60)
+print("EXPENSE PREDICTIONS")
+print("=" * 60)
 
 for expense, category in zip(
     sample_expenses,
@@ -171,4 +240,4 @@ for expense, category in zip(
         f"{expense} --> {category}"
     )
 
-print("\nDay 6 Completed Successfully!")
+print("\nDay 7 Completed Successfully!")

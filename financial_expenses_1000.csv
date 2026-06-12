@@ -1,0 +1,1236 @@
+Description,Category
+Uber Ride,Travel
+Ola Cab,Travel
+Flight Ticket,Travel
+Train Ticket,Travel
+Metro Card Recharge,Travel
+Airport Taxi,Travel
+Hotel Booking,Travel
+Business Travel Expense,Travel
+Cab Fare,Travel
+Taxi Bill,Travel
+Auto Rickshaw Fare,Travel
+Railway Booking,Travel
+Air India Ticket,Travel
+Indigo Flight Booking,Travel
+Travel Reimbursement,Travel
+Corporate Taxi,Travel
+Airport Pickup,Travel
+Airport Drop,Travel
+Client Visit Travel,Travel
+Business Flight Booking,Travel
+Local Travel Expense,Travel
+Travel Advance,Travel
+Hotel Stay Expense,Travel
+Outstation Travel,Travel
+Cab Booking Expense,Travel
+Electricity Bill,Utilities
+Water Bill,Utilities
+Internet Bill,Utilities
+Airtel Broadband,Utilities
+Jio Fiber Payment,Utilities
+BSNL Bill,Utilities
+Office Electricity Payment,Utilities
+Utility Expense,Utilities
+Power Bill,Utilities
+Internet Recharge,Utilities
+WiFi Charges,Utilities
+Telephone Bill,Utilities
+Mobile Bill,Utilities
+Data Connection Charges,Utilities
+Electricity Charges,Utilities
+Office Water Charges,Utilities
+Electric Meter Recharge,Utilities
+Fiber Internet Bill,Utilities
+Broadband Renewal,Utilities
+Utility Service Charges,Utilities
+Office Mobile Recharge,Utilities
+Landline Bill,Utilities
+Network Charges,Utilities
+Data Pack Recharge,Utilities
+Internet Service Provider Bill,Utilities
+Salary Payment,Payroll
+Employee Salary,Payroll
+Staff Salary,Payroll
+Monthly Payroll,Payroll
+Salary Transfer,Payroll
+Payroll Expense,Payroll
+Wages Payment,Payroll
+Bonus Payment,Payroll
+HR Salary Transfer,Payroll
+Employee Reimbursement,Payroll
+Payroll Processing,Payroll
+Staff Wages,Payroll
+Salary Credit,Payroll
+Payroll Settlement,Payroll
+Worker Salary,Payroll
+Contractor Payment,Payroll
+Employee Bonus,Payroll
+Festival Bonus,Payroll
+Salary Advance,Payroll
+Payroll Adjustment,Payroll
+Attendance Incentive,Payroll
+Overtime Payment,Payroll
+Staff Allowance,Payroll
+Employee Benefits,Payroll
+HR Payroll Expense,Payroll
+Amazon Office Supplies,Office Expense
+Printer Purchase,Office Expense
+Laptop Purchase,Office Expense
+Office Chair Purchase,Office Expense
+Office Desk Purchase,Office Expense
+Stationery Purchase,Office Expense
+Office Equipment,Office Expense
+Printer Ink Purchase,Office Expense
+Computer Accessories,Office Expense
+Office Furniture,Office Expense
+Whiteboard Purchase,Office Expense
+Office Supplies Order,Office Expense
+Keyboard Purchase,Office Expense
+Mouse Purchase,Office Expense
+Office Maintenance,Office Expense
+Monitor Purchase,Office Expense
+Scanner Purchase,Office Expense
+UPS Purchase,Office Expense
+Office Cleaning Expense,Office Expense
+Office Repair Expense,Office Expense
+Projector Purchase,Office Expense
+Printer Repair,Office Expense
+Paper Purchase,Office Expense
+Stapler Purchase,Office Expense
+Office Consumables,Office Expense
+Restaurant Client Meeting,Business Meeting
+Business Lunch,Business Meeting
+Client Dinner,Business Meeting
+Meeting Expense,Business Meeting
+Conference Lunch,Business Meeting
+Business Breakfast,Business Meeting
+Customer Meeting Expense,Business Meeting
+Sales Meeting Lunch,Business Meeting
+Project Discussion Dinner,Business Meeting
+Corporate Lunch,Business Meeting
+Management Meeting,Business Meeting
+Board Meeting Lunch,Business Meeting
+Executive Dinner,Business Meeting
+Investor Meeting,Business Meeting
+Client Coffee Meeting,Business Meeting
+Business Networking Event,Business Meeting
+Vendor Meeting Lunch,Business Meeting
+Sales Presentation Lunch,Business Meeting
+Project Review Meeting,Business Meeting
+Business Conference Dinner,Business Meeting
+Google Ads Payment,Marketing
+Facebook Ads Payment,Marketing
+LinkedIn Ads,Marketing
+Marketing Campaign Expense,Marketing
+Promotional Expense,Marketing
+SEO Service Payment,Marketing
+Digital Marketing Charges,Marketing
+Advertisement Expense,Marketing
+Social Media Marketing,Marketing
+Marketing Agency Payment,Marketing
+Google Search Ads,Marketing
+Instagram Ads,Marketing
+YouTube Ads,Marketing
+Email Marketing Service,Marketing
+Marketing Consultant Fee,Marketing
+Lead Generation Expense,Marketing
+Brand Promotion Expense,Marketing
+Influencer Marketing,Marketing
+Online Advertising,Marketing
+Campaign Management Fee,Marketing
+Office Rent,Rent
+Monthly Rent,Rent
+Building Rent,Rent
+Workspace Rent,Rent
+Commercial Rent,Rent
+Office Lease Payment,Rent
+Rent Transfer,Rent
+Rental Expense,Rent
+Property Rent,Rent
+Office Space Rent,Rent
+Warehouse Rent,Rent
+Storage Rent,Rent
+Shop Rent,Rent
+Office Rental Charges,Rent
+Premises Rent,Rent
+ChatGPT Subscription,Software
+GitHub Subscription,Software
+Zoom Subscription,Software
+Microsoft 365,Software
+Canva Subscription,Software
+Adobe Subscription,Software
+Software License Fee,Software
+Cloud Hosting Fee,Software
+AWS Subscription,Software
+Google Workspace,Software
+OpenAI API Charges,Software
+Cursor Subscription,Software
+Claude Subscription,Software
+Figma Subscription,Software
+Notion Subscription,Software
+DigitalOcean Hosting,Software
+VPS Hosting Charges,Software
+Domain Renewal,Software
+SSL Certificate Renewal,Software
+Software Maintenance Fee,Software
+GST Payment,GST
+CGST Payment,GST
+SGST Payment,GST
+IGST Payment,GST
+GST Challan,GST
+GST Liability Payment,GST
+GST Return Filing,GST
+Tax Payment GST,GST
+GST Expense,GST
+GST Settlement,GST
+GST Interest Payment,GST
+GST Late Fee,GST
+GST Demand Payment,GST
+GST Adjustment,GST
+GST Refund Processing,GST
+GST Filing Charges,GST
+GST Portal Payment,GST
+GST Penalty,GST
+GST Reconciliation Expense,GST
+GST Assessment Payment,GST
+Bank Charges,Bank Charges
+ATM Charges,Bank Charges
+Cheque Bounce Charges,Bank Charges
+Processing Charges,Bank Charges
+Account Maintenance Charges,Bank Charges
+RTGS Charges,Bank Charges
+NEFT Charges,Bank Charges
+Bank Service Fee,Bank Charges
+Transaction Charges,Bank Charges
+Bank Penalty,Bank Charges
+Bank SMS Charges,Bank Charges
+Debit Card Annual Fee,Bank Charges
+Credit Card Charges,Bank Charges
+Bank Processing Fee,Bank Charges
+Account Statement Charges,Bank Charges
+Cash Deposit Charges,Bank Charges
+Cheque Book Charges,Bank Charges
+Bank Documentation Charges,Bank Charges
+Online Banking Charges,Bank Charges
+Bank Transaction Fee,Bank Charges
+Vendor Payment,Vendor Payment
+Supplier Payment,Vendor Payment
+Raw Material Purchase,Vendor Payment
+Vendor Settlement,Vendor Payment
+Purchase Invoice Payment,Vendor Payment
+Contractor Invoice Payment,Vendor Payment
+Supplier Transfer,Vendor Payment
+Vendor Advance,Vendor Payment
+Vendor Bill Payment,Vendor Payment
+Material Purchase Expense,Vendor Payment
+Health Insurance Premium,Insurance
+Vehicle Insurance,Insurance
+Office Insurance,Insurance
+Group Insurance Policy,Insurance
+Professional Liability Insurance,Insurance
+Fire Insurance Premium,Insurance
+Business Insurance,Insurance
+Employee Insurance,Insurance
+Insurance Renewal,Insurance
+Insurance Claim Charges,Insurance
+Airtel Google Ads Rs 66529,Marketing
+Tata CGST Payment Rs 43150,GST
+Amazon Laptop Purchase Rs 42163,Office Expense
+Amazon CA Fees Rs 12550,Professional Fees
+Ola Payroll Processing Rs 39017,Payroll
+AWS Property Rent Rs 93837,Rent
+Ola GitHub Subscription Rs 37916,Software
+Microsoft Taxi Fare Rs 77314,Travel
+OpenAI Bonus Payment Rs 61584,Payroll
+Amazon Hotel Stay Rs 73618,Travel
+Flipkart Water Bill Rs 62128,Utilities
+Adobe Facebook Ads Rs 61288,Marketing
+Reliance AWS Hosting Rs 38229,Software
+Uber Staff Salary Rs 15454,Payroll
+Reliance SGST Payment Rs 60327,GST
+BSNL Health Insurance Rs 49416,Insurance
+Jio Salary Payment Rs 6206,Payroll
+Amazon Vehicle Insurance Rs 10261,Insurance
+Tata Vehicle Loan EMI Rs 3536,Loan Payment
+Adobe Property Rent Rs 1345,Rent
+Flipkart TDS Deposit Rs 77528,TDS Payment
+Adobe GST Payment Rs 64134,GST
+Flipkart Bank Loan EMI Rs 72670,Loan Payment
+Microsoft Salary Payment Rs 35604,Payroll
+Jio Salary Payment Rs 9259,Payroll
+Amazon Payroll Processing Rs 50855,Payroll
+Infosys TDS Payment Rs 81127,TDS Payment
+Uber Taxi Fare Rs 70465,Travel
+Reliance ChatGPT Subscription Rs 19395,Software
+Infosys Staff Salary Rs 54291,Payroll
+Infosys Flight Ticket Rs 41460,Travel
+Jio Facebook Ads Rs 6672,Marketing
+OpenAI Office Maintenance Rs 52270,Office Expense
+Infosys Mobile Recharge Rs 73411,Utilities
+Infosys Business Loan EMI Rs 88405,Loan Payment
+Ola CA Fees Rs 34626,Professional Fees
+OpenAI NEFT Charges Rs 86875,Bank Charges
+Infosys Bonus Payment Rs 38366,Payroll
+Uber SGST Payment Rs 69209,GST
+Microsoft CA Fees Rs 42138,Professional Fees
+Google Bank Service Fee Rs 48868,Bank Charges
+Microsoft Business Loan EMI Rs 14967,Loan Payment
+Infosys Commercial Rent Rs 1429,Rent
+BSNL Supplier Payment Rs 86874,Vendor Payment
+Ola AWS Hosting Rs 86454,Software
+Airtel CA Fees Rs 59303,Professional Fees
+Flipkart Office Insurance Rs 97476,Insurance
+Infosys Office Maintenance Rs 50717,Office Expense
+Jio CGST Payment Rs 18063,GST
+Ola Google Workspace Rs 18062,Software
+Ola GST Payment Rs 84349,GST
+OpenAI Office Insurance Rs 35127,Insurance
+Amazon RTGS Charges Rs 88793,Bank Charges
+Infosys Facebook Ads Rs 21374,Marketing
+OpenAI Flight Ticket Rs 7498,Travel
+Adobe TDS Challan Rs 77381,TDS Payment
+Reliance Vehicle Loan EMI Rs 45169,Loan Payment
+Tata TDS Challan Rs 79424,TDS Payment
+Amazon Google Ads Rs 61499,Marketing
+Tata Property Rent Rs 24847,Rent
+Jio Business Loan EMI Rs 15513,Loan Payment
+AWS Google Workspace Rs 90020,Software
+Airtel Bank Loan EMI Rs 94766,Loan Payment
+Jio Flight Ticket Rs 94980,Travel
+Airtel Marketing Campaign Rs 24134,Marketing
+Tata TDS Payment Rs 66112,TDS Payment
+Reliance IGST Payment Rs 60672,GST
+Infosys Internet Bill Rs 7895,Utilities
+Airtel Marketing Campaign Rs 24078,Marketing
+Ola TDS Challan Rs 56959,TDS Payment
+Airtel Marketing Campaign Rs 13921,Marketing
+Tata ATM Charges Rs 54611,Bank Charges
+AWS Bank Service Fee Rs 82489,Bank Charges
+Infosys Consulting Charges Rs 12749,Professional Fees
+Microsoft Electricity Bill Rs 49818,Utilities
+OpenAI Warehouse Rent Rs 54838,Rent
+Airtel Mobile Recharge Rs 39161,Utilities
+Microsoft Hotel Stay Rs 96198,Travel
+Microsoft Google Ads Rs 13264,Marketing
+Jio Broadband Payment Rs 44075,Utilities
+OpenAI Train Ticket Rs 802,Travel
+AWS Electricity Bill Rs 25471,Utilities
+Ola Stationery Purchase Rs 18378,Office Expense
+Google Stationery Purchase Rs 59964,Office Expense
+OpenAI Vehicle Loan EMI Rs 16813,Loan Payment
+Microsoft TDS Deposit Rs 78021,TDS Payment
+Amazon Salary Payment Rs 45981,Payroll
+Tata Vendor Payment Rs 76664,Vendor Payment
+Jio Instagram Ads Rs 86189,Marketing
+Reliance CGST Payment Rs 22332,GST
+Reliance Bonus Payment Rs 85170,Payroll
+Airtel TDS Payment Rs 81373,TDS Payment
+Flipkart Warehouse Rent Rs 70846,Rent
+AWS GitHub Subscription Rs 85121,Software
+Reliance Contractor Invoice Rs 96106,Vendor Payment
+Airtel GST Payment Rs 7041,GST
+Ola Commercial Rent Rs 40815,Rent
+Jio Payroll Processing Rs 79299,Payroll
+Uber Business Loan EMI Rs 22214,Loan Payment
+Amazon SEO Charges Rs 56897,Marketing
+AWS TDS Payment Rs 8440,TDS Payment
+Infosys Bank Loan EMI Rs 86876,Loan Payment
+Amazon Vehicle Loan EMI Rs 71741,Loan Payment
+Tata AWS Hosting Rs 19240,Software
+Reliance Laptop Purchase Rs 34133,Office Expense
+Uber Train Ticket Rs 60575,Travel
+Google Accounting Services Rs 20245,Professional Fees
+Airtel RTGS Charges Rs 50822,Bank Charges
+Jio Contractor Invoice Rs 18579,Vendor Payment
+BSNL IGST Payment Rs 63194,GST
+Google Business Insurance Rs 48695,Insurance
+Infosys Accounting Services Rs 7358,Professional Fees
+Adobe CA Fees Rs 37623,Professional Fees
+BSNL Office Rent Rs 76161,Rent
+OpenAI Commercial Rent Rs 84313,Rent
+AWS Bonus Payment Rs 65140,Payroll
+Flipkart Taxi Fare Rs 37051,Travel
+Airtel Contractor Invoice Rs 5297,Vendor Payment
+Flipkart Raw Material Purchase Rs 51535,Vendor Payment
+Google Zoom Subscription Rs 94256,Software
+Infosys Warehouse Rent Rs 57319,Rent
+Jio Water Bill Rs 46692,Utilities
+Uber Cab Booking Rs 79335,Travel
+BSNL Contractor Invoice Rs 4442,Vendor Payment
+Uber GitHub Subscription Rs 11792,Software
+Flipkart Train Ticket Rs 83503,Travel
+Reliance Business Loan EMI Rs 39079,Loan Payment
+OpenAI GST Payment Rs 72402,GST
+Flipkart IGST Payment Rs 22585,GST
+Tata CGST Payment Rs 40815,GST
+Uber Internet Bill Rs 61938,Utilities
+Airtel Bank Loan EMI Rs 23805,Loan Payment
+Airtel Salary Payment Rs 38573,Payroll
+AWS Water Bill Rs 44720,Utilities
+Airtel Zoom Subscription Rs 90440,Software
+Ola Accounting Services Rs 20526,Professional Fees
+Jio Internet Bill Rs 18635,Utilities
+Infosys Bonus Payment Rs 15923,Payroll
+BSNL Instagram Ads Rs 62789,Marketing
+Microsoft Raw Material Purchase Rs 94457,Vendor Payment
+Google Business Loan EMI Rs 75609,Loan Payment
+Google ATM Charges Rs 8848,Bank Charges
+Amazon GST Payment Rs 47029,GST
+Google Water Bill Rs 28977,Utilities
+Airtel Vehicle Loan EMI Rs 31123,Loan Payment
+OpenAI Hotel Stay Rs 12734,Travel
+Jio TDS Payment Rs 35687,TDS Payment
+Google CA Fees Rs 56773,Professional Fees
+Reliance Vehicle Loan EMI Rs 52625,Loan Payment
+Ola SGST Payment Rs 71353,GST
+Ola Supplier Payment Rs 48013,Vendor Payment
+OpenAI AWS Hosting Rs 28023,Software
+Uber Raw Material Purchase Rs 2829,Vendor Payment
+Airtel TDS Challan Rs 13273,TDS Payment
+Microsoft Facebook Ads Rs 75168,Marketing
+AWS Accounting Services Rs 16097,Professional Fees
+Google Business Loan EMI Rs 85204,Loan Payment
+OpenAI Business Loan EMI Rs 50617,Loan Payment
+Adobe Staff Salary Rs 77999,Payroll
+OpenAI Health Insurance Rs 47160,Insurance
+Infosys Business Loan EMI Rs 61898,Loan Payment
+Amazon Warehouse Rent Rs 5346,Rent
+Airtel Health Insurance Rs 82263,Insurance
+Jio Health Insurance Rs 83210,Insurance
+BSNL Office Insurance Rs 69381,Insurance
+Reliance Facebook Ads Rs 98541,Marketing
+Adobe SGST Payment Rs 17334,GST
+Ola Mobile Recharge Rs 45550,Utilities
+Adobe Water Bill Rs 47305,Utilities
+Adobe Accounting Services Rs 13250,Professional Fees
+Microsoft Business Insurance Rs 60559,Insurance
+Infosys Google Ads Rs 74752,Marketing
+Infosys GST Payment Rs 988,GST
+AWS Stationery Purchase Rs 56392,Office Expense
+AWS Business Loan EMI Rs 90193,Loan Payment
+Adobe IGST Payment Rs 65586,GST
+Adobe Flight Ticket Rs 45459,Travel
+Microsoft Cab Booking Rs 78208,Travel
+Infosys CA Fees Rs 46007,Professional Fees
+Reliance GitHub Subscription Rs 53799,Software
+OpenAI Google Ads Rs 68539,Marketing
+Flipkart SGST Payment Rs 81656,GST
+Infosys NEFT Charges Rs 43909,Bank Charges
+Microsoft Cab Booking Rs 51081,Travel
+Microsoft Mobile Recharge Rs 36227,Utilities
+Flipkart Staff Salary Rs 65107,Payroll
+OpenAI Salary Payment Rs 2110,Payroll
+Ola Flight Ticket Rs 13084,Travel
+Tata CA Fees Rs 66870,Professional Fees
+Reliance Facebook Ads Rs 55521,Marketing
+Uber Water Bill Rs 51821,Utilities
+Uber Taxi Fare Rs 76695,Travel
+BSNL Warehouse Rent Rs 87052,Rent
+OpenAI Supplier Payment Rs 25194,Vendor Payment
+BSNL Supplier Payment Rs 50903,Vendor Payment
+Flipkart Property Rent Rs 53604,Rent
+Ola Broadband Payment Rs 91104,Utilities
+Ola Water Bill Rs 20101,Utilities
+Amazon Google Ads Rs 15899,Marketing
+Adobe NEFT Charges Rs 24212,Bank Charges
+Amazon Professional Charges Rs 61456,Professional Fees
+Adobe Vendor Payment Rs 80116,Vendor Payment
+Microsoft GitHub Subscription Rs 20059,Software
+Jio TDS Deposit Rs 29330,TDS Payment
+Ola Printer Purchase Rs 52027,Office Expense
+Infosys CGST Payment Rs 98890,GST
+Amazon TDS Deposit Rs 88794,TDS Payment
+Adobe Vehicle Insurance Rs 28355,Insurance
+Google Vehicle Loan EMI Rs 85832,Loan Payment
+Reliance Contractor Invoice Rs 64587,Vendor Payment
+OpenAI IGST Payment Rs 35333,GST
+Infosys RTGS Charges Rs 52596,Bank Charges
+BSNL SEO Charges Rs 56837,Marketing
+Jio Consulting Charges Rs 83900,Professional Fees
+Airtel TDS Payment Rs 44648,TDS Payment
+Airtel Vendor Payment Rs 61141,Vendor Payment
+Google Instagram Ads Rs 16112,Marketing
+Uber Professional Charges Rs 25095,Professional Fees
+Microsoft Staff Salary Rs 45900,Payroll
+BSNL Laptop Purchase Rs 47797,Office Expense
+Ola Internet Bill Rs 68210,Utilities
+Google RTGS Charges Rs 89708,Bank Charges
+BSNL TDS Deposit Rs 18167,TDS Payment
+Microsoft Contractor Invoice Rs 69477,Vendor Payment
+Jio Google Workspace Rs 43195,Software
+Adobe Electricity Bill Rs 62653,Utilities
+AWS Cab Booking Rs 32604,Travel
+Jio IGST Payment Rs 38340,GST
+BSNL ChatGPT Subscription Rs 4793,Software
+BSNL Taxi Fare Rs 58964,Travel
+Tata Broadband Payment Rs 11220,Utilities
+Amazon TDS Challan Rs 98990,TDS Payment
+Infosys Vendor Payment Rs 3746,Vendor Payment
+BSNL Staff Salary Rs 53770,Payroll
+Uber Health Insurance Rs 37743,Insurance
+Uber SEO Charges Rs 96327,Marketing
+Adobe Bank Service Fee Rs 26886,Bank Charges
+Amazon SEO Charges Rs 39816,Marketing
+Microsoft Cab Booking Rs 93683,Travel
+Tata Business Insurance Rs 55987,Insurance
+Adobe Office Insurance Rs 72474,Insurance
+AWS Consulting Charges Rs 10653,Professional Fees
+OpenAI Hotel Stay Rs 2841,Travel
+Amazon CGST Payment Rs 96741,GST
+Tata TDS Deposit Rs 67325,TDS Payment
+OpenAI TDS Payment Rs 73721,TDS Payment
+OpenAI Health Insurance Rs 87256,Insurance
+Amazon IGST Payment Rs 69633,GST
+Infosys Facebook Ads Rs 6802,Marketing
+Microsoft Staff Salary Rs 4320,Payroll
+Adobe ATM Charges Rs 96530,Bank Charges
+Reliance IGST Payment Rs 79132,GST
+Flipkart TDS Deposit Rs 53715,TDS Payment
+OpenAI Staff Salary Rs 56578,Payroll
+BSNL Supplier Payment Rs 79970,Vendor Payment
+Adobe Bank Loan EMI Rs 814,Loan Payment
+Ola Business Loan EMI Rs 54418,Loan Payment
+Amazon NEFT Charges Rs 59083,Bank Charges
+Tata Consulting Charges Rs 4438,Professional Fees
+Uber Facebook Ads Rs 42998,Marketing
+Amazon Office Rent Rs 96832,Rent
+Amazon Stationery Purchase Rs 66424,Office Expense
+Airtel Laptop Purchase Rs 39372,Office Expense
+Tata TDS Challan Rs 62100,TDS Payment
+BSNL Printer Purchase Rs 51999,Office Expense
+Adobe Google Workspace Rs 79048,Software
+Ola SGST Payment Rs 8072,GST
+Reliance Facebook Ads Rs 61248,Marketing
+Airtel CA Fees Rs 55191,Professional Fees
+Airtel Water Bill Rs 9048,Utilities
+Jio AWS Hosting Rs 69907,Software
+Amazon Internet Bill Rs 97154,Utilities
+Adobe Instagram Ads Rs 77205,Marketing
+Microsoft Printer Purchase Rs 9710,Office Expense
+Reliance Taxi Fare Rs 36410,Travel
+Uber Taxi Fare Rs 92189,Travel
+Uber Commercial Rent Rs 85328,Rent
+OpenAI Property Rent Rs 61583,Rent
+BSNL Train Ticket Rs 1789,Travel
+AWS NEFT Charges Rs 86233,Bank Charges
+Amazon ChatGPT Subscription Rs 55473,Software
+Microsoft Bank Service Fee Rs 64536,Bank Charges
+Reliance RTGS Charges Rs 16740,Bank Charges
+AWS Business Loan EMI Rs 72549,Loan Payment
+Infosys Salary Payment Rs 75627,Payroll
+Tata Health Insurance Rs 6487,Insurance
+Adobe CA Fees Rs 6009,Professional Fees
+Microsoft Vehicle Insurance Rs 92972,Insurance
+Ola SGST Payment Rs 29822,GST
+AWS Cab Booking Rs 90757,Travel
+Tata GST Payment Rs 6354,GST
+Uber TDS Deposit Rs 30448,TDS Payment
+AWS Cab Booking Rs 53415,Travel
+Adobe Business Loan EMI Rs 52272,Loan Payment
+Ola Accounting Services Rs 76451,Professional Fees
+AWS Office Rent Rs 65109,Rent
+Microsoft Vehicle Loan EMI Rs 14050,Loan Payment
+Reliance TDS Payment Rs 93247,TDS Payment
+BSNL Staff Salary Rs 66058,Payroll
+Airtel Electricity Bill Rs 56198,Utilities
+OpenAI TDS Payment Rs 89973,TDS Payment
+OpenAI Flight Ticket Rs 6574,Travel
+Flipkart Vehicle Insurance Rs 19552,Insurance
+Jio Health Insurance Rs 70543,Insurance
+Google Consulting Charges Rs 15015,Professional Fees
+Jio Office Maintenance Rs 5712,Office Expense
+Airtel Train Ticket Rs 57887,Travel
+AWS TDS Deposit Rs 92790,TDS Payment
+Reliance Vehicle Insurance Rs 48821,Insurance
+Jio Accounting Services Rs 96469,Professional Fees
+Google Staff Salary Rs 22485,Payroll
+Flipkart CGST Payment Rs 80621,GST
+Uber Professional Charges Rs 54313,Professional Fees
+Google Office Furniture Rs 9563,Office Expense
+OpenAI Vendor Payment Rs 70592,Vendor Payment
+Amazon ATM Charges Rs 48993,Bank Charges
+Tata Zoom Subscription Rs 55373,Software
+Ola SEO Charges Rs 23233,Marketing
+Flipkart Laptop Purchase Rs 75798,Office Expense
+Tata Office Maintenance Rs 47180,Office Expense
+Google Business Loan EMI Rs 82133,Loan Payment
+Uber Supplier Payment Rs 30427,Vendor Payment
+Airtel SGST Payment Rs 19754,GST
+Infosys GST Payment Rs 11970,GST
+BSNL Contractor Invoice Rs 66801,Vendor Payment
+Google Bank Loan EMI Rs 51864,Loan Payment
+Jio Cab Booking Rs 59948,Travel
+Tata Vehicle Loan EMI Rs 92003,Loan Payment
+Reliance Office Rent Rs 76825,Rent
+Infosys GitHub Subscription Rs 83572,Software
+Airtel Google Ads Rs 84953,Marketing
+Reliance CA Fees Rs 68576,Professional Fees
+AWS Facebook Ads Rs 35785,Marketing
+OpenAI Flight Ticket Rs 94863,Travel
+Flipkart ChatGPT Subscription Rs 54823,Software
+Amazon GitHub Subscription Rs 8533,Software
+AWS ChatGPT Subscription Rs 37805,Software
+Adobe SGST Payment Rs 93684,GST
+OpenAI IGST Payment Rs 88292,GST
+Jio RTGS Charges Rs 82183,Bank Charges
+Tata Warehouse Rent Rs 10912,Rent
+Uber Zoom Subscription Rs 24007,Software
+Reliance ATM Charges Rs 42764,Bank Charges
+Infosys Warehouse Rent Rs 24130,Rent
+Uber Broadband Payment Rs 96222,Utilities
+Adobe ChatGPT Subscription Rs 24780,Software
+AWS Cab Booking Rs 7684,Travel
+Jio Professional Charges Rs 86591,Professional Fees
+Reliance GST Payment Rs 11835,GST
+OpenAI Bank Service Fee Rs 20601,Bank Charges
+Amazon SEO Charges Rs 62499,Marketing
+Airtel Professional Charges Rs 81459,Professional Fees
+Jio Payroll Processing Rs 34985,Payroll
+Amazon CA Fees Rs 12035,Professional Fees
+Ola Business Loan EMI Rs 25059,Loan Payment
+Microsoft Printer Purchase Rs 82136,Office Expense
+BSNL Professional Charges Rs 88172,Professional Fees
+BSNL Cab Booking Rs 41612,Travel
+Google Bank Loan EMI Rs 3044,Loan Payment
+Infosys Commercial Rent Rs 23262,Rent
+Ola Google Ads Rs 62819,Marketing
+Ola Train Ticket Rs 82441,Travel
+BSNL TDS Challan Rs 56649,TDS Payment
+Google Bonus Payment Rs 50560,Payroll
+Google Staff Salary Rs 78231,Payroll
+Airtel Business Insurance Rs 64226,Insurance
+Adobe Office Insurance Rs 34886,Insurance
+Ola Marketing Campaign Rs 12226,Marketing
+Flipkart SGST Payment Rs 3788,GST
+OpenAI Cab Booking Rs 12319,Travel
+Ola Supplier Payment Rs 36675,Vendor Payment
+Flipkart Electricity Bill Rs 34017,Utilities
+Airtel SGST Payment Rs 50014,GST
+Jio IGST Payment Rs 28603,GST
+Uber Vehicle Insurance Rs 83130,Insurance
+Amazon Office Maintenance Rs 40845,Office Expense
+OpenAI Bank Loan EMI Rs 55066,Loan Payment
+AWS ChatGPT Subscription Rs 5256,Software
+BSNL AWS Hosting Rs 90919,Software
+BSNL Supplier Payment Rs 29270,Vendor Payment
+Reliance Internet Bill Rs 78967,Utilities
+OpenAI Bank Loan EMI Rs 96479,Loan Payment
+Jio Cab Booking Rs 80282,Travel
+Uber Health Insurance Rs 29030,Insurance
+Jio ChatGPT Subscription Rs 86872,Software
+BSNL Bonus Payment Rs 55222,Payroll
+AWS Business Insurance Rs 65803,Insurance
+BSNL GitHub Subscription Rs 89035,Software
+Adobe Accounting Services Rs 82087,Professional Fees
+Jio IGST Payment Rs 84928,GST
+Infosys Employee Benefits Rs 31193,Payroll
+Google Internet Bill Rs 65405,Utilities
+Ola Office Rent Rs 23331,Rent
+OpenAI Taxi Fare Rs 14331,Travel
+Infosys SEO Charges Rs 20242,Marketing
+Infosys Raw Material Purchase Rs 72834,Vendor Payment
+Flipkart Office Furniture Rs 85888,Office Expense
+BSNL Vehicle Loan EMI Rs 1119,Loan Payment
+Tata Staff Salary Rs 76688,Payroll
+Infosys Raw Material Purchase Rs 95211,Vendor Payment
+AWS Google Workspace Rs 30634,Software
+Google IGST Payment Rs 94680,GST
+Flipkart SEO Charges Rs 54814,Marketing
+Google AWS Hosting Rs 47066,Software
+BSNL Warehouse Rent Rs 79737,Rent
+Google SEO Charges Rs 60248,Marketing
+Infosys AWS Hosting Rs 21183,Software
+AWS TDS Challan Rs 11458,TDS Payment
+Reliance Bank Loan EMI Rs 30655,Loan Payment
+Airtel Flight Ticket Rs 66134,Travel
+Jio Google Workspace Rs 38478,Software
+Adobe Business Loan EMI Rs 55939,Loan Payment
+Airtel Health Insurance Rs 733,Insurance
+OpenAI SEO Charges Rs 20958,Marketing
+Infosys TDS Challan Rs 97270,TDS Payment
+Microsoft Consulting Charges Rs 37782,Professional Fees
+Infosys Cab Booking Rs 24623,Travel
+Ola Warehouse Rent Rs 81634,Rent
+Google GST Payment Rs 53856,GST
+Ola Water Bill Rs 71735,Utilities
+Tata Property Rent Rs 40706,Rent
+Adobe Commercial Rent Rs 86569,Rent
+OpenAI Office Rent Rs 56729,Rent
+Jio Google Ads Rs 55238,Marketing
+Tata TDS Deposit Rs 80523,TDS Payment
+Google Commercial Rent Rs 613,Rent
+Uber RTGS Charges Rs 71636,Bank Charges
+Uber Office Insurance Rs 77687,Insurance
+Uber Warehouse Rent Rs 92222,Rent
+Jio Bonus Payment Rs 57311,Payroll
+Reliance Instagram Ads Rs 18050,Marketing
+OpenAI Raw Material Purchase Rs 74499,Vendor Payment
+Reliance GST Payment Rs 1281,GST
+Adobe Warehouse Rent Rs 17558,Rent
+Adobe GitHub Subscription Rs 79822,Software
+BSNL Bonus Payment Rs 88371,Payroll
+Ola Google Workspace Rs 59331,Software
+Reliance Office Maintenance Rs 25972,Office Expense
+Microsoft Consulting Charges Rs 33854,Professional Fees
+Adobe Office Rent Rs 49705,Rent
+Reliance ChatGPT Subscription Rs 59797,Software
+Google Employee Benefits Rs 72995,Payroll
+Google Bank Loan EMI Rs 53944,Loan Payment
+BSNL Vehicle Insurance Rs 40405,Insurance
+Flipkart Cab Booking Rs 64649,Travel
+Flipkart Raw Material Purchase Rs 40963,Vendor Payment
+Adobe Salary Payment Rs 26804,Payroll
+BSNL Zoom Subscription Rs 82277,Software
+Ola ChatGPT Subscription Rs 78983,Software
+Infosys Broadband Payment Rs 61512,Utilities
+Uber IGST Payment Rs 15023,GST
+Ola ATM Charges Rs 93485,Bank Charges
+Flipkart Business Insurance Rs 10539,Insurance
+Airtel Office Insurance Rs 60606,Insurance
+Infosys Google Ads Rs 573,Marketing
+Jio TDS Challan Rs 31994,TDS Payment
+Google Consulting Charges Rs 29489,Professional Fees
+Amazon Facebook Ads Rs 52195,Marketing
+OpenAI AWS Hosting Rs 96896,Software
+BSNL Printer Purchase Rs 98119,Office Expense
+Flipkart Health Insurance Rs 45772,Insurance
+Flipkart TDS Deposit Rs 68406,TDS Payment
+Airtel Business Loan EMI Rs 74798,Loan Payment
+BSNL Bank Loan EMI Rs 43969,Loan Payment
+Microsoft Hotel Stay Rs 95843,Travel
+AWS Instagram Ads Rs 62066,Marketing
+Microsoft AWS Hosting Rs 90403,Software
+Reliance Office Rent Rs 10634,Rent
+Uber Office Maintenance Rs 20848,Office Expense
+Ola Business Insurance Rs 40490,Insurance
+Jio AWS Hosting Rs 5213,Software
+Google Broadband Payment Rs 57354,Utilities
+Adobe Mobile Recharge Rs 26483,Utilities
+Flipkart GST Payment Rs 48996,GST
+AWS Office Rent Rs 5541,Rent
+Flipkart Office Maintenance Rs 79520,Office Expense
+Flipkart CGST Payment Rs 85273,GST
+BSNL Zoom Subscription Rs 30524,Software
+Ola Commercial Rent Rs 97306,Rent
+Jio Taxi Fare Rs 34920,Travel
+Adobe Property Rent Rs 17269,Rent
+Uber Google Ads Rs 63257,Marketing
+Airtel Professional Charges Rs 40523,Professional Fees
+Tata IGST Payment Rs 35659,GST
+OpenAI Property Rent Rs 25954,Rent
+Infosys NEFT Charges Rs 53604,Bank Charges
+Flipkart Office Insurance Rs 67837,Insurance
+Airtel Accounting Services Rs 31315,Professional Fees
+OpenAI Taxi Fare Rs 89159,Travel
+Uber TDS Payment Rs 29057,TDS Payment
+Uber Laptop Purchase Rs 7734,Office Expense
+Uber Stationery Purchase Rs 15934,Office Expense
+Reliance Vendor Payment Rs 91337,Vendor Payment
+BSNL Office Maintenance Rs 26315,Office Expense
+Reliance Hotel Stay Rs 92133,Travel
+Amazon Vendor Payment Rs 73372,Vendor Payment
+Infosys Payroll Processing Rs 86885,Payroll
+Airtel Supplier Payment Rs 58344,Vendor Payment
+Infosys Vehicle Insurance Rs 64752,Insurance
+Uber CA Fees Rs 97288,Professional Fees
+Ola Bank Loan EMI Rs 65350,Loan Payment
+Tata NEFT Charges Rs 68799,Bank Charges
+Reliance RTGS Charges Rs 77171,Bank Charges
+Google Vendor Payment Rs 79295,Vendor Payment
+Uber CA Fees Rs 65352,Professional Fees
+Flipkart Salary Payment Rs 71446,Payroll
+Uber Marketing Campaign Rs 8183,Marketing
+AWS Supplier Payment Rs 13000,Vendor Payment
+Ola Supplier Payment Rs 38564,Vendor Payment
+Jio Raw Material Purchase Rs 92278,Vendor Payment
+Tata Vehicle Insurance Rs 49024,Insurance
+OpenAI Office Maintenance Rs 77035,Office Expense
+Infosys CA Fees Rs 44227,Professional Fees
+Airtel Internet Bill Rs 55716,Utilities
+Ola Vehicle Loan EMI Rs 66233,Loan Payment
+Tata TDS Deposit Rs 54150,TDS Payment
+Flipkart Office Rent Rs 79600,Rent
+Jio Warehouse Rent Rs 68978,Rent
+Amazon Water Bill Rs 38322,Utilities
+Adobe Employee Benefits Rs 34402,Payroll
+Reliance TDS Challan Rs 31615,TDS Payment
+Infosys Hotel Stay Rs 48642,Travel
+OpenAI Bonus Payment Rs 82219,Payroll
+Tata RTGS Charges Rs 2307,Bank Charges
+Amazon Facebook Ads Rs 46927,Marketing
+Adobe Staff Salary Rs 65054,Payroll
+Uber Vehicle Insurance Rs 12890,Insurance
+Amazon TDS Challan Rs 19436,TDS Payment
+Infosys Commercial Rent Rs 14638,Rent
+AWS GitHub Subscription Rs 55335,Software
+BSNL Health Insurance Rs 98662,Insurance
+Ola CA Fees Rs 45912,Professional Fees
+OpenAI Business Insurance Rs 32031,Insurance
+Tata Taxi Fare Rs 97638,Travel
+OpenAI Vehicle Insurance Rs 67899,Insurance
+Google Bank Service Fee Rs 15203,Bank Charges
+Tata Warehouse Rent Rs 62918,Rent
+Airtel Raw Material Purchase Rs 27831,Vendor Payment
+Airtel GST Payment Rs 67386,GST
+Ola RTGS Charges Rs 78673,Bank Charges
+Adobe Vehicle Loan EMI Rs 3976,Loan Payment
+AWS Health Insurance Rs 52143,Insurance
+Infosys TDS Challan Rs 6532,TDS Payment
+Flipkart SEO Charges Rs 45317,Marketing
+Ola CA Fees Rs 69107,Professional Fees
+Google TDS Challan Rs 97008,TDS Payment
+Ola Vehicle Insurance Rs 24047,Insurance
+Infosys SGST Payment Rs 54830,GST
+Jio Bank Loan EMI Rs 52584,Loan Payment
+Microsoft Instagram Ads Rs 28455,Marketing
+Flipkart Laptop Purchase Rs 96815,Office Expense
+Microsoft GST Payment Rs 17706,GST
+Jio Hotel Stay Rs 60310,Travel
+BSNL SEO Charges Rs 18969,Marketing
+Jio AWS Hosting Rs 46468,Software
+OpenAI Office Rent Rs 38115,Rent
+Tata Warehouse Rent Rs 31891,Rent
+Adobe Commercial Rent Rs 61566,Rent
+Flipkart AWS Hosting Rs 52554,Software
+Google IGST Payment Rs 22202,GST
+OpenAI Consulting Charges Rs 92798,Professional Fees
+Google IGST Payment Rs 73721,GST
+Flipkart ChatGPT Subscription Rs 32267,Software
+Airtel Salary Payment Rs 86339,Payroll
+Microsoft Employee Benefits Rs 16369,Payroll
+Airtel Professional Charges Rs 70706,Professional Fees
+Adobe Staff Salary Rs 14266,Payroll
+Tata Laptop Purchase Rs 25411,Office Expense
+Infosys RTGS Charges Rs 32420,Bank Charges
+Google TDS Payment Rs 11723,TDS Payment
+Flipkart Instagram Ads Rs 54417,Marketing
+AWS GST Payment Rs 55827,GST
+Google Vendor Payment Rs 15403,Vendor Payment
+Google Mobile Recharge Rs 62243,Utilities
+Tata Business Loan EMI Rs 2359,Loan Payment
+Amazon Business Loan EMI Rs 71848,Loan Payment
+Microsoft Professional Charges Rs 93706,Professional Fees
+OpenAI Business Loan EMI Rs 76844,Loan Payment
+Infosys TDS Payment Rs 33043,TDS Payment
+Reliance Contractor Invoice Rs 16570,Vendor Payment
+Amazon Water Bill Rs 32682,Utilities
+Flipkart TDS Deposit Rs 85467,TDS Payment
+Amazon CA Fees Rs 1721,Professional Fees
+BSNL Vehicle Loan EMI Rs 91710,Loan Payment
+Google Bank Service Fee Rs 24814,Bank Charges
+Google CA Fees Rs 69648,Professional Fees
+Amazon TDS Deposit Rs 96983,TDS Payment
+Tata Business Loan EMI Rs 7545,Loan Payment
+Airtel Electricity Bill Rs 71875,Utilities
+Ola CA Fees Rs 16338,Professional Fees
+Reliance Property Rent Rs 58957,Rent
+AWS Printer Purchase Rs 90069,Office Expense
+Ola Flight Ticket Rs 35745,Travel
+OpenAI NEFT Charges Rs 45966,Bank Charges
+AWS Office Rent Rs 37171,Rent
+Ola Bank Service Fee Rs 7142,Bank Charges
+Tata Business Insurance Rs 85297,Insurance
+Tata Commercial Rent Rs 6348,Rent
+Amazon Health Insurance Rs 61544,Insurance
+Reliance Vehicle Loan EMI Rs 20404,Loan Payment
+Reliance Accounting Services Rs 87652,Professional Fees
+BSNL CA Fees Rs 49603,Professional Fees
+Adobe Office Rent Rs 21247,Rent
+Ola Consulting Charges Rs 39429,Professional Fees
+Flipkart Bank Loan EMI Rs 30464,Loan Payment
+Infosys Payroll Processing Rs 66328,Payroll
+OpenAI GitHub Subscription Rs 15180,Software
+OpenAI Office Insurance Rs 45162,Insurance
+Uber Business Loan EMI Rs 44541,Loan Payment
+Google Internet Bill Rs 78240,Utilities
+Amazon Office Furniture Rs 60741,Office Expense
+BSNL Water Bill Rs 81125,Utilities
+Google Accounting Services Rs 23090,Professional Fees
+Infosys Marketing Campaign Rs 85139,Marketing
+Infosys Flight Ticket Rs 4796,Travel
+Google Marketing Campaign Rs 67440,Marketing
+Amazon Salary Payment Rs 3277,Payroll
+Amazon Electricity Bill Rs 81399,Utilities
+Airtel Mobile Recharge Rs 72984,Utilities
+Jio Payroll Processing Rs 86570,Payroll
+Amazon NEFT Charges Rs 64764,Bank Charges
+Amazon Property Rent Rs 64010,Rent
+Ola Mobile Recharge Rs 21797,Utilities
+Google Laptop Purchase Rs 90947,Office Expense
+Google Business Loan EMI Rs 31841,Loan Payment
+Tata Train Ticket Rs 46643,Travel
+Tata Mobile Recharge Rs 91764,Utilities
+Jio Commercial Rent Rs 71194,Rent
+Flipkart Professional Charges Rs 67410,Professional Fees
+Infosys Business Insurance Rs 51483,Insurance
+Microsoft Google Workspace Rs 69104,Software
+BSNL Bank Service Fee Rs 11212,Bank Charges
+Uber CGST Payment Rs 41173,GST
+Uber Supplier Payment Rs 46649,Vendor Payment
+Amazon Mobile Recharge Rs 89660,Utilities
+Infosys Office Maintenance Rs 72022,Office Expense
+BSNL Vendor Payment Rs 92677,Vendor Payment
+Microsoft Supplier Payment Rs 33340,Vendor Payment
+BSNL AWS Hosting Rs 53622,Software
+Adobe Vehicle Loan EMI Rs 31989,Loan Payment
+BSNL ATM Charges Rs 73521,Bank Charges
+AWS Printer Purchase Rs 4695,Office Expense
+Ola Contractor Invoice Rs 60287,Vendor Payment
+Microsoft Warehouse Rent Rs 92228,Rent
+Adobe Facebook Ads Rs 28545,Marketing
+Adobe Vendor Payment Rs 60374,Vendor Payment
+AWS Zoom Subscription Rs 43789,Software
+Uber SGST Payment Rs 59940,GST
+Adobe AWS Hosting Rs 74175,Software
+Reliance SGST Payment Rs 66563,GST
+Adobe Internet Bill Rs 52876,Utilities
+Airtel Flight Ticket Rs 21439,Travel
+Ola Cab Booking Rs 25607,Travel
+Google Contractor Invoice Rs 69706,Vendor Payment
+Adobe Zoom Subscription Rs 12220,Software
+BSNL Health Insurance Rs 22620,Insurance
+OpenAI Zoom Subscription Rs 88558,Software
+Amazon Consulting Charges Rs 16772,Professional Fees
+Airtel Water Bill Rs 91677,Utilities
+AWS Professional Charges Rs 11739,Professional Fees
+Microsoft Bank Loan EMI Rs 78499,Loan Payment
+Adobe Stationery Purchase Rs 18888,Office Expense
+Infosys CGST Payment Rs 64520,GST
+Infosys Payroll Processing Rs 47834,Payroll
+Google Bonus Payment Rs 84650,Payroll
+BSNL RTGS Charges Rs 37732,Bank Charges
+Uber Warehouse Rent Rs 44433,Rent
+Flipkart Supplier Payment Rs 79727,Vendor Payment
+Microsoft Warehouse Rent Rs 9095,Rent
+OpenAI NEFT Charges Rs 90289,Bank Charges
+Uber Professional Charges Rs 95802,Professional Fees
+Uber Hotel Stay Rs 91106,Travel
+Flipkart Facebook Ads Rs 73312,Marketing
+AWS Vehicle Loan EMI Rs 15543,Loan Payment
+Tata Business Loan EMI Rs 70420,Loan Payment
+Infosys RTGS Charges Rs 754,Bank Charges
+Adobe Water Bill Rs 69828,Utilities
+OpenAI Zoom Subscription Rs 75342,Software
+Google CGST Payment Rs 44976,GST
+Google Consulting Charges Rs 44174,Professional Fees
+Infosys Stationery Purchase Rs 90547,Office Expense
+Jio RTGS Charges Rs 82053,Bank Charges
+AWS Internet Bill Rs 40078,Utilities
+Airtel Bank Service Fee Rs 51524,Bank Charges
+BSNL AWS Hosting Rs 40928,Software
+AWS AWS Hosting Rs 31684,Software
+Airtel Office Insurance Rs 85246,Insurance
+Ola Bank Service Fee Rs 65630,Bank Charges
+Amazon Contractor Invoice Rs 43477,Vendor Payment
+Amazon Health Insurance Rs 67642,Insurance
+BSNL SEO Charges Rs 75828,Marketing
+Jio RTGS Charges Rs 89078,Bank Charges
+BSNL Water Bill Rs 88016,Utilities
+Amazon Broadband Payment Rs 57057,Utilities
+Tata Consulting Charges Rs 13980,Professional Fees
+Flipkart Bonus Payment Rs 78517,Payroll
+Adobe GitHub Subscription Rs 22262,Software
+Uber ChatGPT Subscription Rs 52787,Software
+Infosys Printer Purchase Rs 56808,Office Expense
+Microsoft SEO Charges Rs 25695,Marketing
+Adobe Printer Purchase Rs 32981,Office Expense
+Ola Google Ads Rs 51834,Marketing
+AWS Health Insurance Rs 27152,Insurance
+Flipkart CA Fees Rs 98850,Professional Fees
+OpenAI TDS Payment Rs 39537,TDS Payment
+Microsoft Supplier Payment Rs 77795,Vendor Payment
+Uber Office Rent Rs 26429,Rent
+AWS Hotel Stay Rs 70401,Travel
+OpenAI Train Ticket Rs 77354,Travel
+Tata IGST Payment Rs 48619,GST
+BSNL SEO Charges Rs 20069,Marketing
+OpenAI Property Rent Rs 62256,Rent
+Airtel Taxi Fare Rs 9190,Travel
+Jio Accounting Services Rs 51869,Professional Fees
+Reliance Google Workspace Rs 40137,Software
+Ola CA Fees Rs 12831,Professional Fees
+Airtel SGST Payment Rs 98737,GST
+Reliance IGST Payment Rs 37144,GST
+Google TDS Payment Rs 62342,TDS Payment
+BSNL NEFT Charges Rs 8834,Bank Charges
+Jio Vehicle Insurance Rs 31661,Insurance
+OpenAI SEO Charges Rs 27985,Marketing
+BSNL GitHub Subscription Rs 91034,Software
+Amazon GST Payment Rs 49302,GST
+Reliance CGST Payment Rs 42144,GST
+Ola Vendor Payment Rs 72243,Vendor Payment
+BSNL Salary Payment Rs 35022,Payroll
+OpenAI Business Loan EMI Rs 83557,Loan Payment
+Infosys Marketing Campaign Rs 51986,Marketing
+Infosys Commercial Rent Rs 95882,Rent
+Infosys TDS Deposit Rs 26264,TDS Payment
+Google AWS Hosting Rs 92842,Software
+Reliance RTGS Charges Rs 50636,Bank Charges
+Infosys Bank Loan EMI Rs 47688,Loan Payment
+Amazon SEO Charges Rs 62316,Marketing
+Reliance Business Loan EMI Rs 80012,Loan Payment
+OpenAI Internet Bill Rs 35483,Utilities
+Ola ChatGPT Subscription Rs 83334,Software
+Reliance Electricity Bill Rs 48235,Utilities
+Flipkart Office Insurance Rs 49113,Insurance
+Google Facebook Ads Rs 52614,Marketing
+Tata Vehicle Loan EMI Rs 32653,Loan Payment
+Uber GST Payment Rs 51718,GST
+Reliance Bank Loan EMI Rs 33905,Loan Payment
+Microsoft Broadband Payment Rs 33313,Utilities
+Flipkart Accounting Services Rs 88809,Professional Fees
+Airtel Bank Loan EMI Rs 8907,Loan Payment
+Microsoft Contractor Invoice Rs 33690,Vendor Payment
+Airtel Vendor Payment Rs 26231,Vendor Payment
+OpenAI Office Rent Rs 8933,Rent
+OpenAI RTGS Charges Rs 54557,Bank Charges
+Airtel Google Workspace Rs 53558,Software
+Amazon Property Rent Rs 67330,Rent
+BSNL Supplier Payment Rs 75216,Vendor Payment
+Amazon Business Insurance Rs 24099,Insurance
+Jio Health Insurance Rs 55814,Insurance
+BSNL Facebook Ads Rs 70702,Marketing
+BSNL Raw Material Purchase Rs 661,Vendor Payment
+OpenAI Commercial Rent Rs 88448,Rent
+BSNL TDS Challan Rs 50109,TDS Payment
+Jio Business Insurance Rs 66257,Insurance
+OpenAI Commercial Rent Rs 98999,Rent
+Google IGST Payment Rs 21675,GST
+Uber GitHub Subscription Rs 68582,Software
+Infosys Vehicle Loan EMI Rs 58795,Loan Payment
+Infosys TDS Payment Rs 21500,TDS Payment
+Tata Printer Purchase Rs 36604,Office Expense
+Ola Office Maintenance Rs 4310,Office Expense
+BSNL Property Rent Rs 97789,Rent
+Flipkart Flight Ticket Rs 52655,Travel
+BSNL Mobile Recharge Rs 37541,Utilities
+Adobe Property Rent Rs 28280,Rent
+Reliance CGST Payment Rs 76690,GST
+Infosys TDS Payment Rs 6613,TDS Payment
+Adobe Bonus Payment Rs 78258,Payroll
+OpenAI Cab Booking Rs 39527,Travel
+Adobe Supplier Payment Rs 839,Vendor Payment
+Amazon Business Loan EMI Rs 64684,Loan Payment
+Flipkart Employee Benefits Rs 15725,Payroll
+BSNL Taxi Fare Rs 44618,Travel
+Adobe RTGS Charges Rs 38843,Bank Charges
+Ola CGST Payment Rs 79323,GST
+BSNL Property Rent Rs 70034,Rent
+BSNL Employee Benefits Rs 57680,Payroll
+AWS Taxi Fare Rs 24498,Travel
+Adobe Zoom Subscription Rs 25335,Software
+Jio GST Payment Rs 68711,GST
+Infosys Google Workspace Rs 60261,Software
+Flipkart Broadband Payment Rs 43844,Utilities
+Ola Property Rent Rs 60534,Rent
+Reliance Office Furniture Rs 27153,Office Expense
+Google Business Insurance Rs 21704,Insurance
+Infosys Laptop Purchase Rs 7656,Office Expense
+Adobe Business Loan EMI Rs 16460,Loan Payment
+Infosys CGST Payment Rs 91374,GST
+Microsoft Broadband Payment Rs 6809,Utilities
+Ola CA Fees Rs 62498,Professional Fees
+Amazon Flight Ticket Rs 89618,Travel
+Airtel Accounting Services Rs 68911,Professional Fees
+Adobe Taxi Fare Rs 50307,Travel
+Jio Raw Material Purchase Rs 8615,Vendor Payment
+AWS CA Fees Rs 31307,Professional Fees
+Airtel TDS Deposit Rs 52753,TDS Payment
+Reliance Printer Purchase Rs 78906,Office Expense
+Reliance Laptop Purchase Rs 26384,Office Expense
+Amazon GST Payment Rs 18674,GST
+Amazon Consulting Charges Rs 86389,Professional Fees
+Google Internet Bill Rs 55979,Utilities
+BSNL Bank Service Fee Rs 25144,Bank Charges
+Reliance CGST Payment Rs 69765,GST
+Adobe TDS Payment Rs 50542,TDS Payment
+Flipkart Marketing Campaign Rs 66279,Marketing
+OpenAI SEO Charges Rs 29202,Marketing
+Flipkart IGST Payment Rs 70924,GST
+Adobe GitHub Subscription Rs 99764,Software
+Google Office Furniture Rs 8356,Office Expense
+Jio Office Rent Rs 18091,Rent
+Jio Consulting Charges Rs 55040,Professional Fees
+Google Supplier Payment Rs 62467,Vendor Payment
+Amazon Train Ticket Rs 9561,Travel
+Ola Commercial Rent Rs 26580,Rent
+Adobe Vendor Payment Rs 16036,Vendor Payment
+BSNL Payroll Processing Rs 9095,Payroll
+AWS Vendor Payment Rs 51308,Vendor Payment
+AWS Instagram Ads Rs 30808,Marketing
+Ola TDS Deposit Rs 50496,TDS Payment
+Flipkart Payroll Processing Rs 25429,Payroll
+Flipkart Flight Ticket Rs 37253,Travel
+OpenAI Office Maintenance Rs 97926,Office Expense
+AWS GST Payment Rs 68879,GST
+Amazon Bank Loan EMI Rs 3743,Loan Payment
+Ola Flight Ticket Rs 20742,Travel
+AWS Office Insurance Rs 58433,Insurance
+Microsoft Staff Salary Rs 28433,Payroll
+Adobe Internet Bill Rs 37180,Utilities
+AWS Vehicle Insurance Rs 74597,Insurance
+OpenAI Cab Booking Rs 14456,Travel
+Uber Supplier Payment Rs 8645,Vendor Payment
+Jio ATM Charges Rs 56507,Bank Charges
+AWS Taxi Fare Rs 82583,Travel
+Adobe Office Insurance Rs 6236,Insurance
+Google Google Ads Rs 33830,Marketing
+Reliance Business Loan EMI Rs 35640,Loan Payment
+BSNL Professional Charges Rs 73631,Professional Fees
+Adobe Electricity Bill Rs 80762,Utilities
+Microsoft Bank Loan EMI Rs 94431,Loan Payment
+Microsoft TDS Deposit Rs 26629,TDS Payment
+Reliance Supplier Payment Rs 19029,Vendor Payment
+Airtel IGST Payment Rs 61144,GST
+AWS Office Rent Rs 29080,Rent
+Flipkart Consulting Charges Rs 3294,Professional Fees
+Infosys Hotel Stay Rs 89599,Travel
+Flipkart Salary Payment Rs 41691,Payroll
+Microsoft Flight Ticket Rs 42530,Travel
+Microsoft Google Workspace Rs 43419,Software
+Flipkart TDS Deposit Rs 32384,TDS Payment
+Microsoft Stationery Purchase Rs 17113,Office Expense
+Infosys GST Payment Rs 61718,GST
+AWS Internet Bill Rs 76759,Utilities
+OpenAI Business Loan EMI Rs 7104,Loan Payment
+Ola Supplier Payment Rs 10354,Vendor Payment
+AWS RTGS Charges Rs 24639,Bank Charges
+Microsoft Office Furniture Rs 31312,Office Expense
+Jio IGST Payment Rs 77303,GST
+Adobe ChatGPT Subscription Rs 51736,Software
+Amazon Water Bill Rs 70501,Utilities
+Adobe Flight Ticket Rs 69718,Travel
+AWS Mobile Recharge Rs 95013,Utilities
+Adobe Vehicle Loan EMI Rs 81725,Loan Payment
+Amazon CA Fees Rs 21691,Professional Fees
+Google TDS Challan Rs 52700,TDS Payment
+Flipkart Vendor Payment Rs 14994,Vendor Payment
+Tata Staff Salary Rs 77093,Payroll
+Jio Flight Ticket Rs 44879,Travel
+Tata Payroll Processing Rs 65957,Payroll
+Tata RTGS Charges Rs 7160,Bank Charges
+Tata GST Payment Rs 54745,GST
+BSNL Vendor Payment Rs 78508,Vendor Payment
+OpenAI Zoom Subscription Rs 37590,Software
+Flipkart Health Insurance Rs 24738,Insurance
+Microsoft Office Furniture Rs 7168,Office Expense
+OpenAI Stationery Purchase Rs 42799,Office Expense
+Google Property Rent Rs 64017,Rent
+Flipkart Consulting Charges Rs 17511,Professional Fees
+Google Office Insurance Rs 76037,Insurance
+Amazon CGST Payment Rs 58772,GST
+Uber Vendor Payment Rs 8880,Vendor Payment
+AWS Business Loan EMI Rs 19460,Loan Payment
+Reliance Marketing Campaign Rs 92401,Marketing
+Tata Vehicle Insurance Rs 15937,Insurance
+Adobe Taxi Fare Rs 48923,Travel
+Tata Business Insurance Rs 99012,Insurance
+Amazon Accounting Services Rs 12779,Professional Fees
+BSNL Raw Material Purchase Rs 81361,Vendor Payment
+OpenAI Office Maintenance Rs 10995,Office Expense
+Uber Electricity Bill Rs 56356,Utilities
+Tata Payroll Processing Rs 39715,Payroll
+Microsoft Hotel Stay Rs 36937,Travel
+Airtel Bank Loan EMI Rs 868,Loan Payment
+Flipkart Instagram Ads Rs 84223,Marketing
+AWS Train Ticket Rs 78467,Travel
+Microsoft TDS Deposit Rs 63643,TDS Payment
+Google Printer Purchase Rs 10138,Office Expense
+Amazon Property Rent Rs 4838,Rent
+Infosys Health Insurance Rs 61269,Insurance
+BSNL Internet Bill Rs 9247,Utilities
+AWS Staff Salary Rs 91538,Payroll
+Microsoft Business Insurance Rs 88024,Insurance
+Infosys TDS Deposit Rs 43755,TDS Payment
+Ola Contractor Invoice Rs 69804,Vendor Payment
+Amazon SGST Payment Rs 52311,GST
+Airtel NEFT Charges Rs 87677,Bank Charges
+Flipkart Broadband Payment Rs 25902,Utilities
+Ola ChatGPT Subscription Rs 56344,Software
+AWS Health Insurance Rs 80208,Insurance
+Google TDS Deposit Rs 69282,TDS Payment
+BSNL Vehicle Insurance Rs 63489,Insurance
+Ola Internet Bill Rs 66343,Utilities
+Reliance Employee Benefits Rs 83499,Payroll
+Google CGST Payment Rs 90211,GST
+Microsoft GitHub Subscription Rs 9711,Software
+Infosys Commercial Rent Rs 39552,Rent
+Reliance Staff Salary Rs 64138,Payroll
+Ola Train Ticket Rs 61309,Travel
+Infosys Electricity Bill Rs 41537,Utilities
+Reliance Office Rent Rs 53940,Rent
+Google Business Loan EMI Rs 2651,Loan Payment
+OpenAI CA Fees Rs 67006,Professional Fees
+Microsoft Professional Charges Rs 14340,Professional Fees
+Ola NEFT Charges Rs 71380,Bank Charges
+Reliance GST Payment Rs 54416,GST
+Google Bonus Payment Rs 1859,Payroll
+Reliance Taxi Fare Rs 56671,Travel
+Jio Taxi Fare Rs 47005,Travel
+AWS Office Furniture Rs 55446,Office Expense
+Reliance Taxi Fare Rs 78436,Travel
+OpenAI RTGS Charges Rs 86610,Bank Charges
+Uber NEFT Charges Rs 42902,Bank Charges
+Infosys Bank Service Fee Rs 46174,Bank Charges
+Google Electricity Bill Rs 75779,Utilities
+Tata Raw Material Purchase Rs 84757,Vendor Payment
+OpenAI Hotel Stay Rs 67680,Travel
+AWS Office Furniture Rs 85002,Office Expense
+Jio Business Loan EMI Rs 90338,Loan Payment
+Jio Hotel Stay Rs 80301,Travel
+AWS Bank Loan EMI Rs 31801,Loan Payment
+Uber Broadband Payment Rs 84717,Utilities
+Microsoft Stationery Purchase Rs 67420,Office Expense
+Jio Water Bill Rs 55215,Utilities
+Flipkart Business Insurance Rs 18119,Insurance
+Adobe Consulting Charges Rs 64043,Professional Fees
+BSNL Health Insurance Rs 89522,Insurance
+Microsoft Office Furniture Rs 32181,Office Expense
+Uber Health Insurance Rs 28322,Insurance
+OpenAI TDS Challan Rs 58195,TDS Payment
+Tata NEFT Charges Rs 74021,Bank Charges
+Infosys Raw Material Purchase Rs 36689,Vendor Payment
+Reliance Professional Charges Rs 5855,Professional Fees
+Flipkart Salary Payment Rs 29936,Payroll
+Reliance Instagram Ads Rs 26673,Marketing
+Adobe Property Rent Rs 67051,Rent
+Adobe Instagram Ads Rs 35833,Marketing
+Ola Business Loan EMI Rs 47999,Loan Payment
+Uber Vehicle Loan EMI Rs 27769,Loan Payment
+Tata Taxi Fare Rs 14208,Travel
+Infosys Vehicle Loan EMI Rs 73169,Loan Payment
+Tata RTGS Charges Rs 29756,Bank Charges
+OpenAI TDS Challan Rs 55641,TDS Payment
+Tata Train Ticket Rs 89833,Travel
+Microsoft Zoom Subscription Rs 66787,Software
+Jio Business Insurance Rs 40929,Insurance
+Amazon Laptop Purchase Rs 94704,Office Expense
+Adobe CGST Payment Rs 27843,GST
+Flipkart Train Ticket Rs 72468,Travel
+BSNL Office Rent Rs 32435,Rent
+OpenAI Employee Benefits Rs 46624,Payroll
+Microsoft Vehicle Loan EMI Rs 60036,Loan Payment
+Infosys NEFT Charges Rs 83615,Bank Charges
+BSNL Business Insurance Rs 53141,Insurance
+Adobe Office Rent Rs 81553,Rent
+AWS ATM Charges Rs 20468,Bank Charges
+Amazon SEO Charges Rs 57909,Marketing
+BSNL Taxi Fare Rs 2680,Travel
+Airtel Business Loan EMI Rs 36077,Loan Payment
+Jio TDS Challan Rs 51068,TDS Payment
+Infosys Supplier Payment Rs 2538,Vendor Payment
+Microsoft Instagram Ads Rs 66882,Marketing
+Infosys Google Ads Rs 48470,Marketing
+Google CGST Payment Rs 35526,GST
+Reliance GST Payment Rs 31455,GST
+BSNL Instagram Ads Rs 13126,Marketing
+BSNL Mobile Recharge Rs 36967,Utilities
+Google Supplier Payment Rs 97405,Vendor Payment
+Adobe Office Maintenance Rs 90994,Office Expense
+Flipkart Cab Booking Rs 60035,Travel
+Microsoft Bonus Payment Rs 39488,Payroll
+Infosys Taxi Fare Rs 57628,Travel
+Ola TDS Deposit Rs 71241,TDS Payment
+OpenAI TDS Deposit Rs 51883,TDS Payment
+Uber Laptop Purchase Rs 3322,Office Expense

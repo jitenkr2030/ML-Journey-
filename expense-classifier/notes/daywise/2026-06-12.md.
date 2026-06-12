@@ -1,0 +1,446 @@
+# ML Journey - Day 7
+
+## Date: 12-06-2026
+
+## Project
+
+Financial Expense Classification - Model Evaluation and Dataset Scaling
+
+---
+
+# Objective
+
+Today the goal was to move beyond simply training a machine learning model.
+
+We focused on understanding:
+
+* How to evaluate model performance
+* How to identify prediction mistakes
+* How to improve dataset quality
+* How training data size affects accuracy
+* How real-world financial classification systems are built
+
+---
+
+# What We Learned
+
+## 1. Model Evaluation
+
+A machine learning model is not complete after training.
+
+We must measure how well it performs.
+
+Learned:
+
+```python
+accuracy_score()
+```
+
+Purpose:
+
+Measure how many predictions were correct.
+
+Formula:
+
+Correct Predictions ÷ Total Predictions
+
+Example:
+
+240 Correct Predictions
+
+247 Total Predictions
+
+Accuracy:
+
+97.57%
+
+---
+
+## 2. Classification Report
+
+Learned:
+
+```python
+classification_report()
+```
+
+Provides:
+
+* Precision
+* Recall
+* F1 Score
+* Support
+
+for every category.
+
+Example Categories:
+
+* Travel
+* Utilities
+* Payroll
+* Office Expense
+* Marketing
+* Software
+* GST
+* Rent
+* Bank Charges
+* Vendor Payment
+* Insurance
+* Loan Payment
+* Professional Fees
+* TDS Payment
+
+This helps understand category-wise performance.
+
+---
+
+## 3. Precision
+
+Question:
+
+When the model predicts a category, how often is it correct?
+
+Example:
+
+Predicted:
+
+Software
+
+20 times
+
+Actually Software:
+
+19 times
+
+Precision:
+
+95%
+
+High precision means fewer false predictions.
+
+---
+
+## 4. Recall
+
+Question:
+
+How many actual records did the model identify correctly?
+
+Example:
+
+There are 20 Software records.
+
+Model correctly finds 19.
+
+Recall:
+
+95%
+
+High recall means fewer missed records.
+
+---
+
+## 5. F1 Score
+
+Learned:
+
+F1 Score balances:
+
+* Precision
+* Recall
+
+Useful when accuracy alone is not enough.
+
+A good machine learning model usually has a high F1 Score.
+
+---
+
+## 6. Confusion Matrix
+
+Learned:
+
+```python
+confusion_matrix()
+```
+
+Purpose:
+
+Visualize model mistakes.
+
+Shows:
+
+Actual Category
+
+vs
+
+Predicted Category
+
+Example:
+
+Actual:
+
+Rent
+
+Predicted:
+
+Travel
+
+This helps identify where the model becomes confused.
+
+---
+
+## 7. Wrong Prediction Analysis
+
+Created:
+
+```python
+wrong_predictions
+```
+
+Purpose:
+
+Display records that were classified incorrectly.
+
+Example mistakes:
+
+* Rental Expense → Travel
+* Corporate Lunch → Travel
+* SSL Certificate Renewal → Utilities
+* Domain Renewal → Utilities
+* Bank Penalty → Loan Payment
+
+This is an important Machine Learning skill.
+
+Real ML engineers spend significant time analyzing mistakes.
+
+---
+
+## 8. Dataset Scaling
+
+Big learning today:
+
+More quality data improves model performance.
+
+Dataset Growth:
+
+Day 5:
+
+14 Records
+
+Day 6:
+
+235 Records
+
+Day 7:
+
+1235 Records
+
+We generated hundreds of additional accounting transactions using Python automation.
+
+---
+
+## 9. Financial Categories Expanded
+
+Added professional accounting categories:
+
+* Travel
+* Utilities
+* Payroll
+* Office Expense
+* Business Meeting
+* Marketing
+* Rent
+* Software
+* GST
+* Bank Charges
+* Vendor Payment
+* Insurance
+* Loan Payment
+* Professional Fees
+* TDS Payment
+
+This made the project much closer to a real bookkeeping system.
+
+---
+
+## 10. Model Saving and Loading
+
+Learned:
+
+```python
+joblib.dump()
+```
+
+Save trained model.
+
+And:
+
+```python
+joblib.load()
+```
+
+Load trained model later.
+
+Files Created:
+
+* expense_classifier_day7.pkl
+* tfidf_vectorizer_day7.pkl
+
+This allows predictions without retraining.
+
+---
+
+# What We Practiced
+
+Today we practiced:
+
+* Loading CSV datasets
+* Training ML models
+* TF-IDF Vectorization
+* Naive Bayes Classification
+* Accuracy Evaluation
+* Classification Reports
+* Confusion Matrices
+* Error Analysis
+* Dataset Expansion
+* Model Persistence
+* Real Expense Predictions
+
+---
+
+# Final Day 7 Results
+
+Dataset Size:
+
+1235 Records
+
+Training Records:
+
+988
+
+Testing Records:
+
+247
+
+Model Accuracy:
+
+97.57%
+
+Wrong Predictions:
+
+6
+
+This is the best result achieved so far in the Expense Classification project.
+
+---
+
+# Business Understanding
+
+This project is directly related to:
+
+* Accounting Automation
+* Expense Categorization
+* Ledger Classification
+* GST Classification
+* Financial Data Processing
+* AI Bookkeeping Systems
+
+These are important building blocks for future products such as:
+
+* AI Accounting Assistant
+* Bookkeeping Automation Platform
+* Financial AI SaaS
+* Accounting Firm Automation Tools
+
+---
+
+# Interview Knowledge Learned
+
+Questions I can now answer:
+
+1. What is TF-IDF?
+2. What is Naive Bayes?
+3. What is Accuracy?
+4. What is Precision?
+5. What is Recall?
+6. What is F1 Score?
+7. What is a Confusion Matrix?
+8. Why do models make mistakes?
+9. How do you evaluate a classifier?
+10. How do you save and load ML models?
+
+---
+
+# ML Journey Progress
+
+Completed Foundation Projects:
+
+✅ Stock Price Prediction
+
+✅ Expense Categorization
+
+Current Focus:
+
+Financial AI Development
+
+Future Projects:
+
+* GST Invoice Classification
+* Spam Detection
+* Resume Screening
+* OCR for Invoices
+* Chatbots
+* AI Accounting Assistant
+
+Intermediate Goals:
+
+* RAG Systems
+* AI Agents
+* Financial Analysis Tools
+* Voice Assistants
+
+Advanced Goals:
+
+* Quant Trading Systems
+* Vision Models
+* Fine-Tuning Small LLMs
+* AI SaaS APIs
+* Multi-Agent Systems
+
+---
+
+# Key Learning
+
+Building a model is only the beginning.
+
+A Machine Learning Engineer must know how to:
+
+* Evaluate models
+* Understand mistakes
+* Improve datasets
+* Measure prediction quality
+* Deploy models into real applications
+
+Day 7 transformed the project from a simple classifier into a professional Machine Learning evaluation project.
+
+---
+
+# Next Goal (Day 8)
+
+Build a real Expense Prediction Application.
+
+Input:
+
+Expense Description
+
+Example:
+
+Google Workspace Subscription
+
+Output:
+
+Software
+
+The model will accept user input and predict categories in real time.
+
+This will be the first step toward building an AI Accounting Assistant.
