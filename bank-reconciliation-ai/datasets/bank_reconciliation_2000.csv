@@ -1,0 +1,2001 @@
+Book_Description,Bank_Description,Amount,Match_Status
+Staff Welfare,Loan EMI,86637,Not Matched
+Laptop Purchase,Computer Purchase,61403,Matched
+GST Payment,Unknown Transaction,84389,Not Matched
+Bank Charges,Bank Service Charges,85845,Matched
+Advertising Expense,UPI Payment,38713,Not Matched
+Advertising Expense,Personal Transfer,26274,Not Matched
+Salary Paid,Salary Transfer,32002,Matched
+Staff Welfare,Unknown Transaction,53837,Not Matched
+Internet Expense,Internet Bill Payment,30629,Matched
+Stationery Purchase,UPI Payment,72962,Not Matched
+Electricity Bill,Electricity Payment,19515,Matched
+Salary Paid,ATM Withdrawal,52970,Not Matched
+Stationery Purchase,ATM Withdrawal,46038,Not Matched
+Bank Charges,Bank Service Charges,72277,Matched
+Customer Receipt,Customer Payment,50619,Matched
+Salary Paid,Salary Transfer,61714,Matched
+Electricity Bill,Electricity Payment,32615,Matched
+Internet Expense,Internet Bill Payment,2919,Matched
+Fuel Expense,Cheque Bounce Charge,64604,Not Matched
+GST Payment,UPI Payment,55177,Not Matched
+Salary Paid,Salary Transfer,92521,Matched
+Office Rent,Interest Debit,37467,Not Matched
+Advertising Expense,ATM Withdrawal,34558,Not Matched
+GST Payment,Interest Debit,37161,Not Matched
+GST Payment,Cheque Bounce Charge,11084,Not Matched
+Bank Charges,Bank Service Charges,34888,Matched
+Consultancy Fees,Personal Transfer,60272,Not Matched
+Electricity Bill,Electricity Payment,61259,Matched
+Insurance Premium,Insurance Payment,97357,Matched
+Customer Receipt,Customer Payment,76513,Matched
+Insurance Premium,Insurance Payment,97009,Matched
+Office Rent,Rent Payment,10790,Matched
+Salary Paid,Salary Transfer,38933,Matched
+Electricity Bill,Electricity Payment,51252,Matched
+Consultancy Fees,Interest Debit,31564,Not Matched
+Insurance Premium,Insurance Payment,47337,Matched
+Salary Paid,ATM Withdrawal,23814,Not Matched
+Office Rent,ATM Withdrawal,94600,Not Matched
+Advertising Expense,ATM Withdrawal,21843,Not Matched
+Internet Expense,Internet Bill Payment,39085,Matched
+Software Subscription,Software Payment,37177,Matched
+Fuel Expense,UPI Payment,41276,Not Matched
+Laptop Purchase,Computer Purchase,43518,Matched
+Customer Receipt,Customer Payment,53790,Matched
+Staff Welfare,Unknown Transaction,17115,Not Matched
+Software Subscription,Software Payment,73024,Matched
+Software Subscription,Software Payment,77564,Matched
+Insurance Premium,Insurance Payment,59570,Matched
+Software Subscription,Software Payment,47776,Matched
+Fuel Expense,Personal Transfer,66233,Not Matched
+Travel Expense,Investment Transfer,25088,Not Matched
+Software Subscription,Software Payment,88658,Matched
+Staff Welfare,Personal Transfer,23128,Not Matched
+Software Subscription,Software Payment,73988,Matched
+Office Rent,Rent Payment,5728,Matched
+Laptop Purchase,Unknown Transaction,54374,Not Matched
+Stationery Purchase,ATM Withdrawal,39327,Not Matched
+Fuel Expense,Cheque Bounce Charge,12140,Not Matched
+Laptop Purchase,Credit Card Payment,65872,Not Matched
+Internet Expense,Internet Bill Payment,82031,Matched
+Staff Welfare,Investment Transfer,94246,Not Matched
+Laptop Purchase,Computer Purchase,49117,Matched
+Staff Welfare,UPI Payment,21844,Not Matched
+Advertising Expense,Cash Withdrawal,92634,Not Matched
+Consultancy Fees,Interest Debit,47000,Not Matched
+Travel Expense,Unknown Transaction,35236,Not Matched
+Laptop Purchase,Computer Purchase,64264,Matched
+Salary Paid,UPI Payment,97827,Not Matched
+Insurance Premium,Insurance Payment,45849,Matched
+Stationery Purchase,Personal Transfer,27292,Not Matched
+Salary Paid,Loan EMI,96281,Not Matched
+Software Subscription,Software Payment,80385,Matched
+Fuel Expense,Investment Transfer,40876,Not Matched
+Consultancy Fees,Credit Card Payment,36099,Not Matched
+Bank Charges,Bank Service Charges,58043,Matched
+Office Rent,Rent Payment,74466,Matched
+Fuel Expense,Cash Withdrawal,17038,Not Matched
+Insurance Premium,Insurance Payment,16458,Matched
+Software Subscription,Software Payment,80998,Matched
+Laptop Purchase,Investment Transfer,10820,Not Matched
+GST Payment,GST Challan,94830,Matched
+Salary Paid,Salary Transfer,78725,Matched
+Stationery Purchase,Cheque Bounce Charge,59436,Not Matched
+Laptop Purchase,Unknown Transaction,71904,Not Matched
+Office Rent,Cheque Bounce Charge,23856,Not Matched
+Stationery Purchase,Credit Card Payment,59548,Not Matched
+Travel Expense,Cash Withdrawal,54574,Not Matched
+Insurance Premium,Insurance Payment,62634,Matched
+Customer Receipt,Customer Payment,74055,Matched
+Consultancy Fees,Unknown Transaction,20840,Not Matched
+Travel Expense,Cash Withdrawal,12337,Not Matched
+GST Payment,UPI Payment,60105,Not Matched
+Electricity Bill,Electricity Payment,67815,Matched
+Customer Receipt,Customer Payment,67781,Matched
+Staff Welfare,Personal Transfer,17686,Not Matched
+Salary Paid,ATM Withdrawal,1592,Not Matched
+Bank Charges,Bank Service Charges,16682,Matched
+Fuel Expense,Cheque Bounce Charge,9423,Not Matched
+Travel Expense,Loan EMI,9563,Not Matched
+Advertising Expense,Interest Debit,37987,Not Matched
+Electricity Bill,Electricity Payment,56497,Matched
+GST Payment,GST Challan,19074,Matched
+GST Payment,GST Challan,81080,Matched
+Advertising Expense,Investment Transfer,88365,Not Matched
+Insurance Premium,Insurance Payment,71914,Matched
+Insurance Premium,Insurance Payment,35024,Matched
+GST Payment,GST Challan,17073,Matched
+Customer Receipt,Customer Payment,44546,Matched
+Salary Paid,Salary Transfer,96673,Matched
+Electricity Bill,Electricity Payment,23114,Matched
+Electricity Bill,Electricity Payment,91176,Matched
+Office Rent,ATM Withdrawal,83153,Not Matched
+Stationery Purchase,Unknown Transaction,20698,Not Matched
+GST Payment,Cash Withdrawal,11952,Not Matched
+Salary Paid,Salary Transfer,84573,Matched
+Internet Expense,Internet Bill Payment,60596,Matched
+Consultancy Fees,ATM Withdrawal,19793,Not Matched
+Salary Paid,Salary Transfer,73881,Matched
+Office Rent,Rent Payment,92060,Matched
+Stationery Purchase,Investment Transfer,79815,Not Matched
+Salary Paid,Interest Debit,5678,Not Matched
+Office Rent,ATM Withdrawal,14810,Not Matched
+Salary Paid,Credit Card Payment,59262,Not Matched
+Insurance Premium,Insurance Payment,50307,Matched
+Insurance Premium,Insurance Payment,30470,Matched
+Office Rent,Cheque Bounce Charge,51757,Not Matched
+Insurance Premium,Insurance Payment,25312,Matched
+Office Rent,Rent Payment,61070,Matched
+Fuel Expense,Cash Withdrawal,3705,Not Matched
+Laptop Purchase,Computer Purchase,94926,Matched
+Staff Welfare,Unknown Transaction,51321,Not Matched
+Staff Welfare,Investment Transfer,24060,Not Matched
+GST Payment,GST Challan,33628,Matched
+Internet Expense,Internet Bill Payment,45954,Matched
+Salary Paid,Salary Transfer,17509,Matched
+Stationery Purchase,Cash Withdrawal,31636,Not Matched
+Travel Expense,Cash Withdrawal,37392,Not Matched
+Travel Expense,Credit Card Payment,67425,Not Matched
+Office Rent,Cash Withdrawal,19819,Not Matched
+Consultancy Fees,Personal Transfer,18638,Not Matched
+GST Payment,ATM Withdrawal,27962,Not Matched
+GST Payment,GST Challan,28452,Matched
+Laptop Purchase,Personal Transfer,65008,Not Matched
+Laptop Purchase,Computer Purchase,61232,Matched
+GST Payment,Interest Debit,67043,Not Matched
+Laptop Purchase,Computer Purchase,80097,Matched
+Software Subscription,Software Payment,45222,Matched
+GST Payment,ATM Withdrawal,59888,Not Matched
+Electricity Bill,Electricity Payment,33051,Matched
+GST Payment,GST Challan,92911,Matched
+Salary Paid,Cheque Bounce Charge,51145,Not Matched
+Insurance Premium,Insurance Payment,32549,Matched
+Internet Expense,Internet Bill Payment,1364,Matched
+Staff Welfare,Personal Transfer,12845,Not Matched
+Internet Expense,Internet Bill Payment,26037,Matched
+Salary Paid,Salary Transfer,18237,Matched
+Bank Charges,Bank Service Charges,71812,Matched
+Laptop Purchase,ATM Withdrawal,84258,Not Matched
+Laptop Purchase,Computer Purchase,12301,Matched
+Consultancy Fees,ATM Withdrawal,74342,Not Matched
+Salary Paid,Salary Transfer,65389,Matched
+Office Rent,Rent Payment,70218,Matched
+Salary Paid,Salary Transfer,84003,Matched
+Office Rent,Cash Withdrawal,30179,Not Matched
+Consultancy Fees,Investment Transfer,85949,Not Matched
+Advertising Expense,Cash Withdrawal,25278,Not Matched
+GST Payment,Interest Debit,26507,Not Matched
+Advertising Expense,Interest Debit,71031,Not Matched
+Insurance Premium,Insurance Payment,49753,Matched
+Laptop Purchase,Unknown Transaction,73639,Not Matched
+Advertising Expense,Cheque Bounce Charge,67100,Not Matched
+Software Subscription,Software Payment,43669,Matched
+Office Rent,Credit Card Payment,29744,Not Matched
+Advertising Expense,Unknown Transaction,73230,Not Matched
+Internet Expense,Internet Bill Payment,5780,Matched
+Consultancy Fees,Personal Transfer,7126,Not Matched
+Laptop Purchase,Computer Purchase,56570,Matched
+Consultancy Fees,Cheque Bounce Charge,98643,Not Matched
+Customer Receipt,Customer Payment,68085,Matched
+Advertising Expense,ATM Withdrawal,33317,Not Matched
+Stationery Purchase,Cheque Bounce Charge,81662,Not Matched
+Insurance Premium,Insurance Payment,38557,Matched
+Stationery Purchase,Cash Withdrawal,51055,Not Matched
+Staff Welfare,Credit Card Payment,16306,Not Matched
+Laptop Purchase,Computer Purchase,73624,Matched
+Salary Paid,Salary Transfer,80422,Matched
+Advertising Expense,Loan EMI,19794,Not Matched
+Consultancy Fees,ATM Withdrawal,34352,Not Matched
+Advertising Expense,Personal Transfer,80810,Not Matched
+Consultancy Fees,Unknown Transaction,28347,Not Matched
+Internet Expense,Internet Bill Payment,47544,Matched
+Customer Receipt,Customer Payment,77466,Matched
+Advertising Expense,Loan EMI,61823,Not Matched
+Software Subscription,Software Payment,40342,Matched
+Insurance Premium,Insurance Payment,32565,Matched
+Laptop Purchase,Computer Purchase,93032,Matched
+Staff Welfare,UPI Payment,56578,Not Matched
+Laptop Purchase,Computer Purchase,91464,Matched
+Salary Paid,Salary Transfer,39369,Matched
+Staff Welfare,Cash Withdrawal,98719,Not Matched
+Staff Welfare,Cash Withdrawal,62006,Not Matched
+Insurance Premium,Insurance Payment,45235,Matched
+Insurance Premium,Insurance Payment,17274,Matched
+GST Payment,GST Challan,15628,Matched
+Office Rent,Rent Payment,75317,Matched
+Customer Receipt,Customer Payment,76264,Matched
+Laptop Purchase,Cash Withdrawal,30470,Not Matched
+Travel Expense,ATM Withdrawal,23861,Not Matched
+Office Rent,Cheque Bounce Charge,76123,Not Matched
+Insurance Premium,Insurance Payment,51979,Matched
+Travel Expense,Interest Debit,86436,Not Matched
+Bank Charges,Bank Service Charges,80300,Matched
+Software Subscription,Software Payment,42603,Matched
+Office Rent,Rent Payment,6222,Matched
+Bank Charges,Bank Service Charges,48511,Matched
+Salary Paid,Cash Withdrawal,72087,Not Matched
+Fuel Expense,Personal Transfer,15486,Not Matched
+Insurance Premium,Insurance Payment,59895,Matched
+Salary Paid,Salary Transfer,96738,Matched
+Laptop Purchase,Personal Transfer,36099,Not Matched
+Internet Expense,Internet Bill Payment,96352,Matched
+Insurance Premium,Insurance Payment,32043,Matched
+Electricity Bill,Electricity Payment,78651,Matched
+Stationery Purchase,ATM Withdrawal,83838,Not Matched
+Travel Expense,Investment Transfer,99626,Not Matched
+Office Rent,Cash Withdrawal,63637,Not Matched
+Internet Expense,Internet Bill Payment,16141,Matched
+Software Subscription,Software Payment,13685,Matched
+Stationery Purchase,Credit Card Payment,99148,Not Matched
+Insurance Premium,Insurance Payment,50096,Matched
+Office Rent,Investment Transfer,59225,Not Matched
+Electricity Bill,Electricity Payment,77344,Matched
+Salary Paid,Unknown Transaction,4406,Not Matched
+Travel Expense,Credit Card Payment,58642,Not Matched
+Consultancy Fees,ATM Withdrawal,34702,Not Matched
+Electricity Bill,Electricity Payment,98839,Matched
+Stationery Purchase,Cheque Bounce Charge,87836,Not Matched
+Insurance Premium,Insurance Payment,43073,Matched
+Fuel Expense,Investment Transfer,54305,Not Matched
+Software Subscription,Software Payment,71743,Matched
+GST Payment,GST Challan,7285,Matched
+Consultancy Fees,Interest Debit,38591,Not Matched
+Customer Receipt,Customer Payment,81506,Matched
+Electricity Bill,Electricity Payment,59007,Matched
+Stationery Purchase,Unknown Transaction,46515,Not Matched
+Insurance Premium,Insurance Payment,27632,Matched
+Electricity Bill,Electricity Payment,2183,Matched
+Stationery Purchase,UPI Payment,46650,Not Matched
+Bank Charges,Bank Service Charges,23987,Matched
+GST Payment,ATM Withdrawal,36790,Not Matched
+Advertising Expense,Cash Withdrawal,83168,Not Matched
+Electricity Bill,Electricity Payment,85671,Matched
+Staff Welfare,Cash Withdrawal,76316,Not Matched
+Laptop Purchase,Computer Purchase,50198,Matched
+Advertising Expense,Cash Withdrawal,58479,Not Matched
+Fuel Expense,Cash Withdrawal,88345,Not Matched
+Office Rent,Rent Payment,8358,Matched
+Customer Receipt,Customer Payment,7574,Matched
+Laptop Purchase,Cheque Bounce Charge,27582,Not Matched
+Salary Paid,Loan EMI,73823,Not Matched
+GST Payment,GST Challan,44339,Matched
+Consultancy Fees,Personal Transfer,9131,Not Matched
+Software Subscription,Software Payment,5263,Matched
+Travel Expense,Loan EMI,76083,Not Matched
+Staff Welfare,Personal Transfer,87688,Not Matched
+Laptop Purchase,Unknown Transaction,7079,Not Matched
+Electricity Bill,Electricity Payment,99144,Matched
+Insurance Premium,Insurance Payment,87362,Matched
+Software Subscription,Software Payment,28075,Matched
+Salary Paid,Interest Debit,90065,Not Matched
+GST Payment,Personal Transfer,87429,Not Matched
+Advertising Expense,Loan EMI,43238,Not Matched
+Software Subscription,Software Payment,31809,Matched
+Travel Expense,Unknown Transaction,23694,Not Matched
+Laptop Purchase,Cheque Bounce Charge,79522,Not Matched
+Salary Paid,ATM Withdrawal,64767,Not Matched
+GST Payment,GST Challan,87952,Matched
+Insurance Premium,Insurance Payment,88377,Matched
+Salary Paid,Loan EMI,98940,Not Matched
+Salary Paid,Salary Transfer,40145,Matched
+Consultancy Fees,Credit Card Payment,74951,Not Matched
+Consultancy Fees,ATM Withdrawal,12689,Not Matched
+Electricity Bill,Electricity Payment,92237,Matched
+Advertising Expense,Personal Transfer,56098,Not Matched
+Advertising Expense,Cash Withdrawal,29472,Not Matched
+Laptop Purchase,Computer Purchase,68423,Matched
+GST Payment,GST Challan,40676,Matched
+Laptop Purchase,Investment Transfer,82932,Not Matched
+Internet Expense,Internet Bill Payment,44097,Matched
+Office Rent,Rent Payment,31180,Matched
+Staff Welfare,UPI Payment,70658,Not Matched
+GST Payment,Cash Withdrawal,81558,Not Matched
+Advertising Expense,Personal Transfer,34797,Not Matched
+GST Payment,Credit Card Payment,17140,Not Matched
+Internet Expense,Internet Bill Payment,83268,Matched
+Insurance Premium,Insurance Payment,50306,Matched
+Insurance Premium,Insurance Payment,87723,Matched
+Office Rent,ATM Withdrawal,14147,Not Matched
+Stationery Purchase,UPI Payment,32723,Not Matched
+Insurance Premium,Insurance Payment,10232,Matched
+Office Rent,Rent Payment,3805,Matched
+Office Rent,Rent Payment,86911,Matched
+Salary Paid,Interest Debit,59784,Not Matched
+Advertising Expense,Personal Transfer,5444,Not Matched
+Customer Receipt,Customer Payment,69544,Matched
+Stationery Purchase,Personal Transfer,32602,Not Matched
+Advertising Expense,Loan EMI,86544,Not Matched
+Laptop Purchase,Cheque Bounce Charge,98408,Not Matched
+Office Rent,Rent Payment,51199,Matched
+Electricity Bill,Electricity Payment,38086,Matched
+Consultancy Fees,Loan EMI,14314,Not Matched
+Laptop Purchase,Credit Card Payment,1867,Not Matched
+Fuel Expense,Interest Debit,86054,Not Matched
+Laptop Purchase,Computer Purchase,46653,Matched
+Travel Expense,Credit Card Payment,74386,Not Matched
+GST Payment,GST Challan,25899,Matched
+Fuel Expense,UPI Payment,20602,Not Matched
+Travel Expense,Unknown Transaction,79840,Not Matched
+Travel Expense,Loan EMI,23306,Not Matched
+Travel Expense,Loan EMI,60578,Not Matched
+Insurance Premium,Insurance Payment,39237,Matched
+GST Payment,Cash Withdrawal,59328,Not Matched
+Internet Expense,Internet Bill Payment,22213,Matched
+Insurance Premium,Insurance Payment,84707,Matched
+Laptop Purchase,Computer Purchase,29164,Matched
+Laptop Purchase,Computer Purchase,83213,Matched
+Fuel Expense,ATM Withdrawal,41178,Not Matched
+Internet Expense,Internet Bill Payment,82928,Matched
+Travel Expense,Unknown Transaction,96999,Not Matched
+Customer Receipt,Customer Payment,9321,Matched
+Electricity Bill,Electricity Payment,72166,Matched
+Laptop Purchase,Computer Purchase,86243,Matched
+Consultancy Fees,Investment Transfer,62849,Not Matched
+Internet Expense,Internet Bill Payment,67348,Matched
+Office Rent,Rent Payment,42266,Matched
+Office Rent,Credit Card Payment,59563,Not Matched
+Internet Expense,Internet Bill Payment,69617,Matched
+GST Payment,GST Challan,98020,Matched
+Laptop Purchase,Credit Card Payment,52686,Not Matched
+Advertising Expense,Unknown Transaction,76284,Not Matched
+GST Payment,Unknown Transaction,49703,Not Matched
+Insurance Premium,Insurance Payment,47035,Matched
+Office Rent,ATM Withdrawal,96325,Not Matched
+Software Subscription,Software Payment,87984,Matched
+GST Payment,GST Challan,16469,Matched
+Travel Expense,UPI Payment,69673,Not Matched
+Insurance Premium,Insurance Payment,32044,Matched
+Consultancy Fees,Loan EMI,14844,Not Matched
+Office Rent,ATM Withdrawal,57496,Not Matched
+Software Subscription,Software Payment,25431,Matched
+Electricity Bill,Electricity Payment,86507,Matched
+Salary Paid,Salary Transfer,87644,Matched
+Stationery Purchase,Loan EMI,68234,Not Matched
+GST Payment,Credit Card Payment,83459,Not Matched
+Laptop Purchase,Computer Purchase,92936,Matched
+Internet Expense,Internet Bill Payment,5105,Matched
+Travel Expense,Unknown Transaction,1757,Not Matched
+GST Payment,UPI Payment,99534,Not Matched
+Advertising Expense,ATM Withdrawal,65575,Not Matched
+Office Rent,Loan EMI,16668,Not Matched
+GST Payment,GST Challan,47533,Matched
+Insurance Premium,Insurance Payment,62882,Matched
+Office Rent,Rent Payment,25953,Matched
+Electricity Bill,Electricity Payment,1004,Matched
+Software Subscription,Software Payment,80351,Matched
+Software Subscription,Software Payment,6394,Matched
+Stationery Purchase,ATM Withdrawal,80555,Not Matched
+Customer Receipt,Customer Payment,65945,Matched
+Fuel Expense,Cheque Bounce Charge,31302,Not Matched
+GST Payment,GST Challan,91060,Matched
+GST Payment,Personal Transfer,73734,Not Matched
+Laptop Purchase,Credit Card Payment,12659,Not Matched
+Salary Paid,Salary Transfer,27250,Matched
+Travel Expense,Credit Card Payment,35846,Not Matched
+Staff Welfare,Loan EMI,83784,Not Matched
+Staff Welfare,ATM Withdrawal,31601,Not Matched
+Insurance Premium,Insurance Payment,15855,Matched
+GST Payment,Personal Transfer,16614,Not Matched
+Salary Paid,Personal Transfer,10148,Not Matched
+GST Payment,Cash Withdrawal,53987,Not Matched
+Salary Paid,Personal Transfer,61421,Not Matched
+Software Subscription,Software Payment,18664,Matched
+Insurance Premium,Insurance Payment,41383,Matched
+Stationery Purchase,Cheque Bounce Charge,18255,Not Matched
+Travel Expense,Loan EMI,17687,Not Matched
+Customer Receipt,Customer Payment,45026,Matched
+Electricity Bill,Electricity Payment,28645,Matched
+Salary Paid,Unknown Transaction,44852,Not Matched
+Bank Charges,Bank Service Charges,85533,Matched
+Stationery Purchase,Cheque Bounce Charge,60320,Not Matched
+Laptop Purchase,Interest Debit,16948,Not Matched
+Fuel Expense,Credit Card Payment,46481,Not Matched
+Electricity Bill,Electricity Payment,89872,Matched
+Office Rent,Rent Payment,87524,Matched
+Insurance Premium,Insurance Payment,62321,Matched
+Customer Receipt,Customer Payment,15851,Matched
+Laptop Purchase,Loan EMI,17222,Not Matched
+Laptop Purchase,Unknown Transaction,14717,Not Matched
+Internet Expense,Internet Bill Payment,2392,Matched
+GST Payment,GST Challan,37564,Matched
+Software Subscription,Software Payment,82686,Matched
+Customer Receipt,Customer Payment,41780,Matched
+Internet Expense,Internet Bill Payment,73792,Matched
+GST Payment,GST Challan,2375,Matched
+Customer Receipt,Customer Payment,21763,Matched
+GST Payment,Investment Transfer,31325,Not Matched
+Consultancy Fees,UPI Payment,78768,Not Matched
+Insurance Premium,Insurance Payment,90248,Matched
+Staff Welfare,Cheque Bounce Charge,83626,Not Matched
+Consultancy Fees,ATM Withdrawal,45211,Not Matched
+Insurance Premium,Insurance Payment,95051,Matched
+Insurance Premium,Insurance Payment,7632,Matched
+Consultancy Fees,Personal Transfer,64383,Not Matched
+Electricity Bill,Electricity Payment,19060,Matched
+Bank Charges,Bank Service Charges,1014,Matched
+Staff Welfare,ATM Withdrawal,44370,Not Matched
+Laptop Purchase,Computer Purchase,85112,Matched
+Salary Paid,Salary Transfer,66639,Matched
+Insurance Premium,Insurance Payment,9623,Matched
+Travel Expense,Loan EMI,12336,Not Matched
+Software Subscription,Software Payment,42259,Matched
+Laptop Purchase,Computer Purchase,91187,Matched
+Fuel Expense,Personal Transfer,65072,Not Matched
+Office Rent,Rent Payment,54251,Matched
+Laptop Purchase,Cheque Bounce Charge,58000,Not Matched
+Salary Paid,Interest Debit,62631,Not Matched
+Stationery Purchase,Unknown Transaction,92748,Not Matched
+Travel Expense,ATM Withdrawal,48408,Not Matched
+Laptop Purchase,Cheque Bounce Charge,55417,Not Matched
+Fuel Expense,Loan EMI,96388,Not Matched
+Software Subscription,Software Payment,27284,Matched
+Advertising Expense,Cash Withdrawal,46178,Not Matched
+Staff Welfare,UPI Payment,49321,Not Matched
+Office Rent,Rent Payment,85673,Matched
+Office Rent,Cheque Bounce Charge,7220,Not Matched
+Advertising Expense,Investment Transfer,21589,Not Matched
+Travel Expense,Cash Withdrawal,65682,Not Matched
+Software Subscription,Software Payment,46818,Matched
+Electricity Bill,Electricity Payment,80460,Matched
+Salary Paid,Cash Withdrawal,28012,Not Matched
+Electricity Bill,Electricity Payment,37353,Matched
+Salary Paid,Salary Transfer,66620,Matched
+Travel Expense,Unknown Transaction,12117,Not Matched
+Electricity Bill,Electricity Payment,26152,Matched
+Salary Paid,Loan EMI,7592,Not Matched
+Laptop Purchase,Computer Purchase,3217,Matched
+Salary Paid,Salary Transfer,73914,Matched
+Office Rent,UPI Payment,20347,Not Matched
+Software Subscription,Software Payment,68951,Matched
+Stationery Purchase,UPI Payment,57991,Not Matched
+Internet Expense,Internet Bill Payment,16843,Matched
+Stationery Purchase,ATM Withdrawal,41840,Not Matched
+Salary Paid,Salary Transfer,60420,Matched
+GST Payment,Investment Transfer,99285,Not Matched
+Salary Paid,Unknown Transaction,79426,Not Matched
+Consultancy Fees,Unknown Transaction,54468,Not Matched
+Office Rent,Rent Payment,61170,Matched
+GST Payment,Investment Transfer,8131,Not Matched
+Fuel Expense,Interest Debit,60314,Not Matched
+Bank Charges,Bank Service Charges,63261,Matched
+GST Payment,GST Challan,93976,Matched
+GST Payment,GST Challan,34129,Matched
+Salary Paid,Salary Transfer,77281,Matched
+Office Rent,Interest Debit,63983,Not Matched
+Electricity Bill,Electricity Payment,65949,Matched
+Customer Receipt,Customer Payment,76771,Matched
+Insurance Premium,Insurance Payment,52632,Matched
+Office Rent,Rent Payment,71371,Matched
+Bank Charges,Bank Service Charges,89944,Matched
+Software Subscription,Software Payment,73708,Matched
+Electricity Bill,Electricity Payment,53566,Matched
+Office Rent,Rent Payment,18874,Matched
+Internet Expense,Internet Bill Payment,17634,Matched
+Salary Paid,Credit Card Payment,55475,Not Matched
+Advertising Expense,Cheque Bounce Charge,36712,Not Matched
+GST Payment,GST Challan,36866,Matched
+Laptop Purchase,Computer Purchase,89176,Matched
+Insurance Premium,Insurance Payment,2683,Matched
+Salary Paid,Salary Transfer,24174,Matched
+Fuel Expense,Credit Card Payment,97677,Not Matched
+Laptop Purchase,Personal Transfer,44314,Not Matched
+GST Payment,Loan EMI,11930,Not Matched
+Customer Receipt,Customer Payment,8812,Matched
+Software Subscription,Software Payment,50509,Matched
+Office Rent,Cash Withdrawal,50087,Not Matched
+Fuel Expense,UPI Payment,47977,Not Matched
+Electricity Bill,Electricity Payment,27550,Matched
+GST Payment,GST Challan,38183,Matched
+Insurance Premium,Insurance Payment,12332,Matched
+Office Rent,Rent Payment,68130,Matched
+Laptop Purchase,ATM Withdrawal,5348,Not Matched
+Electricity Bill,Electricity Payment,83164,Matched
+Staff Welfare,UPI Payment,2769,Not Matched
+Customer Receipt,Customer Payment,52619,Matched
+Customer Receipt,Customer Payment,58845,Matched
+Salary Paid,Salary Transfer,64480,Matched
+Advertising Expense,Interest Debit,35861,Not Matched
+Salary Paid,Salary Transfer,62474,Matched
+Laptop Purchase,Investment Transfer,9813,Not Matched
+Insurance Premium,Insurance Payment,46132,Matched
+Consultancy Fees,Loan EMI,64997,Not Matched
+Salary Paid,Salary Transfer,24494,Matched
+Laptop Purchase,Computer Purchase,84820,Matched
+Staff Welfare,Unknown Transaction,83284,Not Matched
+Travel Expense,ATM Withdrawal,60239,Not Matched
+Advertising Expense,UPI Payment,34436,Not Matched
+Stationery Purchase,Loan EMI,2244,Not Matched
+Office Rent,Rent Payment,4062,Matched
+Staff Welfare,Cheque Bounce Charge,3111,Not Matched
+Consultancy Fees,Cash Withdrawal,97616,Not Matched
+Salary Paid,Salary Transfer,85798,Matched
+Salary Paid,Salary Transfer,84035,Matched
+Internet Expense,Internet Bill Payment,23259,Matched
+Travel Expense,Personal Transfer,41940,Not Matched
+GST Payment,Interest Debit,9963,Not Matched
+Staff Welfare,ATM Withdrawal,27167,Not Matched
+Salary Paid,Salary Transfer,27253,Matched
+Internet Expense,Internet Bill Payment,24235,Matched
+Laptop Purchase,Cash Withdrawal,75156,Not Matched
+Consultancy Fees,ATM Withdrawal,18687,Not Matched
+GST Payment,Loan EMI,63774,Not Matched
+Bank Charges,Bank Service Charges,3420,Matched
+Staff Welfare,Interest Debit,30550,Not Matched
+Electricity Bill,Electricity Payment,71634,Matched
+Office Rent,Rent Payment,42191,Matched
+GST Payment,GST Challan,99183,Matched
+GST Payment,GST Challan,8144,Matched
+Insurance Premium,Insurance Payment,32900,Matched
+Insurance Premium,Insurance Payment,79377,Matched
+Salary Paid,Interest Debit,30443,Not Matched
+Advertising Expense,UPI Payment,10679,Not Matched
+Staff Welfare,UPI Payment,71479,Not Matched
+Electricity Bill,Electricity Payment,97185,Matched
+Electricity Bill,Electricity Payment,40565,Matched
+Software Subscription,Software Payment,92537,Matched
+GST Payment,Cheque Bounce Charge,94574,Not Matched
+Advertising Expense,Loan EMI,66533,Not Matched
+Internet Expense,Internet Bill Payment,57434,Matched
+GST Payment,GST Challan,59986,Matched
+Staff Welfare,Credit Card Payment,91962,Not Matched
+Customer Receipt,Customer Payment,95381,Matched
+Stationery Purchase,Interest Debit,36969,Not Matched
+Consultancy Fees,ATM Withdrawal,62083,Not Matched
+GST Payment,Loan EMI,47381,Not Matched
+Fuel Expense,ATM Withdrawal,6754,Not Matched
+Laptop Purchase,Computer Purchase,71812,Matched
+Salary Paid,Salary Transfer,78670,Matched
+Consultancy Fees,Cheque Bounce Charge,40112,Not Matched
+Staff Welfare,Unknown Transaction,50496,Not Matched
+Travel Expense,Unknown Transaction,60702,Not Matched
+Customer Receipt,Customer Payment,39548,Matched
+Bank Charges,Bank Service Charges,58057,Matched
+Bank Charges,Bank Service Charges,64777,Matched
+Fuel Expense,ATM Withdrawal,54457,Not Matched
+Office Rent,Rent Payment,39250,Matched
+GST Payment,Investment Transfer,56195,Not Matched
+Office Rent,ATM Withdrawal,8055,Not Matched
+Salary Paid,Cash Withdrawal,47270,Not Matched
+Office Rent,Rent Payment,23844,Matched
+Fuel Expense,Loan EMI,32391,Not Matched
+Insurance Premium,Insurance Payment,8965,Matched
+Stationery Purchase,Loan EMI,16512,Not Matched
+Office Rent,Rent Payment,93743,Matched
+GST Payment,GST Challan,54197,Matched
+Laptop Purchase,Computer Purchase,73759,Matched
+Staff Welfare,UPI Payment,63630,Not Matched
+Travel Expense,UPI Payment,20424,Not Matched
+Internet Expense,Internet Bill Payment,34233,Matched
+Salary Paid,Investment Transfer,22897,Not Matched
+GST Payment,GST Challan,10462,Matched
+Travel Expense,ATM Withdrawal,72166,Not Matched
+Salary Paid,UPI Payment,57884,Not Matched
+Salary Paid,Investment Transfer,85646,Not Matched
+GST Payment,Loan EMI,15882,Not Matched
+GST Payment,GST Challan,57914,Matched
+Consultancy Fees,ATM Withdrawal,25619,Not Matched
+GST Payment,GST Challan,94640,Matched
+Fuel Expense,UPI Payment,6472,Not Matched
+Office Rent,Cash Withdrawal,49701,Not Matched
+Consultancy Fees,ATM Withdrawal,6473,Not Matched
+Fuel Expense,Cash Withdrawal,29975,Not Matched
+Travel Expense,Unknown Transaction,63566,Not Matched
+Fuel Expense,Cash Withdrawal,75957,Not Matched
+Laptop Purchase,Computer Purchase,28890,Matched
+Office Rent,Rent Payment,10894,Matched
+Insurance Premium,Insurance Payment,44735,Matched
+Salary Paid,Credit Card Payment,38974,Not Matched
+Advertising Expense,Loan EMI,45094,Not Matched
+Electricity Bill,Electricity Payment,32102,Matched
+Laptop Purchase,Computer Purchase,84953,Matched
+Consultancy Fees,Investment Transfer,68009,Not Matched
+GST Payment,GST Challan,76309,Matched
+Salary Paid,Personal Transfer,24249,Not Matched
+Consultancy Fees,ATM Withdrawal,87651,Not Matched
+GST Payment,Credit Card Payment,65610,Not Matched
+GST Payment,GST Challan,69138,Matched
+Salary Paid,Cash Withdrawal,74475,Not Matched
+Advertising Expense,Credit Card Payment,25517,Not Matched
+Internet Expense,Internet Bill Payment,88906,Matched
+Insurance Premium,Insurance Payment,45524,Matched
+Laptop Purchase,Computer Purchase,24555,Matched
+Customer Receipt,Customer Payment,32460,Matched
+GST Payment,GST Challan,93318,Matched
+Stationery Purchase,Cash Withdrawal,29023,Not Matched
+Laptop Purchase,Credit Card Payment,16499,Not Matched
+Consultancy Fees,Cheque Bounce Charge,80526,Not Matched
+GST Payment,Investment Transfer,72104,Not Matched
+Fuel Expense,Credit Card Payment,54311,Not Matched
+GST Payment,GST Challan,87496,Matched
+Fuel Expense,Investment Transfer,14786,Not Matched
+Fuel Expense,Investment Transfer,60210,Not Matched
+Bank Charges,Bank Service Charges,98657,Matched
+Salary Paid,Salary Transfer,91069,Matched
+Office Rent,Cheque Bounce Charge,11799,Not Matched
+Staff Welfare,Personal Transfer,91520,Not Matched
+Travel Expense,Loan EMI,74831,Not Matched
+Laptop Purchase,Cheque Bounce Charge,84908,Not Matched
+Stationery Purchase,Unknown Transaction,49481,Not Matched
+Software Subscription,Software Payment,42766,Matched
+Software Subscription,Software Payment,4283,Matched
+Staff Welfare,Unknown Transaction,89962,Not Matched
+Consultancy Fees,Interest Debit,29704,Not Matched
+GST Payment,GST Challan,68279,Matched
+Salary Paid,Salary Transfer,57522,Matched
+Travel Expense,Cash Withdrawal,64865,Not Matched
+Stationery Purchase,Loan EMI,94167,Not Matched
+Office Rent,Loan EMI,34450,Not Matched
+Salary Paid,Cash Withdrawal,69337,Not Matched
+Salary Paid,Salary Transfer,56100,Matched
+Consultancy Fees,UPI Payment,1756,Not Matched
+Internet Expense,Internet Bill Payment,36721,Matched
+Staff Welfare,Personal Transfer,52550,Not Matched
+Salary Paid,Salary Transfer,71297,Matched
+Consultancy Fees,Unknown Transaction,66573,Not Matched
+Electricity Bill,Electricity Payment,51878,Matched
+Internet Expense,Internet Bill Payment,81614,Matched
+Consultancy Fees,Loan EMI,30101,Not Matched
+Fuel Expense,ATM Withdrawal,43847,Not Matched
+GST Payment,GST Challan,4080,Matched
+GST Payment,Cash Withdrawal,81658,Not Matched
+Advertising Expense,Investment Transfer,74473,Not Matched
+Insurance Premium,Insurance Payment,56624,Matched
+Internet Expense,Internet Bill Payment,14927,Matched
+Office Rent,UPI Payment,19018,Not Matched
+Laptop Purchase,Unknown Transaction,47711,Not Matched
+Consultancy Fees,Investment Transfer,11301,Not Matched
+Internet Expense,Internet Bill Payment,69144,Matched
+Software Subscription,Software Payment,45774,Matched
+Travel Expense,ATM Withdrawal,91250,Not Matched
+Laptop Purchase,Interest Debit,89869,Not Matched
+Stationery Purchase,Unknown Transaction,71733,Not Matched
+Stationery Purchase,Credit Card Payment,4011,Not Matched
+Stationery Purchase,Credit Card Payment,51850,Not Matched
+Staff Welfare,Personal Transfer,37837,Not Matched
+Consultancy Fees,Cash Withdrawal,91632,Not Matched
+Customer Receipt,Customer Payment,15418,Matched
+Salary Paid,Unknown Transaction,34313,Not Matched
+Staff Welfare,ATM Withdrawal,7969,Not Matched
+Office Rent,Rent Payment,30967,Matched
+Office Rent,Rent Payment,62716,Matched
+Salary Paid,Salary Transfer,78460,Matched
+Laptop Purchase,Computer Purchase,91382,Matched
+Stationery Purchase,Cash Withdrawal,5756,Not Matched
+Electricity Bill,Electricity Payment,63249,Matched
+Office Rent,Unknown Transaction,93359,Not Matched
+GST Payment,Unknown Transaction,95727,Not Matched
+Salary Paid,Salary Transfer,50742,Matched
+Laptop Purchase,UPI Payment,69869,Not Matched
+Salary Paid,Salary Transfer,85611,Matched
+Customer Receipt,Customer Payment,51545,Matched
+Salary Paid,Salary Transfer,6306,Matched
+Laptop Purchase,Interest Debit,97171,Not Matched
+Salary Paid,Salary Transfer,7685,Matched
+GST Payment,GST Challan,45693,Matched
+Internet Expense,Internet Bill Payment,25084,Matched
+Internet Expense,Internet Bill Payment,85552,Matched
+Travel Expense,Investment Transfer,77264,Not Matched
+Insurance Premium,Insurance Payment,96359,Matched
+Office Rent,Rent Payment,68588,Matched
+Travel Expense,Credit Card Payment,51957,Not Matched
+Staff Welfare,Loan EMI,22806,Not Matched
+Staff Welfare,ATM Withdrawal,94201,Not Matched
+Software Subscription,Software Payment,41731,Matched
+Salary Paid,Cash Withdrawal,90374,Not Matched
+GST Payment,Credit Card Payment,51599,Not Matched
+Staff Welfare,Cash Withdrawal,57963,Not Matched
+Laptop Purchase,Loan EMI,5434,Not Matched
+Travel Expense,Credit Card Payment,98697,Not Matched
+GST Payment,Investment Transfer,35408,Not Matched
+Travel Expense,Interest Debit,12059,Not Matched
+Laptop Purchase,Computer Purchase,27523,Matched
+Salary Paid,Salary Transfer,28676,Matched
+Electricity Bill,Electricity Payment,4200,Matched
+Salary Paid,ATM Withdrawal,56779,Not Matched
+Advertising Expense,Unknown Transaction,16633,Not Matched
+Advertising Expense,UPI Payment,52463,Not Matched
+Electricity Bill,Electricity Payment,10786,Matched
+Staff Welfare,Interest Debit,75405,Not Matched
+Electricity Bill,Electricity Payment,3982,Matched
+Bank Charges,Bank Service Charges,70639,Matched
+Laptop Purchase,Cash Withdrawal,50751,Not Matched
+Salary Paid,ATM Withdrawal,12067,Not Matched
+Internet Expense,Internet Bill Payment,70903,Matched
+Consultancy Fees,ATM Withdrawal,51680,Not Matched
+Software Subscription,Software Payment,25750,Matched
+Travel Expense,Cash Withdrawal,85007,Not Matched
+Electricity Bill,Electricity Payment,28423,Matched
+Office Rent,Rent Payment,48563,Matched
+GST Payment,GST Challan,99525,Matched
+Salary Paid,Salary Transfer,24852,Matched
+GST Payment,GST Challan,46051,Matched
+Consultancy Fees,UPI Payment,84808,Not Matched
+Software Subscription,Software Payment,38950,Matched
+Salary Paid,Salary Transfer,98971,Matched
+Salary Paid,Salary Transfer,53468,Matched
+Laptop Purchase,Computer Purchase,95764,Matched
+Staff Welfare,UPI Payment,27073,Not Matched
+Office Rent,Rent Payment,44399,Matched
+Laptop Purchase,Computer Purchase,56076,Matched
+GST Payment,Cheque Bounce Charge,4019,Not Matched
+Office Rent,Rent Payment,90272,Matched
+Salary Paid,Cheque Bounce Charge,64066,Not Matched
+Internet Expense,Internet Bill Payment,77613,Matched
+Salary Paid,Investment Transfer,71998,Not Matched
+Fuel Expense,Interest Debit,64559,Not Matched
+Salary Paid,Salary Transfer,33378,Matched
+Software Subscription,Software Payment,8338,Matched
+Customer Receipt,Customer Payment,51044,Matched
+Office Rent,Rent Payment,48842,Matched
+Laptop Purchase,Computer Purchase,51878,Matched
+Salary Paid,Salary Transfer,35101,Matched
+Office Rent,Rent Payment,60112,Matched
+Software Subscription,Software Payment,68114,Matched
+Bank Charges,Bank Service Charges,66226,Matched
+Office Rent,UPI Payment,7978,Not Matched
+Customer Receipt,Customer Payment,90905,Matched
+Laptop Purchase,Loan EMI,18839,Not Matched
+Fuel Expense,Cash Withdrawal,46026,Not Matched
+Electricity Bill,Electricity Payment,16489,Matched
+Internet Expense,Internet Bill Payment,76761,Matched
+Laptop Purchase,Computer Purchase,76283,Matched
+Laptop Purchase,Investment Transfer,31644,Not Matched
+Salary Paid,Salary Transfer,15451,Matched
+Insurance Premium,Insurance Payment,41295,Matched
+Internet Expense,Internet Bill Payment,44545,Matched
+Internet Expense,Internet Bill Payment,99768,Matched
+Insurance Premium,Insurance Payment,11416,Matched
+Salary Paid,Salary Transfer,18745,Matched
+Staff Welfare,Interest Debit,36737,Not Matched
+Office Rent,Credit Card Payment,47123,Not Matched
+Laptop Purchase,Investment Transfer,56116,Not Matched
+Travel Expense,ATM Withdrawal,36384,Not Matched
+Fuel Expense,Loan EMI,92467,Not Matched
+Laptop Purchase,Computer Purchase,25499,Matched
+Stationery Purchase,Personal Transfer,94101,Not Matched
+Bank Charges,Bank Service Charges,6008,Matched
+Office Rent,Interest Debit,49631,Not Matched
+Consultancy Fees,Credit Card Payment,53667,Not Matched
+Salary Paid,Salary Transfer,54827,Matched
+Staff Welfare,Investment Transfer,80094,Not Matched
+GST Payment,UPI Payment,11864,Not Matched
+Software Subscription,Software Payment,67524,Matched
+Laptop Purchase,Computer Purchase,26202,Matched
+Advertising Expense,ATM Withdrawal,56762,Not Matched
+Consultancy Fees,Credit Card Payment,28717,Not Matched
+Staff Welfare,ATM Withdrawal,98628,Not Matched
+Office Rent,Cash Withdrawal,32980,Not Matched
+Stationery Purchase,Loan EMI,98882,Not Matched
+Customer Receipt,Customer Payment,41541,Matched
+Salary Paid,Personal Transfer,26489,Not Matched
+Electricity Bill,Electricity Payment,7824,Matched
+GST Payment,Personal Transfer,98884,Not Matched
+Salary Paid,Loan EMI,18192,Not Matched
+Advertising Expense,Cheque Bounce Charge,11101,Not Matched
+Electricity Bill,Electricity Payment,97137,Matched
+Laptop Purchase,Computer Purchase,96751,Matched
+Advertising Expense,Loan EMI,21711,Not Matched
+Fuel Expense,Personal Transfer,61940,Not Matched
+Internet Expense,Internet Bill Payment,91384,Matched
+Software Subscription,Software Payment,4517,Matched
+Insurance Premium,Insurance Payment,55396,Matched
+Internet Expense,Internet Bill Payment,80219,Matched
+Electricity Bill,Electricity Payment,26618,Matched
+Customer Receipt,Customer Payment,38762,Matched
+Office Rent,Rent Payment,23211,Matched
+Office Rent,Interest Debit,89678,Not Matched
+Insurance Premium,Insurance Payment,55072,Matched
+Internet Expense,Internet Bill Payment,33739,Matched
+Salary Paid,Cash Withdrawal,38066,Not Matched
+Laptop Purchase,Computer Purchase,3713,Matched
+Advertising Expense,ATM Withdrawal,10224,Not Matched
+Stationery Purchase,Credit Card Payment,58177,Not Matched
+Insurance Premium,Insurance Payment,30299,Matched
+Stationery Purchase,Credit Card Payment,31587,Not Matched
+Electricity Bill,Electricity Payment,52483,Matched
+Electricity Bill,Electricity Payment,61189,Matched
+GST Payment,GST Challan,10338,Matched
+Salary Paid,UPI Payment,39429,Not Matched
+Salary Paid,Interest Debit,10394,Not Matched
+GST Payment,GST Challan,53206,Matched
+Electricity Bill,Electricity Payment,94187,Matched
+Laptop Purchase,Cheque Bounce Charge,19415,Not Matched
+Internet Expense,Internet Bill Payment,50162,Matched
+Insurance Premium,Insurance Payment,86667,Matched
+Staff Welfare,Personal Transfer,81565,Not Matched
+Salary Paid,Salary Transfer,43559,Matched
+Insurance Premium,Insurance Payment,26171,Matched
+Staff Welfare,UPI Payment,3008,Not Matched
+Electricity Bill,Electricity Payment,79096,Matched
+Insurance Premium,Insurance Payment,76216,Matched
+Staff Welfare,Personal Transfer,39785,Not Matched
+GST Payment,GST Challan,98490,Matched
+Travel Expense,Credit Card Payment,28440,Not Matched
+Salary Paid,Salary Transfer,31463,Matched
+Fuel Expense,Loan EMI,91724,Not Matched
+Office Rent,Investment Transfer,59387,Not Matched
+Staff Welfare,Cash Withdrawal,91696,Not Matched
+Staff Welfare,UPI Payment,78692,Not Matched
+Salary Paid,Personal Transfer,15450,Not Matched
+Travel Expense,ATM Withdrawal,5121,Not Matched
+Fuel Expense,Credit Card Payment,99497,Not Matched
+Office Rent,Rent Payment,29284,Matched
+Advertising Expense,Cheque Bounce Charge,31090,Not Matched
+Internet Expense,Internet Bill Payment,62867,Matched
+Internet Expense,Internet Bill Payment,85936,Matched
+GST Payment,GST Challan,85613,Matched
+Salary Paid,Investment Transfer,31020,Not Matched
+Fuel Expense,Investment Transfer,72314,Not Matched
+Bank Charges,Bank Service Charges,32944,Matched
+Office Rent,Rent Payment,53171,Matched
+Salary Paid,Investment Transfer,99282,Not Matched
+Software Subscription,Software Payment,71955,Matched
+Customer Receipt,Customer Payment,55640,Matched
+Office Rent,Rent Payment,6922,Matched
+Laptop Purchase,Computer Purchase,12593,Matched
+Electricity Bill,Electricity Payment,64800,Matched
+Laptop Purchase,Computer Purchase,9387,Matched
+Laptop Purchase,Investment Transfer,82569,Not Matched
+Electricity Bill,Electricity Payment,15729,Matched
+Laptop Purchase,Cheque Bounce Charge,48634,Not Matched
+Customer Receipt,Customer Payment,46406,Matched
+Bank Charges,Bank Service Charges,28148,Matched
+Staff Welfare,Loan EMI,29229,Not Matched
+Electricity Bill,Electricity Payment,73600,Matched
+Insurance Premium,Insurance Payment,4197,Matched
+Customer Receipt,Customer Payment,96634,Matched
+Electricity Bill,Electricity Payment,53089,Matched
+Advertising Expense,ATM Withdrawal,20941,Not Matched
+Office Rent,Cash Withdrawal,44102,Not Matched
+Software Subscription,Software Payment,5689,Matched
+Salary Paid,Investment Transfer,75573,Not Matched
+GST Payment,GST Challan,46355,Matched
+Laptop Purchase,Computer Purchase,9756,Matched
+Bank Charges,Bank Service Charges,9573,Matched
+Office Rent,Rent Payment,71730,Matched
+Stationery Purchase,Credit Card Payment,18197,Not Matched
+Office Rent,Unknown Transaction,2446,Not Matched
+Bank Charges,Bank Service Charges,69401,Matched
+Bank Charges,Bank Service Charges,53668,Matched
+Fuel Expense,Cheque Bounce Charge,22187,Not Matched
+GST Payment,GST Challan,87907,Matched
+Bank Charges,Bank Service Charges,96912,Matched
+Customer Receipt,Customer Payment,38747,Matched
+Staff Welfare,Cash Withdrawal,17359,Not Matched
+Advertising Expense,Loan EMI,30926,Not Matched
+Salary Paid,Salary Transfer,81471,Matched
+Electricity Bill,Electricity Payment,3983,Matched
+Travel Expense,Credit Card Payment,77871,Not Matched
+Customer Receipt,Customer Payment,88405,Matched
+Consultancy Fees,Loan EMI,63764,Not Matched
+Software Subscription,Software Payment,82966,Matched
+Consultancy Fees,Cheque Bounce Charge,98418,Not Matched
+Travel Expense,Investment Transfer,52074,Not Matched
+Office Rent,UPI Payment,6572,Not Matched
+Bank Charges,Bank Service Charges,89395,Matched
+Salary Paid,Salary Transfer,10623,Matched
+Customer Receipt,Customer Payment,25871,Matched
+Customer Receipt,Customer Payment,39248,Matched
+GST Payment,GST Challan,63059,Matched
+Fuel Expense,Interest Debit,2933,Not Matched
+Salary Paid,Personal Transfer,2366,Not Matched
+Salary Paid,ATM Withdrawal,71129,Not Matched
+Consultancy Fees,Cheque Bounce Charge,8646,Not Matched
+Advertising Expense,Credit Card Payment,56602,Not Matched
+Office Rent,Rent Payment,39291,Matched
+GST Payment,Unknown Transaction,18076,Not Matched
+Insurance Premium,Insurance Payment,62209,Matched
+Salary Paid,Cheque Bounce Charge,35189,Not Matched
+Electricity Bill,Electricity Payment,74934,Matched
+Laptop Purchase,Computer Purchase,17951,Matched
+Laptop Purchase,Personal Transfer,53883,Not Matched
+Office Rent,Interest Debit,94283,Not Matched
+Office Rent,Rent Payment,38751,Matched
+Bank Charges,Bank Service Charges,16619,Matched
+Insurance Premium,Insurance Payment,28901,Matched
+Staff Welfare,Cash Withdrawal,50453,Not Matched
+Internet Expense,Internet Bill Payment,57483,Matched
+Office Rent,Unknown Transaction,99750,Not Matched
+Bank Charges,Bank Service Charges,6511,Matched
+Laptop Purchase,Computer Purchase,41185,Matched
+Laptop Purchase,Computer Purchase,23828,Matched
+Laptop Purchase,UPI Payment,49753,Not Matched
+Consultancy Fees,Personal Transfer,35331,Not Matched
+Software Subscription,Software Payment,38101,Matched
+Electricity Bill,Electricity Payment,95459,Matched
+Fuel Expense,Loan EMI,11167,Not Matched
+Laptop Purchase,Loan EMI,72323,Not Matched
+Office Rent,Rent Payment,13553,Matched
+Office Rent,Investment Transfer,96870,Not Matched
+Salary Paid,Cash Withdrawal,82191,Not Matched
+Office Rent,Investment Transfer,54587,Not Matched
+Salary Paid,Unknown Transaction,2466,Not Matched
+Travel Expense,UPI Payment,28721,Not Matched
+Staff Welfare,Investment Transfer,18487,Not Matched
+Bank Charges,Bank Service Charges,3975,Matched
+Electricity Bill,Electricity Payment,59840,Matched
+Laptop Purchase,Computer Purchase,39691,Matched
+Stationery Purchase,Unknown Transaction,28716,Not Matched
+Travel Expense,Unknown Transaction,34230,Not Matched
+Stationery Purchase,UPI Payment,27918,Not Matched
+Stationery Purchase,Cash Withdrawal,79999,Not Matched
+Fuel Expense,Investment Transfer,26131,Not Matched
+Customer Receipt,Customer Payment,25687,Matched
+Bank Charges,Bank Service Charges,36345,Matched
+Bank Charges,Bank Service Charges,90845,Matched
+Advertising Expense,Cheque Bounce Charge,70674,Not Matched
+GST Payment,GST Challan,29412,Matched
+Internet Expense,Internet Bill Payment,84449,Matched
+Internet Expense,Internet Bill Payment,85403,Matched
+Consultancy Fees,Loan EMI,15080,Not Matched
+Advertising Expense,Credit Card Payment,67088,Not Matched
+Advertising Expense,Personal Transfer,43643,Not Matched
+Office Rent,Personal Transfer,19909,Not Matched
+Salary Paid,Loan EMI,5829,Not Matched
+Insurance Premium,Insurance Payment,11064,Matched
+Customer Receipt,Customer Payment,8930,Matched
+Customer Receipt,Customer Payment,77546,Matched
+Consultancy Fees,ATM Withdrawal,25641,Not Matched
+Internet Expense,Internet Bill Payment,71873,Matched
+GST Payment,Personal Transfer,51214,Not Matched
+Salary Paid,Cheque Bounce Charge,52471,Not Matched
+GST Payment,ATM Withdrawal,12733,Not Matched
+Insurance Premium,Insurance Payment,85685,Matched
+Office Rent,Loan EMI,87389,Not Matched
+Office Rent,Personal Transfer,30600,Not Matched
+Salary Paid,Interest Debit,15434,Not Matched
+Staff Welfare,Cash Withdrawal,95588,Not Matched
+Office Rent,Unknown Transaction,65240,Not Matched
+GST Payment,GST Challan,40457,Matched
+Salary Paid,UPI Payment,22525,Not Matched
+Fuel Expense,UPI Payment,7191,Not Matched
+Insurance Premium,Insurance Payment,19222,Matched
+Staff Welfare,ATM Withdrawal,15403,Not Matched
+Internet Expense,Internet Bill Payment,97868,Matched
+Consultancy Fees,Loan EMI,63359,Not Matched
+Consultancy Fees,Interest Debit,29020,Not Matched
+Staff Welfare,ATM Withdrawal,88313,Not Matched
+Customer Receipt,Customer Payment,75855,Matched
+Software Subscription,Software Payment,53672,Matched
+Stationery Purchase,Cash Withdrawal,20601,Not Matched
+Office Rent,Rent Payment,32949,Matched
+Customer Receipt,Customer Payment,59606,Matched
+Fuel Expense,ATM Withdrawal,5781,Not Matched
+GST Payment,GST Challan,70701,Matched
+Staff Welfare,Credit Card Payment,66350,Not Matched
+Consultancy Fees,Unknown Transaction,92881,Not Matched
+Customer Receipt,Customer Payment,93645,Matched
+Office Rent,Rent Payment,38160,Matched
+Insurance Premium,Insurance Payment,45880,Matched
+GST Payment,GST Challan,24084,Matched
+GST Payment,GST Challan,60182,Matched
+Staff Welfare,Investment Transfer,39055,Not Matched
+Customer Receipt,Customer Payment,52602,Matched
+Software Subscription,Software Payment,83883,Matched
+Travel Expense,Cheque Bounce Charge,24136,Not Matched
+Internet Expense,Internet Bill Payment,47374,Matched
+Laptop Purchase,Computer Purchase,48689,Matched
+Salary Paid,Investment Transfer,24322,Not Matched
+Travel Expense,Cash Withdrawal,71208,Not Matched
+Travel Expense,Credit Card Payment,81994,Not Matched
+Software Subscription,Software Payment,16333,Matched
+Electricity Bill,Electricity Payment,50527,Matched
+GST Payment,Investment Transfer,76665,Not Matched
+Electricity Bill,Electricity Payment,31913,Matched
+Software Subscription,Software Payment,45995,Matched
+Salary Paid,Salary Transfer,24111,Matched
+Customer Receipt,Customer Payment,95168,Matched
+Staff Welfare,Investment Transfer,81631,Not Matched
+Laptop Purchase,Cash Withdrawal,41349,Not Matched
+Bank Charges,Bank Service Charges,38859,Matched
+Office Rent,Rent Payment,1020,Matched
+GST Payment,ATM Withdrawal,71380,Not Matched
+Customer Receipt,Customer Payment,42392,Matched
+Consultancy Fees,Unknown Transaction,70693,Not Matched
+Stationery Purchase,UPI Payment,61216,Not Matched
+Insurance Premium,Insurance Payment,69352,Matched
+Fuel Expense,Cash Withdrawal,10641,Not Matched
+Customer Receipt,Customer Payment,27557,Matched
+Salary Paid,UPI Payment,15540,Not Matched
+Salary Paid,Salary Transfer,54168,Matched
+Laptop Purchase,Computer Purchase,29037,Matched
+GST Payment,GST Challan,81119,Matched
+Insurance Premium,Insurance Payment,59375,Matched
+Laptop Purchase,Computer Purchase,49326,Matched
+Bank Charges,Bank Service Charges,53521,Matched
+Office Rent,Rent Payment,32561,Matched
+GST Payment,Loan EMI,82549,Not Matched
+Office Rent,Loan EMI,63364,Not Matched
+Staff Welfare,Cash Withdrawal,17413,Not Matched
+Office Rent,Rent Payment,63928,Matched
+Bank Charges,Bank Service Charges,20423,Matched
+Fuel Expense,Investment Transfer,84390,Not Matched
+Laptop Purchase,UPI Payment,85840,Not Matched
+Office Rent,Rent Payment,58710,Matched
+Laptop Purchase,Computer Purchase,90370,Matched
+Salary Paid,Salary Transfer,35897,Matched
+Laptop Purchase,Computer Purchase,44763,Matched
+Office Rent,Loan EMI,6134,Not Matched
+Laptop Purchase,Computer Purchase,3838,Matched
+Office Rent,Rent Payment,36510,Matched
+Laptop Purchase,Computer Purchase,61885,Matched
+Software Subscription,Software Payment,95818,Matched
+Internet Expense,Internet Bill Payment,40949,Matched
+Customer Receipt,Customer Payment,97455,Matched
+Laptop Purchase,Credit Card Payment,52656,Not Matched
+Salary Paid,Interest Debit,45987,Not Matched
+Stationery Purchase,Loan EMI,8730,Not Matched
+Insurance Premium,Insurance Payment,72785,Matched
+Stationery Purchase,Cash Withdrawal,53016,Not Matched
+Travel Expense,Cheque Bounce Charge,1547,Not Matched
+Travel Expense,ATM Withdrawal,29534,Not Matched
+Office Rent,Rent Payment,20745,Matched
+Fuel Expense,UPI Payment,92390,Not Matched
+Insurance Premium,Insurance Payment,54888,Matched
+GST Payment,GST Challan,60272,Matched
+Staff Welfare,Investment Transfer,48572,Not Matched
+Salary Paid,Salary Transfer,34002,Matched
+Salary Paid,Salary Transfer,9228,Matched
+Travel Expense,Loan EMI,41568,Not Matched
+Insurance Premium,Insurance Payment,54104,Matched
+Salary Paid,Credit Card Payment,82329,Not Matched
+GST Payment,Cash Withdrawal,6519,Not Matched
+Bank Charges,Bank Service Charges,76574,Matched
+GST Payment,Personal Transfer,81125,Not Matched
+Consultancy Fees,Interest Debit,35767,Not Matched
+Consultancy Fees,Cheque Bounce Charge,19010,Not Matched
+Software Subscription,Software Payment,60359,Matched
+Electricity Bill,Electricity Payment,48379,Matched
+Software Subscription,Software Payment,99160,Matched
+Office Rent,Rent Payment,48598,Matched
+Bank Charges,Bank Service Charges,14507,Matched
+Office Rent,Personal Transfer,77193,Not Matched
+Office Rent,Rent Payment,7888,Matched
+Laptop Purchase,Cheque Bounce Charge,70118,Not Matched
+Laptop Purchase,Personal Transfer,76194,Not Matched
+Stationery Purchase,Personal Transfer,56693,Not Matched
+Office Rent,UPI Payment,57635,Not Matched
+Laptop Purchase,Loan EMI,78510,Not Matched
+Laptop Purchase,Personal Transfer,81027,Not Matched
+Electricity Bill,Electricity Payment,80152,Matched
+Staff Welfare,UPI Payment,92083,Not Matched
+Stationery Purchase,Unknown Transaction,84971,Not Matched
+Fuel Expense,ATM Withdrawal,77467,Not Matched
+GST Payment,Loan EMI,16712,Not Matched
+Staff Welfare,UPI Payment,51067,Not Matched
+Salary Paid,Personal Transfer,24515,Not Matched
+Advertising Expense,Personal Transfer,15073,Not Matched
+Internet Expense,Internet Bill Payment,19721,Matched
+Laptop Purchase,Computer Purchase,43410,Matched
+Bank Charges,Bank Service Charges,80736,Matched
+Software Subscription,Software Payment,88948,Matched
+Salary Paid,Cash Withdrawal,78951,Not Matched
+Software Subscription,Software Payment,99160,Matched
+GST Payment,Interest Debit,1805,Not Matched
+Office Rent,Rent Payment,11588,Matched
+Insurance Premium,Insurance Payment,23472,Matched
+Laptop Purchase,Computer Purchase,6343,Matched
+Internet Expense,Internet Bill Payment,8345,Matched
+Salary Paid,Salary Transfer,30935,Matched
+Bank Charges,Bank Service Charges,61168,Matched
+Office Rent,Rent Payment,9103,Matched
+Salary Paid,Interest Debit,14810,Not Matched
+Insurance Premium,Insurance Payment,30445,Matched
+Software Subscription,Software Payment,10577,Matched
+GST Payment,ATM Withdrawal,47729,Not Matched
+Insurance Premium,Insurance Payment,33979,Matched
+Insurance Premium,Insurance Payment,83900,Matched
+Office Rent,Investment Transfer,72700,Not Matched
+Salary Paid,Salary Transfer,74361,Matched
+Insurance Premium,Insurance Payment,24517,Matched
+Stationery Purchase,Cheque Bounce Charge,84062,Not Matched
+Staff Welfare,Cheque Bounce Charge,18969,Not Matched
+GST Payment,GST Challan,38499,Matched
+Laptop Purchase,Personal Transfer,55642,Not Matched
+GST Payment,ATM Withdrawal,83165,Not Matched
+Office Rent,UPI Payment,49881,Not Matched
+Software Subscription,Software Payment,20973,Matched
+Salary Paid,Salary Transfer,74402,Matched
+Software Subscription,Software Payment,68460,Matched
+Travel Expense,Cheque Bounce Charge,45847,Not Matched
+Internet Expense,Internet Bill Payment,5978,Matched
+Staff Welfare,UPI Payment,96112,Not Matched
+Office Rent,Rent Payment,49966,Matched
+Staff Welfare,Unknown Transaction,43288,Not Matched
+Travel Expense,Unknown Transaction,83435,Not Matched
+Travel Expense,Unknown Transaction,34137,Not Matched
+Salary Paid,Salary Transfer,58779,Matched
+GST Payment,Cash Withdrawal,24540,Not Matched
+Software Subscription,Software Payment,3612,Matched
+Bank Charges,Bank Service Charges,47485,Matched
+Electricity Bill,Electricity Payment,98846,Matched
+Staff Welfare,Credit Card Payment,41537,Not Matched
+Customer Receipt,Customer Payment,48873,Matched
+Fuel Expense,Interest Debit,57614,Not Matched
+Salary Paid,UPI Payment,92015,Not Matched
+Bank Charges,Bank Service Charges,23259,Matched
+GST Payment,Cheque Bounce Charge,92594,Not Matched
+Software Subscription,Software Payment,84764,Matched
+GST Payment,GST Challan,90755,Matched
+Salary Paid,Salary Transfer,75508,Matched
+Customer Receipt,Customer Payment,12412,Matched
+Bank Charges,Bank Service Charges,75757,Matched
+Office Rent,Rent Payment,30956,Matched
+GST Payment,GST Challan,82175,Matched
+Stationery Purchase,Cheque Bounce Charge,97710,Not Matched
+Office Rent,Cheque Bounce Charge,59054,Not Matched
+Internet Expense,Internet Bill Payment,7612,Matched
+Laptop Purchase,Computer Purchase,51858,Matched
+Internet Expense,Internet Bill Payment,33798,Matched
+GST Payment,GST Challan,55390,Matched
+Salary Paid,Salary Transfer,36745,Matched
+Internet Expense,Internet Bill Payment,29336,Matched
+Consultancy Fees,UPI Payment,65451,Not Matched
+GST Payment,Cheque Bounce Charge,21751,Not Matched
+Bank Charges,Bank Service Charges,43600,Matched
+Laptop Purchase,UPI Payment,78660,Not Matched
+Office Rent,Rent Payment,26403,Matched
+GST Payment,GST Challan,17026,Matched
+Office Rent,Rent Payment,58075,Matched
+Software Subscription,Software Payment,93350,Matched
+Laptop Purchase,Investment Transfer,82862,Not Matched
+Bank Charges,Bank Service Charges,71606,Matched
+GST Payment,Interest Debit,53379,Not Matched
+GST Payment,GST Challan,99304,Matched
+Consultancy Fees,Investment Transfer,26017,Not Matched
+Electricity Bill,Electricity Payment,72629,Matched
+Salary Paid,Cheque Bounce Charge,11089,Not Matched
+Internet Expense,Internet Bill Payment,15550,Matched
+Customer Receipt,Customer Payment,72134,Matched
+Insurance Premium,Insurance Payment,59619,Matched
+Consultancy Fees,ATM Withdrawal,31409,Not Matched
+Laptop Purchase,Loan EMI,86643,Not Matched
+Insurance Premium,Insurance Payment,12284,Matched
+Office Rent,Investment Transfer,16750,Not Matched
+Laptop Purchase,Cash Withdrawal,81932,Not Matched
+GST Payment,ATM Withdrawal,17294,Not Matched
+Insurance Premium,Insurance Payment,85103,Matched
+GST Payment,GST Challan,68240,Matched
+Salary Paid,Salary Transfer,7574,Matched
+Electricity Bill,Electricity Payment,95993,Matched
+Advertising Expense,Cheque Bounce Charge,31013,Not Matched
+GST Payment,GST Challan,79855,Matched
+GST Payment,Interest Debit,29873,Not Matched
+Internet Expense,Internet Bill Payment,33266,Matched
+Travel Expense,Investment Transfer,57870,Not Matched
+Software Subscription,Software Payment,96030,Matched
+Customer Receipt,Customer Payment,17733,Matched
+Consultancy Fees,UPI Payment,78473,Not Matched
+Staff Welfare,Unknown Transaction,1308,Not Matched
+Electricity Bill,Electricity Payment,44695,Matched
+Office Rent,Rent Payment,10541,Matched
+Salary Paid,UPI Payment,53544,Not Matched
+Salary Paid,Cash Withdrawal,92481,Not Matched
+Salary Paid,Salary Transfer,17317,Matched
+Customer Receipt,Customer Payment,87645,Matched
+Fuel Expense,UPI Payment,18598,Not Matched
+GST Payment,Interest Debit,69488,Not Matched
+Laptop Purchase,Computer Purchase,59807,Matched
+Laptop Purchase,UPI Payment,17901,Not Matched
+Office Rent,Unknown Transaction,2725,Not Matched
+Office Rent,Investment Transfer,39228,Not Matched
+Advertising Expense,Unknown Transaction,66513,Not Matched
+GST Payment,GST Challan,88645,Matched
+Consultancy Fees,ATM Withdrawal,60685,Not Matched
+GST Payment,GST Challan,85834,Matched
+Stationery Purchase,Personal Transfer,48438,Not Matched
+Travel Expense,Credit Card Payment,19572,Not Matched
+Electricity Bill,Electricity Payment,89560,Matched
+Office Rent,Cheque Bounce Charge,1865,Not Matched
+Office Rent,Interest Debit,63674,Not Matched
+Fuel Expense,ATM Withdrawal,35301,Not Matched
+Travel Expense,Personal Transfer,57172,Not Matched
+Electricity Bill,Electricity Payment,67432,Matched
+Advertising Expense,Personal Transfer,64062,Not Matched
+Office Rent,UPI Payment,38212,Not Matched
+Travel Expense,UPI Payment,15735,Not Matched
+Laptop Purchase,Computer Purchase,56151,Matched
+Salary Paid,Salary Transfer,38536,Matched
+Laptop Purchase,Unknown Transaction,86761,Not Matched
+Customer Receipt,Customer Payment,10754,Matched
+Insurance Premium,Insurance Payment,71472,Matched
+Software Subscription,Software Payment,30332,Matched
+Fuel Expense,Unknown Transaction,20771,Not Matched
+Electricity Bill,Electricity Payment,43786,Matched
+Software Subscription,Software Payment,17342,Matched
+Office Rent,Unknown Transaction,47995,Not Matched
+Bank Charges,Bank Service Charges,26909,Matched
+Salary Paid,Credit Card Payment,3793,Not Matched
+Advertising Expense,Unknown Transaction,37789,Not Matched
+Laptop Purchase,ATM Withdrawal,77383,Not Matched
+GST Payment,Credit Card Payment,85362,Not Matched
+Stationery Purchase,Cash Withdrawal,41190,Not Matched
+Consultancy Fees,Investment Transfer,54217,Not Matched
+Customer Receipt,Customer Payment,5338,Matched
+Electricity Bill,Electricity Payment,56234,Matched
+GST Payment,GST Challan,9692,Matched
+Electricity Bill,Electricity Payment,51721,Matched
+Software Subscription,Software Payment,92551,Matched
+GST Payment,GST Challan,30616,Matched
+Electricity Bill,Electricity Payment,69990,Matched
+Customer Receipt,Customer Payment,70781,Matched
+Travel Expense,Cash Withdrawal,17255,Not Matched
+GST Payment,Cash Withdrawal,95027,Not Matched
+Customer Receipt,Customer Payment,31279,Matched
+Advertising Expense,Cash Withdrawal,88545,Not Matched
+Staff Welfare,Cheque Bounce Charge,87482,Not Matched
+Laptop Purchase,Loan EMI,18250,Not Matched
+Salary Paid,Salary Transfer,57587,Matched
+Office Rent,Rent Payment,34157,Matched
+Internet Expense,Internet Bill Payment,40052,Matched
+GST Payment,Personal Transfer,53806,Not Matched
+Laptop Purchase,Computer Purchase,4309,Matched
+Electricity Bill,Electricity Payment,76283,Matched
+Insurance Premium,Insurance Payment,91630,Matched
+Advertising Expense,Unknown Transaction,37656,Not Matched
+Electricity Bill,Electricity Payment,87487,Matched
+Consultancy Fees,Loan EMI,32713,Not Matched
+Office Rent,Loan EMI,96589,Not Matched
+Stationery Purchase,ATM Withdrawal,13476,Not Matched
+Staff Welfare,Cash Withdrawal,10022,Not Matched
+Electricity Bill,Electricity Payment,31396,Matched
+Internet Expense,Internet Bill Payment,67809,Matched
+Advertising Expense,Cheque Bounce Charge,90117,Not Matched
+Software Subscription,Software Payment,96390,Matched
+Electricity Bill,Electricity Payment,38280,Matched
+Software Subscription,Software Payment,12405,Matched
+Insurance Premium,Insurance Payment,46265,Matched
+Advertising Expense,ATM Withdrawal,50535,Not Matched
+Insurance Premium,Insurance Payment,61889,Matched
+Consultancy Fees,Personal Transfer,4053,Not Matched
+Salary Paid,Interest Debit,65626,Not Matched
+Laptop Purchase,Credit Card Payment,83097,Not Matched
+Office Rent,Credit Card Payment,50665,Not Matched
+Stationery Purchase,Cash Withdrawal,61681,Not Matched
+GST Payment,Loan EMI,81005,Not Matched
+Travel Expense,Interest Debit,73752,Not Matched
+Advertising Expense,Unknown Transaction,79636,Not Matched
+GST Payment,Investment Transfer,54492,Not Matched
+Salary Paid,Salary Transfer,90755,Matched
+Insurance Premium,Insurance Payment,85801,Matched
+Staff Welfare,Interest Debit,61432,Not Matched
+Customer Receipt,Customer Payment,32158,Matched
+Fuel Expense,Investment Transfer,37966,Not Matched
+Internet Expense,Internet Bill Payment,31188,Matched
+Office Rent,ATM Withdrawal,8439,Not Matched
+Software Subscription,Software Payment,53135,Matched
+Customer Receipt,Customer Payment,21142,Matched
+Fuel Expense,Cash Withdrawal,47810,Not Matched
+Internet Expense,Internet Bill Payment,84968,Matched
+Office Rent,Investment Transfer,86989,Not Matched
+Software Subscription,Software Payment,66154,Matched
+Laptop Purchase,ATM Withdrawal,58970,Not Matched
+GST Payment,GST Challan,60707,Matched
+Fuel Expense,Investment Transfer,82952,Not Matched
+Software Subscription,Software Payment,26880,Matched
+Software Subscription,Software Payment,62316,Matched
+Office Rent,Credit Card Payment,12360,Not Matched
+GST Payment,GST Challan,60519,Matched
+GST Payment,GST Challan,4763,Matched
+Stationery Purchase,Personal Transfer,44760,Not Matched
+Salary Paid,Salary Transfer,74815,Matched
+Consultancy Fees,Loan EMI,76925,Not Matched
+Salary Paid,ATM Withdrawal,1030,Not Matched
+Salary Paid,ATM Withdrawal,76120,Not Matched
+Electricity Bill,Electricity Payment,12590,Matched
+Customer Receipt,Customer Payment,94433,Matched
+Travel Expense,Credit Card Payment,12440,Not Matched
+Insurance Premium,Insurance Payment,72108,Matched
+Salary Paid,Salary Transfer,18438,Matched
+Electricity Bill,Electricity Payment,9512,Matched
+Office Rent,Investment Transfer,42444,Not Matched
+Consultancy Fees,Personal Transfer,26711,Not Matched
+Office Rent,Rent Payment,9686,Matched
+Consultancy Fees,Loan EMI,89469,Not Matched
+Stationery Purchase,Credit Card Payment,66950,Not Matched
+Fuel Expense,Cash Withdrawal,71505,Not Matched
+Office Rent,Cheque Bounce Charge,81900,Not Matched
+Advertising Expense,Loan EMI,8627,Not Matched
+GST Payment,Interest Debit,15016,Not Matched
+Software Subscription,Software Payment,29595,Matched
+Customer Receipt,Customer Payment,23312,Matched
+Fuel Expense,Interest Debit,56047,Not Matched
+Customer Receipt,Customer Payment,63227,Matched
+Staff Welfare,Interest Debit,73070,Not Matched
+Consultancy Fees,Credit Card Payment,18698,Not Matched
+Travel Expense,Cash Withdrawal,39418,Not Matched
+Electricity Bill,Electricity Payment,85189,Matched
+Office Rent,Rent Payment,82087,Matched
+Fuel Expense,Investment Transfer,83558,Not Matched
+Salary Paid,Credit Card Payment,67060,Not Matched
+GST Payment,ATM Withdrawal,7191,Not Matched
+GST Payment,Credit Card Payment,48893,Not Matched
+Electricity Bill,Electricity Payment,23140,Matched
+Software Subscription,Software Payment,93963,Matched
+Insurance Premium,Insurance Payment,82572,Matched
+Stationery Purchase,Interest Debit,43317,Not Matched
+Fuel Expense,Cash Withdrawal,33111,Not Matched
+Salary Paid,Salary Transfer,28528,Matched
+Bank Charges,Bank Service Charges,27511,Matched
+Internet Expense,Internet Bill Payment,61706,Matched
+Office Rent,Rent Payment,63283,Matched
+Electricity Bill,Electricity Payment,97110,Matched
+Stationery Purchase,Interest Debit,77009,Not Matched
+Office Rent,Credit Card Payment,51600,Not Matched
+Staff Welfare,Investment Transfer,20922,Not Matched
+Laptop Purchase,Investment Transfer,20612,Not Matched
+Stationery Purchase,Cash Withdrawal,21144,Not Matched
+Consultancy Fees,Unknown Transaction,20575,Not Matched
+Insurance Premium,Insurance Payment,49014,Matched
+Salary Paid,Cash Withdrawal,78223,Not Matched
+Travel Expense,ATM Withdrawal,75387,Not Matched
+Office Rent,Rent Payment,34844,Matched
+Travel Expense,Credit Card Payment,42672,Not Matched
+Salary Paid,Salary Transfer,11241,Matched
+Salary Paid,Interest Debit,17673,Not Matched
+Fuel Expense,Cheque Bounce Charge,13800,Not Matched
+Insurance Premium,Insurance Payment,32566,Matched
+Office Rent,Rent Payment,54678,Matched
+GST Payment,Unknown Transaction,91447,Not Matched
+GST Payment,Cash Withdrawal,45913,Not Matched
+Stationery Purchase,Cash Withdrawal,27691,Not Matched
+Salary Paid,Investment Transfer,79105,Not Matched
+Laptop Purchase,Computer Purchase,35633,Matched
+Staff Welfare,ATM Withdrawal,56965,Not Matched
+Bank Charges,Bank Service Charges,37922,Matched
+Office Rent,Rent Payment,75588,Matched
+Customer Receipt,Customer Payment,76468,Matched
+Office Rent,Rent Payment,17710,Matched
+Insurance Premium,Insurance Payment,14175,Matched
+Electricity Bill,Electricity Payment,43080,Matched
+Staff Welfare,Investment Transfer,11256,Not Matched
+Bank Charges,Bank Service Charges,51213,Matched
+Office Rent,Rent Payment,39511,Matched
+GST Payment,GST Challan,1111,Matched
+Travel Expense,Credit Card Payment,53432,Not Matched
+Staff Welfare,Cheque Bounce Charge,97823,Not Matched
+GST Payment,Personal Transfer,68608,Not Matched
+Office Rent,Personal Transfer,3007,Not Matched
+Office Rent,Rent Payment,48136,Matched
+Customer Receipt,Customer Payment,47711,Matched
+Advertising Expense,Investment Transfer,87684,Not Matched
+Laptop Purchase,Computer Purchase,19658,Matched
+Salary Paid,Loan EMI,31998,Not Matched
+Office Rent,Loan EMI,35944,Not Matched
+Customer Receipt,Customer Payment,73220,Matched
+Electricity Bill,Electricity Payment,48780,Matched
+Laptop Purchase,Investment Transfer,71238,Not Matched
+Laptop Purchase,Computer Purchase,73374,Matched
+Staff Welfare,Cash Withdrawal,9974,Not Matched
+Staff Welfare,Cheque Bounce Charge,19557,Not Matched
+Internet Expense,Internet Bill Payment,20431,Matched
+Consultancy Fees,UPI Payment,56731,Not Matched
+Laptop Purchase,Computer Purchase,19984,Matched
+Office Rent,Rent Payment,2474,Matched
+Office Rent,Rent Payment,43961,Matched
+Insurance Premium,Insurance Payment,66513,Matched
+Bank Charges,Bank Service Charges,54541,Matched
+Internet Expense,Internet Bill Payment,82565,Matched
+Office Rent,ATM Withdrawal,67494,Not Matched
+GST Payment,ATM Withdrawal,58987,Not Matched
+Customer Receipt,Customer Payment,95740,Matched
+Laptop Purchase,Computer Purchase,74550,Matched
+Consultancy Fees,UPI Payment,65030,Not Matched
+Salary Paid,Salary Transfer,49670,Matched
+Staff Welfare,Interest Debit,77587,Not Matched
+Office Rent,Rent Payment,16760,Matched
+Insurance Premium,Insurance Payment,30610,Matched
+Customer Receipt,Customer Payment,60751,Matched
+GST Payment,Cash Withdrawal,24264,Not Matched
+Bank Charges,Bank Service Charges,94468,Matched
+Laptop Purchase,Computer Purchase,36648,Matched
+GST Payment,Unknown Transaction,23092,Not Matched
+Office Rent,Rent Payment,5380,Matched
+Internet Expense,Internet Bill Payment,55845,Matched
+Stationery Purchase,Credit Card Payment,58981,Not Matched
+Salary Paid,Loan EMI,98860,Not Matched
+Internet Expense,Internet Bill Payment,26548,Matched
+Laptop Purchase,Computer Purchase,5362,Matched
+Fuel Expense,Loan EMI,7450,Not Matched
+Office Rent,Unknown Transaction,85649,Not Matched
+Software Subscription,Software Payment,24913,Matched
+Office Rent,Rent Payment,95942,Matched
+Customer Receipt,Customer Payment,84926,Matched
+Advertising Expense,ATM Withdrawal,24366,Not Matched
+Office Rent,Cash Withdrawal,13980,Not Matched
+Staff Welfare,Cash Withdrawal,8512,Not Matched
+Laptop Purchase,Computer Purchase,1037,Matched
+Salary Paid,ATM Withdrawal,61204,Not Matched
+Salary Paid,Loan EMI,51960,Not Matched
+Office Rent,Rent Payment,83775,Matched
+Bank Charges,Bank Service Charges,88151,Matched
+Internet Expense,Internet Bill Payment,38023,Matched
+Customer Receipt,Customer Payment,69147,Matched
+Travel Expense,Cheque Bounce Charge,1703,Not Matched
+Internet Expense,Internet Bill Payment,48978,Matched
+Bank Charges,Bank Service Charges,8170,Matched
+Laptop Purchase,Personal Transfer,63154,Not Matched
+Fuel Expense,Cheque Bounce Charge,44584,Not Matched
+Internet Expense,Internet Bill Payment,20586,Matched
+Staff Welfare,Personal Transfer,81526,Not Matched
+Stationery Purchase,Investment Transfer,90104,Not Matched
+GST Payment,GST Challan,91256,Matched
+Salary Paid,Credit Card Payment,95723,Not Matched
+Customer Receipt,Customer Payment,17705,Matched
+Advertising Expense,Unknown Transaction,83908,Not Matched
+Stationery Purchase,Investment Transfer,89047,Not Matched
+Staff Welfare,Investment Transfer,39099,Not Matched
+Fuel Expense,UPI Payment,61580,Not Matched
+Bank Charges,Bank Service Charges,52868,Matched
+Software Subscription,Software Payment,96390,Matched
+Office Rent,Rent Payment,60085,Matched
+Consultancy Fees,Cash Withdrawal,2161,Not Matched
+Advertising Expense,Credit Card Payment,68617,Not Matched
+Office Rent,UPI Payment,35084,Not Matched
+Laptop Purchase,Computer Purchase,57960,Matched
+Customer Receipt,Customer Payment,84157,Matched
+Bank Charges,Bank Service Charges,86173,Matched
+Customer Receipt,Customer Payment,93184,Matched
+Laptop Purchase,Computer Purchase,45797,Matched
+Travel Expense,ATM Withdrawal,29342,Not Matched
+Fuel Expense,Loan EMI,40649,Not Matched
+Consultancy Fees,Investment Transfer,43539,Not Matched
+Staff Welfare,Personal Transfer,79401,Not Matched
+Customer Receipt,Customer Payment,21227,Matched
+Salary Paid,Interest Debit,12611,Not Matched
+Consultancy Fees,Unknown Transaction,47262,Not Matched
+Advertising Expense,Credit Card Payment,25108,Not Matched
+Fuel Expense,Loan EMI,64195,Not Matched
+Staff Welfare,Credit Card Payment,58157,Not Matched
+Bank Charges,Bank Service Charges,88035,Matched
+Office Rent,Loan EMI,90196,Not Matched
+Software Subscription,Software Payment,25272,Matched
+Salary Paid,Salary Transfer,40552,Matched
+Travel Expense,Cheque Bounce Charge,58508,Not Matched
+Staff Welfare,Loan EMI,20661,Not Matched
+GST Payment,UPI Payment,35150,Not Matched
+Laptop Purchase,Computer Purchase,62917,Matched
+Customer Receipt,Customer Payment,9612,Matched
+Internet Expense,Internet Bill Payment,8855,Matched
+Salary Paid,Cash Withdrawal,4855,Not Matched
+GST Payment,Investment Transfer,90260,Not Matched
+Salary Paid,Credit Card Payment,24809,Not Matched
+Staff Welfare,ATM Withdrawal,72739,Not Matched
+Software Subscription,Software Payment,72327,Matched
+Insurance Premium,Insurance Payment,84565,Matched
+Office Rent,Cheque Bounce Charge,29473,Not Matched
+Laptop Purchase,Cash Withdrawal,57463,Not Matched
+Customer Receipt,Customer Payment,2166,Matched
+Laptop Purchase,Computer Purchase,57717,Matched
+Laptop Purchase,Computer Purchase,7948,Matched
+Stationery Purchase,Investment Transfer,56662,Not Matched
+Staff Welfare,Interest Debit,43504,Not Matched
+Fuel Expense,Cash Withdrawal,1689,Not Matched
+Consultancy Fees,Interest Debit,92762,Not Matched
+Internet Expense,Internet Bill Payment,16700,Matched
+Customer Receipt,Customer Payment,53611,Matched
+Laptop Purchase,Computer Purchase,39047,Matched
+Stationery Purchase,Unknown Transaction,24919,Not Matched
+Travel Expense,Unknown Transaction,26628,Not Matched
+Insurance Premium,Insurance Payment,45111,Matched
+Salary Paid,Salary Transfer,82287,Matched
+GST Payment,GST Challan,15962,Matched
+Laptop Purchase,Loan EMI,33565,Not Matched
+Insurance Premium,Insurance Payment,80431,Matched
+Customer Receipt,Customer Payment,7938,Matched
+Office Rent,Rent Payment,27410,Matched
+Customer Receipt,Customer Payment,93638,Matched
+Office Rent,Rent Payment,28705,Matched
+Software Subscription,Software Payment,83591,Matched
+Salary Paid,Salary Transfer,56267,Matched
+GST Payment,GST Challan,19147,Matched
+Laptop Purchase,Cash Withdrawal,80058,Not Matched
+Office Rent,Cheque Bounce Charge,69970,Not Matched
+Office Rent,Rent Payment,36901,Matched
+Software Subscription,Software Payment,31960,Matched
+Salary Paid,Salary Transfer,29392,Matched
+Laptop Purchase,Interest Debit,75048,Not Matched
+GST Payment,Cheque Bounce Charge,82488,Not Matched
+Office Rent,Rent Payment,83805,Matched
+Consultancy Fees,Cheque Bounce Charge,1850,Not Matched
+Office Rent,Loan EMI,29199,Not Matched
+Electricity Bill,Electricity Payment,95845,Matched
+Salary Paid,UPI Payment,83106,Not Matched
+Laptop Purchase,Investment Transfer,84795,Not Matched
+Salary Paid,Salary Transfer,84576,Matched
+Travel Expense,Cash Withdrawal,49310,Not Matched
+Office Rent,UPI Payment,90919,Not Matched
+Internet Expense,Internet Bill Payment,7467,Matched
+Office Rent,ATM Withdrawal,75322,Not Matched
+Electricity Bill,Electricity Payment,32622,Matched
+Staff Welfare,Cash Withdrawal,80254,Not Matched
+Fuel Expense,Cash Withdrawal,67061,Not Matched
+Office Rent,Rent Payment,87094,Matched
+Laptop Purchase,Computer Purchase,21564,Matched
+Consultancy Fees,Unknown Transaction,15439,Not Matched
+Salary Paid,UPI Payment,4684,Not Matched
+Internet Expense,Internet Bill Payment,14022,Matched
+Software Subscription,Software Payment,88610,Matched
+Stationery Purchase,Credit Card Payment,77941,Not Matched
+Electricity Bill,Electricity Payment,73363,Matched
+Salary Paid,Salary Transfer,28617,Matched
+GST Payment,Personal Transfer,72740,Not Matched
+Travel Expense,Credit Card Payment,40966,Not Matched
+Office Rent,Investment Transfer,90442,Not Matched
+Insurance Premium,Insurance Payment,2874,Matched
+Customer Receipt,Customer Payment,67257,Matched
+GST Payment,GST Challan,20433,Matched
+GST Payment,GST Challan,22149,Matched
+Salary Paid,Salary Transfer,23645,Matched
+Software Subscription,Software Payment,91544,Matched
+Laptop Purchase,Computer Purchase,68687,Matched
+Internet Expense,Internet Bill Payment,35741,Matched
+Laptop Purchase,Computer Purchase,65392,Matched
+Insurance Premium,Insurance Payment,97978,Matched
+Travel Expense,ATM Withdrawal,57782,Not Matched
+Electricity Bill,Electricity Payment,56788,Matched
+Travel Expense,Personal Transfer,96967,Not Matched
+Bank Charges,Bank Service Charges,54848,Matched
+Customer Receipt,Customer Payment,42347,Matched
+GST Payment,GST Challan,30091,Matched
+Insurance Premium,Insurance Payment,46739,Matched
+Consultancy Fees,Investment Transfer,81002,Not Matched
+Fuel Expense,ATM Withdrawal,35308,Not Matched
+Fuel Expense,Investment Transfer,55045,Not Matched
+Office Rent,Rent Payment,29769,Matched
+Staff Welfare,ATM Withdrawal,5332,Not Matched
+Stationery Purchase,Loan EMI,90517,Not Matched
+Electricity Bill,Electricity Payment,17288,Matched
+Laptop Purchase,Cheque Bounce Charge,22816,Not Matched
+Insurance Premium,Insurance Payment,63316,Matched
+Bank Charges,Bank Service Charges,46783,Matched
+Salary Paid,Salary Transfer,81987,Matched
+Salary Paid,Salary Transfer,39657,Matched
+Laptop Purchase,Personal Transfer,30256,Not Matched
+Laptop Purchase,Computer Purchase,57389,Matched
+Office Rent,Rent Payment,4715,Matched
+Stationery Purchase,Investment Transfer,63857,Not Matched
+Customer Receipt,Customer Payment,70908,Matched
+Office Rent,Unknown Transaction,87784,Not Matched
+Laptop Purchase,Computer Purchase,74296,Matched
+Software Subscription,Software Payment,24728,Matched
+Consultancy Fees,Investment Transfer,7400,Not Matched
+Office Rent,UPI Payment,73051,Not Matched
+Office Rent,Investment Transfer,40395,Not Matched
+Bank Charges,Bank Service Charges,49986,Matched
+Insurance Premium,Insurance Payment,50659,Matched
+Advertising Expense,Cheque Bounce Charge,25840,Not Matched
+Software Subscription,Software Payment,57352,Matched
+Laptop Purchase,Loan EMI,31121,Not Matched
+Insurance Premium,Insurance Payment,64526,Matched
+Fuel Expense,Unknown Transaction,31720,Not Matched
+Stationery Purchase,Cash Withdrawal,89443,Not Matched
+Bank Charges,Bank Service Charges,18002,Matched
+Customer Receipt,Customer Payment,79464,Matched
+Internet Expense,Internet Bill Payment,27381,Matched
+Laptop Purchase,Computer Purchase,43418,Matched
+Advertising Expense,Investment Transfer,83509,Not Matched
+Stationery Purchase,Credit Card Payment,32304,Not Matched
+GST Payment,ATM Withdrawal,16806,Not Matched
+Consultancy Fees,Investment Transfer,78430,Not Matched
+Electricity Bill,Electricity Payment,2377,Matched
+Fuel Expense,Cheque Bounce Charge,77730,Not Matched
+Travel Expense,ATM Withdrawal,16271,Not Matched
+Salary Paid,Salary Transfer,72526,Matched
+Internet Expense,Internet Bill Payment,97792,Matched
+Salary Paid,Credit Card Payment,3187,Not Matched
+Salary Paid,Unknown Transaction,75228,Not Matched
+Customer Receipt,Customer Payment,23086,Matched
+Salary Paid,Unknown Transaction,39179,Not Matched
+Staff Welfare,Credit Card Payment,55430,Not Matched
+Office Rent,Loan EMI,1977,Not Matched
+Bank Charges,Bank Service Charges,68497,Matched
+Consultancy Fees,Loan EMI,68567,Not Matched
+GST Payment,GST Challan,9668,Matched
+Laptop Purchase,ATM Withdrawal,7634,Not Matched
+Stationery Purchase,ATM Withdrawal,35090,Not Matched
+Travel Expense,Personal Transfer,6103,Not Matched
+Advertising Expense,ATM Withdrawal,34783,Not Matched
+GST Payment,GST Challan,65705,Matched
+Travel Expense,Investment Transfer,91977,Not Matched
+Office Rent,Rent Payment,59251,Matched
+Office Rent,Rent Payment,93555,Matched
+Staff Welfare,Interest Debit,25363,Not Matched
+Insurance Premium,Insurance Payment,41429,Matched
+Office Rent,Rent Payment,97983,Matched
+Advertising Expense,Interest Debit,76945,Not Matched
+Customer Receipt,Customer Payment,50020,Matched
+Travel Expense,Credit Card Payment,25275,Not Matched
+GST Payment,Investment Transfer,6325,Not Matched
+Office Rent,Rent Payment,68009,Matched
+GST Payment,GST Challan,87705,Matched
+Insurance Premium,Insurance Payment,12305,Matched
+Stationery Purchase,UPI Payment,22929,Not Matched
+Laptop Purchase,ATM Withdrawal,61525,Not Matched
+Salary Paid,Salary Transfer,9943,Matched
+Salary Paid,Cheque Bounce Charge,81856,Not Matched
+Office Rent,UPI Payment,17656,Not Matched
+Laptop Purchase,Computer Purchase,81815,Matched
+Laptop Purchase,ATM Withdrawal,12484,Not Matched
+Salary Paid,Salary Transfer,58236,Matched
+Staff Welfare,UPI Payment,10047,Not Matched
+Fuel Expense,Personal Transfer,21903,Not Matched
+GST Payment,Personal Transfer,59995,Not Matched
+Fuel Expense,Cash Withdrawal,88831,Not Matched
+Consultancy Fees,Unknown Transaction,24354,Not Matched
+GST Payment,Credit Card Payment,25159,Not Matched
+Travel Expense,Interest Debit,4580,Not Matched
+Staff Welfare,Cheque Bounce Charge,64656,Not Matched
+Salary Paid,Salary Transfer,48833,Matched
+Office Rent,UPI Payment,22597,Not Matched
+GST Payment,GST Challan,15090,Matched
+Salary Paid,Salary Transfer,80551,Matched
+Laptop Purchase,Investment Transfer,52199,Not Matched
+Salary Paid,Salary Transfer,19330,Matched
+Consultancy Fees,Credit Card Payment,47885,Not Matched
+Laptop Purchase,Computer Purchase,59315,Matched
+Laptop Purchase,Computer Purchase,22256,Matched
+Laptop Purchase,Computer Purchase,16152,Matched
+GST Payment,Personal Transfer,63162,Not Matched
+Advertising Expense,Loan EMI,44052,Not Matched
+Electricity Bill,Electricity Payment,34234,Matched
+Fuel Expense,Loan EMI,10491,Not Matched
+Office Rent,Interest Debit,8652,Not Matched
+Travel Expense,Interest Debit,7542,Not Matched
+Office Rent,Rent Payment,23836,Matched
+Salary Paid,Cash Withdrawal,33995,Not Matched
+Advertising Expense,UPI Payment,17293,Not Matched
+GST Payment,GST Challan,69828,Matched
+Travel Expense,Interest Debit,65345,Not Matched
+Salary Paid,UPI Payment,50544,Not Matched
+Electricity Bill,Electricity Payment,50113,Matched
+Laptop Purchase,Computer Purchase,11234,Matched
+Laptop Purchase,Computer Purchase,51493,Matched
+Office Rent,Unknown Transaction,8765,Not Matched
+Salary Paid,Salary Transfer,77272,Matched
+Fuel Expense,Interest Debit,37460,Not Matched
+Staff Welfare,ATM Withdrawal,27777,Not Matched
+Laptop Purchase,Personal Transfer,31686,Not Matched
+Bank Charges,Bank Service Charges,70652,Matched
+Travel Expense,Unknown Transaction,25173,Not Matched
+Consultancy Fees,Interest Debit,25102,Not Matched
+Stationery Purchase,Personal Transfer,20505,Not Matched
+Laptop Purchase,Computer Purchase,28097,Matched
+Internet Expense,Internet Bill Payment,73552,Matched
+Salary Paid,UPI Payment,3954,Not Matched
+Electricity Bill,Electricity Payment,70468,Matched
+Office Rent,Cash Withdrawal,71509,Not Matched
+Internet Expense,Internet Bill Payment,36865,Matched
+Office Rent,Investment Transfer,44045,Not Matched
+Fuel Expense,Cheque Bounce Charge,50787,Not Matched
+Laptop Purchase,Computer Purchase,32377,Matched
+Bank Charges,Bank Service Charges,19770,Matched
+Advertising Expense,Cash Withdrawal,63246,Not Matched
+Electricity Bill,Electricity Payment,20902,Matched
+Travel Expense,Cheque Bounce Charge,2871,Not Matched
+GST Payment,UPI Payment,27417,Not Matched
+Laptop Purchase,Unknown Transaction,14770,Not Matched
+Office Rent,Rent Payment,38723,Matched
+GST Payment,GST Challan,47941,Matched
+Customer Receipt,Customer Payment,91650,Matched
+GST Payment,Personal Transfer,39242,Not Matched
+Staff Welfare,Cheque Bounce Charge,20375,Not Matched
+Customer Receipt,Customer Payment,95115,Matched
+Salary Paid,Cheque Bounce Charge,92397,Not Matched
+Bank Charges,Bank Service Charges,7464,Matched
+Insurance Premium,Insurance Payment,62931,Matched
+Staff Welfare,Cash Withdrawal,9650,Not Matched
+Travel Expense,Investment Transfer,20196,Not Matched
+Office Rent,Rent Payment,77567,Matched
+Fuel Expense,Investment Transfer,49547,Not Matched
+Salary Paid,Loan EMI,20676,Not Matched
+Bank Charges,Bank Service Charges,24929,Matched
+Salary Paid,Salary Transfer,23005,Matched
+Salary Paid,Interest Debit,15062,Not Matched
+Customer Receipt,Customer Payment,15328,Matched
+Advertising Expense,Personal Transfer,95876,Not Matched
+Bank Charges,Bank Service Charges,13631,Matched
+Laptop Purchase,ATM Withdrawal,8673,Not Matched
+Electricity Bill,Electricity Payment,39864,Matched
+Travel Expense,Cash Withdrawal,11893,Not Matched
+Advertising Expense,Cheque Bounce Charge,50353,Not Matched
+Software Subscription,Software Payment,22528,Matched
+Laptop Purchase,Computer Purchase,55360,Matched
+Electricity Bill,Electricity Payment,1290,Matched
+Stationery Purchase,Cash Withdrawal,9708,Not Matched
+Internet Expense,Internet Bill Payment,99171,Matched
+Salary Paid,Salary Transfer,81969,Matched
+Staff Welfare,Unknown Transaction,65473,Not Matched
+Salary Paid,Salary Transfer,68833,Matched
+Internet Expense,Internet Bill Payment,37785,Matched
+Software Subscription,Software Payment,50535,Matched
+Salary Paid,Investment Transfer,12894,Not Matched
+Software Subscription,Software Payment,86316,Matched
+Software Subscription,Software Payment,9058,Matched
+Salary Paid,Credit Card Payment,10842,Not Matched
+Insurance Premium,Insurance Payment,44078,Matched
+Advertising Expense,ATM Withdrawal,86708,Not Matched
+Customer Receipt,Customer Payment,58700,Matched
+Insurance Premium,Insurance Payment,57034,Matched
+Consultancy Fees,Cash Withdrawal,9090,Not Matched
+GST Payment,Credit Card Payment,33554,Not Matched
+Laptop Purchase,Cash Withdrawal,89589,Not Matched
+Laptop Purchase,Credit Card Payment,23590,Not Matched
+Consultancy Fees,Cash Withdrawal,96573,Not Matched
+Salary Paid,Investment Transfer,92911,Not Matched
+GST Payment,Cheque Bounce Charge,38125,Not Matched
+Advertising Expense,Loan EMI,76360,Not Matched
+Electricity Bill,Electricity Payment,55565,Matched
+Consultancy Fees,Loan EMI,55472,Not Matched
+Internet Expense,Internet Bill Payment,64692,Matched
+Fuel Expense,Loan EMI,66113,Not Matched
+Insurance Premium,Insurance Payment,59656,Matched
+Software Subscription,Software Payment,90850,Matched
+Software Subscription,Software Payment,75565,Matched
+GST Payment,GST Challan,92996,Matched
+Electricity Bill,Electricity Payment,32737,Matched
+Travel Expense,UPI Payment,21413,Not Matched
+Laptop Purchase,Computer Purchase,1630,Matched
+Laptop Purchase,Cash Withdrawal,6540,Not Matched
+Salary Paid,Unknown Transaction,27578,Not Matched
+Salary Paid,Personal Transfer,86338,Not Matched
+Stationery Purchase,Unknown Transaction,45312,Not Matched
+Consultancy Fees,UPI Payment,86231,Not Matched
+Travel Expense,Cash Withdrawal,42057,Not Matched
+Staff Welfare,UPI Payment,38777,Not Matched
+Advertising Expense,Interest Debit,72116,Not Matched
+Bank Charges,Bank Service Charges,93889,Matched
+Fuel Expense,UPI Payment,3410,Not Matched
+Salary Paid,Unknown Transaction,16359,Not Matched
+Laptop Purchase,Credit Card Payment,96771,Not Matched
+GST Payment,Loan EMI,49147,Not Matched
+GST Payment,Personal Transfer,70662,Not Matched
+GST Payment,Unknown Transaction,59830,Not Matched
+Travel Expense,Loan EMI,17582,Not Matched
+Salary Paid,Cash Withdrawal,22459,Not Matched
+Insurance Premium,Insurance Payment,56311,Matched
+Office Rent,Cheque Bounce Charge,51809,Not Matched
+Staff Welfare,Personal Transfer,22382,Not Matched
+Office Rent,UPI Payment,24666,Not Matched
+Office Rent,Cash Withdrawal,98736,Not Matched
+Customer Receipt,Customer Payment,70310,Matched
+Software Subscription,Software Payment,81738,Matched
+Consultancy Fees,Unknown Transaction,17567,Not Matched
+Fuel Expense,Interest Debit,39504,Not Matched
+GST Payment,GST Challan,94064,Matched
+Travel Expense,Personal Transfer,47096,Not Matched
+Fuel Expense,Credit Card Payment,28052,Not Matched
+GST Payment,GST Challan,42616,Matched
+Software Subscription,Software Payment,54999,Matched
+Insurance Premium,Insurance Payment,62008,Matched
+Salary Paid,Cash Withdrawal,72449,Not Matched
+Advertising Expense,UPI Payment,26211,Not Matched
+GST Payment,Cash Withdrawal,63275,Not Matched
+Stationery Purchase,Investment Transfer,60940,Not Matched
+Consultancy Fees,ATM Withdrawal,42049,Not Matched
+Stationery Purchase,Investment Transfer,32422,Not Matched
+Stationery Purchase,Unknown Transaction,22940,Not Matched
+Laptop Purchase,Investment Transfer,78706,Not Matched
+Staff Welfare,Personal Transfer,76394,Not Matched
+Stationery Purchase,ATM Withdrawal,35571,Not Matched
+Salary Paid,Credit Card Payment,99549,Not Matched
+Staff Welfare,Unknown Transaction,77085,Not Matched
+Stationery Purchase,Interest Debit,19638,Not Matched
+GST Payment,Personal Transfer,12115,Not Matched
+Staff Welfare,Personal Transfer,40626,Not Matched
+Laptop Purchase,Computer Purchase,76042,Matched
+Bank Charges,Bank Service Charges,5124,Matched
+Travel Expense,Personal Transfer,5647,Not Matched
+Stationery Purchase,Credit Card Payment,43254,Not Matched
+Bank Charges,Bank Service Charges,1858,Matched
+Office Rent,Rent Payment,94240,Matched
+Customer Receipt,Customer Payment,45539,Matched
+GST Payment,ATM Withdrawal,65903,Not Matched
+Laptop Purchase,UPI Payment,44936,Not Matched
+Consultancy Fees,Unknown Transaction,68267,Not Matched
+Salary Paid,Interest Debit,19161,Not Matched
+Office Rent,Rent Payment,14449,Matched
+Salary Paid,Interest Debit,98894,Not Matched
+Software Subscription,Software Payment,67755,Matched
+Stationery Purchase,Cash Withdrawal,75163,Not Matched
+Laptop Purchase,UPI Payment,67368,Not Matched
+Bank Charges,Bank Service Charges,13868,Matched
+Fuel Expense,Loan EMI,24477,Not Matched
+Advertising Expense,Unknown Transaction,75103,Not Matched
+Software Subscription,Software Payment,7114,Matched
+Consultancy Fees,Interest Debit,83826,Not Matched
+Office Rent,Rent Payment,97291,Matched
+Fuel Expense,Interest Debit,55809,Not Matched
+Bank Charges,Bank Service Charges,33366,Matched
+Stationery Purchase,Cheque Bounce Charge,7492,Not Matched
+Customer Receipt,Customer Payment,78882,Matched
+GST Payment,GST Challan,62567,Matched
+Staff Welfare,Cash Withdrawal,27924,Not Matched
+Laptop Purchase,Interest Debit,33747,Not Matched
+Consultancy Fees,Unknown Transaction,21124,Not Matched
+GST Payment,GST Challan,82446,Matched
+Consultancy Fees,ATM Withdrawal,41640,Not Matched
+Laptop Purchase,Unknown Transaction,49355,Not Matched
+Office Rent,Rent Payment,37945,Matched
+Laptop Purchase,Computer Purchase,44737,Matched
+GST Payment,GST Challan,34040,Matched
+Insurance Premium,Insurance Payment,78663,Matched
+Office Rent,Rent Payment,23261,Matched
+Bank Charges,Bank Service Charges,75577,Matched
+Salary Paid,Unknown Transaction,37569,Not Matched
+Stationery Purchase,Loan EMI,37906,Not Matched
+Travel Expense,Personal Transfer,93007,Not Matched
+Fuel Expense,Unknown Transaction,52558,Not Matched
+Electricity Bill,Electricity Payment,31543,Matched
+Consultancy Fees,Personal Transfer,96048,Not Matched
+Bank Charges,Bank Service Charges,7962,Matched
+Fuel Expense,Cash Withdrawal,23155,Not Matched
+GST Payment,GST Challan,44696,Matched
+Advertising Expense,Unknown Transaction,48471,Not Matched
+Internet Expense,Internet Bill Payment,44595,Matched
+Bank Charges,Bank Service Charges,73163,Matched
+Software Subscription,Software Payment,14869,Matched
+Salary Paid,Salary Transfer,90595,Matched
+GST Payment,Cash Withdrawal,3413,Not Matched
+Staff Welfare,Interest Debit,86154,Not Matched
+Software Subscription,Software Payment,98039,Matched
+Software Subscription,Software Payment,73127,Matched
+Office Rent,Personal Transfer,16671,Not Matched
+Stationery Purchase,ATM Withdrawal,37172,Not Matched
+Office Rent,Rent Payment,76099,Matched
+Internet Expense,Internet Bill Payment,20828,Matched
+Salary Paid,Salary Transfer,82306,Matched
+Customer Receipt,Customer Payment,76313,Matched
+Salary Paid,Cash Withdrawal,11530,Not Matched
+Internet Expense,Internet Bill Payment,49618,Matched
+Fuel Expense,Investment Transfer,60346,Not Matched
+Salary Paid,Salary Transfer,96934,Matched
+Travel Expense,Loan EMI,94597,Not Matched
+Travel Expense,Cash Withdrawal,1880,Not Matched
+Customer Receipt,Customer Payment,64406,Matched
+GST Payment,GST Challan,4110,Matched
+Internet Expense,Internet Bill Payment,76289,Matched
+GST Payment,Credit Card Payment,67922,Not Matched
+Bank Charges,Bank Service Charges,9525,Matched
+Laptop Purchase,Computer Purchase,85459,Matched
+Salary Paid,Loan EMI,27739,Not Matched
+Travel Expense,Cash Withdrawal,1539,Not Matched
+Consultancy Fees,Loan EMI,10015,Not Matched
+Office Rent,UPI Payment,5730,Not Matched
+Laptop Purchase,Computer Purchase,7657,Matched
+Travel Expense,Cash Withdrawal,46917,Not Matched
+Stationery Purchase,Interest Debit,23848,Not Matched
+GST Payment,GST Challan,41873,Matched
+Travel Expense,Loan EMI,68589,Not Matched
+Office Rent,Rent Payment,38990,Matched
+Staff Welfare,Loan EMI,1505,Not Matched
+Software Subscription,Software Payment,34727,Matched
+Fuel Expense,UPI Payment,90524,Not Matched
+Fuel Expense,Investment Transfer,20729,Not Matched
+Insurance Premium,Insurance Payment,85230,Matched
+Customer Receipt,Customer Payment,37209,Matched
+Customer Receipt,Customer Payment,7028,Matched
+Customer Receipt,Customer Payment,30959,Matched
+Customer Receipt,Customer Payment,16391,Matched
+GST Payment,GST Challan,6186,Matched
+Stationery Purchase,UPI Payment,72698,Not Matched
+Software Subscription,Software Payment,21689,Matched
+Office Rent,Rent Payment,41526,Matched
+Stationery Purchase,Cash Withdrawal,51350,Not Matched
+GST Payment,GST Challan,19973,Matched
+Advertising Expense,Cheque Bounce Charge,51714,Not Matched
+Electricity Bill,Electricity Payment,23433,Matched
+Staff Welfare,Cash Withdrawal,90069,Not Matched
+Consultancy Fees,Cash Withdrawal,16171,Not Matched
+Fuel Expense,Loan EMI,14781,Not Matched
+Stationery Purchase,Unknown Transaction,96499,Not Matched
+Salary Paid,Personal Transfer,41251,Not Matched
+Software Subscription,Software Payment,55545,Matched
+Consultancy Fees,Personal Transfer,77891,Not Matched
+Bank Charges,Bank Service Charges,18586,Matched
+GST Payment,Cash Withdrawal,94399,Not Matched
+Laptop Purchase,Computer Purchase,73996,Matched
+Bank Charges,Bank Service Charges,99822,Matched
+Salary Paid,Salary Transfer,72448,Matched
+GST Payment,GST Challan,76874,Matched
+Advertising Expense,Investment Transfer,83539,Not Matched
+Customer Receipt,Customer Payment,79071,Matched
+Bank Charges,Bank Service Charges,9452,Matched
+Software Subscription,Software Payment,11347,Matched
+Stationery Purchase,Loan EMI,62636,Not Matched
+Fuel Expense,Loan EMI,97403,Not Matched
+Travel Expense,UPI Payment,14017,Not Matched
+Laptop Purchase,Credit Card Payment,14668,Not Matched
+Office Rent,Rent Payment,64140,Matched
+Salary Paid,Investment Transfer,25911,Not Matched
+Laptop Purchase,Credit Card Payment,54054,Not Matched
+GST Payment,ATM Withdrawal,21702,Not Matched
+Stationery Purchase,Loan EMI,31858,Not Matched
+Travel Expense,UPI Payment,15061,Not Matched
+Fuel Expense,Interest Debit,63844,Not Matched
+Fuel Expense,Investment Transfer,25036,Not Matched
+Customer Receipt,Customer Payment,78000,Matched
+Insurance Premium,Insurance Payment,42549,Matched
+Bank Charges,Bank Service Charges,78934,Matched
+Office Rent,Rent Payment,70355,Matched
+Travel Expense,Unknown Transaction,9650,Not Matched
+Salary Paid,Loan EMI,67514,Not Matched
+Fuel Expense,Cash Withdrawal,12985,Not Matched
+Office Rent,Personal Transfer,51201,Not Matched
+Office Rent,Rent Payment,3759,Matched
+Laptop Purchase,Unknown Transaction,9697,Not Matched
+Bank Charges,Bank Service Charges,12007,Matched
+Salary Paid,Salary Transfer,16276,Matched
+GST Payment,Loan EMI,70507,Not Matched
+Internet Expense,Internet Bill Payment,37817,Matched
+Bank Charges,Bank Service Charges,62036,Matched
+Software Subscription,Software Payment,30185,Matched
+Customer Receipt,Customer Payment,70773,Matched
+Internet Expense,Internet Bill Payment,71265,Matched
+GST Payment,GST Challan,54767,Matched
+Staff Welfare,Unknown Transaction,70210,Not Matched
+Bank Charges,Bank Service Charges,35084,Matched
+Bank Charges,Bank Service Charges,86111,Matched
+Salary Paid,Salary Transfer,18700,Matched
+Bank Charges,Bank Service Charges,84782,Matched
+Staff Welfare,Loan EMI,37631,Not Matched
+Salary Paid,Interest Debit,34787,Not Matched
+Stationery Purchase,Investment Transfer,52919,Not Matched
+Laptop Purchase,Cheque Bounce Charge,93716,Not Matched
+Laptop Purchase,Computer Purchase,68606,Matched
+Salary Paid,Credit Card Payment,26952,Not Matched
+Stationery Purchase,Cash Withdrawal,73828,Not Matched
+Travel Expense,Loan EMI,61574,Not Matched
+GST Payment,GST Challan,79879,Matched
+Stationery Purchase,Unknown Transaction,41443,Not Matched
+Internet Expense,Internet Bill Payment,26956,Matched
+Electricity Bill,Electricity Payment,51575,Matched
+GST Payment,GST Challan,69346,Matched
+Staff Welfare,ATM Withdrawal,25018,Not Matched
+Electricity Bill,Electricity Payment,93724,Matched
+Salary Paid,Salary Transfer,96143,Matched
+Office Rent,Investment Transfer,80551,Not Matched
+Staff Welfare,Cheque Bounce Charge,55080,Not Matched
+Customer Receipt,Customer Payment,60541,Matched
+Advertising Expense,Interest Debit,99428,Not Matched
+Electricity Bill,Electricity Payment,55864,Matched
+Staff Welfare,Unknown Transaction,41396,Not Matched
+Internet Expense,Internet Bill Payment,71249,Matched
+Laptop Purchase,Computer Purchase,46021,Matched
+Electricity Bill,Electricity Payment,51453,Matched
+Electricity Bill,Electricity Payment,29025,Matched
+Stationery Purchase,Interest Debit,73135,Not Matched
+Laptop Purchase,Computer Purchase,48440,Matched
+Office Rent,Credit Card Payment,90334,Not Matched
+Bank Charges,Bank Service Charges,69757,Matched
+GST Payment,GST Challan,79126,Matched
+Office Rent,ATM Withdrawal,44840,Not Matched
+Bank Charges,Bank Service Charges,80719,Matched
+Internet Expense,Internet Bill Payment,48672,Matched
+Fuel Expense,Investment Transfer,91771,Not Matched
+GST Payment,Investment Transfer,88682,Not Matched
+Internet Expense,Internet Bill Payment,58875,Matched
+Insurance Premium,Insurance Payment,50824,Matched
+Staff Welfare,Unknown Transaction,82571,Not Matched
+Consultancy Fees,Investment Transfer,67239,Not Matched
+Laptop Purchase,Computer Purchase,75569,Matched
+Stationery Purchase,Cheque Bounce Charge,70844,Not Matched
+Salary Paid,Salary Transfer,76896,Matched
+Consultancy Fees,ATM Withdrawal,80236,Not Matched
+Travel Expense,Unknown Transaction,82488,Not Matched
+Office Rent,Rent Payment,11083,Matched
+Fuel Expense,ATM Withdrawal,95365,Not Matched
+Electricity Bill,Electricity Payment,95706,Matched
+Travel Expense,Cheque Bounce Charge,95233,Not Matched
+Internet Expense,Internet Bill Payment,45374,Matched
+Customer Receipt,Customer Payment,91368,Matched
+Fuel Expense,ATM Withdrawal,2573,Not Matched
+Fuel Expense,ATM Withdrawal,7708,Not Matched
+Salary Paid,Cash Withdrawal,20923,Not Matched
+Consultancy Fees,Personal Transfer,21848,Not Matched
+Salary Paid,Credit Card Payment,33764,Not Matched
+Office Rent,Personal Transfer,83790,Not Matched
+Internet Expense,Internet Bill Payment,28631,Matched
+Fuel Expense,Interest Debit,91488,Not Matched
+Staff Welfare,Investment Transfer,94347,Not Matched
