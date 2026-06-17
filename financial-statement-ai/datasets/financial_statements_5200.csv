@@ -1,0 +1,5201 @@
+Account_Name,Account_Type,Debit,Credit
+Furniture,Asset,86206,0
+Vehicle,Asset,312157,0
+Inventory,Asset,484301,0
+Vehicle,Asset,405172,0
+Vehicle,Asset,406268,0
+Accounts Receivable,Asset,219183,0
+Cash,Asset,113536,0
+Vehicle,Asset,78900,0
+Inventory,Asset,43741,0
+Vehicle,Asset,416077,0
+Vehicle,Asset,397296,0
+Cash,Asset,164454,0
+Furniture,Asset,215510,0
+Accounts Receivable,Asset,59940,0
+Accounts Receivable,Asset,451758,0
+Cash,Asset,91669,0
+Accounts Receivable,Asset,376011,0
+Vehicle,Asset,36154,0
+Cash,Asset,193026,0
+Inventory,Asset,126299,0
+Cash,Asset,31301,0
+Inventory,Asset,157217,0
+Accounts Receivable,Asset,381092,0
+Furniture,Asset,177356,0
+Furniture,Asset,353309,0
+Cash,Asset,410344,0
+Inventory,Asset,168280,0
+Furniture,Asset,35198,0
+Cash,Asset,396428,0
+Bank Account,Asset,317812,0
+Accounts Receivable,Asset,322086,0
+Furniture,Asset,317569,0
+Accounts Receivable,Asset,112252,0
+Furniture,Asset,259430,0
+Vehicle,Asset,332854,0
+Bank Account,Asset,82403,0
+Bank Account,Asset,171479,0
+Furniture,Asset,70959,0
+Cash,Asset,237290,0
+Inventory,Asset,44984,0
+Vehicle,Asset,264227,0
+Inventory,Asset,117040,0
+Accounts Receivable,Asset,396269,0
+Accounts Receivable,Asset,130007,0
+Furniture,Asset,197413,0
+Accounts Receivable,Asset,205513,0
+Inventory,Asset,125237,0
+Vehicle,Asset,60655,0
+Furniture,Asset,451498,0
+Vehicle,Asset,289796,0
+Bank Account,Asset,334237,0
+Accounts Receivable,Asset,378949,0
+Cash,Asset,203931,0
+Accounts Receivable,Asset,289763,0
+Bank Account,Asset,167884,0
+Inventory,Asset,364355,0
+Accounts Receivable,Asset,497183,0
+Bank Account,Asset,130003,0
+Inventory,Asset,32417,0
+Inventory,Asset,237116,0
+Cash,Asset,354666,0
+Inventory,Asset,346224,0
+Furniture,Asset,116108,0
+Bank Account,Asset,217534,0
+Inventory,Asset,357184,0
+Vehicle,Asset,375423,0
+Accounts Receivable,Asset,40006,0
+Vehicle,Asset,284749,0
+Inventory,Asset,47773,0
+Furniture,Asset,149008,0
+Furniture,Asset,257630,0
+Accounts Receivable,Asset,421146,0
+Cash,Asset,421514,0
+Furniture,Asset,429470,0
+Cash,Asset,92089,0
+Vehicle,Asset,267724,0
+Vehicle,Asset,55008,0
+Vehicle,Asset,341549,0
+Furniture,Asset,317974,0
+Accounts Receivable,Asset,109477,0
+Accounts Receivable,Asset,78028,0
+Inventory,Asset,482389,0
+Vehicle,Asset,416385,0
+Cash,Asset,330376,0
+Bank Account,Asset,416163,0
+Accounts Receivable,Asset,136007,0
+Cash,Asset,479141,0
+Vehicle,Asset,315986,0
+Cash,Asset,315879,0
+Inventory,Asset,372273,0
+Accounts Receivable,Asset,152194,0
+Vehicle,Asset,389364,0
+Inventory,Asset,62177,0
+Accounts Receivable,Asset,272274,0
+Furniture,Asset,363956,0
+Cash,Asset,70602,0
+Cash,Asset,138712,0
+Bank Account,Asset,48582,0
+Furniture,Asset,422557,0
+Accounts Receivable,Asset,356475,0
+Accounts Receivable,Asset,273990,0
+Cash,Asset,468376,0
+Bank Account,Asset,171056,0
+Furniture,Asset,447057,0
+Inventory,Asset,78838,0
+Accounts Receivable,Asset,55058,0
+Inventory,Asset,468699,0
+Furniture,Asset,59122,0
+Vehicle,Asset,302765,0
+Cash,Asset,50463,0
+Inventory,Asset,181642,0
+Vehicle,Asset,189686,0
+Vehicle,Asset,155091,0
+Bank Account,Asset,234328,0
+Vehicle,Asset,75425,0
+Bank Account,Asset,191237,0
+Inventory,Asset,133632,0
+Vehicle,Asset,351674,0
+Cash,Asset,339394,0
+Cash,Asset,195123,0
+Bank Account,Asset,171237,0
+Furniture,Asset,427379,0
+Furniture,Asset,418441,0
+Inventory,Asset,268478,0
+Inventory,Asset,352108,0
+Inventory,Asset,406696,0
+Accounts Receivable,Asset,349922,0
+Cash,Asset,188367,0
+Cash,Asset,341022,0
+Cash,Asset,287180,0
+Cash,Asset,192854,0
+Inventory,Asset,484955,0
+Accounts Receivable,Asset,7501,0
+Bank Account,Asset,235246,0
+Inventory,Asset,295387,0
+Vehicle,Asset,429010,0
+Bank Account,Asset,57554,0
+Inventory,Asset,158898,0
+Inventory,Asset,349819,0
+Furniture,Asset,414495,0
+Cash,Asset,366515,0
+Accounts Receivable,Asset,335635,0
+Inventory,Asset,494320,0
+Vehicle,Asset,91340,0
+Cash,Asset,200588,0
+Inventory,Asset,235248,0
+Furniture,Asset,31331,0
+Vehicle,Asset,439050,0
+Cash,Asset,235532,0
+Bank Account,Asset,433687,0
+Cash,Asset,114502,0
+Furniture,Asset,468797,0
+Vehicle,Asset,260785,0
+Vehicle,Asset,314066,0
+Bank Account,Asset,494882,0
+Furniture,Asset,359376,0
+Vehicle,Asset,149306,0
+Inventory,Asset,142382,0
+Furniture,Asset,69446,0
+Bank Account,Asset,328887,0
+Cash,Asset,360665,0
+Inventory,Asset,260642,0
+Accounts Receivable,Asset,350429,0
+Bank Account,Asset,431694,0
+Furniture,Asset,90945,0
+Accounts Receivable,Asset,130034,0
+Accounts Receivable,Asset,478284,0
+Accounts Receivable,Asset,287708,0
+Accounts Receivable,Asset,279608,0
+Furniture,Asset,8934,0
+Inventory,Asset,424309,0
+Cash,Asset,449026,0
+Accounts Receivable,Asset,487303,0
+Bank Account,Asset,485045,0
+Bank Account,Asset,284331,0
+Accounts Receivable,Asset,202077,0
+Vehicle,Asset,341239,0
+Cash,Asset,180640,0
+Inventory,Asset,280866,0
+Vehicle,Asset,330404,0
+Accounts Receivable,Asset,241726,0
+Inventory,Asset,97360,0
+Cash,Asset,435714,0
+Bank Account,Asset,469975,0
+Cash,Asset,36051,0
+Furniture,Asset,497595,0
+Bank Account,Asset,98565,0
+Inventory,Asset,280239,0
+Vehicle,Asset,188041,0
+Inventory,Asset,445315,0
+Accounts Receivable,Asset,464082,0
+Vehicle,Asset,25829,0
+Vehicle,Asset,274917,0
+Accounts Receivable,Asset,98489,0
+Vehicle,Asset,199362,0
+Bank Account,Asset,216482,0
+Inventory,Asset,437310,0
+Bank Account,Asset,206669,0
+Furniture,Asset,144986,0
+Inventory,Asset,112660,0
+Furniture,Asset,369283,0
+Inventory,Asset,52036,0
+Cash,Asset,68863,0
+Cash,Asset,221270,0
+Vehicle,Asset,222007,0
+Inventory,Asset,37865,0
+Accounts Receivable,Asset,284619,0
+Inventory,Asset,74849,0
+Inventory,Asset,438910,0
+Vehicle,Asset,334236,0
+Accounts Receivable,Asset,352570,0
+Cash,Asset,328575,0
+Cash,Asset,434976,0
+Vehicle,Asset,187569,0
+Furniture,Asset,400962,0
+Furniture,Asset,194553,0
+Accounts Receivable,Asset,266264,0
+Vehicle,Asset,474280,0
+Inventory,Asset,339713,0
+Cash,Asset,310444,0
+Bank Account,Asset,245238,0
+Cash,Asset,21488,0
+Vehicle,Asset,468155,0
+Inventory,Asset,418718,0
+Accounts Receivable,Asset,352098,0
+Accounts Receivable,Asset,131777,0
+Cash,Asset,329324,0
+Bank Account,Asset,140759,0
+Cash,Asset,178012,0
+Inventory,Asset,40499,0
+Vehicle,Asset,464573,0
+Vehicle,Asset,33654,0
+Furniture,Asset,499590,0
+Inventory,Asset,324622,0
+Accounts Receivable,Asset,44649,0
+Accounts Receivable,Asset,23747,0
+Bank Account,Asset,131969,0
+Accounts Receivable,Asset,299419,0
+Bank Account,Asset,223608,0
+Accounts Receivable,Asset,239173,0
+Bank Account,Asset,379651,0
+Accounts Receivable,Asset,73967,0
+Cash,Asset,117265,0
+Cash,Asset,273034,0
+Furniture,Asset,244376,0
+Bank Account,Asset,189936,0
+Inventory,Asset,351963,0
+Cash,Asset,13652,0
+Inventory,Asset,449583,0
+Vehicle,Asset,342821,0
+Bank Account,Asset,317934,0
+Inventory,Asset,476931,0
+Vehicle,Asset,10464,0
+Bank Account,Asset,283922,0
+Inventory,Asset,173249,0
+Furniture,Asset,105998,0
+Cash,Asset,491993,0
+Furniture,Asset,226821,0
+Inventory,Asset,450228,0
+Furniture,Asset,61446,0
+Accounts Receivable,Asset,83148,0
+Furniture,Asset,202631,0
+Cash,Asset,221671,0
+Accounts Receivable,Asset,454950,0
+Furniture,Asset,44507,0
+Vehicle,Asset,121603,0
+Furniture,Asset,310821,0
+Bank Account,Asset,118209,0
+Furniture,Asset,262317,0
+Bank Account,Asset,184799,0
+Bank Account,Asset,297709,0
+Furniture,Asset,6978,0
+Inventory,Asset,415527,0
+Accounts Receivable,Asset,158153,0
+Accounts Receivable,Asset,287408,0
+Inventory,Asset,344137,0
+Accounts Receivable,Asset,405932,0
+Accounts Receivable,Asset,237642,0
+Inventory,Asset,21275,0
+Bank Account,Asset,192933,0
+Vehicle,Asset,381388,0
+Cash,Asset,169039,0
+Vehicle,Asset,424339,0
+Vehicle,Asset,351937,0
+Furniture,Asset,13940,0
+Furniture,Asset,403245,0
+Furniture,Asset,144887,0
+Cash,Asset,232057,0
+Bank Account,Asset,407295,0
+Cash,Asset,223415,0
+Inventory,Asset,128335,0
+Inventory,Asset,127158,0
+Bank Account,Asset,157060,0
+Bank Account,Asset,173501,0
+Furniture,Asset,30920,0
+Furniture,Asset,32325,0
+Vehicle,Asset,94181,0
+Cash,Asset,124113,0
+Cash,Asset,26792,0
+Bank Account,Asset,100936,0
+Accounts Receivable,Asset,229339,0
+Furniture,Asset,287081,0
+Cash,Asset,30809,0
+Cash,Asset,12874,0
+Inventory,Asset,225563,0
+Inventory,Asset,495544,0
+Bank Account,Asset,370822,0
+Inventory,Asset,411299,0
+Bank Account,Asset,15951,0
+Furniture,Asset,333529,0
+Cash,Asset,495744,0
+Bank Account,Asset,435284,0
+Accounts Receivable,Asset,371925,0
+Inventory,Asset,105974,0
+Furniture,Asset,320424,0
+Accounts Receivable,Asset,313907,0
+Accounts Receivable,Asset,316429,0
+Cash,Asset,313977,0
+Bank Account,Asset,354721,0
+Furniture,Asset,278137,0
+Cash,Asset,392164,0
+Furniture,Asset,128063,0
+Accounts Receivable,Asset,145033,0
+Furniture,Asset,92305,0
+Cash,Asset,166285,0
+Cash,Asset,326876,0
+Bank Account,Asset,376721,0
+Cash,Asset,11219,0
+Inventory,Asset,189126,0
+Cash,Asset,486268,0
+Vehicle,Asset,367602,0
+Cash,Asset,190176,0
+Accounts Receivable,Asset,361886,0
+Vehicle,Asset,170769,0
+Furniture,Asset,313662,0
+Accounts Receivable,Asset,23199,0
+Vehicle,Asset,154785,0
+Vehicle,Asset,260396,0
+Accounts Receivable,Asset,63549,0
+Furniture,Asset,435966,0
+Accounts Receivable,Asset,55295,0
+Inventory,Asset,123659,0
+Furniture,Asset,289808,0
+Inventory,Asset,167732,0
+Furniture,Asset,487490,0
+Cash,Asset,70309,0
+Cash,Asset,344807,0
+Inventory,Asset,95443,0
+Accounts Receivable,Asset,302522,0
+Cash,Asset,37673,0
+Inventory,Asset,225228,0
+Bank Account,Asset,108740,0
+Vehicle,Asset,160554,0
+Cash,Asset,79807,0
+Accounts Receivable,Asset,401053,0
+Vehicle,Asset,344759,0
+Furniture,Asset,256169,0
+Cash,Asset,272001,0
+Furniture,Asset,158167,0
+Bank Account,Asset,210602,0
+Vehicle,Asset,489015,0
+Bank Account,Asset,168148,0
+Accounts Receivable,Asset,49804,0
+Cash,Asset,370837,0
+Furniture,Asset,24389,0
+Vehicle,Asset,56445,0
+Vehicle,Asset,295538,0
+Vehicle,Asset,280249,0
+Inventory,Asset,239903,0
+Accounts Receivable,Asset,104754,0
+Vehicle,Asset,37781,0
+Accounts Receivable,Asset,430415,0
+Vehicle,Asset,304150,0
+Bank Account,Asset,472256,0
+Bank Account,Asset,288737,0
+Bank Account,Asset,385449,0
+Bank Account,Asset,286203,0
+Bank Account,Asset,395799,0
+Furniture,Asset,415328,0
+Bank Account,Asset,499291,0
+Bank Account,Asset,422562,0
+Bank Account,Asset,407713,0
+Bank Account,Asset,477148,0
+Bank Account,Asset,370989,0
+Inventory,Asset,443169,0
+Bank Account,Asset,192882,0
+Cash,Asset,470005,0
+Accounts Receivable,Asset,317982,0
+Cash,Asset,221486,0
+Accounts Receivable,Asset,438395,0
+Cash,Asset,112293,0
+Accounts Receivable,Asset,431264,0
+Bank Account,Asset,18661,0
+Inventory,Asset,57429,0
+Inventory,Asset,182209,0
+Accounts Receivable,Asset,327312,0
+Furniture,Asset,183853,0
+Bank Account,Asset,57953,0
+Cash,Asset,42447,0
+Inventory,Asset,364258,0
+Bank Account,Asset,68939,0
+Furniture,Asset,27876,0
+Furniture,Asset,12224,0
+Accounts Receivable,Asset,498814,0
+Furniture,Asset,393032,0
+Bank Account,Asset,360968,0
+Bank Account,Asset,209632,0
+Accounts Receivable,Asset,373039,0
+Vehicle,Asset,435683,0
+Inventory,Asset,232764,0
+Bank Account,Asset,264916,0
+Vehicle,Asset,372476,0
+Inventory,Asset,195422,0
+Accounts Receivable,Asset,423423,0
+Inventory,Asset,206666,0
+Vehicle,Asset,395655,0
+Inventory,Asset,184773,0
+Cash,Asset,323938,0
+Bank Account,Asset,239852,0
+Cash,Asset,235032,0
+Vehicle,Asset,352150,0
+Vehicle,Asset,343610,0
+Inventory,Asset,229736,0
+Inventory,Asset,334046,0
+Bank Account,Asset,134810,0
+Cash,Asset,154052,0
+Bank Account,Asset,224705,0
+Inventory,Asset,350997,0
+Inventory,Asset,125206,0
+Cash,Asset,9677,0
+Cash,Asset,207411,0
+Accounts Receivable,Asset,373573,0
+Inventory,Asset,15019,0
+Bank Account,Asset,283757,0
+Vehicle,Asset,379965,0
+Inventory,Asset,17534,0
+Bank Account,Asset,213438,0
+Vehicle,Asset,282444,0
+Furniture,Asset,92875,0
+Furniture,Asset,434862,0
+Inventory,Asset,23072,0
+Furniture,Asset,315170,0
+Cash,Asset,182238,0
+Inventory,Asset,149312,0
+Furniture,Asset,324993,0
+Furniture,Asset,209420,0
+Cash,Asset,157398,0
+Inventory,Asset,75571,0
+Bank Account,Asset,196982,0
+Vehicle,Asset,44622,0
+Inventory,Asset,48013,0
+Cash,Asset,354585,0
+Cash,Asset,402924,0
+Furniture,Asset,225854,0
+Vehicle,Asset,475179,0
+Furniture,Asset,460563,0
+Cash,Asset,262758,0
+Furniture,Asset,32161,0
+Vehicle,Asset,208118,0
+Accounts Receivable,Asset,464134,0
+Cash,Asset,278182,0
+Accounts Receivable,Asset,428069,0
+Inventory,Asset,398450,0
+Bank Account,Asset,206942,0
+Vehicle,Asset,386047,0
+Furniture,Asset,381553,0
+Cash,Asset,110654,0
+Accounts Receivable,Asset,261911,0
+Vehicle,Asset,356515,0
+Inventory,Asset,117321,0
+Accounts Receivable,Asset,344476,0
+Accounts Receivable,Asset,87885,0
+Vehicle,Asset,260628,0
+Furniture,Asset,301386,0
+Cash,Asset,496378,0
+Furniture,Asset,206596,0
+Inventory,Asset,122325,0
+Furniture,Asset,279024,0
+Vehicle,Asset,377898,0
+Accounts Receivable,Asset,96988,0
+Bank Account,Asset,137768,0
+Cash,Asset,281381,0
+Vehicle,Asset,419479,0
+Inventory,Asset,336225,0
+Accounts Receivable,Asset,469681,0
+Inventory,Asset,374821,0
+Inventory,Asset,161586,0
+Accounts Receivable,Asset,47026,0
+Furniture,Asset,428475,0
+Cash,Asset,327078,0
+Cash,Asset,267964,0
+Inventory,Asset,195770,0
+Accounts Receivable,Asset,496118,0
+Accounts Receivable,Asset,99337,0
+Vehicle,Asset,305077,0
+Cash,Asset,47395,0
+Vehicle,Asset,274546,0
+Inventory,Asset,301462,0
+Accounts Receivable,Asset,118957,0
+Accounts Receivable,Asset,198508,0
+Vehicle,Asset,13370,0
+Cash,Asset,296956,0
+Cash,Asset,376865,0
+Cash,Asset,292264,0
+Vehicle,Asset,335344,0
+Vehicle,Asset,322278,0
+Vehicle,Asset,223893,0
+Inventory,Asset,469615,0
+Cash,Asset,304775,0
+Cash,Asset,337204,0
+Inventory,Asset,227935,0
+Vehicle,Asset,499682,0
+Inventory,Asset,15993,0
+Accounts Receivable,Asset,448210,0
+Cash,Asset,372121,0
+Accounts Receivable,Asset,463464,0
+Cash,Asset,122477,0
+Inventory,Asset,154141,0
+Bank Account,Asset,412049,0
+Cash,Asset,467985,0
+Cash,Asset,27749,0
+Vehicle,Asset,297615,0
+Inventory,Asset,163029,0
+Accounts Receivable,Asset,342517,0
+Inventory,Asset,193311,0
+Accounts Receivable,Asset,477237,0
+Inventory,Asset,62012,0
+Inventory,Asset,54440,0
+Furniture,Asset,81489,0
+Furniture,Asset,361724,0
+Inventory,Asset,227252,0
+Bank Account,Asset,374289,0
+Bank Account,Asset,164317,0
+Bank Account,Asset,281763,0
+Accounts Receivable,Asset,426768,0
+Inventory,Asset,378875,0
+Bank Account,Asset,244934,0
+Bank Account,Asset,250032,0
+Cash,Asset,211520,0
+Vehicle,Asset,320030,0
+Cash,Asset,486729,0
+Vehicle,Asset,19575,0
+Bank Account,Asset,209880,0
+Bank Account,Asset,121769,0
+Accounts Receivable,Asset,415286,0
+Vehicle,Asset,113248,0
+Furniture,Asset,165039,0
+Cash,Asset,82643,0
+Accounts Receivable,Asset,369086,0
+Vehicle,Asset,488660,0
+Bank Account,Asset,437250,0
+Bank Account,Asset,344509,0
+Bank Account,Asset,338007,0
+Bank Account,Asset,292286,0
+Inventory,Asset,159237,0
+Accounts Receivable,Asset,389943,0
+Furniture,Asset,324465,0
+Bank Account,Asset,63188,0
+Vehicle,Asset,139041,0
+Furniture,Asset,284920,0
+Accounts Receivable,Asset,198250,0
+Accounts Receivable,Asset,470272,0
+Furniture,Asset,63091,0
+Vehicle,Asset,417866,0
+Accounts Receivable,Asset,81703,0
+Cash,Asset,170635,0
+Cash,Asset,289177,0
+Vehicle,Asset,170680,0
+Vehicle,Asset,390670,0
+Furniture,Asset,265129,0
+Furniture,Asset,211857,0
+Cash,Asset,13130,0
+Bank Account,Asset,398666,0
+Cash,Asset,372717,0
+Accounts Receivable,Asset,461335,0
+Bank Account,Asset,477783,0
+Bank Account,Asset,6155,0
+Bank Account,Asset,146523,0
+Vehicle,Asset,293760,0
+Vehicle,Asset,243078,0
+Accounts Receivable,Asset,458258,0
+Furniture,Asset,355419,0
+Cash,Asset,94500,0
+Bank Account,Asset,363239,0
+Accounts Receivable,Asset,283706,0
+Inventory,Asset,107105,0
+Furniture,Asset,324065,0
+Vehicle,Asset,170723,0
+Furniture,Asset,338765,0
+Vehicle,Asset,458026,0
+Vehicle,Asset,390661,0
+Bank Account,Asset,52260,0
+Bank Account,Asset,98260,0
+Furniture,Asset,109989,0
+Bank Account,Asset,66204,0
+Inventory,Asset,280027,0
+Furniture,Asset,92168,0
+Bank Account,Asset,386312,0
+Cash,Asset,229085,0
+Cash,Asset,411342,0
+Vehicle,Asset,102746,0
+Vehicle,Asset,271168,0
+Accounts Receivable,Asset,319105,0
+Accounts Receivable,Asset,189104,0
+Inventory,Asset,340691,0
+Accounts Receivable,Asset,166595,0
+Bank Account,Asset,356136,0
+Accounts Receivable,Asset,499913,0
+Bank Account,Asset,394162,0
+Accounts Receivable,Asset,221410,0
+Inventory,Asset,327539,0
+Cash,Asset,427766,0
+Bank Account,Asset,370138,0
+Vehicle,Asset,47063,0
+Furniture,Asset,71912,0
+Cash,Asset,190358,0
+Cash,Asset,364652,0
+Inventory,Asset,234266,0
+Inventory,Asset,222817,0
+Furniture,Asset,29548,0
+Vehicle,Asset,446003,0
+Bank Account,Asset,108150,0
+Bank Account,Asset,334016,0
+Inventory,Asset,311214,0
+Furniture,Asset,34482,0
+Bank Account,Asset,450151,0
+Accounts Receivable,Asset,258577,0
+Furniture,Asset,418286,0
+Vehicle,Asset,359702,0
+Cash,Asset,181038,0
+Furniture,Asset,191255,0
+Accounts Receivable,Asset,163257,0
+Bank Account,Asset,111768,0
+Furniture,Asset,323213,0
+Inventory,Asset,423794,0
+Bank Account,Asset,137661,0
+Furniture,Asset,34569,0
+Accounts Receivable,Asset,461336,0
+Inventory,Asset,388286,0
+Bank Account,Asset,182386,0
+Furniture,Asset,74220,0
+Cash,Asset,204953,0
+Cash,Asset,403552,0
+Cash,Asset,469959,0
+Bank Account,Asset,311064,0
+Cash,Asset,72344,0
+Vehicle,Asset,129256,0
+Furniture,Asset,369349,0
+Inventory,Asset,369293,0
+Furniture,Asset,66655,0
+Bank Account,Asset,418753,0
+Inventory,Asset,419281,0
+Cash,Asset,49474,0
+Inventory,Asset,337834,0
+Accounts Receivable,Asset,421524,0
+Furniture,Asset,201561,0
+Inventory,Asset,103520,0
+Accounts Receivable,Asset,58734,0
+Furniture,Asset,182176,0
+Cash,Asset,133864,0
+Inventory,Asset,362050,0
+Inventory,Asset,134786,0
+Bank Account,Asset,301682,0
+Bank Account,Asset,445774,0
+Vehicle,Asset,340804,0
+Furniture,Asset,98817,0
+Vehicle,Asset,417548,0
+Cash,Asset,482080,0
+Furniture,Asset,457559,0
+Vehicle,Asset,338251,0
+Bank Account,Asset,107389,0
+Inventory,Asset,106276,0
+Accounts Receivable,Asset,237567,0
+Inventory,Asset,206277,0
+Vehicle,Asset,315567,0
+Vehicle,Asset,41861,0
+Accounts Receivable,Asset,177720,0
+Furniture,Asset,122560,0
+Vehicle,Asset,471454,0
+Accounts Receivable,Asset,237639,0
+Bank Account,Asset,298166,0
+Vehicle,Asset,409094,0
+Inventory,Asset,77471,0
+Inventory,Asset,181473,0
+Vehicle,Asset,416007,0
+Furniture,Asset,351545,0
+Vehicle,Asset,384738,0
+Furniture,Asset,143483,0
+Cash,Asset,12985,0
+Vehicle,Asset,123784,0
+Accounts Receivable,Asset,75227,0
+Inventory,Asset,318049,0
+Vehicle,Asset,87817,0
+Vehicle,Asset,296773,0
+Cash,Asset,325471,0
+Furniture,Asset,5392,0
+Bank Account,Asset,451364,0
+Vehicle,Asset,451380,0
+Furniture,Asset,433814,0
+Vehicle,Asset,54520,0
+Furniture,Asset,291708,0
+Inventory,Asset,112602,0
+Accounts Receivable,Asset,477383,0
+Vehicle,Asset,274837,0
+Vehicle,Asset,50208,0
+Furniture,Asset,489830,0
+Bank Account,Asset,197260,0
+Furniture,Asset,15125,0
+Furniture,Asset,222874,0
+Furniture,Asset,472964,0
+Vehicle,Asset,224867,0
+Bank Account,Asset,425811,0
+Accounts Receivable,Asset,217300,0
+Furniture,Asset,328380,0
+Inventory,Asset,315753,0
+Furniture,Asset,158947,0
+Furniture,Asset,350920,0
+Inventory,Asset,65557,0
+Vehicle,Asset,13304,0
+Vehicle,Asset,488280,0
+Accounts Receivable,Asset,340871,0
+Bank Account,Asset,283136,0
+Bank Account,Asset,461693,0
+Vehicle,Asset,40158,0
+Inventory,Asset,207654,0
+Furniture,Asset,412299,0
+Vehicle,Asset,107100,0
+Cash,Asset,286341,0
+Accounts Receivable,Asset,83547,0
+Bank Account,Asset,240658,0
+Inventory,Asset,123834,0
+Inventory,Asset,486707,0
+Inventory,Asset,236121,0
+Accounts Receivable,Asset,307097,0
+Accounts Receivable,Asset,334364,0
+Cash,Asset,413619,0
+Cash,Asset,73695,0
+Cash,Asset,154190,0
+Furniture,Asset,476556,0
+Cash,Asset,250067,0
+Vehicle,Asset,396068,0
+Bank Account,Asset,94363,0
+Bank Account,Asset,181180,0
+Cash,Asset,101662,0
+Cash,Asset,430301,0
+Vehicle,Asset,352076,0
+Accounts Receivable,Asset,33245,0
+Cash,Asset,433396,0
+Bank Account,Asset,174991,0
+Cash,Asset,388780,0
+Accounts Receivable,Asset,169069,0
+Furniture,Asset,147468,0
+Furniture,Asset,263360,0
+Accounts Receivable,Asset,11498,0
+Inventory,Asset,410510,0
+Accounts Receivable,Asset,281482,0
+Bank Account,Asset,310606,0
+Vehicle,Asset,451806,0
+Furniture,Asset,235829,0
+Vehicle,Asset,442929,0
+Furniture,Asset,210972,0
+Vehicle,Asset,44953,0
+Accounts Receivable,Asset,155708,0
+Furniture,Asset,166001,0
+Bank Account,Asset,131775,0
+Inventory,Asset,115465,0
+Bank Account,Asset,428811,0
+Cash,Asset,276902,0
+Vehicle,Asset,135777,0
+Vehicle,Asset,291440,0
+Inventory,Asset,461915,0
+Bank Account,Asset,406176,0
+Inventory,Asset,449250,0
+Bank Account,Asset,39287,0
+Furniture,Asset,90540,0
+Accounts Receivable,Asset,176678,0
+Accounts Receivable,Asset,496495,0
+Cash,Asset,409228,0
+Vehicle,Asset,490501,0
+Bank Account,Asset,460443,0
+Bank Account,Asset,454773,0
+Furniture,Asset,392493,0
+Inventory,Asset,228693,0
+Bank Account,Asset,366113,0
+Accounts Receivable,Asset,277791,0
+Cash,Asset,198869,0
+Inventory,Asset,336796,0
+Inventory,Asset,362489,0
+Bank Account,Asset,284548,0
+Inventory,Asset,102886,0
+Furniture,Asset,216279,0
+Accounts Receivable,Asset,289392,0
+Furniture,Asset,370284,0
+Accounts Receivable,Asset,165246,0
+Inventory,Asset,336838,0
+Furniture,Asset,273716,0
+Inventory,Asset,38411,0
+Accounts Receivable,Asset,419516,0
+Inventory,Asset,36183,0
+Cash,Asset,130972,0
+Accounts Receivable,Asset,172386,0
+Cash,Asset,451804,0
+Vehicle,Asset,348193,0
+Cash,Asset,342595,0
+Inventory,Asset,178254,0
+Bank Account,Asset,79764,0
+Inventory,Asset,307110,0
+Furniture,Asset,483542,0
+Inventory,Asset,243028,0
+Furniture,Asset,69308,0
+Vehicle,Asset,188079,0
+Inventory,Asset,265895,0
+Bank Account,Asset,304438,0
+Furniture,Asset,176069,0
+Bank Account,Asset,316914,0
+Vehicle,Asset,405869,0
+Cash,Asset,30204,0
+Cash,Asset,430083,0
+Bank Account,Asset,370359,0
+Inventory,Asset,439696,0
+Accounts Receivable,Asset,83332,0
+Vehicle,Asset,375468,0
+Furniture,Asset,317019,0
+Cash,Asset,323898,0
+Accounts Receivable,Asset,303129,0
+Cash,Asset,44609,0
+Vehicle,Asset,379187,0
+Accounts Receivable,Asset,204805,0
+Vehicle,Asset,455911,0
+Vehicle,Asset,16579,0
+Inventory,Asset,322430,0
+Cash,Asset,98275,0
+Bank Account,Asset,474968,0
+Inventory,Asset,261270,0
+Cash,Asset,176029,0
+Bank Account,Asset,108706,0
+Accounts Receivable,Asset,28265,0
+Bank Account,Asset,83000,0
+Bank Account,Asset,272135,0
+Accounts Receivable,Asset,137566,0
+Accounts Receivable,Asset,217687,0
+Vehicle,Asset,446976,0
+Bank Account,Asset,390252,0
+Bank Account,Asset,64735,0
+Bank Account,Asset,350694,0
+Vehicle,Asset,490732,0
+Cash,Asset,118248,0
+Accounts Receivable,Asset,207697,0
+Inventory,Asset,122233,0
+Accounts Receivable,Asset,405606,0
+Accounts Receivable,Asset,480276,0
+Cash,Asset,10205,0
+Vehicle,Asset,406743,0
+Cash,Asset,487966,0
+Accounts Receivable,Asset,375007,0
+Vehicle,Asset,71460,0
+Bank Account,Asset,90292,0
+Bank Account,Asset,490183,0
+Accounts Receivable,Asset,375051,0
+Bank Account,Asset,267569,0
+Bank Account,Asset,212448,0
+Accounts Receivable,Asset,444514,0
+Bank Account,Asset,142665,0
+Inventory,Asset,254405,0
+Cash,Asset,123502,0
+Inventory,Asset,117338,0
+Inventory,Asset,318488,0
+Cash,Asset,478966,0
+Cash,Asset,74796,0
+Accounts Receivable,Asset,418092,0
+Vehicle,Asset,133572,0
+Bank Account,Asset,40578,0
+Furniture,Asset,427725,0
+Accounts Receivable,Asset,468459,0
+Bank Account,Asset,197000,0
+Furniture,Asset,95848,0
+Accounts Receivable,Asset,431122,0
+Vehicle,Asset,234280,0
+Inventory,Asset,58580,0
+Accounts Receivable,Asset,139247,0
+Furniture,Asset,360755,0
+Furniture,Asset,479862,0
+Furniture,Asset,297767,0
+Vehicle,Asset,432550,0
+Inventory,Asset,478475,0
+Vehicle,Asset,403665,0
+Furniture,Asset,111334,0
+Furniture,Asset,484173,0
+Cash,Asset,252119,0
+Bank Account,Asset,210820,0
+Vehicle,Asset,296113,0
+Vehicle,Asset,166579,0
+Vehicle,Asset,370512,0
+Cash,Asset,355995,0
+Inventory,Asset,90258,0
+Accounts Receivable,Asset,433329,0
+Bank Account,Asset,174377,0
+Bank Account,Asset,169599,0
+Vehicle,Asset,64458,0
+Inventory,Asset,108314,0
+Cash,Asset,293983,0
+Bank Account,Asset,278485,0
+Cash,Asset,290297,0
+Cash,Asset,338600,0
+Inventory,Asset,397067,0
+Furniture,Asset,339724,0
+Accounts Receivable,Asset,280099,0
+Cash,Asset,386643,0
+Cash,Asset,449081,0
+Inventory,Asset,480867,0
+Vehicle,Asset,309267,0
+Cash,Asset,304468,0
+Inventory,Asset,474840,0
+Furniture,Asset,120017,0
+Furniture,Asset,264006,0
+Bank Account,Asset,434312,0
+Accounts Receivable,Asset,357340,0
+Inventory,Asset,59104,0
+Bank Account,Asset,495921,0
+Accounts Receivable,Asset,372073,0
+Bank Account,Asset,468755,0
+Inventory,Asset,209779,0
+Accounts Receivable,Asset,375236,0
+Inventory,Asset,239587,0
+Accounts Receivable,Asset,75767,0
+Inventory,Asset,147060,0
+Furniture,Asset,263341,0
+Cash,Asset,79721,0
+Cash,Asset,206700,0
+Furniture,Asset,218118,0
+Inventory,Asset,260122,0
+Accounts Receivable,Asset,21164,0
+Vehicle,Asset,10811,0
+Accounts Receivable,Asset,462786,0
+Vehicle,Asset,398135,0
+Furniture,Asset,223747,0
+Cash,Asset,193452,0
+Cash,Asset,237843,0
+Cash,Asset,279054,0
+Inventory,Asset,44412,0
+Furniture,Asset,407102,0
+Bank Account,Asset,367692,0
+Cash,Asset,230367,0
+Vehicle,Asset,70011,0
+Bank Account,Asset,21366,0
+Accounts Receivable,Asset,439397,0
+Furniture,Asset,211414,0
+Bank Account,Asset,13252,0
+Accounts Receivable,Asset,436627,0
+Furniture,Asset,322300,0
+Furniture,Asset,127390,0
+Furniture,Asset,472225,0
+Furniture,Asset,74864,0
+Vehicle,Asset,224249,0
+Inventory,Asset,103006,0
+Furniture,Asset,202922,0
+Bank Account,Asset,344626,0
+Vehicle,Asset,395264,0
+Inventory,Asset,142934,0
+Bank Account,Asset,458073,0
+Accounts Receivable,Asset,42367,0
+Cash,Asset,67841,0
+Bank Account,Asset,243871,0
+Cash,Asset,337806,0
+Bank Account,Asset,197193,0
+Cash,Asset,363334,0
+Furniture,Asset,162836,0
+Vehicle,Asset,356121,0
+Vehicle,Asset,109793,0
+Inventory,Asset,485676,0
+Furniture,Asset,143552,0
+Inventory,Asset,98015,0
+Furniture,Asset,357114,0
+Cash,Asset,30406,0
+Inventory,Asset,161154,0
+Accounts Receivable,Asset,107345,0
+Accounts Receivable,Asset,416600,0
+Cash,Asset,487289,0
+Vehicle,Asset,219895,0
+Vehicle,Asset,207397,0
+Inventory,Asset,147814,0
+Accounts Receivable,Asset,67644,0
+Cash,Asset,417654,0
+Bank Account,Asset,353243,0
+Accounts Receivable,Asset,175096,0
+Furniture,Asset,324633,0
+Cash,Asset,173677,0
+Furniture,Asset,430272,0
+Cash,Asset,194728,0
+Furniture,Asset,313691,0
+Furniture,Asset,129471,0
+Cash,Asset,472214,0
+Inventory,Asset,132709,0
+Vehicle,Asset,464734,0
+Accounts Receivable,Asset,338112,0
+Cash,Asset,298787,0
+Accounts Receivable,Asset,495074,0
+Vehicle,Asset,36297,0
+Cash,Asset,228038,0
+Inventory,Asset,446290,0
+Cash,Asset,331336,0
+Furniture,Asset,267488,0
+Cash,Asset,403856,0
+Bank Account,Asset,187990,0
+Vehicle,Asset,148891,0
+Vehicle,Asset,424699,0
+Furniture,Asset,270554,0
+Furniture,Asset,211229,0
+Cash,Asset,403486,0
+Bank Account,Asset,406908,0
+Vehicle,Asset,34106,0
+Vehicle,Asset,134998,0
+Accounts Receivable,Asset,421060,0
+Accounts Receivable,Asset,454362,0
+Vehicle,Asset,497376,0
+Inventory,Asset,29207,0
+Cash,Asset,37242,0
+Furniture,Asset,365650,0
+Accounts Receivable,Asset,21436,0
+Bank Account,Asset,74722,0
+Inventory,Asset,124342,0
+Furniture,Asset,210755,0
+Accounts Receivable,Asset,6876,0
+Vehicle,Asset,323029,0
+Cash,Asset,131180,0
+Cash,Asset,94959,0
+Cash,Asset,281066,0
+Furniture,Asset,495790,0
+Cash,Asset,420202,0
+Bank Account,Asset,411199,0
+Cash,Asset,239441,0
+Accounts Receivable,Asset,229933,0
+Bank Account,Asset,156281,0
+Accounts Receivable,Asset,70837,0
+Accounts Receivable,Asset,398058,0
+Accounts Receivable,Asset,207317,0
+Inventory,Asset,432032,0
+Inventory,Asset,119607,0
+Accounts Receivable,Asset,160510,0
+Accounts Receivable,Asset,420271,0
+Vehicle,Asset,441953,0
+Accounts Receivable,Asset,454049,0
+Furniture,Asset,271735,0
+Furniture,Asset,34149,0
+Furniture,Asset,273487,0
+Vehicle,Asset,353579,0
+Cash,Asset,232368,0
+Accounts Receivable,Asset,88325,0
+Bank Account,Asset,42864,0
+Inventory,Asset,310829,0
+Vehicle,Asset,95429,0
+Inventory,Asset,49001,0
+Vehicle,Asset,280245,0
+Accounts Receivable,Asset,97208,0
+Accounts Receivable,Asset,26592,0
+Cash,Asset,315861,0
+Cash,Asset,401585,0
+Cash,Asset,261135,0
+Accounts Receivable,Asset,258185,0
+Furniture,Asset,213659,0
+Vehicle,Asset,204381,0
+Furniture,Asset,289146,0
+Accounts Receivable,Asset,172807,0
+Bank Account,Asset,437017,0
+Accounts Receivable,Asset,326651,0
+Accounts Receivable,Asset,26906,0
+Inventory,Asset,453714,0
+Cash,Asset,136958,0
+Cash,Asset,183811,0
+Cash,Asset,157835,0
+Inventory,Asset,335065,0
+Vehicle,Asset,258197,0
+Cash,Asset,101794,0
+Vehicle,Asset,431018,0
+Vehicle,Asset,18656,0
+Bank Account,Asset,69831,0
+Bank Account,Asset,89229,0
+Cash,Asset,327721,0
+Cash,Asset,176202,0
+Vehicle,Asset,239115,0
+Vehicle,Asset,224838,0
+Vehicle,Asset,448697,0
+Vehicle,Asset,63222,0
+Inventory,Asset,20913,0
+Vehicle,Asset,129782,0
+Bank Account,Asset,457225,0
+Bank Account,Asset,185697,0
+Inventory,Asset,348606,0
+Furniture,Asset,402056,0
+Vehicle,Asset,198600,0
+Furniture,Asset,472763,0
+Bank Account,Asset,26685,0
+Accounts Receivable,Asset,465318,0
+Bank Account,Asset,247992,0
+Cash,Asset,323476,0
+Furniture,Asset,309151,0
+Vehicle,Asset,421256,0
+Accounts Receivable,Asset,6039,0
+Bank Account,Asset,217113,0
+Inventory,Asset,351866,0
+Furniture,Asset,235399,0
+Furniture,Asset,203798,0
+Bank Account,Asset,391334,0
+Bank Account,Asset,67666,0
+Cash,Asset,431767,0
+Bank Account,Asset,257549,0
+Inventory,Asset,38311,0
+Furniture,Asset,123161,0
+Inventory,Asset,102132,0
+Accounts Receivable,Asset,332515,0
+Accounts Receivable,Asset,351827,0
+Inventory,Asset,474900,0
+Inventory,Asset,246476,0
+Accounts Receivable,Asset,479334,0
+Accounts Receivable,Asset,197570,0
+Accounts Receivable,Asset,315799,0
+Accounts Receivable,Asset,175156,0
+Furniture,Asset,392698,0
+Furniture,Asset,198587,0
+Accounts Receivable,Asset,455514,0
+Inventory,Asset,405060,0
+Cash,Asset,431600,0
+Vehicle,Asset,369206,0
+Cash,Asset,151816,0
+Bank Account,Asset,331116,0
+Accounts Receivable,Asset,411965,0
+Cash,Asset,230210,0
+Inventory,Asset,110784,0
+Vehicle,Asset,474604,0
+Bank Account,Asset,149385,0
+Inventory,Asset,346783,0
+Vehicle,Asset,249767,0
+Cash,Asset,317530,0
+Bank Account,Asset,489988,0
+Bank Account,Asset,75364,0
+Accounts Receivable,Asset,432093,0
+Inventory,Asset,407586,0
+Accounts Receivable,Asset,256025,0
+Cash,Asset,423550,0
+Furniture,Asset,264023,0
+Vehicle,Asset,147564,0
+Cash,Asset,252481,0
+Inventory,Asset,50068,0
+Accounts Receivable,Asset,176159,0
+Accounts Receivable,Asset,152809,0
+Accounts Receivable,Asset,302891,0
+Vehicle,Asset,74937,0
+Cash,Asset,174141,0
+Vehicle,Asset,27648,0
+Furniture,Asset,323752,0
+Inventory,Asset,214726,0
+Accounts Receivable,Asset,458195,0
+Bank Account,Asset,145658,0
+Bank Account,Asset,270317,0
+Bank Account,Asset,315523,0
+Cash,Asset,476402,0
+Furniture,Asset,46159,0
+Vehicle,Asset,130361,0
+Bank Account,Asset,151788,0
+Vehicle,Asset,458657,0
+Cash,Asset,188555,0
+Cash,Asset,218207,0
+Cash,Asset,200563,0
+Vehicle,Asset,90747,0
+Bank Account,Asset,323302,0
+Vehicle,Asset,467845,0
+Cash,Asset,286742,0
+Inventory,Asset,235060,0
+Vehicle,Asset,457879,0
+Inventory,Asset,97521,0
+Accounts Receivable,Asset,334580,0
+Inventory,Asset,62525,0
+Accounts Receivable,Asset,185111,0
+Vehicle,Asset,283769,0
+Bank Account,Asset,271218,0
+Inventory,Asset,188859,0
+Accounts Receivable,Asset,459842,0
+Cash,Asset,53736,0
+Accounts Receivable,Asset,422555,0
+Inventory,Asset,13224,0
+Accounts Receivable,Asset,493518,0
+Inventory,Asset,295729,0
+Furniture,Asset,84021,0
+Bank Account,Asset,54457,0
+Accounts Receivable,Asset,117446,0
+Furniture,Asset,290278,0
+Bank Account,Asset,424428,0
+Inventory,Asset,475352,0
+Vehicle,Asset,15369,0
+Accounts Receivable,Asset,457714,0
+Accounts Receivable,Asset,279151,0
+Cash,Asset,113986,0
+Furniture,Asset,201784,0
+Furniture,Asset,41153,0
+Furniture,Asset,378414,0
+Furniture,Asset,255167,0
+Cash,Asset,323539,0
+Vehicle,Asset,111961,0
+Accounts Receivable,Asset,94417,0
+Vehicle,Asset,103571,0
+Vehicle,Asset,268068,0
+Inventory,Asset,266358,0
+Bank Account,Asset,116933,0
+Inventory,Asset,392458,0
+Bank Account,Asset,383866,0
+Bank Account,Asset,71842,0
+Bank Account,Asset,312950,0
+Bank Account,Asset,118891,0
+Cash,Asset,114171,0
+Furniture,Asset,42695,0
+Accounts Receivable,Asset,284837,0
+Inventory,Asset,51037,0
+Accounts Receivable,Asset,243243,0
+Furniture,Asset,86556,0
+Bank Account,Asset,489080,0
+Bank Account,Asset,91141,0
+Vehicle,Asset,488231,0
+Vehicle,Asset,352517,0
+Cash,Asset,471363,0
+Inventory,Asset,346633,0
+Vehicle,Asset,34437,0
+Accounts Receivable,Asset,412211,0
+Inventory,Asset,149963,0
+Furniture,Asset,346149,0
+Inventory,Asset,424057,0
+Cash,Asset,442251,0
+Bank Account,Asset,399115,0
+Accounts Receivable,Asset,162797,0
+Vehicle,Asset,332515,0
+Inventory,Asset,360164,0
+Inventory,Asset,273364,0
+Cash,Asset,464008,0
+Accounts Receivable,Asset,430164,0
+Inventory,Asset,55303,0
+Cash,Asset,461818,0
+Furniture,Asset,134923,0
+Bank Account,Asset,400932,0
+Cash,Asset,108029,0
+Bank Account,Asset,322544,0
+Cash,Asset,97203,0
+Bank Account,Asset,273084,0
+Inventory,Asset,485556,0
+Bank Account,Asset,65313,0
+Bank Account,Asset,333388,0
+Inventory,Asset,369279,0
+Vehicle,Asset,32434,0
+Furniture,Asset,499462,0
+Furniture,Asset,343918,0
+Furniture,Asset,447269,0
+Accounts Receivable,Asset,14830,0
+Vehicle,Asset,222724,0
+Furniture,Asset,272866,0
+Furniture,Asset,26198,0
+Bank Account,Asset,179014,0
+Furniture,Asset,54149,0
+Cash,Asset,241571,0
+Cash,Asset,216248,0
+Cash,Asset,321208,0
+Bank Account,Asset,141086,0
+Cash,Asset,261774,0
+Inventory,Asset,135726,0
+Cash,Asset,203594,0
+Bank Account,Asset,169921,0
+Accounts Receivable,Asset,89600,0
+Inventory,Asset,238768,0
+Vehicle,Asset,475017,0
+Furniture,Asset,82439,0
+Inventory,Asset,425087,0
+Bank Account,Asset,84621,0
+Bank Account,Asset,57157,0
+Furniture,Asset,163685,0
+Vehicle,Asset,486554,0
+Inventory,Asset,348172,0
+Furniture,Asset,216558,0
+Furniture,Asset,164002,0
+Vehicle,Asset,446239,0
+Cash,Asset,380184,0
+Furniture,Asset,402191,0
+Cash,Asset,347329,0
+Inventory,Asset,115587,0
+Bank Account,Asset,340213,0
+Vehicle,Asset,25593,0
+Furniture,Asset,264196,0
+Vehicle,Asset,153911,0
+Inventory,Asset,446011,0
+Inventory,Asset,215455,0
+Accounts Receivable,Asset,12387,0
+Bank Account,Asset,133197,0
+Inventory,Asset,462399,0
+Bank Account,Asset,88054,0
+Bank Account,Asset,479800,0
+Vehicle,Asset,202141,0
+Furniture,Asset,437373,0
+Accounts Receivable,Asset,246389,0
+Bank Account,Asset,431826,0
+Accounts Receivable,Asset,161922,0
+Furniture,Asset,248702,0
+Cash,Asset,58780,0
+Cash,Asset,284063,0
+Cash,Asset,439786,0
+Inventory,Asset,431765,0
+Cash,Asset,225323,0
+Accounts Receivable,Asset,259073,0
+Cash,Asset,313779,0
+Bank Account,Asset,432361,0
+Furniture,Asset,458979,0
+Bank Account,Asset,112991,0
+Bank Account,Asset,210026,0
+Cash,Asset,481604,0
+Furniture,Asset,153792,0
+Vehicle,Asset,348119,0
+Inventory,Asset,151744,0
+Accounts Receivable,Asset,42162,0
+Bank Account,Asset,402543,0
+Bank Account,Asset,83797,0
+Inventory,Asset,250539,0
+Accounts Receivable,Asset,225136,0
+Vehicle,Asset,89781,0
+Furniture,Asset,267017,0
+Bank Account,Asset,228533,0
+Vehicle,Asset,139931,0
+Cash,Asset,308930,0
+Vehicle,Asset,220743,0
+Furniture,Asset,195202,0
+Vehicle,Asset,424330,0
+Furniture,Asset,74105,0
+Cash,Asset,67491,0
+Cash,Asset,109938,0
+Vehicle,Asset,389368,0
+Vehicle,Asset,472543,0
+Accounts Receivable,Asset,481469,0
+Inventory,Asset,186277,0
+Accounts Receivable,Asset,82976,0
+Accounts Receivable,Asset,317626,0
+Accounts Receivable,Asset,334819,0
+Vehicle,Asset,372616,0
+Bank Account,Asset,420921,0
+Bank Account,Asset,310425,0
+Cash,Asset,243192,0
+Vehicle,Asset,183507,0
+Furniture,Asset,183991,0
+Accounts Receivable,Asset,81842,0
+Cash,Asset,274340,0
+Accounts Receivable,Asset,496082,0
+Cash,Asset,94929,0
+Furniture,Asset,335055,0
+Accounts Receivable,Asset,213014,0
+Furniture,Asset,24922,0
+Vehicle,Asset,396025,0
+Bank Account,Asset,179216,0
+Furniture,Asset,466578,0
+Furniture,Asset,311634,0
+Accounts Receivable,Asset,404938,0
+Vehicle,Asset,167588,0
+Bank Account,Asset,363824,0
+Vehicle,Asset,341462,0
+Accounts Receivable,Asset,376836,0
+Inventory,Asset,397105,0
+Inventory,Asset,393303,0
+Furniture,Asset,244274,0
+Vehicle,Asset,31184,0
+Vehicle,Asset,296762,0
+Bank Account,Asset,410402,0
+Furniture,Asset,416264,0
+Bank Account,Asset,32108,0
+Vehicle,Asset,382065,0
+Cash,Asset,388649,0
+Bank Account,Asset,11206,0
+Bank Account,Asset,92468,0
+Vehicle,Asset,65819,0
+Accounts Receivable,Asset,20198,0
+Furniture,Asset,395306,0
+Furniture,Asset,138642,0
+Accounts Receivable,Asset,486843,0
+Cash,Asset,261157,0
+Bank Account,Asset,24220,0
+Vehicle,Asset,160474,0
+Furniture,Asset,163403,0
+Inventory,Asset,423695,0
+Vehicle,Asset,285059,0
+Accounts Receivable,Asset,112881,0
+Cash,Asset,220771,0
+Inventory,Asset,221324,0
+Vehicle,Asset,402181,0
+Bank Account,Asset,263488,0
+Vehicle,Asset,152112,0
+Vehicle,Asset,126964,0
+Furniture,Asset,306738,0
+Vehicle,Asset,48877,0
+Furniture,Asset,60888,0
+Bank Account,Asset,328547,0
+Bank Account,Asset,420778,0
+Furniture,Asset,43654,0
+Cash,Asset,86508,0
+Inventory,Asset,198188,0
+Cash,Asset,126439,0
+Cash,Asset,161614,0
+Inventory,Asset,284113,0
+Furniture,Asset,11527,0
+Furniture,Asset,242772,0
+Cash,Asset,164869,0
+Inventory,Asset,177120,0
+Cash,Asset,149634,0
+Furniture,Asset,130671,0
+Furniture,Asset,126599,0
+Cash,Asset,33170,0
+Cash,Asset,127303,0
+Furniture,Asset,87648,0
+Cash,Asset,495895,0
+Vehicle,Asset,401154,0
+Accounts Receivable,Asset,377100,0
+Cash,Asset,8714,0
+Furniture,Asset,397461,0
+Inventory,Asset,453031,0
+Furniture,Asset,259335,0
+Cash,Asset,212552,0
+Bank Account,Asset,304309,0
+Bank Account,Asset,464994,0
+Accounts Receivable,Asset,353272,0
+Inventory,Asset,468780,0
+Vehicle,Asset,408641,0
+Furniture,Asset,88855,0
+Accounts Receivable,Asset,350594,0
+Bank Account,Asset,278452,0
+Furniture,Asset,147215,0
+Accounts Receivable,Asset,387069,0
+Accounts Receivable,Asset,342120,0
+Furniture,Asset,130545,0
+Bank Account,Asset,350341,0
+Furniture,Asset,313913,0
+Accounts Receivable,Asset,81185,0
+Bank Account,Asset,474242,0
+Cash,Asset,233950,0
+Bank Account,Asset,200165,0
+Furniture,Asset,17076,0
+Furniture,Asset,432767,0
+Accounts Receivable,Asset,65214,0
+Inventory,Asset,127378,0
+Cash,Asset,152124,0
+Vehicle,Asset,465854,0
+Inventory,Asset,51296,0
+Bank Account,Asset,244713,0
+Cash,Asset,25451,0
+Bank Account,Asset,304734,0
+Furniture,Asset,112091,0
+Inventory,Asset,340415,0
+Accounts Receivable,Asset,251429,0
+Vehicle,Asset,34204,0
+Vehicle,Asset,447040,0
+Accounts Receivable,Asset,16482,0
+Inventory,Asset,434939,0
+Inventory,Asset,97742,0
+Bank Account,Asset,452723,0
+Accounts Receivable,Asset,61256,0
+Bank Account,Asset,6952,0
+Vehicle,Asset,442686,0
+Accounts Receivable,Asset,83885,0
+Furniture,Asset,488925,0
+Accounts Receivable,Asset,33552,0
+Cash,Asset,176998,0
+Furniture,Asset,140997,0
+Bank Account,Asset,80306,0
+Accounts Receivable,Asset,452931,0
+Inventory,Asset,187817,0
+Bank Account,Asset,327977,0
+Cash,Asset,311461,0
+Bank Account,Asset,489184,0
+Bank Account,Asset,142610,0
+Furniture,Asset,316944,0
+Furniture,Asset,413904,0
+Furniture,Asset,147896,0
+Bank Account,Asset,181694,0
+Accounts Receivable,Asset,372562,0
+Bank Account,Asset,119290,0
+Accounts Receivable,Asset,190833,0
+Accounts Receivable,Asset,147085,0
+Cash,Asset,169852,0
+Inventory,Asset,454708,0
+Vehicle,Asset,29690,0
+Accounts Receivable,Asset,305580,0
+Accounts Receivable,Asset,224359,0
+Accounts Receivable,Asset,174209,0
+Vehicle,Asset,369745,0
+Bank Account,Asset,483660,0
+Accounts Receivable,Asset,373310,0
+Furniture,Asset,393414,0
+Accounts Receivable,Asset,474033,0
+Vehicle,Asset,28377,0
+Furniture,Asset,57359,0
+Vehicle,Asset,96438,0
+Accounts Receivable,Asset,115518,0
+Bank Account,Asset,437594,0
+Bank Account,Asset,219236,0
+Accounts Receivable,Asset,327195,0
+Cash,Asset,153968,0
+Bank Account,Asset,391592,0
+Vehicle,Asset,27717,0
+Accounts Receivable,Asset,401487,0
+Vehicle,Asset,373864,0
+Bank Account,Asset,355002,0
+Accounts Payable,Liability,0,455437
+Accounts Payable,Liability,0,329124
+TDS Payable,Liability,0,424161
+Bank Loan,Liability,0,368666
+Bank Loan,Liability,0,376481
+TDS Payable,Liability,0,64667
+Bank Loan,Liability,0,318479
+Bank Loan,Liability,0,471104
+Bank Loan,Liability,0,418160
+Accounts Payable,Liability,0,342973
+Accounts Payable,Liability,0,169478
+GST Payable,Liability,0,361217
+Accounts Payable,Liability,0,399985
+Accounts Payable,Liability,0,272012
+GST Payable,Liability,0,31952
+Bank Loan,Liability,0,469026
+GST Payable,Liability,0,469876
+TDS Payable,Liability,0,148538
+Accounts Payable,Liability,0,88443
+Accounts Payable,Liability,0,366150
+Bank Loan,Liability,0,480195
+Bank Loan,Liability,0,174604
+GST Payable,Liability,0,75861
+GST Payable,Liability,0,65192
+Bank Loan,Liability,0,259192
+Accounts Payable,Liability,0,450096
+Accounts Payable,Liability,0,254527
+GST Payable,Liability,0,207720
+TDS Payable,Liability,0,54279
+Accounts Payable,Liability,0,31536
+Bank Loan,Liability,0,124757
+GST Payable,Liability,0,341539
+TDS Payable,Liability,0,154492
+GST Payable,Liability,0,22697
+TDS Payable,Liability,0,390537
+Bank Loan,Liability,0,385233
+GST Payable,Liability,0,339025
+GST Payable,Liability,0,21841
+Bank Loan,Liability,0,293438
+GST Payable,Liability,0,392141
+Accounts Payable,Liability,0,95234
+TDS Payable,Liability,0,324941
+GST Payable,Liability,0,438550
+GST Payable,Liability,0,450663
+TDS Payable,Liability,0,11070
+Accounts Payable,Liability,0,72072
+Accounts Payable,Liability,0,241187
+TDS Payable,Liability,0,95446
+Accounts Payable,Liability,0,465761
+Accounts Payable,Liability,0,253215
+GST Payable,Liability,0,84035
+TDS Payable,Liability,0,158244
+TDS Payable,Liability,0,104705
+GST Payable,Liability,0,96301
+TDS Payable,Liability,0,277095
+GST Payable,Liability,0,429577
+GST Payable,Liability,0,35490
+Bank Loan,Liability,0,343006
+GST Payable,Liability,0,188535
+GST Payable,Liability,0,320580
+TDS Payable,Liability,0,306769
+GST Payable,Liability,0,485667
+Accounts Payable,Liability,0,96656
+Bank Loan,Liability,0,325987
+Accounts Payable,Liability,0,138463
+Accounts Payable,Liability,0,112157
+TDS Payable,Liability,0,339539
+GST Payable,Liability,0,372378
+Accounts Payable,Liability,0,217211
+Accounts Payable,Liability,0,321267
+TDS Payable,Liability,0,69703
+GST Payable,Liability,0,487085
+TDS Payable,Liability,0,112414
+Accounts Payable,Liability,0,409475
+TDS Payable,Liability,0,66465
+GST Payable,Liability,0,312689
+GST Payable,Liability,0,247654
+Bank Loan,Liability,0,221703
+Accounts Payable,Liability,0,80418
+GST Payable,Liability,0,119467
+TDS Payable,Liability,0,68662
+GST Payable,Liability,0,435060
+GST Payable,Liability,0,344228
+TDS Payable,Liability,0,276274
+Bank Loan,Liability,0,72105
+TDS Payable,Liability,0,456627
+GST Payable,Liability,0,28866
+GST Payable,Liability,0,25968
+Bank Loan,Liability,0,418347
+TDS Payable,Liability,0,419100
+Accounts Payable,Liability,0,98496
+GST Payable,Liability,0,363994
+GST Payable,Liability,0,152422
+GST Payable,Liability,0,459625
+Bank Loan,Liability,0,48769
+TDS Payable,Liability,0,315937
+TDS Payable,Liability,0,89882
+GST Payable,Liability,0,111227
+GST Payable,Liability,0,411890
+Bank Loan,Liability,0,172209
+Accounts Payable,Liability,0,468521
+TDS Payable,Liability,0,210421
+Accounts Payable,Liability,0,308014
+Bank Loan,Liability,0,311288
+GST Payable,Liability,0,41890
+Bank Loan,Liability,0,488624
+GST Payable,Liability,0,181211
+TDS Payable,Liability,0,290568
+Accounts Payable,Liability,0,112544
+Bank Loan,Liability,0,126816
+GST Payable,Liability,0,235235
+Bank Loan,Liability,0,326456
+Accounts Payable,Liability,0,211910
+Accounts Payable,Liability,0,417237
+TDS Payable,Liability,0,415030
+Accounts Payable,Liability,0,266847
+Accounts Payable,Liability,0,442385
+GST Payable,Liability,0,199803
+TDS Payable,Liability,0,227569
+TDS Payable,Liability,0,269043
+TDS Payable,Liability,0,336050
+GST Payable,Liability,0,474951
+Bank Loan,Liability,0,120476
+Bank Loan,Liability,0,471339
+Accounts Payable,Liability,0,50129
+TDS Payable,Liability,0,150258
+GST Payable,Liability,0,209761
+Bank Loan,Liability,0,354270
+TDS Payable,Liability,0,378722
+Bank Loan,Liability,0,475393
+GST Payable,Liability,0,142260
+GST Payable,Liability,0,361907
+Bank Loan,Liability,0,458004
+TDS Payable,Liability,0,326416
+Accounts Payable,Liability,0,265722
+GST Payable,Liability,0,374191
+Bank Loan,Liability,0,265254
+Accounts Payable,Liability,0,175327
+Accounts Payable,Liability,0,397524
+TDS Payable,Liability,0,315005
+Accounts Payable,Liability,0,98320
+Accounts Payable,Liability,0,187631
+Bank Loan,Liability,0,155073
+Bank Loan,Liability,0,424007
+Accounts Payable,Liability,0,346308
+GST Payable,Liability,0,218444
+GST Payable,Liability,0,375453
+Accounts Payable,Liability,0,479752
+Accounts Payable,Liability,0,29830
+Bank Loan,Liability,0,431237
+TDS Payable,Liability,0,405482
+TDS Payable,Liability,0,193937
+Bank Loan,Liability,0,344264
+Accounts Payable,Liability,0,31312
+GST Payable,Liability,0,333218
+Accounts Payable,Liability,0,173314
+TDS Payable,Liability,0,177767
+TDS Payable,Liability,0,440745
+TDS Payable,Liability,0,252030
+TDS Payable,Liability,0,430622
+TDS Payable,Liability,0,164603
+Bank Loan,Liability,0,257939
+Accounts Payable,Liability,0,400926
+GST Payable,Liability,0,237784
+Accounts Payable,Liability,0,403843
+GST Payable,Liability,0,468741
+Accounts Payable,Liability,0,324607
+Bank Loan,Liability,0,253428
+TDS Payable,Liability,0,351103
+Bank Loan,Liability,0,207042
+GST Payable,Liability,0,349340
+Accounts Payable,Liability,0,13445
+Bank Loan,Liability,0,433940
+Accounts Payable,Liability,0,367286
+Accounts Payable,Liability,0,457737
+Accounts Payable,Liability,0,145700
+Accounts Payable,Liability,0,487836
+Accounts Payable,Liability,0,218611
+Accounts Payable,Liability,0,369696
+TDS Payable,Liability,0,395890
+GST Payable,Liability,0,166468
+Bank Loan,Liability,0,360765
+GST Payable,Liability,0,250484
+GST Payable,Liability,0,143186
+Accounts Payable,Liability,0,386457
+GST Payable,Liability,0,463131
+Bank Loan,Liability,0,316721
+Accounts Payable,Liability,0,244367
+TDS Payable,Liability,0,467154
+GST Payable,Liability,0,124124
+Accounts Payable,Liability,0,94352
+Accounts Payable,Liability,0,43991
+GST Payable,Liability,0,89668
+TDS Payable,Liability,0,391971
+TDS Payable,Liability,0,372333
+Bank Loan,Liability,0,62302
+Bank Loan,Liability,0,32794
+Bank Loan,Liability,0,9416
+Bank Loan,Liability,0,163252
+GST Payable,Liability,0,146246
+TDS Payable,Liability,0,331154
+Accounts Payable,Liability,0,284648
+TDS Payable,Liability,0,191291
+Bank Loan,Liability,0,321058
+TDS Payable,Liability,0,473792
+GST Payable,Liability,0,460808
+GST Payable,Liability,0,218262
+Bank Loan,Liability,0,460666
+Bank Loan,Liability,0,73642
+GST Payable,Liability,0,18123
+TDS Payable,Liability,0,444604
+Accounts Payable,Liability,0,98854
+Bank Loan,Liability,0,239635
+Accounts Payable,Liability,0,437059
+Bank Loan,Liability,0,178081
+TDS Payable,Liability,0,109429
+TDS Payable,Liability,0,338705
+GST Payable,Liability,0,459726
+Bank Loan,Liability,0,118792
+Accounts Payable,Liability,0,313085
+GST Payable,Liability,0,388005
+Accounts Payable,Liability,0,463479
+GST Payable,Liability,0,207796
+TDS Payable,Liability,0,206072
+GST Payable,Liability,0,154272
+GST Payable,Liability,0,339097
+Accounts Payable,Liability,0,358685
+Accounts Payable,Liability,0,75356
+TDS Payable,Liability,0,104546
+Bank Loan,Liability,0,45780
+GST Payable,Liability,0,144470
+Accounts Payable,Liability,0,197971
+GST Payable,Liability,0,24660
+Bank Loan,Liability,0,23185
+Accounts Payable,Liability,0,91703
+Bank Loan,Liability,0,271639
+TDS Payable,Liability,0,235892
+Accounts Payable,Liability,0,134265
+TDS Payable,Liability,0,57049
+Accounts Payable,Liability,0,166102
+Accounts Payable,Liability,0,412259
+Accounts Payable,Liability,0,245545
+Accounts Payable,Liability,0,342160
+GST Payable,Liability,0,321965
+TDS Payable,Liability,0,92280
+Accounts Payable,Liability,0,321471
+GST Payable,Liability,0,233106
+TDS Payable,Liability,0,449882
+Bank Loan,Liability,0,178432
+GST Payable,Liability,0,426846
+Accounts Payable,Liability,0,181681
+GST Payable,Liability,0,155307
+Bank Loan,Liability,0,62761
+Bank Loan,Liability,0,240711
+GST Payable,Liability,0,135690
+TDS Payable,Liability,0,296683
+Accounts Payable,Liability,0,305451
+Bank Loan,Liability,0,480557
+TDS Payable,Liability,0,24374
+GST Payable,Liability,0,40905
+Accounts Payable,Liability,0,7690
+GST Payable,Liability,0,344009
+GST Payable,Liability,0,487978
+GST Payable,Liability,0,123642
+TDS Payable,Liability,0,28529
+GST Payable,Liability,0,143178
+GST Payable,Liability,0,441950
+GST Payable,Liability,0,49456
+Accounts Payable,Liability,0,330380
+TDS Payable,Liability,0,336709
+Accounts Payable,Liability,0,224726
+GST Payable,Liability,0,378326
+Accounts Payable,Liability,0,328189
+Accounts Payable,Liability,0,321919
+GST Payable,Liability,0,84570
+TDS Payable,Liability,0,198347
+Accounts Payable,Liability,0,206484
+TDS Payable,Liability,0,42262
+Accounts Payable,Liability,0,182970
+Bank Loan,Liability,0,411131
+GST Payable,Liability,0,119858
+TDS Payable,Liability,0,241646
+Accounts Payable,Liability,0,25760
+GST Payable,Liability,0,478817
+GST Payable,Liability,0,387353
+TDS Payable,Liability,0,314217
+Accounts Payable,Liability,0,447991
+GST Payable,Liability,0,14102
+Accounts Payable,Liability,0,89963
+GST Payable,Liability,0,361713
+GST Payable,Liability,0,90949
+Bank Loan,Liability,0,48731
+Bank Loan,Liability,0,274966
+Accounts Payable,Liability,0,422659
+Bank Loan,Liability,0,446652
+Bank Loan,Liability,0,373621
+Accounts Payable,Liability,0,20515
+GST Payable,Liability,0,222373
+TDS Payable,Liability,0,280846
+TDS Payable,Liability,0,465935
+TDS Payable,Liability,0,496526
+TDS Payable,Liability,0,208229
+GST Payable,Liability,0,88326
+Bank Loan,Liability,0,228805
+GST Payable,Liability,0,440185
+TDS Payable,Liability,0,165430
+TDS Payable,Liability,0,200617
+GST Payable,Liability,0,320603
+GST Payable,Liability,0,388491
+Accounts Payable,Liability,0,119811
+TDS Payable,Liability,0,325910
+TDS Payable,Liability,0,38309
+GST Payable,Liability,0,164774
+TDS Payable,Liability,0,141807
+Bank Loan,Liability,0,189250
+GST Payable,Liability,0,150257
+TDS Payable,Liability,0,228717
+GST Payable,Liability,0,53871
+GST Payable,Liability,0,370907
+Bank Loan,Liability,0,272548
+Accounts Payable,Liability,0,149729
+GST Payable,Liability,0,458053
+GST Payable,Liability,0,170490
+TDS Payable,Liability,0,408192
+GST Payable,Liability,0,20638
+Accounts Payable,Liability,0,286795
+Accounts Payable,Liability,0,295623
+GST Payable,Liability,0,371938
+Bank Loan,Liability,0,96991
+Accounts Payable,Liability,0,98369
+Accounts Payable,Liability,0,303186
+GST Payable,Liability,0,450697
+TDS Payable,Liability,0,169922
+Accounts Payable,Liability,0,96755
+TDS Payable,Liability,0,478465
+Accounts Payable,Liability,0,362202
+Accounts Payable,Liability,0,315516
+GST Payable,Liability,0,305421
+TDS Payable,Liability,0,225735
+TDS Payable,Liability,0,138437
+Accounts Payable,Liability,0,268941
+GST Payable,Liability,0,430377
+TDS Payable,Liability,0,128263
+Bank Loan,Liability,0,110947
+TDS Payable,Liability,0,349685
+Accounts Payable,Liability,0,335649
+Bank Loan,Liability,0,454305
+Bank Loan,Liability,0,499070
+Bank Loan,Liability,0,473215
+GST Payable,Liability,0,31228
+Bank Loan,Liability,0,240192
+TDS Payable,Liability,0,388260
+TDS Payable,Liability,0,499877
+GST Payable,Liability,0,375891
+TDS Payable,Liability,0,198221
+TDS Payable,Liability,0,143872
+Bank Loan,Liability,0,38338
+GST Payable,Liability,0,384959
+GST Payable,Liability,0,334029
+Bank Loan,Liability,0,91685
+TDS Payable,Liability,0,345545
+Bank Loan,Liability,0,290802
+Bank Loan,Liability,0,392500
+GST Payable,Liability,0,260487
+TDS Payable,Liability,0,101390
+GST Payable,Liability,0,22137
+TDS Payable,Liability,0,248992
+Accounts Payable,Liability,0,91121
+GST Payable,Liability,0,304001
+Bank Loan,Liability,0,233668
+TDS Payable,Liability,0,82158
+Accounts Payable,Liability,0,84498
+GST Payable,Liability,0,318044
+TDS Payable,Liability,0,434301
+Bank Loan,Liability,0,269180
+Accounts Payable,Liability,0,81458
+TDS Payable,Liability,0,375913
+GST Payable,Liability,0,335727
+Bank Loan,Liability,0,409004
+Bank Loan,Liability,0,135971
+Accounts Payable,Liability,0,264699
+GST Payable,Liability,0,299947
+Accounts Payable,Liability,0,475425
+Bank Loan,Liability,0,189103
+Accounts Payable,Liability,0,70952
+TDS Payable,Liability,0,348519
+Accounts Payable,Liability,0,479453
+Accounts Payable,Liability,0,10130
+Bank Loan,Liability,0,322146
+Accounts Payable,Liability,0,47630
+Accounts Payable,Liability,0,274566
+Bank Loan,Liability,0,240995
+Bank Loan,Liability,0,275669
+Bank Loan,Liability,0,247129
+TDS Payable,Liability,0,168366
+Accounts Payable,Liability,0,29815
+Accounts Payable,Liability,0,258704
+TDS Payable,Liability,0,122921
+Bank Loan,Liability,0,45817
+GST Payable,Liability,0,150085
+GST Payable,Liability,0,151422
+Bank Loan,Liability,0,323541
+TDS Payable,Liability,0,468817
+TDS Payable,Liability,0,205711
+Accounts Payable,Liability,0,286306
+GST Payable,Liability,0,115582
+TDS Payable,Liability,0,261381
+Accounts Payable,Liability,0,461177
+Accounts Payable,Liability,0,464450
+TDS Payable,Liability,0,352284
+Bank Loan,Liability,0,418073
+GST Payable,Liability,0,180296
+Bank Loan,Liability,0,117173
+GST Payable,Liability,0,331778
+GST Payable,Liability,0,150410
+GST Payable,Liability,0,360976
+Accounts Payable,Liability,0,132771
+GST Payable,Liability,0,367118
+Accounts Payable,Liability,0,102997
+TDS Payable,Liability,0,147474
+Accounts Payable,Liability,0,399275
+GST Payable,Liability,0,217830
+Accounts Payable,Liability,0,29400
+Bank Loan,Liability,0,202021
+GST Payable,Liability,0,48405
+Accounts Payable,Liability,0,53105
+Accounts Payable,Liability,0,444907
+TDS Payable,Liability,0,481603
+GST Payable,Liability,0,393043
+Bank Loan,Liability,0,254066
+TDS Payable,Liability,0,38799
+GST Payable,Liability,0,444179
+Accounts Payable,Liability,0,51274
+GST Payable,Liability,0,19762
+Bank Loan,Liability,0,237856
+TDS Payable,Liability,0,347030
+Bank Loan,Liability,0,314181
+TDS Payable,Liability,0,362475
+Accounts Payable,Liability,0,371665
+TDS Payable,Liability,0,30609
+TDS Payable,Liability,0,182920
+GST Payable,Liability,0,327347
+Bank Loan,Liability,0,86502
+TDS Payable,Liability,0,266076
+Accounts Payable,Liability,0,172383
+GST Payable,Liability,0,50363
+Bank Loan,Liability,0,401146
+TDS Payable,Liability,0,302884
+Bank Loan,Liability,0,118619
+Bank Loan,Liability,0,183054
+GST Payable,Liability,0,277417
+GST Payable,Liability,0,93910
+TDS Payable,Liability,0,393808
+TDS Payable,Liability,0,471690
+Accounts Payable,Liability,0,486943
+Bank Loan,Liability,0,219967
+Accounts Payable,Liability,0,367996
+TDS Payable,Liability,0,343308
+TDS Payable,Liability,0,192994
+GST Payable,Liability,0,435382
+Accounts Payable,Liability,0,325573
+TDS Payable,Liability,0,487987
+Accounts Payable,Liability,0,86041
+GST Payable,Liability,0,323559
+TDS Payable,Liability,0,326650
+Bank Loan,Liability,0,232803
+GST Payable,Liability,0,272076
+TDS Payable,Liability,0,463215
+TDS Payable,Liability,0,385771
+Accounts Payable,Liability,0,219765
+Accounts Payable,Liability,0,377699
+Accounts Payable,Liability,0,270392
+TDS Payable,Liability,0,21455
+GST Payable,Liability,0,157029
+GST Payable,Liability,0,215713
+TDS Payable,Liability,0,389771
+TDS Payable,Liability,0,100578
+TDS Payable,Liability,0,27111
+GST Payable,Liability,0,494652
+Bank Loan,Liability,0,169326
+GST Payable,Liability,0,321782
+GST Payable,Liability,0,330111
+TDS Payable,Liability,0,490422
+Accounts Payable,Liability,0,164410
+GST Payable,Liability,0,483128
+TDS Payable,Liability,0,416904
+Bank Loan,Liability,0,434617
+GST Payable,Liability,0,42276
+Bank Loan,Liability,0,19436
+Accounts Payable,Liability,0,326578
+Bank Loan,Liability,0,414471
+Accounts Payable,Liability,0,38849
+Accounts Payable,Liability,0,73546
+Bank Loan,Liability,0,266294
+GST Payable,Liability,0,68859
+Bank Loan,Liability,0,441960
+GST Payable,Liability,0,211422
+Accounts Payable,Liability,0,307390
+TDS Payable,Liability,0,362004
+TDS Payable,Liability,0,19303
+Bank Loan,Liability,0,218576
+GST Payable,Liability,0,476474
+TDS Payable,Liability,0,478556
+TDS Payable,Liability,0,63151
+Bank Loan,Liability,0,270499
+Bank Loan,Liability,0,145931
+GST Payable,Liability,0,75534
+Bank Loan,Liability,0,239386
+TDS Payable,Liability,0,25641
+TDS Payable,Liability,0,246485
+Bank Loan,Liability,0,367243
+Bank Loan,Liability,0,399910
+Accounts Payable,Liability,0,131484
+Bank Loan,Liability,0,153240
+GST Payable,Liability,0,121392
+TDS Payable,Liability,0,343945
+Accounts Payable,Liability,0,488109
+GST Payable,Liability,0,435697
+GST Payable,Liability,0,410013
+GST Payable,Liability,0,167541
+GST Payable,Liability,0,61859
+Bank Loan,Liability,0,256377
+Accounts Payable,Liability,0,118302
+GST Payable,Liability,0,421582
+GST Payable,Liability,0,272017
+GST Payable,Liability,0,198023
+TDS Payable,Liability,0,215530
+Bank Loan,Liability,0,117342
+GST Payable,Liability,0,79103
+TDS Payable,Liability,0,433913
+Bank Loan,Liability,0,299329
+Accounts Payable,Liability,0,94785
+GST Payable,Liability,0,63977
+TDS Payable,Liability,0,464790
+TDS Payable,Liability,0,398962
+Accounts Payable,Liability,0,460246
+TDS Payable,Liability,0,37049
+Bank Loan,Liability,0,397590
+GST Payable,Liability,0,294064
+Accounts Payable,Liability,0,94462
+GST Payable,Liability,0,369006
+Bank Loan,Liability,0,91190
+TDS Payable,Liability,0,416153
+GST Payable,Liability,0,176277
+Bank Loan,Liability,0,416329
+Bank Loan,Liability,0,481098
+GST Payable,Liability,0,418597
+Accounts Payable,Liability,0,474737
+Bank Loan,Liability,0,329783
+Accounts Payable,Liability,0,317193
+Accounts Payable,Liability,0,464108
+Bank Loan,Liability,0,310120
+Bank Loan,Liability,0,243943
+GST Payable,Liability,0,430972
+Bank Loan,Liability,0,269601
+Bank Loan,Liability,0,333693
+Bank Loan,Liability,0,252292
+Bank Loan,Liability,0,327676
+GST Payable,Liability,0,377777
+Bank Loan,Liability,0,360819
+TDS Payable,Liability,0,396423
+Accounts Payable,Liability,0,90071
+TDS Payable,Liability,0,53210
+Bank Loan,Liability,0,452100
+Bank Loan,Liability,0,302470
+TDS Payable,Liability,0,102902
+TDS Payable,Liability,0,124463
+TDS Payable,Liability,0,71621
+Accounts Payable,Liability,0,309937
+Accounts Payable,Liability,0,389778
+Accounts Payable,Liability,0,36901
+Accounts Payable,Liability,0,91811
+Accounts Payable,Liability,0,353601
+GST Payable,Liability,0,451189
+GST Payable,Liability,0,114878
+GST Payable,Liability,0,148967
+GST Payable,Liability,0,446683
+GST Payable,Liability,0,233682
+Accounts Payable,Liability,0,440404
+Bank Loan,Liability,0,241152
+Bank Loan,Liability,0,383591
+GST Payable,Liability,0,438705
+Accounts Payable,Liability,0,122385
+GST Payable,Liability,0,70256
+Accounts Payable,Liability,0,285542
+Bank Loan,Liability,0,60274
+Bank Loan,Liability,0,30436
+Bank Loan,Liability,0,271149
+TDS Payable,Liability,0,196747
+Accounts Payable,Liability,0,73201
+Bank Loan,Liability,0,145207
+Accounts Payable,Liability,0,59140
+TDS Payable,Liability,0,302980
+Accounts Payable,Liability,0,249458
+GST Payable,Liability,0,103194
+TDS Payable,Liability,0,420398
+Bank Loan,Liability,0,65502
+GST Payable,Liability,0,188400
+Bank Loan,Liability,0,293182
+Bank Loan,Liability,0,161072
+TDS Payable,Liability,0,437676
+GST Payable,Liability,0,79065
+Accounts Payable,Liability,0,236728
+GST Payable,Liability,0,153611
+GST Payable,Liability,0,275507
+Bank Loan,Liability,0,162144
+TDS Payable,Liability,0,49981
+GST Payable,Liability,0,82336
+GST Payable,Liability,0,429711
+Accounts Payable,Liability,0,244158
+Bank Loan,Liability,0,84105
+Bank Loan,Liability,0,27438
+TDS Payable,Liability,0,166383
+Accounts Payable,Liability,0,348414
+Bank Loan,Liability,0,483209
+GST Payable,Liability,0,274478
+Accounts Payable,Liability,0,283381
+Bank Loan,Liability,0,458156
+GST Payable,Liability,0,8859
+GST Payable,Liability,0,451695
+Bank Loan,Liability,0,240575
+Bank Loan,Liability,0,330970
+Bank Loan,Liability,0,65420
+TDS Payable,Liability,0,185264
+Accounts Payable,Liability,0,390098
+Accounts Payable,Liability,0,157959
+GST Payable,Liability,0,203585
+TDS Payable,Liability,0,165032
+TDS Payable,Liability,0,455195
+GST Payable,Liability,0,122311
+Accounts Payable,Liability,0,465407
+Bank Loan,Liability,0,372135
+Bank Loan,Liability,0,162135
+GST Payable,Liability,0,29182
+Accounts Payable,Liability,0,132433
+Accounts Payable,Liability,0,399348
+TDS Payable,Liability,0,423647
+Bank Loan,Liability,0,264320
+Bank Loan,Liability,0,441615
+Accounts Payable,Liability,0,277415
+GST Payable,Liability,0,320060
+TDS Payable,Liability,0,309096
+TDS Payable,Liability,0,469630
+GST Payable,Liability,0,215667
+Bank Loan,Liability,0,29920
+GST Payable,Liability,0,25221
+TDS Payable,Liability,0,386156
+Accounts Payable,Liability,0,395338
+GST Payable,Liability,0,26228
+Accounts Payable,Liability,0,263019
+GST Payable,Liability,0,204820
+Accounts Payable,Liability,0,56449
+TDS Payable,Liability,0,482666
+Bank Loan,Liability,0,405759
+GST Payable,Liability,0,470420
+Accounts Payable,Liability,0,325719
+Bank Loan,Liability,0,151525
+TDS Payable,Liability,0,241428
+Bank Loan,Liability,0,260901
+Bank Loan,Liability,0,96571
+Bank Loan,Liability,0,10767
+Bank Loan,Liability,0,260146
+GST Payable,Liability,0,440241
+Bank Loan,Liability,0,463120
+Bank Loan,Liability,0,263652
+Bank Loan,Liability,0,198196
+TDS Payable,Liability,0,208383
+Bank Loan,Liability,0,193288
+Accounts Payable,Liability,0,449376
+Accounts Payable,Liability,0,178869
+Accounts Payable,Liability,0,274347
+GST Payable,Liability,0,276955
+Accounts Payable,Liability,0,100610
+TDS Payable,Liability,0,163651
+GST Payable,Liability,0,311675
+TDS Payable,Liability,0,376813
+Bank Loan,Liability,0,103392
+TDS Payable,Liability,0,480187
+Accounts Payable,Liability,0,70615
+TDS Payable,Liability,0,359450
+Bank Loan,Liability,0,499753
+Accounts Payable,Liability,0,404868
+Accounts Payable,Liability,0,367180
+TDS Payable,Liability,0,156884
+GST Payable,Liability,0,355710
+GST Payable,Liability,0,328525
+Bank Loan,Liability,0,148776
+GST Payable,Liability,0,424840
+Bank Loan,Liability,0,267990
+Accounts Payable,Liability,0,228769
+TDS Payable,Liability,0,297034
+Bank Loan,Liability,0,204199
+GST Payable,Liability,0,77987
+TDS Payable,Liability,0,174655
+Bank Loan,Liability,0,169955
+TDS Payable,Liability,0,498972
+Accounts Payable,Liability,0,286320
+TDS Payable,Liability,0,483548
+TDS Payable,Liability,0,139332
+TDS Payable,Liability,0,27916
+Bank Loan,Liability,0,187329
+Accounts Payable,Liability,0,140249
+Accounts Payable,Liability,0,486976
+GST Payable,Liability,0,26947
+TDS Payable,Liability,0,152413
+Accounts Payable,Liability,0,151174
+Accounts Payable,Liability,0,375119
+GST Payable,Liability,0,321912
+TDS Payable,Liability,0,255957
+GST Payable,Liability,0,135465
+Bank Loan,Liability,0,37762
+GST Payable,Liability,0,451593
+TDS Payable,Liability,0,267007
+Accounts Payable,Liability,0,179574
+Bank Loan,Liability,0,18653
+GST Payable,Liability,0,496527
+Accounts Payable,Liability,0,401670
+Accounts Payable,Liability,0,34191
+TDS Payable,Liability,0,182497
+TDS Payable,Liability,0,350490
+TDS Payable,Liability,0,360542
+GST Payable,Liability,0,80560
+Accounts Payable,Liability,0,98416
+TDS Payable,Liability,0,499511
+TDS Payable,Liability,0,260983
+Accounts Payable,Liability,0,348966
+GST Payable,Liability,0,462311
+TDS Payable,Liability,0,441618
+Accounts Payable,Liability,0,46497
+Bank Loan,Liability,0,186405
+TDS Payable,Liability,0,449308
+Accounts Payable,Liability,0,341016
+GST Payable,Liability,0,453281
+Accounts Payable,Liability,0,327857
+Accounts Payable,Liability,0,97829
+GST Payable,Liability,0,66276
+Accounts Payable,Liability,0,217588
+Accounts Payable,Liability,0,392743
+TDS Payable,Liability,0,332567
+Accounts Payable,Liability,0,369495
+GST Payable,Liability,0,293718
+GST Payable,Liability,0,417647
+GST Payable,Liability,0,434244
+Bank Loan,Liability,0,305163
+TDS Payable,Liability,0,89955
+GST Payable,Liability,0,354343
+Bank Loan,Liability,0,41577
+Bank Loan,Liability,0,156378
+Accounts Payable,Liability,0,261481
+TDS Payable,Liability,0,364716
+Accounts Payable,Liability,0,392251
+GST Payable,Liability,0,292740
+TDS Payable,Liability,0,385414
+TDS Payable,Liability,0,328100
+Bank Loan,Liability,0,301716
+Accounts Payable,Liability,0,275691
+GST Payable,Liability,0,21134
+TDS Payable,Liability,0,47599
+TDS Payable,Liability,0,187692
+Accounts Payable,Liability,0,105089
+Bank Loan,Liability,0,170026
+Bank Loan,Liability,0,402701
+Bank Loan,Liability,0,117814
+TDS Payable,Liability,0,176323
+Accounts Payable,Liability,0,462114
+Accounts Payable,Liability,0,172155
+Bank Loan,Liability,0,344069
+Accounts Payable,Liability,0,40966
+Bank Loan,Liability,0,208730
+Accounts Payable,Liability,0,147164
+GST Payable,Liability,0,191084
+Accounts Payable,Liability,0,359455
+GST Payable,Liability,0,355454
+GST Payable,Liability,0,31142
+TDS Payable,Liability,0,459882
+Bank Loan,Liability,0,471305
+GST Payable,Liability,0,45979
+Accounts Payable,Liability,0,115255
+TDS Payable,Liability,0,496170
+TDS Payable,Liability,0,312084
+Bank Loan,Liability,0,367990
+TDS Payable,Liability,0,408079
+TDS Payable,Liability,0,350240
+Bank Loan,Liability,0,430476
+GST Payable,Liability,0,70428
+Bank Loan,Liability,0,373882
+Accounts Payable,Liability,0,185800
+TDS Payable,Liability,0,47098
+GST Payable,Liability,0,151690
+Bank Loan,Liability,0,462773
+Bank Loan,Liability,0,410670
+Accounts Payable,Liability,0,406197
+Accounts Payable,Liability,0,493071
+GST Payable,Liability,0,276217
+TDS Payable,Liability,0,383348
+Bank Loan,Liability,0,294951
+Bank Loan,Liability,0,307142
+Bank Loan,Liability,0,118977
+Bank Loan,Liability,0,495809
+Accounts Payable,Liability,0,36689
+Accounts Payable,Liability,0,26703
+GST Payable,Liability,0,232133
+GST Payable,Liability,0,449798
+GST Payable,Liability,0,230698
+GST Payable,Liability,0,337773
+TDS Payable,Liability,0,402200
+TDS Payable,Liability,0,75224
+GST Payable,Liability,0,40231
+Accounts Payable,Liability,0,29994
+Bank Loan,Liability,0,119239
+Bank Loan,Liability,0,61323
+Bank Loan,Liability,0,11398
+Accounts Payable,Liability,0,315768
+Accounts Payable,Liability,0,29557
+Accounts Payable,Liability,0,399700
+TDS Payable,Liability,0,46472
+GST Payable,Liability,0,88016
+TDS Payable,Liability,0,375719
+Bank Loan,Liability,0,207878
+TDS Payable,Liability,0,88040
+TDS Payable,Liability,0,147905
+Accounts Payable,Liability,0,49138
+TDS Payable,Liability,0,295322
+Bank Loan,Liability,0,266056
+Accounts Payable,Liability,0,392168
+GST Payable,Liability,0,57103
+TDS Payable,Liability,0,240676
+GST Payable,Liability,0,263410
+GST Payable,Liability,0,284324
+Accounts Payable,Liability,0,97643
+TDS Payable,Liability,0,296132
+TDS Payable,Liability,0,55943
+GST Payable,Liability,0,482983
+TDS Payable,Liability,0,209901
+Bank Loan,Liability,0,412758
+Accounts Payable,Liability,0,228546
+Bank Loan,Liability,0,140812
+Bank Loan,Liability,0,320775
+Bank Loan,Liability,0,302666
+GST Payable,Liability,0,224019
+GST Payable,Liability,0,182838
+TDS Payable,Liability,0,24355
+Accounts Payable,Liability,0,35722
+TDS Payable,Liability,0,401025
+Accounts Payable,Liability,0,217183
+Accounts Payable,Liability,0,331296
+Accounts Payable,Liability,0,383347
+Bank Loan,Liability,0,43877
+Bank Loan,Liability,0,20926
+Bank Loan,Liability,0,387218
+TDS Payable,Liability,0,11571
+Accounts Payable,Liability,0,194947
+GST Payable,Liability,0,321713
+TDS Payable,Liability,0,153256
+Bank Loan,Liability,0,14335
+Bank Loan,Liability,0,72356
+Accounts Payable,Liability,0,80419
+TDS Payable,Liability,0,309739
+Accounts Payable,Liability,0,229422
+GST Payable,Liability,0,430298
+Bank Loan,Liability,0,243633
+GST Payable,Liability,0,321742
+TDS Payable,Liability,0,188505
+Bank Loan,Liability,0,132478
+GST Payable,Liability,0,478684
+GST Payable,Liability,0,16195
+GST Payable,Liability,0,332746
+GST Payable,Liability,0,183978
+TDS Payable,Liability,0,311372
+GST Payable,Liability,0,382805
+Bank Loan,Liability,0,151751
+Accounts Payable,Liability,0,342554
+Accounts Payable,Liability,0,240264
+Accounts Payable,Liability,0,335669
+Accounts Payable,Liability,0,351703
+GST Payable,Liability,0,227949
+Accounts Payable,Liability,0,39790
+Accounts Payable,Liability,0,263754
+Accounts Payable,Liability,0,440455
+TDS Payable,Liability,0,214170
+GST Payable,Liability,0,424885
+Accounts Payable,Liability,0,385509
+TDS Payable,Liability,0,321560
+TDS Payable,Liability,0,91328
+Accounts Payable,Liability,0,97986
+GST Payable,Liability,0,412097
+Bank Loan,Liability,0,236927
+Bank Loan,Liability,0,350246
+TDS Payable,Liability,0,355183
+TDS Payable,Liability,0,21192
+TDS Payable,Liability,0,212314
+Accounts Payable,Liability,0,175102
+TDS Payable,Liability,0,481955
+GST Payable,Liability,0,112159
+Bank Loan,Liability,0,201242
+Bank Loan,Liability,0,476599
+TDS Payable,Liability,0,360190
+GST Payable,Liability,0,133509
+GST Payable,Liability,0,100822
+TDS Payable,Liability,0,438799
+GST Payable,Liability,0,150942
+Bank Loan,Liability,0,174330
+Bank Loan,Liability,0,198623
+Accounts Payable,Liability,0,453105
+Accounts Payable,Liability,0,320147
+GST Payable,Liability,0,416998
+GST Payable,Liability,0,104589
+GST Payable,Liability,0,86838
+Accounts Payable,Liability,0,363143
+GST Payable,Liability,0,467187
+Bank Loan,Liability,0,250108
+Bank Loan,Liability,0,233097
+GST Payable,Liability,0,389958
+TDS Payable,Liability,0,294002
+Bank Loan,Liability,0,97516
+Bank Loan,Liability,0,23464
+GST Payable,Liability,0,250913
+Accounts Payable,Liability,0,184393
+Accounts Payable,Liability,0,392736
+Accounts Payable,Liability,0,189998
+GST Payable,Liability,0,15210
+Bank Loan,Liability,0,127006
+Accounts Payable,Liability,0,322895
+TDS Payable,Liability,0,316890
+GST Payable,Liability,0,165467
+TDS Payable,Liability,0,447405
+Bank Loan,Liability,0,99597
+GST Payable,Liability,0,389490
+Accounts Payable,Liability,0,184243
+GST Payable,Liability,0,237902
+Bank Loan,Liability,0,431840
+TDS Payable,Liability,0,374969
+Bank Loan,Liability,0,460138
+TDS Payable,Liability,0,73348
+Accounts Payable,Liability,0,178038
+Accounts Payable,Liability,0,147285
+GST Payable,Liability,0,361963
+Accounts Payable,Liability,0,161053
+Accounts Payable,Liability,0,123384
+TDS Payable,Liability,0,462222
+TDS Payable,Liability,0,362348
+Bank Loan,Liability,0,451980
+TDS Payable,Liability,0,320904
+TDS Payable,Liability,0,212388
+GST Payable,Liability,0,173100
+Accounts Payable,Liability,0,416526
+GST Payable,Liability,0,152463
+GST Payable,Liability,0,25639
+GST Payable,Liability,0,273257
+Bank Loan,Liability,0,81957
+Accounts Payable,Liability,0,472154
+GST Payable,Liability,0,253132
+TDS Payable,Liability,0,311052
+Bank Loan,Liability,0,373662
+TDS Payable,Liability,0,254678
+TDS Payable,Liability,0,98821
+Bank Loan,Liability,0,153504
+Accounts Payable,Liability,0,266773
+Accounts Payable,Liability,0,112307
+Accounts Payable,Liability,0,474988
+GST Payable,Liability,0,46007
+TDS Payable,Liability,0,270042
+Bank Loan,Liability,0,310805
+Accounts Payable,Liability,0,147175
+Bank Loan,Liability,0,343120
+GST Payable,Liability,0,20250
+GST Payable,Liability,0,65518
+Accounts Payable,Liability,0,291844
+Bank Loan,Liability,0,188766
+GST Payable,Liability,0,207341
+Accounts Payable,Liability,0,453369
+Bank Loan,Liability,0,209775
+Accounts Payable,Liability,0,144689
+Accounts Payable,Liability,0,289148
+Bank Loan,Liability,0,260032
+TDS Payable,Liability,0,479921
+GST Payable,Liability,0,428357
+GST Payable,Liability,0,441276
+Accounts Payable,Liability,0,447040
+GST Payable,Liability,0,93091
+TDS Payable,Liability,0,12444
+Accounts Payable,Liability,0,209145
+Accounts Payable,Liability,0,60295
+Accounts Payable,Liability,0,314935
+TDS Payable,Liability,0,199746
+TDS Payable,Liability,0,459205
+Bank Loan,Liability,0,110366
+Bank Loan,Liability,0,123508
+TDS Payable,Liability,0,373615
+TDS Payable,Liability,0,65277
+TDS Payable,Liability,0,311776
+Bank Loan,Liability,0,338550
+Bank Loan,Liability,0,290764
+GST Payable,Liability,0,344802
+TDS Payable,Liability,0,280317
+Bank Loan,Liability,0,292461
+Bank Loan,Liability,0,312256
+TDS Payable,Liability,0,446929
+TDS Payable,Liability,0,320032
+TDS Payable,Liability,0,466104
+Interest Income,Income,0,912892
+Consulting Income,Income,0,97621
+Consulting Income,Income,0,407963
+Interest Income,Income,0,909792
+Service Revenue,Income,0,532467
+Service Revenue,Income,0,404437
+Service Revenue,Income,0,353491
+Sales Revenue,Income,0,200120
+Service Revenue,Income,0,410147
+Interest Income,Income,0,481108
+Interest Income,Income,0,411103
+Sales Revenue,Income,0,280239
+Sales Revenue,Income,0,377538
+Consulting Income,Income,0,699230
+Service Revenue,Income,0,345103
+Service Revenue,Income,0,101315
+Consulting Income,Income,0,352198
+Interest Income,Income,0,944013
+Consulting Income,Income,0,642143
+Interest Income,Income,0,261418
+Service Revenue,Income,0,893576
+Consulting Income,Income,0,448553
+Sales Revenue,Income,0,46679
+Sales Revenue,Income,0,371828
+Sales Revenue,Income,0,433806
+Sales Revenue,Income,0,885533
+Service Revenue,Income,0,125004
+Sales Revenue,Income,0,303115
+Service Revenue,Income,0,792183
+Service Revenue,Income,0,292750
+Interest Income,Income,0,334566
+Sales Revenue,Income,0,659304
+Service Revenue,Income,0,741509
+Consulting Income,Income,0,193892
+Sales Revenue,Income,0,948031
+Service Revenue,Income,0,825565
+Sales Revenue,Income,0,965664
+Consulting Income,Income,0,559599
+Service Revenue,Income,0,476307
+Service Revenue,Income,0,184312
+Interest Income,Income,0,464347
+Sales Revenue,Income,0,130817
+Sales Revenue,Income,0,616180
+Sales Revenue,Income,0,20378
+Interest Income,Income,0,789472
+Consulting Income,Income,0,630590
+Interest Income,Income,0,566530
+Interest Income,Income,0,642040
+Interest Income,Income,0,218194
+Interest Income,Income,0,495019
+Consulting Income,Income,0,82778
+Interest Income,Income,0,863097
+Consulting Income,Income,0,213213
+Consulting Income,Income,0,726589
+Consulting Income,Income,0,447228
+Interest Income,Income,0,782840
+Sales Revenue,Income,0,302316
+Consulting Income,Income,0,70177
+Sales Revenue,Income,0,872365
+Consulting Income,Income,0,387404
+Sales Revenue,Income,0,671698
+Sales Revenue,Income,0,661310
+Service Revenue,Income,0,717422
+Consulting Income,Income,0,574051
+Sales Revenue,Income,0,270942
+Sales Revenue,Income,0,558674
+Consulting Income,Income,0,326944
+Consulting Income,Income,0,66706
+Consulting Income,Income,0,330252
+Consulting Income,Income,0,375495
+Sales Revenue,Income,0,766510
+Service Revenue,Income,0,670094
+Consulting Income,Income,0,193627
+Interest Income,Income,0,756104
+Consulting Income,Income,0,818722
+Sales Revenue,Income,0,716608
+Sales Revenue,Income,0,72845
+Service Revenue,Income,0,582718
+Consulting Income,Income,0,369010
+Interest Income,Income,0,234797
+Consulting Income,Income,0,197684
+Interest Income,Income,0,690650
+Service Revenue,Income,0,422758
+Interest Income,Income,0,659973
+Consulting Income,Income,0,714307
+Service Revenue,Income,0,839417
+Consulting Income,Income,0,611230
+Interest Income,Income,0,487028
+Interest Income,Income,0,271420
+Sales Revenue,Income,0,411146
+Consulting Income,Income,0,441966
+Sales Revenue,Income,0,192574
+Service Revenue,Income,0,433447
+Service Revenue,Income,0,155989
+Service Revenue,Income,0,233808
+Sales Revenue,Income,0,367628
+Consulting Income,Income,0,405767
+Consulting Income,Income,0,490185
+Service Revenue,Income,0,453570
+Sales Revenue,Income,0,838793
+Interest Income,Income,0,451391
+Sales Revenue,Income,0,15454
+Sales Revenue,Income,0,239022
+Service Revenue,Income,0,895311
+Sales Revenue,Income,0,845457
+Interest Income,Income,0,755706
+Sales Revenue,Income,0,98903
+Service Revenue,Income,0,485598
+Interest Income,Income,0,366408
+Consulting Income,Income,0,850523
+Service Revenue,Income,0,598173
+Sales Revenue,Income,0,293069
+Interest Income,Income,0,30036
+Sales Revenue,Income,0,786290
+Sales Revenue,Income,0,148103
+Consulting Income,Income,0,345455
+Sales Revenue,Income,0,642885
+Service Revenue,Income,0,607516
+Consulting Income,Income,0,157148
+Interest Income,Income,0,992626
+Sales Revenue,Income,0,385300
+Service Revenue,Income,0,471207
+Sales Revenue,Income,0,44010
+Interest Income,Income,0,377058
+Sales Revenue,Income,0,105201
+Sales Revenue,Income,0,251532
+Interest Income,Income,0,952681
+Sales Revenue,Income,0,704728
+Sales Revenue,Income,0,854378
+Interest Income,Income,0,982194
+Interest Income,Income,0,439178
+Service Revenue,Income,0,799301
+Sales Revenue,Income,0,73726
+Sales Revenue,Income,0,781479
+Interest Income,Income,0,697161
+Sales Revenue,Income,0,746837
+Consulting Income,Income,0,230742
+Service Revenue,Income,0,161338
+Interest Income,Income,0,570468
+Interest Income,Income,0,443755
+Sales Revenue,Income,0,358614
+Service Revenue,Income,0,961349
+Sales Revenue,Income,0,153511
+Sales Revenue,Income,0,96958
+Consulting Income,Income,0,688359
+Sales Revenue,Income,0,440251
+Interest Income,Income,0,621348
+Interest Income,Income,0,990819
+Interest Income,Income,0,944014
+Service Revenue,Income,0,44057
+Interest Income,Income,0,27295
+Service Revenue,Income,0,843007
+Service Revenue,Income,0,269202
+Consulting Income,Income,0,831440
+Service Revenue,Income,0,995864
+Sales Revenue,Income,0,521449
+Service Revenue,Income,0,56433
+Consulting Income,Income,0,218045
+Sales Revenue,Income,0,115436
+Interest Income,Income,0,227927
+Interest Income,Income,0,347329
+Service Revenue,Income,0,994254
+Service Revenue,Income,0,646516
+Interest Income,Income,0,36796
+Sales Revenue,Income,0,256780
+Service Revenue,Income,0,437580
+Consulting Income,Income,0,425082
+Sales Revenue,Income,0,601520
+Sales Revenue,Income,0,253076
+Consulting Income,Income,0,907545
+Interest Income,Income,0,121605
+Consulting Income,Income,0,582437
+Interest Income,Income,0,271425
+Service Revenue,Income,0,254641
+Consulting Income,Income,0,594793
+Interest Income,Income,0,788234
+Consulting Income,Income,0,271106
+Sales Revenue,Income,0,921403
+Service Revenue,Income,0,432637
+Consulting Income,Income,0,939661
+Consulting Income,Income,0,524694
+Service Revenue,Income,0,196747
+Sales Revenue,Income,0,889842
+Service Revenue,Income,0,371151
+Consulting Income,Income,0,479885
+Consulting Income,Income,0,149131
+Interest Income,Income,0,51304
+Service Revenue,Income,0,871769
+Service Revenue,Income,0,738184
+Consulting Income,Income,0,194970
+Service Revenue,Income,0,814680
+Service Revenue,Income,0,395240
+Consulting Income,Income,0,959676
+Interest Income,Income,0,634866
+Service Revenue,Income,0,730466
+Sales Revenue,Income,0,425702
+Sales Revenue,Income,0,889348
+Consulting Income,Income,0,740891
+Interest Income,Income,0,391955
+Interest Income,Income,0,752494
+Sales Revenue,Income,0,620813
+Interest Income,Income,0,177286
+Service Revenue,Income,0,467081
+Interest Income,Income,0,445269
+Service Revenue,Income,0,163426
+Sales Revenue,Income,0,492227
+Interest Income,Income,0,564924
+Service Revenue,Income,0,58429
+Consulting Income,Income,0,236605
+Interest Income,Income,0,21022
+Service Revenue,Income,0,667434
+Consulting Income,Income,0,187540
+Interest Income,Income,0,411349
+Sales Revenue,Income,0,529222
+Sales Revenue,Income,0,239392
+Interest Income,Income,0,391224
+Service Revenue,Income,0,379034
+Consulting Income,Income,0,753414
+Consulting Income,Income,0,251255
+Consulting Income,Income,0,204998
+Interest Income,Income,0,403380
+Interest Income,Income,0,685428
+Interest Income,Income,0,765786
+Sales Revenue,Income,0,971204
+Consulting Income,Income,0,888324
+Consulting Income,Income,0,974911
+Interest Income,Income,0,48715
+Interest Income,Income,0,30477
+Sales Revenue,Income,0,914398
+Consulting Income,Income,0,436437
+Service Revenue,Income,0,675805
+Sales Revenue,Income,0,518659
+Consulting Income,Income,0,906379
+Sales Revenue,Income,0,919218
+Interest Income,Income,0,860482
+Service Revenue,Income,0,243322
+Service Revenue,Income,0,324006
+Sales Revenue,Income,0,427483
+Interest Income,Income,0,875037
+Sales Revenue,Income,0,642076
+Service Revenue,Income,0,207650
+Service Revenue,Income,0,931555
+Sales Revenue,Income,0,72857
+Consulting Income,Income,0,520428
+Consulting Income,Income,0,631211
+Sales Revenue,Income,0,145594
+Service Revenue,Income,0,758331
+Service Revenue,Income,0,266630
+Interest Income,Income,0,12332
+Sales Revenue,Income,0,207981
+Sales Revenue,Income,0,656676
+Consulting Income,Income,0,947645
+Sales Revenue,Income,0,288144
+Service Revenue,Income,0,369917
+Sales Revenue,Income,0,199134
+Interest Income,Income,0,117916
+Sales Revenue,Income,0,361140
+Interest Income,Income,0,474106
+Interest Income,Income,0,957661
+Interest Income,Income,0,24276
+Sales Revenue,Income,0,835720
+Consulting Income,Income,0,430785
+Consulting Income,Income,0,492434
+Sales Revenue,Income,0,190974
+Interest Income,Income,0,108430
+Sales Revenue,Income,0,748339
+Interest Income,Income,0,483141
+Consulting Income,Income,0,26366
+Consulting Income,Income,0,655844
+Sales Revenue,Income,0,923418
+Consulting Income,Income,0,411635
+Service Revenue,Income,0,396639
+Interest Income,Income,0,665835
+Interest Income,Income,0,534866
+Service Revenue,Income,0,87683
+Interest Income,Income,0,861823
+Service Revenue,Income,0,281935
+Service Revenue,Income,0,888024
+Consulting Income,Income,0,637634
+Service Revenue,Income,0,573450
+Interest Income,Income,0,915867
+Service Revenue,Income,0,380514
+Consulting Income,Income,0,322358
+Service Revenue,Income,0,209447
+Consulting Income,Income,0,687020
+Service Revenue,Income,0,575178
+Service Revenue,Income,0,59826
+Interest Income,Income,0,754234
+Sales Revenue,Income,0,742283
+Service Revenue,Income,0,480055
+Service Revenue,Income,0,692305
+Interest Income,Income,0,507331
+Service Revenue,Income,0,692609
+Consulting Income,Income,0,731289
+Sales Revenue,Income,0,771286
+Interest Income,Income,0,705237
+Interest Income,Income,0,923723
+Consulting Income,Income,0,650357
+Sales Revenue,Income,0,656586
+Service Revenue,Income,0,604683
+Sales Revenue,Income,0,239938
+Interest Income,Income,0,915086
+Interest Income,Income,0,804646
+Sales Revenue,Income,0,698440
+Consulting Income,Income,0,821003
+Sales Revenue,Income,0,96878
+Sales Revenue,Income,0,417619
+Service Revenue,Income,0,473741
+Interest Income,Income,0,158094
+Consulting Income,Income,0,21306
+Consulting Income,Income,0,282263
+Interest Income,Income,0,68855
+Sales Revenue,Income,0,210195
+Interest Income,Income,0,930933
+Service Revenue,Income,0,664436
+Interest Income,Income,0,71483
+Consulting Income,Income,0,979069
+Sales Revenue,Income,0,513374
+Sales Revenue,Income,0,107975
+Service Revenue,Income,0,17090
+Consulting Income,Income,0,843317
+Service Revenue,Income,0,678326
+Sales Revenue,Income,0,65438
+Service Revenue,Income,0,251307
+Interest Income,Income,0,135516
+Consulting Income,Income,0,445059
+Sales Revenue,Income,0,257567
+Sales Revenue,Income,0,663011
+Sales Revenue,Income,0,930895
+Interest Income,Income,0,259580
+Interest Income,Income,0,949597
+Sales Revenue,Income,0,818811
+Sales Revenue,Income,0,704117
+Sales Revenue,Income,0,606507
+Service Revenue,Income,0,548272
+Sales Revenue,Income,0,776538
+Sales Revenue,Income,0,518212
+Interest Income,Income,0,104496
+Interest Income,Income,0,445650
+Sales Revenue,Income,0,752862
+Interest Income,Income,0,370508
+Consulting Income,Income,0,655360
+Sales Revenue,Income,0,574744
+Sales Revenue,Income,0,334063
+Consulting Income,Income,0,440068
+Service Revenue,Income,0,230134
+Interest Income,Income,0,485549
+Consulting Income,Income,0,216633
+Service Revenue,Income,0,244152
+Service Revenue,Income,0,578340
+Service Revenue,Income,0,700442
+Consulting Income,Income,0,860228
+Consulting Income,Income,0,370843
+Sales Revenue,Income,0,205871
+Sales Revenue,Income,0,740259
+Consulting Income,Income,0,891499
+Interest Income,Income,0,387554
+Interest Income,Income,0,868562
+Interest Income,Income,0,787335
+Consulting Income,Income,0,505752
+Interest Income,Income,0,951907
+Service Revenue,Income,0,536188
+Sales Revenue,Income,0,165162
+Interest Income,Income,0,859053
+Sales Revenue,Income,0,920273
+Service Revenue,Income,0,496917
+Service Revenue,Income,0,872416
+Sales Revenue,Income,0,597832
+Service Revenue,Income,0,462451
+Consulting Income,Income,0,275644
+Consulting Income,Income,0,52251
+Sales Revenue,Income,0,905492
+Sales Revenue,Income,0,436264
+Sales Revenue,Income,0,559835
+Service Revenue,Income,0,616258
+Interest Income,Income,0,187122
+Service Revenue,Income,0,340772
+Service Revenue,Income,0,272017
+Service Revenue,Income,0,362347
+Interest Income,Income,0,217123
+Interest Income,Income,0,589205
+Sales Revenue,Income,0,70096
+Service Revenue,Income,0,742277
+Sales Revenue,Income,0,149591
+Service Revenue,Income,0,32039
+Sales Revenue,Income,0,877061
+Sales Revenue,Income,0,532935
+Sales Revenue,Income,0,232827
+Service Revenue,Income,0,775199
+Interest Income,Income,0,213977
+Consulting Income,Income,0,901042
+Sales Revenue,Income,0,632723
+Service Revenue,Income,0,82239
+Sales Revenue,Income,0,451065
+Interest Income,Income,0,985777
+Consulting Income,Income,0,898680
+Sales Revenue,Income,0,645011
+Sales Revenue,Income,0,842596
+Consulting Income,Income,0,368553
+Sales Revenue,Income,0,21351
+Interest Income,Income,0,608394
+Interest Income,Income,0,614113
+Service Revenue,Income,0,627837
+Service Revenue,Income,0,133306
+Sales Revenue,Income,0,231552
+Sales Revenue,Income,0,190288
+Consulting Income,Income,0,653968
+Consulting Income,Income,0,466369
+Service Revenue,Income,0,991724
+Consulting Income,Income,0,273031
+Interest Income,Income,0,559667
+Service Revenue,Income,0,356174
+Service Revenue,Income,0,787549
+Service Revenue,Income,0,927428
+Interest Income,Income,0,877082
+Consulting Income,Income,0,55721
+Interest Income,Income,0,371114
+Consulting Income,Income,0,112825
+Service Revenue,Income,0,160308
+Interest Income,Income,0,826862
+Service Revenue,Income,0,246188
+Sales Revenue,Income,0,41638
+Service Revenue,Income,0,966339
+Interest Income,Income,0,737760
+Sales Revenue,Income,0,233393
+Interest Income,Income,0,462207
+Service Revenue,Income,0,933452
+Service Revenue,Income,0,112132
+Service Revenue,Income,0,272292
+Consulting Income,Income,0,897447
+Service Revenue,Income,0,171008
+Consulting Income,Income,0,145296
+Sales Revenue,Income,0,872526
+Interest Income,Income,0,366890
+Service Revenue,Income,0,822447
+Consulting Income,Income,0,840387
+Interest Income,Income,0,515669
+Service Revenue,Income,0,528650
+Interest Income,Income,0,431147
+Consulting Income,Income,0,898161
+Service Revenue,Income,0,843181
+Interest Income,Income,0,996955
+Sales Revenue,Income,0,815197
+Service Revenue,Income,0,144548
+Sales Revenue,Income,0,187845
+Service Revenue,Income,0,452045
+Consulting Income,Income,0,796946
+Interest Income,Income,0,422163
+Interest Income,Income,0,637988
+Sales Revenue,Income,0,358632
+Sales Revenue,Income,0,273711
+Consulting Income,Income,0,807675
+Service Revenue,Income,0,678719
+Interest Income,Income,0,773611
+Sales Revenue,Income,0,907685
+Sales Revenue,Income,0,157355
+Sales Revenue,Income,0,506223
+Consulting Income,Income,0,322988
+Service Revenue,Income,0,146100
+Interest Income,Income,0,283613
+Consulting Income,Income,0,24997
+Interest Income,Income,0,616006
+Service Revenue,Income,0,120035
+Consulting Income,Income,0,702770
+Sales Revenue,Income,0,616762
+Interest Income,Income,0,293619
+Interest Income,Income,0,259266
+Interest Income,Income,0,316845
+Consulting Income,Income,0,940409
+Interest Income,Income,0,889966
+Interest Income,Income,0,170085
+Consulting Income,Income,0,899968
+Sales Revenue,Income,0,355599
+Sales Revenue,Income,0,505661
+Service Revenue,Income,0,131942
+Interest Income,Income,0,500661
+Sales Revenue,Income,0,91006
+Sales Revenue,Income,0,435623
+Service Revenue,Income,0,809097
+Service Revenue,Income,0,52068
+Service Revenue,Income,0,610318
+Sales Revenue,Income,0,197398
+Sales Revenue,Income,0,906979
+Service Revenue,Income,0,578829
+Service Revenue,Income,0,848357
+Service Revenue,Income,0,871661
+Consulting Income,Income,0,945113
+Interest Income,Income,0,167980
+Sales Revenue,Income,0,522080
+Interest Income,Income,0,481673
+Interest Income,Income,0,622014
+Interest Income,Income,0,104649
+Interest Income,Income,0,890146
+Consulting Income,Income,0,302069
+Service Revenue,Income,0,357454
+Consulting Income,Income,0,805067
+Interest Income,Income,0,618556
+Interest Income,Income,0,658738
+Service Revenue,Income,0,596504
+Interest Income,Income,0,939205
+Interest Income,Income,0,962513
+Interest Income,Income,0,934970
+Consulting Income,Income,0,799164
+Sales Revenue,Income,0,959565
+Interest Income,Income,0,29312
+Service Revenue,Income,0,302139
+Interest Income,Income,0,638521
+Sales Revenue,Income,0,658880
+Service Revenue,Income,0,860531
+Service Revenue,Income,0,226128
+Sales Revenue,Income,0,506871
+Consulting Income,Income,0,398035
+Consulting Income,Income,0,405057
+Sales Revenue,Income,0,172838
+Service Revenue,Income,0,45264
+Service Revenue,Income,0,680306
+Interest Income,Income,0,538034
+Service Revenue,Income,0,306305
+Interest Income,Income,0,613530
+Sales Revenue,Income,0,477600
+Sales Revenue,Income,0,275089
+Sales Revenue,Income,0,479393
+Consulting Income,Income,0,639720
+Service Revenue,Income,0,669585
+Interest Income,Income,0,696421
+Service Revenue,Income,0,537786
+Sales Revenue,Income,0,517910
+Sales Revenue,Income,0,200215
+Consulting Income,Income,0,617585
+Service Revenue,Income,0,450143
+Sales Revenue,Income,0,551363
+Sales Revenue,Income,0,819601
+Interest Income,Income,0,416480
+Interest Income,Income,0,997396
+Consulting Income,Income,0,981307
+Sales Revenue,Income,0,95740
+Sales Revenue,Income,0,183274
+Interest Income,Income,0,310206
+Interest Income,Income,0,378825
+Consulting Income,Income,0,979881
+Consulting Income,Income,0,375644
+Sales Revenue,Income,0,321774
+Interest Income,Income,0,228134
+Consulting Income,Income,0,60995
+Consulting Income,Income,0,350047
+Service Revenue,Income,0,120655
+Service Revenue,Income,0,529478
+Consulting Income,Income,0,966096
+Interest Income,Income,0,363954
+Service Revenue,Income,0,387169
+Service Revenue,Income,0,649562
+Consulting Income,Income,0,568784
+Sales Revenue,Income,0,473975
+Interest Income,Income,0,699519
+Sales Revenue,Income,0,349879
+Sales Revenue,Income,0,850321
+Interest Income,Income,0,284249
+Sales Revenue,Income,0,126534
+Consulting Income,Income,0,369937
+Service Revenue,Income,0,228423
+Sales Revenue,Income,0,98516
+Consulting Income,Income,0,551947
+Service Revenue,Income,0,24219
+Service Revenue,Income,0,330745
+Interest Income,Income,0,686916
+Consulting Income,Income,0,669590
+Sales Revenue,Income,0,885937
+Interest Income,Income,0,119712
+Sales Revenue,Income,0,206433
+Sales Revenue,Income,0,511961
+Sales Revenue,Income,0,593097
+Consulting Income,Income,0,938170
+Interest Income,Income,0,281927
+Consulting Income,Income,0,300798
+Consulting Income,Income,0,143222
+Service Revenue,Income,0,542219
+Sales Revenue,Income,0,570928
+Service Revenue,Income,0,701212
+Service Revenue,Income,0,69411
+Sales Revenue,Income,0,437343
+Sales Revenue,Income,0,484346
+Sales Revenue,Income,0,477531
+Interest Income,Income,0,238517
+Consulting Income,Income,0,937847
+Interest Income,Income,0,314118
+Sales Revenue,Income,0,795606
+Service Revenue,Income,0,69172
+Interest Income,Income,0,779582
+Service Revenue,Income,0,982336
+Service Revenue,Income,0,255523
+Sales Revenue,Income,0,518277
+Sales Revenue,Income,0,536361
+Sales Revenue,Income,0,621374
+Interest Income,Income,0,404796
+Consulting Income,Income,0,848469
+Interest Income,Income,0,568272
+Sales Revenue,Income,0,974401
+Sales Revenue,Income,0,374904
+Consulting Income,Income,0,729631
+Consulting Income,Income,0,927717
+Interest Income,Income,0,704935
+Sales Revenue,Income,0,901160
+Sales Revenue,Income,0,168180
+Service Revenue,Income,0,149775
+Service Revenue,Income,0,745428
+Sales Revenue,Income,0,186549
+Sales Revenue,Income,0,804956
+Consulting Income,Income,0,163324
+Sales Revenue,Income,0,138805
+Sales Revenue,Income,0,636622
+Service Revenue,Income,0,874578
+Service Revenue,Income,0,191788
+Interest Income,Income,0,693695
+Consulting Income,Income,0,661149
+Sales Revenue,Income,0,669335
+Consulting Income,Income,0,820681
+Consulting Income,Income,0,925939
+Interest Income,Income,0,942314
+Consulting Income,Income,0,917851
+Interest Income,Income,0,550523
+Service Revenue,Income,0,888271
+Consulting Income,Income,0,316501
+Consulting Income,Income,0,260128
+Sales Revenue,Income,0,999992
+Sales Revenue,Income,0,166243
+Sales Revenue,Income,0,590642
+Consulting Income,Income,0,813130
+Service Revenue,Income,0,857617
+Service Revenue,Income,0,259707
+Service Revenue,Income,0,24065
+Sales Revenue,Income,0,948849
+Service Revenue,Income,0,825996
+Consulting Income,Income,0,335941
+Service Revenue,Income,0,469066
+Consulting Income,Income,0,206702
+Service Revenue,Income,0,510896
+Sales Revenue,Income,0,95358
+Consulting Income,Income,0,368690
+Interest Income,Income,0,895377
+Interest Income,Income,0,105559
+Sales Revenue,Income,0,446034
+Service Revenue,Income,0,338832
+Service Revenue,Income,0,259839
+Consulting Income,Income,0,186952
+Consulting Income,Income,0,557070
+Sales Revenue,Income,0,370225
+Interest Income,Income,0,811022
+Interest Income,Income,0,28425
+Interest Income,Income,0,354522
+Consulting Income,Income,0,414828
+Consulting Income,Income,0,372636
+Service Revenue,Income,0,404761
+Service Revenue,Income,0,553658
+Interest Income,Income,0,703193
+Consulting Income,Income,0,955190
+Interest Income,Income,0,244429
+Sales Revenue,Income,0,285015
+Sales Revenue,Income,0,35017
+Interest Income,Income,0,716717
+Sales Revenue,Income,0,378216
+Interest Income,Income,0,619019
+Interest Income,Income,0,915216
+Consulting Income,Income,0,340623
+Interest Income,Income,0,276352
+Interest Income,Income,0,807242
+Sales Revenue,Income,0,326488
+Sales Revenue,Income,0,769926
+Service Revenue,Income,0,786694
+Consulting Income,Income,0,78136
+Consulting Income,Income,0,904007
+Service Revenue,Income,0,597320
+Sales Revenue,Income,0,918193
+Consulting Income,Income,0,320220
+Consulting Income,Income,0,38693
+Interest Income,Income,0,12529
+Interest Income,Income,0,826229
+Sales Revenue,Income,0,458280
+Consulting Income,Income,0,311992
+Interest Income,Income,0,565102
+Consulting Income,Income,0,99865
+Sales Revenue,Income,0,961713
+Service Revenue,Income,0,854875
+Sales Revenue,Income,0,282962
+Interest Income,Income,0,264171
+Sales Revenue,Income,0,675355
+Interest Income,Income,0,379718
+Sales Revenue,Income,0,817879
+Consulting Income,Income,0,253016
+Sales Revenue,Income,0,450621
+Consulting Income,Income,0,153661
+Consulting Income,Income,0,529341
+Sales Revenue,Income,0,992102
+Sales Revenue,Income,0,589898
+Interest Income,Income,0,497568
+Consulting Income,Income,0,858898
+Sales Revenue,Income,0,972054
+Interest Income,Income,0,29261
+Service Revenue,Income,0,109209
+Consulting Income,Income,0,424159
+Sales Revenue,Income,0,723931
+Service Revenue,Income,0,312944
+Sales Revenue,Income,0,443712
+Interest Income,Income,0,467869
+Interest Income,Income,0,819232
+Service Revenue,Income,0,933733
+Service Revenue,Income,0,675730
+Consulting Income,Income,0,188289
+Interest Income,Income,0,822985
+Service Revenue,Income,0,572036
+Sales Revenue,Income,0,177073
+Service Revenue,Income,0,339610
+Service Revenue,Income,0,542595
+Interest Income,Income,0,904764
+Sales Revenue,Income,0,389667
+Consulting Income,Income,0,391048
+Sales Revenue,Income,0,547403
+Sales Revenue,Income,0,131801
+Consulting Income,Income,0,18969
+Sales Revenue,Income,0,464783
+Sales Revenue,Income,0,112842
+Consulting Income,Income,0,595287
+Service Revenue,Income,0,337292
+Sales Revenue,Income,0,785318
+Interest Income,Income,0,927048
+Sales Revenue,Income,0,502837
+Service Revenue,Income,0,300954
+Service Revenue,Income,0,656731
+Sales Revenue,Income,0,535162
+Sales Revenue,Income,0,828938
+Sales Revenue,Income,0,530967
+Consulting Income,Income,0,917636
+Interest Income,Income,0,535924
+Interest Income,Income,0,382271
+Interest Income,Income,0,180164
+Consulting Income,Income,0,612265
+Interest Income,Income,0,648814
+Consulting Income,Income,0,70107
+Sales Revenue,Income,0,438105
+Service Revenue,Income,0,838416
+Consulting Income,Income,0,201182
+Sales Revenue,Income,0,841303
+Sales Revenue,Income,0,960377
+Consulting Income,Income,0,462076
+Consulting Income,Income,0,716043
+Consulting Income,Income,0,881893
+Sales Revenue,Income,0,593930
+Consulting Income,Income,0,603075
+Sales Revenue,Income,0,795709
+Interest Income,Income,0,334512
+Interest Income,Income,0,568065
+Consulting Income,Income,0,825070
+Consulting Income,Income,0,962045
+Sales Revenue,Income,0,341652
+Sales Revenue,Income,0,277981
+Sales Revenue,Income,0,474687
+Interest Income,Income,0,16080
+Interest Income,Income,0,804146
+Consulting Income,Income,0,498227
+Service Revenue,Income,0,11742
+Consulting Income,Income,0,361403
+Sales Revenue,Income,0,421632
+Sales Revenue,Income,0,47475
+Consulting Income,Income,0,406740
+Interest Income,Income,0,861414
+Interest Income,Income,0,66418
+Consulting Income,Income,0,449498
+Interest Income,Income,0,461097
+Interest Income,Income,0,976855
+Service Revenue,Income,0,622581
+Consulting Income,Income,0,344011
+Sales Revenue,Income,0,11713
+Interest Income,Income,0,988422
+Interest Income,Income,0,325502
+Interest Income,Income,0,775263
+Consulting Income,Income,0,489270
+Consulting Income,Income,0,413696
+Consulting Income,Income,0,209773
+Interest Income,Income,0,112662
+Sales Revenue,Income,0,597357
+Interest Income,Income,0,19543
+Interest Income,Income,0,843046
+Service Revenue,Income,0,876730
+Consulting Income,Income,0,762088
+Consulting Income,Income,0,746898
+Sales Revenue,Income,0,575280
+Consulting Income,Income,0,819676
+Service Revenue,Income,0,192246
+Interest Income,Income,0,520640
+Interest Income,Income,0,664117
+Interest Income,Income,0,423084
+Sales Revenue,Income,0,259080
+Service Revenue,Income,0,57174
+Consulting Income,Income,0,674687
+Consulting Income,Income,0,307535
+Interest Income,Income,0,785524
+Service Revenue,Income,0,943077
+Sales Revenue,Income,0,396943
+Interest Income,Income,0,438615
+Interest Income,Income,0,709321
+Service Revenue,Income,0,407145
+Sales Revenue,Income,0,972853
+Service Revenue,Income,0,548935
+Consulting Income,Income,0,802806
+Consulting Income,Income,0,275221
+Sales Revenue,Income,0,823059
+Interest Income,Income,0,562057
+Sales Revenue,Income,0,993842
+Service Revenue,Income,0,696651
+Sales Revenue,Income,0,716927
+Sales Revenue,Income,0,792895
+Sales Revenue,Income,0,618296
+Interest Income,Income,0,91882
+Service Revenue,Income,0,74236
+Service Revenue,Income,0,110504
+Sales Revenue,Income,0,320844
+Service Revenue,Income,0,199134
+Sales Revenue,Income,0,782974
+Consulting Income,Income,0,528881
+Interest Income,Income,0,661852
+Consulting Income,Income,0,292355
+Consulting Income,Income,0,965392
+Consulting Income,Income,0,43774
+Service Revenue,Income,0,740189
+Consulting Income,Income,0,69535
+Service Revenue,Income,0,890518
+Consulting Income,Income,0,188434
+Service Revenue,Income,0,712855
+Consulting Income,Income,0,433469
+Service Revenue,Income,0,518343
+Consulting Income,Income,0,979460
+Interest Income,Income,0,419293
+Service Revenue,Income,0,552186
+Interest Income,Income,0,521353
+Consulting Income,Income,0,257354
+Sales Revenue,Income,0,294616
+Consulting Income,Income,0,620913
+Consulting Income,Income,0,439235
+Consulting Income,Income,0,994046
+Consulting Income,Income,0,588396
+Sales Revenue,Income,0,533670
+Service Revenue,Income,0,774868
+Interest Income,Income,0,427998
+Service Revenue,Income,0,679288
+Service Revenue,Income,0,481945
+Service Revenue,Income,0,884865
+Consulting Income,Income,0,388829
+Consulting Income,Income,0,812252
+Sales Revenue,Income,0,887739
+Consulting Income,Income,0,929076
+Service Revenue,Income,0,276993
+Service Revenue,Income,0,291467
+Service Revenue,Income,0,753891
+Interest Income,Income,0,666448
+Service Revenue,Income,0,360700
+Service Revenue,Income,0,764773
+Interest Income,Income,0,476671
+Service Revenue,Income,0,21867
+Service Revenue,Income,0,416097
+Service Revenue,Income,0,97328
+Consulting Income,Income,0,37862
+Sales Revenue,Income,0,301933
+Service Revenue,Income,0,51481
+Consulting Income,Income,0,887729
+Consulting Income,Income,0,837529
+Interest Income,Income,0,53773
+Consulting Income,Income,0,186519
+Interest Income,Income,0,426144
+Consulting Income,Income,0,138421
+Sales Revenue,Income,0,553448
+Consulting Income,Income,0,363384
+Sales Revenue,Income,0,112240
+Interest Income,Income,0,790024
+Interest Income,Income,0,712162
+Consulting Income,Income,0,659103
+Consulting Income,Income,0,689904
+Interest Income,Income,0,818951
+Service Revenue,Income,0,375004
+Interest Income,Income,0,693627
+Consulting Income,Income,0,120348
+Interest Income,Income,0,245338
+Sales Revenue,Income,0,598637
+Interest Income,Income,0,162598
+Sales Revenue,Income,0,588484
+Sales Revenue,Income,0,428608
+Consulting Income,Income,0,486417
+Sales Revenue,Income,0,263047
+Interest Income,Income,0,859896
+Consulting Income,Income,0,266405
+Service Revenue,Income,0,276431
+Service Revenue,Income,0,890740
+Interest Income,Income,0,363914
+Consulting Income,Income,0,346718
+Interest Income,Income,0,823104
+Service Revenue,Income,0,719040
+Sales Revenue,Income,0,198359
+Service Revenue,Income,0,479217
+Service Revenue,Income,0,578735
+Consulting Income,Income,0,768013
+Sales Revenue,Income,0,904675
+Sales Revenue,Income,0,915813
+Service Revenue,Income,0,425466
+Interest Income,Income,0,866975
+Consulting Income,Income,0,455012
+Service Revenue,Income,0,58620
+Sales Revenue,Income,0,469801
+Interest Income,Income,0,509479
+Service Revenue,Income,0,830924
+Consulting Income,Income,0,66357
+Sales Revenue,Income,0,868398
+Interest Income,Income,0,921411
+Consulting Income,Income,0,632583
+Consulting Income,Income,0,520259
+Consulting Income,Income,0,570458
+Sales Revenue,Income,0,715842
+Interest Income,Income,0,954765
+Consulting Income,Income,0,491892
+Service Revenue,Income,0,529616
+Interest Income,Income,0,270228
+Sales Revenue,Income,0,928019
+Consulting Income,Income,0,631100
+Sales Revenue,Income,0,139552
+Service Revenue,Income,0,979424
+Service Revenue,Income,0,454175
+Consulting Income,Income,0,108901
+Consulting Income,Income,0,888612
+Sales Revenue,Income,0,255319
+Service Revenue,Income,0,893066
+Sales Revenue,Income,0,862705
+Service Revenue,Income,0,622901
+Service Revenue,Income,0,189835
+Interest Income,Income,0,708005
+Service Revenue,Income,0,583975
+Sales Revenue,Income,0,908191
+Sales Revenue,Income,0,451124
+Interest Income,Income,0,230279
+Interest Income,Income,0,553804
+Consulting Income,Income,0,938182
+Consulting Income,Income,0,199172
+Consulting Income,Income,0,226168
+Consulting Income,Income,0,908347
+Service Revenue,Income,0,816281
+Service Revenue,Income,0,303138
+Interest Income,Income,0,31346
+Service Revenue,Income,0,922009
+Service Revenue,Income,0,155105
+Interest Income,Income,0,360931
+Consulting Income,Income,0,635870
+Consulting Income,Income,0,505266
+Consulting Income,Income,0,506820
+Consulting Income,Income,0,803469
+Consulting Income,Income,0,149477
+Interest Income,Income,0,189621
+Service Revenue,Income,0,959890
+Consulting Income,Income,0,117226
+Interest Income,Income,0,572040
+Sales Revenue,Income,0,714901
+Consulting Income,Income,0,398754
+Sales Revenue,Income,0,984590
+Consulting Income,Income,0,761112
+Service Revenue,Income,0,110794
+Sales Revenue,Income,0,327845
+Consulting Income,Income,0,28062
+Sales Revenue,Income,0,364240
+Consulting Income,Income,0,700899
+Sales Revenue,Income,0,623157
+Service Revenue,Income,0,853756
+Consulting Income,Income,0,409259
+Consulting Income,Income,0,627209
+Interest Income,Income,0,570356
+Consulting Income,Income,0,641729
+Service Revenue,Income,0,613733
+Service Revenue,Income,0,153449
+Service Revenue,Income,0,359712
+Consulting Income,Income,0,936207
+Interest Income,Income,0,840411
+Consulting Income,Income,0,126955
+Consulting Income,Income,0,348247
+Sales Revenue,Income,0,463114
+Consulting Income,Income,0,113986
+Interest Income,Income,0,373805
+Consulting Income,Income,0,985229
+Service Revenue,Income,0,438734
+Consulting Income,Income,0,890621
+Service Revenue,Income,0,125373
+Consulting Income,Income,0,231311
+Consulting Income,Income,0,223023
+Interest Income,Income,0,484117
+Interest Income,Income,0,803050
+Consulting Income,Income,0,758737
+Consulting Income,Income,0,311632
+Service Revenue,Income,0,797878
+Consulting Income,Income,0,45244
+Consulting Income,Income,0,329516
+Consulting Income,Income,0,606884
+Sales Revenue,Income,0,547282
+Interest Income,Income,0,401623
+Consulting Income,Income,0,84296
+Sales Revenue,Income,0,938536
+Interest Income,Income,0,506960
+Consulting Income,Income,0,584465
+Salary Expense,Expense,9376,0
+Travel Expense,Expense,256656,0
+Rent Expense,Expense,84738,0
+Office Expense,Expense,20413,0
+Travel Expense,Expense,175016,0
+Electricity Expense,Expense,245648,0
+Software Expense,Expense,29098,0
+Travel Expense,Expense,213286,0
+Rent Expense,Expense,28325,0
+Office Expense,Expense,87889,0
+Travel Expense,Expense,228052,0
+Salary Expense,Expense,249376,0
+Software Expense,Expense,226273,0
+Electricity Expense,Expense,137467,0
+Office Expense,Expense,85682,0
+Rent Expense,Expense,174811,0
+Office Expense,Expense,121404,0
+Office Expense,Expense,134406,0
+Salary Expense,Expense,190323,0
+Salary Expense,Expense,237601,0
+Salary Expense,Expense,280686,0
+Rent Expense,Expense,230377,0
+Office Expense,Expense,18269,0
+Salary Expense,Expense,85077,0
+Rent Expense,Expense,158965,0
+Travel Expense,Expense,246091,0
+Software Expense,Expense,295929,0
+Rent Expense,Expense,31659,0
+Salary Expense,Expense,20420,0
+Salary Expense,Expense,28095,0
+Office Expense,Expense,228274,0
+Salary Expense,Expense,190804,0
+Electricity Expense,Expense,103697,0
+Salary Expense,Expense,157349,0
+Electricity Expense,Expense,80234,0
+Software Expense,Expense,271342,0
+Software Expense,Expense,257158,0
+Travel Expense,Expense,269812,0
+Electricity Expense,Expense,139152,0
+Rent Expense,Expense,203497,0
+Rent Expense,Expense,119339,0
+Travel Expense,Expense,157194,0
+Software Expense,Expense,21485,0
+Office Expense,Expense,29597,0
+Rent Expense,Expense,215126,0
+Office Expense,Expense,107094,0
+Office Expense,Expense,33846,0
+Rent Expense,Expense,192889,0
+Office Expense,Expense,163461,0
+Office Expense,Expense,83567,0
+Software Expense,Expense,183553,0
+Office Expense,Expense,275099,0
+Electricity Expense,Expense,217275,0
+Electricity Expense,Expense,116783,0
+Software Expense,Expense,101057,0
+Travel Expense,Expense,145988,0
+Rent Expense,Expense,123951,0
+Electricity Expense,Expense,11415,0
+Travel Expense,Expense,40143,0
+Rent Expense,Expense,3952,0
+Office Expense,Expense,17986,0
+Office Expense,Expense,72066,0
+Salary Expense,Expense,97454,0
+Office Expense,Expense,70223,0
+Software Expense,Expense,36528,0
+Travel Expense,Expense,161567,0
+Software Expense,Expense,33505,0
+Software Expense,Expense,52101,0
+Electricity Expense,Expense,289100,0
+Electricity Expense,Expense,186871,0
+Travel Expense,Expense,20332,0
+Travel Expense,Expense,199673,0
+Electricity Expense,Expense,16043,0
+Office Expense,Expense,142534,0
+Rent Expense,Expense,70261,0
+Salary Expense,Expense,142366,0
+Electricity Expense,Expense,111574,0
+Electricity Expense,Expense,158115,0
+Salary Expense,Expense,197506,0
+Software Expense,Expense,264088,0
+Software Expense,Expense,202860,0
+Office Expense,Expense,86333,0
+Electricity Expense,Expense,184391,0
+Salary Expense,Expense,56715,0
+Office Expense,Expense,63072,0
+Electricity Expense,Expense,50645,0
+Office Expense,Expense,27722,0
+Rent Expense,Expense,242768,0
+Software Expense,Expense,213116,0
+Electricity Expense,Expense,38566,0
+Salary Expense,Expense,214705,0
+Software Expense,Expense,246284,0
+Rent Expense,Expense,292677,0
+Travel Expense,Expense,242868,0
+Office Expense,Expense,287932,0
+Salary Expense,Expense,63084,0
+Rent Expense,Expense,167742,0
+Travel Expense,Expense,222844,0
+Rent Expense,Expense,152312,0
+Rent Expense,Expense,99347,0
+Salary Expense,Expense,160872,0
+Salary Expense,Expense,286780,0
+Office Expense,Expense,219872,0
+Salary Expense,Expense,133035,0
+Rent Expense,Expense,90201,0
+Software Expense,Expense,161298,0
+Salary Expense,Expense,213377,0
+Electricity Expense,Expense,36219,0
+Salary Expense,Expense,293306,0
+Electricity Expense,Expense,137486,0
+Electricity Expense,Expense,189527,0
+Salary Expense,Expense,260355,0
+Software Expense,Expense,25044,0
+Office Expense,Expense,226200,0
+Travel Expense,Expense,150834,0
+Travel Expense,Expense,22690,0
+Salary Expense,Expense,197351,0
+Electricity Expense,Expense,112328,0
+Rent Expense,Expense,72157,0
+Electricity Expense,Expense,80305,0
+Salary Expense,Expense,156618,0
+Electricity Expense,Expense,201206,0
+Travel Expense,Expense,272068,0
+Rent Expense,Expense,80040,0
+Travel Expense,Expense,279147,0
+Office Expense,Expense,22169,0
+Travel Expense,Expense,243466,0
+Office Expense,Expense,247880,0
+Office Expense,Expense,141296,0
+Office Expense,Expense,161160,0
+Electricity Expense,Expense,153397,0
+Electricity Expense,Expense,131992,0
+Rent Expense,Expense,38846,0
+Salary Expense,Expense,143305,0
+Office Expense,Expense,81306,0
+Software Expense,Expense,260109,0
+Electricity Expense,Expense,25032,0
+Electricity Expense,Expense,192818,0
+Software Expense,Expense,215547,0
+Office Expense,Expense,100636,0
+Salary Expense,Expense,93140,0
+Salary Expense,Expense,177098,0
+Software Expense,Expense,111423,0
+Salary Expense,Expense,270562,0
+Salary Expense,Expense,128499,0
+Rent Expense,Expense,224400,0
+Salary Expense,Expense,61909,0
+Rent Expense,Expense,75504,0
+Office Expense,Expense,297739,0
+Travel Expense,Expense,257302,0
+Office Expense,Expense,291614,0
+Rent Expense,Expense,68254,0
+Rent Expense,Expense,166824,0
+Electricity Expense,Expense,169063,0
+Office Expense,Expense,198202,0
+Travel Expense,Expense,148813,0
+Software Expense,Expense,258049,0
+Software Expense,Expense,86751,0
+Salary Expense,Expense,148944,0
+Travel Expense,Expense,88537,0
+Office Expense,Expense,242081,0
+Rent Expense,Expense,295801,0
+Software Expense,Expense,259051,0
+Salary Expense,Expense,196397,0
+Rent Expense,Expense,50570,0
+Electricity Expense,Expense,65694,0
+Office Expense,Expense,68332,0
+Rent Expense,Expense,280319,0
+Rent Expense,Expense,239971,0
+Rent Expense,Expense,216955,0
+Office Expense,Expense,71438,0
+Office Expense,Expense,65615,0
+Software Expense,Expense,131681,0
+Office Expense,Expense,34030,0
+Travel Expense,Expense,161300,0
+Software Expense,Expense,45207,0
+Electricity Expense,Expense,279628,0
+Electricity Expense,Expense,238316,0
+Travel Expense,Expense,124059,0
+Salary Expense,Expense,99130,0
+Travel Expense,Expense,208756,0
+Electricity Expense,Expense,35811,0
+Rent Expense,Expense,107799,0
+Travel Expense,Expense,20051,0
+Electricity Expense,Expense,269956,0
+Rent Expense,Expense,251122,0
+Salary Expense,Expense,227948,0
+Travel Expense,Expense,142272,0
+Software Expense,Expense,164210,0
+Office Expense,Expense,39337,0
+Rent Expense,Expense,242614,0
+Office Expense,Expense,73540,0
+Software Expense,Expense,20964,0
+Salary Expense,Expense,104605,0
+Travel Expense,Expense,86575,0
+Travel Expense,Expense,277859,0
+Salary Expense,Expense,14070,0
+Office Expense,Expense,152131,0
+Salary Expense,Expense,157865,0
+Electricity Expense,Expense,47949,0
+Salary Expense,Expense,253487,0
+Electricity Expense,Expense,159055,0
+Office Expense,Expense,59557,0
+Travel Expense,Expense,157514,0
+Salary Expense,Expense,117957,0
+Software Expense,Expense,83185,0
+Salary Expense,Expense,20220,0
+Office Expense,Expense,249657,0
+Salary Expense,Expense,79607,0
+Office Expense,Expense,207511,0
+Rent Expense,Expense,240982,0
+Rent Expense,Expense,298822,0
+Rent Expense,Expense,190718,0
+Rent Expense,Expense,221743,0
+Electricity Expense,Expense,265633,0
+Salary Expense,Expense,287681,0
+Rent Expense,Expense,197263,0
+Travel Expense,Expense,107664,0
+Office Expense,Expense,271058,0
+Electricity Expense,Expense,64426,0
+Electricity Expense,Expense,129721,0
+Salary Expense,Expense,9603,0
+Software Expense,Expense,64694,0
+Rent Expense,Expense,156682,0
+Electricity Expense,Expense,72408,0
+Software Expense,Expense,85615,0
+Software Expense,Expense,239639,0
+Electricity Expense,Expense,198183,0
+Salary Expense,Expense,125260,0
+Electricity Expense,Expense,94572,0
+Rent Expense,Expense,263556,0
+Salary Expense,Expense,15882,0
+Rent Expense,Expense,5885,0
+Travel Expense,Expense,13273,0
+Rent Expense,Expense,28035,0
+Office Expense,Expense,149262,0
+Software Expense,Expense,60790,0
+Salary Expense,Expense,157498,0
+Rent Expense,Expense,128610,0
+Travel Expense,Expense,21804,0
+Office Expense,Expense,45261,0
+Travel Expense,Expense,45848,0
+Office Expense,Expense,239978,0
+Software Expense,Expense,72558,0
+Salary Expense,Expense,248511,0
+Salary Expense,Expense,196472,0
+Rent Expense,Expense,181347,0
+Salary Expense,Expense,294573,0
+Rent Expense,Expense,66688,0
+Rent Expense,Expense,235715,0
+Rent Expense,Expense,97098,0
+Office Expense,Expense,220421,0
+Salary Expense,Expense,263209,0
+Office Expense,Expense,14163,0
+Electricity Expense,Expense,8883,0
+Electricity Expense,Expense,59002,0
+Electricity Expense,Expense,197661,0
+Rent Expense,Expense,190383,0
+Software Expense,Expense,249710,0
+Software Expense,Expense,207985,0
+Software Expense,Expense,246008,0
+Office Expense,Expense,231582,0
+Travel Expense,Expense,133553,0
+Office Expense,Expense,106562,0
+Software Expense,Expense,222480,0
+Rent Expense,Expense,65711,0
+Software Expense,Expense,51358,0
+Electricity Expense,Expense,50684,0
+Electricity Expense,Expense,103362,0
+Rent Expense,Expense,12010,0
+Electricity Expense,Expense,120334,0
+Travel Expense,Expense,147962,0
+Salary Expense,Expense,85049,0
+Electricity Expense,Expense,201760,0
+Salary Expense,Expense,260562,0
+Office Expense,Expense,136812,0
+Office Expense,Expense,51161,0
+Travel Expense,Expense,291427,0
+Software Expense,Expense,268094,0
+Salary Expense,Expense,250527,0
+Software Expense,Expense,83296,0
+Rent Expense,Expense,265911,0
+Travel Expense,Expense,195099,0
+Software Expense,Expense,246322,0
+Salary Expense,Expense,281847,0
+Office Expense,Expense,159737,0
+Rent Expense,Expense,113162,0
+Rent Expense,Expense,156956,0
+Travel Expense,Expense,203380,0
+Travel Expense,Expense,180754,0
+Office Expense,Expense,259833,0
+Software Expense,Expense,184859,0
+Salary Expense,Expense,17575,0
+Rent Expense,Expense,236950,0
+Electricity Expense,Expense,117999,0
+Electricity Expense,Expense,25353,0
+Office Expense,Expense,258236,0
+Rent Expense,Expense,157371,0
+Travel Expense,Expense,178570,0
+Office Expense,Expense,121840,0
+Office Expense,Expense,43898,0
+Salary Expense,Expense,22419,0
+Salary Expense,Expense,103884,0
+Salary Expense,Expense,216519,0
+Salary Expense,Expense,53134,0
+Software Expense,Expense,243853,0
+Electricity Expense,Expense,127001,0
+Salary Expense,Expense,164950,0
+Office Expense,Expense,2024,0
+Travel Expense,Expense,197104,0
+Office Expense,Expense,217988,0
+Rent Expense,Expense,139128,0
+Rent Expense,Expense,13764,0
+Electricity Expense,Expense,39080,0
+Salary Expense,Expense,28946,0
+Office Expense,Expense,131370,0
+Travel Expense,Expense,291135,0
+Electricity Expense,Expense,166795,0
+Software Expense,Expense,169759,0
+Rent Expense,Expense,295634,0
+Travel Expense,Expense,198202,0
+Office Expense,Expense,90815,0
+Software Expense,Expense,253736,0
+Salary Expense,Expense,29423,0
+Electricity Expense,Expense,138921,0
+Electricity Expense,Expense,98780,0
+Software Expense,Expense,122669,0
+Salary Expense,Expense,115440,0
+Electricity Expense,Expense,295055,0
+Electricity Expense,Expense,88281,0
+Travel Expense,Expense,272567,0
+Salary Expense,Expense,9954,0
+Electricity Expense,Expense,26766,0
+Software Expense,Expense,165160,0
+Salary Expense,Expense,136986,0
+Office Expense,Expense,225433,0
+Rent Expense,Expense,284583,0
+Office Expense,Expense,238848,0
+Electricity Expense,Expense,98694,0
+Software Expense,Expense,83187,0
+Software Expense,Expense,21127,0
+Travel Expense,Expense,102239,0
+Salary Expense,Expense,89216,0
+Salary Expense,Expense,151926,0
+Office Expense,Expense,20766,0
+Electricity Expense,Expense,190675,0
+Rent Expense,Expense,79143,0
+Travel Expense,Expense,287322,0
+Rent Expense,Expense,175018,0
+Rent Expense,Expense,219992,0
+Electricity Expense,Expense,268085,0
+Salary Expense,Expense,157503,0
+Rent Expense,Expense,276781,0
+Salary Expense,Expense,196605,0
+Rent Expense,Expense,279044,0
+Travel Expense,Expense,178442,0
+Salary Expense,Expense,140357,0
+Salary Expense,Expense,237899,0
+Rent Expense,Expense,38430,0
+Software Expense,Expense,197275,0
+Electricity Expense,Expense,80019,0
+Office Expense,Expense,289088,0
+Rent Expense,Expense,62995,0
+Rent Expense,Expense,72037,0
+Rent Expense,Expense,281955,0
+Software Expense,Expense,190764,0
+Software Expense,Expense,184199,0
+Salary Expense,Expense,251916,0
+Software Expense,Expense,109331,0
+Office Expense,Expense,164145,0
+Rent Expense,Expense,120541,0
+Salary Expense,Expense,160641,0
+Electricity Expense,Expense,169975,0
+Office Expense,Expense,30752,0
+Electricity Expense,Expense,267865,0
+Rent Expense,Expense,48292,0
+Office Expense,Expense,35507,0
+Salary Expense,Expense,205689,0
+Office Expense,Expense,118956,0
+Travel Expense,Expense,123900,0
+Salary Expense,Expense,92875,0
+Office Expense,Expense,244153,0
+Travel Expense,Expense,48835,0
+Rent Expense,Expense,284702,0
+Software Expense,Expense,7022,0
+Salary Expense,Expense,107782,0
+Travel Expense,Expense,49726,0
+Electricity Expense,Expense,252509,0
+Office Expense,Expense,111099,0
+Software Expense,Expense,6082,0
+Rent Expense,Expense,299848,0
+Salary Expense,Expense,209905,0
+Electricity Expense,Expense,240196,0
+Software Expense,Expense,134931,0
+Travel Expense,Expense,40231,0
+Software Expense,Expense,159093,0
+Travel Expense,Expense,147004,0
+Electricity Expense,Expense,9875,0
+Office Expense,Expense,82219,0
+Office Expense,Expense,256316,0
+Office Expense,Expense,215037,0
+Salary Expense,Expense,142242,0
+Travel Expense,Expense,51127,0
+Software Expense,Expense,93991,0
+Salary Expense,Expense,116655,0
+Rent Expense,Expense,66957,0
+Salary Expense,Expense,297366,0
+Travel Expense,Expense,91952,0
+Travel Expense,Expense,135518,0
+Office Expense,Expense,72250,0
+Travel Expense,Expense,241126,0
+Electricity Expense,Expense,76152,0
+Travel Expense,Expense,40559,0
+Rent Expense,Expense,209287,0
+Rent Expense,Expense,118965,0
+Office Expense,Expense,188181,0
+Rent Expense,Expense,263470,0
+Salary Expense,Expense,222733,0
+Salary Expense,Expense,186838,0
+Electricity Expense,Expense,220168,0
+Electricity Expense,Expense,44739,0
+Salary Expense,Expense,210056,0
+Travel Expense,Expense,138989,0
+Electricity Expense,Expense,262102,0
+Rent Expense,Expense,62969,0
+Office Expense,Expense,173020,0
+Salary Expense,Expense,133577,0
+Electricity Expense,Expense,253147,0
+Software Expense,Expense,196814,0
+Software Expense,Expense,9072,0
+Office Expense,Expense,235611,0
+Electricity Expense,Expense,159338,0
+Salary Expense,Expense,70975,0
+Electricity Expense,Expense,216417,0
+Office Expense,Expense,18856,0
+Rent Expense,Expense,108696,0
+Electricity Expense,Expense,163085,0
+Travel Expense,Expense,108642,0
+Travel Expense,Expense,81842,0
+Salary Expense,Expense,143503,0
+Rent Expense,Expense,169433,0
+Office Expense,Expense,272746,0
+Electricity Expense,Expense,156799,0
+Software Expense,Expense,243419,0
+Electricity Expense,Expense,70477,0
+Rent Expense,Expense,16600,0
+Office Expense,Expense,199779,0
+Travel Expense,Expense,278083,0
+Office Expense,Expense,295154,0
+Office Expense,Expense,299345,0
+Software Expense,Expense,48474,0
+Salary Expense,Expense,97801,0
+Salary Expense,Expense,184075,0
+Software Expense,Expense,286967,0
+Travel Expense,Expense,162252,0
+Salary Expense,Expense,198162,0
+Salary Expense,Expense,213413,0
+Office Expense,Expense,271230,0
+Salary Expense,Expense,15625,0
+Electricity Expense,Expense,249563,0
+Software Expense,Expense,267963,0
+Salary Expense,Expense,299865,0
+Electricity Expense,Expense,21964,0
+Rent Expense,Expense,60408,0
+Salary Expense,Expense,224603,0
+Office Expense,Expense,36738,0
+Office Expense,Expense,181340,0
+Travel Expense,Expense,218106,0
+Electricity Expense,Expense,7387,0
+Salary Expense,Expense,160213,0
+Rent Expense,Expense,106859,0
+Electricity Expense,Expense,246045,0
+Office Expense,Expense,263038,0
+Office Expense,Expense,21506,0
+Rent Expense,Expense,279278,0
+Office Expense,Expense,161710,0
+Office Expense,Expense,163861,0
+Electricity Expense,Expense,38017,0
+Software Expense,Expense,56891,0
+Software Expense,Expense,290279,0
+Rent Expense,Expense,104312,0
+Software Expense,Expense,175348,0
+Software Expense,Expense,130740,0
+Software Expense,Expense,24797,0
+Electricity Expense,Expense,101438,0
+Software Expense,Expense,169468,0
+Office Expense,Expense,225243,0
+Rent Expense,Expense,102705,0
+Software Expense,Expense,167979,0
+Software Expense,Expense,48164,0
+Salary Expense,Expense,142209,0
+Office Expense,Expense,140563,0
+Software Expense,Expense,80217,0
+Travel Expense,Expense,86929,0
+Salary Expense,Expense,248914,0
+Software Expense,Expense,214376,0
+Office Expense,Expense,232732,0
+Software Expense,Expense,92741,0
+Rent Expense,Expense,273525,0
+Travel Expense,Expense,46934,0
+Salary Expense,Expense,150953,0
+Travel Expense,Expense,146300,0
+Rent Expense,Expense,256453,0
+Office Expense,Expense,153168,0
+Rent Expense,Expense,185685,0
+Electricity Expense,Expense,248303,0
+Travel Expense,Expense,207112,0
+Travel Expense,Expense,152213,0
+Electricity Expense,Expense,203310,0
+Salary Expense,Expense,63853,0
+Electricity Expense,Expense,258315,0
+Rent Expense,Expense,252706,0
+Office Expense,Expense,289569,0
+Office Expense,Expense,43315,0
+Salary Expense,Expense,289892,0
+Office Expense,Expense,138663,0
+Office Expense,Expense,7123,0
+Electricity Expense,Expense,286831,0
+Office Expense,Expense,123625,0
+Rent Expense,Expense,143129,0
+Rent Expense,Expense,189611,0
+Salary Expense,Expense,87706,0
+Rent Expense,Expense,140215,0
+Software Expense,Expense,94430,0
+Office Expense,Expense,269866,0
+Software Expense,Expense,59954,0
+Rent Expense,Expense,155765,0
+Electricity Expense,Expense,233750,0
+Office Expense,Expense,120299,0
+Electricity Expense,Expense,164087,0
+Travel Expense,Expense,57036,0
+Travel Expense,Expense,129124,0
+Electricity Expense,Expense,253516,0
+Office Expense,Expense,248004,0
+Electricity Expense,Expense,95018,0
+Salary Expense,Expense,80570,0
+Rent Expense,Expense,133398,0
+Electricity Expense,Expense,265503,0
+Electricity Expense,Expense,156318,0
+Software Expense,Expense,239069,0
+Rent Expense,Expense,139937,0
+Software Expense,Expense,220715,0
+Software Expense,Expense,172626,0
+Travel Expense,Expense,133481,0
+Electricity Expense,Expense,298580,0
+Travel Expense,Expense,48517,0
+Software Expense,Expense,147930,0
+Software Expense,Expense,239714,0
+Travel Expense,Expense,25747,0
+Rent Expense,Expense,116017,0
+Travel Expense,Expense,43513,0
+Salary Expense,Expense,21830,0
+Software Expense,Expense,204694,0
+Salary Expense,Expense,138793,0
+Rent Expense,Expense,138017,0
+Rent Expense,Expense,208758,0
+Rent Expense,Expense,115907,0
+Travel Expense,Expense,169142,0
+Travel Expense,Expense,45628,0
+Electricity Expense,Expense,94345,0
+Software Expense,Expense,255141,0
+Software Expense,Expense,294735,0
+Office Expense,Expense,150837,0
+Salary Expense,Expense,155323,0
+Rent Expense,Expense,96392,0
+Electricity Expense,Expense,250051,0
+Travel Expense,Expense,128779,0
+Software Expense,Expense,207313,0
+Rent Expense,Expense,187782,0
+Travel Expense,Expense,150853,0
+Salary Expense,Expense,282224,0
+Travel Expense,Expense,71725,0
+Software Expense,Expense,85701,0
+Rent Expense,Expense,139937,0
+Salary Expense,Expense,132239,0
+Office Expense,Expense,283841,0
+Travel Expense,Expense,163534,0
+Electricity Expense,Expense,158439,0
+Travel Expense,Expense,160630,0
+Travel Expense,Expense,288272,0
+Electricity Expense,Expense,74000,0
+Rent Expense,Expense,57657,0
+Salary Expense,Expense,107155,0
+Electricity Expense,Expense,218029,0
+Travel Expense,Expense,148272,0
+Office Expense,Expense,226626,0
+Salary Expense,Expense,31153,0
+Office Expense,Expense,12579,0
+Travel Expense,Expense,57351,0
+Office Expense,Expense,211538,0
+Office Expense,Expense,234239,0
+Software Expense,Expense,101471,0
+Travel Expense,Expense,130687,0
+Rent Expense,Expense,43094,0
+Travel Expense,Expense,49890,0
+Software Expense,Expense,243223,0
+Travel Expense,Expense,280169,0
+Rent Expense,Expense,237429,0
+Rent Expense,Expense,227694,0
+Office Expense,Expense,6759,0
+Travel Expense,Expense,73373,0
+Office Expense,Expense,231298,0
+Office Expense,Expense,12586,0
+Office Expense,Expense,272955,0
+Software Expense,Expense,166951,0
+Office Expense,Expense,140685,0
+Rent Expense,Expense,3252,0
+Electricity Expense,Expense,142064,0
+Electricity Expense,Expense,37016,0
+Rent Expense,Expense,196631,0
+Office Expense,Expense,53740,0
+Electricity Expense,Expense,118061,0
+Travel Expense,Expense,163721,0
+Electricity Expense,Expense,37891,0
+Salary Expense,Expense,92154,0
+Electricity Expense,Expense,156392,0
+Electricity Expense,Expense,171538,0
+Electricity Expense,Expense,183736,0
+Rent Expense,Expense,46350,0
+Software Expense,Expense,226903,0
+Office Expense,Expense,96798,0
+Electricity Expense,Expense,82580,0
+Software Expense,Expense,115838,0
+Travel Expense,Expense,27802,0
+Travel Expense,Expense,175859,0
+Software Expense,Expense,246668,0
+Software Expense,Expense,291981,0
+Electricity Expense,Expense,189555,0
+Office Expense,Expense,133384,0
+Travel Expense,Expense,64012,0
+Software Expense,Expense,255009,0
+Software Expense,Expense,142388,0
+Rent Expense,Expense,146586,0
+Electricity Expense,Expense,239873,0
+Software Expense,Expense,198684,0
+Travel Expense,Expense,258437,0
+Salary Expense,Expense,95158,0
+Travel Expense,Expense,216621,0
+Rent Expense,Expense,278951,0
+Salary Expense,Expense,13455,0
+Software Expense,Expense,287247,0
+Software Expense,Expense,249142,0
+Electricity Expense,Expense,157147,0
+Office Expense,Expense,297868,0
+Software Expense,Expense,53515,0
+Rent Expense,Expense,20820,0
+Office Expense,Expense,10484,0
+Salary Expense,Expense,289900,0
+Electricity Expense,Expense,248820,0
+Travel Expense,Expense,6484,0
+Software Expense,Expense,69950,0
+Office Expense,Expense,31532,0
+Travel Expense,Expense,222791,0
+Salary Expense,Expense,223277,0
+Electricity Expense,Expense,297748,0
+Rent Expense,Expense,85538,0
+Electricity Expense,Expense,25147,0
+Software Expense,Expense,154382,0
+Software Expense,Expense,232646,0
+Office Expense,Expense,207392,0
+Travel Expense,Expense,91787,0
+Travel Expense,Expense,115216,0
+Salary Expense,Expense,43680,0
+Rent Expense,Expense,262265,0
+Travel Expense,Expense,219821,0
+Rent Expense,Expense,211084,0
+Office Expense,Expense,213185,0
+Travel Expense,Expense,188962,0
+Rent Expense,Expense,42219,0
+Salary Expense,Expense,12330,0
+Travel Expense,Expense,101647,0
+Electricity Expense,Expense,204017,0
+Salary Expense,Expense,211688,0
+Travel Expense,Expense,75174,0
+Rent Expense,Expense,250952,0
+Office Expense,Expense,166525,0
+Salary Expense,Expense,191063,0
+Software Expense,Expense,180436,0
+Salary Expense,Expense,87845,0
+Travel Expense,Expense,213398,0
+Rent Expense,Expense,213267,0
+Software Expense,Expense,263155,0
+Electricity Expense,Expense,8098,0
+Electricity Expense,Expense,243380,0
+Travel Expense,Expense,53252,0
+Travel Expense,Expense,180660,0
+Travel Expense,Expense,66152,0
+Rent Expense,Expense,262641,0
+Software Expense,Expense,195953,0
+Salary Expense,Expense,273969,0
+Office Expense,Expense,39837,0
+Travel Expense,Expense,162667,0
+Salary Expense,Expense,187394,0
+Office Expense,Expense,164372,0
+Rent Expense,Expense,43571,0
+Electricity Expense,Expense,181058,0
+Travel Expense,Expense,129842,0
+Rent Expense,Expense,297821,0
+Salary Expense,Expense,99352,0
+Rent Expense,Expense,264001,0
+Travel Expense,Expense,234003,0
+Office Expense,Expense,16438,0
+Rent Expense,Expense,169030,0
+Electricity Expense,Expense,20392,0
+Salary Expense,Expense,8480,0
+Salary Expense,Expense,91272,0
+Office Expense,Expense,94914,0
+Rent Expense,Expense,31701,0
+Software Expense,Expense,157911,0
+Software Expense,Expense,137033,0
+Electricity Expense,Expense,234330,0
+Office Expense,Expense,150272,0
+Salary Expense,Expense,64383,0
+Salary Expense,Expense,165957,0
+Electricity Expense,Expense,62676,0
+Rent Expense,Expense,4631,0
+Salary Expense,Expense,224501,0
+Travel Expense,Expense,44706,0
+Salary Expense,Expense,36653,0
+Office Expense,Expense,9284,0
+Rent Expense,Expense,111640,0
+Travel Expense,Expense,151499,0
+Rent Expense,Expense,257617,0
+Rent Expense,Expense,26106,0
+Office Expense,Expense,58765,0
+Office Expense,Expense,10985,0
+Electricity Expense,Expense,241818,0
+Software Expense,Expense,44318,0
+Salary Expense,Expense,270714,0
+Office Expense,Expense,21880,0
+Rent Expense,Expense,188725,0
+Electricity Expense,Expense,136618,0
+Travel Expense,Expense,247423,0
+Salary Expense,Expense,267475,0
+Travel Expense,Expense,152425,0
+Salary Expense,Expense,103663,0
+Electricity Expense,Expense,33927,0
+Electricity Expense,Expense,205480,0
+Rent Expense,Expense,65005,0
+Rent Expense,Expense,122145,0
+Salary Expense,Expense,54219,0
+Electricity Expense,Expense,215431,0
+Travel Expense,Expense,168517,0
+Rent Expense,Expense,232903,0
+Office Expense,Expense,189442,0
+Office Expense,Expense,133306,0
+Software Expense,Expense,252964,0
+Electricity Expense,Expense,257474,0
+Travel Expense,Expense,111246,0
+Salary Expense,Expense,197594,0
+Software Expense,Expense,108664,0
+Rent Expense,Expense,61583,0
+Salary Expense,Expense,100990,0
+Office Expense,Expense,222223,0
+Salary Expense,Expense,10051,0
+Office Expense,Expense,170048,0
+Electricity Expense,Expense,79382,0
+Software Expense,Expense,271906,0
+Travel Expense,Expense,98125,0
+Electricity Expense,Expense,288753,0
+Salary Expense,Expense,247867,0
+Rent Expense,Expense,210256,0
+Office Expense,Expense,29370,0
+Salary Expense,Expense,111061,0
+Software Expense,Expense,108282,0
+Software Expense,Expense,118875,0
+Electricity Expense,Expense,76494,0
+Office Expense,Expense,211597,0
+Software Expense,Expense,88320,0
+Office Expense,Expense,265622,0
+Office Expense,Expense,137800,0
+Electricity Expense,Expense,244069,0
+Electricity Expense,Expense,194524,0
+Electricity Expense,Expense,10057,0
+Software Expense,Expense,82304,0
+Travel Expense,Expense,231880,0
+Rent Expense,Expense,95065,0
+Rent Expense,Expense,166017,0
+Travel Expense,Expense,194777,0
+Rent Expense,Expense,6343,0
+Salary Expense,Expense,3389,0
+Salary Expense,Expense,142859,0
+Rent Expense,Expense,199476,0
+Software Expense,Expense,119081,0
+Salary Expense,Expense,65716,0
+Rent Expense,Expense,131289,0
+Travel Expense,Expense,35058,0
+Software Expense,Expense,69462,0
+Software Expense,Expense,145004,0
+Salary Expense,Expense,110059,0
+Salary Expense,Expense,137116,0
+Electricity Expense,Expense,220200,0
+Electricity Expense,Expense,114136,0
+Travel Expense,Expense,89645,0
+Travel Expense,Expense,32341,0
+Software Expense,Expense,166502,0
+Software Expense,Expense,30048,0
+Electricity Expense,Expense,116373,0
+Electricity Expense,Expense,98881,0
+Salary Expense,Expense,23559,0
+Salary Expense,Expense,99036,0
+Office Expense,Expense,229159,0
+Software Expense,Expense,248360,0
+Rent Expense,Expense,290986,0
+Electricity Expense,Expense,228884,0
+Electricity Expense,Expense,14491,0
+Office Expense,Expense,243055,0
+Salary Expense,Expense,162996,0
+Travel Expense,Expense,46637,0
+Electricity Expense,Expense,61639,0
+Travel Expense,Expense,153332,0
+Electricity Expense,Expense,2043,0
+Rent Expense,Expense,20496,0
+Rent Expense,Expense,127708,0
+Office Expense,Expense,294744,0
+Electricity Expense,Expense,146158,0
+Salary Expense,Expense,230618,0
+Office Expense,Expense,269495,0
+Office Expense,Expense,220708,0
+Salary Expense,Expense,273187,0
+Travel Expense,Expense,146489,0
+Rent Expense,Expense,163842,0
+Rent Expense,Expense,151140,0
+Rent Expense,Expense,230777,0
+Office Expense,Expense,139528,0
+Office Expense,Expense,158168,0
+Salary Expense,Expense,81981,0
+Rent Expense,Expense,197885,0
+Office Expense,Expense,108121,0
+Travel Expense,Expense,134342,0
+Electricity Expense,Expense,185404,0
+Software Expense,Expense,16297,0
+Salary Expense,Expense,135954,0
+Software Expense,Expense,292725,0
+Electricity Expense,Expense,77544,0
+Office Expense,Expense,206426,0
+Office Expense,Expense,75215,0
+Salary Expense,Expense,30136,0
+Office Expense,Expense,11779,0
+Electricity Expense,Expense,237595,0
+Rent Expense,Expense,276300,0
+Salary Expense,Expense,173361,0
+Software Expense,Expense,45835,0
+Salary Expense,Expense,213406,0
+Travel Expense,Expense,249905,0
+Salary Expense,Expense,151531,0
+Office Expense,Expense,284629,0
+Rent Expense,Expense,100674,0
+Travel Expense,Expense,21254,0
+Salary Expense,Expense,197335,0
+Office Expense,Expense,126189,0
+Electricity Expense,Expense,242851,0
+Office Expense,Expense,1733,0
+Software Expense,Expense,260693,0
+Software Expense,Expense,139901,0
+Travel Expense,Expense,143674,0
+Salary Expense,Expense,270698,0
+Software Expense,Expense,25071,0
+Electricity Expense,Expense,110510,0
+Electricity Expense,Expense,168551,0
+Office Expense,Expense,230487,0
+Software Expense,Expense,151569,0
+Office Expense,Expense,247705,0
+Travel Expense,Expense,15488,0
+Travel Expense,Expense,85461,0
+Office Expense,Expense,134311,0
+Software Expense,Expense,45885,0
+Travel Expense,Expense,174399,0
+Electricity Expense,Expense,107062,0
+Electricity Expense,Expense,285420,0
+Electricity Expense,Expense,26078,0
+Electricity Expense,Expense,26566,0
+Office Expense,Expense,260470,0
+Salary Expense,Expense,257752,0
+Software Expense,Expense,88256,0
+Rent Expense,Expense,38507,0
+Salary Expense,Expense,40061,0
+Travel Expense,Expense,43348,0
+Travel Expense,Expense,37838,0
+Software Expense,Expense,119712,0
+Rent Expense,Expense,71791,0
+Software Expense,Expense,169475,0
+Travel Expense,Expense,228854,0
+Electricity Expense,Expense,59021,0
+Office Expense,Expense,59601,0
+Travel Expense,Expense,1115,0
+Office Expense,Expense,267799,0
+Electricity Expense,Expense,71226,0
+Software Expense,Expense,65202,0
+Travel Expense,Expense,27825,0
+Office Expense,Expense,124134,0
+Electricity Expense,Expense,299587,0
+Salary Expense,Expense,210816,0
+Salary Expense,Expense,261054,0
+Electricity Expense,Expense,297383,0
+Electricity Expense,Expense,51878,0
+Electricity Expense,Expense,47706,0
+Rent Expense,Expense,213918,0
+Office Expense,Expense,272285,0
+Software Expense,Expense,185097,0
+Office Expense,Expense,48914,0
+Rent Expense,Expense,117511,0
+Office Expense,Expense,248404,0
+Office Expense,Expense,154408,0
+Rent Expense,Expense,43920,0
+Travel Expense,Expense,255892,0
+Electricity Expense,Expense,213584,0
+Office Expense,Expense,253772,0
+Travel Expense,Expense,1553,0
+Rent Expense,Expense,242911,0
+Salary Expense,Expense,166624,0
+Rent Expense,Expense,245501,0
+Electricity Expense,Expense,120020,0
+Salary Expense,Expense,105199,0
+Software Expense,Expense,162267,0
+Rent Expense,Expense,118530,0
+Travel Expense,Expense,35432,0
+Rent Expense,Expense,36076,0
+Rent Expense,Expense,194714,0
+Travel Expense,Expense,122990,0
+Salary Expense,Expense,183335,0
+Salary Expense,Expense,266260,0
+Travel Expense,Expense,254820,0
+Rent Expense,Expense,265440,0
+Office Expense,Expense,219733,0
+Travel Expense,Expense,191419,0
+Salary Expense,Expense,178893,0
+Software Expense,Expense,95597,0
+Electricity Expense,Expense,53755,0
+Salary Expense,Expense,257965,0
+Rent Expense,Expense,204257,0
+Office Expense,Expense,78428,0
+Salary Expense,Expense,69998,0
+Software Expense,Expense,153549,0
+Electricity Expense,Expense,119471,0
+Office Expense,Expense,158170,0
+Salary Expense,Expense,86829,0
+Electricity Expense,Expense,299325,0
+Salary Expense,Expense,179114,0
+Travel Expense,Expense,189659,0
+Travel Expense,Expense,225701,0
+Salary Expense,Expense,225882,0
+Electricity Expense,Expense,53854,0
+Electricity Expense,Expense,59376,0
+Salary Expense,Expense,33169,0
+Electricity Expense,Expense,255656,0
+Software Expense,Expense,245812,0
+Salary Expense,Expense,83895,0
+Software Expense,Expense,65019,0
+Travel Expense,Expense,94313,0
+Salary Expense,Expense,293013,0
+Office Expense,Expense,253557,0
+Software Expense,Expense,127885,0
+Salary Expense,Expense,265760,0
+Electricity Expense,Expense,249329,0
+Salary Expense,Expense,131920,0
+Software Expense,Expense,84756,0
+Office Expense,Expense,195296,0
+Salary Expense,Expense,237062,0
+Salary Expense,Expense,224738,0
+Electricity Expense,Expense,110651,0
+Office Expense,Expense,151196,0
+Travel Expense,Expense,19032,0
+Electricity Expense,Expense,214110,0
+Office Expense,Expense,267246,0
+Rent Expense,Expense,26826,0
+Electricity Expense,Expense,33797,0
+Salary Expense,Expense,15437,0
+Salary Expense,Expense,20351,0
+Office Expense,Expense,111986,0
+Rent Expense,Expense,111376,0
+Software Expense,Expense,251456,0
+Software Expense,Expense,46586,0
+Office Expense,Expense,19185,0
+Rent Expense,Expense,274034,0
+Rent Expense,Expense,257879,0
+Office Expense,Expense,86837,0
+Electricity Expense,Expense,91985,0
+Software Expense,Expense,72924,0
+Electricity Expense,Expense,130078,0
+Software Expense,Expense,157474,0
+Office Expense,Expense,213413,0
+Rent Expense,Expense,174626,0
+Software Expense,Expense,61083,0
+Rent Expense,Expense,104206,0
+Software Expense,Expense,134323,0
+Electricity Expense,Expense,110608,0
+Salary Expense,Expense,163530,0
+Rent Expense,Expense,295470,0
+Electricity Expense,Expense,177273,0
+Travel Expense,Expense,26905,0
+Rent Expense,Expense,177331,0
+Electricity Expense,Expense,176437,0
+Software Expense,Expense,123230,0
+Software Expense,Expense,63707,0
+Software Expense,Expense,103566,0
+Electricity Expense,Expense,33344,0
+Travel Expense,Expense,140076,0
+Rent Expense,Expense,150414,0
+Travel Expense,Expense,274248,0
+Office Expense,Expense,269341,0
+Rent Expense,Expense,80455,0
+Electricity Expense,Expense,107305,0
+Software Expense,Expense,51578,0
+Salary Expense,Expense,72260,0
+Travel Expense,Expense,188568,0
+Electricity Expense,Expense,122570,0
+Travel Expense,Expense,102306,0
+Office Expense,Expense,129900,0
+Travel Expense,Expense,292097,0
+Electricity Expense,Expense,62268,0
+Rent Expense,Expense,126474,0
+Software Expense,Expense,89315,0
+Electricity Expense,Expense,200843,0
+Travel Expense,Expense,154064,0
+Salary Expense,Expense,29787,0
+Travel Expense,Expense,25499,0
+Office Expense,Expense,106123,0
+Office Expense,Expense,69592,0
+Rent Expense,Expense,192165,0
+Salary Expense,Expense,277977,0
+Salary Expense,Expense,40890,0
+Electricity Expense,Expense,33988,0
+Salary Expense,Expense,149078,0
+Salary Expense,Expense,26143,0
+Electricity Expense,Expense,246283,0
+Office Expense,Expense,122356,0
+Rent Expense,Expense,47742,0
+Salary Expense,Expense,38589,0
+Salary Expense,Expense,226538,0
+Software Expense,Expense,265278,0
+Software Expense,Expense,255049,0
+Salary Expense,Expense,14905,0
+Software Expense,Expense,76605,0
+Rent Expense,Expense,269708,0
+Electricity Expense,Expense,186445,0
+Electricity Expense,Expense,131580,0
+Office Expense,Expense,99752,0
+Software Expense,Expense,222568,0
+Office Expense,Expense,283270,0
+Office Expense,Expense,118616,0
+Electricity Expense,Expense,20829,0
+Software Expense,Expense,36765,0
+Rent Expense,Expense,203642,0
+Salary Expense,Expense,192465,0
+Electricity Expense,Expense,32290,0
+Travel Expense,Expense,126096,0
+Salary Expense,Expense,76669,0
+Electricity Expense,Expense,101043,0
+Office Expense,Expense,151397,0
+Office Expense,Expense,238320,0
+Salary Expense,Expense,263818,0
+Rent Expense,Expense,255366,0
+Salary Expense,Expense,251835,0
+Electricity Expense,Expense,39249,0
+Electricity Expense,Expense,257633,0
+Office Expense,Expense,104719,0
+Electricity Expense,Expense,292341,0
+Electricity Expense,Expense,129129,0
+Salary Expense,Expense,184561,0
+Salary Expense,Expense,176676,0
+Travel Expense,Expense,6941,0
+Rent Expense,Expense,104016,0
+Salary Expense,Expense,102387,0
+Rent Expense,Expense,102598,0
+Office Expense,Expense,13741,0
+Office Expense,Expense,187627,0
+Salary Expense,Expense,17067,0
+Travel Expense,Expense,164676,0
+Office Expense,Expense,210966,0
+Software Expense,Expense,289486,0
+Salary Expense,Expense,30743,0
+Electricity Expense,Expense,125672,0
+Office Expense,Expense,17130,0
+Salary Expense,Expense,278046,0
+Office Expense,Expense,22705,0
+Travel Expense,Expense,79768,0
+Rent Expense,Expense,294154,0
+Office Expense,Expense,122127,0
+Office Expense,Expense,253736,0
+Office Expense,Expense,66144,0
+Rent Expense,Expense,10652,0
+Software Expense,Expense,195762,0
+Rent Expense,Expense,175026,0
+Office Expense,Expense,201206,0
+Travel Expense,Expense,210937,0
+Rent Expense,Expense,78991,0
+Electricity Expense,Expense,98949,0
+Rent Expense,Expense,227044,0
+Rent Expense,Expense,179980,0
+Travel Expense,Expense,75280,0
+Rent Expense,Expense,26949,0
+Software Expense,Expense,128597,0
+Rent Expense,Expense,40709,0
+Rent Expense,Expense,26931,0
+Travel Expense,Expense,99478,0
+Software Expense,Expense,112865,0
+Rent Expense,Expense,247505,0
+Office Expense,Expense,152810,0
+Office Expense,Expense,248572,0
+Salary Expense,Expense,41164,0
+Salary Expense,Expense,86907,0
+Travel Expense,Expense,298444,0
+Salary Expense,Expense,243999,0
+Travel Expense,Expense,171300,0
+Electricity Expense,Expense,226129,0
+Electricity Expense,Expense,11538,0
+Salary Expense,Expense,141682,0
+Software Expense,Expense,105551,0
+Salary Expense,Expense,235405,0
+Salary Expense,Expense,246461,0
+Rent Expense,Expense,97901,0
+Travel Expense,Expense,45063,0
+Office Expense,Expense,188017,0
+Software Expense,Expense,222419,0
+Electricity Expense,Expense,144795,0
+Electricity Expense,Expense,299508,0
+Electricity Expense,Expense,136720,0
+Software Expense,Expense,285069,0
+Rent Expense,Expense,7098,0
+Office Expense,Expense,4280,0
+Rent Expense,Expense,81915,0
+Software Expense,Expense,162756,0
+Travel Expense,Expense,260279,0
+Rent Expense,Expense,121157,0
+Electricity Expense,Expense,138738,0
+Office Expense,Expense,283560,0
+Electricity Expense,Expense,94756,0
+Electricity Expense,Expense,285895,0
+Salary Expense,Expense,143705,0
+Rent Expense,Expense,282908,0
+Travel Expense,Expense,291788,0
+Electricity Expense,Expense,79458,0
+Software Expense,Expense,250918,0
+Rent Expense,Expense,232772,0
+Travel Expense,Expense,50468,0
+Rent Expense,Expense,57928,0
+Rent Expense,Expense,130824,0
+Office Expense,Expense,271229,0
+Electricity Expense,Expense,65583,0
+Rent Expense,Expense,6748,0
+Office Expense,Expense,236110,0
+Travel Expense,Expense,247052,0
+Office Expense,Expense,109715,0
+Software Expense,Expense,250004,0
+Electricity Expense,Expense,106543,0
+Office Expense,Expense,164955,0
+Electricity Expense,Expense,154770,0
+Office Expense,Expense,6768,0
+Software Expense,Expense,149747,0
+Salary Expense,Expense,238741,0
+Electricity Expense,Expense,40034,0
+Electricity Expense,Expense,93751,0
+Rent Expense,Expense,217054,0
+Travel Expense,Expense,282715,0
+Rent Expense,Expense,215248,0
+Electricity Expense,Expense,80545,0
+Rent Expense,Expense,7500,0
+Salary Expense,Expense,211905,0
+Software Expense,Expense,137090,0
+Office Expense,Expense,92642,0
+Software Expense,Expense,26308,0
+Electricity Expense,Expense,253831,0
+Salary Expense,Expense,162173,0
+Office Expense,Expense,112180,0
+Travel Expense,Expense,169686,0
+Software Expense,Expense,251480,0
+Travel Expense,Expense,78343,0
+Electricity Expense,Expense,218941,0
+Travel Expense,Expense,5823,0
+Electricity Expense,Expense,46403,0
+Travel Expense,Expense,241730,0
+Rent Expense,Expense,151362,0
+Software Expense,Expense,140093,0
+Rent Expense,Expense,66185,0
+Office Expense,Expense,172297,0
+Rent Expense,Expense,251148,0
+Electricity Expense,Expense,261080,0
+Travel Expense,Expense,292266,0
+Travel Expense,Expense,280600,0
+Electricity Expense,Expense,293339,0
+Office Expense,Expense,275589,0
+Office Expense,Expense,226185,0
+Electricity Expense,Expense,85739,0
+Office Expense,Expense,126418,0
+Software Expense,Expense,47000,0
+Salary Expense,Expense,113965,0
+Electricity Expense,Expense,44258,0
+Travel Expense,Expense,125011,0
+Electricity Expense,Expense,176016,0
+Rent Expense,Expense,138458,0
+Rent Expense,Expense,215204,0
+Office Expense,Expense,95502,0
+Travel Expense,Expense,270073,0
+Salary Expense,Expense,142395,0
+Travel Expense,Expense,162541,0
+Rent Expense,Expense,217304,0
+Software Expense,Expense,55259,0
+Salary Expense,Expense,258328,0
+Travel Expense,Expense,107168,0
+Capital Account,Equity,0,1615112
+Capital Account,Equity,0,1665165
+Retained Earnings,Equity,0,412380
+Retained Earnings,Equity,0,1480412
+Retained Earnings,Equity,0,1086389
+Retained Earnings,Equity,0,346845
+Retained Earnings,Equity,0,1010098
+Capital Account,Equity,0,1723749
+Capital Account,Equity,0,587240
+Retained Earnings,Equity,0,1012070
+Capital Account,Equity,0,538202
+Capital Account,Equity,0,160404
+Retained Earnings,Equity,0,587935
+Capital Account,Equity,0,1708288
+Capital Account,Equity,0,453367
+Retained Earnings,Equity,0,1824387
+Retained Earnings,Equity,0,377694
+Retained Earnings,Equity,0,539584
+Retained Earnings,Equity,0,1287640
+Retained Earnings,Equity,0,895723
+Retained Earnings,Equity,0,1414675
+Retained Earnings,Equity,0,1659885
+Capital Account,Equity,0,255378
+Retained Earnings,Equity,0,754740
+Retained Earnings,Equity,0,1758488
+Capital Account,Equity,0,699735
+Capital Account,Equity,0,1216712
+Capital Account,Equity,0,511682
+Retained Earnings,Equity,0,1978607
+Capital Account,Equity,0,223888
+Retained Earnings,Equity,0,1954162
+Retained Earnings,Equity,0,1557804
+Capital Account,Equity,0,1037219
+Capital Account,Equity,0,187903
+Capital Account,Equity,0,1486530
+Retained Earnings,Equity,0,839163
+Capital Account,Equity,0,523283
+Retained Earnings,Equity,0,1074588
+Capital Account,Equity,0,1311232
+Capital Account,Equity,0,132452
+Capital Account,Equity,0,321584
+Retained Earnings,Equity,0,732138
+Capital Account,Equity,0,1329529
+Capital Account,Equity,0,520914
+Retained Earnings,Equity,0,1781635
+Capital Account,Equity,0,1833801
+Retained Earnings,Equity,0,1068725
+Capital Account,Equity,0,1601706
+Capital Account,Equity,0,150242
+Capital Account,Equity,0,958457
+Retained Earnings,Equity,0,159949
+Capital Account,Equity,0,10512
+Capital Account,Equity,0,467564
+Retained Earnings,Equity,0,1906923
+Retained Earnings,Equity,0,811826
+Capital Account,Equity,0,1853619
+Capital Account,Equity,0,1722710
+Capital Account,Equity,0,633830
+Capital Account,Equity,0,39657
+Capital Account,Equity,0,116125
+Capital Account,Equity,0,413238
+Capital Account,Equity,0,1417796
+Capital Account,Equity,0,1828526
+Capital Account,Equity,0,288941
+Capital Account,Equity,0,1570402
+Capital Account,Equity,0,803877
+Capital Account,Equity,0,1220750
+Capital Account,Equity,0,655689
+Retained Earnings,Equity,0,1592891
+Capital Account,Equity,0,449444
+Retained Earnings,Equity,0,1556595
+Capital Account,Equity,0,893809
+Capital Account,Equity,0,428773
+Capital Account,Equity,0,583282
+Capital Account,Equity,0,1124489
+Retained Earnings,Equity,0,1910431
+Retained Earnings,Equity,0,1376681
+Retained Earnings,Equity,0,821281
+Capital Account,Equity,0,1181927
+Capital Account,Equity,0,480616
+Retained Earnings,Equity,0,1634747
+Retained Earnings,Equity,0,407452
+Capital Account,Equity,0,890306
+Retained Earnings,Equity,0,16189
+Capital Account,Equity,0,107247
+Capital Account,Equity,0,1806592
+Retained Earnings,Equity,0,725912
+Retained Earnings,Equity,0,488471
+Capital Account,Equity,0,1561561
+Retained Earnings,Equity,0,398370
+Retained Earnings,Equity,0,1759250
+Retained Earnings,Equity,0,1263996
+Retained Earnings,Equity,0,914177
+Capital Account,Equity,0,34568
+Capital Account,Equity,0,284683
+Capital Account,Equity,0,427420
+Capital Account,Equity,0,1289789
+Retained Earnings,Equity,0,1672107
+Retained Earnings,Equity,0,597196
+Capital Account,Equity,0,691775
+Retained Earnings,Equity,0,763651
+Capital Account,Equity,0,714952
+Capital Account,Equity,0,826994
+Retained Earnings,Equity,0,112733
+Capital Account,Equity,0,1151876
+Capital Account,Equity,0,254149
+Capital Account,Equity,0,1024626
+Capital Account,Equity,0,246389
+Retained Earnings,Equity,0,1069824
+Retained Earnings,Equity,0,586972
+Capital Account,Equity,0,1790684
+Retained Earnings,Equity,0,783876
+Capital Account,Equity,0,780390
+Capital Account,Equity,0,163634
+Capital Account,Equity,0,1923700
+Capital Account,Equity,0,276728
+Retained Earnings,Equity,0,836853
+Retained Earnings,Equity,0,757077
+Capital Account,Equity,0,1894828
+Retained Earnings,Equity,0,477960
+Retained Earnings,Equity,0,866364
+Capital Account,Equity,0,767496
+Capital Account,Equity,0,581843
+Capital Account,Equity,0,1406554
+Capital Account,Equity,0,621846
+Retained Earnings,Equity,0,947299
+Capital Account,Equity,0,875589
+Retained Earnings,Equity,0,973013
+Capital Account,Equity,0,413612
+Capital Account,Equity,0,1426865
+Capital Account,Equity,0,909785
+Retained Earnings,Equity,0,1785986
+Capital Account,Equity,0,571526
+Capital Account,Equity,0,559812
+Capital Account,Equity,0,220100
+Capital Account,Equity,0,862999
+Capital Account,Equity,0,522604
+Retained Earnings,Equity,0,1543364
+Capital Account,Equity,0,1157860
+Capital Account,Equity,0,1915675
+Capital Account,Equity,0,1357125
+Retained Earnings,Equity,0,606686
+Retained Earnings,Equity,0,862060
+Retained Earnings,Equity,0,1616916
+Capital Account,Equity,0,940529
+Retained Earnings,Equity,0,924559
+Capital Account,Equity,0,521030
+Retained Earnings,Equity,0,1904899
+Retained Earnings,Equity,0,657232
+Capital Account,Equity,0,1448120
+Retained Earnings,Equity,0,949580
+Capital Account,Equity,0,899701
+Capital Account,Equity,0,1113856
+Capital Account,Equity,0,874271
+Retained Earnings,Equity,0,793928
+Retained Earnings,Equity,0,579976
+Capital Account,Equity,0,151308
+Capital Account,Equity,0,16776
+Retained Earnings,Equity,0,264532
+Retained Earnings,Equity,0,1879043
+Retained Earnings,Equity,0,320727
+Retained Earnings,Equity,0,1345588
+Capital Account,Equity,0,316001
+Capital Account,Equity,0,1271067
+Retained Earnings,Equity,0,1431938
+Capital Account,Equity,0,1557226
+Retained Earnings,Equity,0,593228
+Capital Account,Equity,0,711442
+Capital Account,Equity,0,1505194
+Capital Account,Equity,0,642806
+Retained Earnings,Equity,0,1273588
+Retained Earnings,Equity,0,128708
+Retained Earnings,Equity,0,1594884
+Retained Earnings,Equity,0,1521980
+Capital Account,Equity,0,99706
+Retained Earnings,Equity,0,27869
+Capital Account,Equity,0,1556703
+Retained Earnings,Equity,0,173646
+Capital Account,Equity,0,233849
+Retained Earnings,Equity,0,657484
+Retained Earnings,Equity,0,1974642
+Retained Earnings,Equity,0,615664
+Capital Account,Equity,0,315211
+Retained Earnings,Equity,0,776244
+Capital Account,Equity,0,1034406
+Capital Account,Equity,0,153805
+Retained Earnings,Equity,0,1067251
+Retained Earnings,Equity,0,1775923
+Retained Earnings,Equity,0,345039
+Retained Earnings,Equity,0,29249
+Capital Account,Equity,0,488370
+Capital Account,Equity,0,729447
+Capital Account,Equity,0,1864070
+Capital Account,Equity,0,947950
+Capital Account,Equity,0,1494686
+Retained Earnings,Equity,0,150985
+Retained Earnings,Equity,0,1887219
+Retained Earnings,Equity,0,373338
+Capital Account,Equity,0,206260
+Capital Account,Equity,0,1692720
+Capital Account,Equity,0,1472978
+Retained Earnings,Equity,0,782747
+Retained Earnings,Equity,0,1161436
+Retained Earnings,Equity,0,567317
+Capital Account,Equity,0,768275
+Capital Account,Equity,0,200480
+Capital Account,Equity,0,1324431
+Capital Account,Equity,0,17866
+Capital Account,Equity,0,976660
+Retained Earnings,Equity,0,910026
+Retained Earnings,Equity,0,996311
+Retained Earnings,Equity,0,1777488
+Capital Account,Equity,0,459808
+Retained Earnings,Equity,0,1023863
+Retained Earnings,Equity,0,1209918
+Retained Earnings,Equity,0,981729
+Retained Earnings,Equity,0,291632
+Capital Account,Equity,0,561668
+Capital Account,Equity,0,1770168
+Retained Earnings,Equity,0,1807087
+Capital Account,Equity,0,734436
+Capital Account,Equity,0,1792059
+Capital Account,Equity,0,1717324
+Capital Account,Equity,0,647451
+Capital Account,Equity,0,983828
+Retained Earnings,Equity,0,1280649
+Capital Account,Equity,0,1984168
+Capital Account,Equity,0,1523435
+Retained Earnings,Equity,0,828963
+Capital Account,Equity,0,657513
+Capital Account,Equity,0,1122873
+Retained Earnings,Equity,0,1838445
+Capital Account,Equity,0,1300373
+Capital Account,Equity,0,424559
+Capital Account,Equity,0,1295210
+Retained Earnings,Equity,0,1564961
+Capital Account,Equity,0,411484
+Capital Account,Equity,0,1774044
+Retained Earnings,Equity,0,553700
+Capital Account,Equity,0,83430
+Retained Earnings,Equity,0,1664632
+Capital Account,Equity,0,961762
+Capital Account,Equity,0,653966
+Retained Earnings,Equity,0,1862986
+Retained Earnings,Equity,0,1455847
+Retained Earnings,Equity,0,1238635
+Capital Account,Equity,0,620890
+Retained Earnings,Equity,0,1088529
+Retained Earnings,Equity,0,26831
+Retained Earnings,Equity,0,659522
+Capital Account,Equity,0,1082979
+Retained Earnings,Equity,0,518183
+Retained Earnings,Equity,0,1377918
+Capital Account,Equity,0,323771
+Retained Earnings,Equity,0,1047013
+Retained Earnings,Equity,0,1306393
+Retained Earnings,Equity,0,1977459
+Capital Account,Equity,0,556139
+Retained Earnings,Equity,0,1834216
+Capital Account,Equity,0,583774
+Retained Earnings,Equity,0,1065662
+Capital Account,Equity,0,1535092
+Capital Account,Equity,0,1470454
+Capital Account,Equity,0,152227
+Retained Earnings,Equity,0,1901022
+Capital Account,Equity,0,795696
+Retained Earnings,Equity,0,808465
+Retained Earnings,Equity,0,1649132
+Capital Account,Equity,0,1285730
+Capital Account,Equity,0,526646
+Capital Account,Equity,0,1907804
+Capital Account,Equity,0,429445
+Capital Account,Equity,0,1889705
+Retained Earnings,Equity,0,1539477
+Capital Account,Equity,0,1526877
+Retained Earnings,Equity,0,1163621
+Capital Account,Equity,0,890412
+Retained Earnings,Equity,0,598873
+Capital Account,Equity,0,369217
+Capital Account,Equity,0,1403574
+Retained Earnings,Equity,0,117310
+Retained Earnings,Equity,0,1041678
+Capital Account,Equity,0,162695
+Retained Earnings,Equity,0,48841
+Retained Earnings,Equity,0,914330
+Capital Account,Equity,0,1226196
+Retained Earnings,Equity,0,1476019
+Retained Earnings,Equity,0,741340
+Retained Earnings,Equity,0,75807
+Capital Account,Equity,0,784431
+Capital Account,Equity,0,442320
+Retained Earnings,Equity,0,1096306
+Capital Account,Equity,0,1307268
+Retained Earnings,Equity,0,1464697
+Retained Earnings,Equity,0,1247770
+Retained Earnings,Equity,0,251089
+Capital Account,Equity,0,1601795
+Retained Earnings,Equity,0,879469
+Capital Account,Equity,0,72536
+Capital Account,Equity,0,1857401
+Capital Account,Equity,0,1952333
+Capital Account,Equity,0,782809
+Capital Account,Equity,0,1300769
+Retained Earnings,Equity,0,502430
+Capital Account,Equity,0,1434870
+Retained Earnings,Equity,0,238813
+Retained Earnings,Equity,0,283925
+Capital Account,Equity,0,1447316
+Retained Earnings,Equity,0,135254
+Capital Account,Equity,0,832227
+Retained Earnings,Equity,0,45981
+Capital Account,Equity,0,424725
+Retained Earnings,Equity,0,1241982
+Capital Account,Equity,0,203934
+Retained Earnings,Equity,0,1346863
+Retained Earnings,Equity,0,222933
+Capital Account,Equity,0,1860606
+Retained Earnings,Equity,0,710213
+Capital Account,Equity,0,131266
+Capital Account,Equity,0,988571
+Capital Account,Equity,0,1165752
+Retained Earnings,Equity,0,829245
+Retained Earnings,Equity,0,1331311
+Retained Earnings,Equity,0,41710
+Capital Account,Equity,0,1102841
+Capital Account,Equity,0,1490119
+Capital Account,Equity,0,1160414
+Capital Account,Equity,0,1647160
+Retained Earnings,Equity,0,1300506
+Capital Account,Equity,0,1337676
+Retained Earnings,Equity,0,1093940
+Capital Account,Equity,0,1987940
+Retained Earnings,Equity,0,1207151
+Retained Earnings,Equity,0,104901
+Capital Account,Equity,0,304454
+Capital Account,Equity,0,1659649
+Capital Account,Equity,0,1967161
+Retained Earnings,Equity,0,929569
+Capital Account,Equity,0,1075933
+Capital Account,Equity,0,1608312
+Capital Account,Equity,0,497298
+Retained Earnings,Equity,0,321487
+Capital Account,Equity,0,129787
+Capital Account,Equity,0,577519
+Retained Earnings,Equity,0,1713845
+Capital Account,Equity,0,1204251
+Capital Account,Equity,0,251493
+Retained Earnings,Equity,0,615954
+Capital Account,Equity,0,1742324
+Retained Earnings,Equity,0,1975932
+Retained Earnings,Equity,0,1914174
+Retained Earnings,Equity,0,785630
+Retained Earnings,Equity,0,656433
+Retained Earnings,Equity,0,1627655
+Retained Earnings,Equity,0,1590655
+Capital Account,Equity,0,1496996
+Capital Account,Equity,0,1137427
+Capital Account,Equity,0,771266
+Retained Earnings,Equity,0,1334490
+Retained Earnings,Equity,0,1691151
+Capital Account,Equity,0,121101
+Capital Account,Equity,0,1804722
+Retained Earnings,Equity,0,1123141
+Retained Earnings,Equity,0,307286
+Capital Account,Equity,0,1157654
+Capital Account,Equity,0,1297930
+Capital Account,Equity,0,1544049
+Retained Earnings,Equity,0,464329
+Retained Earnings,Equity,0,1161197
+Retained Earnings,Equity,0,1483699
+Capital Account,Equity,0,67699
+Capital Account,Equity,0,1471922
+Capital Account,Equity,0,1484978
+Capital Account,Equity,0,486160
+Retained Earnings,Equity,0,1491640
+Retained Earnings,Equity,0,1685304
+Retained Earnings,Equity,0,1759759
+Retained Earnings,Equity,0,1777452
+Retained Earnings,Equity,0,1974681
+Retained Earnings,Equity,0,1103198
+Retained Earnings,Equity,0,468616
+Retained Earnings,Equity,0,1990228
+Retained Earnings,Equity,0,79098
+Retained Earnings,Equity,0,1495503
+Capital Account,Equity,0,1547347
+Retained Earnings,Equity,0,135046
+Capital Account,Equity,0,708891
+Capital Account,Equity,0,1271976
+Retained Earnings,Equity,0,488978
+Retained Earnings,Equity,0,26892
+Capital Account,Equity,0,1351324
+Retained Earnings,Equity,0,574663
+Capital Account,Equity,0,1526303
+Capital Account,Equity,0,811312
+Capital Account,Equity,0,1793468
+Capital Account,Equity,0,842386
+Retained Earnings,Equity,0,739893
+Retained Earnings,Equity,0,984089
+Capital Account,Equity,0,1309227
+Retained Earnings,Equity,0,927192
+Retained Earnings,Equity,0,468683
+Retained Earnings,Equity,0,1652228
+Capital Account,Equity,0,181087
+Retained Earnings,Equity,0,878459
+Retained Earnings,Equity,0,1492228
+Capital Account,Equity,0,1821427
+Capital Account,Equity,0,1417015
+Retained Earnings,Equity,0,1525713
+Retained Earnings,Equity,0,1386871
+Retained Earnings,Equity,0,705017
+Retained Earnings,Equity,0,822059
+Retained Earnings,Equity,0,1291111
+Capital Account,Equity,0,1157111
+Retained Earnings,Equity,0,657502
+Retained Earnings,Equity,0,1522135
+Capital Account,Equity,0,1987349
+Retained Earnings,Equity,0,903851
+Capital Account,Equity,0,984947
+Capital Account,Equity,0,1248326
+Retained Earnings,Equity,0,1107992
+Capital Account,Equity,0,1110996
+Capital Account,Equity,0,480959
+Capital Account,Equity,0,261882
+Capital Account,Equity,0,196546
+Retained Earnings,Equity,0,751023
+Retained Earnings,Equity,0,1862469
+Capital Account,Equity,0,875181
+Retained Earnings,Equity,0,733867
+Capital Account,Equity,0,406530
+Capital Account,Equity,0,1603049
+Retained Earnings,Equity,0,654064
+Retained Earnings,Equity,0,1575624
+Capital Account,Equity,0,376219
+Retained Earnings,Equity,0,217471
+Retained Earnings,Equity,0,1353066
+Capital Account,Equity,0,976545
+Capital Account,Equity,0,1083232
+Capital Account,Equity,0,1614872
+Capital Account,Equity,0,658303
+Retained Earnings,Equity,0,270887
+Capital Account,Equity,0,1955837
+Capital Account,Equity,0,282681
+Capital Account,Equity,0,135203
+Capital Account,Equity,0,676446
+Capital Account,Equity,0,1786239
+Capital Account,Equity,0,754168
+Capital Account,Equity,0,331717
+Retained Earnings,Equity,0,231529
+Capital Account,Equity,0,485850
+Retained Earnings,Equity,0,1399718
+Capital Account,Equity,0,90772
+Retained Earnings,Equity,0,764474
+Retained Earnings,Equity,0,1075340
+Retained Earnings,Equity,0,530288
+Capital Account,Equity,0,1194307
+Retained Earnings,Equity,0,283207
+Retained Earnings,Equity,0,597993
+Retained Earnings,Equity,0,1030077
+Capital Account,Equity,0,1741942
+Retained Earnings,Equity,0,1831443
+Retained Earnings,Equity,0,81963
+Capital Account,Equity,0,1867151
+Retained Earnings,Equity,0,33370
+Retained Earnings,Equity,0,922917
+Capital Account,Equity,0,125108
+Capital Account,Equity,0,1800616
+Retained Earnings,Equity,0,182352
+Retained Earnings,Equity,0,1512004
+Capital Account,Equity,0,100357
+Retained Earnings,Equity,0,897598
+Retained Earnings,Equity,0,1290815
+Retained Earnings,Equity,0,877343
+Retained Earnings,Equity,0,1217755
+Retained Earnings,Equity,0,817494
+Retained Earnings,Equity,0,1456181
+Retained Earnings,Equity,0,1978862
+Capital Account,Equity,0,1507668
+Capital Account,Equity,0,1223637
+Capital Account,Equity,0,1520447
+Capital Account,Equity,0,827573
+Retained Earnings,Equity,0,1172354
+Retained Earnings,Equity,0,374286
+Retained Earnings,Equity,0,1336952
+Retained Earnings,Equity,0,210393
+Retained Earnings,Equity,0,188070
+Capital Account,Equity,0,320819
+Capital Account,Equity,0,1255601
+Retained Earnings,Equity,0,740018
+Capital Account,Equity,0,907067
+Retained Earnings,Equity,0,1793884
+Retained Earnings,Equity,0,1906849
+Retained Earnings,Equity,0,336606
+Retained Earnings,Equity,0,961758
+Capital Account,Equity,0,1420278
+Capital Account,Equity,0,827794
+Retained Earnings,Equity,0,570253
+Retained Earnings,Equity,0,1964644
+Retained Earnings,Equity,0,1522519
+Retained Earnings,Equity,0,515056
+Capital Account,Equity,0,1344926
