@@ -1,0 +1,7 @@
+Transaction,Amount,Deductee_Type,Section,Return_Type,Return_Description
+Salary paid to employees,120000,Employee,192,24Q,Salary TDS Return
+CA fees paid,50000,Resident,194J,26Q,Non-Salary Domestic TDS Return
+Commission paid to broker,35000,Resident,194H,26Q,Non-Salary Domestic TDS Return
+Office rent paid,150000,Resident,194I,26Q,Non-Salary Domestic TDS Return
+Consultancy fees paid to UK firm,200000,Non-Resident,194J,27Q,Non-Resident TDS Return
+TCS collected on sale,100000,Buyer,TCS,27EQ,TCS Return
