@@ -1,0 +1,6 @@
+Transaction_Text,Amount,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status
+Salary paid through HDFC,50000,Payroll,0.9637474568077118,Salary Expense,Salary Expense Dr | To Bank,Expense,OK
+Office rent transferred,25000,Rent,0.9965366589640272,Rent Expense,Rent Expense Dr | To Bank,Expense,OK
+GST deposited online,12000,GST,0.9932459186466454,GST Payable,GST Payable Dr | To Bank,Liability,OK
+Laptop purchased for office,45000,Asset,0.993651341643035,Fixed Asset,Fixed Asset Dr | To Bank,Asset,OK
+Customer payment received,70000,Revenue,0.9960656841292468,Sales Revenue,Bank Dr | To Sales Revenue,Income,OK

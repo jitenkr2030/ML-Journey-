@@ -1,0 +1,21 @@
+Client_ID,Client_Name,Industry,Contract_Value,Risk_Level
+C1,XYZ School,Hospital,351246,High
+C2,XYZ School,School,406455,Medium
+C3,ABC Factory,School,236411,High
+C4,XYZ School,Factory,383664,Medium
+C5,Royal Society,Warehouse,241984,Medium
+C6,ABC Factory,Hospital,334095,Medium
+C7,Metro Hospital,School,294694,Low
+C8,Royal Society,Hospital,371162,Low
+C9,ABC Factory,Factory,186147,Medium
+C10,Royal Society,Warehouse,99402,Low
+C11,Metro Hospital,Factory,363306,Low
+C12,Royal Society,Factory,177344,Medium
+C13,XYZ School,School,431485,Low
+C14,Metro Hospital,Factory,177031,High
+C15,XYZ School,School,464318,Medium
+C16,Prime Warehouse,Warehouse,159978,Medium
+C17,ABC Factory,School,216873,Medium
+C18,Prime Warehouse,Warehouse,402799,Medium
+C19,Metro Hospital,Factory,277135,Low
+C20,ABC Factory,School,73352,High

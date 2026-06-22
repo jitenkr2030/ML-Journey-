@@ -1,0 +1,6 @@
+Transaction_Text,Amount,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,Bank_Status,GST_Type,GST_Amount,TDS_Section,TDS_Amount,TDS_Compliance
+Salary paid through HDFC,50000,Payroll,0.9637474568077118,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Matched,Exempt,0.0,No TDS,0,OK
+Office rent transferred,25000,Rent,0.9965366589640272,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Matched,Input GST,4500.0,194I,0,PAN Required
+GST deposited online,12000,GST,0.9932459186466454,GST Payable,GST Payable Dr | To Bank,Liability,OK,Matched,Exempt,0.0,No TDS,0,OK
+Laptop purchased for office,45000,Asset,0.993651341643035,Fixed Asset,Fixed Asset Dr | To Bank,Asset,OK,Matched,Input GST,8100.0,194Q,0,PAN Required
+Customer payment received,70000,Revenue,0.9960656841292468,Sales Revenue,Bank Dr | To Sales Revenue,Income,OK,Matched,Output GST,12600.0,No TDS,0,OK

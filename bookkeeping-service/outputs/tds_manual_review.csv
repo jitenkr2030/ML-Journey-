@@ -1,0 +1,3 @@
+Transaction_Text,Amount,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,TDS_Section,Threshold,TDS_Rate,TDS_Amount,PAN_Status,Compliance_Status
+Office rent transferred,25000,Rent,0.9965366589640272,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,194I,240000,10.0,0,Missing,PAN Required
+Laptop purchased for office,45000,Asset,0.993651341643035,Fixed Asset,Fixed Asset Dr | To Bank,Asset,OK,194Q,5000000,0.1,0,Missing,PAN Required

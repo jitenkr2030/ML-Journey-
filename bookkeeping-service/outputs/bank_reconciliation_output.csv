@@ -1,0 +1,6 @@
+Book_Transaction,Bank_Transaction,Book_Amount,Bank_Amount,Difference,Status
+Salary paid through HDFC,Salary paid through HDFC,50000.0,50000.0,0.0,Matched
+Office rent transferred,Office rent transferred,25000.0,25000.0,0.0,Matched
+GST deposited online,GST deposited online,12000.0,12000.0,0.0,Matched
+Laptop purchased for office,Laptop purchased for office,45000.0,45000.0,0.0,Matched
+Customer payment received,Customer payment received,70000.0,70000.0,0.0,Matched
