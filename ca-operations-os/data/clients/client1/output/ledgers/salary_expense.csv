@@ -1,0 +1,140 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+02-Apr-25,SALARY PAYABLE,575090.0,0.0,575090.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+04-Apr-25,SALARY PAYABLE,0.0,50000.0,50000.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Apr-25,Salary,12675939.1,0.0,12675939.1,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Apr-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+01-May-25,Salary,172000.0,0.0,172000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+01-May-25,SALARY PAYABLE,5605672.0,0.0,5605672.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+01-May-25,SALARY PAYABLE,0.0,14615.0,14615.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-May-25,SALARY PAYABLE,1505517.0,0.0,1505517.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-May-25,Salary,10100.0,0.0,10100.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-May-25,SALARY PAYABLE,20000.0,0.0,20000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-May-25,SALARY PAYABLE,14615.0,0.0,14615.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-May-25,SALARY PAYABLE,15200.0,0.0,15200.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+20-May-25,Security Deposit,0.0,495450.0,495450.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+27-May-25,SALARY PAYABLE,10.0,0.0,10.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,10.0,0.0,10.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,10.0,0.0,10.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,10.0,0.0,10.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,10.0,0.0,10.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,30000.0,0.0,30000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,55000.0,0.0,55000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,31800.0,0.0,31800.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,20000.0,0.0,20000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,20000.0,0.0,20000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,20000.0,0.0,20000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-May-25,SALARY PAYABLE,23000.0,0.0,23000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-May-25,Salary,13732083.4,0.0,13732083.4,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-May-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Jun-25,SALARY PAYABLE,5750224.0,0.0,5750224.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Jun-25,SALARY PAYABLE,0.0,11882.0,11882.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+04-Jun-25,SALARY PAYABLE,1358512.0,0.0,1358512.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Jun-25,Salary,172000.0,0.0,172000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+11-Jun-25,SALARY PAYABLE,11882.0,0.0,11882.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Jun-25,SALARY PAYABLE,11800.0,0.0,11800.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+18-Jun-25,Security Deposit,0.0,61932.0,61932.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+30-Jun-25,Salary,13625390.32,0.0,13625390.32,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Jun-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+02-Jul-25,SALARY PAYABLE,5873465.0,0.0,5873465.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+02-Jul-25,SALARY PAYABLE,0.0,13762.0,13762.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Jul-25,Salary,172000.0,0.0,172000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Jul-25,SALARY PAYABLE,2248232.0,0.0,2248232.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+05-Jul-25,SALARY PAYABLE,1485320.0,0.0,1485320.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+05-Jul-25,SALARY PAYABLE,0.0,3500.0,3500.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+18-Jul-25,SALARY PAYABLE,5410.0,0.0,5410.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+19-Jul-25,SALARY PAYABLE,3500.0,0.0,3500.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Jul-25,Salary,13779188.08,0.0,13779188.08,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Jul-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+04-Aug-25,SALARY PAYABLE,5845862.0,0.0,5845862.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+05-Aug-25,SALARY PAYABLE,1372544.0,0.0,1372544.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+05-Aug-25,Security Deposit,0.0,265839.0,265839.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+06-Aug-25,Salary,172000.0,0.0,172000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+26-Aug-25,SALARY PAYABLE,1060000.0,0.0,1060000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+26-Aug-25,Salary,0.0,20000.0,20000.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-Aug-25,Security Deposit,0.0,200000.0,200000.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+31-Aug-25,Salary,12831422.0,0.0,12831422.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Aug-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+04-Sep-25,Salary,172000.0,0.0,172000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+04-Sep-25,SALARY PAYABLE,4985550.0,0.0,4985550.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Sep-25,SALARY PAYABLE,891004.0,0.0,891004.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-Sep-25,Salary,3500.0,0.0,3500.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Sep-25,Salary,8128443.0,0.0,8128443.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Sep-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+01-Oct-25,SALARY PAYABLE,14216.0,0.0,14216.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Oct-25,SALARY PAYABLE,20800.0,0.0,20800.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+07-Oct-25,SALARY PAYABLE,3728968.0,0.0,3728968.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-Oct-25,SALARY PAYABLE,819847.0,0.0,819847.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+18-Oct-25,Salary,172000.0,0.0,172000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Oct-25,Salary,8447950.0,0.0,8447950.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Oct-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+01-Nov-25,Security Deposit,0.0,293661.0,293661.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+04-Nov-25,SALARY PAYABLE,154.13,0.0,154.13,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+04-Nov-25,SALARY PAYABLE,17734.53,0.0,17734.53,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Nov-25,SALARY PAYABLE,4000.0,0.0,4000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+07-Nov-25,Security Deposit,0.0,691657.0,691657.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+14-Nov-25,SALARY PAYABLE,76597.0,0.0,76597.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+14-Nov-25,SALARY PAYABLE,0.0,453.0,453.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+15-Nov-25,SALARY PAYABLE,310084.0,0.0,310084.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+22-Nov-25,SALARY PAYABLE,10250.0,0.0,10250.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Nov-25,Salary,13451137.0,0.0,13451137.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Nov-25,Salary,65000.0,0.0,65000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Dec-25,SALARY PAYABLE,1795091.0,0.0,1795091.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Dec-25,SALARY PAYABLE,0.0,13867.0,13867.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+13-Dec-25,SALARY PAYABLE,784354.0,0.0,784354.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+13-Dec-25,SALARY PAYABLE,0.0,6500.0,6500.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+15-Dec-25,SALARY PAYABLE,6500.0,0.0,6500.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+18-Dec-25,SALARY PAYABLE,13000.0,0.0,13000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+19-Dec-25,SALARY PAYABLE,7525.0,0.0,7525.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+20-Dec-25,SALARY PAYABLE,4000.0,0.0,4000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+22-Dec-25,SALARY PAYABLE,7353.0,0.0,7353.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+24-Dec-25,SALARY PAYABLE,8200.0,0.0,8200.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+29-Dec-25,Salary,344000.0,0.0,344000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Dec-25,Salary,13020167.0,0.0,13020167.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Dec-25,Salary,55000.0,0.0,55000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Jan-26,SALARY PAYABLE,11650.0,0.0,11650.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Jan-26,SALARY PAYABLE,50000.0,0.0,50000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Jan-26,SALARY PAYABLE,1746975.06,0.0,1746975.06,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-Jan-26,SALARY PAYABLE,1900819.0,0.0,1900819.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+08-Jan-26,SALARY PAYABLE,0.0,11710.0,11710.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+10-Jan-26,SALARY PAYABLE,11710.0,0.0,11710.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Jan-26,SALARY PAYABLE,4000.0,0.0,4000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Jan-26,SALARY PAYABLE,15548.0,0.0,15548.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+14-Jan-26,Salary,0.0,20000.0,20000.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+17-Jan-26,SALARY PAYABLE,134768.0,0.0,134768.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+29-Jan-26,Security Deposit,0.0,509329.0,509329.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+31-Jan-26,Salary,11751808.0,0.0,11751808.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Jan-26,Salary,55000.0,0.0,55000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+03-Feb-26,SALARY PAYABLE,9687.0,0.0,9687.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Feb-26,Security Deposit,93373.0,0.0,93373.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Salary Expense,0.3467313421310191,REVIEW
+07-Feb-26,SALARY PAYABLE,843532.0,0.0,843532.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+07-Feb-26,SALARY PAYABLE,0.0,7273.0,7273.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Feb-26,SALARY PAYABLE,1728290.0,0.0,1728290.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Feb-26,SALARY PAYABLE,5599769.0,0.0,5599769.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+16-Feb-26,SALARY PAYABLE,1645.0,0.0,1645.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+17-Feb-26,SALARY PAYABLE,23706.0,0.0,23706.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+20-Feb-26,SALARY PAYABLE,24687.0,0.0,24687.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+25-Feb-26,SALARY PAYABLE,11363.0,0.0,11363.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+25-Feb-26,SALARY PAYABLE,0.0,525000.0,525000.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-Feb-26,SALARY PAYABLE,13353.0,0.0,13353.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+27-Feb-26,SALARY PAYABLE,390.0,0.0,390.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+28-Feb-26,Salary,9932669.0,0.0,9932669.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+28-Feb-26,Salary,55000.0,0.0,55000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Mar-26,SALARY PAYABLE,1740843.46,0.0,1740843.46,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Mar-26,SALARY PAYABLE,24687.0,0.0,24687.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Mar-26,SALARY PAYABLE,12378.0,0.0,12378.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Mar-26,SALARY PAYABLE,13106.0,0.0,13106.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+06-Mar-26,SALARY PAYABLE,24687.0,0.0,24687.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+07-Mar-26,SALARY PAYABLE,2589.84,0.0,2589.84,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+11-Mar-26,SALARY PAYABLE,845218.0,0.0,845218.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+11-Mar-26,SALARY PAYABLE,0.0,9043.0,9043.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+12-Mar-26,SALARY PAYABLE,19500.0,0.0,19500.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+17-Mar-26,Salary,516000.0,0.0,516000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+19-Mar-26,SALARY PAYABLE,866861.0,0.0,866861.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+25-Mar-26,SALARY PAYABLE,175000.0,0.0,175000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+28-Mar-26,Salary,11934506.93,0.0,11934506.93,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+28-Mar-26,Salary,55000.0,0.0,55000.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Mar-26,SALARY PAYABLE,195758.0,0.0,195758.0,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+30-Mar-26,SALARY PAYABLE,0.0,6456.0,6456.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Mar-26,SALARY PAYABLE,951801.26,0.0,951801.26,Debit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW
+31-Mar-26,SALARY PAYABLE,0.0,19519.0,19519.0,Credit,Payroll,0.8722154234650548,Salary Expense,Salary Expense Dr | To Bank,Expense,OK,Salary Expense,0.5293312670717658,REVIEW

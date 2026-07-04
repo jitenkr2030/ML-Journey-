@@ -1,0 +1,50 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+21-Apr-25,INCOME TAX,15000.0,0.0,15000.0,Debit,GST,0.381554739536613,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.1735466004534378,REVIEW
+03-May-25,TAX DEDUCTED SOURCES 94C,490.0,0.0,490.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+06-May-25,Expertsoul Consultancy Services,21830.0,0.0,21830.0,Debit,Professional Fees,0.7738918441115076,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.39212522644600173,REVIEW
+05-Jun-25,TAX DEDUCTED SOURCES 94C,490.0,0.0,490.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+10-Jun-25,TAX  DEDUCTED  U/S 94J,2172.0,0.0,2172.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+12-Jun-25,PROFESSIONAL CHARGES,10000.0,0.0,10000.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+13-Jun-25,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+21-Jun-25,Lawyer's Fees,5000.0,0.0,5000.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+21-Jun-25,Lawyer's Fees,2500.0,0.0,2500.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+05-Jul-25,TAX DEDUCTED SOURCES 94C,490.0,0.0,490.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+14-Jul-25,PROFESSIONAL CHARGES,130000.0,0.0,130000.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+04-Aug-25,PROFESSIONAL CHARGES,47500.0,0.0,47500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+06-Aug-25,TAX DEDUCTED SOURCES 94C,387.0,0.0,387.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+13-Aug-25,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+05-Sep-25,TAX DEDUCTED SOURCES 94C,490.0,0.0,490.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+08-Sep-25,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+12-Sep-25,Lawyer's Fees,5000.0,0.0,5000.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+12-Sep-25,Lawyer's Fees,2500.0,0.0,2500.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+01-Oct-25,Fees for Cards,12699.0,0.0,12699.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+06-Oct-25,TAX DEDUCTED SOURCES 94C,490.0,0.0,490.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+14-Oct-25,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+08-Nov-25,TAX DEDUCTED SOURCES 94C,490.0,0.0,490.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+10-Nov-25,INCOME TAX,592581.0,0.0,592581.0,Debit,GST,0.381554739536613,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.1735466004534378,REVIEW
+10-Nov-25,INCOME TAX,500000.0,0.0,500000.0,Debit,GST,0.381554739536613,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.1735466004534378,REVIEW
+10-Nov-25,PROFESSIONAL CHARGES,60000.0,0.0,60000.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+10-Nov-25,PROFESSIONAL CHARGES,40000.0,0.0,40000.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+11-Nov-25,Lawyer's Fees,20000.0,0.0,20000.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+11-Nov-25,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+12-Nov-25,Fees for Cards,37350.0,0.0,37350.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+25-Nov-25,Lawyer's Fees,5000.0,0.0,5000.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+28-Nov-25,Fees for Cards,12450.0,0.0,12450.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+02-Dec-25,TAX DEDUCTED SOURCES 94C,379.0,0.0,379.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+12-Dec-25,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+01-Jan-26,TAX  DEDUCTED  U/S 94J,1700.0,0.0,1700.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+06-Jan-26,TAX DEDUCTED SOURCES 94C,406.0,0.0,406.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+06-Jan-26,TAX DEUCTED AT SOURCE SECTION 92B,76000.0,0.0,76000.0,Debit,GST,0.78270839274451,GST Payable,GST Payable Dr | To Bank,Liability,OK,Professional Fees,0.33192665379268954,REVIEW
+07-Jan-26,TAX  DEDUCTED  U/S 94J,5663.0,0.0,5663.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+17-Jan-26,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+06-Feb-26,TAX DEDUCTED SOURCES 94C,355.0,0.0,355.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+13-Feb-26,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+28-Feb-26,Expertsoul Consultancy Services,3540.0,0.0,3540.0,Debit,Professional Fees,0.7738918441115076,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.39212522644600173,REVIEW
+02-Mar-26,TAX DEDUCTED SOURCES 94C,359.0,0.0,359.0,Debit,GST,0.4146261944428381,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.33192665379268954,REVIEW
+07-Mar-26,Lawyer's Fees,5000.0,0.0,5000.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+09-Mar-26,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW
+16-Mar-26,INCOME TAX,500000.0,0.0,500000.0,Debit,GST,0.381554739536613,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Professional Fees,0.1735466004534378,REVIEW
+17-Mar-26,Fees for Cards,29382.0,0.0,29382.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+18-Mar-26,Fees for Cards,24900.0,0.0,24900.0,Debit,Professional Fees,0.9126849258319256,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.6216928823283414,REVIEW
+28-Mar-26,Expertsoul Consultancy Services,2950.0,0.0,2950.0,Debit,Professional Fees,0.7738918441115076,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.39212522644600173,REVIEW
+31-Mar-26,PROFESSIONAL CHARGES,8500.0,0.0,8500.0,Debit,Professional Fees,0.9642820362757112,Manual Review,Manual Journal Required,Unknown,OK,Professional Fees,0.46465753545530447,REVIEW

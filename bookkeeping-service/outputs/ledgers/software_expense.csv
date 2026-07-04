@@ -1,0 +1,5 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+27-May-25,Software,250.0,0.0,250.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Software Expense,0.3645561722726785,REVIEW
+05-Jun-25,Software,3840.0,0.0,3840.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Software Expense,0.3645561722726785,REVIEW
+30-Jul-25,Software,4500.0,0.0,4500.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Software Expense,0.3645561722726785,REVIEW
+07-Aug-25,Software,2500.0,0.0,2500.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Software Expense,0.3645561722726785,REVIEW

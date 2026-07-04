@@ -1,0 +1,2 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+28-Jun-25,DOMAIN NAME PURCHASE,449.1,0.0,449.1,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Purchase Expense,0.6452842279639749,REVIEW

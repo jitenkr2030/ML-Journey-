@@ -1,0 +1,74 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+02-Apr-25,Electricity Expenses,940.0,0.0,940.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+06-Apr-25,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+12-Apr-25,Water Expense,3890.0,0.0,3890.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+17-Apr-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,1226280.0,1226280.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+19-Apr-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,66681.0,66681.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+23-Apr-25,Airtel Postpaid Bill (Wifi),7016.1,0.0,7016.1,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+23-Apr-25,Airtel Postpaid Bill (Wifi),7000.37,0.0,7000.37,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+24-Apr-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,69205.0,69205.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+03-May-25,Electricity Expenses,5050.0,0.0,5050.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+04-May-25,AIRTEL POSTPAID BILL,1829.0,0.0,1829.0,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+28-May-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,1721415.0,1721415.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+29-May-25,Airtel Postpaid Bill (Wifi),5900.0,0.0,5900.0,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+29-May-25,Airtel Postpaid Bill (Wifi),6698.87,0.0,6698.87,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+05-Jun-25,AIRTEL POSTPAID BILL,1823.1,0.0,1823.1,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+07-Jun-25,Electricity Expenses,610.0,0.0,610.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+07-Jun-25,Electricity Expenses,15400.0,0.0,15400.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+07-Jun-25,AIRTEL POSTPAID BILL,2950.0,0.0,2950.0,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+09-Jun-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,64372.0,64372.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+12-Jun-25,Water Expense,4200.0,0.0,4200.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+16-Jun-25,Mobile Bill,6691.76,0.0,6691.76,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+25-Jun-25,Mobile Bill,2828.46,0.0,2828.46,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+25-Jun-25,Mobile Bill,6039.24,0.0,6039.24,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+26-Jun-25,Water Expense,7780.0,0.0,7780.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+03-Jul-25,Electricity Expenses,20020.0,0.0,20020.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+03-Jul-25,Electricity Expenses,950.0,0.0,950.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+04-Jul-25,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+09-Jul-25,Water Expense,3900.0,0.0,3900.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+26-Jul-25,Airtel Postpaid Bill (Wifi),6691.6,0.0,6691.6,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+29-Jul-25,Mobile Bill,6042.52,0.0,6042.52,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+29-Jul-25,Airtel Postpaid Bill (Wifi),118.0,0.0,118.0,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+31-Jul-25,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+02-Aug-25,Water Expense,3890.0,0.0,3890.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+02-Aug-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,32280.0,32280.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+06-Aug-25,Electricity Expenses,31320.0,0.0,31320.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+06-Aug-25,Electricity Expenses,1030.0,0.0,1030.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+09-Aug-25,Water Expense,3640.0,0.0,3640.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+30-Aug-25,Airtel Postpaid Bill (Wifi),6042.61,0.0,6042.61,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+30-Aug-25,Airtel Postpaid Bill (Wifi),6691.57,0.0,6691.57,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+03-Sep-25,AIRTEL POSTPAID BILL,1829.0,0.0,1829.0,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+04-Sep-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,819723.0,819723.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+08-Sep-25,Electricity Expenses,15710.0,0.0,15710.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+08-Sep-25,Electricity Expenses,740.0,0.0,740.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+08-Sep-25,Water Expense,2700.0,0.0,2700.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+29-Sep-25,Water Expense,7765.0,0.0,7765.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+30-Sep-25,Airtel Postpaid Bill (Wifi),6691.57,0.0,6691.57,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+30-Sep-25,Airtel Postpaid Bill (Wifi),6042.61,0.0,6042.61,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+05-Oct-25,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+07-Oct-25,MAHANAGAR  TELEPHONE NIGAM LTD,751161.29,0.0,751161.29,Debit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+09-Oct-25,Electricity Expenses,510.0,0.0,510.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+16-Oct-25,Water Expense,4500.0,0.0,4500.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+17-Oct-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,171568.0,171568.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+17-Oct-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,2139090.0,2139090.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+18-Oct-25,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,32280.0,32280.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+27-Oct-25,Water Expense,6075.0,0.0,6075.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+28-Oct-25,Airtel Postpaid Bill (Wifi),8871.07,0.0,8871.07,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+18-Nov-25,Water Expense,2800.0,0.0,2800.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+28-Nov-25,Airtel Postpaid Bill (Wifi),13024.47,0.0,13024.47,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+28-Nov-25,Airtel Postpaid Bill (Wifi),6160.61,0.0,6160.61,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+02-Dec-25,Water Expense,2040.0,0.0,2040.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+04-Dec-25,Electricity Expenses,22600.0,0.0,22600.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+16-Dec-25,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+26-Dec-25,Electricity Expenses,3320.0,0.0,3320.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+27-Dec-25,Water Expense,2330.0,0.0,2330.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+03-Jan-26,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+09-Jan-26,MAHANAGAR  TELEPHONE NIGAM LTD,0.0,193684.0,193684.0,Credit,Utilities,0.7652500345758049,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.42167434264632175,REVIEW
+10-Jan-26,Electricity Expenses,2290.0,0.0,2290.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+17-Jan-26,AIRTEL POSTPAID BILL,8688.58,0.0,8688.58,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+19-Jan-26,Water Expense,1640.0,0.0,1640.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW
+03-Feb-26,AIRTEL POSTPAID BILL,1830.18,0.0,1830.18,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+11-Feb-26,Electricity Expenses,4980.0,0.0,4980.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+26-Feb-26,AIRTEL POSTPAID BILL,1811.3,0.0,1811.3,Debit,Utilities,0.9005996799546117,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.6249166052065149,REVIEW
+10-Mar-26,Electricity Expenses,2640.0,0.0,2640.0,Debit,Utilities,0.784050630148044,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.3594851283091294,REVIEW
+17-Mar-26,Water Expense,2500.0,0.0,2500.0,Debit,Utilities,0.764506828706195,Utilities Expense,Utilities Expense Dr | To Bank,Expense,OK,Utilities Expense,0.49740985642123803,REVIEW

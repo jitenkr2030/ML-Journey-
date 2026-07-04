@@ -1,0 +1,4 @@
+client_id,name,status,created_at
+client1,Client 1,ACTIVE,2026-06-27
+client2,Client 2,ACTIVE,2026-06-27
+client3,Client 3,ACTIVE,2026-06-27

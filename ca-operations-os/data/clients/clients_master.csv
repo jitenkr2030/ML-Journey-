@@ -1,0 +1,4 @@
+client_id,client_name,gstin,status,state,district,pincode,contact_person,email,mobile,gst_practitioner_name,gst_practitioner_id,gst_practitioner_status
+1,client1,07AWDPJ0429R1Z8,active,Delhi,South West Delhi,110046,JITENDER,,,Ramesh Chand Jindal,072000004264GP3,ACTIVE
+2,client2,07AWDPJ0429R1Z8,active,Delhi,South West Delhi,110046,JITENDER,,,RAVI UPADHYAY,072100004764GPR,ACTIVE
+3,client3,07AWDPJ0429R1Z8,active,Delhi,South West Delhi,110046,JITENDER,,,Sonu Kumar Maheshwari,072200004813GPU,ACTIVE

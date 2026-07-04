@@ -1,0 +1,11 @@
+Task,Status,File
+Trial Balance Generated,Completed,trial_balance.csv
+GST Reconciled,Completed,gst_summary.csv
+TDS Reconciled,Completed,tds_summary.csv
+Bank Reconciled,Completed,bank_reconciliation_output.csv
+Depreciation Posted,Completed,depreciation_chart.csv
+Expenses Verified,Completed,profit_and_loss.csv
+Closing Stock Verified,Completed,balance_sheet.csv
+Working Notes Completed,Completed,working_notes.csv
+Risk Analysis Completed,Completed,risk_analysis.csv
+Tax Computation Completed,Completed,tax_computation.csv

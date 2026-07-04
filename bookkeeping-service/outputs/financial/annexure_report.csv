@@ -1,0 +1,7 @@
+Annexure_Name,Rows,Total_Amount,Source_File
+Debtors Annexure,12,1022734545.47,master_ledger.csv
+Creditors Annexure,12,1022734545.47,master_ledger.csv
+Expense Annexure,12,1022734545.47,ledger_summary.csv
+Fixed Asset Annexure,1354,664906652.67,fixed_asset.csv
+GST Payable Annexure,20,24083253.0,gst_payable.csv
+TDS Payable Annexure,28,2458880.69,tds_payable.csv

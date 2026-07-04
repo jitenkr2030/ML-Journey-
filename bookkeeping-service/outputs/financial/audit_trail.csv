@@ -1,0 +1,15 @@
+Audit_Date,Stage,Source_File,Rows,Total_Amount,Status
+2026-07-02 09:47:07,Raw Bank Statement,bank_statement.csv,591,575461214.81,Verified
+2026-07-02 09:47:07,Raw Daybook,daybook.csv,1901,0.0,Verified
+2026-07-02 09:47:07,Accounting Output,accounting_output.csv,1895,1022734545.47,Verified
+2026-07-02 09:47:07,Bank Reconciliation,bank_reconciliation_output.csv,1986,1598196055.93,Verified
+2026-07-02 09:47:07,GST Output,gst_output.csv,1895,1022734545.47,Verified
+2026-07-02 09:47:07,TDS Output,tds_output.csv,1895,1022734545.47,Verified
+2026-07-02 09:47:07,Master Ledger,master_ledger.csv,12,1022734545.47,Verified
+2026-07-02 09:47:07,Depreciation Chart,depreciation_chart.csv,1354,1331871805.34,Verified
+2026-07-02 09:47:07,Working Notes,working_notes.csv,7,1193686509.02,Verified
+2026-07-02 09:47:07,Annexure Report,annexure_report.csv,6,3759653860.77,Verified
+2026-07-02 09:47:07,Schedules,schedules.csv,7,933863003.14,Verified
+2026-07-02 09:47:07,Trial Balance,trial_balance.csv,10,2045469090.94,Verified
+2026-07-02 09:47:07,Profit and Loss,profit_and_loss.csv,4,-317405866.64,Verified
+2026-07-02 09:47:07,Balance Sheet,balance_sheet.csv,3,1288421787.36,Verified

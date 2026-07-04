@@ -1,0 +1,23 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+25-Apr-25,FDR Interest,0.0,14095.0,14095.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+30-Apr-25,Interest,5126.0,0.0,5126.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-May-25,Interest,35103.0,0.0,35103.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+06-Jun-25,SUSPESE ACCOUNT,449.1,0.0,449.1,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.39930780485429196,REVIEW
+30-Jun-25,Interest,2705.0,0.0,2705.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+25-Jul-25,FDR Interest,0.0,14096.0,14096.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Jul-25,Interest,43230.0,0.0,43230.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Aug-25,Interest,21177.0,0.0,21177.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+30-Sep-25,Interest,24557.0,0.0,24557.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+22-Oct-25,FDR Interest,0.0,29500.0,29500.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+25-Oct-25,FDR Interest,0.0,14096.0,14096.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Oct-25,Interest,18482.0,0.0,18482.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+30-Nov-25,Interest,28860.0,0.0,28860.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+15-Dec-25,Interest,30000.0,0.0,30000.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+15-Dec-25,Interest,0.0,30000.0,30000.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Dec-25,Interest,48358.0,0.0,48358.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+04-Jan-26,FDR Interest,0.0,26746.0,26746.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+25-Jan-26,FDR Interest,0.0,14096.0,14096.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Jan-26,Interest,53561.0,0.0,53561.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+28-Feb-26,Interest,11977.0,0.0,11977.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Mar-26,Interest,9100.0,0.0,9100.0,Debit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW
+31-Mar-26,Interest,0.0,458.0,458.0,Credit,Asset,0.0935096153846153,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Interest Income,0.5839071710996131,REVIEW

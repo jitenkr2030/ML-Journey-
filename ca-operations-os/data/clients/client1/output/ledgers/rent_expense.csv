@@ -1,0 +1,120 @@
+Date,Transaction_Text,Debit Amount,Credit Amount,Amount,Type,Predicted_Category,Confidence,Ledger,Journal,Financial_Statement,Status,ML_Ledger,Ledger_Confidence,Ledger_Status
+04-Apr-25,TAX DEDUCTED AT SOURCE 94I (RENT),7000.0,0.0,7000.0,Debit,GST,0.3001449893310214,GST Payable,GST Payable Dr | To Bank,Liability,REVIEW,Rent Expense,0.27592613341060046,REVIEW
+15-Apr-25,STATIONERY FOR OFFICE,1250.0,0.0,1250.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Apr-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+17-Apr-25,Sub Regional Office Esic,0.0,769885.0,769885.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+17-Apr-25,Office  Equipments,1070.0,0.0,1070.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+21-Apr-25,Haryana Offfice Rent,9000.0,0.0,9000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+21-Apr-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+22-Apr-25,Office  Equipments,4017.86,0.0,4017.86,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+01-May-25,Sub Regional Office Esic,814749.04,0.0,814749.04,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-May-25,Sub Regional Office Esic,0.0,771622.0,771622.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-May-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+22-May-25,Haryana Offfice Rent,9000.0,0.0,9000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+22-May-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+23-May-25,STATIONERY FOR OFFICE,3968.0,0.0,3968.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+27-May-25,Office  Equipments,4867.86,0.0,4867.86,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+31-May-25,Office  Equipments,2400.0,0.0,2400.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+02-Jun-25,Office Petty Expenses,274.0,0.0,274.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+03-Jun-25,Office Petty Expenses,2118.0,0.0,2118.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+03-Jun-25,Office Petty Expenses,432.0,0.0,432.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+03-Jun-25,OFFICE  MAINTENANCE,2400.0,0.0,2400.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+04-Jun-25,Sub Regional Office Esic,814749.04,0.0,814749.04,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Jun-25,Office  Equipments,1800.0,0.0,1800.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+09-Jun-25,Sub Regional Office Esic,0.0,788621.0,788621.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+11-Jun-25,STATIONERY FOR OFFICE,3080.0,0.0,3080.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Jun-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+16-Jun-25,Haryana Offfice Rent,9000.0,0.0,9000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+16-Jun-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+18-Jun-25,Office  Equipments,19200.0,0.0,19200.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+21-Jun-25,STATIONERY FOR OFFICE,4223.0,0.0,4223.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+23-Jun-25,Office  Equipments,847.5,0.0,847.5,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+04-Jul-25,Sub Regional Office Esic,814749.04,0.0,814749.04,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Jul-25,Office  Equipments,250.0,0.0,250.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Jul-25,Office  Equipments,6000.0,0.0,6000.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Jul-25,STATIONERY FOR OFFICE,2321.0,0.0,2321.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Jul-25,STATIONERY FOR OFFICE,2475.0,0.0,2475.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+10-Jul-25,Sub Regional Office Esic,0.0,788621.0,788621.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Jul-25,Office  Equipments,2148.0,0.0,2148.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Jul-25,Office  Equipments,2400.0,0.0,2400.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Jul-25,Office  Equipments,7050.0,0.0,7050.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Jul-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+21-Jul-25,Haryana Offfice Rent,9000.0,0.0,9000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+21-Jul-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+22-Jul-25,Office  Equipments,3000.0,0.0,3000.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+25-Jul-25,STATIONERY FOR OFFICE,2625.0,0.0,2625.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+25-Jul-25,STATIONERY FOR OFFICE,1328.0,0.0,1328.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+01-Aug-25,STATIONERY FOR OFFICE,2428.0,0.0,2428.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+01-Aug-25,STATIONERY FOR OFFICE,793.0,0.0,793.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+04-Aug-25,Sub Regional Office Esic,814748.99,0.0,814748.99,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+14-Aug-25,Office Petty Expenses,5000.0,0.0,5000.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+16-Aug-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+19-Aug-25,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+19-Aug-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+20-Aug-25,Sub Regional Office Esic,0.0,794034.0,794034.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+25-Aug-25,STATIONERY FOR OFFICE,2576.0,0.0,2576.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+26-Aug-25,Office Petty Expenses,50.0,0.0,50.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+28-Aug-25,STATIONERY FOR OFFICE,789.0,0.0,789.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+28-Aug-25,STATIONERY FOR OFFICE,2697.0,0.0,2697.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+04-Sep-25,Sub Regional Office Esic,814748.99,0.0,814748.99,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+08-Sep-25,STATIONERY FOR OFFICE,2572.0,0.0,2572.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Sep-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+16-Sep-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+16-Sep-25,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+18-Sep-25,Sub Regional Office Esic,0.0,792240.0,792240.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Oct-25,STATIONERY FOR OFFICE,2466.0,0.0,2466.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+07-Oct-25,Sub Regional Office Esic,814748.99,0.0,814748.99,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+10-Oct-25,STATIONERY FOR OFFICE,1517.0,0.0,1517.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Oct-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+16-Oct-25,Sub Regional Office Esic,0.0,790427.0,790427.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+17-Oct-25,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+17-Oct-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+01-Nov-25,Office Petty Expenses,8431.0,0.0,8431.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+02-Nov-25,Office  Equipments,12966.0,0.0,12966.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+04-Nov-25,Office  Equipments,22881.0,0.0,22881.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+10-Nov-25,STATIONERY FOR OFFICE,9333.0,0.0,9333.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+13-Nov-25,STATIONERY FOR OFFICE,7161.0,0.0,7161.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+13-Nov-25,STATIONERY FOR OFFICE,333.0,0.0,333.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+14-Nov-25,Sub Regional Office Esic,0.0,794034.0,794034.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+14-Nov-25,Sub Regional Office Esic,814748.99,0.0,814748.99,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+17-Nov-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+18-Nov-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+18-Nov-25,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+26-Nov-25,STATIONERY FOR OFFICE,2655.0,0.0,2655.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+01-Dec-25,STATIONERY FOR OFFICE,4158.0,0.0,4158.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+01-Dec-25,STATIONERY FOR OFFICE,1889.0,0.0,1889.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+05-Dec-25,Office Petty Expenses,16564.0,0.0,16564.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+12-Dec-25,Sub Regional Office Esic,814748.99,0.0,814748.99,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+15-Dec-25,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+17-Dec-25,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+17-Dec-25,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+19-Dec-25,Office Petty Expenses,5000.0,0.0,5000.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+19-Dec-25,Office Petty Expenses,160.0,0.0,160.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+03-Jan-26,RENT DELHI OFFICE,70000.0,0.0,70000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+05-Jan-26,Office Petty Expenses,650.0,0.0,650.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+07-Jan-26,Sub Regional Office Esic,0.0,794034.0,794034.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+07-Jan-26,Sub Regional Office Esic,815103.0,0.0,815103.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+17-Jan-26,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+17-Jan-26,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+20-Jan-26,STATIONERY FOR OFFICE,1841.0,0.0,1841.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+06-Feb-26,Sub Regional Office Esic,0.0,794034.0,794034.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+09-Feb-26,Sub Regional Office Esic,814749.0,0.0,814749.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+11-Feb-26,Office Petty Expenses,53556.0,0.0,53556.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+13-Feb-26,Office  Equipments,450.0,0.0,450.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+14-Feb-26,STATIONERY FOR OFFICE,4536.0,0.0,4536.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+16-Feb-26,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+16-Feb-26,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+16-Feb-26,RENT DELHI OFFICE,77000.0,0.0,77000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+23-Feb-26,Office Petty Expenses,50.0,0.0,50.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+28-Feb-26,OFFICE  MAINTENANCE,200.0,0.0,200.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+01-Mar-26,STATIONERY FOR OFFICE,2865.0,0.0,2865.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+07-Mar-26,Sub Regional Office Esic,814749.0,0.0,814749.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+16-Mar-26,Haryana Offfice Rent,6000.0,0.0,6000.0,Debit,Rent,0.9224867091722484,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.6399333212586427,REVIEW
+16-Mar-26,UP Office Rent,4500.0,0.0,4500.0,Debit,Rent,0.9815229921496624,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.8831922269525485,OK
+16-Mar-26,RENT DELHI OFFICE,77000.0,0.0,77000.0,Debit,Rent,0.928384648980894,Rent Expense,Rent Expense Dr | To Bank,Expense,OK,Rent Expense,0.7661790937967001,OK
+21-Mar-26,Office Petty Expenses,200.0,0.0,200.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+24-Mar-26,Sub Regional Office Esic,0.0,1588068.0,1588068.0,Credit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+26-Mar-26,Office Petty Expenses,100.0,0.0,100.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+27-Mar-26,Office  Equipments,1101.7,0.0,1101.7,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+28-Mar-26,Office Petty Expenses,10204.0,0.0,10204.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW
+31-Mar-26,Sub Regional Office Esic,814749.0,0.0,814749.0,Debit,Asset,0.4532107849120085,Fixed Asset,Fixed Asset Dr | To Bank,Asset,REVIEW,Rent Expense,0.3783196026448753,REVIEW

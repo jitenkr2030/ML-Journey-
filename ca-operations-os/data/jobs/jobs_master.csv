@@ -1,0 +1,5 @@
+job_id,client_id,service_type,status,start_time,end_time,assigned_to,priority
+1,1,bookkeeping,completed,,,system,high
+2,2,bookkeeping,completed,,,system,high
+3,3,bookkeeping,completed,,,system,high
+8bdbdeb5-2205-4f8e-90f8-c8c6b63c7e34,client1,bookkeeping,PENDING,2026-06-28T00:22:13.564644

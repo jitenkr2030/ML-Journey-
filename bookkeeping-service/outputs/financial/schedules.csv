@@ -1,0 +1,8 @@
+Schedule_Name,Entries,Total_Amount,Source_File
+Salary Schedule,139,212838369.11,salary_expense.csv
+Rent Schedule,119,20511679.99,rent_expense.csv
+Utilities Schedule,73,7615679.68,utilities_expense.csv
+Marketing Schedule,52,1446703.0,marketing_expense.csv
+Fixed Asset Schedule,1354,664906652.67,fixed_asset.csv
+GST Liability Schedule,20,24083253.0,gst_payable.csv
+TDS Liability Schedule,28,2458880.69,tds_payable.csv
