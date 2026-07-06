@@ -27,3 +27,22 @@ FileNotFoundError: File not found: /root/ml-projects/stock-prediction/security-a
 2026-07-04 09:40:57,902 - INFO - Completed: site_performance_scoring_engine.py (2.58 sec)
 2026-07-04 09:40:57,903 - INFO - All Security Pipelines Completed Successfully
 2026-07-04 09:40:57,905 - INFO - Total Execution Time: 32.29 sec
+2026-07-05 23:26:19,217 - INFO - Starting Full Security AI Pipeline
+2026-07-05 23:26:19,222 - INFO - Running: excel_parser.py
+2026-07-05 23:26:28,897 - INFO - Completed: excel_parser.py (9.67 sec)
+2026-07-05 23:26:28,900 - INFO - Running: employee_matching_engine.py
+2026-07-05 23:26:31,602 - INFO - Completed: employee_matching_engine.py (2.7 sec)
+2026-07-05 23:26:31,604 - INFO - Running: pf_reconciliation_engine.py
+2026-07-05 23:26:34,188 - INFO - Completed: pf_reconciliation_engine.py (2.58 sec)
+2026-07-05 23:26:34,191 - INFO - Running: esi_reconciliation_engine.py
+2026-07-05 23:26:36,483 - INFO - Completed: esi_reconciliation_engine.py (2.29 sec)
+2026-07-05 23:26:36,486 - INFO - Running: wage_anomaly_detector.py
+2026-07-05 23:26:52,493 - INFO - Completed: wage_anomaly_detector.py (16.01 sec)
+2026-07-05 23:26:52,497 - INFO - Running: compliance_risk_scoring_engine.py
+2026-07-05 23:26:54,998 - INFO - Completed: compliance_risk_scoring_engine.py (2.5 sec)
+2026-07-05 23:26:55,001 - INFO - Running: fraud_detection_engine.py
+2026-07-05 23:26:57,584 - INFO - Completed: fraud_detection_engine.py (2.58 sec)
+2026-07-05 23:26:57,587 - INFO - Running: site_performance_scoring_engine.py
+2026-07-05 23:27:00,663 - INFO - Completed: site_performance_scoring_engine.py (3.07 sec)
+2026-07-05 23:27:00,664 - INFO - All Security Pipelines Completed Successfully
+2026-07-05 23:27:00,665 - INFO - Total Execution Time: 41.44 sec
