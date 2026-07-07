@@ -1,0 +1,68 @@
+{
+  "pf_reconciliation": {
+    "name": "pf_reconciliation_report",
+    "path": "/root/ml-projects/stock-prediction/security-ai/reconciliation/pf_reconciliation_report.csv",
+    "exists": true,
+    "non_empty": true,
+    "rows": 500,
+    "columns": 17,
+    "missing_columns": [],
+    "duplicate_rows": 0,
+    "status": "PASS"
+  },
+  "esi_reconciliation": {
+    "name": "esi_reconciliation_report",
+    "path": "/root/ml-projects/stock-prediction/security-ai/reconciliation/esi_reconciliation_report.csv",
+    "exists": true,
+    "non_empty": true,
+    "rows": 500,
+    "columns": 11,
+    "missing_columns": [],
+    "duplicate_rows": 0,
+    "status": "PASS"
+  },
+  "wage_anomaly": {
+    "name": "wage_anomaly_report",
+    "path": "/root/ml-projects/stock-prediction/security-ai/anomaly_reports/wage_anomaly_report.csv",
+    "exists": true,
+    "non_empty": true,
+    "rows": 500,
+    "columns": 18,
+    "missing_columns": [],
+    "duplicate_rows": 0,
+    "status": "PASS"
+  },
+  "fraud_detection": {
+    "name": "fraud_detection_report",
+    "path": "/root/ml-projects/stock-prediction/security-ai/fraud_reports/fraud_detection_report.csv",
+    "exists": true,
+    "non_empty": true,
+    "rows": 2803,
+    "columns": 3,
+    "missing_columns": [],
+    "duplicate_rows": 1823,
+    "status": "PASS"
+  },
+  "compliance_risk": {
+    "name": "compliance_risk_report",
+    "path": "/root/ml-projects/stock-prediction/security-ai/risk_reports/compliance_risk_report.csv",
+    "exists": true,
+    "non_empty": true,
+    "rows": 506,
+    "columns": 23,
+    "missing_columns": [],
+    "duplicate_rows": 0,
+    "status": "PASS"
+  },
+  "site_performance": {
+    "name": "site_performance_scores",
+    "path": "/root/ml-projects/stock-prediction/security-ai/site_reports/site_performance_scores.csv",
+    "exists": true,
+    "non_empty": true,
+    "rows": 100,
+    "columns": 19,
+    "missing_columns": [],
+    "duplicate_rows": 0,
+    "status": "PASS"
+  }
+}

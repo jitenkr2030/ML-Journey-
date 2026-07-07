@@ -1,0 +1,65 @@
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1933 | ======================================================================
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1934 | COMPLIANCE RISK SCORING ENGINE
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1935 | Engine version: 5.0.0
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1936 | ======================================================================
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1939 | PHASE 1: LOADING DATA
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded pf_reconciliation_report.csv: 500 rows × 17 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded esi_reconciliation_report.csv: 500 rows × 11 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded employee_matching_report.csv: 500 rows × 11 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded attendance.csv: 5000 rows × 6 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded payroll.csv: 500 rows × 8 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded guards_master.csv: 500 rows × 6 cols
+2026-07-06 10:32:17 | WARNING  | RiskEngine | safe_load:481 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 10:32:17 | WARNING  | RiskEngine | safe_load:481 | Missing file: /root/ml-projects/stock-prediction/security-ai/reconciliation/fraud_flags.csv
+2026-07-06 10:32:17 | WARNING  | RiskEngine | safe_load:481 | Missing file: /root/ml-projects/stock-prediction/security-ai/reconciliation/duplicate_employees.csv
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded missing_employees.csv: 8 rows × 10 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded risk_summary.csv: 1 rows × 3 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | safe_load:494 | Loaded audit_trail.csv: 1 rows × 11 cols
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1948 | PHASE 2: INPUT VALIDATION
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1953 | PHASE 3: CATEGORY RISK SCORING
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1979 | Category scores: PF=0, ESI=100, Att=100, Pay=0, Bank=0, ID=0, Doc=0, Fraud=0
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1983 | Weighted total: 30.0 | Incidents: 4928
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1986 | PHASE 4: COMPLIANCE CALCULATION
+2026-07-06 10:32:17 | INFO     | RiskEngine | run:1999 | PHASE 5: EMPLOYEE RISK SCORING
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2002 | Employees scored: 506
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2005 | PHASE 6: SITE RISK SCORING
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2009 | Sites scored: 13
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2012 | PHASE 7: CLIENT RISK
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2016 | PHASE 8: RECOMMENDATIONS
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2019 | Recommendations: 0
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2022 | PHASE 9: ROOT CAUSE ANALYSIS
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2032 | PHASE 10: TREND ANALYSIS
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2037 | PHASE 11: AI ANOMALY DETECTION
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2041 | PHASE 12: EXCEPTION MANAGEMENT
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2048 | PHASE 13: DASHBOARD
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2052 | PHASE 14: EXECUTIVE SUMMARY
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2058 | PHASE 15: REPORT GENERATION
+2026-07-06 10:32:31 | INFO     | RiskEngine | run:2087 | PHASE 16: EXPORT
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/compliance_risk_report.csv (506 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/site_risk_summary.csv (13 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/site_rankings.csv (13 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/guard_rankings.csv (50 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/risk_categories.csv (8 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/root_cause_analysis.csv (20 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/attendance_intelligence.csv (1 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/payroll_intelligence.csv (1 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/risk_history.csv (506 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/ml_features.csv (506 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/audit_trail.csv (2 rows)
+2026-07-06 10:32:31 | INFO     | RiskEngine | export_csv:1875 | CSV → /root/ml-projects/stock-prediction/security-ai/risk_reports/input_validation.csv (1 rows)
+2026-07-06 10:32:33 | INFO     | RiskEngine | export_excel:1887 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/compliance_risk_report_20260706_103231.xlsx (12 sheets)
+2026-07-06 10:32:33 | INFO     | RiskEngine | export_json:1896 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/compliance_risk_summary_20260706_103233.json
+2026-07-06 10:32:33 | INFO     | RiskEngine | export_ml_dataset:1624 | ML dataset exported → /root/ml-projects/stock-prediction/security-ai/risk_reports/ml_training_dataset.csv (506 rows)
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2127 | ======================================================================
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2128 | COMPLIANCE RISK SCORING COMPLETE
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2129 |   Elapsed:          16.551s
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2130 |   Files loaded:     9
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2131 |   Rows processed:   7510
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2132 |   Employees scored: 506
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2133 |   Sites scored:     13
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2134 |   Recommendations:  0
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2135 |   Exceptions:       0
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2136 |   Overall compliance: 70.0%
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2137 |   Compliance grade:   C
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2138 |   CSV files:          12
+2026-07-06 10:32:33 | INFO     | RiskEngine | run:2139 | ======================================================================

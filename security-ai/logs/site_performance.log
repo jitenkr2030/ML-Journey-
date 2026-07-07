@@ -1,0 +1,57 @@
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1743 | ======================================================================
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1744 | SITE PERFORMANCE SCORING ENGINE
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1745 | Engine version: 8.0.0
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1746 | Client: default, Month: current
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1747 | ======================================================================
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1750 | PHASE 1: LOADING DATA
+2026-07-06 10:29:23 | INFO     | SitePerformance | load_client_data:434 | Client dir not found, using dataset dir: /root/ml-projects/stock-prediction/security-ai/datasets
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded site_assignments.csv: 800 × 5
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded attendance.csv: 5000 × 6
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded incidents.csv: 800 × 4
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded complaints.csv: 590 × 3
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded compliance.csv: 500 × 5
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded payroll.csv: 500 × 8
+2026-07-06 10:29:23 | WARNING  | SitePerformance | safe_read_csv:364 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded guards_master.csv: 500 × 6
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded pf_reconciliation_report.csv: 500 × 17
+2026-07-06 10:29:23 | INFO     | SitePerformance | safe_read_csv:377 | Loaded esi_reconciliation_report.csv: 500 × 11
+2026-07-06 10:29:23 | INFO     | SitePerformance | run:1758 | PHASE 2: SCORING ALL SITES
+2026-07-06 10:29:32 | INFO     | SitePerformance | run:1763 | Sites scored: 100
+2026-07-06 10:29:32 | INFO     | SitePerformance | run:1771 | PHASE 3: RANKING
+2026-07-06 10:29:32 | INFO     | SitePerformance | run:1775 | PHASE 4: TREND ANALYSIS
+2026-07-06 10:29:32 | INFO     | SitePerformance | run:1791 | PHASE 5: INCIDENT ANALYTICS
+2026-07-06 10:29:32 | INFO     | SitePerformance | run:1796 | PHASE 6: COMPLAINT ANALYTICS
+2026-07-06 10:29:32 | INFO     | SitePerformance | run:1800 | PHASE 7: SHIFT COVERAGE
+2026-07-06 10:29:38 | INFO     | SitePerformance | run:1808 | PHASE 8: GEOGRAPHIC ANALYTICS
+2026-07-06 10:29:38 | INFO     | SitePerformance | run:1813 | PHASE 9: SUPERVISOR PERFORMANCE
+2026-07-06 10:29:38 | INFO     | SitePerformance | run:1817 | PHASE 10: BENCHMARKING
+2026-07-06 10:29:38 | INFO     | SitePerformance | run:1821 | PHASE 11: DASHBOARD
+2026-07-06 10:29:38 | INFO     | SitePerformance | run:1826 | PHASE 12: ML FEATURES
+2026-07-06 10:29:38 | INFO     | SitePerformance | run:1830 | PHASE 13: EXPORT
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/site_performance_scores.csv (100 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/site_performance_detail.csv (100 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/site_rankings.csv (100 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/zone_performance.csv (1 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/district_summary.csv (1 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/supervisor_ranking.csv (1 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/understaffed_sites.csv (100 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/repeat_incidents.csv (110 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/incident_summary.csv (1 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/complaint_summary.csv (1 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/ml_features.csv (100 rows)
+2026-07-06 10:29:44 | INFO     | SitePerformance | export_csv:1626 | CSV → /root/ml-projects/stock-prediction/security-ai/site_reports/audit_trail.csv (2 rows)
+2026-07-06 10:29:59 | INFO     | SitePerformance | export_excel:1638 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/site_performance_20260706_102944.xlsx (12 sheets)
+2026-07-06 10:29:59 | INFO     | SitePerformance | export_json:1647 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/site_performance_summary_20260706_102959.json
+2026-07-06 10:30:00 | INFO     | SitePerformance | export_dashboard_json:1661 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/dashboard_20260706_103000.json
+2026-07-06 10:30:00 | INFO     | SitePerformance | export_dashboard_json:1661 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/site_summary_20260706_103000.json
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1867 | ======================================================================
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1868 | SITE PERFORMANCE SCORING COMPLETE
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1869 |   Elapsed:          14.793s
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1870 |   Files loaded:     9
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1871 |   Sites scored:     100
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1872 |   Avg performance:  30.41
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1873 |   Best site:        S61
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1874 |   Worst site:       S67
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1875 |   High risk sites:  86
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1876 |   CSV files:        12
+2026-07-06 10:30:00 | INFO     | SitePerformance | run:1877 | ======================================================================

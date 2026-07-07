@@ -1,0 +1,22 @@
+2026-07-06 10:32:38 | ERROR    | SecurityPipeline | handle_pipeline_error:920 | Pipeline FAILED: fraud_detection_engine.py
+2026-07-06 10:32:38 | ERROR    | SecurityPipeline | handle_pipeline_error:921 |   Exit code: 1
+2026-07-06 10:32:38 | ERROR    | SecurityPipeline | handle_pipeline_error:922 |   Error: engine.py", line 2159, in run
+    all_cases.extend(duplicate_uan(self.sources))
+  File "/root/ml-projects/stock-prediction/security-ai/scripts/fraud_detection_engine.py", line 1111, in duplicate_uan
+ 
+2026-07-06 10:32:46 | ERROR    | SecurityPipeline | handle_pipeline_error:920 | Pipeline FAILED: fraud_detection_engine.py
+2026-07-06 10:32:46 | ERROR    | SecurityPipeline | handle_pipeline_error:921 |   Exit code: 1
+2026-07-06 10:32:46 | ERROR    | SecurityPipeline | handle_pipeline_error:922 |   Error: engine.py", line 2159, in run
+    all_cases.extend(duplicate_uan(self.sources))
+  File "/root/ml-projects/stock-prediction/security-ai/scripts/fraud_detection_engine.py", line 1111, in duplicate_uan
+ 
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | handle_pipeline_error:920 | Pipeline FAILED: fraud_detection_engine.py
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | handle_pipeline_error:921 |   Exit code: 1
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | handle_pipeline_error:922 |   Error: engine.py", line 2159, in run
+    all_cases.extend(duplicate_uan(self.sources))
+  File "/root/ml-projects/stock-prediction/security-ai/scripts/fraud_detection_engine.py", line 1111, in duplicate_uan
+ 
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | retry_pipeline:962 | All 3 attempts exhausted: fraud_detection_engine.py
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | execute_pipeline:1725 | Stopping pipeline (continue_on_failure=False)
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | execute_pipeline:1688 |   ✗ Cannot run final_security_report.py: missing deps ['fraud_detection_engine.py']
+2026-07-06 10:32:55 | ERROR    | SecurityPipeline | execute_pipeline:1700 | Stopping pipeline (continue_on_failure=False)

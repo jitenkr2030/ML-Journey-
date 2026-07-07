@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "input_file": "/root/ml-projects/stock-prediction/security-ai/raw/pf_wages_reconciliation.xlsx",
+    "input_size_bytes": 125618,
+    "parsed_at": "2026-07-06T10:27:46.135403",
+    "dry_run": false,
+    "parser_version": "2.0.0"
+  },
+  "runtime_stats": {
+    "start_time": 3049925.896735174,
+    "end_time": 3049931.069864405,
+    "files_processed": 0,
+    "sheets_processed": 7,
+    "sheets_skipped": 0,
+    "rows_read": 3500,
+    "rows_cleaned": 3500,
+    "rows_dropped_empty": 0,
+    "rows_dropped_duplicate": 0,
+    "employees_found": 508,
+    "sites_detected": 17,
+    "headers_auto_detected": 7,
+    "columns_normalized": 26,
+    "errors": 0,
+    "warnings": 0,
+    "elapsed_seconds": 5.173
+  },
+  "sheets_discovered": [
+    "employee_master",
+    "wages_register",
+    "attendance",
+    "pf_ecr",
+    "esi_challan",
+    "overtime_register",
+    "leave_register"
+  ],
+  "sheets_classified": {
+    "employee_master": "master",
+    "wages_register": "wages",
+    "attendance": "attendance",
+    "pf_ecr": "ecr",
+    "esi_challan": "ecr",
+    "overtime_register": "unknown",
+    "leave_register": "unknown"
+  },
+  "sheets_parsed": [
+    "leave_register",
+    "esi_challan",
+    "ecr",
+    "attendance",
+    "pf_ecr",
+    "overtime_register",
+    "wages_register",
+    "wages",
+    "employee_master",
+    "master"
+  ],
+  "sites": [
+    "EMPLOYEE",
+    "ESI CHALLAN",
+    "LEAVE REGISTER",
+    "OVERTIME REGISTER",
+    "REGISTER",
+    "S1",
+    "S10",
+    "S11",
+    "S12",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "employee_count": 508,
+  "data_shapes": {
+    "leave_register": {
+      "rows": 500,
+      "cols": 3,
+      "columns": [
+        "employee_id",
+        "leave_type",
+        "leave_days"
+      ]
+    },
+    "esi_challan": {
+      "rows": 500,
+      "cols": 5,
+      "columns": [
+        "employee_id",
+        "ip_number",
+        "esi_wages",
+        "employee_eps_contribution",
+        "employer_eps_contribution"
+      ]
+    },
+    "ecr": {
+      "rows": 500,
+      "cols": 5,
+      "columns": [
+        "employee_id",
+        "uan_number",
+        "epf_wages",
+        "employee_epf_contribution",
+        "employer_epf_contribution"
+      ]
+    },
+    "attendance": {
+      "rows": 500,
+      "cols": 4,
+      "columns": [
+        "employee_id",
+        "days_present",
+        "absent_days",
+        "overtime_hours"
+      ]
+    },
+    "pf_ecr": {
+      "rows": 500,
+      "cols": 5,
+      "columns": [
+        "employee_id",
+        "uan_number",
+        "epf_wages",
+        "employee_epf_contribution",
+        "employer_epf_contribution"
+      ]
+    },
+    "overtime_register": {
+      "rows": 500,
+      "cols": 3,
+      "columns": [
+        "employee_id",
+        "overtime_hours",
+        "overtime_amount"
+      ]
+    },
+    "wages_register": {
+      "rows": 500,
+      "cols": 15,
+      "columns": [
+        "employee_id",
+        "site_location",
+        "rate_of_wage",
+        "days_worked",
+        "overtime_hours",
+        "basic_wages",
+        "special_basic",
+        "da",
+        "overtime_payment",
+        "total_wages",
+        "employee_epf_contribution",
+        "employee_eps_contribution",
+        "employee_name",
+        "employer_epf_contribution",
+        "employer_eps_contribution"
+      ]
+    },
+    "wages": {
+      "rows": 500,
+      "cols": 15,
+      "columns": [
+        "employee_id",
+        "site_location",
+        "rate_of_wage",
+        "days_worked",
+        "overtime_hours",
+        "basic_wages",
+        "special_basic",
+        "da",
+        "overtime_payment",
+        "total_wages",
+        "employee_epf_contribution",
+        "employee_eps_contribution",
+        "employee_name",
+        "employer_epf_contribution",
+        "employer_eps_contribution"
+      ]
+    },
+    "employee_master": {
+      "rows": 500,
+      "cols": 7,
+      "columns": [
+        "employee_id",
+        "employee_name",
+        "site_location",
+        "uan_number",
+        "ip_number",
+        "bank",
+        "joining_date"
+      ]
+    },
+    "master": {
+      "rows": 500,
+      "cols": 7,
+      "columns": [
+        "employee_id",
+        "employee_name",
+        "site_location",
+        "uan_number",
+        "ip_number",
+        "bank",
+        "joining_date"
+      ]
+    }
+  },
+  "audit_trail_count": 34
+}

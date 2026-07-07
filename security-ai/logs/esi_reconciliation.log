@@ -1,0 +1,52 @@
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2166 | ======================================================================
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2167 | ESI RECONCILIATION ENGINE
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2168 | Client: default
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2169 | ESI Wage Limit: ₹21,000
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2170 | Employee Rate: 0.75%
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2171 | Employer Rate: 3.25%
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2172 | ======================================================================
+2026-07-06 10:27:57 | INFO     | ESIRecon | load_csv:2103 | Loaded wages.csv: 500 rows × 15 cols
+2026-07-06 10:27:57 | WARNING  | ESIRecon | load_csv:2090 | Missing file: /root/ml-projects/stock-prediction/security-ai/processed/difference.csv
+2026-07-06 10:27:57 | WARNING  | ESIRecon | load_csv:2090 | Missing file: /root/ml-projects/stock-prediction/security-ai/processed/bank.csv
+2026-07-06 10:27:57 | INFO     | ESIRecon | load_csv:2103 | Loaded attendance.csv: 500 rows × 4 cols
+2026-07-06 10:27:57 | INFO     | ESIRecon | load_csv:2103 | Loaded employee_master.csv: 508 rows × 5 cols
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2198 | PHASE 1: INPUT VALIDATION
+2026-07-06 10:27:57 | INFO     | ESIRecon | run_input_validation:541 | [wages] Input validation: 0 total issues
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2204 | PHASE 2: EMPLOYEE MATCHING
+2026-07-06 10:27:57 | INFO     | ESIRecon | run:2221 | PHASE 3: ESI RECONCILIATION
+2026-07-06 10:27:58 | INFO     | ESIRecon | run:2227 | PHASE 4: CONTRIBUTION VALIDATION
+2026-07-06 10:27:59 | INFO     | ESIRecon | run:2257 | PHASE 5: ESI ELIGIBILITY CHECKS
+2026-07-06 10:27:59 | INFO     | ESIRecon | run:2281 | PHASE 6: WAGE REGISTER VALIDATION
+2026-07-06 10:27:59 | INFO     | ESIRecon | run:2292 | PHASE 7: COMPLIANCE RULES
+2026-07-06 10:27:59 | INFO     | ESIRecon | run:2310 | PHASE 8: FRAUD DETECTION
+2026-07-06 10:28:00 | INFO     | ESIRecon | run:2326 | Fraud flags: 0
+2026-07-06 10:28:00 | INFO     | ESIRecon | run:2329 | PHASE 9: ATTENDANCE CROSS-VALIDATION
+2026-07-06 10:28:00 | INFO     | ESIRecon | run:2356 | PHASE 10: BANK VALIDATION
+2026-07-06 10:28:00 | INFO     | ESIRecon | run:2380 | PHASE 11: AI ANOMALY DETECTION
+2026-07-06 10:28:00 | INFO     | ESIRecon | run:2385 | PHASE 12: RISK SCORING
+2026-07-06 10:28:31 | INFO     | ESIRecon | run:2436 | PHASE 13: AI RECOMMENDATIONS
+2026-07-06 10:28:31 | INFO     | ESIRecon | run:2453 | PHASE 14: REPORT GENERATION
+2026-07-06 10:28:31 | INFO     | ESIRecon | run:2490 | PHASE 15: EXPORT
+2026-07-06 10:28:31 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/esi_reconciliation_report.csv (500 rows)
+2026-07-06 10:28:31 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/manual_review.csv (101 rows)
+2026-07-06 10:28:32 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/risk_summary.csv (500 rows)
+2026-07-06 10:28:32 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/recommendations.csv (101 rows)
+2026-07-06 10:28:32 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/site_summary.csv (12 rows)
+2026-07-06 10:28:32 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/compliance_dashboard.csv (1 rows)
+2026-07-06 10:28:32 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/exception_report.csv (101 rows)
+2026-07-06 10:28:32 | INFO     | ESIRecon | export_csv_reports:2054 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/audit_trail.csv (103 rows)
+2026-07-06 10:28:49 | INFO     | ESIRecon | export_excel:2066 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/esi_reconciliation_20260706_102832.xlsx (8 sheets)
+2026-07-06 10:28:49 | INFO     | ESIRecon | export_json:2075 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/esi_summary_20260706_102849.json
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2496 | ======================================================================
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2497 | ESI RECONCILIATION COMPLETE
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2498 |   Elapsed:          7.496s
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2499 |   Files loaded:     3
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2500 |   Rows processed:   1508
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2501 |   Matches:          0/0
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2502 |   Validations:      500 (399 pass / 101 fail)
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2504 |   Fraud flags:      0
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2505 |   Recommendations:  101
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2506 |   Compliance:       79.8%
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2507 |   CSV files:        8
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2508 |   Speed:            201.2 rows/sec
+2026-07-06 10:28:49 | INFO     | ESIRecon | run:2509 | ======================================================================

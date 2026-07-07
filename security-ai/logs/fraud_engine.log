@@ -1,0 +1,72 @@
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2115 | ======================================================================
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2116 | FRAUD DETECTION ENGINE
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2117 | Engine version: 6.0.0
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2118 | ======================================================================
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2121 | PHASE 1: LOADING DATA
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded attendance.csv: 5000 × 6
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded payroll.csv: 500 × 8
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded guards_master.csv: 500 × 6
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded compliance.csv: 500 × 5
+2026-07-06 10:32:37 | WARNING  | FraudEngine | safe_load:459 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded site_assignments.csv: 800 × 5
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded incidents.csv: 800 × 4
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded complaints.csv: 590 × 3
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded pf_reconciliation_report.csv: 500 × 17
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded esi_reconciliation_report.csv: 500 × 11
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded employee_matching_report.csv: 500 × 11
+2026-07-06 10:32:37 | WARNING  | FraudEngine | safe_load:459 | Missing file: /root/ml-projects/stock-prediction/security-ai/reconciliation/duplicate_employees.csv
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded missing_employees.csv: 8 × 10
+2026-07-06 10:32:37 | INFO     | FraudEngine | safe_load:472 | Loaded risk_summary.csv: 1 × 3
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2129 | PHASE 2: FRAUD DETECTION
+2026-07-06 10:32:37 | INFO     | FraudEngine | run:2135 |   Module 6: Attendance Fraud
+2026-07-06 10:32:38 | INFO     | FraudEngine | run:2145 |   Module 7: Payroll Fraud
+2026-07-06 10:32:38 | INFO     | FraudEngine | run:2153 |   Module 8: Ghost Employee Intelligence
+2026-07-06 10:32:38 | INFO     | FraudEngine | run:2158 |   Module 9: Identity Fraud
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2115 | ======================================================================
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2116 | FRAUD DETECTION ENGINE
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2117 | Engine version: 6.0.0
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2118 | ======================================================================
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2121 | PHASE 1: LOADING DATA
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded attendance.csv: 5000 × 6
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded payroll.csv: 500 × 8
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded guards_master.csv: 500 × 6
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded compliance.csv: 500 × 5
+2026-07-06 10:32:46 | WARNING  | FraudEngine | safe_load:459 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded site_assignments.csv: 800 × 5
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded incidents.csv: 800 × 4
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded complaints.csv: 590 × 3
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded pf_reconciliation_report.csv: 500 × 17
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded esi_reconciliation_report.csv: 500 × 11
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded employee_matching_report.csv: 500 × 11
+2026-07-06 10:32:46 | WARNING  | FraudEngine | safe_load:459 | Missing file: /root/ml-projects/stock-prediction/security-ai/reconciliation/duplicate_employees.csv
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded missing_employees.csv: 8 × 10
+2026-07-06 10:32:46 | INFO     | FraudEngine | safe_load:472 | Loaded risk_summary.csv: 1 × 3
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2129 | PHASE 2: FRAUD DETECTION
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2135 |   Module 6: Attendance Fraud
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2145 |   Module 7: Payroll Fraud
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2153 |   Module 8: Ghost Employee Intelligence
+2026-07-06 10:32:46 | INFO     | FraudEngine | run:2158 |   Module 9: Identity Fraud
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2115 | ======================================================================
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2116 | FRAUD DETECTION ENGINE
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2117 | Engine version: 6.0.0
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2118 | ======================================================================
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2121 | PHASE 1: LOADING DATA
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded attendance.csv: 5000 × 6
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded payroll.csv: 500 × 8
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded guards_master.csv: 500 × 6
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded compliance.csv: 500 × 5
+2026-07-06 10:32:54 | WARNING  | FraudEngine | safe_load:459 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded site_assignments.csv: 800 × 5
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded incidents.csv: 800 × 4
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded complaints.csv: 590 × 3
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded pf_reconciliation_report.csv: 500 × 17
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded esi_reconciliation_report.csv: 500 × 11
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded employee_matching_report.csv: 500 × 11
+2026-07-06 10:32:54 | WARNING  | FraudEngine | safe_load:459 | Missing file: /root/ml-projects/stock-prediction/security-ai/reconciliation/duplicate_employees.csv
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded missing_employees.csv: 8 × 10
+2026-07-06 10:32:54 | INFO     | FraudEngine | safe_load:472 | Loaded risk_summary.csv: 1 × 3
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2129 | PHASE 2: FRAUD DETECTION
+2026-07-06 10:32:54 | INFO     | FraudEngine | run:2135 |   Module 6: Attendance Fraud
+2026-07-06 10:32:55 | INFO     | FraudEngine | run:2145 |   Module 7: Payroll Fraud
+2026-07-06 10:32:55 | INFO     | FraudEngine | run:2153 |   Module 8: Ghost Employee Intelligence
+2026-07-06 10:32:55 | INFO     | FraudEngine | run:2158 |   Module 9: Identity Fraud

@@ -1,0 +1,79 @@
+2026-07-06 10:27:48 | INFO     | MatchingEngine | run:2138 | ======================================================================
+2026-07-06 10:27:48 | INFO     | MatchingEngine | run:2139 | SECURITY AI — EMPLOYEE MATCHING ENGINE
+2026-07-06 10:27:48 | INFO     | MatchingEngine | run:2140 | Engine version: 3.0.0
+2026-07-06 10:27:48 | INFO     | MatchingEngine | run:2141 | Operator: auto
+2026-07-06 10:27:48 | INFO     | MatchingEngine | run:2142 | ======================================================================
+2026-07-06 10:27:48 | INFO     | MatchingEngine | _load_files:1588 | Loading input files...
+2026-07-06 10:27:48 | INFO     | MatchingEngine | _load_files:1599 | Loaded 'wages': 500 rows × 15 cols | Columns detected: {'emp_id': 'employee_id', 'name': 'employee_name', 'site': 'site_location'}
+2026-07-06 10:27:48 | WARNING  | MatchingEngine | _load_files:1606 | File not found (skipping): /root/ml-projects/stock-prediction/security-ai/processed/pf.csv
+2026-07-06 10:27:48 | WARNING  | MatchingEngine | _load_files:1606 | File not found (skipping): /root/ml-projects/stock-prediction/security-ai/processed/esi.csv
+2026-07-06 10:27:48 | WARNING  | MatchingEngine | _load_files:1606 | File not found (skipping): /root/ml-projects/stock-prediction/security-ai/processed/bank.csv
+2026-07-06 10:27:48 | INFO     | MatchingEngine | _load_files:1599 | Loaded 'ecr': 500 rows × 5 cols | Columns detected: {'uan': 'uan_number', 'emp_id': 'employee_id'}
+2026-07-06 10:27:48 | INFO     | MatchingEngine | _load_files:1599 | Loaded 'attendance': 500 rows × 4 cols | Columns detected: {'emp_id': 'employee_id'}
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _load_files:1599 | Loaded 'master': 508 rows × 5 cols | Columns detected: {'uan': 'uan_number', 'emp_id': 'employee_id', 'name': 'employee_name', 'site': 'site_location'}
+2026-07-06 10:27:49 | WARNING  | MatchingEngine | _load_files:1606 | File not found (skipping): /root/ml-projects/stock-prediction/security-ai/processed/matching.csv
+2026-07-06 10:27:49 | WARNING  | MatchingEngine | _load_files:1606 | File not found (skipping): /root/ml-projects/stock-prediction/security-ai/processed/difference.csv
+2026-07-06 10:27:49 | WARNING  | MatchingEngine | _load_files:1606 | File not found (skipping): /root/ml-projects/stock-prediction/security-ai/processed/admin.csv
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1635 | ============================================================
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1636 | PHASE 1: CASCADE MATCHING
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1637 | ============================================================
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1659 | Target system 'pf' not available — skipping
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1659 | Target system 'esi' not available — skipping
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1659 | Target system 'bank' not available — skipping
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1663 | Matching wages → ecr (500 records)
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1738 |   ecr: exact=500, fuzzy=0, no_match=0
+2026-07-06 10:27:49 | INFO     | MatchingEngine | _run_cascade_matching:1663 | Matching wages → master (500 records)
+2026-07-06 10:27:50 | INFO     | MatchingEngine | _run_cascade_matching:1738 |   master: exact=500, fuzzy=0, no_match=0
+2026-07-06 10:27:50 | INFO     | MatchingEngine | _run_cascade_matching:1663 | Matching wages → attendance (500 records)
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_cascade_matching:1738 |   attendance: exact=500, fuzzy=0, no_match=0
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_cascade_matching:1745 | Total match records: 1500
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_duplicate_detection:1756 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_duplicate_detection:1757 | PHASE 2: DUPLICATE DETECTION
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_duplicate_detection:1758 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | detect:1079 | Duplicate detection: found 0 duplicate pairs
+2026-07-06 10:27:51 | INFO     | MatchingEngine | detect:1079 | Duplicate detection: found 0 duplicate pairs
+2026-07-06 10:27:51 | INFO     | MatchingEngine | detect:1079 | Duplicate detection: found 0 duplicate pairs
+2026-07-06 10:27:51 | INFO     | MatchingEngine | detect:1079 | Duplicate detection: found 0 duplicate pairs
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_duplicate_detection:1767 | Total duplicates detected: 0
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_missing_detection:1775 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_missing_detection:1776 | PHASE 3: MISSING EMPLOYEE DETECTION
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_missing_detection:1777 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | detect:1332 | Missing employee detection: 8 gaps found
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_missing_detection:1785 | Total missing records: 8
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_bank_validation:1793 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_bank_validation:1794 | PHASE 4: BANK VALIDATION
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_bank_validation:1795 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_bank_validation:1821 | Bank validation: no issues found
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_risk_scoring:1831 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_risk_scoring:1832 | PHASE 5: RISK SCORING
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_risk_scoring:1833 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _run_risk_scoring:1866 | Risk scores computed: 500
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_exception_log:1874 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_exception_log:1875 | PHASE 6: EXCEPTION LOG
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_exception_log:1876 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_exception_log:1889 | Exception records: 0
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_dashboard:1897 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_dashboard:1898 | PHASE 7: DASHBOARD GENERATION
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_dashboard:1899 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _build_dashboard:1981 | Dashboard: compliance=100.0%, exact=500, fuzzy=0, review=0, rejected=0
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _export_all:2005 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _export_all:2006 | PHASE 8: EXPORT
+2026-07-06 10:27:51 | INFO     | MatchingEngine | _export_all:2007 | ============================================================
+2026-07-06 10:27:51 | INFO     | MatchingEngine | export_csv:1420 | CSV exported → /root/ml-projects/stock-prediction/security-ai/reconciliation/employee_matching_report.csv (main report)
+2026-07-06 10:27:51 | INFO     | MatchingEngine | export_csv:1420 | CSV exported → /root/ml-projects/stock-prediction/security-ai/reconciliation/missing_employees.csv (missing)
+2026-07-06 10:27:51 | INFO     | MatchingEngine | export_csv:1420 | CSV exported → /root/ml-projects/stock-prediction/security-ai/reconciliation/risk_scores.csv (risk)
+2026-07-06 10:27:51 | INFO     | MatchingEngine | export_csv:1420 | CSV exported → /root/ml-projects/stock-prediction/security-ai/reconciliation/audit_trail.csv (audit)
+2026-07-06 10:27:51 | INFO     | MatchingEngine | to_json:1391 | Audit trail saved → /root/ml-projects/stock-prediction/security-ai/summaries/audit_trail_20260706_102751.json
+2026-07-06 10:27:54 | INFO     | MatchingEngine | export_excel:1438 | Excel exported → /root/ml-projects/stock-prediction/security-ai/exports/matching_report_20260706_102751.xlsx (multi-sheet, 5 sheets)
+2026-07-06 10:27:54 | INFO     | MatchingEngine | export_json:1426 | JSON exported → /root/ml-projects/stock-prediction/security-ai/summaries/matching_summary_20260706_102751.json (dashboard)
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2176 | ======================================================================
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2177 | MATCHING ENGINE COMPLETE
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2178 |   Elapsed:              5.97s
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2179 |   Systems loaded:       4
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2181 |   Match records:        1500
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2182 |   Duplicates found:     0
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2183 |   Missing employees:    8
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2184 |   Risk scores:          500
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2186 |   Compliance:           100.0%
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2187 |   Avg confidence:       100.0
+2026-07-06 10:27:54 | INFO     | MatchingEngine | run:2188 | ======================================================================

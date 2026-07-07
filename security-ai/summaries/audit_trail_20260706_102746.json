@@ -1,0 +1,274 @@
+[
+  {
+    "timestamp": "2026-07-06T10:27:40.966152",
+    "action": "RUN_START",
+    "sheet": "system",
+    "detail": "File=pf_wages_reconciliation.xlsx",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.106017",
+    "action": "PARSE_START",
+    "sheet": "leave_register",
+    "detail": "Category=unknown",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.235004",
+    "action": "HEADER_DETECTED",
+    "sheet": "leave_register",
+    "detail": "Header at row 0, 3 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.245286",
+    "action": "CLEAN",
+    "sheet": "leave_register",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "caef5bebac39"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.247270",
+    "action": "PARSE_COMPLETE",
+    "sheet": "leave_register",
+    "detail": "Final shape=(500, 3)",
+    "rows_affected": 500,
+    "checksum": "caef5bebac39"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.248134",
+    "action": "PARSE_START",
+    "sheet": "esi_challan",
+    "detail": "Category=ecr",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.409965",
+    "action": "HEADER_DETECTED",
+    "sheet": "esi_challan",
+    "detail": "Header at row 0, 5 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.422407",
+    "action": "CLEAN",
+    "sheet": "esi_challan",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "602040a2a337"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.424722",
+    "action": "ECR_EXTRACT",
+    "sheet": "esi_challan",
+    "detail": "ECR columns processed: []",
+    "rows_affected": 500,
+    "checksum": "602040a2a337"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.427168",
+    "action": "PARSE_COMPLETE",
+    "sheet": "esi_challan",
+    "detail": "Final shape=(500, 5)",
+    "rows_affected": 500,
+    "checksum": "602040a2a337"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.427998",
+    "action": "PARSE_START",
+    "sheet": "attendance",
+    "detail": "Category=attendance",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.548484",
+    "action": "HEADER_DETECTED",
+    "sheet": "attendance",
+    "detail": "Header at row 0, 4 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.556590",
+    "action": "CLEAN",
+    "sheet": "attendance",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "975168202020"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.559194",
+    "action": "ATTENDANCE_EXTRACT",
+    "sheet": "attendance",
+    "detail": "Attendance columns: ['days_present', 'absent_days']",
+    "rows_affected": 500,
+    "checksum": "975168202020"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.560642",
+    "action": "PARSE_COMPLETE",
+    "sheet": "attendance",
+    "detail": "Final shape=(500, 4)",
+    "rows_affected": 500,
+    "checksum": "975168202020"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.561560",
+    "action": "PARSE_START",
+    "sheet": "pf_ecr",
+    "detail": "Category=ecr",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.762177",
+    "action": "HEADER_DETECTED",
+    "sheet": "pf_ecr",
+    "detail": "Header at row 0, 5 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.774737",
+    "action": "CLEAN",
+    "sheet": "pf_ecr",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "006f33db08c9"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.777205",
+    "action": "ECR_EXTRACT",
+    "sheet": "pf_ecr",
+    "detail": "ECR columns processed: []",
+    "rows_affected": 500,
+    "checksum": "006f33db08c9"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.779559",
+    "action": "PARSE_COMPLETE",
+    "sheet": "pf_ecr",
+    "detail": "Final shape=(500, 5)",
+    "rows_affected": 500,
+    "checksum": "006f33db08c9"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.780393",
+    "action": "PARSE_START",
+    "sheet": "overtime_register",
+    "detail": "Category=unknown",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.886120",
+    "action": "HEADER_DETECTED",
+    "sheet": "overtime_register",
+    "detail": "Header at row 0, 3 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.894259",
+    "action": "CLEAN",
+    "sheet": "overtime_register",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "98277328657a"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.895699",
+    "action": "PARSE_COMPLETE",
+    "sheet": "overtime_register",
+    "detail": "Final shape=(500, 3)",
+    "rows_affected": 500,
+    "checksum": "98277328657a"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:43.896554",
+    "action": "PARSE_START",
+    "sheet": "wages_register",
+    "detail": "Category=wages",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.250747",
+    "action": "HEADER_DETECTED",
+    "sheet": "wages_register",
+    "detail": "Header at row 0, 15 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.272268",
+    "action": "CLEAN",
+    "sheet": "wages_register",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "790ef35896c0"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.282509",
+    "action": "PARSE_COMPLETE",
+    "sheet": "wages_register",
+    "detail": "Final shape=(500, 15)",
+    "rows_affected": 500,
+    "checksum": "790ef35896c0"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.283329",
+    "action": "PARSE_START",
+    "sheet": "employee_master",
+    "detail": "Category=master",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.578793",
+    "action": "HEADER_DETECTED",
+    "sheet": "employee_master",
+    "detail": "Header at row 0, 7 columns",
+    "rows_affected": 0,
+    "checksum": ""
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.604465",
+    "action": "CLEAN",
+    "sheet": "employee_master",
+    "detail": "Cleaned: 500 \u2192 500 rows",
+    "rows_affected": 500,
+    "checksum": "83cf1398c3c3"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.610710",
+    "action": "PARSE_COMPLETE",
+    "sheet": "employee_master",
+    "detail": "Final shape=(500, 7)",
+    "rows_affected": 500,
+    "checksum": "83cf1398c3c3"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.648418",
+    "action": "EMPLOYEE_MASTER",
+    "sheet": "all",
+    "detail": "Extracted 508 unique employees",
+    "rows_affected": 508,
+    "checksum": "3d09a7427c67"
+  },
+  {
+    "timestamp": "2026-07-06T10:27:44.651658",
+    "action": "SITE_DETECTION",
+    "sheet": "all",
+    "detail": "Found 17 sites: ['EMPLOYEE', 'ESI CHALLAN', 'LEAVE REGISTER', 'OVERTIME REGISTER', 'REGISTER', 'S1', 'S10', 'S11', 'S12', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9']",
+    "rows_affected": 0,
+    "checksum": ""
+  }
+]

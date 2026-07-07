@@ -1,0 +1,276 @@
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1696 | ======================================================================
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1697 | FINAL SECURITY REPORT ENGINE
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1698 | Engine version: 9.0.0
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1699 | Client: default, Month: current
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1700 | ======================================================================
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1703 | PHASE 1: LOADING PIPELINE OUTPUTS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1709 | Loaded 13 sources, 13599 total rows
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1712 | PHASE 2: FILE HEALTH VALIDATION
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1715 |   pf_reconciliation: PASS (500 rows)
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1715 |   esi_reconciliation: PASS (500 rows)
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1715 |   wage_anomaly: PASS (500 rows)
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1715 |   fraud_detection: PASS (2803 rows)
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1715 |   compliance_risk: PASS (506 rows)
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1715 |   site_performance: PASS (100 rows)
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1718 | PHASE 3: PIPELINE STATUS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Excel Parser: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Employee Matching: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   PF Reconciliation: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   ESI Reconciliation: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Wage Anomaly Detection: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Fraud Detection: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Compliance Risk Scoring: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Site Performance Scoring: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1721 |   Final Security Report: PASS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1724 | PHASE 4: COMPLIANCE SUMMARY
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1726 |   Overall compliance: 68.52%
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1729 | PHASE 5: RISK SUMMARY
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1731 |   Total risk cases: 506
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1734 | PHASE 6: FRAUD SUMMARY
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1736 |   Fraud alerts: 2803
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1739 | PHASE 7: WAGE ANALYTICS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1741 |   Total payroll: ₹12,878,910
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1744 | PHASE 8: SITE ANALYTICS
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1746 |   Sites: 100, Avg: 30.41
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1749 | PHASE 9: EXECUTIVE DASHBOARD
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1754 | PHASE 10: KPI GENERATION
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1756 |   Employees: 500
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1757 |   Attendance: 18.02%
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1758 |   Payroll accuracy: 100.0%
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1761 | PHASE 11: OVERALL SECURITY SCORE
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1765 |   Overall score: 55.97/100
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1768 | PHASE 12: MANAGEMENT DECISION
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1772 |   Decision: Needs Improvement
+2026-07-06 10:32:58 | INFO     | FinalReport | run:1775 | PHASE 13: TOP 10 REPORTS
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1782 | PHASE 14: RECOMMENDATIONS
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1786 |   Recommendations: 5
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1789 | PHASE 15: CHART DATA
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1795 | PHASE 16: ML SUMMARY
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1799 | PHASE 17: MONTHLY TRENDS
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1805 | PHASE 18: CLIENT SUMMARY
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1815 | PHASE 20: BUILD FINAL REPORT
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1879 | PHASE 21: EXPORT
+2026-07-06 10:32:59 | INFO     | FinalReport | export_csv:1403 | CSV → /root/ml-projects/stock-prediction/security-ai/outputs/security_ai_final_report.csv
+2026-07-06 10:32:59 | INFO     | FinalReport | export_excel:1508 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/security_ai_final_report_20260706_103259.xlsx
+2026-07-06 10:32:59 | INFO     | FinalReport | export_json:1518 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_dashboard.json
+2026-07-06 10:32:59 | INFO     | FinalReport | export_json:1524 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_summary.json
+2026-07-06 10:32:59 | WARNING  | FinalReport | generate_pdf_report:1545 | reportlab not available — skipping PDF export
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1908 | ======================================================================
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1909 | FINAL SECURITY REPORT COMPLETE
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1910 |   Elapsed:             0.486s
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1911 |   Files loaded:        13
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1912 |   Rows processed:      13599
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1913 |   Overall score:       55.97/100
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1914 |   Decision:            Needs Improvement
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1915 |   Compliance:          68.52%
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1916 |   Fraud alerts:        2803
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1917 |   High risk cases:     0
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1918 |   Recommendations:     5
+2026-07-06 10:32:59 | INFO     | FinalReport | run:1919 | ======================================================================
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1696 | ======================================================================
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1697 | FINAL SECURITY REPORT ENGINE
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1698 | Engine version: 9.0.0
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1699 | Client: default, Month: current
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1700 | ======================================================================
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1703 | PHASE 1: LOADING PIPELINE OUTPUTS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1709 | Loaded 13 sources, 13599 total rows
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1712 | PHASE 2: FILE HEALTH VALIDATION
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1715 |   pf_reconciliation: PASS (500 rows)
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1715 |   esi_reconciliation: PASS (500 rows)
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1715 |   wage_anomaly: PASS (500 rows)
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1715 |   fraud_detection: PASS (2803 rows)
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1715 |   compliance_risk: PASS (506 rows)
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1715 |   site_performance: PASS (100 rows)
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1718 | PHASE 3: PIPELINE STATUS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Excel Parser: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Employee Matching: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   PF Reconciliation: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   ESI Reconciliation: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Wage Anomaly Detection: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Fraud Detection: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Compliance Risk Scoring: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Site Performance Scoring: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1721 |   Final Security Report: PASS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1724 | PHASE 4: COMPLIANCE SUMMARY
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1726 |   Overall compliance: 68.52%
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1729 | PHASE 5: RISK SUMMARY
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1731 |   Total risk cases: 506
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1734 | PHASE 6: FRAUD SUMMARY
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1736 |   Fraud alerts: 2803
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1739 | PHASE 7: WAGE ANALYTICS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1741 |   Total payroll: ₹12,878,910
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1744 | PHASE 8: SITE ANALYTICS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1746 |   Sites: 100, Avg: 30.41
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1749 | PHASE 9: EXECUTIVE DASHBOARD
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1754 | PHASE 10: KPI GENERATION
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1756 |   Employees: 500
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1757 |   Attendance: 18.02%
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1758 |   Payroll accuracy: 100.0%
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1761 | PHASE 11: OVERALL SECURITY SCORE
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1765 |   Overall score: 55.97/100
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1768 | PHASE 12: MANAGEMENT DECISION
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1772 |   Decision: Needs Improvement
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1775 | PHASE 13: TOP 10 REPORTS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1782 | PHASE 14: RECOMMENDATIONS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1786 |   Recommendations: 5
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1789 | PHASE 15: CHART DATA
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1795 | PHASE 16: ML SUMMARY
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1799 | PHASE 17: MONTHLY TRENDS
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1805 | PHASE 18: CLIENT SUMMARY
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1815 | PHASE 20: BUILD FINAL REPORT
+2026-07-06 16:41:51 | INFO     | FinalReport | run:1879 | PHASE 21: EXPORT
+2026-07-06 16:41:51 | INFO     | FinalReport | export_csv:1403 | CSV → /root/ml-projects/stock-prediction/security-ai/outputs/security_ai_final_report.csv
+2026-07-06 16:41:51 | INFO     | FinalReport | export_excel:1508 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/security_ai_final_report_20260706_164151.xlsx
+2026-07-06 16:41:51 | INFO     | FinalReport | export_json:1518 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_dashboard.json
+2026-07-06 16:41:51 | INFO     | FinalReport | export_json:1524 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_summary.json
+2026-07-06 16:41:51 | WARNING  | FinalReport | generate_pdf_report:1545 | reportlab not available — skipping PDF export
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1908 | ======================================================================
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1909 | FINAL SECURITY REPORT COMPLETE
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1910 |   Elapsed:             0.444s
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1911 |   Files loaded:        13
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1912 |   Rows processed:      13599
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1913 |   Overall score:       55.97/100
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1914 |   Decision:            Needs Improvement
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1915 |   Compliance:          68.52%
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1916 |   Fraud alerts:        2803
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1917 |   High risk cases:     0
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1918 |   Recommendations:     5
+2026-07-06 16:41:52 | INFO     | FinalReport | run:1919 | ======================================================================
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1696 | ======================================================================
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1697 | FINAL SECURITY REPORT ENGINE
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1698 | Engine version: 9.0.0
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1699 | Client: default, Month: current
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1700 | ======================================================================
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1703 | PHASE 1: LOADING PIPELINE OUTPUTS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1709 | Loaded 13 sources, 13599 total rows
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1712 | PHASE 2: FILE HEALTH VALIDATION
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1715 |   pf_reconciliation: PASS (500 rows)
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1715 |   esi_reconciliation: PASS (500 rows)
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1715 |   wage_anomaly: PASS (500 rows)
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1715 |   fraud_detection: PASS (2803 rows)
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1715 |   compliance_risk: PASS (506 rows)
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1715 |   site_performance: PASS (100 rows)
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1718 | PHASE 3: PIPELINE STATUS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Excel Parser: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Employee Matching: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   PF Reconciliation: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   ESI Reconciliation: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Wage Anomaly Detection: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Fraud Detection: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Compliance Risk Scoring: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Site Performance Scoring: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1721 |   Final Security Report: PASS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1724 | PHASE 4: COMPLIANCE SUMMARY
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1726 |   Overall compliance: 68.52%
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1729 | PHASE 5: RISK SUMMARY
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1731 |   Total risk cases: 506
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1734 | PHASE 6: FRAUD SUMMARY
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1736 |   Fraud alerts: 2803
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1739 | PHASE 7: WAGE ANALYTICS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1741 |   Total payroll: ₹12,878,910
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1744 | PHASE 8: SITE ANALYTICS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1746 |   Sites: 100, Avg: 30.41
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1749 | PHASE 9: EXECUTIVE DASHBOARD
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1754 | PHASE 10: KPI GENERATION
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1756 |   Employees: 500
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1757 |   Attendance: 18.02%
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1758 |   Payroll accuracy: 100.0%
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1761 | PHASE 11: OVERALL SECURITY SCORE
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1765 |   Overall score: 55.97/100
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1768 | PHASE 12: MANAGEMENT DECISION
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1772 |   Decision: Needs Improvement
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1775 | PHASE 13: TOP 10 REPORTS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1782 | PHASE 14: RECOMMENDATIONS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1786 |   Recommendations: 5
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1789 | PHASE 15: CHART DATA
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1795 | PHASE 16: ML SUMMARY
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1799 | PHASE 17: MONTHLY TRENDS
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1805 | PHASE 18: CLIENT SUMMARY
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1815 | PHASE 20: BUILD FINAL REPORT
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1879 | PHASE 21: EXPORT
+2026-07-06 16:43:15 | INFO     | FinalReport | export_csv:1403 | CSV → /root/ml-projects/stock-prediction/security-ai/outputs/security_ai_final_report.csv
+2026-07-06 16:43:15 | INFO     | FinalReport | export_excel:1508 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/security_ai_final_report_20260706_164315.xlsx
+2026-07-06 16:43:15 | INFO     | FinalReport | export_json:1518 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_dashboard.json
+2026-07-06 16:43:15 | INFO     | FinalReport | export_json:1524 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_summary.json
+2026-07-06 16:43:15 | WARNING  | FinalReport | generate_pdf_report:1545 | reportlab not available — skipping PDF export
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1908 | ======================================================================
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1909 | FINAL SECURITY REPORT COMPLETE
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1910 |   Elapsed:             0.446s
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1911 |   Files loaded:        13
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1912 |   Rows processed:      13599
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1913 |   Overall score:       55.97/100
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1914 |   Decision:            Needs Improvement
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1915 |   Compliance:          68.52%
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1916 |   Fraud alerts:        2803
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1917 |   High risk cases:     0
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1918 |   Recommendations:     5
+2026-07-06 16:43:15 | INFO     | FinalReport | run:1919 | ======================================================================
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1696 | ======================================================================
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1697 | FINAL SECURITY REPORT ENGINE
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1698 | Engine version: 9.0.0
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1699 | Client: default, Month: current
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1700 | ======================================================================
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1703 | PHASE 1: LOADING PIPELINE OUTPUTS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1709 | Loaded 13 sources, 13599 total rows
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1712 | PHASE 2: FILE HEALTH VALIDATION
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1715 |   pf_reconciliation: PASS (500 rows)
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1715 |   esi_reconciliation: PASS (500 rows)
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1715 |   wage_anomaly: PASS (500 rows)
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1715 |   fraud_detection: PASS (2803 rows)
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1715 |   compliance_risk: PASS (506 rows)
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1715 |   site_performance: PASS (100 rows)
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1718 | PHASE 3: PIPELINE STATUS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Excel Parser: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Employee Matching: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   PF Reconciliation: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   ESI Reconciliation: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Wage Anomaly Detection: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Fraud Detection: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Compliance Risk Scoring: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Site Performance Scoring: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1721 |   Final Security Report: PASS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1724 | PHASE 4: COMPLIANCE SUMMARY
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1726 |   Overall compliance: 68.52%
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1729 | PHASE 5: RISK SUMMARY
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1731 |   Total risk cases: 506
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1734 | PHASE 6: FRAUD SUMMARY
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1736 |   Fraud alerts: 2803
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1739 | PHASE 7: WAGE ANALYTICS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1741 |   Total payroll: ₹12,878,910
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1744 | PHASE 8: SITE ANALYTICS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1746 |   Sites: 100, Avg: 30.41
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1749 | PHASE 9: EXECUTIVE DASHBOARD
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1754 | PHASE 10: KPI GENERATION
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1756 |   Employees: 500
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1757 |   Attendance: 18.02%
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1758 |   Payroll accuracy: 100.0%
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1761 | PHASE 11: OVERALL SECURITY SCORE
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1765 |   Overall score: 55.97/100
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1768 | PHASE 12: MANAGEMENT DECISION
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1772 |   Decision: Needs Improvement
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1775 | PHASE 13: TOP 10 REPORTS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1782 | PHASE 14: RECOMMENDATIONS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1786 |   Recommendations: 5
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1789 | PHASE 15: CHART DATA
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1795 | PHASE 16: ML SUMMARY
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1799 | PHASE 17: MONTHLY TRENDS
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1805 | PHASE 18: CLIENT SUMMARY
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1815 | PHASE 20: BUILD FINAL REPORT
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1879 | PHASE 21: EXPORT
+2026-07-06 16:49:10 | INFO     | FinalReport | export_csv:1403 | CSV → /root/ml-projects/stock-prediction/security-ai/outputs/security_ai_final_report.csv
+2026-07-06 16:49:10 | INFO     | FinalReport | export_excel:1508 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/security_ai_final_report_20260706_164910.xlsx
+2026-07-06 16:49:10 | INFO     | FinalReport | export_json:1518 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_dashboard.json
+2026-07-06 16:49:10 | INFO     | FinalReport | export_json:1524 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/security_ai_summary.json
+2026-07-06 16:49:10 | WARNING  | FinalReport | generate_pdf_report:1545 | reportlab not available — skipping PDF export
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1908 | ======================================================================
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1909 | FINAL SECURITY REPORT COMPLETE
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1910 |   Elapsed:             0.439s
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1911 |   Files loaded:        13
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1912 |   Rows processed:      13599
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1913 |   Overall score:       55.97/100
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1914 |   Decision:            Needs Improvement
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1915 |   Compliance:          68.52%
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1916 |   Fraud alerts:        2803
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1917 |   High risk cases:     0
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1918 |   Recommendations:     5
+2026-07-06 16:49:10 | INFO     | FinalReport | run:1919 | ======================================================================

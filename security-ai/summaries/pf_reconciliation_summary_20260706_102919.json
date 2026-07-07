@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-07-06T10:29:19.149352",
+  "engine_version": "3.0.0",
+  "runtime": {
+    "elapsed_seconds": 11.021,
+    "rows_per_second": 182.2,
+    "files_loaded": 4,
+    "rows_loaded": 2008,
+    "matches_attempted": 500,
+    "matches_found": 500,
+    "exact_matches": 500,
+    "fuzzy_matches": 0,
+    "no_matches": 0,
+    "validations_run": 2010,
+    "validations_passed": 809,
+    "validations_failed": 743,
+    "duplicates_found": 0,
+    "missing_found": 0,
+    "fraud_flags": 0,
+    "errors": 0,
+    "warnings": 0,
+    "sites_processed": 12,
+    "months_processed": 0
+  },
+  "compliance": {
+    "compliance_pct": 100.0,
+    "total": 500,
+    "matched": 500,
+    "mismatched": 743,
+    "missing": 0,
+    "status": "compliant"
+  },
+  "matching": {
+    "total_attempted": 500,
+    "matched": 500,
+    "exact_matches": 500,
+    "fuzzy_matches": 0,
+    "no_match": 0,
+    "avg_confidence": 100.0
+  },
+  "reconciliation": {
+    "total_employees": 500,
+    "total_pf_difference": 0
+  },
+  "pipeline_metrics": {
+    "elapsed_seconds": 11.021,
+    "rows_per_second": 182.2,
+    "match_rate": 100.0,
+    "validation_pass_rate": 40.25,
+    "total_validations": 2010,
+    "files_loaded": 4,
+    "rows_processed": 2008,
+    "duplicates_found": 0,
+    "missing_found": 0,
+    "fraud_flags": 0,
+    "errors": 0
+  }
+}

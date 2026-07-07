@@ -1,0 +1,104 @@
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1613 | ======================================================================
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1614 | WAGE ANOMALY DETECTION ENGINE
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1615 | Engine version: 7.0.0
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1616 | ======================================================================
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1619 | PHASE 1: LOADING DATA
+2026-07-06 10:32:09 | INFO     | WageAnomaly | safe_load:400 | Loaded wages.csv: 500 × 15
+2026-07-06 10:32:09 | INFO     | WageAnomaly | safe_load:400 | Loaded attendance.csv: 5000 × 6
+2026-07-06 10:32:09 | INFO     | WageAnomaly | safe_load:400 | Loaded payroll.csv: 500 × 8
+2026-07-06 10:32:09 | INFO     | WageAnomaly | safe_load:400 | Loaded guards_master.csv: 500 × 6
+2026-07-06 10:32:09 | WARNING  | WageAnomaly | safe_load:387 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 10:32:09 | INFO     | WageAnomaly | safe_load:400 | Loaded pf_reconciliation_report.csv: 500 × 17
+2026-07-06 10:32:09 | INFO     | WageAnomaly | safe_load:400 | Loaded esi_reconciliation_report.csv: 500 × 11
+2026-07-06 10:32:09 | WARNING  | WageAnomaly | safe_load:387 | Missing file: /root/ml-projects/stock-prediction/security-ai/processed/wages_previous.csv
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1641 | PHASE 2: FEATURE ENGINEERING
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1643 | Features: 18 columns, 500 rows
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1646 | PHASE 3: RULE-BASED DETECTION
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1687 | Rule anomalies: 2
+2026-07-06 10:32:09 | INFO     | WageAnomaly | run:1721 | PHASE 4: AI ANOMALY DETECTION
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1741 | Total anomalies: 27
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1744 | PHASE 5: EMPLOYEE RISK SCORING
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1783 | Employees scored: 25
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1786 | PHASE 6: SITE ANALYSIS
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1791 | PHASE 7: TREND ANALYSIS
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1803 | PHASE 8: DASHBOARD
+2026-07-06 10:32:10 | INFO     | WageAnomaly | run:1811 | PHASE 9: EXPORT
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/wage_anomaly_report.csv (500 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/anomaly_details.csv (27 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/employee_wage_risks.csv (25 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/top_risk_employees.csv (25 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/site_salary_statistics.csv (12 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/ot_ranking.csv (20 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/ml_anomalies.csv (25 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/feature_matrix.csv (500 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/normalized_features.csv (500 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/explanations.csv (27 rows)
+2026-07-06 10:32:10 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/audit_trail.csv (2 rows)
+2026-07-06 10:32:12 | INFO     | WageAnomaly | export_excel:1565 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/wage_anomaly_report_20260706_103210.xlsx (11 sheets)
+2026-07-06 10:32:12 | INFO     | WageAnomaly | export_json:1574 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/wage_anomaly_summary_20260706_103212.json
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1863 | ======================================================================
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1864 | WAGE ANOMALY DETECTION COMPLETE
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1865 |   Elapsed:          1.083s
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1866 |   Files loaded:     6
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1867 |   Rows processed:   500
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1868 |   Modules run:      12
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1869 |   Total anomalies:  27
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1870 |     Rule-based:     2
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1871 |     ML-based:       25
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1872 |   High risk:        0
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1873 |   Sites analyzed:   12
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1874 |   CSV files:        11
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1875 |   Speed:            6925.2 rows/sec
+2026-07-06 10:32:12 | INFO     | WageAnomaly | run:1876 | ======================================================================
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1613 | ======================================================================
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1614 | WAGE ANOMALY DETECTION ENGINE
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1615 | Engine version: 7.0.0
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1616 | ======================================================================
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1619 | PHASE 1: LOADING DATA
+2026-07-06 16:43:08 | INFO     | WageAnomaly | safe_load:400 | Loaded wages.csv: 500 × 15
+2026-07-06 16:43:08 | INFO     | WageAnomaly | safe_load:400 | Loaded attendance.csv: 5000 × 6
+2026-07-06 16:43:08 | INFO     | WageAnomaly | safe_load:400 | Loaded payroll.csv: 500 × 8
+2026-07-06 16:43:08 | INFO     | WageAnomaly | safe_load:400 | Loaded guards_master.csv: 500 × 6
+2026-07-06 16:43:08 | WARNING  | WageAnomaly | safe_load:387 | Missing file: /root/ml-projects/stock-prediction/security-ai/datasets/bank.csv
+2026-07-06 16:43:08 | INFO     | WageAnomaly | safe_load:400 | Loaded pf_reconciliation_report.csv: 500 × 17
+2026-07-06 16:43:08 | INFO     | WageAnomaly | safe_load:400 | Loaded esi_reconciliation_report.csv: 500 × 11
+2026-07-06 16:43:08 | WARNING  | WageAnomaly | safe_load:387 | Missing file: /root/ml-projects/stock-prediction/security-ai/processed/wages_previous.csv
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1641 | PHASE 2: FEATURE ENGINEERING
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1643 | Features: 18 columns, 500 rows
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1646 | PHASE 3: RULE-BASED DETECTION
+2026-07-06 16:43:08 | INFO     | WageAnomaly | run:1687 | Rule anomalies: 2
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1721 | PHASE 4: AI ANOMALY DETECTION
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1741 | Total anomalies: 27
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1744 | PHASE 5: EMPLOYEE RISK SCORING
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1783 | Employees scored: 25
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1786 | PHASE 6: SITE ANALYSIS
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1791 | PHASE 7: TREND ANALYSIS
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1803 | PHASE 8: DASHBOARD
+2026-07-06 16:43:09 | INFO     | WageAnomaly | run:1811 | PHASE 9: EXPORT
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/wage_anomaly_report.csv (500 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/anomaly_details.csv (27 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/employee_wage_risks.csv (25 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/top_risk_employees.csv (25 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/site_salary_statistics.csv (12 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/ot_ranking.csv (20 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/ml_anomalies.csv (25 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/feature_matrix.csv (500 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/normalized_features.csv (500 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/explanations.csv (27 rows)
+2026-07-06 16:43:09 | INFO     | WageAnomaly | export_csv:1553 | CSV → /root/ml-projects/stock-prediction/security-ai/anomaly_reports/audit_trail.csv (2 rows)
+2026-07-06 16:43:11 | INFO     | WageAnomaly | export_excel:1565 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/wage_anomaly_report_20260706_164309.xlsx (11 sheets)
+2026-07-06 16:43:11 | INFO     | WageAnomaly | export_json:1574 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/wage_anomaly_summary_20260706_164311.json
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1863 | ======================================================================
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1864 | WAGE ANOMALY DETECTION COMPLETE
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1865 |   Elapsed:          0.58s
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1866 |   Files loaded:     6
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1867 |   Rows processed:   500
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1868 |   Modules run:      12
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1869 |   Total anomalies:  27
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1870 |     Rule-based:     2
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1871 |     ML-based:       25
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1872 |   High risk:        0
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1873 |   Sites analyzed:   12
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1874 |   CSV files:        11
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1875 |   Speed:            12931.0 rows/sec
+2026-07-06 16:43:11 | INFO     | WageAnomaly | run:1876 | ======================================================================

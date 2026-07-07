@@ -1,0 +1,159 @@
+{
+  "Generated_At": "2026-07-06T16:49:10.589900",
+  "Client": "default",
+  "Month": "2026-07",
+  "Total_Clients": 20,
+  "Total_Sites": 100,
+  "Total_Guards": 500,
+  "Active_Guards": 500,
+  "Inactive_Guards": 0,
+  "Total_Payroll": 12878909.78,
+  "PF_Compliance_Pct": 100.0,
+  "ESI_Compliance_Pct": 100.0,
+  "Attendance_Compliance_Pct": 18.02,
+  "Payroll_Compliance_Pct": 99.4,
+  "PSARA_Compliance_Pct": 25.2,
+  "Overall_Compliance_Pct": 68.52,
+  "Low_Risk_Cases": 0,
+  "Medium_Risk_Cases": 0,
+  "High_Risk_Cases": 0,
+  "Critical_Risk_Cases": 0,
+  "Total_Fraud_Alerts": 2803,
+  "Ghost_Employees": 0,
+  "Duplicate_Employees": 500,
+  "Fake_Attendance": 2303,
+  "Salary_Inflation": 0,
+  "PF_Fraud": 0,
+  "ESI_Fraud": 0,
+  "OT_Fraud": 0,
+  "Fake_Bank_Accounts": 0,
+  "Avg_Wage": 25757.82,
+  "Highest_Wage": 39348.23,
+  "Lowest_Wage": 14239.08,
+  "Avg_Overtime": 25.0,
+  "Avg_Recoveries": 0.0,
+  "Total_Sites_Scored": 100,
+  "Excellent_Sites": 0,
+  "Good_Sites": 0,
+  "Average_Sites": 1,
+  "Poor_Sites": 12,
+  "Critical_Sites": 87,
+  "Avg_Site_Performance": 30.41,
+  "Attendance_Pct": 18.02,
+  "Payroll_Accuracy_Pct": 100.0,
+  "PF_Accuracy_Pct": 95.0,
+  "ESI_Accuracy_Pct": 95.0,
+  "Fraud_Pct": 560.6,
+  "Site_Performance_Pct": 30.41,
+  "Overall_Security_Score": 55.97,
+  "Management_Decision": "Needs Improvement",
+  "charts": {
+    "compliance_radar": {
+      "labels": [
+        "PF",
+        "ESI",
+        "Attendance",
+        "Payroll",
+        "PSARA"
+      ],
+      "values": [
+        100.0,
+        100.0,
+        18.02,
+        99.4,
+        25.2
+      ]
+    },
+    "fraud_breakdown": {
+      "labels": [
+        "Ghost",
+        "Duplicate",
+        "Fake Attendance",
+        "Salary Inflation",
+        "PF Fraud",
+        "ESI Fraud",
+        "OT Fraud",
+        "Fake Bank"
+      ],
+      "values": [
+        0,
+        500,
+        2303,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "site_grade_distribution": {
+      "labels": [
+        "Excellent",
+        "Good",
+        "Average",
+        "Poor",
+        "Critical"
+      ],
+      "values": [
+        0,
+        0,
+        1,
+        12,
+        87
+      ]
+    },
+    "security_score_breakdown": {
+      "labels": [
+        "compliance",
+        "fraud",
+        "payroll",
+        "attendance",
+        "site",
+        "risk",
+        "wage"
+      ],
+      "values": [
+        68.52,
+        0,
+        100.0,
+        18.02,
+        30.41,
+        100.0,
+        100.0
+      ]
+    },
+    "kpi_gauges": {
+      "labels": [
+        "total_employees",
+        "attendance_pct",
+        "payroll_accuracy_pct",
+        "pf_accuracy_pct",
+        "esi_accuracy_pct",
+        "fraud_pct",
+        "compliance_pct",
+        "site_performance_pct"
+      ],
+      "values": [
+        500,
+        18.02,
+        100.0,
+        95.0,
+        95.0,
+        560.6,
+        25.2,
+        30.41
+      ]
+    }
+  },
+  "metadata": {
+    "generated_on": "2026-07-06T16:49:10.589900",
+    "execution_time": 0.439,
+    "client": "default",
+    "month": "2026-07",
+    "records_processed": 13599,
+    "files_loaded": 13,
+    "modules_run": 1,
+    "pipeline_version": "7.0.0",
+    "engine_version": "9.0.0"
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "generated_at": "2026-07-06T10:29:38.130598",
+  "engine_version": "8.0.0",
+  "summary": {
+    "total_sites": 100,
+    "total_guards": 800,
+    "avg_score": 30.41,
+    "median_score": 27.91,
+    "std_score": 9.12,
+    "best_site": {
+      "id": "S61",
+      "name": "S61",
+      "score": 73.79
+    },
+    "worst_site": {
+      "id": "S67",
+      "name": "S67",
+      "score": 17.56
+    }
+  },
+  "grade_distribution": {
+    "Average": 1,
+    "Poor": 12,
+    "Critical": 87
+  },
+  "kpi_averages": {
+    "attendance": 17.35,
+    "incidents": 12.3,
+    "complaints": 55.95,
+    "compliance": 28.49,
+    "shift_coverage": 0.8,
+    "utilization": 100.0
+  },
+  "risk_distribution": {
+    "safe": 1,
+    "low": 0,
+    "medium": 13,
+    "high": 58,
+    "critical": 28
+  },
+  "high_risk_count": 86,
+  "executive_summary": {
+    "generated_at": "2026-07-06T10:29:38.134675",
+    "engine_version": "8.0.0",
+    "summary": {
+      "total_sites": 100,
+      "total_guards": 800,
+      "avg_score": 30.41,
+      "median_score": 27.91,
+      "std_score": 9.12,
+      "best_site": {
+        "id": "S61",
+        "name": "S61",
+        "score": 73.79
+      },
+      "worst_site": {
+        "id": "S67",
+        "name": "S67",
+        "score": 17.56
+      }
+    },
+    "grade_distribution": {
+      "Average": 1,
+      "Poor": 12,
+      "Critical": 87
+    },
+    "kpi_averages": {
+      "attendance": 17.35,
+      "incidents": 12.3,
+      "complaints": 55.95,
+      "compliance": 28.49,
+      "shift_coverage": 0.8,
+      "utilization": 100.0
+    },
+    "risk_distribution": {
+      "safe": 1,
+      "low": 0,
+      "medium": 13,
+      "high": 58,
+      "critical": 28
+    },
+    "high_risk_count": 86,
+    "top_10_sites": [
+      {
+        "site": "S61",
+        "name": "S61",
+        "score": 73.79,
+        "grade": "Average"
+      },
+      {
+        "site": "S71",
+        "name": "S71",
+        "score": 53.41,
+        "grade": "Poor"
+      },
+      {
+        "site": "S8",
+        "name": "S8",
+        "score": 51.4,
+        "grade": "Poor"
+      },
+      {
+        "site": "S25",
+        "name": "S25",
+        "score": 49.56,
+        "grade": "Poor"
+      },
+      {
+        "site": "S100",
+        "name": "S100",
+        "score": 48.38,
+        "grade": "Poor"
+      },
+      {
+        "site": "S66",
+        "name": "S66",
+        "score": 47.47,
+        "grade": "Poor"
+      },
+      {
+        "site": "S60",
+        "name": "S60",
+        "score": 46.26,
+        "grade": "Poor"
+      },
+      {
+        "site": "S94",
+        "name": "S94",
+        "score": 43.55,
+        "grade": "Poor"
+      },
+      {
+        "site": "S7",
+        "name": "S7",
+        "score": 42.7,
+        "grade": "Poor"
+      },
+      {
+        "site": "S26",
+        "name": "S26",
+        "score": 42.4,
+        "grade": "Poor"
+      }
+    ],
+    "bottom_10_sites": [
+      {
+        "site": "S67",
+        "name": "S67",
+        "score": 17.56,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (16%) \u2014 absenteeism is high",
+          "High incidents (31 total, 10 high-severity)"
+        ]
+      },
+      {
+        "site": "S49",
+        "name": "S49",
+        "score": 18.26,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (15%) \u2014 absenteeism is high",
+          "High incidents (21 total, 4 high-severity)"
+        ]
+      },
+      {
+        "site": "S96",
+        "name": "S96",
+        "score": 18.84,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (12%) \u2014 absenteeism is high",
+          "High incidents (18 total, 5 high-severity)"
+        ]
+      },
+      {
+        "site": "S98",
+        "name": "S98",
+        "score": 19.75,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (15%) \u2014 absenteeism is high",
+          "High incidents (27 total, 6 high-severity)"
+        ]
+      },
+      {
+        "site": "S74",
+        "name": "S74",
+        "score": 19.98,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (20%) \u2014 absenteeism is high",
+          "High incidents (29 total, 6 high-severity)"
+        ]
+      },
+      {
+        "site": "S54",
+        "name": "S54",
+        "score": 20.47,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (8%) \u2014 absenteeism is high",
+          "High incidents (18 total, 4 high-severity)"
+        ]
+      },
+      {
+        "site": "S17",
+        "name": "S17",
+        "score": 20.73,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (21%) \u2014 absenteeism is high",
+          "High incidents (27 total, 15 high-severity)"
+        ]
+      },
+      {
+        "site": "S32",
+        "name": "S32",
+        "score": 20.78,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (15%) \u2014 absenteeism is high",
+          "High incidents (21 total, 4 high-severity)"
+        ]
+      },
+      {
+        "site": "S81",
+        "name": "S81",
+        "score": 20.79,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (15%) \u2014 absenteeism is high",
+          "High incidents (18 total, 2 high-severity)"
+        ]
+      },
+      {
+        "site": "S62",
+        "name": "S62",
+        "score": 20.82,
+        "grade": "Critical",
+        "root_causes": [
+          "Low attendance (16%) \u2014 absenteeism is high",
+          "High incidents (13 total, 3 high-severity)"
+        ]
+      }
+    ],
+    "high_risk_sites": [
+      {
+        "site": "S67",
+        "risk_score": 85.44,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S49",
+        "risk_score": 83.24,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S74",
+        "risk_score": 83.05,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S96",
+        "risk_score": 82.77,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S17",
+        "risk_score": 82.71,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S98",
+        "risk_score": 82.36,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S39",
+        "risk_score": 81.16,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S58",
+        "risk_score": 80.68,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S31",
+        "risk_score": 80.52,
+        "risk_level": "critical"
+      },
+      {
+        "site": "S54",
+        "risk_score": 80.14,
+        "risk_level": "critical"
+      }
+    ],
+    "top_recommendations": [
+      [
+        "Implement attendance monitoring. Deploy biometric systems. Conduct attendance co",
+        100
+      ],
+      [
+        "Expedite compliance documentation. Schedule training. Verify PSARA license statu",
+        98
+      ],
+      [
+        "Conduct incident investigation. Implement patrol frequency increase. Training on",
+        93
+      ],
+      [
+        "Address customer complaints immediately. Implement feedback loop. Replace underp",
+        48
+      ],
+      [
+        "Deploy additional guards. 57 shifts need coverage.",
+        6
+      ],
+      [
+        "Deploy additional guards. 72 shifts need coverage.",
+        5
+      ],
+      [
+        "Deploy additional guards. 78 shifts need coverage.",
+        5
+      ],
+      [
+        "Deploy additional guards. 37 shifts need coverage.",
+        4
+      ],
+      [
+        "Deploy additional guards. 52 shifts need coverage.",
+        4
+      ],
+      [
+        "Deploy additional guards. 65 shifts need coverage.",
+        4
+      ]
+    ]
+  },
+  "runtime_stats": {
+    "elapsed_seconds": 14.793,
+    "files_loaded": 9,
+    "rows_loaded": 9690,
+    "sites_scored": 100,
+    "clients_processed": 0,
+    "months_processed": 0,
+    "modules_run": 0,
+    "errors": 0
+  }
+}

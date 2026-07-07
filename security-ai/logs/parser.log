@@ -1,0 +1,104 @@
+2026-07-06 10:27:40 | INFO     | ExcelParser | run:841 | ======================================================================
+2026-07-06 10:27:40 | INFO     | ExcelParser | run:842 | SECURITY AI — EXCEL PARSER
+2026-07-06 10:27:40 | INFO     | ExcelParser | run:843 | Input:  /root/ml-projects/stock-prediction/security-ai/raw/pf_wages_reconciliation.xlsx
+2026-07-06 10:27:40 | INFO     | ExcelParser | run:844 | Dry run: False
+2026-07-06 10:27:40 | INFO     | ExcelParser | run:845 | ======================================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | run:857 | Workbook contains 7 sheets: ['employee_master', 'wages_register', 'attendance', 'pf_ecr', 'esi_challan', 'overtime_register', 'leave_register']
+2026-07-06 10:27:43 | INFO     | ExcelParser | _discover_sheets:419 | Sheet 'employee_master' → classified as 'master'
+2026-07-06 10:27:43 | INFO     | ExcelParser | _discover_sheets:419 | Sheet 'wages_register' → classified as 'wages'
+2026-07-06 10:27:43 | INFO     | ExcelParser | _discover_sheets:419 | Sheet 'attendance' → classified as 'attendance'
+2026-07-06 10:27:43 | INFO     | ExcelParser | _discover_sheets:419 | Sheet 'pf_ecr' → classified as 'ecr'
+2026-07-06 10:27:43 | INFO     | ExcelParser | _discover_sheets:419 | Sheet 'esi_challan' → classified as 'ecr'
+2026-07-06 10:27:43 | WARNING  | ExcelParser | _discover_sheets:421 | Sheet 'overtime_register' → unknown classification, will still parse
+2026-07-06 10:27:43 | WARNING  | ExcelParser | _discover_sheets:421 | Sheet 'leave_register' → unknown classification, will still parse
+2026-07-06 10:27:43 | INFO     | ExcelParser | run:861 | Classified sheets: {'master': 'employee_master', 'wages': 'wages_register', 'attendance': 'attendance', 'ecr': 'esi_challan'}
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'leave_register' (category=unknown)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'leave_register': auto-header at row 0, shape=(500, 3)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'esi_challan' (category=ecr)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'esi_challan': auto-header at row 0, shape=(500, 5)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'attendance' (category=attendance)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'attendance': auto-header at row 0, shape=(500, 4)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'pf_ecr' (category=ecr)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'pf_ecr': auto-header at row 0, shape=(500, 5)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'overtime_register' (category=unknown)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'overtime_register': auto-header at row 0, shape=(500, 3)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'wages_register' (category=wages)
+2026-07-06 10:27:43 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:44 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'wages_register': auto-header at row 0, shape=(500, 15)
+2026-07-06 10:27:44 | INFO     | ExcelParser | _parse_sheet:790 | Wage summary: {
+  "sheet": "wages_register",
+  "total_rows": 500,
+  "rate_of_wage_sum": 11319049.0,
+  "rate_of_wage_mean": 22638.098,
+  "days_worked_sum": 12765.0,
+  "days_worked_mean": 25.53,
+  "overtime_hours_sum": 12520.0,
+  "overtime_hours_mean": 25.04,
+  "basic_wages_sum": 11105200.780000001,
+  "basic_wages_mean": 22210.401560000002,
+  "special_basic_sum": 527556.0,
+  "special_basic_mean": 1055.112,
+  "da_sum": 244553.0,
+  "da_mean": 489.106,
+  "overtime_payment_sum": 1001600.0,
+  "overtime_payment_mean": 2003.2,
+  "total_wages_sum": 12878909.780000001,
+  "total_wages_mean": 25757.819560000004,
+  "employee_epf_contribution_sum": 894175.91,
+  "employee_epf_contribution_mean": 1788.35182,
+  "employee_eps_contribution_sum": 83288.96,
+  "employee_eps_contribution_mean": 166.57792,
+  "employer_epf_contribution_sum": 894175.91,
+  "employer_epf_contribution_mean": 1788.35182,
+  "employer_eps_contribution_sum": 360918.96,
+  "employer_eps_contribution_mean": 721.83792
+}
+2026-07-06 10:27:44 | INFO     | ExcelParser | _parse_sheet:795 | Sites in 'wages_register': ['S1', 'S10', 'S11', 'S12', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9']
+2026-07-06 10:27:44 | INFO     | ExcelParser | _parse_sheet:764 | ============================================================
+2026-07-06 10:27:44 | INFO     | ExcelParser | _parse_sheet:765 | Parsing sheet: 'employee_master' (category=master)
+2026-07-06 10:27:44 | INFO     | ExcelParser | _parse_sheet:766 | ============================================================
+2026-07-06 10:27:44 | INFO     | ExcelParser | _read_with_auto_header:449 | Sheet 'employee_master': auto-header at row 0, shape=(500, 7)
+2026-07-06 10:27:44 | INFO     | ExcelParser | _parse_sheet:795 | Sites in 'employee_master': ['S1', 'S10', 'S11', 'S12', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9']
+2026-07-06 10:27:44 | INFO     | ExcelParser | _extract_employee_master:628 | Employee master: 508 unique employees
+2026-07-06 10:27:44 | INFO     | ExcelParser | _detect_all_sites:666 | Detected 17 sites: ['EMPLOYEE', 'ESI CHALLAN', 'LEAVE REGISTER', 'OVERTIME REGISTER', 'REGISTER', 'S1', 'S10', 'S11', 'S12', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'S9']
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/leave_register.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/esi_challan.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/ecr.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/attendance.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/pf_ecr.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/overtime_register.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/wages_register.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/wages.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/employee_master.csv
+2026-07-06 10:27:44 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/master.csv
+2026-07-06 10:27:46 | INFO     | ExcelParser | _save_excel:823 | Excel saved → /root/ml-projects/stock-prediction/security-ai/exports/all_parsed_data.xlsx
+2026-07-06 10:27:46 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/employee_master.csv
+2026-07-06 10:27:46 | INFO     | ExcelParser | _save_csv:815 | CSV saved → /root/ml-projects/stock-prediction/security-ai/processed/site_list.csv
+2026-07-06 10:27:46 | INFO     | ExcelParser | _save_json_summary:829 | JSON summary saved → /root/ml-projects/stock-prediction/security-ai/summaries/parse_summary_20260706_102746.json
+2026-07-06 10:27:46 | INFO     | ExcelParser | save:251 | Audit trail saved → /root/ml-projects/stock-prediction/security-ai/summaries/audit_trail_20260706_102746.json
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:941 | ======================================================================
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:942 | PARSING COMPLETE
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:943 |   Sheets parsed:      7
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:944 |   Sheets skipped:     0
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:945 |   Rows read:          3500
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:946 |   Rows cleaned:       3500
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:947 |   Duplicates removed: 0
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:948 |   Employees found:    508
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:949 |   Sites detected:     17
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:950 |   Columns normalized: 26
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:951 |   Headers auto-det:   7
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:952 |   Errors:             0
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:953 |   Warnings:           0
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:954 |   Elapsed:            5.173s
+2026-07-06 10:27:46 | INFO     | ExcelParser | run:955 | ======================================================================

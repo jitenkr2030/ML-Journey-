@@ -1,0 +1,14 @@
+﻿site_name,client,total_employees,avg_risk_score,risk_level,compliance_pct,high_risk_count,critical_risk_count,pf_compliance,esi_compliance,attendance_compliance,fraud_flags,rank,trend
+S12,,40,3.0,safe,97.0,0,0,100.0,79.7,100.0,0,1,stable
+S3,,39,2.3,safe,97.7,0,0,100.0,84.4,100.0,0,2,stable
+S7,,43,2.2,safe,97.8,0,0,100.0,85.6,100.0,0,3,stable
+S4,,33,2.2,safe,97.8,0,0,100.0,85.6,100.0,0,4,stable
+S2,,39,1.7,safe,98.3,0,0,100.0,88.8,100.0,0,5,stable
+S8,,53,1.6,safe,98.4,0,0,100.0,89.3,100.0,0,6,stable
+S9,,49,1.6,safe,98.4,0,0,100.0,89.2,100.0,0,7,stable
+S1,,38,1.6,safe,98.4,0,0,100.0,89.1,100.0,0,8,stable
+S11,,38,1.6,safe,98.4,0,0,100.0,89.2,100.0,0,9,stable
+S6,,35,1.6,safe,98.4,0,0,100.0,89.6,100.0,0,10,stable
+S10,,50,1.5,safe,98.5,0,0,100.0,90.3,100.0,0,11,stable
+S5,,43,1.3,safe,98.7,0,0,100.0,91.6,100.0,0,12,stable
+UNKNOWN,,6,0.0,safe,100.0,0,0,100.0,100.0,100.0,0,13,stable

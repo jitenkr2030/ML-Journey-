@@ -1,0 +1,9 @@
+﻿employee_name,employee_id,site,present_in_wages,present_in_pf,present_in_esi,present_in_bank,present_in_attendance,missing_from,severity
+amit singh,E272,S3,False,False,False,False,False,"wages, ecr, attendance",low
+anil kumar,E330,S2,False,False,False,False,False,"wages, ecr, attendance",low
+deepak verma,E340,S5,False,False,False,False,False,"wages, ecr, attendance",low
+jitender kumar,E329,S10,False,False,False,False,False,"wages, ecr, attendance",low
+rahul kumar,E343,S7,False,False,False,False,False,"wages, ecr, attendance",low
+ramesh yadav,E338,S11,False,False,False,False,False,"wages, ecr, attendance",low
+suresh sharma,E342,S7,False,False,False,False,False,"wages, ecr, attendance",low
+vikas gupta,E341,S8,False,False,False,False,False,"wages, ecr, attendance",low

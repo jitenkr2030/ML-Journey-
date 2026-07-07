@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-07-06T10:29:38.130598",
+  "engine_version": "8.0.0",
+  "summary": {
+    "total_sites": 100,
+    "total_guards": 800,
+    "avg_score": 30.41,
+    "median_score": 27.91,
+    "std_score": 9.12,
+    "best_site": {
+      "id": "S61",
+      "name": "S61",
+      "score": 73.79
+    },
+    "worst_site": {
+      "id": "S67",
+      "name": "S67",
+      "score": 17.56
+    }
+  },
+  "grade_distribution": {
+    "Average": 1,
+    "Poor": 12,
+    "Critical": 87
+  },
+  "kpi_averages": {
+    "attendance": 17.35,
+    "incidents": 12.3,
+    "complaints": 55.95,
+    "compliance": 28.49,
+    "shift_coverage": 0.8,
+    "utilization": 100.0
+  },
+  "risk_distribution": {
+    "safe": 1,
+    "low": 0,
+    "medium": 13,
+    "high": 58,
+    "critical": 28
+  },
+  "high_risk_count": 86
+}

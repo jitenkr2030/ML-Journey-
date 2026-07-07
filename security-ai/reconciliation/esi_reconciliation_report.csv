@@ -1,0 +1,501 @@
+﻿site,employee_name,gross_wages,esi_eligibility,expected_employee_esi,actual_employee_esi,employee_esi_diff,expected_employer_esi,actual_employer_esi,employer_esi_diff,status
+S7,23722.12,25693.92,Not Applicable,0,0,0,0,0,0,Matched
+S7,20305.26,22252.69,Not Applicable,0,0,0,0,0,0,Matched
+S7,21392.33,23339.77,Not Applicable,0,0,0,0,0,0,Matched
+S7,29353.62,31355.0,Not Applicable,0,0,0,0,0,0,Matched
+S7,23838.02,25788.35,Not Applicable,0,0,0,0,0,0,Matched
+S7,18400.2,20339.65,Applicable,153,0,-153,661,0,-661,Mismatch
+S7,23987.62,25941.88,Not Applicable,0,0,0,0,0,0,Matched
+S7,13143.16,14718.04,Applicable,110,0,-110,478,0,-478,Mismatch
+S7,22385.15,24344.0,Not Applicable,0,0,0,0,0,0,Matched
+S7,20036.53,21971.92,Not Applicable,0,0,0,0,0,0,Matched
+S7,17590.75,19513.58,Applicable,146,0,-146,634,0,-634,Mismatch
+S7,27640.31,29626.31,Not Applicable,0,0,0,0,0,0,Matched
+S7,17430.56,19356.0,Applicable,145,0,-145,629,0,-629,Mismatch
+S7,22132.57,24090.65,Not Applicable,0,0,0,0,0,0,Matched
+S7,21316.1,23256.23,Not Applicable,0,0,0,0,0,0,Matched
+S7,18617.51,20552.73,Applicable,154,0,-154,668,0,-668,Mismatch
+S7,24449.16,26420.23,Not Applicable,0,0,0,0,0,0,Matched
+S7,17051.5,18966.46,Applicable,142,0,-142,616,0,-616,Mismatch
+S7,21328.69,23286.04,Not Applicable,0,0,0,0,0,0,Matched
+S7,20045.31,22000.15,Not Applicable,0,0,0,0,0,0,Matched
+S7,24160.92,26118.73,Not Applicable,0,0,0,0,0,0,Matched
+S7,16027.4,17948.85,Applicable,135,0,-135,583,0,-583,Mismatch
+S7,30784.34999999999,32794.23,Not Applicable,0,0,0,0,0,0,Matched
+S7,27522.35,29512.62,Not Applicable,0,0,0,0,0,0,Matched
+S7,24569.15,26540.92,Not Applicable,0,0,0,0,0,0,Matched
+S7,27455.62,29436.15,Not Applicable,0,0,0,0,0,0,Matched
+S7,21829.27,23776.23,Not Applicable,0,0,0,0,0,0,Matched
+S7,18804.9,20747.58,Applicable,156,0,-156,674,0,-674,Mismatch
+S7,25947.91,27948.15,Not Applicable,0,0,0,0,0,0,Matched
+S7,19293.04,21232.88,Not Applicable,0,0,0,0,0,0,Matched
+S7,31303.4,33321.0,Not Applicable,0,0,0,0,0,0,Matched
+S7,21309.71,23250.81,Not Applicable,0,0,0,0,0,0,Matched
+S7,18012.76,19943.69,Applicable,150,0,-150,648,0,-648,Mismatch
+S7,25257.46,27230.35,Not Applicable,0,0,0,0,0,0,Matched
+S7,27158.04,29135.54,Not Applicable,0,0,0,0,0,0,Matched
+S7,25931.07,27929.04,Not Applicable,0,0,0,0,0,0,Matched
+S7,31886.78,33911.42,Not Applicable,0,0,0,0,0,0,Matched
+S7,16610.84,18341.31,Applicable,138,0,-138,596,0,-596,Mismatch
+S7,20536.35,22487.38,Not Applicable,0,0,0,0,0,0,Matched
+S7,26908.99,28903.23,Not Applicable,0,0,0,0,0,0,Matched
+S7,23403.12,25367.85,Not Applicable,0,0,0,0,0,0,Matched
+S7,26654.24,28653.38,Not Applicable,0,0,0,0,0,0,Matched
+S7,26014.8,27987.85,Not Applicable,0,0,0,0,0,0,Matched
+S8,19247.8,21185.12,Not Applicable,0,0,0,0,0,0,Matched
+S8,26202.4,28181.23,Not Applicable,0,0,0,0,0,0,Matched
+S8,30307.34,32309.54,Not Applicable,0,0,0,0,0,0,Matched
+S8,23166.15,25127.77,Not Applicable,0,0,0,0,0,0,Matched
+S8,21815.54,23758.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,30285.83,32289.23,Not Applicable,0,0,0,0,0,0,Matched
+S8,30213.59,32220.62,Not Applicable,0,0,0,0,0,0,Matched
+S8,24291.02,26266.0,Not Applicable,0,0,0,0,0,0,Matched
+S8,33900.29,35935.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,23821.71,25774.0,Not Applicable,0,0,0,0,0,0,Matched
+S8,28175.28,30179.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,16231.11,18149.46,Applicable,136,0,-136,590,0,-590,Mismatch
+S8,22586.1,24554.15,Not Applicable,0,0,0,0,0,0,Matched
+S8,16240.47,17978.92,Applicable,135,0,-135,584,0,-584,Mismatch
+S8,25559.01,27547.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,19532.81,21459.0,Not Applicable,0,0,0,0,0,0,Matched
+S8,21423.63,23393.77,Not Applicable,0,0,0,0,0,0,Matched
+S8,24644.12,26629.15,Not Applicable,0,0,0,0,0,0,Matched
+S8,22023.54,23964.85,Not Applicable,0,0,0,0,0,0,Matched
+S8,26076.55,28058.0,Not Applicable,0,0,0,0,0,0,Matched
+S8,21738.3,23693.15,Not Applicable,0,0,0,0,0,0,Matched
+S8,21850.94,23797.92,Not Applicable,0,0,0,0,0,0,Matched
+S8,21579.12,23521.19,Not Applicable,0,0,0,0,0,0,Matched
+S8,26071.21,28050.38,Not Applicable,0,0,0,0,0,0,Matched
+S8,14606.49,16412.46,Applicable,123,0,-123,533,0,-533,Mismatch
+S8,18086.88,20025.23,Applicable,150,0,-150,651,0,-651,Mismatch
+S8,14492.78,16251.15,Applicable,122,0,-122,528,0,-528,Mismatch
+S8,21855.21,23797.96,Not Applicable,0,0,0,0,0,0,Matched
+S8,16729.0,18643.0,Applicable,140,0,-140,606,0,-606,Mismatch
+S8,31525.39,33560.62,Not Applicable,0,0,0,0,0,0,Matched
+S8,22159.94,24134.65,Not Applicable,0,0,0,0,0,0,Matched
+S8,26479.89,28459.65,Not Applicable,0,0,0,0,0,0,Matched
+S8,22137.89,24106.38,Not Applicable,0,0,0,0,0,0,Matched
+S8,16377.07,18293.27,Applicable,137,0,-137,595,0,-595,Mismatch
+S8,20763.3,22706.46,Not Applicable,0,0,0,0,0,0,Matched
+S8,36755.11,38815.88,Not Applicable,0,0,0,0,0,0,Matched
+S8,24406.14,26389.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,14661.78,16388.15,Applicable,123,0,-123,533,0,-533,Mismatch
+S8,27784.13,29771.69,Not Applicable,0,0,0,0,0,0,Matched
+S8,22204.75,24164.27,Not Applicable,0,0,0,0,0,0,Matched
+S8,30975.31,33013.85,Not Applicable,0,0,0,0,0,0,Matched
+S8,22902.81,24877.73,Not Applicable,0,0,0,0,0,0,Matched
+S8,24365.96,26357.81,Not Applicable,0,0,0,0,0,0,Matched
+S8,13086.59,14775.38,Applicable,111,0,-111,480,0,-480,Mismatch
+S8,19168.81,21089.38,Not Applicable,0,0,0,0,0,0,Matched
+S8,14919.43,16831.96,Applicable,126,0,-126,547,0,-547,Mismatch
+S8,26971.03,28947.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,22427.09,24397.15,Not Applicable,0,0,0,0,0,0,Matched
+S8,29221.41,31239.08,Not Applicable,0,0,0,0,0,0,Matched
+S8,19120.72,21035.46,Not Applicable,0,0,0,0,0,0,Matched
+S8,21985.42,23944.46,Not Applicable,0,0,0,0,0,0,Matched
+S8,29776.92,31772.88,Not Applicable,0,0,0,0,0,0,Matched
+S8,27662.94,29670.0,Not Applicable,0,0,0,0,0,0,Matched
+S9,22990.04,24931.31,Not Applicable,0,0,0,0,0,0,Matched
+S9,15806.35,17720.31,Applicable,133,0,-133,576,0,-576,Mismatch
+S9,23002.88,24977.23,Not Applicable,0,0,0,0,0,0,Matched
+S9,23683.4,25655.38,Not Applicable,0,0,0,0,0,0,Matched
+S9,27534.17,29520.08,Not Applicable,0,0,0,0,0,0,Matched
+S9,22861.72,24809.62,Not Applicable,0,0,0,0,0,0,Matched
+S9,35061.43000000001,37098.27,Not Applicable,0,0,0,0,0,0,Matched
+S9,21220.05,23165.46,Not Applicable,0,0,0,0,0,0,Matched
+S9,32684.76,34717.31,Not Applicable,0,0,0,0,0,0,Matched
+S9,21325.9,23268.58,Not Applicable,0,0,0,0,0,0,Matched
+S9,16184.56,17841.77,Applicable,134,0,-134,580,0,-580,Mismatch
+S9,21509.58,23463.69,Not Applicable,0,0,0,0,0,0,Matched
+S9,20936.23,22887.15,Not Applicable,0,0,0,0,0,0,Matched
+S9,20472.68,22408.08,Not Applicable,0,0,0,0,0,0,Matched
+S9,18914.37,20842.5,Applicable,156,0,-156,677,0,-677,Mismatch
+S9,28240.72,30246.65,Not Applicable,0,0,0,0,0,0,Matched
+S9,20416.23,22365.0,Not Applicable,0,0,0,0,0,0,Matched
+S9,33827.54,35884.96,Not Applicable,0,0,0,0,0,0,Matched
+S9,25616.44,27613.0,Not Applicable,0,0,0,0,0,0,Matched
+S9,23351.79,25315.54,Not Applicable,0,0,0,0,0,0,Matched
+S9,25160.97,27119.69,Not Applicable,0,0,0,0,0,0,Matched
+S9,20765.12,22715.04,Not Applicable,0,0,0,0,0,0,Matched
+S9,23801.37,25776.92,Not Applicable,0,0,0,0,0,0,Matched
+S9,30119.07,32123.92,Not Applicable,0,0,0,0,0,0,Matched
+S9,12616.89,14239.08,Applicable,107,0,-107,463,0,-463,Mismatch
+S9,14860.11,16778.0,Applicable,126,0,-126,545,0,-545,Mismatch
+S9,28159.26,30151.38,Not Applicable,0,0,0,0,0,0,Matched
+S9,26383.09,28373.81,Not Applicable,0,0,0,0,0,0,Matched
+S9,29842.09,31846.69,Not Applicable,0,0,0,0,0,0,Matched
+S9,24769.66,26752.08,Not Applicable,0,0,0,0,0,0,Matched
+S9,17323.7,19254.92,Applicable,144,0,-144,626,0,-626,Mismatch
+S9,23676.66,25651.19,Not Applicable,0,0,0,0,0,0,Matched
+S9,27521.98,29517.31,Not Applicable,0,0,0,0,0,0,Matched
+S9,20342.73,22284.88,Not Applicable,0,0,0,0,0,0,Matched
+S9,18119.71,19998.62,Applicable,150,0,-150,650,0,-650,Mismatch
+S9,24314.2,26264.38,Not Applicable,0,0,0,0,0,0,Matched
+S9,31682.81,33705.19,Not Applicable,0,0,0,0,0,0,Matched
+S9,25318.5,27304.62,Not Applicable,0,0,0,0,0,0,Matched
+S9,26183.9,28167.23,Not Applicable,0,0,0,0,0,0,Matched
+S9,34945.66,36990.12,Not Applicable,0,0,0,0,0,0,Matched
+S9,24137.36,26096.54,Not Applicable,0,0,0,0,0,0,Matched
+S9,15792.96,17577.38,Applicable,132,0,-132,571,0,-571,Mismatch
+S9,29398.42,31404.23,Not Applicable,0,0,0,0,0,0,Matched
+S9,16543.29,18458.38,Applicable,138,0,-138,600,0,-600,Mismatch
+S9,21599.96,23532.08,Not Applicable,0,0,0,0,0,0,Matched
+S9,20777.71,22719.58,Not Applicable,0,0,0,0,0,0,Matched
+S9,23078.54,25041.19,Not Applicable,0,0,0,0,0,0,Matched
+S9,25132.29,27108.85,Not Applicable,0,0,0,0,0,0,Matched
+S9,30607.71,32613.81,Not Applicable,0,0,0,0,0,0,Matched
+S5,34025.14,36059.5,Not Applicable,0,0,0,0,0,0,Matched
+S5,19500.63,21447.69,Not Applicable,0,0,0,0,0,0,Matched
+S5,24415.29,26375.62,Not Applicable,0,0,0,0,0,0,Matched
+S5,31390.36,33417.77,Not Applicable,0,0,0,0,0,0,Matched
+S5,19136.36,21083.08,Not Applicable,0,0,0,0,0,0,Matched
+S5,28570.98,30557.69,Not Applicable,0,0,0,0,0,0,Matched
+S5,33079.52,35105.77,Not Applicable,0,0,0,0,0,0,Matched
+S5,30188.5,32206.38,Not Applicable,0,0,0,0,0,0,Matched
+S5,32974.56,35005.0,Not Applicable,0,0,0,0,0,0,Matched
+S5,22806.47,24755.0,Not Applicable,0,0,0,0,0,0,Matched
+S5,32700.14999999999,34721.12,Not Applicable,0,0,0,0,0,0,Matched
+S5,26042.15,28030.81,Not Applicable,0,0,0,0,0,0,Matched
+S5,35978.45,38029.46,Not Applicable,0,0,0,0,0,0,Matched
+S5,18378.79,20309.77,Applicable,152,0,-152,660,0,-660,Mismatch
+S5,32953.83,34986.15,Not Applicable,0,0,0,0,0,0,Matched
+S5,23313.98,25276.96,Not Applicable,0,0,0,0,0,0,Matched
+S5,30649.89,32653.19,Not Applicable,0,0,0,0,0,0,Matched
+S5,35160.65,37209.19,Not Applicable,0,0,0,0,0,0,Matched
+S5,17307.88,19238.65,Applicable,144,0,-144,625,0,-625,Mismatch
+S5,19862.05,21807.46,Not Applicable,0,0,0,0,0,0,Matched
+S5,25177.25,27136.42,Not Applicable,0,0,0,0,0,0,Matched
+S5,22285.75,24229.92,Not Applicable,0,0,0,0,0,0,Matched
+S5,21345.12,23305.46,Not Applicable,0,0,0,0,0,0,Matched
+S5,15306.93,17225.58,Applicable,129,0,-129,560,0,-560,Mismatch
+S5,31370.52,33387.42,Not Applicable,0,0,0,0,0,0,Matched
+S5,19149.07,21072.0,Not Applicable,0,0,0,0,0,0,Matched
+S5,22471.32,24423.08,Not Applicable,0,0,0,0,0,0,Matched
+S5,22545.7,24516.77,Not Applicable,0,0,0,0,0,0,Matched
+S5,30606.23,32627.23,Not Applicable,0,0,0,0,0,0,Matched
+S5,20825.78,22748.69,Not Applicable,0,0,0,0,0,0,Matched
+S5,23714.62,25666.42,Not Applicable,0,0,0,0,0,0,Matched
+S5,20285.45,22217.54,Not Applicable,0,0,0,0,0,0,Matched
+S5,26869.23,28846.42,Not Applicable,0,0,0,0,0,0,Matched
+S5,20071.44,21995.0,Not Applicable,0,0,0,0,0,0,Matched
+S5,33644.12,35675.92,Not Applicable,0,0,0,0,0,0,Matched
+S5,24379.08,26363.73,Not Applicable,0,0,0,0,0,0,Matched
+S5,24699.24,26682.96,Not Applicable,0,0,0,0,0,0,Matched
+S5,18708.62,20624.08,Applicable,155,0,-155,670,0,-670,Mismatch
+S5,23958.0,25913.15,Not Applicable,0,0,0,0,0,0,Matched
+S5,13503.66,14989.62,Applicable,112,0,-112,487,0,-487,Mismatch
+S5,26628.78,28611.69,Not Applicable,0,0,0,0,0,0,Matched
+S5,16678.23,18605.77,Applicable,140,0,-140,605,0,-605,Mismatch
+S5,29294.18,31314.38,Not Applicable,0,0,0,0,0,0,Matched
+S1,21070.61,23025.62,Not Applicable,0,0,0,0,0,0,Matched
+S1,26383.68,28390.54,Not Applicable,0,0,0,0,0,0,Matched
+S1,20214.53,22156.85,Not Applicable,0,0,0,0,0,0,Matched
+S1,25713.7,27689.0,Not Applicable,0,0,0,0,0,0,Matched
+S1,18146.7,20076.12,Applicable,151,0,-151,652,0,-652,Mismatch
+S1,16192.71,18011.42,Applicable,135,0,-135,585,0,-585,Mismatch
+S1,17159.32,18967.31,Applicable,142,0,-142,616,0,-616,Mismatch
+S1,20870.34,22824.23,Not Applicable,0,0,0,0,0,0,Matched
+S1,24785.71,26768.85,Not Applicable,0,0,0,0,0,0,Matched
+S1,18927.76,20851.27,Applicable,156,0,-156,678,0,-678,Mismatch
+S1,21188.56,23133.65,Not Applicable,0,0,0,0,0,0,Matched
+S1,13378.26,15077.96,Applicable,113,0,-113,490,0,-490,Mismatch
+S1,27923.38,29915.0,Not Applicable,0,0,0,0,0,0,Matched
+S1,14716.74,16498.92,Applicable,124,0,-124,536,0,-536,Mismatch
+S1,24630.85,26610.42,Not Applicable,0,0,0,0,0,0,Matched
+S1,29748.36,31770.38,Not Applicable,0,0,0,0,0,0,Matched
+S1,27869.12,29868.0,Not Applicable,0,0,0,0,0,0,Matched
+S1,28872.7,30867.27,Not Applicable,0,0,0,0,0,0,Matched
+S1,23505.91,25456.46,Not Applicable,0,0,0,0,0,0,Matched
+S1,21663.3,23615.58,Not Applicable,0,0,0,0,0,0,Matched
+S1,19476.55,21401.58,Not Applicable,0,0,0,0,0,0,Matched
+S1,24543.51,26501.23,Not Applicable,0,0,0,0,0,0,Matched
+S1,23869.61,25845.0,Not Applicable,0,0,0,0,0,0,Matched
+S1,25370.49,27346.0,Not Applicable,0,0,0,0,0,0,Matched
+S1,30685.26,32710.0,Not Applicable,0,0,0,0,0,0,Matched
+S1,25780.25,27752.46,Not Applicable,0,0,0,0,0,0,Matched
+S1,22328.96,24285.69,Not Applicable,0,0,0,0,0,0,Matched
+S1,27320.67,29314.42,Not Applicable,0,0,0,0,0,0,Matched
+S1,29028.11,31037.08,Not Applicable,0,0,0,0,0,0,Matched
+S1,20615.95,22554.12,Not Applicable,0,0,0,0,0,0,Matched
+S1,31494.39,33497.15,Not Applicable,0,0,0,0,0,0,Matched
+S1,20798.44,22739.85,Not Applicable,0,0,0,0,0,0,Matched
+S1,33403.75,35445.58,Not Applicable,0,0,0,0,0,0,Matched
+S1,23771.79,25721.04,Not Applicable,0,0,0,0,0,0,Matched
+S1,27995.64,29989.15,Not Applicable,0,0,0,0,0,0,Matched
+S1,33348.85,35379.62,Not Applicable,0,0,0,0,0,0,Matched
+S1,16122.26,17687.38,Applicable,133,0,-133,575,0,-575,Mismatch
+S1,19481.2,21412.85,Not Applicable,0,0,0,0,0,0,Matched
+S11,25830.62,27827.08,Not Applicable,0,0,0,0,0,0,Matched
+S11,25484.33,27465.46,Not Applicable,0,0,0,0,0,0,Matched
+S11,20652.8,22590.65,Not Applicable,0,0,0,0,0,0,Matched
+S11,22567.59,24532.65,Not Applicable,0,0,0,0,0,0,Matched
+S11,22675.61,24646.31,Not Applicable,0,0,0,0,0,0,Matched
+S11,23084.79,25033.62,Not Applicable,0,0,0,0,0,0,Matched
+S11,26370.53,28344.69,Not Applicable,0,0,0,0,0,0,Matched
+S11,26801.64,28793.77,Not Applicable,0,0,0,0,0,0,Matched
+S11,14019.4,15587.46,Applicable,117,0,-117,507,0,-507,Mismatch
+S11,19477.89,21410.92,Not Applicable,0,0,0,0,0,0,Matched
+S11,25327.07,27302.92,Not Applicable,0,0,0,0,0,0,Matched
+S11,23918.57,25885.96,Not Applicable,0,0,0,0,0,0,Matched
+S11,28672.78,30672.0,Not Applicable,0,0,0,0,0,0,Matched
+S11,23787.4,25768.0,Not Applicable,0,0,0,0,0,0,Matched
+S11,24046.1,26027.96,Not Applicable,0,0,0,0,0,0,Matched
+S11,26703.35,28681.69,Not Applicable,0,0,0,0,0,0,Matched
+S11,19591.4,21518.69,Not Applicable,0,0,0,0,0,0,Matched
+S11,22382.92,24346.42,Not Applicable,0,0,0,0,0,0,Matched
+S11,25386.98,27368.27,Not Applicable,0,0,0,0,0,0,Matched
+S11,26123.86,28093.08,Not Applicable,0,0,0,0,0,0,Matched
+S11,20046.59,21996.19,Not Applicable,0,0,0,0,0,0,Matched
+S11,15642.43,17557.46,Applicable,132,0,-132,571,0,-571,Mismatch
+S11,16050.21,17541.38,Applicable,132,0,-132,570,0,-570,Mismatch
+S11,21870.19,23830.23,Not Applicable,0,0,0,0,0,0,Matched
+S11,20570.93,22519.31,Not Applicable,0,0,0,0,0,0,Matched
+S11,18688.44,20610.69,Applicable,155,0,-155,670,0,-670,Mismatch
+S11,15660.91,17579.92,Applicable,132,0,-132,571,0,-571,Mismatch
+S11,20362.85,22312.46,Not Applicable,0,0,0,0,0,0,Matched
+S11,16531.56,18401.69,Applicable,138,0,-138,598,0,-598,Mismatch
+S11,16642.92,18560.15,Applicable,139,0,-139,603,0,-603,Mismatch
+S11,22466.13,24415.08,Not Applicable,0,0,0,0,0,0,Matched
+S11,24749.06,26724.08,Not Applicable,0,0,0,0,0,0,Matched
+S11,20023.95,21977.08,Not Applicable,0,0,0,0,0,0,Matched
+S11,37095.37,39152.35,Not Applicable,0,0,0,0,0,0,Matched
+S11,24474.66,26443.69,Not Applicable,0,0,0,0,0,0,Matched
+S11,33842.0,35876.19,Not Applicable,0,0,0,0,0,0,Matched
+S11,33352.94,35389.92,Not Applicable,0,0,0,0,0,0,Matched
+S11,31128.22,33145.38,Not Applicable,0,0,0,0,0,0,Matched
+S2,28370.37,30369.96,Not Applicable,0,0,0,0,0,0,Matched
+S2,20692.91,22627.0,Not Applicable,0,0,0,0,0,0,Matched
+S2,29510.08,31522.27,Not Applicable,0,0,0,0,0,0,Matched
+S2,33329.57999999999,35377.38,Not Applicable,0,0,0,0,0,0,Matched
+S2,16970.89,18886.0,Applicable,142,0,-142,614,0,-614,Mismatch
+S2,33329.11,35375.58,Not Applicable,0,0,0,0,0,0,Matched
+S2,28728.12,30733.54,Not Applicable,0,0,0,0,0,0,Matched
+S2,34153.99,36180.0,Not Applicable,0,0,0,0,0,0,Matched
+S2,32196.95,34214.92,Not Applicable,0,0,0,0,0,0,Matched
+S2,30699.71,32734.77,Not Applicable,0,0,0,0,0,0,Matched
+S2,18629.11,20556.27,Applicable,154,0,-154,668,0,-668,Mismatch
+S2,27545.81,29552.08,Not Applicable,0,0,0,0,0,0,Matched
+S2,21749.05,23696.46,Not Applicable,0,0,0,0,0,0,Matched
+S2,23204.73,25153.38,Not Applicable,0,0,0,0,0,0,Matched
+S2,22123.87,24091.23,Not Applicable,0,0,0,0,0,0,Matched
+S2,28863.83,30873.15,Not Applicable,0,0,0,0,0,0,Matched
+S2,18722.41,20651.85,Applicable,155,0,-155,671,0,-671,Mismatch
+S2,31490.27,33507.0,Not Applicable,0,0,0,0,0,0,Matched
+S2,28125.7,30127.58,Not Applicable,0,0,0,0,0,0,Matched
+S2,22102.05,24053.46,Not Applicable,0,0,0,0,0,0,Matched
+S2,27874.4,29888.92,Not Applicable,0,0,0,0,0,0,Matched
+S2,23321.74,25286.73,Not Applicable,0,0,0,0,0,0,Matched
+S2,26064.37,28036.92,Not Applicable,0,0,0,0,0,0,Matched
+S2,22249.8,24203.62,Not Applicable,0,0,0,0,0,0,Matched
+S2,22323.37,24281.0,Not Applicable,0,0,0,0,0,0,Matched
+S2,17698.25,19635.58,Applicable,147,0,-147,638,0,-638,Mismatch
+S2,26466.07,28436.0,Not Applicable,0,0,0,0,0,0,Matched
+S2,21741.64,23693.31,Not Applicable,0,0,0,0,0,0,Matched
+S2,17055.09,18988.81,Applicable,142,0,-142,617,0,-617,Mismatch
+S2,25283.49,27253.62,Not Applicable,0,0,0,0,0,0,Matched
+S2,15272.61,17143.92,Applicable,129,0,-129,557,0,-557,Mismatch
+S2,22219.46,24168.12,Not Applicable,0,0,0,0,0,0,Matched
+S2,16077.68,17991.35,Applicable,135,0,-135,585,0,-585,Mismatch
+S2,26900.21,28891.54,Not Applicable,0,0,0,0,0,0,Matched
+S2,27573.76,29559.35,Not Applicable,0,0,0,0,0,0,Matched
+S2,23091.72,25038.15,Not Applicable,0,0,0,0,0,0,Matched
+S2,28228.5,30224.15,Not Applicable,0,0,0,0,0,0,Matched
+S2,24431.77,26419.08,Not Applicable,0,0,0,0,0,0,Matched
+S2,25333.24,27311.38,Not Applicable,0,0,0,0,0,0,Matched
+S6,29249.86,31256.0,Not Applicable,0,0,0,0,0,0,Matched
+S6,21975.73,23914.38,Not Applicable,0,0,0,0,0,0,Matched
+S6,25439.16,27415.0,Not Applicable,0,0,0,0,0,0,Matched
+S6,24750.29,26738.23,Not Applicable,0,0,0,0,0,0,Matched
+S6,35137.91,37180.46,Not Applicable,0,0,0,0,0,0,Matched
+S6,32983.44,35004.46,Not Applicable,0,0,0,0,0,0,Matched
+S6,25635.72,27612.73,Not Applicable,0,0,0,0,0,0,Matched
+S6,16222.06,18048.42,Applicable,135,0,-135,587,0,-587,Mismatch
+S6,20723.57,22672.85,Not Applicable,0,0,0,0,0,0,Matched
+S6,18302.5,20222.58,Applicable,152,0,-152,657,0,-657,Mismatch
+S6,26109.47,28097.0,Not Applicable,0,0,0,0,0,0,Matched
+S6,20008.38,21956.15,Not Applicable,0,0,0,0,0,0,Matched
+S6,17047.22,18962.92,Applicable,142,0,-142,616,0,-616,Mismatch
+S6,22590.58,24545.54,Not Applicable,0,0,0,0,0,0,Matched
+S6,26485.74,28478.73,Not Applicable,0,0,0,0,0,0,Matched
+S6,28774.15,30779.96,Not Applicable,0,0,0,0,0,0,Matched
+S6,27623.26,29606.69,Not Applicable,0,0,0,0,0,0,Matched
+S6,26837.99,28818.0,Not Applicable,0,0,0,0,0,0,Matched
+S6,20517.66,22463.0,Not Applicable,0,0,0,0,0,0,Matched
+S6,21977.19,23929.62,Not Applicable,0,0,0,0,0,0,Matched
+S6,27568.45,29575.08,Not Applicable,0,0,0,0,0,0,Matched
+S6,30754.59999999999,32794.62,Not Applicable,0,0,0,0,0,0,Matched
+S6,25763.86,27738.27,Not Applicable,0,0,0,0,0,0,Matched
+S6,22110.0,24049.96,Not Applicable,0,0,0,0,0,0,Matched
+S6,20462.24,22393.58,Not Applicable,0,0,0,0,0,0,Matched
+S6,16397.34,18320.38,Applicable,137,0,-137,595,0,-595,Mismatch
+S6,20934.12,22887.65,Not Applicable,0,0,0,0,0,0,Matched
+S6,23193.79,25151.92,Not Applicable,0,0,0,0,0,0,Matched
+S6,24434.56,26385.62,Not Applicable,0,0,0,0,0,0,Matched
+S6,34640.9,36677.35,Not Applicable,0,0,0,0,0,0,Matched
+S6,17459.94,19292.27,Applicable,145,0,-145,627,0,-627,Mismatch
+S6,15693.25,17558.96,Applicable,132,0,-132,571,0,-571,Mismatch
+S6,28711.43,30709.92,Not Applicable,0,0,0,0,0,0,Matched
+S6,27268.82,29251.15,Not Applicable,0,0,0,0,0,0,Matched
+S6,24385.0,26358.42,Not Applicable,0,0,0,0,0,0,Matched
+S12,23924.28,25905.85,Not Applicable,0,0,0,0,0,0,Matched
+S12,24137.9,26090.23,Not Applicable,0,0,0,0,0,0,Matched
+S12,21973.41,23927.58,Not Applicable,0,0,0,0,0,0,Matched
+S12,17482.9,19340.08,Applicable,145,0,-145,629,0,-629,Mismatch
+S12,24558.12,26522.92,Not Applicable,0,0,0,0,0,0,Matched
+S12,20150.55,22093.62,Not Applicable,0,0,0,0,0,0,Matched
+S12,26255.47,28236.46,Not Applicable,0,0,0,0,0,0,Matched
+S12,19515.52,21468.15,Not Applicable,0,0,0,0,0,0,Matched
+S12,22970.99,24912.81,Not Applicable,0,0,0,0,0,0,Matched
+S12,30574.21,32590.35,Not Applicable,0,0,0,0,0,0,Matched
+S12,17905.47,19844.0,Applicable,149,0,-149,645,0,-645,Mismatch
+S12,19729.96,21673.08,Not Applicable,0,0,0,0,0,0,Matched
+S12,28274.12,30297.58,Not Applicable,0,0,0,0,0,0,Matched
+S12,24704.93,26657.15,Not Applicable,0,0,0,0,0,0,Matched
+S12,16736.14,18411.12,Applicable,138,0,-138,598,0,-598,Mismatch
+S12,18722.73,20646.85,Applicable,155,0,-155,671,0,-671,Mismatch
+S12,17859.05,19796.85,Applicable,148,0,-148,643,0,-643,Mismatch
+S12,30046.11,32073.27,Not Applicable,0,0,0,0,0,0,Matched
+S12,26178.6,28155.08,Not Applicable,0,0,0,0,0,0,Matched
+S12,22380.89,24330.31,Not Applicable,0,0,0,0,0,0,Matched
+S12,33349.7,35377.92,Not Applicable,0,0,0,0,0,0,Matched
+S12,26145.76,28114.08,Not Applicable,0,0,0,0,0,0,Matched
+S12,17430.11,19367.65,Applicable,145,0,-145,629,0,-629,Mismatch
+S12,32474.48999999999,34490.73,Not Applicable,0,0,0,0,0,0,Matched
+S12,16681.05,18561.77,Applicable,139,0,-139,603,0,-603,Mismatch
+S12,17472.56,19401.19,Applicable,146,0,-146,631,0,-631,Mismatch
+S12,20165.67,22095.23,Not Applicable,0,0,0,0,0,0,Matched
+S12,14632.41,16361.35,Applicable,123,0,-123,532,0,-532,Mismatch
+S12,18735.62,20675.42,Applicable,155,0,-155,672,0,-672,Mismatch
+S12,18989.11,20934.77,Applicable,157,0,-157,680,0,-680,Mismatch
+S12,29476.05,31476.54,Not Applicable,0,0,0,0,0,0,Matched
+S12,22981.47,24936.04,Not Applicable,0,0,0,0,0,0,Matched
+S12,31891.40000000001,33919.77,Not Applicable,0,0,0,0,0,0,Matched
+S12,20363.62,22309.08,Not Applicable,0,0,0,0,0,0,Matched
+S12,23712.04,25666.38,Not Applicable,0,0,0,0,0,0,Matched
+S12,26837.98,28816.54,Not Applicable,0,0,0,0,0,0,Matched
+S12,28989.83,30988.31,Not Applicable,0,0,0,0,0,0,Matched
+S12,16373.06,18115.69,Applicable,136,0,-136,589,0,-589,Mismatch
+S12,29401.24,31423.0,Not Applicable,0,0,0,0,0,0,Matched
+S12,17041.75,18967.85,Applicable,142,0,-142,616,0,-616,Mismatch
+S3,20033.39,21978.73,Not Applicable,0,0,0,0,0,0,Matched
+S3,17925.34,19843.73,Applicable,149,0,-149,645,0,-645,Mismatch
+S3,24708.36,26684.85,Not Applicable,0,0,0,0,0,0,Matched
+S3,37294.92000000001,39348.23,Not Applicable,0,0,0,0,0,0,Matched
+S3,15200.04,17085.0,Applicable,128,0,-128,555,0,-555,Mismatch
+S3,31375.44,33385.12,Not Applicable,0,0,0,0,0,0,Matched
+S3,28572.38,30564.0,Not Applicable,0,0,0,0,0,0,Matched
+S3,20656.52,22595.58,Not Applicable,0,0,0,0,0,0,Matched
+S3,18770.6,20708.54,Applicable,155,0,-155,673,0,-673,Mismatch
+S3,29972.6,31994.42,Not Applicable,0,0,0,0,0,0,Matched
+S3,18633.09,20559.23,Applicable,154,0,-154,668,0,-668,Mismatch
+S3,25170.11,27154.27,Not Applicable,0,0,0,0,0,0,Matched
+S3,32112.39,34137.96,Not Applicable,0,0,0,0,0,0,Matched
+S3,20735.05,22665.15,Not Applicable,0,0,0,0,0,0,Matched
+S3,32292.79,34298.92,Not Applicable,0,0,0,0,0,0,Matched
+S3,21682.65,23636.77,Not Applicable,0,0,0,0,0,0,Matched
+S3,22976.75,24938.85,Not Applicable,0,0,0,0,0,0,Matched
+S3,25272.09,27235.38,Not Applicable,0,0,0,0,0,0,Matched
+S3,15209.76,16894.92,Applicable,127,0,-127,549,0,-549,Mismatch
+S3,35369.43,37428.85,Not Applicable,0,0,0,0,0,0,Matched
+S3,27926.82,29927.31,Not Applicable,0,0,0,0,0,0,Matched
+S3,28453.28,30463.31,Not Applicable,0,0,0,0,0,0,Matched
+S3,23590.83,25568.08,Not Applicable,0,0,0,0,0,0,Matched
+S3,18472.81,20409.77,Applicable,153,0,-153,663,0,-663,Mismatch
+S3,27257.54,29246.08,Not Applicable,0,0,0,0,0,0,Matched
+S3,15518.14,17408.08,Applicable,131,0,-131,566,0,-566,Mismatch
+S3,32254.52,34288.31,Not Applicable,0,0,0,0,0,0,Matched
+S3,15788.23,17647.65,Applicable,132,0,-132,574,0,-574,Mismatch
+S3,16643.74,18568.23,Applicable,139,0,-139,603,0,-603,Mismatch
+S3,28867.61,30880.85,Not Applicable,0,0,0,0,0,0,Matched
+S3,24261.8,26224.77,Not Applicable,0,0,0,0,0,0,Matched
+S3,22963.47,24931.46,Not Applicable,0,0,0,0,0,0,Matched
+S3,23792.18,25763.12,Not Applicable,0,0,0,0,0,0,Matched
+S3,20315.31,22253.19,Not Applicable,0,0,0,0,0,0,Matched
+S3,27901.95,29886.73,Not Applicable,0,0,0,0,0,0,Matched
+S3,20053.47,22000.35,Not Applicable,0,0,0,0,0,0,Matched
+S3,16624.49,18501.62,Applicable,139,0,-139,601,0,-601,Mismatch
+S3,25747.72,27735.31,Not Applicable,0,0,0,0,0,0,Matched
+S3,25424.8,27405.15,Not Applicable,0,0,0,0,0,0,Matched
+S4,16339.31,18131.38,Applicable,136,0,-136,589,0,-589,Mismatch
+S4,17529.04,19452.31,Applicable,146,0,-146,632,0,-632,Mismatch
+S4,23529.41,25503.65,Not Applicable,0,0,0,0,0,0,Matched
+S4,33347.42999999999,35389.62,Not Applicable,0,0,0,0,0,0,Matched
+S4,22421.89,24387.92,Not Applicable,0,0,0,0,0,0,Matched
+S4,23016.01,24965.54,Not Applicable,0,0,0,0,0,0,Matched
+S4,27819.2,29808.69,Not Applicable,0,0,0,0,0,0,Matched
+S4,28125.54,30126.69,Not Applicable,0,0,0,0,0,0,Matched
+S4,20152.67,22096.88,Not Applicable,0,0,0,0,0,0,Matched
+S4,24768.64,26754.08,Not Applicable,0,0,0,0,0,0,Matched
+S4,19570.73,21500.54,Not Applicable,0,0,0,0,0,0,Matched
+S4,30084.32,32099.5,Not Applicable,0,0,0,0,0,0,Matched
+S4,21551.36,23513.08,Not Applicable,0,0,0,0,0,0,Matched
+S4,16032.69,17757.0,Applicable,133,0,-133,577,0,-577,Mismatch
+S4,17095.46,19022.08,Applicable,143,0,-143,618,0,-618,Mismatch
+S4,20323.25,22251.58,Not Applicable,0,0,0,0,0,0,Matched
+S4,30324.11,32338.92,Not Applicable,0,0,0,0,0,0,Matched
+S4,25098.65,27066.77,Not Applicable,0,0,0,0,0,0,Matched
+S4,31503.41,33527.23,Not Applicable,0,0,0,0,0,0,Matched
+S4,19465.11,21394.19,Not Applicable,0,0,0,0,0,0,Matched
+S4,24751.02,26711.5,Not Applicable,0,0,0,0,0,0,Matched
+S4,27129.72,29115.77,Not Applicable,0,0,0,0,0,0,Matched
+S4,24041.06,26009.23,Not Applicable,0,0,0,0,0,0,Matched
+S4,29402.52,31400.12,Not Applicable,0,0,0,0,0,0,Matched
+S4,27065.63,29058.38,Not Applicable,0,0,0,0,0,0,Matched
+S4,24186.51,26161.0,Not Applicable,0,0,0,0,0,0,Matched
+S4,14149.23,15916.15,Applicable,119,0,-119,517,0,-517,Mismatch
+S4,22549.55,24513.46,Not Applicable,0,0,0,0,0,0,Matched
+S4,25100.44,27075.0,Not Applicable,0,0,0,0,0,0,Matched
+S4,23971.73,25955.31,Not Applicable,0,0,0,0,0,0,Matched
+S4,16739.89,18646.31,Applicable,140,0,-140,606,0,-606,Mismatch
+S4,17426.13,19353.85,Applicable,145,0,-145,629,0,-629,Mismatch
+S4,16155.29,18004.92,Applicable,135,0,-135,585,0,-585,Mismatch
+S10,20995.89,22949.23,Not Applicable,0,0,0,0,0,0,Matched
+S10,29319.0,31332.85,Not Applicable,0,0,0,0,0,0,Matched
+S10,32168.17,34208.08,Not Applicable,0,0,0,0,0,0,Matched
+S10,18425.81,20345.85,Applicable,153,0,-153,661,0,-661,Mismatch
+S10,23133.13,25090.73,Not Applicable,0,0,0,0,0,0,Matched
+S10,24214.68,26181.31,Not Applicable,0,0,0,0,0,0,Matched
+S10,24100.0,26071.27,Not Applicable,0,0,0,0,0,0,Matched
+S10,20880.25,22811.69,Not Applicable,0,0,0,0,0,0,Matched
+S10,20337.86,22286.69,Not Applicable,0,0,0,0,0,0,Matched
+S10,22212.25,24180.27,Not Applicable,0,0,0,0,0,0,Matched
+S10,21350.42,23308.35,Not Applicable,0,0,0,0,0,0,Matched
+S10,31871.54,33908.0,Not Applicable,0,0,0,0,0,0,Matched
+S10,30156.08,32179.23,Not Applicable,0,0,0,0,0,0,Matched
+S10,26746.92,28727.85,Not Applicable,0,0,0,0,0,0,Matched
+S10,24828.94,26812.08,Not Applicable,0,0,0,0,0,0,Matched
+S10,17965.3,19881.62,Applicable,149,0,-149,646,0,-646,Mismatch
+S10,21157.71,23104.12,Not Applicable,0,0,0,0,0,0,Matched
+S10,20806.93,22758.96,Not Applicable,0,0,0,0,0,0,Matched
+S10,30192.21,32190.69,Not Applicable,0,0,0,0,0,0,Matched
+S10,31898.43,33920.15,Not Applicable,0,0,0,0,0,0,Matched
+S10,23426.05,25390.69,Not Applicable,0,0,0,0,0,0,Matched
+S10,19689.24,21630.0,Not Applicable,0,0,0,0,0,0,Matched
+S10,27478.06,29451.42,Not Applicable,0,0,0,0,0,0,Matched
+S10,27442.74,29455.31,Not Applicable,0,0,0,0,0,0,Matched
+S10,25793.79,27752.81,Not Applicable,0,0,0,0,0,0,Matched
+S10,15630.07,17487.12,Applicable,131,0,-131,568,0,-568,Mismatch
+S10,15642.01,17543.92,Applicable,132,0,-132,570,0,-570,Mismatch
+S10,19895.03,21828.54,Not Applicable,0,0,0,0,0,0,Matched
+S10,14428.0,16234.77,Applicable,122,0,-122,528,0,-528,Mismatch
+S10,24541.6,26511.77,Not Applicable,0,0,0,0,0,0,Matched
+S10,22351.65,24308.15,Not Applicable,0,0,0,0,0,0,Matched
+S10,22712.41,24677.12,Not Applicable,0,0,0,0,0,0,Matched
+S10,29473.26,31469.35,Not Applicable,0,0,0,0,0,0,Matched
+S10,27506.48,29493.54,Not Applicable,0,0,0,0,0,0,Matched
+S10,21408.19,23363.04,Not Applicable,0,0,0,0,0,0,Matched
+S10,29684.49,31696.0,Not Applicable,0,0,0,0,0,0,Matched
+S10,20482.39,22424.54,Not Applicable,0,0,0,0,0,0,Matched
+S10,17510.17,19439.62,Applicable,146,0,-146,632,0,-632,Mismatch
+S10,34640.39,36693.31,Not Applicable,0,0,0,0,0,0,Matched
+S10,34942.34,36980.15,Not Applicable,0,0,0,0,0,0,Matched
+S10,26272.06,28266.46,Not Applicable,0,0,0,0,0,0,Matched
+S10,25806.53,27798.12,Not Applicable,0,0,0,0,0,0,Matched
+S10,31313.16,33323.92,Not Applicable,0,0,0,0,0,0,Matched
+S10,17151.84,19081.42,Applicable,143,0,-143,620,0,-620,Mismatch
+S10,36235.41,38298.92,Not Applicable,0,0,0,0,0,0,Matched
+S10,23570.93,25542.73,Not Applicable,0,0,0,0,0,0,Matched
+S10,25156.5,27127.46,Not Applicable,0,0,0,0,0,0,Matched
+S10,29934.31,31942.08,Not Applicable,0,0,0,0,0,0,Matched
+S10,26682.39,28665.92,Not Applicable,0,0,0,0,0,0,Matched
+S10,16933.97,18862.0,Applicable,141,0,-141,613,0,-613,Mismatch

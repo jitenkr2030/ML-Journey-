@@ -1,0 +1,72 @@
+2026-07-06 10:29:08 | DEBUG    | PFRecon | validate_rules:538 | PF rules validated OK
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2378 | ======================================================================
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2379 | PF RECONCILIATION ENGINE
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2380 | Client: default
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2381 | PF Ceiling: ₹15,000
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2382 | Employee Rate: 12%
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2383 | ======================================================================
+2026-07-06 10:29:08 | INFO     | PFRecon | load_csv:612 | Loaded wages.csv: 500 rows × 15 cols
+2026-07-06 10:29:08 | INFO     | PFRecon | load_csv:612 | Loaded ecr.csv: 500 rows × 5 cols
+2026-07-06 10:29:08 | INFO     | PFRecon | load_csv:612 | Loaded attendance.csv: 500 rows × 4 cols
+2026-07-06 10:29:08 | INFO     | PFRecon | load_csv:612 | Loaded employee_master.csv: 508 rows × 5 cols
+2026-07-06 10:29:08 | INFO     | PFRecon | load_all_sources:669 | Loaded 4 data sources: ['wages', 'ecr', 'attendance', 'master']
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2402 | ==================================================
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2403 | PHASE 1: CASCADE MATCHING
+2026-07-06 10:29:08 | INFO     | PFRecon | run:2404 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2426 | Matches: 500/500 (exact=500, fuzzy=0)
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2434 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2435 | PHASE 2: DUPLICATE DETECTION
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2436 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2447 | Duplicates: 0
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2450 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2451 | PHASE 3: MISSING EMPLOYEE DETECTION
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2452 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2463 | Missing: 0
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2466 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2467 | PHASE 4: VALIDATION ENGINE
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2468 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2569 | Validations: 2010 run, 809 passed, 743 failed
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2576 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2577 | PHASE 5: FRAUD DETECTION
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2578 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2595 | Fraud flags: 0
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2598 | ==================================================
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2599 | PHASE 6: RISK SCORING
+2026-07-06 10:29:09 | INFO     | PFRecon | run:2600 | ==================================================
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2658 | Risk scores computed: 1
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2661 | ==================================================
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2662 | PHASE 7: SITE RECONCILIATION
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2663 | ==================================================
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2676 | Sites processed: 12
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2685 | Compliance: 100.0% (compliant)
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2688 | ==================================================
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2689 | PHASE 8: REPORT GENERATION
+2026-07-06 10:29:18 | INFO     | PFRecon | run:2690 | ==================================================
+2026-07-06 10:29:19 | INFO     | PFRecon | run:2751 | ==================================================
+2026-07-06 10:29:19 | INFO     | PFRecon | run:2752 | PHASE 9: EXPORT
+2026-07-06 10:29:19 | INFO     | PFRecon | run:2753 | ==================================================
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/employee_matching_report.csv (500 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/pf_reconciliation_report.csv (500 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/employer_pf_mismatch.csv (500 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/site_summary.csv (12 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/compliance_dashboard.csv (1 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/risk_summary.csv (1 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_reconciliation_reports:2281 | CSV → /root/ml-projects/stock-prediction/security-ai/reconciliation/audit_trail.csv (1 rows)
+2026-07-06 10:29:19 | INFO     | PFRecon | export_json_summary:2292 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/pf_reconciliation_summary_20260706_102919.json
+2026-07-06 10:29:19 | INFO     | PFRecon | export_json_summary:2297 | JSON → /root/ml-projects/stock-prediction/security-ai/summaries/pipeline_statistics_20260706_102919.json
+2026-07-06 10:29:20 | INFO     | PFRecon | export_excel_report:2319 | Excel → /root/ml-projects/stock-prediction/security-ai/exports/pf_reconciliation_20260706_102919.xlsx (7 sheets)
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2770 | ======================================================================
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2771 | PF RECONCILIATION COMPLETE
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2772 |   Elapsed:             11.021s
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2773 |   Files loaded:        4
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2774 |   Rows processed:      2008
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2775 |   Matches found:       500/500
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2776 |   Validations:         2010 (809 pass / 743 fail)
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2778 |   Duplicates:          0
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2779 |   Missing:             0
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2780 |   Fraud flags:         0
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2781 |   Sites processed:     12
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2782 |   Compliance:          100.0% (compliant)
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2783 |   CSV files written:   7
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2784 |   Speed:               182.2 rows/sec
+2026-07-06 10:29:20 | INFO     | PFRecon | run:2785 | ======================================================================

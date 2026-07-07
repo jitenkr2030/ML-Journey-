@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-07-06T16:43:09.372112",
+  "engine_version": "7.0.0",
+  "salary_summary": {
+    "total_employees": 500,
+    "avg_salary": 22210.4,
+    "median_salary": 21903.07,
+    "highest_salary": 35134.92,
+    "lowest_salary": 11654.62,
+    "total_salary": 11105200.78,
+    "salary_std": 5133.0
+  },
+  "ot_summary": {
+    "avg_ot": 25.0,
+    "total_ot": 12520.0,
+    "max_ot": 50.0,
+    "employees_with_ot": 489
+  },
+  "recovery_summary": {
+    "avg_recovery": 0.0,
+    "total_recovery": 0.0
+  },
+  "anomaly_summary": {
+    "total_anomalies": 27,
+    "ml_anomalies": 25,
+    "rule_anomalies": 2,
+    "risk_distribution": {
+      "medium": 27
+    },
+    "type_distribution": {
+      "gross_mismatch": 2,
+      "ml_anomaly": 25
+    }
+  },
+  "employee_risk_summary": {
+    "total_scored": 25,
+    "high_risk": 0,
+    "medium_risk": 2,
+    "low_risk": 23
+  },
+  "runtime": {
+    "elapsed_seconds": 0.577,
+    "rows_per_second": 12998.3,
+    "files_loaded": 6,
+    "rows_loaded": 7500,
+    "rows_processed": 500,
+    "modules_run": 12,
+    "anomalies_detected": 27,
+    "ml_anomalies": 25,
+    "rule_anomalies": 2,
+    "high_risk_employees": 0,
+    "sites_analyzed": 12,
+    "errors": 0,
+    "warnings": 0
+  },
+  "runtime_stats": {
+    "elapsed_seconds": 0.58,
+    "rows_per_second": 12931.0,
+    "files_loaded": 6,
+    "rows_loaded": 7500,
+    "rows_processed": 500,
+    "modules_run": 12,
+    "anomalies_detected": 27,
+    "ml_anomalies": 25,
+    "rule_anomalies": 2,
+    "high_risk_employees": 0,
+    "sites_analyzed": 12,
+    "errors": 0,
+    "warnings": 0
+  }
+}

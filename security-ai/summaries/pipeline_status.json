@@ -1,0 +1,11 @@
+{
+  "Excel Parser": "PASS",
+  "Employee Matching": "PASS",
+  "PF Reconciliation": "PASS",
+  "ESI Reconciliation": "PASS",
+  "Wage Anomaly Detection": "PASS",
+  "Fraud Detection": "PASS",
+  "Compliance Risk Scoring": "PASS",
+  "Site Performance Scoring": "PASS",
+  "Final Security Report": "PASS"
+}

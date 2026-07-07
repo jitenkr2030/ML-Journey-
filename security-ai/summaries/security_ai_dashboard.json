@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-07-06T16:49:10.512913",
+  "engine_version": "9.0.0",
+  "client": "default",
+  "month": "2026-07",
+  "total_clients": 20,
+  "total_sites": 100,
+  "total_guards": 500,
+  "active_guards": 500,
+  "inactive_guards": 0,
+  "total_payroll": 12878909.78,
+  "total_pf_deduction": 894175.91,
+  "total_esi_deduction": 0.0
+}

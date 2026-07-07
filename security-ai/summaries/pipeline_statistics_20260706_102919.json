@@ -1,0 +1,13 @@
+{
+  "elapsed_seconds": 11.021,
+  "rows_per_second": 182.2,
+  "match_rate": 100.0,
+  "validation_pass_rate": 40.25,
+  "total_validations": 2010,
+  "files_loaded": 4,
+  "rows_processed": 2008,
+  "duplicates_found": 0,
+  "missing_found": 0,
+  "fraud_flags": 0,
+  "errors": 0
+}

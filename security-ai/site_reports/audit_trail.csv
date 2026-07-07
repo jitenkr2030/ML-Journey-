@@ -1,0 +1,3 @@
+﻿timestamp,action,module,detail,rows_affected,engine_version
+2026-07-06T10:29:23.455353,ENGINE_START,loader,"Client=default, Sources=9",0,8.0.0
+2026-07-06T10:29:38.142905,ENGINE_COMPLETE,all,Elapsed=14.793s,0,8.0.0

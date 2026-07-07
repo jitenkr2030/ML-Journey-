@@ -1,0 +1,9 @@
+﻿category,raw_score,weighted_score,max_possible,incidents,details
+PF,0.0,0.0,100,0,['Total PF difference: ₹10']
+ESI,100.0,15.0,100,101,"['101 ESI mismatches', 'Total ESI difference: ₹60,780']"
+Attendance,100.0,15.0,100,4827,"['2524 GPS mismatches', '2303 absent but hours > 0']"
+Payroll,0.0,0.0,100,0,[]
+Bank,0.0,0.0,100,0,[]
+Identity,0.0,0.0,100,0,[]
+Document,0.0,0.0,100,0,[]
+Fraud,0.0,0.0,100,0,[]

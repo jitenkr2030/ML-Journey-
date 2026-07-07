@@ -1,0 +1,143 @@
+{
+  "run_id": "default_default_20260706_164900",
+  "client": "default",
+  "month": "",
+  "year": "",
+  "overall_status": "passed",
+  "total_duration": 10.23,
+  "start_time": "2026-07-06T16:49:00.995467",
+  "end_time": "2026-07-06T16:49:11.230681",
+  "stages": {
+    "total": 10,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 9,
+    "cancelled": 0,
+    "retried": 0
+  },
+  "stage_details": [
+    {
+      "script": "excel_parser.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "employee_matching_engine.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "esi_reconciliation_engine.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "pf_reconciliation_engine.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "site_performance_scoring_engine.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "wage_anomaly_detector.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "compliance_risk_scoring_engine.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "fraud_detection_engine.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "final_security_report.py",
+      "status": "skipped",
+      "duration": 0.0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    },
+    {
+      "script": "final_security_report.py",
+      "status": "passed",
+      "duration": 0,
+      "rows": 0,
+      "retries": 0,
+      "memory_mb": 0.0,
+      "error": "",
+      "warnings": []
+    }
+  ],
+  "audit_summary": {
+    "total_entries": 13,
+    "actions": {
+      "pipeline_start": 1,
+      "lock_acquired": 1,
+      "execution_start": 1,
+      "stage_skipped": 9,
+      "final_report_success": 1
+    },
+    "first_entry": "2026-07-06T16:49:00.987116",
+    "last_entry": "2026-07-06T16:49:11.224125"
+  },
+  "version": {
+    "pipeline_version": "9.0.0",
+    "engine_version": "10.0.0",
+    "execution_date": "2026-07-06T16:49:11.231454",
+    "python_version": "3.10.20",
+    "platform": "Linux-6.17.0-PRoot-Distro-aarch64-with-glibc2.42",
+    "hostname": "localhost",
+    "user": "root",
+    "git_commit": "695b047",
+    "git_branch": "main"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "total_employees_wages": 500,
+  "total_employees_pf": 0,
+  "total_employees_esi": 0,
+  "total_employees_bank": 0,
+  "matched_exact": 500,
+  "matched_fuzzy": 0,
+  "manual_review": 0,
+  "rejected": 0,
+  "no_match": 0,
+  "duplicates_found": 0,
+  "missing_from_pf": 8,
+  "missing_from_esi": 8,
+  "missing_from_bank": 8,
+  "missing_from_wages": 8,
+  "compliance_pct": 100.0,
+  "avg_confidence": 100.0,
+  "risk_distribution": {
+    "safe": 500
+  },
+  "site_distribution": {
+    "S8": 53,
+    "S10": 50,
+    "S9": 49,
+    "S7": 43,
+    "S5": 43,
+    "S12": 40,
+    "S3": 39,
+    "S2": 39,
+    "S1": 38,
+    "S11": 38,
+    "S6": 35,
+    "S4": 33
+  },
+  "processing_time_sec": 2.602,
+  "audit_summary": {
+    "total_records": 1500,
+    "exact_matches": 1500,
+    "fuzzy_matches": 0,
+    "rejected": 0,
+    "no_match": 0,
+    "avg_confidence": 100.0,
+    "confidence_distribution": {
+      "exact": 1500
+    },
+    "match_type_distribution": {
+      "exact_emp_id": 1500
+    }
+  }
+}

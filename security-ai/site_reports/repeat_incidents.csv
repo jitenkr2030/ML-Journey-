@@ -1,0 +1,111 @@
+﻿guard_id,incident_count,incident_types,severity
+G10,6,Late Reporting; Sleeping on Duty; Theft Attempt; Unauthorized Entry,high
+G103,4,Sleeping on Duty; Late Reporting,medium
+G104,4,Late Reporting; Theft Attempt,medium
+G11,4,Sleeping on Duty; Theft Attempt; Late Reporting,medium
+G112,3,Late Reporting; Sleeping on Duty; Theft Attempt,medium
+G115,3,Theft Attempt; Late Reporting; Unauthorized Entry,medium
+G116,3,Late Reporting; Unauthorized Entry; Sleeping on Duty,medium
+G119,3,Unauthorized Entry; Theft Attempt,medium
+G124,3,Theft Attempt; Sleeping on Duty; Unauthorized Entry,medium
+G127,3,Late Reporting; Unauthorized Entry; Theft Attempt,medium
+G129,5,Sleeping on Duty; Late Reporting; Unauthorized Entry,high
+G130,4,Late Reporting; Sleeping on Duty; Theft Attempt,medium
+G133,3,Late Reporting; Unauthorized Entry; Sleeping on Duty,medium
+G134,4,Late Reporting; Sleeping on Duty; Theft Attempt,medium
+G14,4,Theft Attempt; Unauthorized Entry,medium
+G15,5,Late Reporting; Theft Attempt; Sleeping on Duty,high
+G152,6,Theft Attempt; Late Reporting; Unauthorized Entry,high
+G155,3,Theft Attempt; Sleeping on Duty; Unauthorized Entry,medium
+G156,3,Sleeping on Duty; Late Reporting,medium
+G157,4,Sleeping on Duty; Late Reporting,medium
+G166,3,Sleeping on Duty,medium
+G168,3,Late Reporting; Unauthorized Entry,medium
+G172,3,Theft Attempt,medium
+G177,3,Late Reporting; Sleeping on Duty; Theft Attempt,medium
+G178,3,Sleeping on Duty; Unauthorized Entry; Theft Attempt,medium
+G182,3,Late Reporting; Theft Attempt; Unauthorized Entry,medium
+G183,4,Theft Attempt; Late Reporting; Unauthorized Entry,medium
+G185,3,Theft Attempt; Unauthorized Entry; Sleeping on Duty,medium
+G187,3,Theft Attempt; Sleeping on Duty; Late Reporting,medium
+G189,3,Theft Attempt; Unauthorized Entry,medium
+G190,4,Late Reporting; Sleeping on Duty; Unauthorized Entry,medium
+G196,3,Sleeping on Duty; Late Reporting; Unauthorized Entry,medium
+G197,4,Theft Attempt; Late Reporting; Unauthorized Entry; Sleeping on Duty,medium
+G20,3,Late Reporting; Sleeping on Duty,medium
+G200,4,Sleeping on Duty; Unauthorized Entry; Theft Attempt,medium
+G202,3,Theft Attempt; Late Reporting; Sleeping on Duty,medium
+G21,4,Sleeping on Duty; Unauthorized Entry,medium
+G216,8,Late Reporting; Unauthorized Entry; Theft Attempt,high
+G217,4,Unauthorized Entry; Late Reporting; Sleeping on Duty; Theft Attempt,medium
+G223,6,Late Reporting; Theft Attempt; Sleeping on Duty,high
+G227,3,Unauthorized Entry; Late Reporting; Theft Attempt,medium
+G229,4,Theft Attempt; Late Reporting,medium
+G232,3,Unauthorized Entry; Sleeping on Duty,medium
+G233,3,Late Reporting; Sleeping on Duty,medium
+G24,3,Unauthorized Entry; Late Reporting; Sleeping on Duty,medium
+G243,3,Late Reporting,medium
+G244,3,Unauthorized Entry; Sleeping on Duty,medium
+G245,3,Sleeping on Duty; Unauthorized Entry; Late Reporting,medium
+G246,3,Sleeping on Duty; Unauthorized Entry; Theft Attempt,medium
+G253,4,Late Reporting; Sleeping on Duty; Unauthorized Entry,medium
+G260,3,Theft Attempt,medium
+G272,4,Unauthorized Entry; Sleeping on Duty; Theft Attempt,medium
+G280,3,Late Reporting; Unauthorized Entry; Sleeping on Duty,medium
+G283,3,Late Reporting; Theft Attempt; Sleeping on Duty,medium
+G286,3,Theft Attempt; Late Reporting,medium
+G289,5,Unauthorized Entry; Late Reporting; Theft Attempt,high
+G292,3,Late Reporting; Unauthorized Entry,medium
+G300,3,Theft Attempt; Unauthorized Entry; Late Reporting,medium
+G303,3,Sleeping on Duty; Late Reporting,medium
+G305,3,Unauthorized Entry; Sleeping on Duty,medium
+G310,3,Theft Attempt; Late Reporting,medium
+G319,4,Theft Attempt; Late Reporting,medium
+G321,3,Sleeping on Duty; Late Reporting; Unauthorized Entry,medium
+G323,3,Unauthorized Entry; Late Reporting,medium
+G327,3,Sleeping on Duty; Theft Attempt,medium
+G329,3,Theft Attempt; Late Reporting; Sleeping on Duty,medium
+G34,4,Sleeping on Duty; Unauthorized Entry,medium
+G342,4,Unauthorized Entry; Sleeping on Duty; Late Reporting,medium
+G349,3,Theft Attempt; Late Reporting; Unauthorized Entry,medium
+G353,3,Unauthorized Entry; Sleeping on Duty,medium
+G363,3,Late Reporting; Theft Attempt; Sleeping on Duty,medium
+G367,3,Unauthorized Entry; Theft Attempt,medium
+G369,3,Late Reporting; Unauthorized Entry; Sleeping on Duty,medium
+G373,7,Late Reporting; Unauthorized Entry; Sleeping on Duty; Theft Attempt,high
+G374,4,Theft Attempt; Unauthorized Entry; Sleeping on Duty; Late Reporting,medium
+G380,3,Sleeping on Duty; Late Reporting,medium
+G400,3,Sleeping on Duty; Late Reporting; Theft Attempt,medium
+G403,3,Sleeping on Duty; Theft Attempt,medium
+G408,3,Sleeping on Duty; Unauthorized Entry; Late Reporting,medium
+G410,3,Theft Attempt; Sleeping on Duty,medium
+G417,3,Late Reporting,medium
+G418,3,Sleeping on Duty,medium
+G428,3,Theft Attempt; Sleeping on Duty,medium
+G434,4,Late Reporting; Theft Attempt,medium
+G438,3,Sleeping on Duty; Theft Attempt,medium
+G451,3,Theft Attempt; Unauthorized Entry,medium
+G46,3,Late Reporting; Theft Attempt; Unauthorized Entry,medium
+G460,5,Late Reporting; Unauthorized Entry; Theft Attempt,high
+G472,4,Sleeping on Duty; Late Reporting; Theft Attempt,medium
+G483,4,Unauthorized Entry; Theft Attempt; Late Reporting; Sleeping on Duty,medium
+G487,4,Sleeping on Duty; Late Reporting,medium
+G493,4,Unauthorized Entry; Theft Attempt; Sleeping on Duty,medium
+G495,3,Theft Attempt; Unauthorized Entry; Late Reporting,medium
+G50,3,Unauthorized Entry; Theft Attempt,medium
+G500,3,Unauthorized Entry; Theft Attempt,medium
+G54,3,Theft Attempt; Late Reporting; Sleeping on Duty,medium
+G58,3,Theft Attempt; Sleeping on Duty; Late Reporting,medium
+G6,3,Sleeping on Duty; Theft Attempt,medium
+G61,3,Late Reporting; Theft Attempt,medium
+G63,3,Late Reporting; Sleeping on Duty,medium
+G64,3,Unauthorized Entry; Sleeping on Duty; Late Reporting,medium
+G66,3,Unauthorized Entry; Theft Attempt,medium
+G69,4,Late Reporting; Theft Attempt; Unauthorized Entry,medium
+G73,3,Late Reporting; Unauthorized Entry,medium
+G74,6,Late Reporting; Theft Attempt; Unauthorized Entry; Sleeping on Duty,high
+G85,3,Sleeping on Duty,medium
+G86,4,Theft Attempt; Unauthorized Entry; Late Reporting,medium
+G94,3,Sleeping on Duty; Late Reporting,medium
+G95,4,Theft Attempt; Late Reporting,medium
+G96,3,Late Reporting; Unauthorized Entry,medium

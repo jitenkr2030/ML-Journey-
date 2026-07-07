@@ -1,0 +1,363 @@
+{
+  "generated_at": "2026-07-06T10:32:31.300135",
+  "engine_version": "5.0.0",
+  "summary": {
+    "total_employees": 506,
+    "total_sites": 13,
+    "overall_compliance": 98.2,
+    "compliance_grade": "A",
+    "avg_risk_score": 1.8
+  },
+  "compliance_breakdown": {
+    "overall": 98.2,
+    "pf": 100.0,
+    "esi": 88.0,
+    "attendance": 100.0,
+    "identity": 100.0,
+    "fraud": 100.0
+  },
+  "risk_distribution": {
+    "safe": 506
+  },
+  "top_10_risks": [
+    {
+      "name": "18927.76",
+      "site": "S1",
+      "score": 10.2,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-678)"
+      ]
+    },
+    {
+      "name": "18914.37",
+      "site": "S9",
+      "score": 10.2,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-677)"
+      ]
+    },
+    {
+      "name": "18989.11",
+      "site": "S12",
+      "score": 10.2,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-680)"
+      ]
+    },
+    {
+      "name": "18770.6",
+      "site": "S3",
+      "score": 10.1,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-673)"
+      ]
+    },
+    {
+      "name": "18722.73",
+      "site": "S12",
+      "score": 10.1,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-671)"
+      ]
+    },
+    {
+      "name": "18722.41",
+      "site": "S2",
+      "score": 10.1,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-671)"
+      ]
+    },
+    {
+      "name": "18804.9",
+      "site": "S7",
+      "score": 10.1,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-674)"
+      ]
+    },
+    {
+      "name": "18735.62",
+      "site": "S12",
+      "score": 10.1,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-672)"
+      ]
+    },
+    {
+      "name": "18629.11",
+      "site": "S2",
+      "score": 10.0,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-668)"
+      ]
+    },
+    {
+      "name": "18633.09",
+      "site": "S3",
+      "score": 10.0,
+      "level": "safe",
+      "factors": [
+        "PF mismatch (diff=0)",
+        "ESI mismatch (diff=-668)"
+      ]
+    }
+  ],
+  "site_summary": [
+    {
+      "site": "S12",
+      "risk_score": 3.0,
+      "compliance": 97.0,
+      "employees": 40
+    },
+    {
+      "site": "S3",
+      "risk_score": 2.3,
+      "compliance": 97.7,
+      "employees": 39
+    },
+    {
+      "site": "S7",
+      "risk_score": 2.2,
+      "compliance": 97.8,
+      "employees": 43
+    },
+    {
+      "site": "S4",
+      "risk_score": 2.2,
+      "compliance": 97.8,
+      "employees": 33
+    },
+    {
+      "site": "S2",
+      "risk_score": 1.7,
+      "compliance": 98.3,
+      "employees": 39
+    },
+    {
+      "site": "S8",
+      "risk_score": 1.6,
+      "compliance": 98.4,
+      "employees": 53
+    },
+    {
+      "site": "S9",
+      "risk_score": 1.6,
+      "compliance": 98.4,
+      "employees": 49
+    },
+    {
+      "site": "S1",
+      "risk_score": 1.6,
+      "compliance": 98.4,
+      "employees": 38
+    },
+    {
+      "site": "S11",
+      "risk_score": 1.6,
+      "compliance": 98.4,
+      "employees": 38
+    },
+    {
+      "site": "S6",
+      "risk_score": 1.6,
+      "compliance": 98.4,
+      "employees": 35
+    }
+  ],
+  "executive_summary": {
+    "generated_at": "2026-07-06T10:32:31.302761",
+    "engine_version": "5.0.0",
+    "overall": {
+      "total_employees": 506,
+      "total_sites": 13,
+      "overall_compliance_pct": 98.2,
+      "compliance_grade": "A",
+      "avg_risk_score": 1.8
+    },
+    "compliance_by_category": {
+      "overall": 98.2,
+      "pf": 100.0,
+      "esi": 88.0,
+      "attendance": 100.0,
+      "identity": 100.0,
+      "fraud": 100.0
+    },
+    "risk_distribution": {
+      "safe": 506
+    },
+    "top_10_high_risk_employees": [
+      {
+        "name": "18927.76",
+        "site": "S1",
+        "score": 10.2,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18914.37",
+        "site": "S9",
+        "score": 10.2,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18989.11",
+        "site": "S12",
+        "score": 10.2,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18770.6",
+        "site": "S3",
+        "score": 10.1,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18722.73",
+        "site": "S12",
+        "score": 10.1,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18722.41",
+        "site": "S2",
+        "score": 10.1,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18804.9",
+        "site": "S7",
+        "score": 10.1,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18735.62",
+        "site": "S12",
+        "score": 10.1,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18629.11",
+        "site": "S2",
+        "score": 10.0,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      },
+      {
+        "name": "18633.09",
+        "site": "S3",
+        "score": 10.0,
+        "level": "safe",
+        "primary_risk": "PF mismatch (diff=0)"
+      }
+    ],
+    "top_10_sites_by_risk": [
+      {
+        "site": "S12",
+        "risk_score": 3.0,
+        "compliance": 97.0,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S3",
+        "risk_score": 2.3,
+        "compliance": 97.7,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S7",
+        "risk_score": 2.2,
+        "compliance": 97.8,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S4",
+        "risk_score": 2.2,
+        "compliance": 97.8,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S2",
+        "risk_score": 1.7,
+        "compliance": 98.3,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S8",
+        "risk_score": 1.6,
+        "compliance": 98.4,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S9",
+        "risk_score": 1.6,
+        "compliance": 98.4,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S1",
+        "risk_score": 1.6,
+        "compliance": 98.4,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S11",
+        "risk_score": 1.6,
+        "compliance": 98.4,
+        "high_risk_employees": 0
+      },
+      {
+        "site": "S6",
+        "risk_score": 1.6,
+        "compliance": 98.4,
+        "high_risk_employees": 0
+      }
+    ],
+    "recommended_actions": [],
+    "summary_stats": {
+      "ghost_employees": 0,
+      "duplicates": 0,
+      "high_risk": 0,
+      "needs_review": 0,
+      "safe": 506,
+      "recommendations_count": 0
+    }
+  },
+  "runtime_stats": {
+    "elapsed_seconds": 16.502,
+    "files_loaded": 9,
+    "rows_loaded": 7510,
+    "employees_scored": 506,
+    "sites_scored": 13,
+    "validations_run": 0,
+    "risk_categories_calculated": 8,
+    "recommendations_generated": 0,
+    "exceptions_found": 0,
+    "errors": 0
+  }
+}
