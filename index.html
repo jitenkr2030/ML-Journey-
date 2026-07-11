@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReconcileAI — Bank Reconciliation Powered by AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <style>
+        :root {
+            --bg: #050505; --surface: #0c0c0c; --surface-hover: #141414;
+            --border: #181818; --border-hover: #282828;
+            --accent: #00e88f; --accent-dim: #00c77a;
+            --accent-glow: rgba(0, 232, 143, 0.06); --accent-glow-strong: rgba(0, 232, 143, 0.12);
+            --text-primary: #eae6de; --text-muted: #5e5a54; --text-dim: #343230;
+            --danger: #ff4d4d; --danger-glow: rgba(255, 77, 77, 0.1);
+            --warning: #ffb84d; --warning-glow: rgba(255, 184, 77, 0.1);
+            --success: #00e88f; --blue: #6b8aff; --blue-glow: rgba(107, 138, 255, 0.1);
+            --serif: 'Instrument Serif', Georgia, serif;
+            --sans: 'Syne', sans-serif; --mono: 'DM Mono', monospace;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text-primary); font-family: var(--sans); line-height: 1.6; overflow-x: hidden; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; }
+        body::after { content: ''; position: fixed; top: -40%; left: -20%; width: 140%; height: 140%; background: radial-gradient(ellipse 600px 600px at 15% 20%, rgba(0, 232, 143, 0.03) 0%, transparent 70%), radial-gradient(ellipse 400px 400px at 80% 60%, rgba(107, 138, 255, 0.02) 0%, transparent 70%); pointer-events: none; z-index: -1; }
+        ::selection { background: var(--accent); color: var(--bg); }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0 48px; height: 64px; display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(24px) saturate(1.2); background: rgba(5, 5, 5, 0.75); border-bottom: 1px solid var(--border); }
+        .logo { font-family: var(--mono); font-size: 16px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.3px; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 36px; align-items: center; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 12px; font-family: var(--mono); font-weight: 400; letter-spacing: 0.5px; transition: color 0.25s ease; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-cta { padding: 8px 20px !important; background: var(--accent); color: var(--bg) !important; border-radius: 6px; font-weight: 500 !important; transition: all 0.3s ease !important; }
+        .nav-cta:hover { background: #fff; letter-spacing: 1.2px !important; }
+
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; max-width: 1200px; margin: 0 auto; position: relative; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 10px; padding: 7px 18px; border: 1px solid var(--border); border-radius: 100px; font-family: var(--mono); font-size: 11px; color: var(--text-muted); width: fit-content; margin-bottom: 48px; opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s forwards; }
+        .hero-badge .dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+        h1 { font-family: var(--serif); font-size: clamp(52px, 8.5vw, 108px); font-weight: 400; line-height: 1.02; letter-spacing: -2.5px; opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.35s forwards; }
+        h1 .accent { color: var(--accent); font-style: italic; position: relative; }
+        h1 .accent::after { content: ''; position: absolute; bottom: 4px; left: 0; width: 100%; height: 2px; background: var(--accent); opacity: 0.25; border-radius: 1px; }
+        .hero-sub { font-family: var(--mono); font-size: 14px; font-weight: 300; color: var(--text-muted); max-width: 520px; margin-top: 36px; line-height: 1.9; opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.5s forwards; }
+        .hero-actions { display: flex; gap: 16px; margin-top: 48px; opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.6s forwards; }
+        .btn-primary { padding: 16px 36px; background: var(--accent); color: var(--bg); border: none; border-radius: 8px; font-family: var(--sans); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.35s cubic-bezier(0.22,1,0.36,1); letter-spacing: 0.5px; }
+        .btn-primary:hover { background: #fff; letter-spacing: 2px; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,232,143,0.15); }
+        .btn-secondary { padding: 16px 36px; background: transparent; color: var(--text-muted); border: 1px solid var(--border); border-radius: 8px; font-family: var(--sans); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.35s cubic-bezier(0.22,1,0.36,1); }
+        .btn-secondary:hover { border-color: var(--text-muted); color: var(--text-primary); transform: translateY(-2px); }
+        .hero-stats { display: flex; gap: 64px; margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--border); opacity: 0; animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.7s forwards; }
+        .stat h3 { font-family: var(--serif); font-size: 44px; font-weight: 400; color: var(--text-primary); letter-spacing: -1px; }
+        .stat p { font-family: var(--mono); font-size: 10px; color: var(--text-muted); margin-top: 6px; letter-spacing: 2px; }
+
+        .section-divider { max-width: 1200px; margin: 0 auto; padding: 0 48px; }
+        .section-divider .line { height: 1px; background: linear-gradient(90deg, var(--border), var(--border-hover), var(--border)); }
+        .demo-section { padding: 120px 48px; max-width: 1200px; margin: 0 auto; }
+        .section-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 20px; }
+        .section-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 54px); font-weight: 400; letter-spacing: -1.5px; margin-bottom: 52px; }
+        .demo-container { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 0 80px rgba(0,0,0,0.3); }
+        .demo-header { display: flex; align-items: center; gap: 8px; padding: 16px 24px; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.015); }
+        .demo-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .demo-dot.red { background: #ff5f57; } .demo-dot.yellow { background: #ffbd2e; } .demo-dot.green { background: #28c840; }
+        .demo-tabs { display: flex; border-bottom: 1px solid var(--border); }
+        .demo-tab { padding: 14px 28px; font-family: var(--mono); font-size: 12px; color: var(--text-muted); cursor: pointer; border: none; border-bottom: 2px solid transparent; transition: all 0.25s ease; background: none; }
+        .demo-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .demo-tab:hover { color: var(--text-primary); }
+        .demo-body { padding: 36px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .form-column h4 { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+        .form-group { margin-bottom: 18px; }
+        .form-group label { display: block; font-family: var(--mono); font-size: 11px; color: var(--text-muted); margin-bottom: 8px; letter-spacing: 0.5px; }
+        .form-group input { width: 100%; padding: 13px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-family: var(--mono); font-size: 13px; transition: all 0.25s ease; }
+        .form-group input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+        .form-group input::placeholder { color: var(--text-dim); }
+        .match-btn { width: 100%; padding: 16px; margin-top: 28px; background: var(--accent); color: var(--bg); border: none; border-radius: 8px; font-family: var(--sans); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.35s cubic-bezier(0.22,1,0.36,1); grid-column: 1 / -1; letter-spacing: 0.5px; }
+        .match-btn:hover { background: #fff; letter-spacing: 1.5px; transform: translateY(-1px); }
+        .match-btn:disabled { opacity: 0.5; cursor: wait; transform: none; }
+        .result-card { margin-top: 32px; padding: 28px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; display: none; animation: fadeUp 0.5s cubic-bezier(0.22,1,0.36,1); }
+        .result-card.visible { display: block; }
+        .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .result-status { font-family: var(--mono); font-size: 13px; font-weight: 500; padding: 6px 18px; border-radius: 100px; }
+        .status-matched { background: var(--accent-glow); color: var(--success); border: 1px solid rgba(0,232,143,0.15); }
+        .status-suspicious { background: var(--danger-glow); color: var(--danger); border: 1px solid rgba(255,77,77,0.15); }
+        .status-missing { background: var(--warning-glow); color: var(--warning); border: 1px solid rgba(255,184,77,0.15); }
+        .status-reversal { background: var(--blue-glow); color: var(--blue); border: 1px solid rgba(107,138,255,0.15); }
+        .result-confidence { font-family: var(--mono); font-size: 13px; color: var(--text-muted); }
+        .confidence-bar { width: 120px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; display: inline-block; vertical-align: middle; margin-right: 10px; }
+        .confidence-fill { height: 100%; border-radius: 2px; transition: width 0.8s cubic-bezier(0.22,1,0.36,1); }
+        .result-reason { font-family: var(--mono); font-size: 12px; color: var(--text-muted); padding: 18px; background: var(--surface); border-radius: 8px; line-height: 1.9; border: 1px solid var(--border); }
+        .result-reason strong { color: var(--text-primary); font-weight: 500; }
+
+        .upload-area { border: 2px dashed var(--border); border-radius: 12px; padding: 52px; text-align: center; transition: all 0.3s ease; cursor: pointer; }
+        .upload-area:hover, .upload-area.dragover { border-color: var(--accent); background: var(--accent-glow); }
+        .upload-icon { font-size: 44px; margin-bottom: 16px; opacity: 0.5; }
+        .upload-text { font-family: var(--mono); font-size: 13px; color: var(--text-muted); }
+        .upload-text strong { color: var(--accent); }
+        .upload-formats { font-family: var(--mono); font-size: 10px; color: var(--text-dim); margin-top: 12px; letter-spacing: 0.5px; }
+        .file-input { display: none; }
+        .upload-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+        .file-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; display: block; }
+        .file-name { font-family: var(--mono); font-size: 12px; color: var(--text-muted); margin-top: 10px; }
+        .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+        .summary-card { padding: 22px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; transition: border-color 0.25s ease; }
+        .summary-card:hover { border-color: var(--border-hover); }
+        .summary-card .label { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+        .summary-card .value { font-family: var(--serif); font-size: 38px; margin-top: 8px; letter-spacing: -1px; }
+        .summary-card .value.accent { color: var(--accent); }
+
+        /* PAYMENT */
+        .payment-section { margin-top: 32px; padding: 36px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; display: none; animation: fadeUp 0.5s cubic-bezier(0.22,1,0.36,1); }
+        .payment-section.visible { display: block; }
+        .payment-header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+        .payment-header .icon { width: 40px; height: 40px; background: var(--accent-glow); border: 1px solid rgba(0,232,143,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .payment-header h3 { font-family: var(--sans); font-size: 18px; font-weight: 600; letter-spacing: -0.5px; }
+        .payment-header .price { margin-left: auto; font-family: var(--serif); font-size: 32px; color: var(--accent); letter-spacing: -1px; }
+        .payment-body { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }
+        .qr-container { background: #fff; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        .qr-container img { width: 200px; height: 200px; border-radius: 8px; }
+        .qr-container .scan-text { font-family: var(--mono); font-size: 10px; color: #666; letter-spacing: 1px; text-transform: uppercase; }
+        .payment-details { display: flex; flex-direction: column; gap: 20px; }
+        .upi-id-box { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+        .upi-id-box .left { display: flex; flex-direction: column; gap: 4px; }
+        .upi-id-box .left .label { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+        .upi-id-box .left .value { font-family: var(--mono); font-size: 15px; color: var(--text-primary); font-weight: 500; letter-spacing: 0.5px; }
+        .copy-btn { padding: 8px 18px; background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--text-muted); font-family: var(--mono); font-size: 11px; cursor: pointer; transition: all 0.25s ease; letter-spacing: 0.5px; }
+        .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .copy-btn.copied { border-color: var(--accent); color: var(--accent); }
+        .payment-steps { display: flex; flex-direction: column; gap: 12px; }
+        .payment-step { display: flex; align-items: flex-start; gap: 12px; font-family: var(--mono); font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+        .payment-step .num { width: 22px; height: 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; color: var(--accent); flex-shrink: 0; }
+        .utr-section { padding-top: 16px; border-top: 1px solid var(--border); }
+        .utr-section .label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; display: block; }
+        .utr-row { display: flex; gap: 12px; }
+        .utr-input { flex: 1; padding: 14px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-family: var(--mono); font-size: 13px; transition: all 0.25s ease; }
+        .utr-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+        .utr-input::placeholder { color: var(--text-dim); }
+        .utr-input.error { border-color: var(--danger); box-shadow: 0 0 0 3px var(--danger-glow); }
+        .verify-btn { padding: 14px 28px; background: var(--accent); color: var(--bg); border: none; border-radius: 8px; font-family: var(--sans); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.35s cubic-bezier(0.22,1,0.36,1); letter-spacing: 0.5px; white-space: nowrap; }
+        .verify-btn:hover { background: #fff; letter-spacing: 1px; transform: translateY(-1px); }
+        .verify-btn:disabled { opacity: 0.5; cursor: wait; transform: none; }
+        .utr-error { font-family: var(--mono); font-size: 11px; color: var(--danger); margin-top: 8px; display: none; }
+        .utr-error.visible { display: block; }
+
+        /* PENDING STATE */
+        .pending-state { display: none; padding: 32px; text-align: center; margin-top: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+        .pending-state.visible { display: block; }
+        .pending-state .spinner-lg { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
+        .pending-state h4 { font-family: var(--sans); font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+        .pending-state p { font-family: var(--mono); font-size: 12px; color: var(--text-muted); line-height: 1.8; }
+        .pending-state .check-btn { margin-top: 16px; padding: 10px 24px; background: transparent; border: 1px solid var(--border); border-radius: 6px; color: var(--text-muted); font-family: var(--mono); font-size: 11px; cursor: pointer; transition: all 0.25s ease; }
+        .pending-state .check-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+        /* SUCCESS */
+        .payment-success { display: none; padding: 24px; background: var(--accent-glow); border: 1px solid rgba(0,232,143,0.15); border-radius: 10px; text-align: center; margin-top: 20px; animation: fadeUp 0.4s cubic-bezier(0.22,1,0.36,1); }
+        .payment-success.visible { display: block; }
+        .payment-success .check { font-size: 36px; margin-bottom: 12px; }
+        .payment-success h4 { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+        .payment-success p { font-family: var(--mono); font-size: 12px; color: var(--text-muted); }
+
+        .download-bar { display: none; align-items: center; gap: 12px; padding: 20px 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 24px; animation: fadeUp 0.4s cubic-bezier(0.22,1,0.36,1); }
+        .download-bar.visible { display: flex; }
+        .download-bar .label { font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 1px; margin-right: auto; }
+        .download-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 7px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s cubic-bezier(0.22,1,0.36,1); border: 1px solid var(--border); background: transparent; color: var(--text-primary); }
+        .download-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+        .download-btn .icon { font-size: 14px; }
+        .download-btn.excel { border-color: rgba(0,232,143,0.2); color: var(--accent); background: var(--accent-glow); }
+        .download-btn.excel:hover { background: var(--accent-glow-strong); border-color: var(--accent); }
+
+        .results-table { width: 100%; border-collapse: collapse; margin-top: 24px; display: none; }
+        .results-table.visible { display: table; }
+        .results-table th { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+        .results-table td { font-family: var(--mono); font-size: 12px; padding: 14px 16px; border-bottom: 1px solid var(--border); color: var(--text-primary); }
+        .results-table tr { transition: background 0.2s ease; }
+        .results-table tr:hover { background: rgba(255,255,255,0.02); }
+
+        .trust-bar { padding: 60px 48px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .trust-label { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 4px; text-transform: uppercase; margin-bottom: 32px; }
+        .trust-logos { display: flex; justify-content: center; gap: 48px; align-items: center; flex-wrap: wrap; }
+        .trust-logo { font-family: var(--mono); font-size: 14px; color: var(--text-dim); font-weight: 500; letter-spacing: 1px; opacity: 0.5; transition: opacity 0.3s ease; }
+        .trust-logo:hover { opacity: 0.8; }
+
+        .features-section { padding: 120px 48px; max-width: 1200px; margin: 0 auto; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-top: 52px; }
+        .feature-card { padding: 44px 32px; background: var(--bg); transition: all 0.35s ease; position: relative; }
+        .feature-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: transparent; transition: background 0.35s ease; }
+        .feature-card:hover { background: var(--surface); }
+        .feature-card:hover::after { background: var(--accent); }
+        .feature-icon { font-size: 28px; margin-bottom: 22px; display: block; }
+        .feature-card h3 { font-family: var(--sans); font-size: 15px; font-weight: 600; margin-bottom: 12px; letter-spacing: -0.3px; }
+        .feature-card p { font-family: var(--mono); font-size: 12px; font-weight: 300; color: var(--text-muted); line-height: 1.9; }
+
+        .pricing-section { padding: 120px 48px; max-width: 1200px; margin: 0 auto; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-top: 52px; }
+        .pricing-card { padding: 48px 32px; background: var(--bg); position: relative; }
+        .pricing-card.featured { background: var(--surface); }
+        .pricing-card.featured::before { content: 'BEST VALUE'; position: absolute; top: 0; left: 0; right: 0; padding: 8px; text-align: center; font-family: var(--mono); font-size: 9px; letter-spacing: 4px; color: var(--bg); background: var(--accent); font-weight: 500; }
+        .pricing-card.featured .pricing-content { padding-top: 28px; }
+        .pricing-tier { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 3px; text-transform: uppercase; }
+        .pricing-price { font-family: var(--serif); font-size: 50px; margin: 16px 0 8px; letter-spacing: -1px; }
+        .pricing-price span { font-family: var(--mono); font-size: 13px; color: var(--text-muted); }
+        .pricing-desc { font-family: var(--mono); font-size: 12px; font-weight: 300; color: var(--text-muted); margin-bottom: 36px; }
+        .pricing-features { list-style: none; margin-bottom: 36px; }
+        .pricing-features li { font-family: var(--mono); font-size: 12px; font-weight: 300; color: var(--text-muted); padding: 11px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+        .pricing-features li::before { content: '✓'; color: var(--accent); font-size: 11px; font-weight: 500; }
+        .pricing-btn { width: 100%; padding: 14px; border-radius: 8px; font-family: var(--sans); font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.35s cubic-bezier(0.22,1,0.36,1); border: 1px solid var(--border); background: transparent; color: var(--text-primary); }
+        .pricing-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+        .pricing-card.featured .pricing-btn { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+        .pricing-card.featured .pricing-btn:hover { background: #fff; transform: translateY(-1px); }
+
+        .cta-section { padding: 120px 48px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .cta-section .section-title { margin-bottom: 20px; }
+        .cta-section .section-title .accent { color: var(--accent); font-style: italic; }
+        .cta-sub { font-family: var(--mono); font-size: 13px; font-weight: 300; color: var(--text-muted); margin-bottom: 40px; line-height: 1.8; }
+
+        footer { padding: 48px; border-top: 1px solid var(--border); max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .footer-left { font-family: var(--mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.3px; }
+        .footer-right { display: flex; gap: 28px; }
+        .footer-right a { font-family: var(--mono); font-size: 11px; color: var(--text-dim); text-decoration: none; transition: color 0.25s ease; letter-spacing: 0.3px; }
+        .footer-right a:hover { color: var(--text-primary); }
+
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .fade-section { opacity: 0; transform: translateY(48px); transition: all 0.9s cubic-bezier(0.22,1,0.36,1); }
+        .fade-section.visible { opacity: 1; transform: translateY(0); }
+        .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid var(--bg); border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; margin-right: 8px; vertical-align: middle; }
+        .tab-content { display: none; } .tab-content.active { display: block; }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 24px; } .nav-links { display: none; }
+            .hero { padding: 0 24px; } .hero-stats { flex-direction: column; gap: 28px; }
+            .demo-section, .features-section, .pricing-section, .cta-section { padding: 80px 24px; }
+            .form-grid, .upload-row { grid-template-columns: 1fr; }
+            .features-grid, .pricing-grid { grid-template-columns: 1fr; }
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            footer { padding: 48px 24px; flex-direction: column; gap: 20px; text-align: center; }
+            .trust-bar { padding: 48px 24px; } .trust-logos { gap: 28px; }
+            .section-divider { padding: 0 24px; }
+            .payment-body { grid-template-columns: 1fr; } .qr-container { justify-self: center; }
+            .download-bar { flex-direction: column; align-items: stretch; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">reconcile<span>ai</span></div>
+    <div class="nav-links">
+        <a href="#demo">Demo</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#demo" class="nav-cta">Start Free</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-badge"><span class="dot"></span>Built for Indian businesses &amp; CAs</div>
+    <h1>Reconcile bank<br>statements with<br><span class="accent">AI precision.</span></h1>
+    <p class="hero-sub">Upload your bank statement and ledger. Get matched transactions in seconds — not hours. Trained on Indian banking formats, GST patterns, and UPI references.</p>
+    <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Try It Live →</button>
+        <button class="btn-secondary" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">See Pricing</button>
+    </div>
+    <div class="hero-stats">
+        <div class="stat"><h3>95%</h3><p>Accuracy Rate</p></div>
+        <div class="stat"><h3>3sec</h3><p>Per Transaction</p></div>
+        <div class="stat"><h3>6000+</h3><p>Training Records</p></div>
+        <div class="stat"><h3>0</h3><p>Manual Effort</p></div>
+    </div>
+</section>
+
+<section class="trust-bar fade-section">
+    <div class="trust-label">Trusted by practitioners using</div>
+    <div class="trust-logos">
+        <span class="trust-logo">Tally</span><span class="trust-logo">Zoho Books</span>
+        <span class="trust-logo">QuickBooks</span><span class="trust-logo">Busy</span><span class="trust-logo">Marg</span>
+    </div>
+</section>
+
+<div class="section-divider"><div class="line"></div></div>
+
+<section class="demo-section fade-section" id="demo">
+    <div class="section-label">// Live Demo</div>
+    <div class="section-title">See it in action</div>
+    <div class="demo-container">
+        <div class="demo-header"><span class="demo-dot red"></span><span class="demo-dot yellow"></span><span class="demo-dot green"></span></div>
+        <div class="demo-tabs">
+            <button class="demo-tab active" onclick="switchTab('single')">Single Match</button>
+            <button class="demo-tab" onclick="switchTab('batch')">Batch Upload</button>
+        </div>
+
+        <div class="demo-body tab-content active" id="tab-single">
+            <div class="form-grid">
+                <div class="form-column">
+                    <h4>Book Entry</h4>
+                    <div class="form-group"><label>Description</label><input type="text" id="book-desc" placeholder="e.g. Salary Payment"></div>
+                    <div class="form-group"><label>Amount (Rs)</label><input type="number" id="book-amount" placeholder="50000"></div>
+                    <div class="form-group"><label>Reference</label><input type="text" id="book-ref" placeholder="REF12345"></div>
+                </div>
+                <div class="form-column">
+                    <h4>Bank Entry</h4>
+                    <div class="form-group"><label>Description</label><input type="text" id="bank-desc" placeholder="e.g. Salary Payment"></div>
+                    <div class="form-group"><label>Amount (Rs)</label><input type="number" id="bank-amount" placeholder="50000"></div>
+                    <div class="form-group"><label>Reference</label><input type="text" id="bank-ref" placeholder="REF12345"></div>
+                </div>
+                <button class="match-btn" id="match-btn" onclick="runSingleMatch()">Reconcile with AI →</button>
+            </div>
+            <div class="result-card" id="single-result">
+                <div class="result-header">
+                    <span class="result-status" id="result-status"></span>
+                    <span class="result-confidence" id="result-confidence"></span>
+                </div>
+                <div class="result-reason" id="result-reason"></div>
+            </div>
+        </div>
+
+        <div class="demo-body tab-content" id="tab-batch">
+            <div class="upload-row">
+                <div>
+                    <span class="file-label">Book Entries</span>
+                    <div class="upload-area" id="upload-book" onclick="document.getElementById('book-file').click()">
+                        <div class="upload-icon">📄</div>
+                        <div class="upload-text">Drop file here or <strong>browse</strong></div>
+                        <div class="upload-formats">CSV, Excel (.xlsx)</div>
+                        <input type="file" class="file-input" id="book-file" accept=".csv,.xlsx" onchange="handleFile(this, 'book')">
+                    </div>
+                    <div class="file-name" id="book-filename"></div>
+                </div>
+                <div>
+                    <span class="file-label">Bank Statement</span>
+                    <div class="upload-area" id="upload-bank" onclick="document.getElementById('bank-file').click()">
+                        <div class="upload-icon">🏦</div>
+                        <div class="upload-text">Drop file here or <strong>browse</strong></div>
+                        <div class="upload-formats">CSV, Excel (.xlsx), PDF (coming soon)</div>
+                        <input type="file" class="file-input" id="bank-file" accept=".csv,.xlsx" onchange="handleFile(this, 'bank')">
+                    </div>
+                    <div class="file-name" id="bank-filename"></div>
+                </div>
+            </div>
+            <button class="match-btn" id="batch-btn" onclick="runBatchMatch()">Reconcile Files →</button>
+
+            <div class="result-card" id="batch-result">
+                <div class="summary-grid" id="batch-summary"></div>
+
+                <!-- PAYMENT SECTION -->
+                <div class="payment-section" id="payment-section">
+                    <div class="payment-header">
+                        <div class="icon">🔒</div>
+                        <div><h3>Unlock Full Results</h3></div>
+                        <div class="price">₹500</div>
+                    </div>
+                    <div class="payment-body">
+                        <div class="qr-container">
+                            <img id="upi-qr" alt="UPI QR Code">
+                            <span class="scan-text">Scan to pay</span>
+                        </div>
+                        <div class="payment-details">
+                            <div class="upi-id-box">
+                                <div class="left">
+                                    <span class="label">UPI ID</span>
+                                    <span class="value" id="upi-display">9871087168@kotakbank</span>
+                                </div>
+                                <button class="copy-btn" id="copy-btn" onclick="copyUpiId()">Copy</button>
+                            </div>
+                            <div class="payment-steps">
+                                <div class="payment-step"><span class="num">1</span><span>Open any UPI app (GPay, PhonePe, Paytm)</span></div>
+                                <div class="payment-step"><span class="num">2</span><span>Scan QR or send ₹500 to the UPI ID above</span></div>
+                                <div class="payment-step"><span class="num">3</span><span>Enter the UTR / Transaction Reference number below</span></div>
+                            </div>
+                            <div class="utr-section">
+                                <span class="label">UTR / Transaction ID</span>
+                                <div class="utr-row">
+                                    <input type="text" class="utr-input" id="utr-input" placeholder="e.g. 415263789012" maxlength="30">
+                                    <button class="verify-btn" id="submit-utr-btn" onclick="submitUTR()">Submit UTR</button>
+                                </div>
+                                <div class="utr-error" id="utr-error">UTR must be at least 10 characters</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PENDING VERIFICATION -->
+                <div class="pending-state" id="pending-state">
+                    <div class="spinner-lg"></div>
+                    <h4>Waiting for verification</h4>
+                    <p>Your UTR has been submitted. We verify payments manually —<br>usually within 5-30 minutes. Keep this page open.</p>
+                    <button class="check-btn" onclick="checkPaymentStatus()">Check Status Now</button>
+                </div>
+
+                <!-- PAYMENT VERIFIED -->
+                <div class="payment-success" id="payment-success">
+                    <div class="check">✓</div>
+                    <h4>Payment Verified</h4>
+                    <p>Your full reconciliation results are now unlocked. Download below.</p>
+                </div>
+
+                <!-- DOWNLOAD BAR -->
+                <div class="download-bar" id="download-bar">
+                    <span class="label">Download results</span>
+                    <button class="download-btn csv" onclick="downloadCSV()"><span class="icon">⬇</span> CSV</button>
+                    <button class="download-btn excel" onclick="downloadExcel()"><span class="icon">⬇</span> Excel</button>
+                </div>
+
+                <!-- RESULTS TABLE -->
+                <table class="results-table" id="batch-table">
+                    <thead>
+                        <tr><th>Book Description</th><th>Bank Description</th><th>Book Amount</th><th>Bank Amount</th><th>Status</th><th>Confidence</th></tr>
+                    </thead>
+                    <tbody id="batch-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"><div class="line"></div></div>
+
+<section class="features-section fade-section" id="features">
+    <div class="section-label">// Why ReconcileAI</div>
+    <div class="section-title">Built for Indian accounting</div>
+    <div class="features-grid">
+        <div class="feature-card"><span class="feature-icon">🇮🇳</span><h3>GST Native</h3><p>Understands GST invoice formats, HSN codes, and GSTIN patterns. No configuration needed.</p></div>
+        <div class="feature-card"><span class="feature-icon">🔄</span><h3>UPI / NEFT / RTGS</h3><p>Recognizes all Indian payment rail formats and extracts reference numbers automatically.</p></div>
+        <div class="feature-card"><span class="feature-icon">🧠</span><h3>ML Powered</h3><p>Trained on 6000+ Indian banking transaction patterns. Learns from corrections over time.</p></div>
+        <div class="feature-card"><span class="feature-icon">📊</span><h3>Confidence Scoring</h3><p>Every match comes with a confidence score and human-readable explanation.</p></div>
+        <div class="feature-card"><span class="feature-icon">📁</span><h3>Batch Processing</h3><p>Upload thousands of transactions at once. Get results in seconds, not hours.</p></div>
+        <div class="feature-card"><span class="feature-icon">🔐</span><h3>Data Stays Yours</h3><p>Processing happens on your server. Your financial data never leaves your infrastructure.</p></div>
+    </div>
+</section>
+
+<div class="section-divider"><div class="line"></div></div>
+
+<section class="pricing-section fade-section" id="pricing">
+    <div class="section-label">// Pricing</div>
+    <div class="section-title">₹500 per reconciliation. No subscriptions.</div>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <div class="pricing-content">
+                <div class="pricing-tier">Single</div>
+                <div class="pricing-price">₹500</div>
+                <div class="pricing-desc">One bank statement vs one ledger</div>
+                <ul class="pricing-features">
+                    <li>Unlimited transactions per file</li><li>CSV + Excel upload</li>
+                    <li>AI-powered matching</li><li>Confidence scoring</li><li>CSV + Excel download</li>
+                </ul>
+                <button class="pricing-btn" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Try Now</button>
+            </div>
+        </div>
+        <div class="pricing-card featured">
+            <div class="pricing-content">
+                <div class="pricing-tier">5-Pack</div>
+                <div class="pricing-price">₹2,000</div>
+                <div class="pricing-desc">Save ₹500 — ₹400 each</div>
+                <ul class="pricing-features">
+                    <li>Everything in Single</li><li>5 reconciliation credits</li>
+                    <li>Valid for 90 days</li><li>Priority processing</li><li>Email support</li>
+                </ul>
+                <button class="pricing-btn">Buy Credits</button>
+            </div>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-content">
+                <div class="pricing-tier">CA Bulk</div>
+                <div class="pricing-price">₹8,000</div>
+                <div class="pricing-desc">25 reconciliations — ₹320 each</div>
+                <ul class="pricing-features">
+                    <li>Everything in 5-Pack</li><li>25 reconciliation credits</li>
+                    <li>Valid for 6 months</li><li>Multi-client management</li><li>Phone support</li>
+                </ul>
+                <button class="pricing-btn">Contact Us</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="section-divider"><div class="line"></div></div>
+
+<section class="cta-section fade-section">
+    <div class="section-label">// Get Started</div>
+    <div class="section-title">Ready to stop reconciling<br>by <span class="accent">hand</span>?</div>
+    <p class="cta-sub">Pay per use. No subscription. No lock-in.</p>
+    <button class="btn-primary" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Start Now →</button>
+</section>
+
+<footer>
+    <div class="footer-left">© 2026 reconcileai.in — Built in India for Indian businesses</div>
+    <div class="footer-right"><a href="#">GitHub</a><a href="#">Twitter</a><a href="#">LinkedIn</a></div>
+</footer>
+
+<script>
+    // ===== CONFIG =====
+    const API = 'http://localhost:8000';
+    const UPI_ID = '9871087168@kotakbank';
+    const PAY_AMOUNT = 500;
+    const UPI_LINK = `upi://pay?pa=${UPI_ID}&pn=ReconcileAI&am=${PAY_AMOUNT}&cu=INR&tn=Reconciliation`;
+
+    // ===== STATE =====
+    let lastBatchData = null;
+    let sessionId = null;
+    let pollTimer = null;
+
+    // ===== SESSION ID GENERATOR =====
+    function generateSessionId() {
+        return 'sess_' + Date.now().toString(36) + '_' + Math.random().toString(36).substr(2, 8);
+    }
+
+    // ===== QR CODE =====
+    function initQR() {
+        document.getElementById('upi-qr').src =
+            `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(UPI_LINK)}`;
+    }
+    initQR();
+
+    // ===== TAB SWITCHING =====
+    function switchTab(tab) {
+        document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        event.target.classList.add('active');
+        document.getElementById('tab-' + tab).classList.add('active');
+    }
+
+    // ===== SINGLE MATCH =====
+    async function runSingleMatch() {
+        const btn = document.getElementById('match-btn');
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner"></span> Analyzing...';
+        const payload = {
+            book_description: document.getElementById('book-desc').value || 'Test Entry',
+            bank_description: document.getElementById('bank-desc').value || 'Test Entry',
+            book_amount: parseFloat(document.getElementById('book-amount').value) || 0,
+            bank_amount: parseFloat(document.getElementById('bank-amount').value) || 0,
+            book_reference: document.getElementById('book-ref').value || 'NA',
+            bank_reference: document.getElementById('bank-ref').value || 'NA'
+        };
+        try {
+            const res = await fetch(`${API}/api/reconcile/single`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+            showResult(await res.json());
+        } catch (err) { alert('Error: Make sure the backend is running on localhost:8000'); }
+        btn.disabled = false; btn.innerHTML = 'Reconcile with AI →';
+    }
+
+    function showResult(data) {
+        const card = document.getElementById('single-result');
+        card.classList.add('visible');
+        const s = document.getElementById('result-status');
+        s.textContent = data.status;
+        s.className = 'result-status';
+        if (data.status === 'Matched') s.classList.add('status-matched');
+        else if (data.status === 'Suspicious') s.classList.add('status-suspicious');
+        else if (data.status === 'Missing Entry') s.classList.add('status-missing');
+        else if (data.status === 'Reversal Entry') s.classList.add('status-reversal');
+        else s.classList.add('status-suspicious');
+        let c = 'var(--accent)';
+        if (data.confidence < 50) c = 'var(--danger)'; else if (data.confidence < 75) c = 'var(--warning)';
+        document.getElementById('result-confidence').innerHTML = `<span class="confidence-bar"><span class="confidence-fill" style="width:${data.confidence}%;background:${c}"></span></span> ${data.confidence}% confidence`;
+        document.getElementById('result-reason').innerHTML = `<strong>Analysis:</strong> ${data.reason}`;
+    }
+
+    // ===== FILE HANDLING =====
+    function handleFile(input, type) {
+        if (input.files.length > 0) document.getElementById(type + '-filename').textContent = '📎 ' + input.files[0].name;
+    }
+    ['upload-book', 'upload-bank'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('dragover', e => { e.preventDefault(); el.classList.add('dragover'); });
+            el.addEventListener('dragleave', () => el.classList.remove('dragover'));
+            el.addEventListener('drop', e => { e.preventDefault(); el.classList.remove('dragover'); });
+        }
+    });
+
+    // ===== BATCH MATCH =====
+    async function runBatchMatch() {
+        const btn = document.getElementById('batch-btn');
+        btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Processing files...';
+        const bookFile = document.getElementById('book-file').files[0];
+        const bankFile = document.getElementById('bank-file').files[0];
+        if (!bookFile || !bankFile) { alert('Please upload both files'); btn.disabled = false; btn.innerHTML = 'Reconcile Files →'; return; }
+        const formData = new FormData();
+        formData.append('book_file', bookFile); formData.append('bank_file', bankFile);
+        try {
+            const res = await fetch(`${API}/api/reconcile/files`, { method: 'POST', body: formData });
+            lastBatchData = await res.json();
+            sessionId = generateSessionId();
+            showBatchPreview(lastBatchData);
+        } catch (err) { alert('Error: Make sure the backend is running on localhost:8000'); }
+        btn.disabled = false; btn.innerHTML = 'Reconcile Files →';
+    }
+
+    function showBatchPreview(data) {
+        document.getElementById('batch-result').classList.add('visible');
+        document.getElementById('batch-summary').innerHTML = `
+            <div class="summary-card"><div class="label">Total</div><div class="value">${data.total_transactions || 0}</div></div>
+            <div class="summary-card"><div class="label">Matched</div><div class="value accent">${data.matched_count || 0}</div></div>
+            <div class="summary-card"><div class="label">Unmatched</div><div class="value" style="color:var(--danger)">${data.unmatched_count || 0}</div></div>
+            <div class="summary-card"><div class="label">Match Rate</div><div class="value">${data.match_rate || 0}%</div></div>`;
+
+        // Reset all states
+        document.getElementById('payment-section').classList.add('visible');
+        document.getElementById('pending-state').classList.remove('visible');
+        document.getElementById('payment-success').classList.remove('visible');
+        document.getElementById('download-bar').classList.remove('visible');
+        document.getElementById('batch-table').classList.remove('visible');
+        document.getElementById('utr-input').value = '';
+        document.getElementById('utr-input').classList.remove('error');
+        document.getElementById('utr-error').classList.remove('visible');
+
+        // Stop any existing poll
+        if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+
+        document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // ===== COPY UPI =====
+    function copyUpiId() {
+        navigator.clipboard.writeText(UPI_ID).then(() => {
+            const b = document.getElementById('copy-btn'); b.textContent = 'Copied!'; b.classList.add('copied');
+            setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('copied'); }, 2000);
+        }).catch(() => {
+            const ta = document.createElement('textarea'); ta.value = UPI_ID;
+            document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+            const b = document.getElementById('copy-btn'); b.textContent = 'Copied!'; b.classList.add('copied');
+            setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('copied'); }, 2000);
+        });
+    }
+
+    // ===== SUBMIT UTR =====
+    async function submitUTR() {
+        const utr = document.getElementById('utr-input').value.trim();
+        const errEl = document.getElementById('utr-error');
+        const inputEl = document.getElementById('utr-input');
+
+        if (utr.length < 10) {
+            inputEl.classList.add('error'); errEl.classList.add('visible'); return;
+        }
+        inputEl.classList.remove('error'); errEl.classList.remove('visible');
+
+        const btn = document.getElementById('submit-utr-btn');
+        btn.disabled = true; btn.innerHTML = '<span class="spinner"></span> Submitting...';
+
+        try {
+            const res = await fetch(`${API}/api/payment/submit`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionId,
+                    utr: utr,
+                    amount: PAY_AMOUNT,
+                    total_transactions: lastBatchData?.total_transactions || 0,
+                    matched_count: lastBatchData?.matched_count || 0,
+                    unmatched_count: lastBatchData?.unmatched_count || 0,
+                    match_rate: lastBatchData?.match_rate || 0
+                })
+            });
+            const data = await res.json();
+
+            if (data.status === 'already_verified') {
+                unlockResults();
+            } else {
+                // Show pending state
+                document.getElementById('payment-section').classList.remove('visible');
+                document.getElementById('pending-state').classList.add('visible');
+                // Start polling every 10 seconds
+                pollTimer = setInterval(checkPaymentStatus, 10000);
+            }
+        } catch (err) {
+            alert('Error submitting UTR. Make sure the backend is running.');
+        }
+
+        btn.disabled = false; btn.innerHTML = 'Submit UTR';
+    }
+
+    // ===== CHECK PAYMENT STATUS =====
+    async function checkPaymentStatus() {
+        if (!sessionId) return;
+        try {
+            const res = await fetch(`${API}/api/payment/status/${sessionId}`);
+            const data = await res.json();
+            if (data.status === 'verified') {
+                unlockResults();
+            } else if (data.status === 'rejected') {
+                if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+                document.getElementById('pending-state').classList.remove('visible');
+                document.getElementById('payment-section').classList.add('visible');
+                alert('Payment could not be verified. Please check your UTR and try again, or contact support.');
+            }
+        } catch (err) { console.log('Status check failed:', err); }
+    }
+
+    // ===== UNLOCK RESULTS =====
+    function unlockResults() {
+        if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+        document.getElementById('payment-section').classList.remove('visible');
+        document.getElementById('pending-state').classList.remove('visible');
+        document.getElementById('payment-success').classList.add('visible');
+        setTimeout(() => {
+            document.getElementById('download-bar').classList.add('visible');
+            showResultsTable();
+            document.getElementById('batch-table').classList.add('visible');
+            document.getElementById('payment-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 500);
+    }
+
+    // ===== SHOW TABLE =====
+    function showResultsTable() {
+        if (!lastBatchData) return;
+        const tbody = document.getElementById('batch-tbody');
+        tbody.innerHTML = '';
+        [...(lastBatchData.matched || []), ...(lastBatchData.unmatched || [])].forEach(r => {
+            let sc = 'status-matched';
+            if (r.status === 'Suspicious') sc = 'status-suspicious';
+            else if (r.status === 'Missing Entry') sc = 'status-missing';
+            else if (r.status === 'Reversal Entry') sc = 'status-reversal';
+            tbody.innerHTML += `<tr><td>${r.book_description}</td><td>${r.bank_description}</td><td>₹${r.book_amount.toLocaleString()}</td><td>₹${r.bank_amount.toLocaleString()}</td><td><span class="result-status ${sc}" style="font-size:11px">${r.status}</span></td><td>${r.confidence}%</td></tr>`;
+        });
+    }
+
+    // ===== DOWNLOAD HELPERS =====
+    function getAllRows() { return lastBatchData ? [...(lastBatchData.matched || []), ...(lastBatchData.unmatched || [])] : []; }
+    function getSummaryRows() {
+        if (!lastBatchData) return [];
+        return [
+            { metric: 'Total Transactions', value: lastBatchData.total_transactions || 0 },
+            { metric: 'Matched', value: lastBatchData.matched_count || 0 },
+            { metric: 'Unmatched', value: lastBatchData.unmatched_count || 0 },
+            { metric: 'Match Rate (%)', value: lastBatchData.match_rate || 0 },
+        ];
+    }
+    function formatDate() { return new Date().toISOString().slice(0, 10); }
+
+    function downloadCSV() {
+        const rows = getAllRows(); if (!rows.length) { alert('No results'); return; }
+        const s = getSummaryRows();
+        const h = ['Book Description','Bank Description','Book Amount','Bank Amount','Status','Confidence (%)','Reason'];
+        let csv = 'ReconcileAI - Reconciliation Report\r\nGenerated,' + new Date().toLocaleString('en-IN') + '\r\n\r\nSummary\r\n';
+        s.forEach(x => { csv += x.metric + ',' + x.value + '\r\n'; });
+        csv += '\r\nDetailed Results\r\n' + h.join(',') + '\r\n';
+        rows.forEach(r => { csv += ['"'+(r.book_description||'').replace(/"/g,'""')+'"','"'+(r.bank_description||'').replace(/"/g,'""')+'"',r.book_amount||0,r.bank_amount||0,'"'+(r.status||'')+'"',r.confidence||0,'"'+(r.reason||'').replace(/"/g,'""')+'"'].join(',')+'\r\n'; });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'}));
+        a.download = 'reconciliation_report_' + formatDate() + '.csv';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    }
+
+    function downloadExcel() {
+        const rows = getAllRows(); if (!rows.length) { alert('No results'); return; }
+        const s = getSummaryRows();
+        const h = ['Book Description','Bank Description','Book Amount','Bank Amount','Status','Confidence (%)','Reason'];
+        const wb = XLSX.utils.book_new();
+
+        const ws1 = XLSX.utils.aoa_to_sheet([['ReconcileAI - Reconciliation Report'],['Generated',new Date().toLocaleString('en-IN')],[],['Summary'],['Metric','Value'],...s.map(x=>[x.metric,x.value]),[]]);
+        ws1['!cols']=[{wch:25},{wch:20}]; XLSX.utils.book_append_sheet(wb,ws1,'Summary');
+
+        const ws2 = XLSX.utils.aoa_to_sheet([['Detailed Results'],[],h,...rows.map(r=>[r.book_description||'',r.bank_description||'',r.book_amount||0,r.bank_amount||0,r.status||'',r.confidence||0,r.reason||''])]);
+        ws2['!cols']=[{wch:30},{wch:30},{wch:15},{wch:15},{wch:15},{wch:15},{wch:40}]; XLSX.utils.book_append_sheet(wb,ws2,'All Results');
+
+        const m = lastBatchData.matched||[];
+        const ws3 = XLSX.utils.aoa_to_sheet([['Matched Transactions'],[],h,...m.map(r=>[r.book_description||'',r.bank_description||'',r.book_amount||0,r.bank_amount||0,r.status||'',r.confidence||0,r.reason||''])]);
+        ws3['!cols']=ws2['!cols']; XLSX.utils.book_append_sheet(wb,ws3,'Matched');
+
+        const u = lastBatchData.unmatched||[];
+        const ws4 = XLSX.utils.aoa_to_sheet([['Unmatched Transactions'],[],h,...u.map(r=>[r.book_description||'',r.bank_description||'',r.book_amount||0,r.bank_amount||0,r.status||'',r.confidence||0,r.reason||''])]);
+        ws4['!cols']=ws2['!cols']; XLSX.utils.book_append_sheet(wb,ws4,'Unmatched');
+
+        XLSX.writeFile(wb,'reconciliation_report_'+formatDate()+'.xlsx');
+    }
+
+    // ===== SCROLL ANIMATIONS =====
+    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-section').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
