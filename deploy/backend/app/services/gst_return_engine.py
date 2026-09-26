@@ -10,7 +10,7 @@ from typing import List, Optional
 from app.services.file_parser import SmartFileParser
 
 logger = logging.getLogger(__name__)
-DB_PATH = Path(__file__).parent.parent.parent / "data" / "payments.db"
+DB_PATH = Path("/data/payments.db")
 
 
 class GSTReturnEngine:
@@ -20,6 +20,7 @@ class GSTReturnEngine:
         logger.info("✅ GST Return engine loaded")
 
     def _init_db(self):
+        os.makedirs("/data", exist_ok=True)
         conn = sqlite3.connect(str(DB_PATH))
         c = conn.cursor()
         c.execute('''CREATE TABLE IF NOT EXISTS gst_clients (
