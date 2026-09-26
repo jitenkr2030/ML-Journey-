@@ -11,8 +11,9 @@ pydantic
 python-dateutil
 requests
 certifi
-certifi
 charset-normalizer
 idna
 urllib3
 starlette
+chardet
+python-dotenv
