@@ -6,13 +6,13 @@ from pydantic import BaseModel
 
 router = APIRouter()
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "../../data/payments.db")
+DB_PATH = '/data/payments.db'
 ADMIN_KEY = "reconcile2026"
 
 
 def get_db():
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    os.makedirs(os.path.dirname(DB_PATH = '/data/payments.db'
+    conn = sqlite3.connect(DB_PATH = '/data/payments.db'
     conn.row_factory = sqlite3.Row
     return conn
 
