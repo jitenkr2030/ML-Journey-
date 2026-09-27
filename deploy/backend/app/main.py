@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
-from fastapi.responses import FileResponse
-from pathlib import Path
 
 from app.routes import reconcile
 from app.routes.payments import router as payments_router
 from app.routes.gst_returns import router as gst_returns_router
 from app.routes.gst_filing import router as gst_filing_router
+from app.routes.bookkeeping import router as bookkeeping_router
 
 logger = logging.getLogger(__name__)
 
@@ -29,19 +28,10 @@ app.include_router(reconcile.router)
 app.include_router(payments_router)
 app.include_router(gst_returns_router)
 app.include_router(gst_filing_router)
+app.include_router(bookkeeping_router)
 
-
-FRONTEND_DIR = Path("/app")
 
 @app.get("/")
-async def serve_index():
-    return FileResponse(str(FRONTEND_DIR / "index.html"))
-
-@app.get("/admin")
-async def serve_admin():
-    return FileResponse(str(FRONTEND_DIR / "admin.html"))
-
-@app.get("/api/health")
 async def root():
     return {
         "product": "ReconcileAI",
