@@ -226,7 +226,7 @@ td,th{padding:8px 10px}
 
 <section class="hero">
 <div class="container">
-<h1>GST & Bank Reconciliation<br><em>that actually works</em></h1>
+<h1>GST & Bank Reconciliation<br><em>in Minutes,Not Hours</em></h1>
 <p>Prepare, Reconcile, Validate, and File. AI-powered compliance platform for Indian CAs, GST practitioners, and businesses. Just ₹499 per reconciliation.</p>
 <div class="hero-stats">
 <div class="hero-stat"><div class="num">8</div><div class="label">Compliance Types</div></div>
@@ -246,6 +246,7 @@ td,th{padding:8px 10px}
 <div class="type-tabs">
 <button class="type-tab active" data-type="brs" onclick="selectType('brs')"><span class="icon">🏦</span> Bank Reconciliation <span class="price">₹499</span></button>
 <button class="type-tab" data-type="gst" onclick="selectType('gst')"><span class="icon">📋</span> GST Reconciliation <span class="price">₹499</span></button>
+<button class="type-tab" data-type="bookkeeping" onclick="selectType('bookkeeping')"><span class="icon">📚</span> Complete Bookkeeping <span class="price">₹2999</span></button>
 </div>
 
 <div class="category-label">GST Returns</div>
@@ -379,7 +380,8 @@ brs:{name:'Bank Reconciliation',endpoint:'/api/reconcile/files',price:199,desc:'
 gst:{name:'GST Reconciliation',endpoint:'/api/reconcile/gst',price:199,desc:'Match books against GSTR-2B. Identify ITC mismatches and missing invoices.',files:[{key:'books_file',label:'Purchase Register',desc:'From accounting software',icon:'📄'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📋'}],extra:[{key:'client_gstin',label:'GSTIN (optional)',ph:'07AAACR1234F1Z5'}]},
 gstr1:{name:'GSTR-1 Preparation',endpoint:'/api/gst/gstr1/prepare',price:199,desc:'Auto-prepare GSTR-1 from sales data. Classifies B2B, B2CL, B2CS, exports, notes.',files:[{key:'sales_file',label:'Sales Register',desc:'From Tally/accounting software',icon:'📤'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true},
 gstr2b:{name:'GSTR-2B Reconciliation',endpoint:'/api/gst/gstr2b/reconcile',price:199,desc:'Reconcile GSTR-2B with purchase register. Identify ITC eligible, blocked, and mismatched.',files:[{key:'books_file',label:'Purchase Register',desc:'From accounting software',icon:'📄'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📥'}],extra:[{key:'client_gstin',label:'GSTIN (optional)',ph:'07AAACR1234F1Z5'}]},
-gstr3b:{name:'GSTR-3B Preparation',endpoint:'/api/gst/gstr3b/prepare',price:199,desc:'Auto-compute GSTR-3B from sales, purchases, and GSTR-2B. Know exact tax liability.',files:[{key:'sales_file',label:'Sales Register',desc:'From accounting software',icon:'📤'},{key:'purchase_file',label:'Purchase Register',desc:'From accounting software',icon:'📥'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📋'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true}
+gstr3b:{name:'GSTR-3B Preparation',endpoint:'/api/gst/gstr3b/prepare',price:199,desc:'Auto-compute GSTR-3B from sales, purchases, and GSTR-2B. Know exact tax liability.',files:[{key:'sales_file',label:'Sales Register',desc:'From accounting software',icon:'📤'},{key:'purchase_file',label:'Purchase Register',desc:'From accounting software',icon:'📥'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📋'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true},
+bookkeeping:{name:'Complete Bookkeeping',endpoint:'/api/bookkeeping/upload',price:2999,desc:'Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.',files:[{key:'bank_statement',label:'Bank Statement',desc:'SBI/HDFC/ICICI CSV',icon:'🏦'},{key:'daybook',label:'Tally Daybook',desc:'Tally export CSV',icon:'📖'}],extra:[],isBookkeeping:true}
 };
 
 function selectType(t){
@@ -408,6 +410,7 @@ document.getElementById('reconcileBtn').disabled=!ok;
 }
 
 async function startReconciliation(){
+if(currentType==='bookkeeping'){return startBookkeeping()}
 const c=CONFIG[currentType];const ld=document.getElementById('loading');const lt=document.getElementById('loadingText');
 ld.classList.add('show');lt.textContent=`Running ${c.name}...`;
 const fd=new FormData();c.files.forEach((f,i)=>{fd.append(f.key,uploadedFiles[i+1])});
@@ -420,6 +423,54 @@ setTimeout(()=>{ld.classList.remove('show');showResults(d)},500);
 }catch(e){ld.classList.remove('show');alert('Error: '+e.message)}
 }
 
+
+let bookkeepingJobId=null;
+let bookkeepingPoll=null;
+
+async function startBookkeeping(){
+const c=CONFIG[currentType];const ld=document.getElementById('loading');const lt=document.getElementById('loadingText');
+ld.classList.add('show');lt.textContent='Uploading files...';
+const fd=new FormData();
+fd.append('bank_statement',uploadedFiles[1]);
+fd.append('daybook',uploadedFiles[2]);
+try{
+const r=await fetch('/api/bookkeeping/upload',{method:'POST',body:fd});const d=await r.json();
+if(d.error){alert(d.error);ld.classList.remove('show');return}
+bookkeepingJobId=d.job_id;
+lt.textContent='Running 21 pipelines...';
+const r2=await fetch('/api/bookkeeping/run/'+bookkeepingJobId,{method:'POST'});const d2=await r2.json();
+currentResults=d2;
+ld.classList.remove('show');
+showBookkeepingResults(d2);
+}catch(e){ld.classList.remove('show');alert('Error: '+e.message)}
+}
+
+function showBookkeepingResults(d){
+const s=document.getElementById('results');s.classList.add('show');s.scrollIntoView({behavior:'smooth'});
+document.getElementById('resultsTitle').textContent='Complete Bookkeeping Results';
+document.getElementById('gstr3bSummary').innerHTML='';
+const completed=(d.completed_pipelines||[]).filter(p=>p.status==='completed').length;
+const failed=(d.completed_pipelines||[]).filter(p=>p.status==='failed').length;
+const skipped=(d.completed_pipelines||[]).filter(p=>p.status==='skipped').length;
+document.getElementById('summaryCards').innerHTML=`<div class="summary-card total"><div class="value">21</div><div class="label">Total Pipelines</div></div><div class="summary-card matched"><div class="value">${completed}</div><div class="label">Completed</div></div><div class="summary-card unmatched"><div class="value">${failed}</div><div class="label">Failed</div></div><div class="summary-card rate"><div class="value">${skipped}</div><div class="label">Skipped</div></div>`;
+window._bk=d.completed_pipelines||[];
+let h=`<table><thead><tr><th>#</th><th>Pipeline</th><th>Status</th></tr></thead><tbody>`;
+window._bk.forEach((p,i)=>{const sc=p.status==='completed'?'status-matched':p.status==='failed'?'status-unmatched':'status-skipped';h+=`<tr><td>${i+1}</td><td>${p.name}</td><td><span class="status-badge ${sc}">${p.status}</span></td></tr>`});
+h+='</tbody></table>';
+document.getElementById('tableContent').innerHTML=h;
+document.getElementById('tableTabs').innerHTML=`<div class="table-tab active">Pipelines (${window._bk.length})</div>`;
+const files=d.output_files||[];
+if(files.length>0){
+let fh='<div style="margin-top:16px;padding:16px"><h3 style="margin-bottom:12px">Output Files ('+files.length+')</h3>';
+fh+='<div style="display:flex;flex-wrap:wrap;gap:8px">';
+files.forEach(f=>{fh+=`<a href="/api/bookkeeping/download/${bookkeepingJobId}/${f.split('/').pop()}" target="_blank" style="padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;font-size:12px;text-decoration:none;color:var(--text)">${f.split('/').pop()}</a>`});
+fh+='</div>';
+fh+=`<div style="margin-top:16px"><a href="/api/bookkeeping/download/${bookkeepingJobId}" class="btn-primary" style="display:inline-flex;padding:12px 24px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;font-weight:600">Download All (ZIP) ↓</a></div></div>`;
+document.getElementById('tableContent').innerHTML+=fh;
+}
+document.getElementById('fileBtn').style.display='none';
+}
+
 function showResults(d){
 const s=document.getElementById('results');s.classList.add('show');s.scrollIntoView({behavior:'smooth'});
 document.getElementById('resultsTitle').textContent=CONFIG[currentType].name+' Results';
@@ -430,7 +481,9 @@ else if(currentType==='gst')showGST(d,ca,ta,tb);
 else if(currentType==='gstr1')showGSTR1(d,ca,ta,tb);
 else if(currentType==='gstr2b')showGSTR2B(d,ca,ta,tb);
 else if(currentType==='gstr3b')showGSTR3B(d,ca,ta,tb);
+else if(currentType==='bookkeeping')showBookkeepingResults(d);
 }
+
 
 function showBRS(d,cards,tabs,table){
 cards.innerHTML=`<div class="summary-card total"><div class="value">${d.total_transactions||0}</div><div class="label">Total</div></div><div class="summary-card matched"><div class="value">${d.matched_count||0}</div><div class="label">Matched</div></div><div class="summary-card unmatched"><div class="value">${d.unmatched_count||0}</div><div class="label">Unmatched</div></div><div class="summary-card rate"><div class="value">${d.match_rate||0}%</div><div class="label">Match Rate</div></div>`;
