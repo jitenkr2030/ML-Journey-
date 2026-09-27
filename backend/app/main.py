@@ -6,6 +6,7 @@ from app.routes import reconcile
 from app.routes.payments import router as payments_router
 from app.routes.gst_returns import router as gst_returns_router
 from app.routes.gst_filing import router as gst_filing_router
+from app.routes.bookkeeping import router as bookkeeping_router
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +28,7 @@ app.include_router(reconcile.router)
 app.include_router(payments_router)
 app.include_router(gst_returns_router)
 app.include_router(gst_filing_router)
+app.include_router(bookkeeping_router)
 
 
 @app.get("/")
