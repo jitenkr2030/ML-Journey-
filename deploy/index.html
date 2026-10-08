@@ -208,6 +208,25 @@ td,th{padding:8px 10px}
 .pricing-grid{grid-template-columns:repeat(2,1fr)}
 .otp-input input{width:40px;height:48px;font-size:20px}
 }
+
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal-overlay.show{display:flex}
+.auth-modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;width:420px;max-width:95vw;max-height:90vh;overflow-y:auto}
+.auth-modal h2{margin-bottom:8px;font-size:22px}
+.auth-modal p{color:var(--text2);font-size:13px;margin-bottom:20px}
+.auth-modal .input-field{width:100%;margin-bottom:12px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;outline:none;transition:border-color .2s;box-sizing:border-box}
+.auth-modal .input-field:focus{border-color:var(--accent)}
+.auth-modal .btn-full{width:100%;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;margin-top:4px}
+.auth-modal .btn-full:hover{background:#6ba0ff}
+.auth-modal .btn-full.green{background:#22c55e}
+.auth-modal .btn-full.green:hover{background:#16a34a}
+.auth-modal .switch-link{text-align:center;margin-top:16px;font-size:13px;color:var(--text2)}
+.auth-modal .switch-link a{color:var(--accent);cursor:pointer;text-decoration:underline}
+.auth-modal .error-msg{color:#ef4444;font-size:12px;margin-bottom:8px;display:none}
+.auth-modal .success-msg{color:#22c55e;font-size:12px;margin-bottom:8px;display:none}
+.auth-modal .close-btn{float:right;cursor:pointer;font-size:22px;color:var(--text2);line-height:1}
+.auth-modal .close-btn:hover{color:var(--text)}
+
 </style>
 </head>
 <body>
@@ -219,7 +238,15 @@ td,th{padding:8px 10px}
 <a href="#demo">Try Free</a>
 <a href="#pricing">Pricing</a>
 <a href="#features">Features</a>
-<a href="#" class="nav-cta" onclick="document.getElementById('demo').scrollIntoView({behavior:'smooth'})">Start Now</a>
+<span id="authNav">
+<a href="#" class="nav-cta" onclick="openModal('loginModal')">Login</a>
+<a href="#" class="nav-cta" onclick="openModal('registerModal')" style="margin-left:8px;background:var(--accent2)">Sign Up</a>
+</span>
+<span id="userNav" style="display:none;align-items:center;gap:12px">
+<span id="userName" style="color:var(--text2);font-size:13px"></span>
+<a href="#" class="nav-cta" onclick="showDashboard()" style="background:var(--accent2)">Dashboard</a>
+<a href="#" class="nav-cta" onclick="logoutUser()" style="background:var(--danger,#ef4444)">Logout</a>
+</span>
 </div>
 </div>
 </nav>
@@ -723,6 +750,141 @@ document.addEventListener('dragleave',e=>{const b=e.target.closest('.upload-box'
 document.addEventListener('drop',e=>{e.preventDefault();document.querySelectorAll('.upload-box').forEach(b=>b.classList.remove('dragover'))});
 
 selectType('brs');
+</script>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+<div class="auth-modal">
+<span class="close-btn" onclick="closeModal('loginModal')">&times;</span>
+<h2>Welcome Back</h2>
+<p>Login to access your dashboard and history.</p>
+<div class="error-msg" id="loginError"></div>
+<div class="success-msg" id="loginSuccess"></div>
+<input class="input-field" id="loginEmail" type="email" placeholder="Email address">
+<input class="input-field" id="loginPassword" type="password" placeholder="Password">
+<button class="btn-full" onclick="loginUser()">Login &rarr;</button>
+<div class="switch-link">Don't have an account? <a onclick="closeModal('loginModal');openModal('registerModal')">Sign Up Free</a></div>
+</div>
+</div>
+
+<!-- REGISTER MODAL -->
+<div class="modal-overlay" id="registerModal">
+<div class="auth-modal">
+<span class="close-btn" onclick="closeModal('registerModal')">&times;</span>
+<h2>Create Free Account</h2>
+<p>2 free reconciliations every month. No credit card.</p>
+<div class="error-msg" id="regError"></div>
+<div class="success-msg" id="regSuccess"></div>
+<input class="input-field" id="regName" type="text" placeholder="Your Name">
+<input class="input-field" id="regEmail" type="email" placeholder="Email address">
+<input class="input-field" id="regPassword" type="password" placeholder="Password (6+ characters)">
+<input class="input-field" id="regFirm" type="text" placeholder="Firm Name (optional)">
+<input class="input-field" id="regGstin" type="text" placeholder="GSTIN (optional)">
+<input class="input-field" id="regPhone" type="text" placeholder="Phone (optional)">
+<button class="btn-full green" onclick="registerUser()">Create Account &rarr;</button>
+<div class="switch-link">Already have an account? <a onclick="closeModal('registerModal');openModal('loginModal')">Login</a></div>
+</div>
+</div>
+
+
+
+<script>
+// ==================== AUTH FUNCTIONS ====================
+function openModal(id){document.getElementById(id).classList.add('show')}
+function closeModal(id){document.getElementById(id).classList.remove('show')}
+
+async function checkLogin(){
+try{
+const r=await fetch('/api/auth/me');
+if(r.ok){
+const d=await r.json();
+if(d.success&&d.user){
+document.getElementById('authNav').style.display='none';
+document.getElementById('userNav').style.display='flex';
+document.getElementById('userName').textContent=d.user.name;
+return d.user;
+}
+}
+}catch(e){}
+document.getElementById('authNav').style.display='flex';
+document.getElementById('userNav').style.display='none';
+return null;
+}
+
+async function registerUser(){
+const name=document.getElementById('regName').value.trim();
+const email=document.getElementById('regEmail').value.trim();
+const password=document.getElementById('regPassword').value.trim();
+const firm=document.getElementById('regFirm').value.trim();
+const gstin=document.getElementById('regGstin').value.trim();
+const phone=document.getElementById('regPhone').value.trim();
+const err=document.getElementById('regError');
+const ok=document.getElementById('regSuccess');
+
+err.style.display='none';ok.style.display='none';
+
+if(!name||!email||!password){err.textContent='Please fill name, email, and password.';err.style.display='block';return}
+if(password.length<6){err.textContent='Password must be 6+ characters.';err.style.display='block';return}
+
+try{
+const r=await fetch('/api/auth/register',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({name:name,email:email,password:password,firm_name:firm,gstin:gstin,phone:phone})
+});
+const d=await r.json();
+if(d.success){
+ok.textContent='Account created! Welcome '+d.name+'!';
+ok.style.display='block';
+setTimeout(()=>{closeModal('registerModal');checkLogin();},1000);
+}else{
+err.textContent=d.detail||'Registration failed';err.style.display='block';
+}
+}catch(e){err.textContent='Error: '+e.message;err.style.display='block'}
+}
+
+async function loginUser(){
+const email=document.getElementById('loginEmail').value.trim();
+const password=document.getElementById('loginPassword').value.trim();
+const err=document.getElementById('loginError');
+const ok=document.getElementById('loginSuccess');
+
+err.style.display='none';ok.style.display='none';
+
+if(!email||!password){err.textContent='Please enter email and password.';err.style.display='block';return}
+
+try{
+const r=await fetch('/api/auth/login',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({email:email,password:password})
+});
+const d=await r.json();
+if(d.success){
+ok.textContent='Welcome back, '+d.name+'!';
+ok.style.display='block';
+setTimeout(()=>{closeModal('loginModal');checkLogin();},1000);
+}else{
+err.textContent=d.detail||'Login failed';err.style.display='block';
+}
+}catch(e){err.textContent='Error: '+e.message;err.style.display='block'}
+}
+
+async function logoutUser(){
+try{
+await fetch('/api/auth/logout',{method:'POST'});
+checkLogin();
+document.getElementById('dashboardSection').classList.remove('show');
+document.querySelector('.hero').style.display='';
+document.querySelector('.types-section').style.display='';
+window.scrollTo(0,0);
+}catch(e){console.error(e)}
+}
+
+function showDashboard(){window.location.href="/dashboard"}
+
+// Check login on page load
+document.addEventListener('DOMContentLoaded',function(){checkLogin()});
 </script>
 </body>
 </html>

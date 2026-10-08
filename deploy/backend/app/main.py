@@ -9,6 +9,8 @@ from app.routes.payments import router as payments_router
 from app.routes.gst_returns import router as gst_returns_router
 from app.routes.gst_filing import router as gst_filing_router
 from app.routes.bookkeeping import router as bookkeeping_router
+from app.routes.auth import router as auth_router
+from app.routes.dashboard import router as dashboard_router
 
 logger = logging.getLogger(__name__)
 
@@ -31,20 +33,12 @@ app.include_router(payments_router)
 app.include_router(gst_returns_router)
 app.include_router(gst_filing_router)
 app.include_router(bookkeeping_router)
+app.include_router(auth_router)
+app.include_router(dashboard_router)
 
-
-FRONTEND_DIR = Path("/app")
 
 @app.get("/")
-async def serve_index():
-    return FileResponse(str(FRONTEND_DIR / "index.html"))
-
-@app.get("/admin")
-async def serve_admin():
-    return FileResponse(str(FRONTEND_DIR / "admin.html"))
-
-@app.get("/api/status")
-async def api_status():
+async def root():
     return {
         "product": "ReconcileAI",
         "version": "3.0.0",
@@ -91,6 +85,10 @@ async def api_status():
         },
     }
 
+
+@app.get("/dashboard")
+async def serve_dashboard():
+    return FileResponse("/root/ml-projects/stock-prediction/dashboard.html")
 
 @app.get("/api/types")
 async def list_types():
