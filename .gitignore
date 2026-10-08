@@ -1,2 +1,5 @@
 gst-api/credentials.env
 backend/gst-api/credentials.env
+backend/.env
+.env
+deploy/backend/.env

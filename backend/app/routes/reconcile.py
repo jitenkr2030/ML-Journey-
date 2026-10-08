@@ -1,4 +1,4 @@
-from fastapi import APIRouter, UploadFile, File, Form
+from fastapi import APIRouter, UploadFile, File, Form, Request, HTTPException
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional
@@ -6,12 +6,20 @@ import tempfile
 import os
 import csv
 import io
-
-from app.services.ml_engine import (
-    ReconciliationEngine,
-    Transaction,
-)
+from app.services.auth_service import get_user_by_token
+from app.services.ml_engine import ReconciliationEngine
 from app.services.gst_engine import GSTReconciliationEngine
+
+
+async def _check_auth(request: Request):
+    token = request.cookies.get('session_token', '')
+    if not token:
+        raise HTTPException(status_code=401, detail='Login required')
+    user = await get_user_by_token(token)
+    if not user:
+        raise HTTPException(status_code=401, detail='Session expired')
+    return user
+
 
 router = APIRouter()
 

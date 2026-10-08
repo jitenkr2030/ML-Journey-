@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi.responses import FileResponse
 from pathlib import Path
 
@@ -11,6 +13,7 @@ from app.routes.gst_filing import router as gst_filing_router
 from app.routes.bookkeeping import router as bookkeeping_router
 from app.routes.auth import router as auth_router
 from app.routes.dashboard import router as dashboard_router
+from app.routes.admin import router as admin_router
 
 logger = logging.getLogger(__name__)
 
@@ -35,6 +38,13 @@ app.include_router(gst_filing_router)
 app.include_router(bookkeeping_router)
 app.include_router(auth_router)
 app.include_router(dashboard_router)
+app.include_router(admin_router)
+
+@app.on_event("startup")
+async def startup():
+    from app.services.auth_service import create_admin_user, get_pool
+    await get_pool()
+    await create_admin_user()
 
 
 @app.get("/")
@@ -86,9 +96,13 @@ async def root():
     }
 
 
+@app.get("/admin")
+async def serve_admin():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
+
 @app.get("/dashboard")
 async def serve_dashboard():
-    return FileResponse("/root/ml-projects/stock-prediction/dashboard.html")
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
 
 @app.get("/api/types")
 async def list_types():

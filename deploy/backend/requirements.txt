@@ -1,0 +1,17 @@
+fastapi==0.111.0
+uvicorn==0.30.0
+pandas==2.2.3
+joblib==1.4.2
+scikit-learn==1.7.0
+python-multipart==0.0.9
+razorpay==1.4.2
+python-jose==3.3.0
+passlib==1.7.4
+chardet==5.2.0
+python-dotenv
+asyncpg==0.29.0
+httpx
+numpy
+openpyxl
+pydantic
+python-dateutil

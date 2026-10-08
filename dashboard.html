@@ -293,6 +293,7 @@ document.getElementById('dashboardContent').style.display='none';
 return;
 }
 
+if(user.is_admin){window.location.href='/admin';return}
 document.getElementById('loginPrompt').style.display='none';
 document.getElementById('dashboardContent').style.display='block';
 document.getElementById('userName').textContent=user.name||'User';

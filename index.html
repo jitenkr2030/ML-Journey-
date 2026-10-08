@@ -437,6 +437,7 @@ document.getElementById('reconcileBtn').disabled=!ok;
 }
 
 async function startReconciliation(){
+if(!await requireLogin('reconciliation')){return}
 if(currentType==='bookkeeping'){return startBookkeeping()}
 const c=CONFIG[currentType];const ld=document.getElementById('loading');const lt=document.getElementById('loadingText');
 ld.classList.add('show');lt.textContent=`Running ${c.name}...`;
@@ -455,6 +456,7 @@ let bookkeepingJobId=null;
 let bookkeepingPoll=null;
 
 async function startBookkeeping(){
+if(!await requireLogin('bookkeeping')){return}
 const c=CONFIG[currentType];const ld=document.getElementById('loading');const lt=document.getElementById('loadingText');
 ld.classList.add('show');lt.textContent='Uploading files...';
 const fd=new FormData();
@@ -790,6 +792,18 @@ selectType('brs');
 
 <script>
 // ==================== AUTH FUNCTIONS ====================
+
+async function requireLogin(action){
+    try{
+        const r=await fetch('/api/auth/me');
+        const d=await r.json();
+        if(d.success&&d.user){return true}
+    }catch(e){}
+    openModal('loginModal');
+    document.getElementById('loginErrorMsg').textContent='Please login to use '+action;
+    return false;
+}
+
 function openModal(id){document.getElementById(id).classList.add('show')}
 function closeModal(id){document.getElementById(id).classList.remove('show')}
 
@@ -881,7 +895,16 @@ window.scrollTo(0,0);
 }catch(e){console.error(e)}
 }
 
-function showDashboard(){window.location.href="/dashboard"}
+function showDashboard(){
+fetch('/api/auth/me').then(r=>r.json()).then(d=>{
+if(d.success&&d.user){
+if(d.user.is_admin){window.location.href='/admin'}
+else{window.location.href='/dashboard'}
+}else{
+window.location.href='/'
+}
+}).catch(()=>{window.location.href='/dashboard'})
+}
 
 // Check login on page load
 document.addEventListener('DOMContentLoaded',function(){checkLogin()});
