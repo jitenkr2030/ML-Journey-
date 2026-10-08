@@ -49,52 +49,7 @@ async def startup():
 
 @app.get("/")
 async def root():
-    return {
-        "product": "ReconcileAI",
-        "version": "3.0.0",
-        "tagline": "Prepare. Reconcile. Validate. File.",
-        "status": "running",
-        "modules": {
-            "reconciliation": {
-                "brs": "/api/reconcile/files",
-                "gst_recon": "/api/reconcile/gst",
-            },
-            "gst_returns": {
-                "gstr1": "/api/gst/gstr1/prepare",
-                "gstr2b": "/api/gst/gstr2b/reconcile",
-                "gstr3b": "/api/gst/gstr3b/prepare",
-            },
-            "gst_filing": {
-                "auth_init": "/api/gst/auth/init",
-                "auth_verify": "/api/gst/auth/verify",
-                "file_gstr1": "/api/gst/file/gstr1",
-                "file_gstr3b": "/api/gst/file/gstr3b",
-                "check_status": "/api/gst/filing/status/{gstin}/{arn}",
-                "download_2a": "/api/gst/download/2a/{gstin}/{period}",
-                "download_2b": "/api/gst/download/2b/{gstin}/{period}",
-                "revoke": "/api/gst/revoke/{gstin}",
-            },
-            "management": {
-                "clients": "/api/gst/clients",
-                "dashboard": "/api/gst/dashboard",
-                "audit_trail": "/api/gst/audit-trail",
-                "types": "/api/types",
-            },
-            "payment": {
-                "submit": "/api/payment/submit",
-                "status": "/api/payment/status/{session_id}",
-                "admin": "/api/admin/payments",
-            },
-            "other": {
-                "single_match": "/api/reconcile/single",
-                "batch_match": "/api/reconcile/batch",
-                "typed_match": "/api/reconcile/{type}",
-                "gst_classify": "/api/gst/classify",
-                "docs": "/docs",
-            },
-        },
-    }
-
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "index.html"))
 
 @app.get("/admin")
 async def serve_admin():
