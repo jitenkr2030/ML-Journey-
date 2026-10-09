@@ -4,247 +4,233 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ReconcileAI — GST & Bank Reconciliation Platform</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#080810;--bg2:#0c0c20;--surface:#12122a;--surface2:#1a1b3a;--surface3:#222244;
-  --border:#2a2b4a;--border2:#3a3b5a;
-  --text:#eeeef6;--text2:#9898b0;--text3:#585870;
-  --accent:#7c6cf0;--accent2:#00d4aa;--accent3:#f0b84e;--accent4:#ff6b8a;
-  --danger:#ff6b6b;--success:#00d4aa;--warning:#f0b84e;
-  --grad1:linear-gradient(135deg,#7c6cf0,#5b8def);--grad2:linear-gradient(135deg,#00d4aa,#00b4d8);--grad3:linear-gradient(135deg,#f0b84e,#ff8a4c);
-  --font:'Inter',-apple-system,sans-serif;--font-mono:'Courier New',monospace;
-  --radius:12px;--radius-lg:20px;--radius-xl:28px;
-  --shadow:0 8px 32px rgba(0,0,0,0.3);--shadow-lg:0 16px 64px rgba(0,0,0,0.4);
-  --glow:0 0 40px rgba(124,108,240,0.15);
+--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;
+--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--purple:#a78bfa;
+--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;
+--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;
+--font-mono:'JetBrains Mono',monospace;
+--radius:12px;--radius-lg:20px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 20% 20%,rgba(124,108,240,0.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 80%,rgba(0,212,170,0.06) 0%,transparent 50%);pointer-events:none;z-index:0}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(79,140,255,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,rgba(54,211,153,.04) 0%,transparent 50%);pointer-events:none;z-index:0}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+a{color:var(--accent);text-decoration:none}
+button{font-family:var(--font-body);cursor:pointer;border:none}
 
-/* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(8,8,16,0.8);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(42,43,74,0.5)}
-nav .container{display:flex;justify-content:space-between;align-items:center;height:72px}
-.logo{font-size:22px;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-0.5px}
-.logo span{background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-links{display:flex;gap:24px;align-items:center}
-.nav-links a{color:var(--text2);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,11,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--font-display);font-size:24px;color:var(--text);letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--text2);font-size:14px;font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--text)}
-.nav-cta{padding:10px 20px!important;background:var(--grad1);color:#fff!important;border-radius:10px;font-weight:600!important;transition:all .3s!important;box-shadow:0 4px 16px rgba(124,108,240,0.3)}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(124,108,240,0.4)!important;color:#fff!important}
+.nav-cta{background:var(--accent);color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:600;font-size:13px;transition:all .2s}
+.nav-cta:hover{background:#6ba0ff;transform:translateY(-1px)}
 
-/* HERO */
-.hero{padding:120px 0 100px;text-align:center;position:relative;z-index:1}
-.hero h1{font-size:clamp(36px,6vw,72px);font-weight:900;line-height:1.1;letter-spacing:-2px;margin-bottom:24px}
-.hero h1 em{font-style:normal;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:18px;color:var(--text2);max-width:680px;margin:0 auto 48px;line-height:1.8}
-.hero-stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
-.hero-stat{text-align:center}
-.hero-stat .num{font-size:42px;font-weight:800;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-stat .label{font-size:13px;color:var(--text3);text-transform:uppercase;letter-spacing:2px;margin-top:4px}
+.hero{padding:140px 0 60px;text-align:center}
+.hero h1{font-family:var(--font-display);font-size:clamp(40px,6vw,72px);line-height:1.1;letter-spacing:-.03em;margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{font-size:18px;color:var(--text2);max-width:640px;margin:0 auto 32px;line-height:1.7}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:40px}
+.hero-stat{font-family:var(--font-mono)}
+.hero-stat .num{font-size:28px;font-weight:700;color:var(--accent)}
+.hero-stat .label{font-size:12px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
 
-/* SECTIONS */
-.types-section,.pricing-section,.features-section{padding:80px 0;position:relative;z-index:1}
-.section-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:12px}
-.section-title{font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-1px;margin-bottom:16px}
-.section-desc{font-size:16px;color:var(--text2);max-width:600px;margin-bottom:48px;line-height:1.8}
+.types-section{padding:40px 0}
+.section-label{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);margin-bottom:12px}
+.section-title{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);letter-spacing:-.02em;margin-bottom:8px}
+.section-desc{color:var(--text2);font-size:16px;margin-bottom:32px}
 
-/* CATEGORY LABELS */
-.category-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin:32px 0 12px;padding-left:4px}
+.category-label{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--text3);margin-bottom:8px;margin-top:16px}
+.category-label:first-child{margin-top:0}
 
-/* TYPE TABS */
-.type-tabs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:8px}
-.type-tab{padding:14px 24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:600;color:var(--text2);cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:10px}
-.type-tab:hover{border-color:var(--accent);color:var(--text);transform:translateY(-2px);box-shadow:var(--glow)}
-.type-tab.active{background:var(--grad1);border-color:var(--accent);color:#fff;box-shadow:0 8px 32px rgba(124,108,240,0.3)}
-.type-tab .icon{font-size:20px}
-.type-tab .price{font-family:var(--font-mono);font-size:11px;opacity:.7;padding:3px 8px;background:rgba(255,255,255,0.1);border-radius:6px}
-.type-tab.coming-soon{opacity:.35;cursor:not-allowed;position:relative}
-.type-tab.coming-soon::after{content:'Soon';font-size:9px;background:var(--accent3);color:#000;padding:2px 8px;border-radius:4px;margin-left:4px;font-weight:700}
+.type-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.type-tab{padding:12px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-size:14px;font-weight:500;color:var(--text2);transition:all .25s;display:flex;align-items:center;gap:8px}
+.type-tab:hover{border-color:var(--accent);color:var(--text)}
+.type-tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.type-tab .icon{font-size:18px}
+.type-tab .price{font-family:var(--font-mono);font-size:11px;opacity:.7}
+.type-tab.coming-soon{opacity:.4;cursor:not-allowed;position:relative}
+.type-tab.coming-soon::after{content:'Soon';font-size:9px;background:var(--accent3);color:#000;padding:2px 6px;border-radius:4px;margin-left:4px}
 
-/* UPLOAD */
-.upload-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:48px;margin:32px 0;position:relative;overflow:hidden}
-.upload-section::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad1)}
-.upload-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:8px}
-.upload-box{border:2px dashed var(--border2);border-radius:var(--radius-lg);padding:40px 24px;text-align:center;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;background:var(--bg2)}
-.upload-box:hover{border-color:var(--accent);background:rgba(124,108,240,0.05);transform:translateY(-2px)}
-.upload-box.dragover{border-color:var(--accent2);background:rgba(0,212,170,0.08);transform:scale(1.02)}
-.upload-box.has-file{border-color:var(--accent2);background:rgba(0,212,170,0.08)}
-.upload-box.has-file .upload-icon{transform:scale(1.2)}
-.upload-icon{font-size:48px;margin-bottom:12px;transition:transform .3s}
-.upload-box h3{font-size:16px;font-weight:700;margin-bottom:6px}
-.upload-box p{font-size:13px;color:var(--text3);margin-bottom:12px}
-.required{display:inline-block;padding:3px 12px;background:rgba(255,107,107,0.15);color:var(--danger);border-radius:6px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
-.file-name{margin-top:10px;font-size:12px;color:var(--accent2);font-weight:600;word-break:break-all}
-.upload-box input[type="file"]{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.upload-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;margin-bottom:32px}
+.upload-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:24px}
+.upload-box{border:2px dashed var(--border);border-radius:var(--radius);padding:32px 20px;text-align:center;transition:all .25s;cursor:pointer;position:relative}
+.upload-box:hover,.upload-box.dragover{border-color:var(--accent);background:rgba(79,140,255,.05)}
+.upload-box.has-file{border-color:var(--accent2);background:rgba(54,211,153,.05)}
+.upload-box .upload-icon{font-size:32px;margin-bottom:12px;opacity:.6}
+.upload-box h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.upload-box p{font-size:12px;color:var(--text3);line-height:1.5}
+.upload-box .file-name{font-family:var(--font-mono);font-size:12px;color:var(--accent2);margin-top:10px;word-break:break-all}
+.upload-box input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer}
+.upload-box .required{color:var(--danger);font-size:10px;margin-top:6px}
 
-/* BUTTONS */
-.btn-primary{padding:16px 40px;background:var(--grad1);color:#fff;border:none;border-radius:var(--radius);font-family:var(--font);font-size:16px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 8px 32px rgba(124,108,240,0.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 48px rgba(124,108,240,0.4)}
+.input-field{width:100%;padding:10px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;font-family:var(--font-mono);margin-bottom:12px}
+.input-field::placeholder{color:var(--text3)}
+.input-label{font-size:13px;font-weight:600;color:var(--text2);display:block;margin-bottom:6px}
+
+.btn-primary{background:var(--accent);color:#fff;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:#6ba0ff;transform:translateY(-1px);box-shadow:0 8px 30px rgba(79,140,255,.25)}
 .btn-primary:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
-.btn-secondary{padding:16px 40px;background:var(--surface2);color:var(--text);border:1px solid var(--border2);border-radius:var(--radius);font-family:var(--font);font-size:16px;font-weight:600;cursor:pointer;transition:all .3s}
-.btn-secondary:hover{border-color:var(--accent);transform:translateY(-2px)}
-.btn-warning{padding:12px 28px;background:var(--grad3);color:#000;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;transition:all .3s}
-.btn-success{padding:12px 28px;background:var(--grad2);color:#000;border:none;border-radius:var(--radius);font-family:var(--font);font-size:14px;font-weight:700;cursor:pointer;transition:all .3s}
+.btn-secondary{background:var(--surface2);color:var(--text);padding:12px 24px;border-radius:10px;font-size:14px;font-weight:500;border:1px solid var(--border);transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.btn-success{background:var(--accent2);color:#fff;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-success:hover{background:#2bc48a;transform:translateY(-1px)}
+.btn-warning{background:var(--accent3);color:#000;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:600;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-warning:hover{background:#e08e00;transform:translateY(-1px)}
 
-/* ALERTS */
-.alert{display:none;padding:16px 24px;border-radius:var(--radius);font-size:14px;font-weight:500;margin:16px 0}
-.alert.show{display:block}
-.alert-error{background:rgba(255,107,107,0.12);color:var(--danger);border:1px solid rgba(255,107,107,0.2)}
-.alert-success{background:rgba(0,212,170,0.12);color:var(--success);border:1px solid rgba(0,212,170,0.2)}
-.alert-warning{background:rgba(240,184,78,0.12);color:var(--warning);border:1px solid rgba(240,184,78,0.2)}
+.loading-overlay{display:none;position:fixed;inset:0;background:rgba(10,10,11,.9);z-index:200;justify-content:center;align-items:center;flex-direction:column}
+.loading-overlay.show{display:flex}
+.spinner{width:48px;height:48px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading-text{margin-top:20px;color:var(--text2);font-size:15px}
 
-/* RESULTS */
-.results-section{padding:40px 0;display:none;position:relative;z-index:1}
+.results-section{display:none;animation:fadeUp .5s ease}
 .results-section.show{display:block}
-.results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px}
-.results-title{font-size:28px;font-weight:800;letter-spacing:-0.5px}
-.summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
-.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;transition:all .3s}
-.stat-card:hover{transform:translateY(-2px);box-shadow:var(--glow)}
-.stat-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:8px}
-.stat-value{font-size:32px;font-weight:800;letter-spacing:-1px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.results-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;flex-wrap:wrap;gap:16px}
+.results-title{font-family:var(--font-display);font-size:28px}
+.summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:24px}
+.summary-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center}
+.summary-card .value{font-family:var(--font-mono);font-size:24px;font-weight:700}
+.summary-card .label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+.summary-card.matched .value{color:var(--accent2)}
+.summary-card.unmatched .value{color:var(--danger)}
+.summary-card.total .value{color:var(--accent)}
+.summary-card.rate .value{color:var(--accent3)}
+.summary-card.itc .value{color:var(--purple)}
 
-/* TABLES */
 .results-table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:24px}
 .table-tabs{display:flex;border-bottom:1px solid var(--border);overflow-x:auto}
-.table-tab{padding:14px 28px;font-size:13px;font-weight:700;color:var(--text3);cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;white-space:nowrap;letter-spacing:.3px}
+.table-tab{padding:12px 24px;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;transition:all .2s;border-bottom:2px solid transparent;white-space:nowrap}
 .table-tab:hover{color:var(--text)}
 .table-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
-.table-scroll{overflow-x:auto;max-height:520px;overflow-y:auto}
+.table-scroll{overflow-x:auto;max-height:500px;overflow-y:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
-th{background:var(--surface2);padding:14px 16px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);position:sticky;top:0;z-index:2}
-td{padding:12px 16px;border-top:1px solid var(--border);color:var(--text2)}
-tr:hover td{background:rgba(124,108,240,0.04);color:var(--text)}
-.amount{font-family:var(--font-mono);font-size:12px;font-weight:600;text-align:right;color:var(--text)}
-.status-badge{padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap}
-.status-matched{background:rgba(0,212,170,0.15);color:var(--accent2)}
-.status-unmatched{background:rgba(255,107,107,0.15);color:var(--danger)}
-.status-skipped{background:rgba(88,88,112,0.15);color:var(--text3)}
-.status-missing{background:rgba(240,184,78,0.15);color:var(--accent3)}
-.status-mismatch{background:rgba(255,107,138,0.15);color:var(--accent4)}
-.status-computed{background:rgba(124,108,240,0.15);color:var(--accent)}
-.confidence{font-family:var(--font-mono);font-size:12px;font-weight:700}
+th{background:var(--surface2);padding:12px 16px;text-align:left;font-weight:600;color:var(--text2);font-size:11px;text-transform:uppercase;letter-spacing:.08em;position:sticky;top:0;z-index:2}
+td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text2)}
+tr:hover td{background:rgba(79,140,255,.03)}
+.status-badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600}
+.status-matched{background:rgba(54,211,153,.12);color:var(--accent2)}
+.status-unmatched{background:rgba(239,68,68,.12);color:var(--danger)}
+.status-skipped{background:rgba(152,152,160,.1);color:var(--text3)}
+.status-mismatch{background:rgba(245,158,11,.12);color:var(--accent3)}
+.status-missing{background:rgba(239,68,68,.08);color:var(--danger)}
+.status-computed{background:rgba(79,140,255,.12);color:var(--accent)}
+.status-filed{background:rgba(54,211,153,.12);color:var(--accent2)}
+.amount{font-family:var(--font-mono);font-size:12px}
+.confidence{font-family:var(--font-mono);font-size:11px}
 .conf-high{color:var(--accent2)}
 .conf-med{color:var(--accent3)}
 .conf-low{color:var(--danger)}
 
-/* GSTR3B SUMMARY */
-#gstr3bSummary{margin-bottom:24px}
-.g3b-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.g3b-item{background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
-.g3b-item .label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1px}
-.g3b-item .value{font-size:24px;font-weight:800;margin-top:4px}
+.gstr3b-summary{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;margin-bottom:24px}
+.gstr3b-summary h3{font-family:var(--font-display);font-size:20px;margin-bottom:20px}
+.gstr3b-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.gstr3b-item{background:var(--surface2);border-radius:var(--radius);padding:16px}
+.gstr3b-item .item-label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.gstr3b-item .item-value{font-family:var(--font-mono);font-size:20px;font-weight:700}
+.gstr3b-item .item-sub{font-size:11px;color:var(--text3);margin-top:4px}
 
-/* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:32px}
-.pricing-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
-.pricing-card:hover{transform:translateY(-4px);box-shadow:var(--glow);border-color:var(--accent)}
-.pricing-card .card-icon{font-size:36px;margin-bottom:12px}
-.pricing-card .card-name{font-size:16px;font-weight:700;margin-bottom:4px}
-.pricing-card .card-price{font-size:32px;font-weight:800;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:8px 0}
-.pricing-card .card-desc{font-size:13px;color:var(--text3);line-height:1.6}
-.pricing-note{text-align:center;margin-top:32px;font-size:14px;color:var(--text3)}
-
-/* FEATURES */
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:32px}
-.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;transition:all .3s;position:relative;overflow:hidden}
-.feature-card:hover{transform:translateY(-4px);box-shadow:var(--glow);border-color:var(--accent)}
-.feature-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad1);opacity:0;transition:opacity .3s}
-.feature-card:hover::before{opacity:1}
-.feature-icon{width:52px;height:52px;border-radius:14px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
-.feature-card h3{font-size:17px;font-weight:700;margin-bottom:8px}
-.feature-card p{font-size:13px;color:var(--text3);line-height:1.8}
-
-/* MODALS */
-.modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:1000;justify-content:center;align-items:center;padding:24px}
-.modal-overlay.show{display:flex}
-.modal-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:40px;max-width:480px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
-.modal-box h2{font-size:24px;font-weight:800;margin-bottom:8px;letter-spacing:-0.5px}
-.modal-box p{font-size:14px;color:var(--text2);margin-bottom:24px}
-.modal-close{position:absolute;top:16px;right:20px;font-size:24px;color:var(--text3);cursor:pointer;transition:color .2s;background:none;border:none;line-height:1}
-.modal-close:hover{color:var(--text)}
-
-/* INPUTS */
-.input-field{width:100%;padding:14px 18px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font);font-size:14px;color:var(--text);outline:none;transition:all .3s;margin-bottom:14px}
-.input-field:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,108,240,0.15)}
-.input-field::placeholder{color:var(--text3)}
-.input-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:8px;display:block}
-
-/* AUTH MODALS */
-.auth-modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-xl);padding:40px;max-width:440px;width:100%;position:relative;max-height:90vh;overflow-y:auto}
-.auth-modal h2{font-size:24px;font-weight:800;margin-bottom:8px}
-.auth-modal p{font-size:14px;color:var(--text2);margin-bottom:24px}
-.btn-full{width:100%;padding:16px;background:var(--grad1);color:#fff;border:none;border-radius:var(--radius);font-family:var(--font);font-size:15px;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 16px rgba(124,108,240,0.3)}
-.btn-full:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(124,108,240,0.4)}
-.btn-full.green{background:var(--grad2);color:#000}
-.switch-link{text-align:center;margin-top:16px;font-size:13px;color:var(--text2)}
-.switch-link a{color:var(--accent);cursor:pointer;text-decoration:underline}
-.error-msg{color:var(--danger);font-size:12px;margin-bottom:8px;display:none}
-.success-msg{color:var(--success);font-size:12px;margin-bottom:8px;display:none}
-.close-btn{float:right;cursor:pointer;font-size:22px;color:var(--text2);line-height:1}
-.close-btn:hover{color:var(--text)}
-
-/* FILING */
-.filing-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;margin-bottom:24px;position:relative;overflow:hidden}
-.filing-section::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad3)}
-.filing-step{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}
+.filing-section{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;margin-bottom:24px}
+.filing-section h3{font-family:var(--font-display);font-size:20px;margin-bottom:16px}
+.filing-step{display:flex;align-items:center;gap:16px;padding:16px;border-bottom:1px solid var(--border)}
 .filing-step:last-child{border-bottom:none}
-.step-number{width:36px;height:36px;border-radius:50%;background:var(--grad1);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:#fff;flex-shrink:0}
-.step-content h4{font-size:15px;font-weight:700;margin-bottom:4px}
-.step-content p{font-size:13px;color:var(--text3)}
+.step-number{width:32px;height:32px;border-radius:50%;background:var(--surface2);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:13px;font-weight:700;flex-shrink:0}
+.step-number.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.step-number.done{background:var(--accent2);border-color:var(--accent2);color:#fff}
+.step-content{flex:1}
+.step-content h4{font-size:14px;font-weight:600;margin-bottom:4px}
+.step-content p{font-size:12px;color:var(--text3)}
 
-/* OTP */
-.otp-inputs{display:flex;gap:10px;justify-content:center;margin:24px 0}
-.otp-inputs input{width:52px;height:60px;text-align:center;font-size:24px;font-weight:800;background:var(--bg2);border:2px solid var(--border);border-radius:var(--radius);color:var(--text);outline:none;font-family:var(--font-mono)}
-.otp-inputs input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,108,240,0.2)}
+.otp-input{display:flex;gap:8px;justify-content:center;margin:16px 0}
+.otp-input input{width:48px;height:56px;text-align:center;font-size:24px;font-family:var(--font-mono);background:var(--surface2);border:2px solid var(--border);border-radius:8px;color:var(--text);transition:border-color .2s}
+.otp-input input:focus{border-color:var(--accent);outline:none}
 
-/* LOADING */
-.loading-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(8,8,16,0.9);backdrop-filter:blur(8px);z-index:2000;justify-content:center;align-items:center;flex-direction:column}
-.loading-overlay.show{display:flex}
-.loading-spinner{width:64px;height:64px;border:4px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:24px}
-@keyframes spin{to{transform:rotate(360deg)}}
-.loading-text{font-size:18px;font-weight:600;color:var(--text2);animation:pulse 1.5s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+.alert{padding:12px 16px;border-radius:8px;font-size:13px;margin-bottom:16px;display:none}
+.alert.show{display:block}
+.alert-success{background:rgba(54,211,153,.12);border:1px solid rgba(54,211,153,.3);color:var(--accent2)}
+.alert-error{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:var(--danger)}
+.alert-info{background:rgba(79,140,255,.12);border:1px solid rgba(79,140,255,.3);color:var(--accent)}
 
-/* FOOTER */
-footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-align:center;position:relative;z-index:1}
-.footer-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-.footer-content p{font-size:13px;color:var(--text3)}
-.footer-links{display:flex;gap:20px}
-.footer-links a{font-size:13px;color:var(--text3);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--text2)}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(10,10,11,.92);z-index:300;justify-content:center;align-items:center}
+.modal-overlay.show{display:flex}
+.modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;max-width:480px;width:90%;text-align:center;animation:fadeUp .3s ease}
+.modal h2{font-family:var(--font-display);font-size:24px;margin-bottom:8px}
+.modal p{color:var(--text2);font-size:14px;margin-bottom:24px}
+.modal .price-big{font-family:var(--font-mono);font-size:36px;font-weight:700;color:var(--accent);margin-bottom:24px}
+.modal .upi-id{font-family:var(--font-mono);font-size:14px;color:var(--accent);background:var(--surface2);padding:10px 16px;border-radius:8px;margin-bottom:20px;display:inline-block}
+.modal input{width:100%;padding:12px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;margin-bottom:12px;font-family:var(--font-body)}
+.modal input::placeholder{color:var(--text3)}
+.modal .btn-close{background:none;color:var(--text3);font-size:13px;margin-top:12px}
 
-/* RESPONSIVE */
+.download-section{text-align:center;padding:24px}
+
+.features-section{padding:80px 0}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.feature-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;transition:all .3s}
+.feature-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.feature-card .icon{font-size:28px;margin-bottom:16px}
+.feature-card h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.feature-card p{font-size:13px;color:var(--text2);line-height:1.6}
+
+.pricing-section{padding:80px 0}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;text-align:center;transition:all .3s}
+.price-card:hover{border-color:var(--accent);transform:translateY(-4px)}
+.price-card .pc-icon{font-size:28px;margin-bottom:12px}
+.price-card h3{font-size:14px;font-weight:600;margin-bottom:8px}
+.price-card .pc-price{font-family:var(--font-mono);font-size:24px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.price-card .pc-desc{font-size:11px;color:var(--text3)}
+
+footer{border-top:1px solid var(--border);padding:40px 0;text-align:center}
+footer p{font-size:13px;color:var(--text3)}
+footer a{color:var(--text2)}
+
 @media(max-width:768px){
-  .hero{padding:80px 0 60px}
-  .hero h1{letter-spacing:-1px}
-  .hero-stats{gap:24px}
-  .hero-stat .num{font-size:32px}
-  .nav-links{gap:12px}
-  .nav-links a:not(.nav-cta){display:none}
-  .type-tabs{gap:8px}
-  .type-tab{padding:10px 16px;font-size:12px}
-  .upload-section{padding:24px}
-  .upload-grid{grid-template-columns:1fr}
-  .summary-cards{grid-template-columns:1fr 1fr}
-  table{font-size:11px}
-  th,td{padding:8px 10px}
-  .pricing-grid{grid-template-columns:1fr 1fr}
-  .features-grid{grid-template-columns:1fr}
-  .results-header{flex-direction:column;align-items:flex-start}
+.nav-links{gap:16px}
+.nav-links a:not(.nav-cta){display:none}
+.hero-stats{gap:24px;flex-wrap:wrap}
+.type-tabs{gap:6px}
+.type-tab{padding:10px 14px;font-size:12px}
+.upload-grid{grid-template-columns:1fr}
+.summary-cards{grid-template-columns:repeat(2,1fr)}
+.results-header{flex-direction:column}
+table{font-size:11px}
+td,th{padding:8px 10px}
+.gstr3b-grid{grid-template-columns:1fr}
+.pricing-grid{grid-template-columns:repeat(2,1fr)}
+.otp-input input{width:40px;height:48px;font-size:20px}
 }
-@media(max-width:480px){
-  .hero-stats{flex-direction:column;gap:16px}
-  .summary-cards{grid-template-columns:1fr}
-  .pricing-grid{grid-template-columns:1fr}
-  .type-tabs{flex-direction:column}
-}
+
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.modal-overlay.show{display:flex}
+.auth-modal{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;width:420px;max-width:95vw;max-height:90vh;overflow-y:auto}
+.auth-modal h2{margin-bottom:8px;font-size:22px}
+.auth-modal p{color:var(--text2);font-size:13px;margin-bottom:20px}
+.auth-modal .input-field{width:100%;margin-bottom:12px;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;outline:none;transition:border-color .2s;box-sizing:border-box}
+.auth-modal .input-field:focus{border-color:var(--accent)}
+.auth-modal .btn-full{width:100%;padding:14px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;margin-top:4px}
+.auth-modal .btn-full:hover{background:#6ba0ff}
+.auth-modal .btn-full.green{background:#22c55e}
+.auth-modal .btn-full.green:hover{background:#16a34a}
+.auth-modal .switch-link{text-align:center;margin-top:16px;font-size:13px;color:var(--text2)}
+.auth-modal .switch-link a{color:var(--accent);cursor:pointer;text-decoration:underline}
+.auth-modal .error-msg{color:#ef4444;font-size:12px;margin-bottom:8px;display:none}
+.auth-modal .success-msg{color:#22c55e;font-size:12px;margin-bottom:8px;display:none}
+.auth-modal .close-btn{float:right;cursor:pointer;font-size:22px;color:var(--text2);line-height:1}
+.auth-modal .close-btn:hover{color:var(--text)}
+
 </style>
 </head>
 <body>
+
 <nav>
 <div class="container">
 <a href="/" class="logo">Reconcile<span>AI</span></a>
@@ -252,11 +238,14 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 <a href="#demo">Try Free</a>
 <a href="#pricing">Pricing</a>
 <a href="#features">Features</a>
-<span id="authNav"><a href="#" class="nav-cta" onclick="openModal('loginModal')">Login</a><a href="#" class="nav-cta" onclick="openModal('registerModal')" style="margin-left:8px;background:var(--grad2);color:#000">Sign Up</a></span>
+<span id="authNav">
+<a href="#" class="nav-cta" onclick="openModal('loginModal')">Login</a>
+<a href="#" class="nav-cta" onclick="openModal('registerModal')" style="margin-left:8px;background:var(--accent2)">Sign Up</a>
+</span>
 <span id="userNav" style="display:none;align-items:center;gap:12px">
 <span id="userName" style="color:var(--text2);font-size:13px"></span>
-<a href="#" class="nav-cta" onclick="showDashboard()" style="background:var(--grad2);color:#000">Dashboard</a>
-<a href="#" class="nav-cta" onclick="logoutUser()" style="background:rgba(255,107,107,0.2);color:var(--danger)">Logout</a>
+<a href="#" class="nav-cta" onclick="showDashboard()" style="background:var(--accent2)">Dashboard</a>
+<a href="#" class="nav-cta" onclick="logoutUser()" style="background:var(--danger,#ef4444)">Logout</a>
 </span>
 </div>
 </div>
@@ -264,7 +253,7 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 
 <section class="hero">
 <div class="container">
-<h1>GST & Bank Reconciliation<br><em>in Minutes, Not Hours</em></h1>
+<h1>GST & Bank Reconciliation<br><em>in Minutes,Not Hours</em></h1>
 <p>Prepare, Reconcile, Validate, and File. AI-powered compliance platform for Indian CAs, GST practitioners, and businesses. Just ₹499 per reconciliation.</p>
 <div class="hero-stats">
 <div class="hero-stat"><div class="num">8</div><div class="label">Compliance Types</div></div>
@@ -278,12 +267,11 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 <div class="container">
 <div class="section-label">Select Service</div>
 <div class="section-title">What do you want to do?</div>
-<div class="section-desc">Choose a service below, upload your files, and get instant AI-powered results.</div>
+<div class="section-desc">Choose a service below, upload your files, and get instant results.</div>
 
 <div class="category-label">Reconciliation</div>
 <div class="type-tabs">
 <button class="type-tab active" data-type="brs" onclick="selectType('brs')"><span class="icon">🏦</span> Bank Reconciliation <span class="price">₹499</span></button>
-<button class="type-tab" data-type="upi" onclick="selectType('upi')"><span class="icon">📱</span> UPI Reconciliation <span class="price">₹499</span></button>
 <button class="type-tab" data-type="gst" onclick="selectType('gst')"><span class="icon">📋</span> GST Reconciliation <span class="price">₹499</span></button>
 <button class="type-tab" data-type="bookkeeping" onclick="selectType('bookkeeping')"><span class="icon">📚</span> Complete Bookkeeping <span class="price">₹2999</span></button>
 </div>
@@ -305,41 +293,11 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 
 <div class="upload-section">
 <div id="typeDescription" style="text-align:center;margin-bottom:24px;font-size:14px;color:var(--text2)"></div>
-<div id="bkDetail" style="display:none;max-width:900px;margin:0 auto 24px">
-<div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px">
-<h3 style="font-size:18px;font-weight:700;margin-bottom:8px;text-align:center">📋 21 Automated Pipelines — Complete Bookkeeping</h3>
-<p style="font-size:13px;color:var(--text3);text-align:center;margin-bottom:24px">Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.</p>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px">
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📊</span><div><div style="font-size:13px;font-weight:600">1. Accounting Pipeline</div><div style="font-size:11px;color:var(--text3)">Auto journal entries & classification</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">🏦</span><div><div style="font-size:13px;font-weight:600">2. Bank Pipeline</div><div style="font-size:11px;color:var(--text3)">Bank reconciliation & matching</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📋</span><div><div style="font-size:13px;font-weight:600">3. GST Pipeline</div><div style="font-size:11px;color:var(--text3)">GST classification & reconciliation</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📑</span><div><div style="font-size:13px;font-weight:600">4. TDS Pipeline</div><div style="font-size:11px;color:var(--text3)">TDS deduction & compliance checks</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📚</span><div><div style="font-size:13px;font-weight:600">5. Ledger Pipeline</div><div style="font-size:11px;color:var(--text3)">Ledger classification & grouping</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">💹</span><div><div style="font-size:13px;font-weight:600">6. Financial Statements</div><div style="font-size:11px;color:var(--text3)">P&L, Balance Sheet, Cash Flow</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">✅</span><div><div style="font-size:13px;font-weight:600">7. Compliance Pipeline</div><div style="font-size:11px;color:var(--text3)">Compliance checklist & alerts</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">🧾</span><div><div style="font-size:13px;font-weight:600">8. Tax Computation</div><div style="font-size:11px;color:var(--text3)">Tax computation & optimization</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">⚠️</span><div><div style="font-size:13px;font-weight:600">9. Risk Analysis</div><div style="font-size:11px;color:var(--text3)">Risk scoring & anomaly detection</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">💡</span><div><div style="font-size:13px;font-weight:600">10. Advisory Pipeline</div><div style="font-size:11px;color:var(--text3)">AI-powered business advisory</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📦</span><div><div style="font-size:13px;font-weight:600">11. Depreciation</div><div style="font-size:11px;color:var(--text3)">Depreciation calculation & schedules</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📓</span><div><div style="font-size:13px;font-weight:600">12. Journal Entries</div><div style="font-size:11px;color:var(--text3)">Auto journal entry generation</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">🔒</span><div><div style="font-size:13px;font-weight:600">13. Closing Rules</div><div style="font-size:11px;color:var(--text3)">Year-end closing & adjustments</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📑</span><div><div style="font-size:13px;font-weight:600">14. Audit Trail</div><div style="font-size:11px;color:var(--text3)">Full audit trail & tracking</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📊</span><div><div style="font-size:13px;font-weight:600">15. Ratio Analysis</div><div style="font-size:11px;color:var(--text3)">Financial ratio analysis & trends</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">🗂️</span><div><div style="font-size:13px;font-weight:600">16. Annexure Pipeline</div><div style="font-size:11px;color:var(--text3)">Schedule & annexure preparation</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📞</span><div><div style="font-size:13px;font-weight:600">17. Client Advisory</div><div style="font-size:11px;color:var(--text3)">Client-specific advisory reports</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">⏰</span><div><div style="font-size:13px;font-weight:600">18. Schedule Pipeline</div><div style="font-size:11px;color:var(--text3)">Deadline scheduling & reminders</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📝</span><div><div style="font-size:13px;font-weight:600">19. Working Notes</div><div style="font-size:11px;color:var(--text3)">Working notes & documentation</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">🏁</span><div><div style="font-size:13px;font-weight:600">20. Year-End Finalization</div><div style="font-size:11px;color:var(--text3)">Year-end closing & finalization</div></div></div>
-<div style="padding:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);display:flex;align-items:center;gap:10px"><span style="font-size:20px">📄</span><div><div style="font-size:13px;font-weight:600">21. Final Report</div><div style="font-size:11px;color:var(--text3)">Comprehensive final report generation</div></div></div>
-</div>
-</div>
-</div>
 <div class="upload-grid" id="uploadGrid"></div>
 <div id="extraFields"></div>
 <div id="alertBox" class="alert"></div>
 <div style="text-align:center;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
 <button class="btn-primary" id="reconcileBtn" onclick="startReconciliation()" disabled>Reconcile Now →</button>
-<button class="btn-secondary" onclick="resetAll()">Reset</button>
 </div>
 </div>
 </div>
@@ -349,46 +307,54 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 <div class="container">
 <div class="results-header">
 <div class="results-title" id="resultsTitle">Results</div>
-<div style="display:flex;gap:12px;flex-wrap:wrap">
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button class="btn-secondary" onclick="downloadReport()">↓ Download CSV</button>
 <button class="btn-warning" id="fileBtn" onclick="openFiling()" style="display:none">📤 File Return on GSTN</button>
-<button class="btn-secondary" onclick="downloadReport()">📥 Download CSV</button>
-<button class="btn-secondary" onclick="resetAll()">🔄 New Reconciliation</button>
+<button class="btn-secondary" onclick="resetAll()">New</button>
 </div>
 </div>
+
 <div class="summary-cards" id="summaryCards"></div>
 <div id="gstr3bSummary"></div>
+
 <div class="results-table-wrap">
 <div class="table-tabs" id="tableTabs"></div>
 <div class="table-scroll" id="tableContent"></div>
 </div>
+
 <div id="filingSection"></div>
+
+<div class="download-section">
+<button class="btn-primary" onclick="openPayment()">Download Full Report — ₹499</button>
+</div>
 </div>
 </section>
 
 <div class="modal-overlay" id="paymentModal">
-<div class="modal-box">
-<button class="modal-close" onclick="closePayment()">&times;</button>
-<h2>Complete Payment</h2>
-<p>Pay ₹199 to generate your reconciliation report.</p>
+<div class="modal">
+<h2>Unlock Full Report</h2>
+<p>Pay ₹499 via UPI and get instant access to the complete report.</p>
+<div class="price-big">₹499</div>
+<div class="upi-id">reconcileai@upi</div>
 <form id="paymentForm" onsubmit="submitPayment(event)">
-<input type="text" class="input-field" id="utrNumber" placeholder="Enter UPI Transaction ID (UTR)" required>
-<input type="email" class="input-field" id="userEmail" placeholder="Your email" required>
-<button type="submit" class="btn-full">Submit Payment</button>
+<input type="text" id="utrNumber" placeholder="Enter UPI Transaction ID (UTR)" required>
+<input type="email" id="userEmail" placeholder="Your email" required>
+<button type="submit" class="btn-primary" style="width:100%">Verify Payment</button>
 </form>
+<button class="btn-close" onclick="closePayment()">Cancel</button>
 <div id="paymentStatus" style="margin-top:16px;font-size:13px;color:var(--accent2);display:none"></div>
 </div>
 </div>
 
 <div class="modal-overlay" id="filingModal">
-<div class="modal-box" style="max-width:520px">
-<button class="modal-close" onclick="closeFiling()">&times;</button>
+<div class="modal">
 <h2 id="filingModalTitle">Authenticate with GSTN</h2>
 <div id="filingModalContent"></div>
 </div>
 </div>
 
 <div class="loading-overlay" id="loading">
-<div class="loading-spinner"></div>
+<div class="spinner"></div>
 <div class="loading-text" id="loadingText">Processing...</div>
 </div>
 
@@ -396,17 +362,14 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 <div class="container">
 <div class="section-label">Simple Pricing</div>
 <div class="section-title">₹499 per reconciliation</div>
-<div class="section-desc">No subscriptions. No hidden fees. Pay only when you use.</div>
+<div class="section-desc" style="margin-bottom:40px">No subscriptions. No hidden fees. Pay only when you use.</div>
 <div class="pricing-grid">
-<div class="pricing-card"><div class="card-icon">🏦</div><div class="card-name">Bank Reconciliation</div><div class="card-price">₹499</div><div class="card-desc">Bank statement vs Tally ledger</div></div>
-<div class="pricing-card"><div class="card-icon">📱</div><div class="card-name">UPI Reconciliation</div><div class="card-price">₹499</div><div class="card-desc">UPI transactions matching</div></div>
-<div class="pricing-card"><div class="card-icon">📋</div><div class="card-name">GST Reconciliation</div><div class="card-price">₹499</div><div class="card-desc">Books vs GSTR-2B with ITC validation</div></div>
-<div class="pricing-card"><div class="card-icon">📤</div><div class="card-name">GSTR-1 Preparation</div><div class="card-price">₹499</div><div class="card-desc">Auto-prepare from sales data</div></div>
-<div class="pricing-card"><div class="card-icon">📥</div><div class="card-name">GSTR-2B Reconciliation</div><div class="card-price">₹499</div><div class="card-desc">ITC eligible vs blocked analysis</div></div>
-<div class="pricing-card"><div class="card-icon">🧮</div><div class="card-name">GSTR-3B Preparation</div><div class="card-price">₹499</div><div class="card-desc">Auto-compute tax liability</div></div>
-<div class="pricing-card" style="border-color:var(--accent);background:rgba(124,108,240,0.08)"><div class="card-icon">📚</div><div class="card-name">Complete Bookkeeping</div><div class="card-price">₹2999</div><div class="card-desc">21 automated pipelines. Full accounting, GST, TDS, compliance & more.</div></div>
+<div class="price-card"><div class="pc-icon">🏦</div><h3>Bank Reconciliation</h3><div class="pc-price">₹499</div><div class="pc-desc">Bank statement vs Tally ledger</div></div>
+<div class="price-card"><div class="pc-icon">📋</div><h3>GST Reconciliation</h3><div class="pc-price">₹499</div><div class="pc-desc">Books vs GSTR-2B with ITC validation</div></div>
+<div class="price-card"><div class="pc-icon">📤</div><h3>GSTR-1 Preparation</h3><div class="pc-price">₹499</div><div class="pc-desc">Auto-prepare from sales data</div></div>
+<div class="price-card"><div class="pc-icon">📥</div><h3>GSTR-2B Reconciliation</h3><div class="pc-price">₹499</div><div class="pc-desc">ITC eligible vs blocked analysis</div></div>
+<div class="price-card"><div class="pc-icon">🧮</div><h3>GSTR-3B Preparation</h3><div class="pc-price">₹499</div><div class="pc-desc">Auto-compute tax liability</div></div>
 </div>
-<div class="pricing-note">✦ 2 free reconciliations every month on sign up ✦</div>
 </div>
 </section>
 
@@ -414,43 +377,33 @@ footer{border-top:1px solid var(--border);padding:48px 0;margin-top:40px;text-al
 <div class="container">
 <div class="section-label">Why ReconcileAI</div>
 <div class="section-title">Prepare. Reconcile. Validate. File.</div>
-<div class="section-desc">Everything you need for efficient GST compliance and bank reconciliation.</div>
+<div class="section-desc" style="margin-bottom:40px">Everything you need for efficient GST compliance and bank reconciliation.</div>
 <div class="features-grid">
-<div class="feature-card"><div class="feature-icon">📤</div><h3>GSTR-1 Preparation</h3><p>Auto-prepare GSTR-1 from sales data. Classifies B2B, B2CL, B2CS, exports, credit/debit notes automatically.</p></div>
-<div class="feature-card"><div class="feature-icon">📥</div><h3>GSTR-2B Reconciliation</h3><p>Match purchase register against GSTR-2B. Identify ITC mismatches, missing invoices, and GSTIN errors.</p></div>
-<div class="feature-card"><div class="feature-icon">🧮</div><h3>GSTR-3B Auto-Computation</h3><p>Auto-compute GSTR-3B from reconciled data. Know your exact tax liability before filing.</p></div>
-<div class="feature-card"><div class="feature-icon">📤</div><h3>File Returns via API</h3><p>File GSTR-1 and GSTR-3B directly through GSTN API. OTP verification. Get ARN instantly.</p></div>
-<div class="feature-card"><div class="feature-icon">🏦</div><h3>Bank Reconciliation</h3><p>Match bank statements against Tally/accounting ledgers. Works with any bank, any format.</p></div>
-<div class="feature-card"><div class="feature-icon">📱</div><h3>UPI Reconciliation</h3><p>Match UPI transactions from GPay, PhonePe, Paytm. Detect failed, reversed, duplicates automatically.</p></div>
-<div class="feature-card"><div class="feature-icon">🤖</div><h3>ML-Powered Matching</h3><p>Text similarity, amount proximity, reference matching with trained ML models for 95%+ accuracy.</p></div>
-<div class="feature-card"><div class="feature-icon">📊</div><h3>Compliance Dashboard</h3><p>Track all clients, filings, and compliance status from a single dashboard with full audit trail.</p></div>
-<div class="feature-card"><div class="feature-icon">📚</div><h3>Complete Bookkeeping</h3><p>Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.</p></div>
-<div class="feature-card"><div class="feature-icon">🔍</div><h3>Smart File Detection</h3><p>Auto-detects headers, columns, encoding, and delimiters from any CSV or Excel file.</p></div>
+<div class="feature-card"><div class="icon">📤</div><h3>GSTR-1 Preparation</h3><p>Auto-prepare GSTR-1 from sales data. Classifies B2B, B2CL, B2CS, exports, credit/debit notes automatically.</p></div>
+<div class="feature-card"><div class="icon">📥</div><h3>GSTR-2B Reconciliation</h3><p>Match purchase register against GSTR-2B. Identify ITC mismatches, missing invoices, and GSTIN errors.</p></div>
+<div class="feature-card"><div class="icon">🧮</div><h3>GSTR-3B Auto-Computation</h3><p>Auto-compute GSTR-3B from reconciled data. Know your exact tax liability before filing.</p></div>
+<div class="feature-card"><div class="icon">📤</div><h3>File Returns via API</h3><p>File GSTR-1 and GSTR-3B directly through GSTN API. OTP verification. Get ARN instantly.</p></div>
+<div class="feature-card"><div class="icon">🏦</div><h3>Bank Reconciliation</h3><p>Match bank statements against Tally/accounting ledgers. Works with any bank, any format.</p></div>
+<div class="feature-card"><div class="icon">🤖</div><h3>ML-Powered Matching</h3><p>Text similarity, amount proximity, reference matching with trained ML models for 95%+ accuracy.</p></div>
+<div class="feature-card"><div class="icon">📊</div><h3>Compliance Dashboard</h3><p>Track all clients, filings, and compliance status from a single dashboard with full audit trail.</p></div>
+<div class="feature-card"><div class="icon">🏢</div><h3>Bulk GSTIN Management</h3><p>Manage multiple clients and GST registrations. Perfect for CAs and accounting firms.</p></div>
+<div class="feature-card"><div class="icon">🔍</div><h3>Smart File Detection</h3><p>Auto-detects headers, columns, encoding, and delimiters from any CSV or Excel file.</p></div>
 </div>
 </div>
 </section>
 
 <footer>
 <div class="container">
-<div class="footer-content">
-<p>ReconcileAI — GST & Bank Reconciliation Platform. ₹499/reconciliation.</p>
-<div class="footer-links">
-<a href="/admin.html">Admin</a>
-<a href="#pricing">Pricing</a>
-<a href="#features">Features</a>
-</div>
-</div>
+<p>ReconcileAI — GST & Bank Reconciliation Platform. ₹499/reconciliation. <a href="/admin.html?key=reconcile2026">Admin</a></p>
 </div>
 </footer>
 
 <script>
 let currentType='brs',uploadedFiles={},currentResults=null,currentPrice=199;
 let filingState={step:0,gstin:'',txnId:''};
-let bookkeepingJobId=null;
 
 const CONFIG={
 brs:{name:'Bank Reconciliation',endpoint:'/api/reconcile/files',price:199,desc:'Match bank statement against bank ledger. Auto-detects any file format.',files:[{key:'book_file',label:'Bank Ledger (Tally)',desc:'Export from Tally or accounting software',icon:'📄'},{key:'bank_file',label:'Bank Statement',desc:'Download from your bank',icon:'🏦'}]},
-upi:{name:'UPI Reconciliation',endpoint:'/api/reconcile/upi',price:199,desc:'Match UPI transactions from books against UPI bank entries. Detects failed, reversed, duplicates, and pending settlements. Supports GPay, PhonePe, Paytm, BHIM.',files:[{key:'book_file',label:'UPI Book/Ledger',desc:'Export from Tally or accounting software with UPI entries',icon:'📱'},{key:'bank_file',label:'UPI Bank Statement',desc:'Bank statement with UPI transactions',icon:'🏦'}],extra:[]},
 gst:{name:'GST Reconciliation',endpoint:'/api/reconcile/gst',price:199,desc:'Match books against GSTR-2B. Identify ITC mismatches and missing invoices.',files:[{key:'books_file',label:'Purchase Register',desc:'From accounting software',icon:'📄'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📋'}],extra:[{key:'client_gstin',label:'GSTIN (optional)',ph:'07AAACR1234F1Z5'}]},
 gstr1:{name:'GSTR-1 Preparation',endpoint:'/api/gst/gstr1/prepare',price:199,desc:'Auto-prepare GSTR-1 from sales data. Classifies B2B, B2CL, B2CS, exports, notes.',files:[{key:'sales_file',label:'Sales Register',desc:'From Tally/accounting software',icon:'📤'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true},
 gstr2b:{name:'GSTR-2B Reconciliation',endpoint:'/api/gst/gstr2b/reconcile',price:199,desc:'Reconcile GSTR-2B with purchase register. Identify ITC eligible, blocked, and mismatched.',files:[{key:'books_file',label:'Purchase Register',desc:'From accounting software',icon:'📄'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📥'}],extra:[{key:'client_gstin',label:'GSTIN (optional)',ph:'07AAACR1234F1Z5'}]},
@@ -458,47 +411,15 @@ gstr3b:{name:'GSTR-3B Preparation',endpoint:'/api/gst/gstr3b/prepare',price:199,
 bookkeeping:{name:'Complete Bookkeeping',endpoint:'/api/bookkeeping/upload',price:2999,desc:'Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.',files:[{key:'bank_statement',label:'Bank Statement',desc:'SBI/HDFC/ICICI CSV',icon:'🏦'},{key:'daybook',label:'Tally Daybook',desc:'Tally export CSV',icon:'📖'}],extra:[],isBookkeeping:true}
 };
 
-function showUPI(d,ca,ta,tb){
-const matched=(d.matched||[]),unmatched=(d.unmatched||[]);
-const total=d.total_transactions||matched.length+unmatched.length;
-const matchRate=d.match_rate||0;
-const upiStats={};
-[...matched,...unmatched].forEach(r=>{const app=r.upi_app||'Unknown';upiStats[app]=(upiStats[app]||0)+1});
-ca.innerHTML=`<div class="stat-card"><div class="stat-label">Total Transactions</div><div class="stat-value">${total}</div></div><div class="stat-card" style="border-color:var(--accent2)"><div class="stat-label">Matched</div><div class="stat-value" style="color:var(--accent2)">${matched.length}</div></div><div class="stat-card" style="border-color:var(--danger)"><div class="stat-label">Unmatched</div><div class="stat-value" style="color:var(--danger)">${unmatched.length}</div></div><div class="stat-card" style="border-color:var(--accent3)"><div class="stat-label">Match Rate</div><div class="stat-value" style="color:var(--accent3)">${matchRate}%</div></div>`;
-let appBreakdown='<div style="margin-bottom:16px"><strong>UPI App Breakdown:</strong> ';
-for(const[app,count]of Object.entries(upiStats)){appBreakdown+=`<span style="margin:0 8px;padding:4px 12px;background:var(--surface2);border-radius:12px;font-size:12px;display:inline-block;margin-bottom:4px">${app}: ${count}</span>`}
-appBreakdown+='</div>';
-const tabs=document.getElementById('tableTabs');
-tabs.innerHTML=`<div class="table-tab active" onclick="showUPITab('matched',this)">✅ Matched (${matched.length})</div><div class="table-tab" onclick="showUPITab('unmatched',this)">❌ Unmatched (${unmatched.length})</div><div class="table-tab" onclick="showUPITab('all',this)">📋 All (${total})</div>`;
-window._upiData={matched,unmatched,all:[...matched,...unmatched]};
-showUPITab('matched',null);
-ta.innerHTML='';
-tb.innerHTML=appBreakdown;
-}
-function showUPITab(tab,el){
-document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));
-if(el)el.classList.add('active');else{const tabs=document.querySelectorAll('.table-tab');if(tabs[tab==='matched'?0:tab==='unmatched'?1:2])tabs[tab==='matched'?0:tab==='unmatched'?1:2].classList.add('active')}
-const data=window._upiData[tab]||[];
-let html='<table><thead><tr><th>Book Description</th><th>Bank Description</th><th>Book Amt</th><th>Bank Amt</th><th>Status</th><th>Conf</th><th>UTR</th><th>App</th><th>Reason</th></tr></thead><tbody>';
-data.forEach(r=>{
-const sc=r.status==='Matched'?'status-matched':r.status==='Partial Match'?'status-missing':'status-unmatched';
-html+=`<tr><td title="${esc(r.book_description)}">${tr(r.book_description,35)}</td><td title="${esc(r.bank_description)}">${tr(r.bank_description,35)}</td><td class="amount">₹${fm(r.book_amount)}</td><td class="amount">₹${fm(r.bank_amount)}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td class="confidence ${r.confidence>=70?'conf-high':r.confidence>=40?'conf-med':'conf-low'}">${r.confidence||0}%</td><td style="font-family:var(--font-mono);font-size:11px">${tr(r.upi_utr,16)}</td><td>${r.upi_app||'-'}</td><td style="font-size:11px;color:var(--text3)" title="${esc(r.reason)}">${tr(r.reason,40)}</td></tr>`
-});
-html+='</tbody></table>';
-document.getElementById('tableContent').innerHTML=html;
-}
-
 function selectType(t){
 if(!CONFIG[t])return;currentType=t;const c=CONFIG[t];currentPrice=c.price;
 document.querySelectorAll('.type-tab').forEach(b=>b.classList.remove('active'));
 const tab=document.querySelector(`[data-type="${t}"]`);if(tab)tab.classList.add('active');
 document.getElementById('typeDescription').textContent=c.desc;
-const bkDetail=document.getElementById('bkDetail');
-if(t==='bookkeeping'){bkDetail.style.display='block'}else{bkDetail.style.display='none'}
 const g=document.getElementById('uploadGrid');g.innerHTML='';uploadedFiles={};
 c.files.forEach((f,i)=>{const n=i+1;g.innerHTML+=`<div class="upload-box" id="upload${n}Box"><div class="upload-icon">${f.icon}</div><h3>${f.label}</h3><p>${f.desc}</p><div class="required">Required</div><div class="file-name" id="upload${n}Name"></div><input type="file" id="upload${n}" accept=".csv,.xlsx,.xls" onchange="handleFile(${n},this)"></div>`});
 const ef=document.getElementById('extraFields');
-if(c.extra&&c.extra.length>0){ef.innerHTML=c.extra.map(f=>`<div style="margin-top:16px"><label class="input-label">${f.label}</label><input class="input-field" id="extra_${f.key}" placeholder="${f.ph}"></div>`).join('')}else{ef.innerHTML=''}
+if(c.extra){ef.innerHTML=c.extra.map(f=>`<div style="margin-top:16px"><label class="input-label">${f.label}</label><input class="input-field" id="extra_${f.key}" placeholder="${f.ph}"></div>`).join('')}else{ef.innerHTML=''}
 document.getElementById('reconcileBtn').disabled=true;
 document.getElementById('reconcileBtn').textContent=c.name+' →';
 document.getElementById('results').classList.remove('show');
@@ -524,52 +445,67 @@ const fd=new FormData();c.files.forEach((f,i)=>{fd.append(f.key,uploadedFiles[i+
 if(c.extra){c.extra.forEach(f=>{const el=document.getElementById(`extra_${f.key}`);if(el)fd.append(f.key,el.value||'')})}
 try{
 const r=await fetch(c.endpoint,{method:'POST',body:fd});const d=await r.json();
-ld.classList.remove('show');
-if(d.error){showAlert(d.error,'error');return}
-if(d.success===false){showAlert(d.error||'Reconciliation failed','error');return}
-const result=d.result||d;
-currentResults=result;
-showResults(result);
-}catch(e){ld.classList.remove('show');showAlert('Error: '+e.message,'error')}
+if(d.error){alert(d.error);ld.classList.remove('show');return}
+currentResults=d;lt.textContent='Generating report...';
+setTimeout(()=>{ld.classList.remove('show');showResults(d)},500);
+}catch(e){ld.classList.remove('show');alert('Error: '+e.message)}
 }
 
+
+let bookkeepingJobId=null;
+let bookkeepingPoll=null;
+
 async function startBookkeeping(){
+if(!await requireLogin('bookkeeping')){return}
 const c=CONFIG[currentType];const ld=document.getElementById('loading');const lt=document.getElementById('loadingText');
 ld.classList.add('show');lt.textContent='Uploading files...';
 const fd=new FormData();
-c.files.forEach((f,i)=>{fd.append(f.key,uploadedFiles[i+1])});
+fd.append('bank_statement',uploadedFiles[1]);
+fd.append('daybook',uploadedFiles[2]);
 try{
 const r=await fetch('/api/bookkeeping/upload',{method:'POST',body:fd});const d=await r.json();
-if(!d.success){ld.classList.remove('show');showAlert(d.error||'Upload failed','error');return}
+if(d.error){alert(d.error);ld.classList.remove('show');return}
 bookkeepingJobId=d.job_id;
 lt.textContent='Running 21 pipelines...';
 const r2=await fetch('/api/bookkeeping/run/'+bookkeepingJobId,{method:'POST'});const d2=await r2.json();
+currentResults=d2;
 ld.classList.remove('show');
 showBookkeepingResults(d2);
-}catch(e){ld.classList.remove('show');showAlert('Error: '+e.message,'error')}
+}catch(e){ld.classList.remove('show');alert('Error: '+e.message)}
 }
 
 function showBookkeepingResults(d){
-document.getElementById('results').classList.add('show');
-document.getElementById('resultsTitle').textContent='Bookkeeping Results';
-const ca=document.getElementById('summaryCards');
-ca.innerHTML=`<div class="stat-card"><div class="stat-label">Status</div><div class="stat-value" style="color:var(--accent2)">${d.status||'Complete'}</div></div><div class="stat-card"><div class="stat-label">Pipelines</div><div class="stat-value">${d.pipelines_run||21}</div></div><div class="stat-card"><div class="stat-label">Duration</div><div class="stat-value">${d.duration||'-'}</div></div>`;
-const files=d.output_files||d.files||[];
+const s=document.getElementById('results');s.classList.add('show');s.scrollIntoView({behavior:'smooth'});
+document.getElementById('resultsTitle').textContent='Complete Bookkeeping Results';
+document.getElementById('gstr3bSummary').innerHTML='';
+const completed=(d.completed_pipelines||[]).filter(p=>p.status==='completed').length;
+const failed=(d.completed_pipelines||[]).filter(p=>p.status==='failed').length;
+const skipped=(d.completed_pipelines||[]).filter(p=>p.status==='skipped').length;
+document.getElementById('summaryCards').innerHTML=`<div class="summary-card total"><div class="value">21</div><div class="label">Total Pipelines</div></div><div class="summary-card matched"><div class="value">${completed}</div><div class="label">Completed</div></div><div class="summary-card unmatched"><div class="value">${failed}</div><div class="label">Failed</div></div><div class="summary-card rate"><div class="value">${skipped}</div><div class="label">Skipped</div></div>`;
+window._bk=d.completed_pipelines||[];
+let h=`<table><thead><tr><th>#</th><th>Pipeline</th><th>Status</th></tr></thead><tbody>`;
+window._bk.forEach((p,i)=>{const sc=p.status==='completed'?'status-matched':p.status==='failed'?'status-unmatched':'status-skipped';h+=`<tr><td>${i+1}</td><td>${p.name}</td><td><span class="status-badge ${sc}">${p.status}</span></td></tr>`});
+h+='</tbody></table>';
+document.getElementById('tableContent').innerHTML=h;
+document.getElementById('tableTabs').innerHTML=`<div class="table-tab active">Pipelines (${window._bk.length})</div>`;
+const files=d.output_files||[];
 if(files.length>0){
-let fh='<div style="margin-top:16px;padding:16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)"><h3 style="margin-bottom:12px">Output Files ('+files.length+')</h3>';
+let fh='<div style="margin-top:16px;padding:16px"><h3 style="margin-bottom:12px">Output Files ('+files.length+')</h3>';
 fh+='<div style="display:flex;flex-wrap:wrap;gap:8px">';
-files.forEach(f=>{fh+=`<a href="/api/bookkeeping/download/${bookkeepingJobId}/${f.split('/').pop()}" target="_blank" style="padding:8px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:12px;text-decoration:none;color:var(--text)">${f.split('/').pop()}</a>`});
-fh+='</div></div>';
-document.getElementById('tableContent').innerHTML=fh;
+files.forEach(f=>{fh+=`<a href="/api/bookkeeping/download/${bookkeepingJobId}/${f.split('/').pop()}" target="_blank" style="padding:6px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;font-size:12px;text-decoration:none;color:var(--text)">${f.split('/').pop()}</a>`});
+fh+='</div>';
+fh+=`<div style="margin-top:16px"><a href="/api/bookkeeping/download/${bookkeepingJobId}" class="btn-primary" style="display:inline-flex;padding:12px 24px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;font-weight:600">Download All (ZIP) ↓</a></div></div>`;
+document.getElementById('tableContent').innerHTML+=fh;
 }
+document.getElementById('fileBtn').style.display='none';
 }
 
 function showResults(d){
-document.getElementById('results').classList.add('show');
+const s=document.getElementById('results');s.classList.add('show');s.scrollIntoView({behavior:'smooth'});
 document.getElementById('resultsTitle').textContent=CONFIG[currentType].name+' Results';
+document.getElementById('gstr3bSummary').innerHTML='';
 const ca=document.getElementById('summaryCards'),ta=document.getElementById('tableTabs'),tb=document.getElementById('tableContent');
 if(currentType==='brs')showBRS(d,ca,ta,tb);
-else if(currentType==='upi')showUPI(d,ca,ta,tb);
 else if(currentType==='gst')showGST(d,ca,ta,tb);
 else if(currentType==='gstr1')showGSTR1(d,ca,ta,tb);
 else if(currentType==='gstr2b')showGSTR2B(d,ca,ta,tb);
@@ -577,106 +513,96 @@ else if(currentType==='gstr3b')showGSTR3B(d,ca,ta,tb);
 else if(currentType==='bookkeeping')showBookkeepingResults(d);
 }
 
+
 function showBRS(d,cards,tabs,table){
-const m=d.matched||[],u=d.unmatched||[],s=d.skipped_count||0;
-cards.innerHTML=`<div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">${d.total_transactions||m.length+u.length}</div></div><div class="stat-card" style="border-color:var(--accent2)"><div class="stat-label">Matched</div><div class="stat-value" style="color:var(--accent2)">${d.matched_count||m.length}</div></div><div class="stat-card" style="border-color:var(--danger)"><div class="stat-label">Unmatched</div><div class="stat-value" style="color:var(--danger)">${d.unmatched_count||u.length}</div></div><div class="stat-card" style="border-color:var(--accent3)"><div class="stat-label">Match Rate</div><div class="stat-value" style="color:var(--accent3)">${d.match_rate||0}%</div></div>`;
-const all=[...m,...u];window._rows=all;
-tabs.innerHTML=`<div class="table-tab active" onclick="ft('all',this)">📋 All (${all.length})</div><div class="table-tab" onclick="ft('matched',this)">✅ Matched (${m.length})</div><div class="table-tab" onclick="ft('unmatched',this)">❌ Unmatched (${u.length})</div>`;
-renderBRS(all);table.innerHTML='';tb.innerHTML='';
-}
+cards.innerHTML=`<div class="summary-card total"><div class="value">${d.total_transactions||0}</div><div class="label">Total</div></div><div class="summary-card matched"><div class="value">${d.matched_count||0}</div><div class="label">Matched</div></div><div class="summary-card unmatched"><div class="value">${d.unmatched_count||0}</div><div class="label">Unmatched</div></div><div class="summary-card rate"><div class="value">${d.match_rate||0}%</div><div class="label">Match Rate</div></div>`;
+const m=d.matched||[],u=d.unmatched||[],all=[...m,...u];window._rows=all;
+tabs.innerHTML=`<div class="table-tab active" onclick="ft('all',this)">All (${all.length})</div><div class="table-tab" onclick="ft('matched',this)">Matched (${m.length})</div><div class="table-tab" onclick="ft('unmatched',this)">Unmatched (${u.length})</div>`;
+renderBRS(all);}
 function ft(f,el){document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');const a=window._rows||[];renderBRS(f==='all'?a:f==='matched'?a.filter(r=>r.status==='Matched'):a.filter(r=>r.status!=='Matched'&&r.status!=='Skipped'))}
 function renderBRS(rows){let h=`<table><thead><tr><th>Book Description</th><th>Bank Description</th><th>Book Amt</th><th>Bank Amt</th><th>Status</th><th>Confidence</th><th>Reason</th></tr></thead><tbody>`;rows.forEach(r=>{const sc=r.status==='Matched'?'status-matched':r.status==='Skipped'?'status-skipped':'status-unmatched';const cc=r.confidence>=70?'conf-high':r.confidence>=40?'conf-med':'conf-low';h+=`<tr><td title="${esc(r.book_description)}">${tr(r.book_description,40)}</td><td title="${esc(r.bank_description)}">${tr(r.bank_description,40)}</td><td class="amount">₹${fm(r.book_amount)}</td><td class="amount">₹${fm(r.bank_amount)}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td class="confidence ${cc}">${r.confidence||0}%</td><td style="font-size:11px;color:var(--text3)">${tr(r.reason,50)}</td></tr>`});h+='</tbody></table>';document.getElementById('tableContent').innerHTML=h}
 
 function showGST(d,cards,tabs,table){
-const m=d.matched||[],mm=d.mismatched||[],m2=d.missing_in_2b||[],mb=d.missing_in_books||[];
-cards.innerHTML=`<div class="stat-card"><div class="stat-label">Total Invoices</div><div class="stat-value">${m.length+mm.length+m2.length+mb.length}</div></div><div class="stat-card" style="border-color:var(--accent2)"><div class="stat-label">Matched</div><div class="stat-value" style="color:var(--accent2)">${m.length}</div></div><div class="stat-card" style="border-color:var(--accent4)"><div class="stat-label">Mismatched</div><div class="stat-value" style="color:var(--accent4)">${mm.length}</div></div><div class="stat-card" style="border-color:var(--accent3)"><div class="stat-label">Missing</div><div class="stat-value" style="color:var(--accent3)">${m2.length+mb.length}</div></div>`;
-const all=[...m,...mm,...m2,...mb];window._ga=all;
-tabs.innerHTML=`<div class="table-tab active" onclick="fg('all',this)">📋 All (${all.length})</div><div class="table-tab" onclick="fg('m',this)">✅ Matched (${m.length})</div><div class="table-tab" onclick="fg('m2',this)">⚠️ Missing 2B (${m2.length})</div><div class="table-tab" onclick="fg('mm',this)">❌ Mismatched (${mm.length})</div>`;
-renderGST(all);table.innerHTML='';
-}
+const s=d.summary||d;
+cards.innerHTML=`<div class="summary-card total"><div class="value">${s.total_book||s.total_book_invoices||0}</div><div class="label">Book</div></div><div class="summary-card matched"><div class="value">${s.matched||0}</div><div class="label">Matched</div></div><div class="summary-card unmatched"><div class="value">${s.mismatched||0}</div><div class="label">Mismatched</div></div><div class="summary-card rate"><div class="value">${s.match_rate||0}%</div><div class="label">Rate</div></div>`;
+const ma=d.matched||[],mi=d.mismatched||[],m2=d.missing_in_2b||[],mb=d.missing_in_books||[];window._ga=[...ma,...mi,...m2,...mb];
+tabs.innerHTML=`<div class="table-tab active" onclick="fg('all',this)">All (${window._ga.length})</div><div class="table-tab" onclick="fg('m',this)">Matched (${ma.length})</div><div class="table-tab" onclick="fg('m2',this)">Missing 2B (${m2.length})</div><div class="table-tab" onclick="fg('mi',this)">Mismatched (${mi.length})</div>`;
+renderGST(window._ga);}
 function fg(f,el){document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');const a=window._ga||[];renderGST(f==='all'?a:f==='m'?a.filter(r=>r.status==='Matched'):f==='m2'?a.filter(r=>r.status==='Missing in GSTR-2B'):a.filter(r=>['Invoice Mismatch','Amount Mismatch','GSTIN Mismatch'].includes(r.status)))}
 function renderGST(rows){let h=`<table><thead><tr><th>Invoice</th><th>GSTIN</th><th>Vendor</th><th>Book Taxable</th><th>2B Taxable</th><th>Status</th><th>Reason</th></tr></thead><tbody>`;rows.forEach(r=>{const sc=r.status==='Matched'?'status-matched':r.status.includes('Missing')?'status-missing':'status-mismatch';h+=`<tr><td class="amount">${r.invoice_number||'-'}</td><td style="font-family:var(--font-mono);font-size:11px">${r.gstin||'-'}</td><td>${tr(r.vendor_name,30)}</td><td class="amount">₹${fm(r.book_taxable)}</td><td class="amount">₹${fm(r.portal_taxable)}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td style="font-size:11px;color:var(--text3)">${tr(r.reason||r.differences||'-',50)}</td></tr>`});h+='</tbody></table>';document.getElementById('tableContent').innerHTML=h}
 
 function showGSTR1(d,cards,tabs,table){
-const g=d.gstr1||d;
-cards.innerHTML=`<div class="stat-card"><div class="stat-label">B2B</div><div class="stat-value">${(g.b2b||[]).length}</div></div><div class="stat-card"><div class="stat-label">B2CL</div><div class="stat-value">${(g.b2cl||[]).length}</div></div><div class="stat-card"><div class="stat-label">B2CS</div><div class="stat-value">${(g.b2cs||[]).length}</div></div><div class="stat-card"><div class="stat-label">Exports</div><div class="stat-value">${(g.exp||[]).length}</div></div>`;
-const all=[];(g.b2b||[]).forEach(b=>b.inv.forEach(i=>all.push({...i,type:'B2B'})));(g.b2cl||[]).forEach(b=>b.inv.forEach(i=>all.push({...i,type:'B2CL'})));(g.b2cs||[]).forEach(i=>all.push({...i,type:'B2CS'}));(g.exp||[]).forEach(b=>b.inv.forEach(i=>all.push({...i,type:'EXP'})));window._g1r=all;
-tabs.innerHTML=`<div class="table-tab active" onclick="fg1('all',this)">📋 All (${all.length})</div><div class="table-tab" onclick="fg1('B2B',this)">B2B</div><div class="table-tab" onclick="fg1('B2CL',this)">B2CL</div><div class="table-tab" onclick="fg1('B2CS',this)">B2CS</div>`;
-renderG1(all);table.innerHTML='';
-}
+const s=d.summary;
+cards.innerHTML=`<div class="summary-card total"><div class="value">${s.total_invoices||0}</div><div class="label">Invoices</div></div><div class="summary-card matched"><div class="value">${s.b2b||0}</div><div class="label">B2B</div></div><div class="summary-card itc"><div class="value">${s.exports||0}</div><div class="label">Exports</div></div><div class="summary-card rate"><div class="value">₹${fm(s.total_value)}</div><div class="label">Total</div></div>`;
+const g=d.gstr1,rows=[];(g.b2b||[]).forEach(b=>(b.inv||[]).forEach(i=>rows.push({...i,type:'B2B',ctin:b.ctin})));(g.b2cl||[]).forEach(b=>(b.inv||[]).forEach(i=>rows.push({...i,type:'B2CL'})));(g.exp||[]).forEach(b=>(b.inv||[]).forEach(i=>rows.push({...i,type:'Export'})));(g.cdnr||[]).forEach(n=>rows.push({...n,type:'Credit Note'}));window._g1r=rows;
+tabs.innerHTML=`<div class="table-tab active" onclick="fg1('all',this)">All (${rows.length})</div><div class="table-tab" onclick="fg1('B2B',this)">B2B (${s.b2b||0})</div><div class="table-tab" onclick="fg1('B2CL',this)">B2CL (${s.b2cl||0})</div><div class="table-tab" onclick="fg1('Export',this)">Export (${s.exports||0})</div>`;
+renderG1(rows);}
 function fg1(f,el){document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');const a=window._g1r||[];renderG1(f==='all'?a:a.filter(r=>r.type===f))}
 function renderG1(rows){let h=`<table><thead><tr><th>Type</th><th>Invoice</th><th>Date</th><th>Value</th><th>Taxable</th><th>IGST</th><th>CGST</th><th>SGST</th></tr></thead><tbody>`;rows.forEach(r=>{const t=(r.inv&&r.inv[0])||{};h+=`<tr><td><span class="status-badge status-computed">${r.type}</span></td><td class="amount">${r.inum||r.nt_num||'-'}</td><td>${r.idt||r.nt_dt||'-'}</td><td class="amount">₹${fm(r.val)}</td><td class="amount">₹${fm(t.txval)}</td><td class="amount">₹${fm(t.iamt)}</td><td class="amount">₹${fm(t.camt)}</td><td class="amount">₹${fm(t.samt)}</td></tr>`});h+='</tbody></table>';document.getElementById('tableContent').innerHTML=h}
 
 function showGSTR2B(d,cards,tabs,table){
-const m=d.matched||[],mm=d.mismatched||[],m2=d.missing_in_2b||[],mb=d.missing_in_books||[];
-cards.innerHTML=`<div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">${m.length+mm.length+m2.length+mb.length}</div></div><div class="stat-card" style="border-color:var(--accent2)"><div class="stat-label">Matched</div><div class="stat-value" style="color:var(--accent2)">${m.length}</div></div><div class="stat-card" style="border-color:var(--danger)"><div class="stat-label">Mismatched</div><div class="stat-value" style="color:var(--danger)">${mm.length}</div></div><div class="stat-card" style="border-color:var(--accent3)"><div class="stat-label">Missing</div><div class="stat-value" style="color:var(--accent3)">${m2.length+mb.length}</div></div>`;
-const all=[...m,...mm,...m2,...mb];window._g2a=all;
-tabs.innerHTML=`<div class="table-tab active" onclick="fg2('all',this)">📋 All (${all.length})</div><div class="table-tab" onclick="fg2('m',this)">✅ Matched (${m.length})</div><div class="table-tab" onclick="fg2('m2',this)">⚠️ Missing 2B (${m2.length})</div><div class="table-tab" onclick="fg2('mb',this)">📥 Missing Books (${mb.length})</div>`;
-renderG2(all);table.innerHTML='';
-}
+const s=d.summary;
+cards.innerHTML=`<div class="summary-card total"><div class="value">${s.total_book||0}</div><div class="label">Book</div></div><div class="summary-card matched"><div class="value">${s.matched||0}</div><div class="label">Matched</div></div><div class="summary-card itc"><div class="value">₹${fm(s.itc_eligible)}</div><div class="label">ITC Eligible</div></div><div class="summary-card unmatched"><div class="value">₹${fm(s.itc_blocked)}</div><div class="label">ITC Blocked</div></div>`;
+const ma=d.matched||[],mi=d.mismatched||[],m2=d.missing_in_2b||[],mb=d.missing_in_books||[];window._g2a=[...ma,...mi,...m2,...mb];
+tabs.innerHTML=`<div class="table-tab active" onclick="fg2('all',this)">All (${window._g2a.length})</div><div class="table-tab" onclick="fg2('m',this)">Matched (${ma.length})</div><div class="table-tab" onclick="fg2('m2',this)">Missing 2B (${m2.length})</div><div class="table-tab" onclick="fg2('mb',this)">Missing Books (${mb.length})</div>`;
+renderG2(window._g2a);}
 function fg2(f,el){document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');const a=window._g2a||[];renderG2(f==='all'?a:f==='m'?a.filter(r=>r.status==='Matched'):f==='m2'?a.filter(r=>r.status==='Missing in GSTR-2B'):a.filter(r=>r.status==='Missing in Books'))}
 function renderG2(rows){let h=`<table><thead><tr><th>Invoice</th><th>GSTIN</th><th>Vendor</th><th>Taxable</th><th>ITC</th><th>Status</th><th>Reason</th></tr></thead><tbody>`;rows.forEach(r=>{const sc=r.status==='Matched'?'status-matched':r.status.includes('Missing')?'status-missing':'status-mismatch';h+=`<tr><td class="amount">${r.invoice_number||'-'}</td><td style="font-family:var(--font-mono);font-size:11px">${r.gstin||'-'}</td><td>${tr(r.vendor_name,30)}</td><td class="amount">₹${fm(r.book_taxable||r.taxable_value||0)}</td><td class="amount">₹${fm(r.itc_amount||0)}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td style="font-size:11px;color:var(--text3)">${tr(r.reason||r.differences||'-',50)}</td></tr>`});h+='</tbody></table>';document.getElementById('tableContent').innerHTML=h}
 
 function showGSTR3B(d,cards,tabs,table){
-const g=d.gstr3b||d;
-const t3=g.table_3_1||{},t4=g.table_4||{},tp=g.tax_payable||{};
-cards.innerHTML=`<div class="stat-card"><div class="stat-label">Outward Taxable</div><div class="stat-value">₹${fm(t3.outward_taxable)}</div></div><div class="stat-card"><div class="stat-label">ITC Available</div><div class="stat-value" style="color:var(--accent2)">₹${fm((t4.itc_igst||0)+(t4.itc_cgst||0)+(t4.itc_sgst||0))}</div></div><div class="stat-card"><div class="stat-label">Tax Payable</div><div class="stat-value" style="color:var(--accent3)">₹${fm(tp.total)}</div></div>`;
-document.getElementById('gstr3bSummary').innerHTML=`<div class="g3b-grid">
-<div class="g3b-item"><div class="label">Outward IGST</div><div class="value">₹${fm(t3.outward_igst)}</div></div>
-<div class="g3b-item"><div class="label">Outward CGST</div><div class="value">₹${fm(t3.outward_cgst)}</div></div>
-<div class="g3b-item"><div class="label">Outward SGST</div><div class="value">₹${fm(t3.outward_sgst)}</div></div>
-<div class="g3b-item"><div class="label">ITC IGST</div><div class="value">₹${fm(t4.itc_igst)}</div></div>
-<div class="g3b-item"><div class="label">ITC CGST</div><div class="value">₹${fm(t4.itc_cgst)}</div></div>
-<div class="g3b-item"><div class="label">ITC SGST</div><div class="value">₹${fm(t4.itc_sgst)}</div></div>
-<div class="g3b-item"><div class="label">Payable IGST</div><div class="value">₹${fm(tp.igst)}</div></div>
-<div class="g3b-item"><div class="label">Payable CGST</div><div class="value">₹${fm(tp.cgst)}</div></div>
-<div class="g3b-item"><div class="label">Payable SGST</div><div class="value">₹${fm(tp.sgst)}</div></div>
-<div class="g3b-item"><div class="label">Total Payable</div><div class="value" style="color:var(--accent3)">₹${fm(tp.total)}</div></div>
-</div>`;
-tabs.innerHTML='';table.innerHTML='';
+const g=d.gstr3b,t=g.tax_payable,t3=g.table_3_1,t4=g.table_4;
+cards.innerHTML=`<div class="summary-card total"><div class="value">₹${fm(t3.outward_taxable)}</div><div class="label">Outward</div></div><div class="summary-card itc"><div class="value">₹${fm(t4.itc_igst+t4.itc_cgst+t4.itc_sgst)}</div><div class="label">ITC</div></div><div class="summary-card unmatched"><div class="value">₹${fm(t4.itc_ineligible)}</div><div class="label">Blocked</div></div><div class="summary-card rate"><div class="value">₹${fm(t.total)}</div><div class="label">Tax Payable</div></div>`;
+document.getElementById('gstr3bSummary').innerHTML=`<div class="gstr3b-summary"><h3>GSTR-3B — ${g.ret_period||'Period'}</h3><div class="gstr3b-grid"><div class="gstr3b-item"><div class="item-label">3.1 Outward Supplies</div><div class="item-value">₹${fm(t3.outward_taxable)}</div><div class="item-sub">IGST ₹${fm(t3.outward_igst)} | CGST ₹${fm(t3.outward_cgst)} | SGST ₹${fm(t3.outward_sgst)}</div></div><div class="gstr3b-item"><div class="item-label">4 Input Tax Credit</div><div class="item-value">₹${fm(t4.itc_igst+t4.itc_cgst+t4.itc_sgst)}</div><div class="item-sub">IGST ₹${fm(t4.itc_igst)} | CGST ₹${fm(t4.itc_cgst)} | SGST ₹${fm(t4.itc_sgst)}</div></div><div class="gstr3b-item"><div class="item-label">Tax Payable</div><div class="item-value" style="color:var(--accent3)">₹${fm(t.total)}</div><div class="item-sub">IGST ₹${fm(t.igst)} | CGST ₹${fm(t.cgst)} | SGST ₹${fm(t.sgst)}</div></div></div></div>`;
+tabs.innerHTML=`<div class="table-tab active">Summary View</div>`;table.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3)">GSTR-3B summary shown above. Download full report for details.</div>';
 }
 
+// =====================================================
+// GST FILING FLOW
+// =====================================================
 function openFiling(){
-if(currentType==='gstr1'||currentType==='gstr3b'){showFilingModal()}else{openPayment()}
+const gstinEl=document.getElementById('extra_client_gstin');
+const periodEl=document.getElementById('extra_period');
+const gstin=gstinEl?gstinEl.value:'';
+const period=periodEl?periodEl.value:'';
+
+if(!gstin||gstin.length<15){showAlert('Enter a valid GSTIN first','error');return}
+if((currentType==='gstr1'||currentType==='gstr3b')&&(!period||period.length<6)){showAlert('Enter filing period (MMYYYY)','error');return}
+
+filingState={step:1,gstin:gstin,period:period,txnId:''};
+showFilingModal();
 }
+
 function showFilingModal(){
-const modal=document.getElementById('filingModal');
-document.getElementById('filingModalTitle').textContent='Authenticate with GSTN';
-document.getElementById('filingModalContent').innerHTML=`
-<div class="filing-section">
-<div class="filing-step"><div class="step-number">1</div><div class="step-content"><h4>Authenticate</h4><p>Login with your GST portal credentials</p></div></div>
-<div class="filing-step"><div class="step-number">2</div><div class="step-content"><h4>Verify OTP</h4><p>Enter the OTP sent to your registered mobile</p></div></div>
+const m=document.getElementById('filingModal');
+const t=document.getElementById('filingModalTitle');
+const c=document.getElementById('filingModalContent');
+m.classList.add('show');
+
+if(filingState.step===1){
+t.textContent='Step 1: Authenticate with GSTN';
+c.innerHTML=`
+<div class="filing-section" style="border:none;padding:0">
+<div class="filing-step"><div class="step-number active">1</div><div class="step-content"><h4>Send OTP</h4><p>OTP will be sent to your GST registered mobile/email</p></div></div>
+<div class="filing-step"><div class="step-number">2</div><div class="step-content"><h4>Verify OTP</h4><p>Enter the OTP received</p></div></div>
 <div class="filing-step"><div class="step-number">3</div><div class="step-content"><h4>File Return</h4><p>Submit GSTR-${currentType==='gstr1'?'1':'3B'} to GSTN</p></div></div>
-</div>
+<div style="margin-top:24px">
+<label class="input-label">GSTIN</label>
 <input class="input-field" id="filing_gstin" value="${filingState.gstin}" readonly>
-<label class="input-label">GST Portal Username</label>
+<label class="input-label">Username (GST Portal)</label>
 <input class="input-field" id="filing_username" placeholder="Your GST portal username">
-<div id="filingAlert" class="alert"></div>
-<button class="btn-full" onclick="sendOTP()" style="margin-top:16px">Send OTP →</button>`;
-modal.classList.add('show');
-}
-function otpNext(curr,next){
-if(next){document.getElementById(next).focus()}
-else{
-let otp='';for(let i=1;i<=6;i++)otp+=document.getElementById('otp'+i).value;
-if(otp.length===6){verifyOTP()}
-}
-}
-async function sendOTP(){
-const u=document.getElementById('filing_username').value.trim();
-const g=document.getElementById('filing_gstin').value.trim();
-if(!u){document.getElementById('filingAlert').className='alert alert-error show';document.getElementById('filingAlert').textContent='Enter GST portal username';return}
-const fd=new FormData();fd.append('gstin',g);fd.append('username',u);
-try{
-const r=await fetch('/api/gst/auth/init',{method:'POST',body:fd});const d=await r.json();
-if(d.success){
-filingState.gstin=g;filingState.txnId=d.txn_id||'txn_1';
-document.getElementById('filingModalTitle').textContent='Enter OTP';
-document.getElementById('filingModalContent').innerHTML=`
-<div style="text-align:center;margin-bottom:24px">
-<p style="color:var(--text2);font-size:14px">OTP sent to your registered mobile/email</p>
+<div style="display:flex;gap:12px;margin-top:16px">
+<button class="btn-primary" onclick="sendOTP()" style="flex:1">Send OTP →</button>
+<button class="btn-close" onclick="closeFiling()">Cancel</button>
 </div>
-<div class="otp-inputs">
+</div>
+</div>`;
+}
+else if(filingState.step===2){
+t.textContent='Step 2: Enter OTP';
+c.innerHTML=`
+<div style="text-align:center">
+<p style="color:var(--text2);margin-bottom:20px">OTP sent to registered mobile/email for<br><strong style="color:var(--accent)">${filingState.gstin}</strong></p>
+<div class="otp-input">
 <input type="text" maxlength="1" id="otp1" oninput="otpNext(this,'otp2')" autofocus>
 <input type="text" maxlength="1" id="otp2" oninput="otpNext(this,'otp3')">
 <input type="text" maxlength="1" id="otp3" oninput="otpNext(this,'otp4')">
@@ -684,103 +610,147 @@ document.getElementById('filingModalContent').innerHTML=`
 <input type="text" maxlength="1" id="otp5" oninput="otpNext(this,'otp6')">
 <input type="text" maxlength="1" id="otp6" oninput="otpNext(this,'')">
 </div>
+<p style="font-size:12px;color:var(--text3);margin:16px 0">For sandbox testing, enter any 6 digits</p>
 <div id="otpAlert" class="alert"></div>
-<button class="btn-full" onclick="verifyOTP()" style="margin-top:16px">Verify OTP →</button>`;
-}else{
-document.getElementById('filingAlert').className='alert alert-error show';
-document.getElementById('filingAlert').textContent=d.error||'Failed to initiate authentication';
-}
-}catch(e){document.getElementById('filingAlert').className='alert alert-error show';document.getElementById('filingAlert').textContent='Error: '+e.message}
-}
-async function verifyOTP(){
-let otp='';for(let i=1;i<=6;i++)otp+=document.getElementById('otp'+i).value;
-if(otp.length!==6){document.getElementById('otpAlert').className='alert alert-error show';document.getElementById('otpAlert').textContent='Enter complete 6-digit OTP';return}
-const fd=new FormData();fd.append('gstin',filingState.gstin);fd.append('txn_id',filingState.txnId||'txn_1');fd.append('otp',otp);
-try{
-const r=await fetch('/api/gst/auth/verify',{method:'POST',body:fd});const d=await r.json();
-if(d.success){
-filingState.step=2;
-const typeName=currentType==='gstr1'?'GSTR-1':'GSTR-3B';
-document.getElementById('filingModalTitle').textContent='File '+typeName;
-document.getElementById('filingModalContent').innerHTML=`
-<div class="filing-section">
-<div class="filing-step"><div class="step-number">✓</div><div class="step-content"><h4>Authenticated</h4><p>Successfully verified with GSTN</p></div></div>
+<div style="display:flex;gap:12px;margin-top:16px">
+<button class="btn-primary" onclick="verifyOTP()" style="flex:1">Verify OTP →</button>
+<button class="btn-close" onclick="closeFiling()">Cancel</button>
 </div>
-<div class="alert alert-success show">Ready to file ${typeName} for ${filingState.gstin}</div>
+</div>`;
+document.getElementById('otp1').focus();
+}
+else if(filingState.step===3){
+t.textContent='Step 3: File Return';
+const typeName=currentType==='gstr1'?'GSTR-1':'GSTR-3B';
+c.innerHTML=`
+<div class="filing-section" style="border:none;padding:0">
+<div class="alert alert-success show">✓ Authenticated with GSTN</div>
+<div style="margin-bottom:16px">
+<p style="color:var(--text2)"><strong>GSTIN:</strong> ${filingState.gstin}</p>
+<p style="color:var(--text2)"><strong>Period:</strong> ${filingState.period}</p>
+<p style="color:var(--text2)"><strong>Return:</strong> ${typeName}</p>
+</div>
 <div id="filingAlert" class="alert"></div>
 <div style="display:flex;gap:12px;margin-top:16px">
 <button class="btn-success" onclick="fileReturn()" style="flex:1" id="fileReturnBtn">📤 File ${typeName} on GSTN</button>
-<button class="btn-secondary" onclick="closeFiling()">Cancel</button>
+<button class="btn-close" onclick="closeFiling()">Cancel</button>
+</div>
 </div>`;
-}else{
-document.getElementById('otpAlert').className='alert alert-error show';
-document.getElementById('otpAlert').textContent=d.error||'OTP verification failed';
 }
-}catch(e){document.getElementById('otpAlert').className='alert alert-error show';document.getElementById('otpAlert').textContent='Error: '+e.message}
+else if(filingState.step===4){
+t.textContent='Return Filed Successfully!';
+c.innerHTML=`
+<div style="text-align:center">
+<div style="font-size:48px;margin-bottom:16px">✅</div>
+<h3 style="color:var(--accent2);margin-bottom:8px">GSTR-${currentType==='gstr1'?'1':'3B'} Filed Successfully</h3>
+<p style="color:var(--text2);margin-bottom:16px">Your return has been submitted to GSTN</p>
+<div class="gstr3b-item" style="text-align:left;max-width:360px;margin:0 auto 20px">
+<div class="item-label">ARN (Acknowledgement Reference Number)</div>
+<div class="item-value" style="font-size:16px;color:var(--accent)">${filingState.arn||'N/A'}</div>
+</div>
+<div class="gstr3b-item" style="text-align:left;max-width:360px;margin:0 auto 20px">
+<div class="item-label">Filing Date</div>
+<div class="item-value" style="font-size:14px">${filingState.filingDate||new Date().toLocaleDateString()}</div>
+</div>
+<button class="btn-primary" onclick="closeFiling()" style="margin-top:16px">Done</button>
+</div>`;
 }
+}
+
+function otpNext(curr,next){
+if(curr.value.length===1&&next){document.getElementById(next).focus()}
+}
+
+async function sendOTP(){
+const gstin=document.getElementById('filing_gstin').value;
+const username=document.getElementById('filing_username').value;
+if(!username){alert('Enter your GST portal username');return}
+showLoading('Sending OTP...');
+try{
+const fd=new FormData();fd.append('gstin',gstin);fd.append('username',username);
+const r=await fetch('/api/gst/auth/init',{method:'POST',body:fd});const d=await r.json();
+hideLoading();
+if(d.status==='OTP_SENT'||d.status_cd==='1'){
+filingState.step=2;filingState.txnId=d.txn_id||'';
+showFilingModal();
+}else{alert(d.message||'Failed to send OTP')}
+}catch(e){hideLoading();alert('Error: '+e.message)}
+}
+
+async function verifyOTP(){
+const o=['otp1','otp2','otp3','otp4','otp5','otp6'].map(id=>document.getElementById(id)?.value||'').join('');
+if(o.length<6){const al=document.getElementById('otpAlert');al.className='alert alert-error show';al.textContent='Enter all 6 digits';return}
+showLoading('Verifying OTP...');
+try{
+const fd=new FormData();fd.append('gstin',filingState.gstin);fd.append('txn_id',filingState.txnId||'txn_1');fd.append('otp',o);
+const r=await fetch('/api/gst/auth/verify',{method:'POST',body:fd});const d=await r.json();
+hideLoading();
+if(d.status==='SUCCESS'||d.status_cd==='1'){
+filingState.step=3;showFilingModal();
+}else{const al=document.getElementById('otpAlert');al.className='alert alert-error show';al.textContent=d.message||'Verification failed'}
+}catch(e){hideLoading();alert('Error: '+e.message)}
+}
+
 async function fileReturn(){
-const btn=document.getElementById('fileReturnBtn');
-btn.disabled=true;btn.textContent='Filing...';
+const btn=document.getElementById('fileReturnBtn');btn.disabled=true;btn.textContent='Filing...';
+showLoading('Filing return with GSTN...');
+try{
 const fd=new FormData();
 fd.append('gstin',filingState.gstin);
-fd.append('txn_id',filingState.txnId||'txn_1');
-if(currentType==='gstr1'){fd.append('period',document.getElementById('extra_period')?document.getElementById('extra_period').value:'')}
-try{
+fd.append('period',filingState.period);
+fd.append('gstr1_data',JSON.stringify(currentResults.gstr1||currentResults.gstr3b||currentResults));
 const endpoint=currentType==='gstr1'?'/api/gst/file/gstr1':'/api/gst/file/gstr3b';
 const r=await fetch(endpoint,{method:'POST',body:fd});const d=await r.json();
-if(d.success||d.arn){
-document.getElementById('filingModalContent').innerHTML=`
-<div style="text-align:center;padding:32px">
-<div style="font-size:64px;margin-bottom:16px">✅</div>
-<h3 style="color:var(--accent2);margin-bottom:8px">GSTR-${currentType==='gstr1'?'1':'3B'} Filed Successfully</h3>
-<p style="color:var(--text2);margin-bottom:24px">ARN: ${d.arn||'N/A'}</p>
-<button class="btn-full" onclick="closeFiling()">Close</button>
-</div>`;
-}else{
-document.getElementById('filingAlert').className='alert alert-error show';
-document.getElementById('filingAlert').textContent=d.error||'Filing failed';
-btn.disabled=false;btn.textContent='📤 File Return on GSTN';
+hideLoading();
+if(d.status==='SUCCESS'){
+filingState.step=4;filingState.arn=d.arn||'';filingState.filingDate=d.timestamp||new Date().toISOString();
+showFilingModal();
+document.getElementById('fileBtn').style.display='none';
+showAlert('Return filed successfully! ARN: '+filingState.arn,'success');
+}else{btn.disabled=false;btn.textContent='📤 File Return on GSTN';showAlert(d.message||'Filing failed','error')}
+}catch(e){hideLoading();btn.disabled=false;btn.textContent='📤 File Return on GSTN';alert('Error: '+e.message)}
 }
-}catch(e){document.getElementById('filingAlert').className='alert alert-error show';document.getElementById('filingAlert').textContent='Error: '+e.message;btn.disabled=false}
-}
+
 function closeFiling(){document.getElementById('filingModal').classList.remove('show')}
 
+// =====================================================
+// PAYMENT
+// =====================================================
 function openPayment(){document.getElementById('paymentModal').classList.add('show')}
 function closePayment(){document.getElementById('paymentModal').classList.remove('show')}
 async function submitPayment(e){
-e.preventDefault();
-const u=document.getElementById('utrNumber').value.trim();
-const em=document.getElementById('userEmail').value.trim();
-const s=document.getElementById('paymentStatus');
-if(!u||!em){return}
+e.preventDefault();const u=document.getElementById('utrNumber').value;const em=document.getElementById('userEmail').value;const s=document.getElementById('paymentStatus');
 try{await fetch('/api/payment/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({utr_number:u,amount:199,recon_type:currentType,email:em,session_id:'sess_'+Date.now()})});s.textContent='Payment submitted! Report will be sent to your email.';s.style.display='block'}catch(e){s.textContent='Error: '+e.message;s.style.display='block';s.style.color='var(--danger)'}
 }
 
+// =====================================================
+// DOWNLOAD
+// =====================================================
 function downloadReport(){
-if(!currentResults){showAlert('No results to download','error');return}
-let csv='';
-if(currentType==='brs'||currentType==='upi'){
-csv='Book Description,Bank Description,Book Amount,Bank Amount,Status,Confidence,Reason,UTR,App\n';
-[...(currentResults.matched||[]),...(currentResults.unmatched||[])].forEach(r=>{csv+=`"${r.book_description||''}","${r.bank_description||''}",${r.book_amount||0},${r.bank_amount||0},"${r.status}",${r.confidence||0},"${r.reason||''}","${r.upi_utr||''}","${r.upi_app||''}"\n`})
-}else if(currentType==='gst'){csv='Invoice,GSTIN,Vendor,Book Taxable,Portal Taxable,Status,Reason\n';[...(currentResults.matched||[]),...(currentResults.mismatched||[]),...(currentResults.missing_in_2b||[]),...(currentResults.missing_in_books||[])].forEach(r=>{csv+=`"${r.invoice_number}","${r.gstin}","${r.vendor_name}",${r.book_taxable||0},${r.portal_taxable||r.taxable_value||0},"${r.status}","${r.reason||r.differences||''}"\n`})}
-else if(currentType==='gstr1'){csv='Type,Invoice,Date,Value,Taxable,IGST,CGST,SGST\n';const g=currentResults.gstr1||currentResults;(g.b2b||[]).forEach(b=>(b.inv||[]).forEach(i=>{const t=i.inv?i.inv[0]:{};csv+=`B2B,"${i.inum}","${i.idt}",${i.val},${t.txval||0},${t.iamt||0},${t.camt||0},${t.samt||0}\n`}))}
+if(!currentResults)return;let csv='';
+if(currentType==='brs'){csv='Book Description,Bank Description,Book Amount,Bank Amount,Status,Confidence,Reason\n';[...(currentResults.matched||[]),...(currentResults.unmatched||[])].forEach(r=>{csv+=`"${r.book_description}","${r.bank_description}",${r.book_amount},${r.bank_amount},"${r.status}",${r.confidence},"${r.reason}"\n`})}
+else if(currentType==='gst'){csv='Invoice,GSTIN,Vendor,Book Taxable,Portal Taxable,Status,Reason\n';[...(currentResults.matched||[]),...(currentResults.mismatched||[]),...(currentResults.missing_in_2b||[]),...(currentResults.missing_in_books||[])].forEach(r=>{csv+=`"${r.invoice_number}","${r.gstin}","${r.vendor_name}",${r.book_taxable||0},${r.portal_taxable||r.taxable_value||0},"${r.status}","${r.reason||r.differences||''}"\n`})}
+else if(currentType==='gstr1'){csv='Type,Invoice,Date,Value,Taxable,IGST,CGST,SGST\n';const g=currentResults.gstr1;(g.b2b||[]).forEach(b=>(b.inv||[]).forEach(i=>{const t=i.inv?i.inv[0]:{};csv+=`B2B,"${i.inum}","${i.idt}",${i.val},${t.txval||0},${t.iamt||0},${t.camt||0},${t.samt||0}\n`}))}
 else if(currentType==='gstr2b'){csv='Invoice,GSTIN,Vendor,Taxable,ITC,Status,Reason\n';[...(currentResults.matched||[]),...(currentResults.mismatched||[]),...(currentResults.missing_in_2b||[]),...(currentResults.missing_in_books||[])].forEach(r=>{csv+=`"${r.invoice_number}","${r.gstin}","${r.vendor_name}",${r.book_taxable||r.taxable_value||0},${r.itc_amount||0},"${r.status}","${r.reason||''}"\n`})}
-else if(currentType==='gstr3b'){const g=currentResults.gstr3b||currentResults;csv='Description,IGST,CGST,SGST,Total\n';const t3=g.table_3_1||{},t4=g.table_4||{},tp=g.tax_payable||{};csv+=`"Outward",${t3.outward_igst||0},${t3.outward_cgst||0},${t3.outward_sgst||0},${t3.outward_taxable||0}\n`;csv+=`"ITC",${t4.itc_igst||0},${t4.itc_cgst||0},${t4.itc_sgst||0},${(t4.itc_igst||0)+(t4.itc_cgst||0)+(t4.itc_sgst||0)}\n`;csv+=`"Tax Payable",${tp.igst||0},${tp.cgst||0},${tp.sgst||0},${tp.total||0}\n`}
-if(!csv){showAlert('No data to export','error');return}
-const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=currentType+'_reconciliation_'+new Date().toISOString().slice(0,10)+'.csv';a.click();
+else if(currentType==='gstr3b'){const g=currentResults.gstr3b;csv='Description,IGST,CGST,SGST,Total\n';csv+=`"Outward",${g.table_3_1.outward_igst},${g.table_3_1.outward_cgst},${g.table_3_1.outward_sgst},${g.table_3_1.outward_taxable}\n`;csv+=`"ITC",${g.table_4.itc_igst},${g.table_4.itc_cgst},${g.table_4.itc_sgst},${g.table_4.itc_igst+g.table_4.itc_cgst+g.table_4.itc_sgst}\n`;csv+=`"Tax Payable",${g.tax_payable.igst},${g.tax_payable.cgst},${g.tax_payable.sgst},${g.tax_payable.total}\n`}
+const b=new Blob([csv],{type:'text/csv'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=`${currentType}_report.csv`;a.click();URL.revokeObjectURL(u);
 }
 
+// =====================================================
+// HELPERS
+// =====================================================
 function resetAll(){uploadedFiles={};currentResults=null;filingState={step:0,gstin:'',txnId:''};document.getElementById('gstr3bSummary').innerHTML='';document.getElementById('filingSection').innerHTML='';selectType(currentType);window.scrollTo({top:0,behavior:'smooth'})}
 function showLoading(t){document.getElementById('loadingText').textContent=t;document.getElementById('loading').classList.add('show')}
 function hideLoading(){document.getElementById('loading').classList.remove('show')}
 function showAlert(msg,type){const a=document.getElementById('alertBox');a.className=`alert alert-${type} show`;a.textContent=msg}
 function tr(s,n){if(!s)return'-';return s.length>n?s.substring(0,n)+'…':s}
-function esc(s){if(!s)return'';return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function esc(s){if(!s)return'';return s.replace(/"/g,'&quot;').replace(/</g,'&lt;')}
 function fm(n){if(!n&&n!==0)return'0.00';return Number(n).toLocaleString('en-IN',{minimumFractionDigits:2,maximumFractionDigits:2})}
 
 document.addEventListener('dragover',e=>{e.preventDefault();const b=e.target.closest('.upload-box');if(b)b.classList.add('dragover')});
 document.addEventListener('dragleave',e=>{const b=e.target.closest('.upload-box');if(b)b.classList.remove('dragover')});
 document.addEventListener('drop',e=>{e.preventDefault();document.querySelectorAll('.upload-box').forEach(b=>b.classList.remove('dragover'))});
+
 selectType('brs');
 </script>
 
@@ -818,18 +788,20 @@ selectType('brs');
 </div>
 </div>
 
+
+
 <script>
 // ==================== AUTH FUNCTIONS ====================
+
 async function requireLogin(action){
-try{
-const r=await fetch('/api/auth/me');
-const d=await r.json();
-if(d.success&&d.user){return true}
-}catch(e){}
-openModal('loginModal');
-const err=document.getElementById('loginError');
-if(err){err.textContent='Please login to use '+action;err.style.display='block'}
-return false;
+    try{
+        const r=await fetch('/api/auth/me');
+        const d=await r.json();
+        if(d.success&&d.user){return true}
+    }catch(e){}
+    openModal('loginModal');
+    document.getElementById('loginErrorMsg').textContent='Please login to use '+action;
+    return false;
 }
 
 function openModal(id){document.getElementById(id).classList.add('show')}
@@ -862,13 +834,15 @@ const gstin=document.getElementById('regGstin').value.trim();
 const phone=document.getElementById('regPhone').value.trim();
 const err=document.getElementById('regError');
 const ok=document.getElementById('regSuccess');
+
 err.style.display='none';ok.style.display='none';
 
 if(!name||!email||!password){err.textContent='Please fill name, email, and password.';err.style.display='block';return}
 if(password.length<6){err.textContent='Password must be 6+ characters.';err.style.display='block';return}
 
 try{
-const r=await fetch('/api/auth/register',{method:'POST',
+const r=await fetch('/api/auth/register',{
+method:'POST',
 headers:{'Content-Type':'application/json'},
 body:JSON.stringify({name:name,email:email,password:password,firm_name:firm,gstin:gstin,phone:phone})
 });
@@ -888,6 +862,7 @@ const email=document.getElementById('loginEmail').value.trim();
 const password=document.getElementById('loginPassword').value.trim();
 const err=document.getElementById('loginError');
 const ok=document.getElementById('loginSuccess');
+
 err.style.display='none';ok.style.display='none';
 
 if(!email||!password){err.textContent='Please enter email and password.';err.style.display='block';return}
@@ -904,26 +879,35 @@ ok.textContent='Welcome back, '+d.name+'!';
 ok.style.display='block';
 setTimeout(()=>{closeModal('loginModal');checkLogin();},1000);
 }else{
-err.textContent=d.detail||'Invalid email or password';err.style.display='block';
+err.textContent=d.detail||'Login failed';err.style.display='block';
 }
 }catch(e){err.textContent='Error: '+e.message;err.style.display='block'}
 }
 
 async function logoutUser(){
-try{await fetch('/api/auth/logout',{method:'POST'})}catch(e){}
-document.getElementById('authNav').style.display='flex';
-document.getElementById('userNav').style.display='none';
+try{
+await fetch('/api/auth/logout',{method:'POST'});
 checkLogin();
+document.getElementById('dashboardSection').classList.remove('show');
+document.querySelector('.hero').style.display='';
+document.querySelector('.types-section').style.display='';
+window.scrollTo(0,0);
+}catch(e){console.error(e)}
 }
 
 function showDashboard(){
 fetch('/api/auth/me').then(r=>r.json()).then(d=>{
-if(d.success&&d.user){window.location.href='/dashboard.html'}
-else{openModal('loginModal')}
-}).catch(()=>{openModal('loginModal')});
+if(d.success&&d.user){
+if(d.user.is_admin){window.location.href='/admin'}
+else{window.location.href='/dashboard'}
+}else{
+window.location.href='/'
+}
+}).catch(()=>{window.location.href='/dashboard'})
 }
 
-checkLogin();
+// Check login on page load
+document.addEventListener('DOMContentLoaded',function(){checkLogin()});
 </script>
 </body>
 </html>

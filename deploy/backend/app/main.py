@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
-from fastapi.responses import FileResponse, JSONResponse, Response
+from dotenv import load_dotenv
+load_dotenv()
+from fastapi.responses import FileResponse
 from pathlib import Path
 
 from app.routes import reconcile
@@ -41,64 +43,13 @@ app.include_router(admin_router)
 @app.on_event("startup")
 async def startup():
     from app.services.auth_service import create_admin_user, get_pool
-    try:
-        await get_pool()
-        await create_admin_user()
-    except Exception as e:
-        logging.getLogger(__name__).warning(f"Startup delayed: {e}")
+    await get_pool()
+    await create_admin_user()
 
-@app.get("/health")
-async def health():
-    return JSONResponse({"status": "ok"})
 
 @app.get("/")
 async def root():
-    return {
-        "product": "ReconcileAI",
-        "version": "3.0.0",
-        "tagline": "Prepare. Reconcile. Validate. File.",
-        "status": "running",
-        "modules": {
-            "reconciliation": {
-                "brs": "/api/reconcile/files",
-                "gst_recon": "/api/reconcile/gst",
-            },
-            "gst_returns": {
-                "gstr1": "/api/gst/gstr1/prepare",
-                "gstr2b": "/api/gst/gstr2b/reconcile",
-                "gstr3b": "/api/gst/gstr3b/prepare",
-            },
-            "gst_filing": {
-                "auth_init": "/api/gst/auth/init",
-                "auth_verify": "/api/gst/auth/verify",
-                "file_gstr1": "/api/gst/file/gstr1",
-                "file_gstr3b": "/api/gst/file/gstr3b",
-                "check_status": "/api/gst/filing/status/{gstin}/{arn}",
-                "download_2a": "/api/gst/download/2a/{gstin}/{period}",
-                "download_2b": "/api/gst/download/2b/{gstin}/{period}",
-                "revoke": "/api/gst/revoke/{gstin}",
-            },
-            "management": {
-                "clients": "/api/gst/clients",
-                "dashboard": "/api/gst/dashboard",
-                "audit_trail": "/api/gst/audit-trail",
-                "types": "/api/types",
-            },
-            "payment": {
-                "submit": "/api/payment/submit",
-                "status": "/api/payment/status/{session_id}",
-                "admin": "/api/admin/payments",
-            },
-            "other": {
-                "single_match": "/api/reconcile/single",
-                "batch_match": "/api/reconcile/batch",
-                "typed_match": "/api/reconcile/{type}",
-                "gst_classify": "/api/gst/classify",
-                "docs": "/docs",
-            },
-        },
-    }
-
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "index.html"))
 
 @app.get("/admin")
 async def serve_admin():
@@ -107,19 +58,6 @@ async def serve_admin():
 @app.get("/dashboard")
 async def serve_dashboard():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
-
-@app.get("/favicon.ico")
-async def favicon():
-    return Response(content=b"", media_type="image/x-icon", status_code=200)
-
-@app.get("/robots.txt")
-async def robots():
-    txt = "User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\n"
-    return Response(content=txt, media_type="text/plain", status_code=200)
-
-@app.get("/admin.html")
-async def admin_html():
-    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
 
 @app.get("/api/types")
 async def list_types():

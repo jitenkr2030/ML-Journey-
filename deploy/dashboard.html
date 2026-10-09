@@ -1,22 +1,414 @@
-<!DOCTYPE html><html><head><title>Dashboard - ReconcileAI</title>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — ReconcileAI</title>
 <style>
-body{font-family:'Inter',sans-serif;background:#080810;color:#eeeef6;margin:0;padding:24px}
-h1{font-size:28px;font-weight:800}
-.card{background:#12122a;border:1px solid #2a2b4a;border-radius:16px;padding:24px;margin:16px 0}
-.btn{padding:10px 20px;background:#7c6cf0;color:#fff;border:none;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block}
-</style></head><body>
-<h1>ReconcileAI Dashboard</h1>
-<p style="color:#9898b0">Welcome back. Your reconciliation history and compliance status.</p>
-<div class="card"><h3>Quick Actions</h3>
-<a href="/" class="btn" style="margin-right:8px">New Reconciliation</a>
-<a href="/admin.html" class="btn" style="background:#00d4aa;color:#000">Admin Panel</a>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0b;--surface:#141416;--border:#232326;--text:#f0f0f2;--text2:#a0a0a8;--text3:#606068;--accent:#4d8eff;--accent2:#22c55e;--accent3:#f59e0b;--danger:#ef4444;--radius:10px;--radius-lg:16px;--font:'Inter',system-ui,sans-serif;--font-mono:'JetBrains Mono',monospace}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,11,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+nav .container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px}
+.logo{font-size:20px;font-weight:700;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{color:var(--text2);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.btn-back{background:var(--surface);color:var(--text)!important;padding:8px 20px;border-radius:8px;border:1px solid var(--border);font-size:13px;font-weight:600}
+.btn-back:hover{border-color:var(--accent);color:var(--accent)!important}
+.btn-logout{background:var(--danger);color:#fff!important;padding:8px 20px;border-radius:8px;font-size:13px;font-weight:600;border:none;cursor:pointer}
+.btn-logout:hover{background:#dc2626}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.main{padding:100px 0 60px}
+.page-header{margin-bottom:32px}
+.page-header h1{font-size:32px;margin-bottom:4px}
+.page-header p{color:var(--text2);font-size:14px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
+.stat-card .num{font-size:32px;font-weight:700;font-family:var(--font-mono)}
+.stat-card .label{font-size:12px;color:var(--text3);margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.stat-card .sub{font-size:11px;color:var(--text3);margin-top:4px}
+.stat-card.blue .num{color:#3b82f6}
+.stat-card.green .num{color:#22c55e}
+.stat-card.orange .num{color:#f59e0b}
+.stat-card.purple .num{color:#a855f7}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px}
+.card h3{font-size:16px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card h3 .icon{font-size:18px}
+.bar-item{margin-bottom:16px}
+.bar-label{display:flex;justify-content:space-between;font-size:13px;color:var(--text2);margin-bottom:6px}
+.bar-track{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;transition:width .5s ease}
+.bar-fill.blue{background:var(--accent)}
+.bar-fill.green{background:var(--accent2)}
+.bar-fill.orange{background:var(--accent3)}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:12px;color:var(--text3);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.form-group input{width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:14px;outline:none;transition:border-color .2s}
+.form-group input:focus{border-color:var(--accent)}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s}
+.btn-primary:hover{background:#6ba0ff}
+.btn-danger{background:var(--danger);color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-danger:hover{background:#dc2626}
+.msg{font-size:12px;margin-top:8px;display:none}
+.msg.success{color:#22c55e}
+.msg.error{color:#ef4444}
+table{width:100%;border-collapse:collapse}
+table th{text-align:left;padding:10px 12px;font-size:11px;color:var(--text3);border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:.5px}
+table td{padding:10px 12px;font-size:13px;color:var(--text2);border-bottom:1px solid var(--border)}
+table tr:hover td{background:rgba(255,255,255,.02)}
+.table-wrap{overflow-x:auto;max-height:400px;overflow-y:auto}
+.status-badge{padding:4px 10px;border-radius:6px;font-size:11px;font-weight:600}
+.status-badge.blue{background:rgba(59,130,246,.15);color:#3b82f6}
+.status-badge.green{background:rgba(34,197,94,.15);color:#22c55e}
+.status-badge.orange{background:rgba(245,158,11,.15);color:#f59e0b}
+.login-prompt{text-align:center;padding:120px 24px}
+.login-prompt h2{font-size:28px;margin-bottom:12px}
+.login-prompt p{color:var(--text2);margin-bottom:24px}
+.tabs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:10px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:13px;font-weight:500;color:var(--text2);cursor:pointer;transition:all .2s}
+.tab:hover{border-color:var(--accent);color:var(--text)}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+@media(max-width:768px){
+.stats-grid{grid-template-columns:repeat(2,1fr)}
+.two-col{grid-template-columns:1fr}
+.page-header h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container">
+<a href="/" class="logo">Reconcile<span>AI</span></a>
+<div class="nav-links">
+<a href="/" class="btn-back">Back to App</a>
+<span id="userName" style="color:var(--text2);font-size:13px"></span>
+<button class="btn-logout" onclick="logout()">Logout</button>
 </div>
-<div class="card"><h3>History</h3><p style="color:#585870">Your reconciliation history will appear here after your first run.</p></div>
+</div>
+</nav>
+
+<!-- NOT LOGGED IN -->
+<div class="login-prompt" id="loginPrompt" style="display:none">
+<h2>Please Login</h2>
+<p>You need to login to access your dashboard.</p>
+<button class="btn-primary" onclick="window.location.href='/'">Go to Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div class="main" id="dashboardContent" style="display:none">
+<div class="container">
+
+<div class="page-header">
+<h1>Dashboard</h1>
+<p id="welcomeText">Welcome back!</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-grid">
+<div class="stat-card blue">
+<div class="num" id="statBrs">0</div>
+<div class="label">Bank Reconciliation</div>
+<div class="sub" id="statBrsSub">2 free remaining</div>
+</div>
+<div class="stat-card green">
+<div class="num" id="statGst">0</div>
+<div class="label">GST Reconciliation</div>
+<div class="sub" id="statGstSub">1 free remaining</div>
+</div>
+<div class="stat-card orange">
+<div class="num" id="statBook">0</div>
+<div class="label">Bookkeeping</div>
+<div class="sub" id="statBookSub">1 free remaining</div>
+</div>
+<div class="stat-card purple">
+<div class="num" id="statTotal">0</div>
+<div class="label">Total Reconciliations</div>
+<div class="sub" id="statPaid">0 paid</div>
+</div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+<div class="tab active" onclick="switchTab('usage',this)">📊 Usage</div>
+<div class="tab" onclick="switchTab('activity',this)">📋 Activity</div>
+<div class="tab" onclick="switchTab('profile',this)">👤 Profile</div>
+<div class="tab" onclick="switchTab('security',this)">🔒 Security</div>
+</div>
+
+<!-- USAGE TAB -->
+<div id="tabUsage">
+<div class="two-col">
+<div class="card">
+<h3><span class="icon">📊</span> Free Tier Usage</h3>
+<div class="bar-item">
+<div class="bar-label"><span>Bank Reconciliation</span><span id="barBrsText">0 / 2</span></div>
+<div class="bar-track"><div class="bar-fill blue" id="barBrs" style="width:0%"></div></div>
+</div>
+<div class="bar-item">
+<div class="bar-label"><span>GST Reconciliation</span><span id="barGstText">0 / 1</span></div>
+<div class="bar-track"><div class="bar-fill green" id="barGst" style="width:0%"></div></div>
+</div>
+<div class="bar-item">
+<div class="bar-label"><span>Bookkeeping</span><span id="barBookText">0 / 1</span></div>
+<div class="bar-track"><div class="bar-fill orange" id="barBook" style="width:0%"></div></div>
+</div>
+</div>
+<div class="card">
+<h3><span class="icon">💰</span> Pricing</h3>
+<table>
+<tr><td>Bank Reconciliation</td><td style="text-align:right;font-weight:600">₹499</td></tr>
+<tr><td>GST Reconciliation</td><td style="text-align:right;font-weight:600">₹499</td></tr>
+<tr><td>GSTR-1 / 2B / 3B</td><td style="text-align:right;font-weight:600">₹499 each</td></tr>
+<tr><td>Complete Bookkeeping</td><td style="text-align:right;font-weight:600">₹2,999</td></tr>
+<tr><td>Tally Push (add-on)</td><td style="text-align:right;font-weight:600">+₹300</td></tr>
+</table>
+<p style="font-size:12px;color:var(--text3);margin-top:12px">Free tier: 2 BRS + 1 GST + 1 Bookkeeping per month</p>
+</div>
+</div>
+</div>
+
+<!-- ACTIVITY TAB -->
+<div id="tabActivity" style="display:none">
+<div class="card">
+<h3><span class="icon">📋</span> Recent Activity</h3>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Action</th><th>Service</th><th>Details</th><th>Date</th></tr>
+</thead>
+<tbody id="activityBody">
+<tr><td colspan="4" style="text-align:center;color:var(--text3)">No activity yet</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- PROFILE TAB -->
+<div id="tabProfile" style="display:none">
+<div class="two-col">
+<div class="card">
+<h3><span class="icon">👤</span> Profile Settings</h3>
+<div class="form-group">
+<label>Full Name</label>
+<input id="profName" type="text" placeholder="Your name">
+</div>
+<div class="form-group">
+<label>Firm Name</label>
+<input id="profFirm" type="text" placeholder="Your firm name">
+</div>
+<div class="form-group">
+<label>GSTIN</label>
+<input id="profGstin" type="text" placeholder="Your GSTIN">
+</div>
+<div class="form-group">
+<label>Phone</label>
+<input id="profPhone" type="text" placeholder="Your phone number">
+</div>
+<div class="form-group">
+<label>Email</label>
+<input id="profEmail" type="email" disabled style="opacity:.5">
+</div>
+<button class="btn-primary" onclick="saveProfile()">Save Profile</button>
+<div class="msg success" id="profileMsg"></div>
+</div>
+<div class="card">
+<h3><span class="icon">📊</span> Account Info</h3>
+<table>
+<tr><td>Member Since</td><td id="infoSince" style="text-align:right">-</td></tr>
+<tr><td>Last Login</td><td id="infoLastLogin" style="text-align:right">-</td></tr>
+<tr><td>Total Reconciliations</td><td id="infoTotal" style="text-align:right">0</td></tr>
+<tr><td>Total Activities</td><td id="infoActivities" style="text-align:right">0</td></tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- SECURITY TAB -->
+<div id="tabSecurity" style="display:none">
+<div class="two-col">
+<div class="card">
+<h3><span class="icon">🔒</span> Change Password</h3>
+<div class="form-group">
+<label>Old Password</label>
+<input id="oldPass" type="password" placeholder="Current password">
+</div>
+<div class="form-group">
+<label>New Password</label>
+<input id="newPass" type="password" placeholder="New password (6+ chars)">
+</div>
+<button class="btn-primary" onclick="changePassword()">Change Password</button>
+<div class="msg success" id="passMsg"></div>
+</div>
+<div class="card">
+<h3><span class="icon">🛡️</span> Security Tips</h3>
+<p style="font-size:13px;color:var(--text2);line-height:2">
+• Use a strong password (6+ characters)<br>
+• Never share your login credentials<br>
+• Change your password regularly<br>
+• Your data is stored securely with encryption<br>
+• Session expires after 30 days of inactivity
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
 <script>
-fetch('/api/auth/me').then(r=>r.json()).then(d=>{
-if(!d.success){window.location.href='/'}
-else{document.querySelector('p').textContent='Welcome back, '+d.user.name+'! Your reconciliation history and compliance status.'}
-}).catch(()=>{window.location.href='/'});
+// ==================== TAB SWITCHING ====================
+function switchTab(tab, el){
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+el.classList.add('active');
+document.getElementById('tabUsage').style.display=tab==='usage'?'':'none';
+document.getElementById('tabActivity').style.display=tab==='activity'?'':'none';
+document.getElementById('tabProfile').style.display=tab==='profile'?'':'none';
+document.getElementById('tabSecurity').style.display=tab==='security'?'':'none';
+}
+
+// ==================== AUTH ====================
+async function checkLogin(){
+try{
+const r=await fetch('/api/auth/me');
+if(r.ok){
+const d=await r.json();
+if(d.success&&d.user){
+return d.user;
+}
+}
+}catch(e){}
+return null;
+}
+
+async function loadDashboard(){
+const user=await checkLogin();
+if(!user){
+document.getElementById('loginPrompt').style.display='block';
+document.getElementById('dashboardContent').style.display='none';
+return;
+}
+
+if(user.is_admin){window.location.href='/admin';return}
+document.getElementById('loginPrompt').style.display='none';
+document.getElementById('dashboardContent').style.display='block';
+document.getElementById('userName').textContent=user.name||'User';
+document.getElementById('welcomeText').textContent='Welcome back, '+(user.name||'User')+'!';
+
+// Load stats
+try{
+const r=await fetch('/api/dashboard/stats');
+const d=await r.json();
+if(d.success&&d.stats){
+const s=d.stats;
+const u=s.usage||{};
+const ft=s.free_tier||{};
+
+document.getElementById('statBrs').textContent=u.free_brs_used||0;
+document.getElementById('statGst').textContent=u.free_gst_used||0;
+document.getElementById('statBook').textContent=u.free_bookkeeping_used||0;
+document.getElementById('statTotal').textContent=u.total_reconciliations||0;
+document.getElementById('statPaid').textContent=(u.total_paid||0)+' paid';
+
+document.getElementById('statBrsSub').textContent=(ft.brs_remaining||0)+' free remaining';
+document.getElementById('statGstSub').textContent=(ft.gst_remaining||0)+' free remaining';
+document.getElementById('statBookSub').textContent=(ft.bookkeeping_remaining||0)+' free remaining';
+
+const brsPct=Math.min(100,((u.free_brs_used||0)/2)*100);
+document.getElementById('barBrs').style.width=brsPct+'%';
+document.getElementById('barBrsText').textContent=(u.free_brs_used||0)+' / 2';
+
+const gstPct=Math.min(100,((u.free_gst_used||0)/1)*100);
+document.getElementById('barGst').style.width=gstPct+'%';
+document.getElementById('barGstText').textContent=(u.free_gst_used||0)+' / 1';
+
+const bookPct=Math.min(100,((u.free_bookkeeping_used||0)/1)*100);
+document.getElementById('barBook').style.width=bookPct+'%';
+document.getElementById('barBookText').textContent=(u.free_bookkeeping_used||0)+' / 1';
+
+document.getElementById('infoSince').textContent=(s.member_since||'-').substring(0,10);
+document.getElementById('infoLastLogin').textContent=(s.last_login||'-').substring(0,16);
+document.getElementById('infoTotal').textContent=u.total_reconciliations||0;
+document.getElementById('infoActivities').textContent=u.activities||0;
+}
+}catch(e){console.error(e)}
+
+// Load profile
+document.getElementById('profName').value=user.name||'';
+document.getElementById('profFirm').value=user.firm_name||'';
+document.getElementById('profGstin').value=user.gstin||'';
+document.getElementById('profPhone').value=user.phone||'';
+document.getElementById('profEmail').value=user.email||'';
+
+// Load activity
+try{
+const r=await fetch('/api/auth/activity');
+const d=await r.json();
+if(d.success&&d.activities&&d.activities.length>0){
+document.getElementById('activityBody').innerHTML=d.activities.map(a=>{
+const dt=a.created_at?a.created_at.substring(0,16):'';
+const badge=a.action==='login'?'blue':a.action==='register'?'green':'orange';
+return '<tr><td><span class="status-badge '+badge+'">'+a.action+'</span></td><td>'+(a.service_type||'-')+'</td><td>'+(a.details||'-')+'</td><td>'+dt+'</td></tr>';
+}).join('');
+}
+}catch(e){console.error(e)}
+}
+
+async function saveProfile(){
+const name=document.getElementById('profName').value.trim();
+const firm=document.getElementById('profFirm').value.trim();
+const gstin=document.getElementById('profGstin').value.trim();
+const phone=document.getElementById('profPhone').value.trim();
+const msg=document.getElementById('profileMsg');
+
+try{
+const r=await fetch('/api/auth/profile',{
+method:'PUT',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({name:name,firm_name:firm,gstin:gstin,phone:phone})
+});
+const d=await r.json();
+if(d.success){msg.textContent='Profile updated successfully!';msg.className='msg success';msg.style.display='block'}
+else{msg.textContent='Update failed';msg.className='msg error';msg.style.display='block'}
+}catch(e){msg.textContent='Error: '+e.message;msg.className='msg error';msg.style.display='block'}
+setTimeout(()=>{msg.style.display='none'},3000);
+}
+
+async function changePassword(){
+const oldPass=document.getElementById('oldPass').value;
+const newPass=document.getElementById('newPass').value;
+const msg=document.getElementById('passMsg');
+
+if(!oldPass||!newPass){msg.textContent='Please fill both fields.';msg.className='msg error';msg.style.display='block';return}
+if(newPass.length<6){msg.textContent='New password must be 6+ characters.';msg.className='msg error';msg.style.display='block';return}
+
+try{
+const r=await fetch('/api/auth/change-password',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({old_password:oldPass,new_password:newPass})
+});
+const d=await r.json();
+if(d.success){msg.textContent='Password changed successfully!';msg.className='msg success';msg.style.display='block';document.getElementById('oldPass').value='';document.getElementById('newPass').value=''}
+else{msg.textContent=d.detail||'Change failed';msg.className='msg error';msg.style.display='block'}
+}catch(e){msg.textContent='Error';msg.className='msg error';msg.style.display='block'}
+setTimeout(()=>{msg.style.display='none'},3000);
+}
+
+async function logout(){
+try{
+await fetch('/api/auth/logout',{method:'POST'});
+window.location.href='/';
+}catch(e){window.location.href='/'}
+}
+
+// Load on page load
+document.addEventListener('DOMContentLoaded',loadDashboard);
 </script>
-</body></html>
+
+</body>
+</html>
