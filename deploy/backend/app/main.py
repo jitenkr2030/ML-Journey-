@@ -41,9 +41,15 @@ app.include_router(admin_router)
 @app.on_event("startup")
 async def startup():
     from app.services.auth_service import create_admin_user, get_pool
-    await get_pool()
-    await create_admin_user()
+    try:
+        await get_pool()
+        await create_admin_user()
+    except Exception as e:
+        logging.getLogger(__name__).warning(f"Startup delayed: {e}")
 
+@app.get("/health")
+async def health():
+    return JSONResponse({"status": "ok"})
 
 @app.get("/")
 async def root():
