@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import logging
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from pathlib import Path
 
 from app.routes import reconcile
@@ -96,11 +96,11 @@ async def root():
 
 @app.get("/admin")
 async def serve_admin():
-    return FileResponse("/root/ml-projects/stock-prediction/admin.html")
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
 
 @app.get("/dashboard")
 async def serve_dashboard():
-    return FileResponse("/root/ml-projects/stock-prediction/dashboard.html")
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
 
 @app.get("/api/types")
 async def list_types():
