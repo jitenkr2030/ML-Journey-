@@ -102,6 +102,19 @@ async def serve_admin():
 async def serve_dashboard():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
 
+@app.get("/favicon.ico")
+async def favicon():
+    return Response(content=b"", media_type="image/x-icon", status_code=200)
+
+@app.get("/robots.txt")
+async def robots():
+    txt = "User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\n"
+    return Response(content=txt, media_type="text/plain", status_code=200)
+
+@app.get("/admin.html")
+async def admin_html():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
+
 @app.get("/api/types")
 async def list_types():
     return {
