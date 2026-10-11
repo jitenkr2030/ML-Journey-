@@ -274,6 +274,7 @@ td,th{padding:8px 10px}
 <button class="type-tab active" data-type="brs" onclick="selectType('brs')"><span class="icon">🏦</span> Bank Reconciliation <span class="price">₹499</span></button>
 <button class="type-tab" data-type="gst" onclick="selectType('gst')"><span class="icon">📋</span> GST Reconciliation <span class="price">₹499</span></button>
 <button class="type-tab" data-type="bookkeeping" onclick="selectType('bookkeeping')"><span class="icon">📚</span> Complete Bookkeeping <span class="price">₹2999</span></button>
+<button class="type-tab" data-type="upi" onclick="selectType('upi')"><span class="icon">📱</span> UPI Reconciliation <span class="price">₹499</span></button>
 </div>
 
 <div class="category-label">GST Returns</div>
@@ -408,7 +409,8 @@ gst:{name:'GST Reconciliation',endpoint:'/api/reconcile/gst',price:199,desc:'Mat
 gstr1:{name:'GSTR-1 Preparation',endpoint:'/api/gst/gstr1/prepare',price:199,desc:'Auto-prepare GSTR-1 from sales data. Classifies B2B, B2CL, B2CS, exports, notes.',files:[{key:'sales_file',label:'Sales Register',desc:'From Tally/accounting software',icon:'📤'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true},
 gstr2b:{name:'GSTR-2B Reconciliation',endpoint:'/api/gst/gstr2b/reconcile',price:199,desc:'Reconcile GSTR-2B with purchase register. Identify ITC eligible, blocked, and mismatched.',files:[{key:'books_file',label:'Purchase Register',desc:'From accounting software',icon:'📄'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📥'}],extra:[{key:'client_gstin',label:'GSTIN (optional)',ph:'07AAACR1234F1Z5'}]},
 gstr3b:{name:'GSTR-3B Preparation',endpoint:'/api/gst/gstr3b/prepare',price:199,desc:'Auto-compute GSTR-3B from sales, purchases, and GSTR-2B. Know exact tax liability.',files:[{key:'sales_file',label:'Sales Register',desc:'From accounting software',icon:'📤'},{key:'purchase_file',label:'Purchase Register',desc:'From accounting software',icon:'📥'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📋'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true},
-bookkeeping:{name:'Complete Bookkeeping',endpoint:'/api/bookkeeping/upload',price:2999,desc:'Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.',files:[{key:'bank_statement',label:'Bank Statement',desc:'SBI/HDFC/ICICI CSV',icon:'🏦'},{key:'daybook',label:'Tally Daybook',desc:'Tally export CSV',icon:'📖'}],extra:[],isBookkeeping:true}
+bookkeeping:{name:'Complete Bookkeeping',endpoint:'/api/bookkeeping/upload',price:2999,desc:'Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.',files:[{key:'bank_statement',label:'Bank Statement',desc:'SBI/HDFC/ICICI CSV',icon:'🏦'},{key:'daybook',label:'Tally Daybook',desc:'Tally export CSV',icon:'📖'}],extra:[],isBookkeeping:true},
+upi:{name:'UPI Reconciliation',endpoint:'/api/reconcile/upi',price:499,desc:'Match UPI transactions between books and bank. Auto-detects UTR, UPI app, failed and reversed transactions.',files:[{key:'book_file',label:'UPI Book / Register',desc:'Your UPI transaction records',icon:'\U0001f4cb'},{key:'bank_file',label:'Bank Statement',desc:'Bank statement with UPI entries',icon:'\U0001f3e6'}],extra:[]}
 };
 
 function selectType(t){
@@ -511,6 +513,7 @@ else if(currentType==='gstr1')showGSTR1(d,ca,ta,tb);
 else if(currentType==='gstr2b')showGSTR2B(d,ca,ta,tb);
 else if(currentType==='gstr3b')showGSTR3B(d,ca,ta,tb);
 else if(currentType==='bookkeeping')showBookkeepingResults(d);
+else if(currentType==='upi')showUPI(d,ca,ta,tb);
 }
 
 
@@ -548,6 +551,18 @@ tabs.innerHTML=`<div class="table-tab active" onclick="fg2('all',this)">All (${w
 renderG2(window._g2a);}
 function fg2(f,el){document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');const a=window._g2a||[];renderG2(f==='all'?a:f==='m'?a.filter(r=>r.status==='Matched'):f==='m2'?a.filter(r=>r.status==='Missing in GSTR-2B'):a.filter(r=>r.status==='Missing in Books'))}
 function renderG2(rows){let h=`<table><thead><tr><th>Invoice</th><th>GSTIN</th><th>Vendor</th><th>Taxable</th><th>ITC</th><th>Status</th><th>Reason</th></tr></thead><tbody>`;rows.forEach(r=>{const sc=r.status==='Matched'?'status-matched':r.status.includes('Missing')?'status-missing':'status-mismatch';h+=`<tr><td class="amount">${r.invoice_number||'-'}</td><td style="font-family:var(--font-mono);font-size:11px">${r.gstin||'-'}</td><td>${tr(r.vendor_name,30)}</td><td class="amount">₹${fm(r.book_taxable||r.taxable_value||0)}</td><td class="amount">₹${fm(r.itc_amount||0)}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td style="font-size:11px;color:var(--text3)">${tr(r.reason||r.differences||'-',50)}</td></tr>`});h+='</tbody></table>';document.getElementById('tableContent').innerHTML=h}
+
+
+function showUPI(d,cards,tabs,table){
+    const mt=d.matched_count||0,ut=d.unmatched_count||0,tt=d.total_transactions||0,mr=d.match_rate||0;
+    cards.innerHTML=`<div class="summary-card"><div class="label">Total Transactions</div><div class="value">${tt}</div></div><div class="summary-card"><div class="label">Matched</div><div class="value" style="color:var(--accent2)">${mt}</div></div><div class="summary-card"><div class="label">Unmatched</div><div class="value" style="color:var(--danger)">${ut}</div></div><div class="summary-card"><div class="label">Match Rate</div><div class="value" style="color:var(--accent)">${mr}%</div></div>`;
+    tabs.innerHTML=`<div class="table-tab active" onclick="fupi('all',this)">All (${tt})</div><div class="table-tab" onclick="fupi('m',this)">Matched (${mt})</div><div class="table-tab" onclick="fupi('u',this)">Unmatched (${ut})</div><div class="table-tab" onclick="fupi('f',this)">Failed/Reversed</div>`;
+    window._upiA=[...(d.matched||[]),...(d.unmatched||[])];
+    renderUPI(window._upiA,table);
+    if(d.report_path){const dl=document.createElement('div');dl.style.marginTop='12px';dl.innerHTML=`<a href="/api/upi/download/${encodeURIComponent(d.report_path.split('/').pop().replace('upi_report_','').replace('.csv',''))}" class="btn-primary" style="display:inline-flex;padding:10px 20px;background:var(--accent);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;font-size:13px">Download CSV Report \u2193</a>`;table.parentNode.insertBefore(dl,table.nextSibling);}
+}
+function fupi(f,el){document.querySelectorAll('.table-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');const a=window._upiA||[];renderUPI(f==='all'?a:f==='m'?a.filter(r=>r.status==='Matched'||r.status==='Partial Match'):f==='u'?a.filter(r=>r.status==='Unmatched'||r.status==='Pending Settlement'):a.filter(r=>r.status==='UPI Failed'||r.status==='UPI Reversed'),document.getElementById('tableContent'))}
+function renderUPI(rows,tb){let h=`<table><thead><tr><th>Book Description</th><th>Bank Description</th><th>Book Amt</th><th>Bank Amt</th><th>UTR</th><th>UPI App</th><th>Status</th><th>Confidence</th><th>Reason</th></tr></thead><tbody>`;rows.forEach(r=>{const sc=r.status==='Matched'?'status-matched':r.status==='Partial Match'?'status-matched':r.status==='UPI Failed'||r.status==='UPI Reversed'?'status-skipped':'status-unmatched';const cc=r.confidence>=70?'conf-high':r.confidence>=40?'conf-med':'conf-low';h+=`<tr><td title="${esc(r.book_description)}">${tr(r.book_description,35)}</td><td title="${esc(r.bank_description)}">${tr(r.bank_description,35)}</td><td class="amount">₹${fm(r.book_amount)}</td><td class="amount">₹${fm(r.bank_amount)}</td><td style="font-family:var(--font-mono);font-size:11px">${r.upi_utr||'-'}</td><td>${r.upi_app||'-'}</td><td><span class="status-badge ${sc}">${r.status}</span></td><td class="confidence ${cc}">${r.confidence||0}%</td><td style="font-size:11px;color:var(--text3)">${tr(r.reason,50)}</td></tr>`});h+='</tbody></table>';tb.innerHTML=h}
 
 function showGSTR3B(d,cards,tabs,table){
 const g=d.gstr3b,t=g.tax_payable,t3=g.table_3_1,t4=g.table_4;
