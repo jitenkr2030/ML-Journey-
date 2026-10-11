@@ -227,6 +227,19 @@ td,th{padding:8px 10px}
 .auth-modal .close-btn{float:right;cursor:pointer;font-size:22px;color:var(--text2);line-height:1}
 .auth-modal .close-btn:hover{color:var(--text)}
 
+
+/* Toast Notifications */
+.toast-container{position:fixed;top:80px;right:20px;z-index:9999;display:flex;flex-direction:column;gap:10px;pointer-events:none}
+.toast{padding:14px 24px;border-radius:10px;font-size:13px;font-weight:500;color:#fff;box-shadow:0 8px 32px rgba(0,0,0,.25);transform:translateX(120%);transition:all .35s cubic-bezier(.4,0,.2,1);pointer-events:auto;display:flex;align-items:center;gap:10px;max-width:380px;backdrop-filter:blur(12px)}
+.toast.show{transform:translateX(0)}
+.toast.hide{transform:translateX(120%);opacity:0}
+.toast-success{background:rgba(34,197,94,.92)}
+.toast-error{background:rgba(239,68,68,.92)}
+.toast-warning{background:rgba(245,158,11,.92)}
+.toast-info{background:rgba(59,130,246,.92)}
+.toast-icon{font-size:18px;flex-shrink:0}
+.toast-close{margin-left:auto;cursor:pointer;opacity:.7;font-size:16px;background:none;border:none;color:#fff;padding:0 4px}
+.toast-close:hover{opacity:1}
 </style>
 </head>
 <body>
@@ -447,10 +460,10 @@ const fd=new FormData();c.files.forEach((f,i)=>{fd.append(f.key,uploadedFiles[i+
 if(c.extra){c.extra.forEach(f=>{const el=document.getElementById(`extra_${f.key}`);if(el)fd.append(f.key,el.value||'')})}
 try{
 const r=await fetch(c.endpoint,{method:'POST',body:fd});const d=await r.json();
-if(d.error){alert(d.error);ld.classList.remove('show');return}
+if(d.error){toastError(d.error);ld.classList.remove('show');return}
 currentResults=d;lt.textContent='Generating report...';
 setTimeout(()=>{ld.classList.remove('show');showResults(d)},500);
-}catch(e){ld.classList.remove('show');alert('Error: '+e.message)}
+}catch(e){ld.classList.remove('show');toastError('Error: '+e.message)}
 }
 
 
@@ -466,14 +479,14 @@ fd.append('bank_statement',uploadedFiles[1]);
 fd.append('daybook',uploadedFiles[2]);
 try{
 const r=await fetch('/api/bookkeeping/upload',{method:'POST',body:fd});const d=await r.json();
-if(d.error){alert(d.error);ld.classList.remove('show');return}
+if(d.error){toastError(d.error);ld.classList.remove('show');return}
 bookkeepingJobId=d.job_id;
 lt.textContent='Running 21 pipelines...';
 const r2=await fetch('/api/bookkeeping/run/'+bookkeepingJobId,{method:'POST'});const d2=await r2.json();
 currentResults=d2;
 ld.classList.remove('show');
 showBookkeepingResults(d2);
-}catch(e){ld.classList.remove('show');alert('Error: '+e.message)}
+}catch(e){ld.classList.remove('show');toastError('Error: '+e.message)}
 }
 
 function showBookkeepingResults(d){
@@ -679,7 +692,7 @@ if(curr.value.length===1&&next){document.getElementById(next).focus()}
 async function sendOTP(){
 const gstin=document.getElementById('filing_gstin').value;
 const username=document.getElementById('filing_username').value;
-if(!username){alert('Enter your GST portal username');return}
+if(!username){toastWarning('Enter your GST portal username');return}
 showLoading('Sending OTP...');
 try{
 const fd=new FormData();fd.append('gstin',gstin);fd.append('username',username);
@@ -688,8 +701,8 @@ hideLoading();
 if(d.status==='OTP_SENT'||d.status_cd==='1'){
 filingState.step=2;filingState.txnId=d.txn_id||'';
 showFilingModal();
-}else{alert(d.message||'Failed to send OTP')}
-}catch(e){hideLoading();alert('Error: '+e.message)}
+}else{toastError(d.message||'Failed to send OTP')}
+}catch(e){hideLoading();toastError('Error: '+e.message)}
 }
 
 async function verifyOTP(){
@@ -703,7 +716,7 @@ hideLoading();
 if(d.status==='SUCCESS'||d.status_cd==='1'){
 filingState.step=3;showFilingModal();
 }else{const al=document.getElementById('otpAlert');al.className='alert alert-error show';al.textContent=d.message||'Verification failed'}
-}catch(e){hideLoading();alert('Error: '+e.message)}
+}catch(e){hideLoading();toastError('Error: '+e.message)}
 }
 
 async function fileReturn(){
@@ -723,7 +736,7 @@ showFilingModal();
 document.getElementById('fileBtn').style.display='none';
 showAlert('Return filed successfully! ARN: '+filingState.arn,'success');
 }else{btn.disabled=false;btn.textContent='📤 File Return on GSTN';showAlert(d.message||'Filing failed','error')}
-}catch(e){hideLoading();btn.disabled=false;btn.textContent='📤 File Return on GSTN';alert('Error: '+e.message)}
+}catch(e){hideLoading();btn.disabled=false;btn.textContent='📤 File Return on GSTN';toastError('Error: '+e.message)}
 }
 
 function closeFiling(){document.getElementById('filingModal').classList.remove('show')}
@@ -923,6 +936,25 @@ window.location.href='/'
 
 // Check login on page load
 document.addEventListener('DOMContentLoaded',function(){checkLogin()});
+</script>
+
+<!-- Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+<script>
+function showToast(msg,type='info',duration=4000){
+    const container=document.getElementById('toastContainer');
+    const toast=document.createElement('div');
+    toast.className='toast toast-'+type;
+    const icons={success:'✅',error:'❌',warning:'⚠️',info:'ℹ️'};
+    toast.innerHTML=`<span class="toast-icon">${icons[type]||icons.info}</span><span>${msg}</span><button class="toast-close" onclick="this.parentElement.remove()">&times;</button>`;
+    container.appendChild(toast);
+    requestAnimationFrame(()=>{toast.classList.add('show')});
+    setTimeout(()=>{toast.classList.remove('show');toast.classList.add('hide');setTimeout(()=>toast.remove(),350)},duration);
+}
+function toastSuccess(msg,d){showToast(msg,'success',d)}
+function toastError(msg,d){showToast(msg,'error',d)}
+function toastWarning(msg,d){showToast(msg,'warning',d)}
+function toastInfo(msg,d){showToast(msg,'info',d)}
 </script>
 </body>
 </html>
