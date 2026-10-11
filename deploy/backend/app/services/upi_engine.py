@@ -7,6 +7,7 @@ from typing import List, Optional
 from difflib import SequenceMatcher
 import logging
 import re
+import threading
 
 from app.services.file_parser import SmartFileParser
 
@@ -74,8 +75,8 @@ def normalize_upi_narration(desc: str) -> str:
     d = desc.strip().upper()
     for noise in UPI_NOISE:
         d = d.replace(noise.upper(), " ")
-    d = re.sub(r'\b\d{10,}\b', '', d)  # Remove long numbers (UTR)
-    d = re.sub(r'[\w.]+@[\w]+', '', d)  # Remove UPI IDs
+    d = re.sub(r'\b\d{10,}\b', '', d)
+    d = re.sub(r'[\w.]+@[\w]+', '', d)
     d = re.sub(r'[^A-Z0-9\s]', ' ', d)
     d = re.sub(r'\s+', ' ', d).strip()
     return d
@@ -129,18 +130,31 @@ def is_upi_reversed(desc: str) -> bool:
 
 
 class UPIReconciliationEngine:
-    """UPI-specific reconciliation engine."""
+    """UPI-specific reconciliation engine with lazy model loading."""
 
     def __init__(self):
-        try:
-            self.model = joblib.load(MODEL_DIR / "upi_reconciliation_v3_model.pkl")
-            self.vectorizer = joblib.load(MODEL_DIR / "upi_reconciliation_v3_vectorizer.pkl")
-        except FileNotFoundError:
-            logger.warning("UPI v3 model not found, falling back to v2")
-            self.model = joblib.load(MODEL_DIR / "reconciliation_v2_model.pkl")
-            self.vectorizer = joblib.load(MODEL_DIR / "reconciliation_v2_vectorizer.pkl")
+        self.model = None
+        self.vectorizer = None
         self.parser = SmartFileParser()
-        logger.info("✅ UPI Reconciliation engine loaded")
+        self._lock = threading.Lock()
+        logger.info("✅ UPI Reconciliation engine initialized (model loads on first use)")
+
+    def _ensure_model(self):
+        """Lazy-load ML model on first use. Thread-safe."""
+        if self.model is not None and self.vectorizer is not None:
+            return
+        with self._lock:
+            if self.model is not None and self.vectorizer is not None:
+                return
+            try:
+                self.model = joblib.load(MODEL_DIR / "upi_reconciliation_v3_model.pkl")
+                self.vectorizer = joblib.load(MODEL_DIR / "upi_reconciliation_v3_vectorizer.pkl")
+                logger.info("✅ UPI v3 model loaded")
+            except FileNotFoundError:
+                logger.warning("UPI v3 model not found, falling back to v2")
+                self.model = joblib.load(MODEL_DIR / "reconciliation_v2_model.pkl")
+                self.vectorizer = joblib.load(MODEL_DIR / "reconciliation_v2_vectorizer.pkl")
+                logger.info("✅ UPI v2 model loaded")
 
     def _build_features(self, book_desc, bank_desc, book_amt, bank_amt,
                         book_ref, bank_ref, upi_id="", upi_type="", upi_app="") -> str:
@@ -150,6 +164,7 @@ class UPIReconciliationEngine:
         )
 
     def _predict(self, features_list: List[str]) -> List[tuple]:
+        self._ensure_model()
         vectors = self.vectorizer.transform(features_list)
         predictions = self.model.predict(vectors)
         probs = self.model.predict_proba(vectors)
@@ -246,10 +261,12 @@ class UPIReconciliationEngine:
             for be in bank_entries:
                 if be["idx"] in matched_bank_indices:
                     continue
+
                 # Exact UTR match = strong candidate
                 if b_utr and be["upi_utr"] and b_utr == be["upi_utr"]:
                     candidates.append((be, 1.0))
                     continue
+
                 # Amount match
                 if bamt != 0 and abs(bamt - be["amount"]) / max(abs(bamt), 1) <= 0.15:
                     candidates.append((be, 0.5))
@@ -296,7 +313,6 @@ class UPIReconciliationEngine:
             if best_result and best_score > 30 and best_bank_entry:
                 matched_bank_indices.add(best_bank_entry["idx"])
 
-                # Determine final status
                 if best_score > 75:
                     status = "Matched"
                 elif best_score > 50:
@@ -312,8 +328,8 @@ class UPIReconciliationEngine:
                     "status": status,
                     "confidence": round(best_score, 2),
                     "reason": self._explain_upi(bdesc, best_bank_entry["description"],
-                                                 bamt, best_bank_entry["amount"],
-                                                 b_utr, best_bank_entry["upi_utr"]),
+                                                bamt, best_bank_entry["amount"],
+                                                b_utr, best_bank_entry["upi_utr"]),
                     "upi_utr": b_utr or best_bank_entry["upi_utr"],
                     "upi_app": detect_upi_app(best_bank_entry["description"]),
                 })
@@ -369,7 +385,7 @@ class UPIReconciliationEngine:
                 reasons.append(f"UTR: {book_utr} vs {bank_utr}")
         if abs(book_amt - bank_amt) > 0.01:
             diff = abs(book_amt - bank_amt)
-            reasons.append(f"Amount diff: ₹{diff:,.2f}")
+            reasons.append(f"Amount diff: \u20b9{diff:,.2f}")
         app = detect_upi_app(bank_desc or book_desc)
         if app != "Unknown":
             reasons.append(f"App: {app}")

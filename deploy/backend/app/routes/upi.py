@@ -5,12 +5,23 @@ import os
 import csv
 import logging
 
-from app.services.upi_engine import UPIReconciliationEngine
+from app.services.upi_engine import (
+    UPIReconciliationEngine, extract_upi_utr,
+    upi_text_similarity, detect_upi_app
+)
 from app.services.auth_service import get_user_by_token
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
-upi_engine = UPIReconciliationEngine()
+
+# Lazy engine: created on first request, NOT at import time
+_upi_engine = None
+
+def _get_engine() -> UPIReconciliationEngine:
+    global _upi_engine
+    if _upi_engine is None:
+        _upi_engine = UPIReconciliationEngine()
+    return _upi_engine
 
 
 async def _check_auth(request: Request):
@@ -31,14 +42,13 @@ async def reconcile_upi(
 ):
     await _check_auth(request)
 
-    # Save temp files
     book_path = _save_temp(book_file)
     bank_path = _save_temp(bank_file)
 
     try:
-        result = upi_engine.reconcile_upi_files(book_path, bank_path)
+        engine = _get_engine()
+        result = engine.reconcile_upi_files(book_path, bank_path)
 
-        # Save CSV report
         report_path = _save_upi_csv_report(result)
         if report_path:
             result["report_path"] = report_path
@@ -62,12 +72,7 @@ async def upi_single_match(request: Request):
     book_ref = body.get("book_reference", "")
     bank_ref = body.get("bank_reference", "")
 
-    from app.services.upi_engine import (
-        UPIReconciliationEngine, extract_upi_utr,
-        upi_text_similarity, detect_upi_app
-    )
-
-    engine = UPIReconciliationEngine()
+    engine = _get_engine()
     features = engine._build_features(
         book_desc, bank_desc, book_amt, bank_amt,
         book_ref, bank_ref
