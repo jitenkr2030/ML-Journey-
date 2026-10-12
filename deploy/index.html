@@ -343,6 +343,7 @@ td,th{padding:8px 10px}
 </span>
 <span id="userNav" style="display:none;align-items:center;gap:12px">
 <span id="userName" style="color:var(--text2);font-size:13px"></span>
+<a href="#" onclick="openSettings()" title="Settings" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">⚙️</a>
 <a href="#" class="nav-cta" onclick="showDashboard()" style="background:var(--accent2)">Dashboard</a>
 <a href="#" class="nav-cta" onclick="logoutUser()" style="background:var(--danger,#ef4444)">Logout</a>
 </span>
@@ -529,7 +530,7 @@ document.getElementById('typeDescription').textContent=c.desc;
 const g=document.getElementById('uploadGrid');g.innerHTML='';uploadedFiles={};
 c.files.forEach((f,i)=>{const n=i+1;g.innerHTML+=`<div class="upload-box" id="upload${n}Box"><div class="upload-icon">${f.icon}</div><h3>${f.label}</h3><p>${f.desc}</p><div class="required">Required</div><div class="file-name" id="upload${n}Name"></div><input type="file" id="upload${n}" accept=".csv,.xlsx,.xls" onchange="handleFile(${n},this)"></div>`});
 const ef=document.getElementById('extraFields');
-if(c.extra){ef.innerHTML=c.extra.map(f=>`<div style="margin-top:16px"><label class="input-label">${f.label}</label><input class="input-field" id="extra_${f.key}" placeholder="${f.ph}"></div>`).join('')}else{ef.innerHTML=''}
+if(c.extra){ef.innerHTML=c.extra.map(f=>`<div style="margin-top:16px"><label class="input-label">${f.label}</label><input class="input-field" id="extra_${f.key}" placeholder="${f.ph}"></div>`).join('');autofillSettings()}else{ef.innerHTML=''}
 document.getElementById('reconcileBtn').disabled=true;
 document.getElementById('reconcileBtn').textContent=c.name+' →';
 document.getElementById('results').classList.remove('show');
@@ -1100,6 +1101,75 @@ function toastSuccess(msg,d){showToast(msg,'success',d)}
 function toastError(msg,d){showToast(msg,'error',d)}
 function toastWarning(msg,d){showToast(msg,'warning',d)}
 function toastInfo(msg,d){showToast(msg,'info',d)}
+</script>
+
+<!-- Settings Modal -->
+<div class="modal-overlay" id="settingsModal">
+<div class="modal" style="max-width:440px;text-align:left">
+<div class="auth-modal">
+<div class="close-btn" onclick="closeSettings()">&times;</div>
+<h2>Settings</h2>
+<p>Save your preferences to auto-fill forms.</p>
+<div class="error-msg" id="settingsError"></div>
+<div class="success-msg" id="settingsSuccess"></div>
+<label class="input-label">Business Name</label>
+<input class="input-field" id="setBusinessName" placeholder="My Business Pvt Ltd">
+<label class="input-label">Default GSTIN</label>
+<input class="input-field" id="setGSTIN" placeholder="07AAACR1234F1Z5" maxlength="15" style="font-family:var(--font-mono)">
+<label class="input-label">Default Period (MMYYYY)</label>
+<input class="input-field" id="setPeriod" placeholder="042026" maxlength="6" style="font-family:var(--font-mono)">
+<label class="input-label">Default Email</label>
+<input class="input-field" id="setEmail" type="email" placeholder="ca@firm.com">
+<button class="btn-full green" onclick="saveSettings()">Save Preferences</button>
+<button class="btn-full" onclick="clearSettings()" style="margin-top:8px;background:var(--surface2);color:var(--text2)">Clear All</button>
+</div>
+</div>
+</div>
+
+<script>
+// Settings & Preferences (localStorage)
+function getSettings(){
+    try{return JSON.parse(localStorage.getItem('reconcileai_settings'))||{}}catch(e){return{}}
+}
+function saveSettings(){
+    const s={
+        businessName:document.getElementById('setBusinessName').value.trim(),
+        gstin:document.getElementById('setGSTIN').value.trim().toUpperCase(),
+        period:document.getElementById('setPeriod').value.trim(),
+        email:document.getElementById('setEmail').value.trim()
+    };
+    if(s.gstin && s.gstin.length !== 15){toastError('GSTIN must be 15 characters');return}
+    if(s.period && s.period.length !== 6){toastError('Period must be 6 digits (MMYYYY)');return}
+    localStorage.setItem('reconcileai_settings',JSON.stringify(s));
+    toastSuccess('Settings saved!');
+    closeSettings();
+}
+function clearSettings(){
+    localStorage.removeItem('reconcileai_settings');
+    document.getElementById('setBusinessName').value='';
+    document.getElementById('setGSTIN').value='';
+    document.getElementById('setPeriod').value='';
+    document.getElementById('setEmail').value='';
+    toastInfo('Settings cleared');
+}
+function openSettings(){
+    const s=getSettings();
+    document.getElementById('setBusinessName').value=s.businessName||'';
+    document.getElementById('setGSTIN').value=s.gstin||'';
+    document.getElementById('setPeriod').value=s.period||'';
+    document.getElementById('setEmail').value=s.email||'';
+    document.getElementById('settingsModal').classList.add('show');
+}
+function closeSettings(){
+    document.getElementById('settingsModal').classList.remove('show');
+}
+function autofillSettings(){
+    const s=getSettings();
+    const gstinEl=document.getElementById('extra_client_gstin');
+    const periodEl=document.getElementById('extra_period');
+    if(gstinEl && !gstinEl.value && s.gstin) gstinEl.value=s.gstin;
+    if(periodEl && !periodEl.value && s.period) periodEl.value=s.period;
+}
 </script>
 </body>
 </html>
