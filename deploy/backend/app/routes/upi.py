@@ -10,6 +10,7 @@ from app.services.upi_engine import (
     upi_text_similarity, detect_upi_app
 )
 from app.services.auth_service import get_user_by_token
+from app.services.history_service import save_history
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -48,6 +49,8 @@ async def reconcile_upi(
     try:
         engine = _get_engine()
         result = engine.reconcile_upi_files(book_path, bank_path)
+        user_email = request.cookies.get("session_email", "anonymous")
+        await save_history(user_email, "upi", result)
 
         report_path = _save_upi_csv_report(result)
         if report_path:

@@ -15,6 +15,7 @@ from app.routes.auth import router as auth_router
 from app.routes.dashboard import router as dashboard_router
 from app.routes.admin import router as admin_router
 from app.routes.upi import router as upi_router
+from app.routes.history import router as history_router
 
 logger = logging.getLogger(__name__)
 
@@ -41,6 +42,7 @@ app.include_router(auth_router)
 app.include_router(dashboard_router)
 app.include_router(admin_router)
 app.include_router(upi_router)
+app.include_router(history_router)
 
 @app.on_event("startup")
 async def startup():

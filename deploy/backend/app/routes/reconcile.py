@@ -7,6 +7,7 @@ import os
 import csv
 import io
 from app.services.auth_service import get_user_by_token
+from app.services.history_service import save_history
 from app.services.ml_engine import ReconciliationEngine
 from app.services.gst_engine import GSTReconciliationEngine
 
@@ -100,6 +101,8 @@ async def reconcile_files(
 
     try:
         result = engine.reconcile_csv(book_path, bank_path)
+        user_email = request.cookies.get("session_email", "anonymous")
+        await save_history(user_email, "brs", result)
 
         if result.get("matched") or result.get("unmatched"):
             _save_csv_report(result)
@@ -135,6 +138,8 @@ async def reconcile_gst(
 
     try:
         result = gst_engine.reconcile(books_path, portal_path)
+        user_email = request.cookies.get("session_email", "anonymous")
+        await save_history(user_email, "gst", result)
 
         if result.get("results"):
             _save_gst_csv_report(result)
