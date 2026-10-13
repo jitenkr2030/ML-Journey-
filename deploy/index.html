@@ -326,6 +326,19 @@ td,th{padding:8px 10px}
 .pipeline-icon{width:20px;text-align:center;flex-shrink:0}
 .pipeline-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pipeline-time{font-family:var(--font-mono);font-size:11px;color:var(--text3);flex-shrink:0}
+
+/* Free Tier */
+.free-banner{background:linear-gradient(135deg,rgba(52,211,153,.1),rgba(79,140,255,.1));border:1px solid rgba(52,211,153,.3);border-radius:16px;padding:20px 28px;text-align:center;margin:24px 0}
+.free-badge{display:inline-block;background:var(--accent2);color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.free-counter{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);padding:6px 14px;border-radius:20px;font-size:12px;color:var(--text2);margin:0 4px}
+.free-counter .num{color:var(--accent);font-weight:700;font-family:var(--font-mono);font-size:14px}
+.free-counter .num.warn{color:var(--danger)}
+.paywall-overlay{background:var(--surface);border:2px dashed var(--border);border-radius:12px;padding:30px;text-align:center;margin:16px 0}
+.paywall-overlay h3{margin-bottom:8px;font-size:18px}
+.paywall-overlay p{color:var(--text2);font-size:13px;margin-bottom:16px}
+.paywall-lock{font-size:40px;margin-bottom:10px}
+.limit-warning{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--danger);padding:12px 16px;border-radius:10px;font-size:13px;margin:12px 0;display:flex;align-items:center;gap:10px}
+.limit-warning .icon{font-size:20px}
 </style>
 </head>
 <body>
@@ -361,6 +374,11 @@ td,th{padding:8px 10px}
 <div class="hero-stat"><div class="num">8</div><div class="label">Compliance Types</div></div>
 <div class="hero-stat"><div class="num">95%</div><div class="label">Match Accuracy</div></div>
 <div class="hero-stat"><div class="num">₹499</div><div class="label">Per Reconciliation</div></div>
+<div class="free-banner" style="margin-top:24px">
+<div class="free-badge">✨ Start Free — No Credit Card Needed</div>
+<div style="font-size:15px;font-weight:600;margin-bottom:8px">2 Free Bank Reconciliations + 1 Free GST Reconciliation Every Month</div>
+<div style="font-size:13px;color:var(--text2)">See summary results free. Pay only for full reports. No subscription required.</div>
+</div>
 </div>
 </div>
 </section>
@@ -550,6 +568,7 @@ document.getElementById('reconcileBtn').disabled=!ok;
 }
 
 async function startReconciliation(){
+    if(!checkFreeLimit(currentType)){return}
 if(!await requireLogin('reconciliation')){return}
 if(currentType==='bookkeeping'){return startBookkeeping()}
 const c=CONFIG[currentType];const ld=document.getElementById('loading');const lt=document.getElementById('loadingText');
@@ -570,6 +589,7 @@ let bookkeepingPoll=null;
 
 async function startBookkeeping(){
     if(!await requireLogin('bookkeeping')){return}
+    if(!checkFreeLimit('bookkeeping')){return}
     const ld=document.getElementById('loading');
     const lt=document.getElementById('loadingText');
     const pw=document.getElementById('progressWrap');
@@ -638,6 +658,7 @@ async function startBookkeeping(){
 }
 
 function showBookkeepingResults(d){
+consumeFreeUsage('bookkeeping');
 const s=document.getElementById('results');s.classList.add('show');s.scrollIntoView({behavior:'smooth'});
 document.getElementById('resultsTitle').textContent='Complete Bookkeeping Results';
 document.getElementById('gstr3bSummary').innerHTML='';
@@ -664,6 +685,7 @@ document.getElementById('fileBtn').style.display='none';
 }
 
 function showResults(d){
+consumeFreeUsage(currentType);
 const s=document.getElementById('results');s.classList.add('show');s.scrollIntoView({behavior:'smooth'});
 document.getElementById('resultsTitle').textContent=CONFIG[currentType].name+' Results';
 document.getElementById('gstr3bSummary').innerHTML='';
@@ -1417,5 +1439,102 @@ async function searchClients(){
     }catch(e){}
 }
 </script>
+
+<script>
+// ============================================
+// FREE TIER SYSTEM
+// ============================================
+const FREE_LIMITS={
+    brs:{limit:2,label:'Bank Reconciliation'},
+    gst:{limit:1,label:'GST Reconciliation'},
+    upi:{limit:1,label:'UPI Reconciliation'}
+};
+
+function getFreeUsage(){
+    try{
+        const now=new Date();
+        const monthKey=now.getFullYear()+'-'+(now.getMonth()+1);
+        const data=JSON.parse(localStorage.getItem('reconcileai_free_usage')||'{}');
+        if(data.month!==monthKey){
+            localStorage.setItem('reconcileai_free_usage',JSON.stringify({month:monthKey,used:{}}));
+            return{month:monthKey,used:{}};
+        }
+        return data;
+    }catch(e){return{month:'',used:{}}}
+}
+
+function getFreeRemaining(type){
+    const usage=getFreeUsage();
+    const used=usage.used[type]||0;
+    const limit=FREE_LIMITS[type]?FREE_LIMITS[type].limit:0;
+    return Math.max(0, limit-used);
+}
+
+function isFreeAvailable(type){
+    if(!FREE_LIMITS[type]) return false;
+    return getFreeRemaining(type) > 0;
+}
+
+function consumeFreeUsage(type){
+    const usage=getFreeUsage();
+    if(!usage.used) usage.used={};
+    usage.used[type]=(usage.used[type]||0)+1;
+    localStorage.setItem('reconcileai_free_usage',JSON.stringify(usage));
+    updateFreeCounters();
+}
+
+function updateFreeCounters(){
+    const el=document.getElementById('freeCounters');
+    if(!el) return;
+    let h='';
+    Object.keys(FREE_LIMITS).forEach(type=>{
+        const remaining=getFreeRemaining(type);
+        const total=FREE_LIMITS[type].limit;
+        const cls=remaining===0?'warn':'';
+        const icon=type==='brs'?'\U0001f3e6':type==='gst'?'\U0001f4cb':'\U0001f4f1';
+        h+='<div class="free-counter"><span>'+icon+'</span><span class="num '+cls+'">'+remaining+'</span>/'+total+' free '+FREE_LIMITS[type].label.split(' ')[0]+' left</div>';
+    });
+    el.innerHTML=h;
+}
+
+function checkFreeLimit(type){
+    if(!FREE_LIMITS[type]) return true;
+    const remaining=getFreeRemaining(type);
+    if(remaining<=0){
+        showLimitWarning(type);
+        return false;
+    }
+    return true;
+}
+
+function showLimitWarning(type){
+    const name=FREE_LIMITS[type].label;
+    const limit=FREE_LIMITS[type].limit;
+    toastError('Free limit reached! You used all '+limit+' free '+name+' runs this month. Upgrade to continue.');
+    // Show upgrade modal
+    setTimeout(()=>{openPayment()},500);
+}
+
+function showLimitBanner(){
+    return '<div class="limit-warning"><span class="icon">\u26a0\ufe0f</span><div><strong>Free limit reached.</strong> Upgrade to ₹499/reconciliation for unlimited access.</div></div>';
+}
+
+// Initialize on load
+setTimeout(updateFreeCounters, 100);
+</script>
+
+function isPaidOrFree(){
+    // Free tier: show summary free, details require payment
+    // For now, show details to paying users or after payment
+    const paid=sessionStorage.getItem('paid_'+currentType);
+    return paid==='true';
+}
+function getPaywallHTML(){
+    return '<div class="paywall-overlay"><div class="paywall-lock">\U0001f512</div><h3>Unlock Full Report</h3><p>See detailed transaction-level results, download CSV, and get complete analysis.</p><button class="btn-primary" onclick="openPayment()" style="margin:0 auto">\U0001f4b0 Unlock Full Report \u20b9499</button><div style="margin-top:12px;font-size:11px;color:var(--text3)">Summary results above are always free.</div></div>';
+}
+function unlockFullReport(){
+    sessionStorage.setItem('paid_'+currentType,'true');
+    if(currentResults)showResults(currentResults);
+}
 </body>
 </html>
