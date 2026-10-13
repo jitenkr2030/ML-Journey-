@@ -344,6 +344,7 @@ td,th{padding:8px 10px}
 <span id="userNav" style="display:none;align-items:center;gap:12px">
 <span id="userName" style="color:var(--text2);font-size:13px"></span>
 <a href="#" onclick="openSettings()" title="Settings" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">⚙️</a>
+<a href="#" onclick="openClients()" title="Clients" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">👥</a>
 <a href="#" onclick="openHistory()" title="History" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">📋</a>
 <a href="#" class="nav-cta" onclick="showDashboard()" style="background:var(--accent2)">Dashboard</a>
 <a href="#" class="nav-cta" onclick="logoutUser()" style="background:var(--danger,#ef4444)">Logout</a>
@@ -1234,6 +1235,186 @@ async function deleteHistory(id){
         if(d.success){toastSuccess('Deleted');openHistory();}
         else{toastError('Failed to delete')}
     }catch(e){toastError('Error: '+e.message)}
+}
+</script>
+
+<!-- Clients Modal -->
+<div class="modal-overlay" id="clientsModal">
+<div class="modal" style="max-width:700px;text-align:left;max-height:85vh;overflow-y:auto">
+<div class="auth-modal">
+<div class="close-btn" onclick="closeClients()">&times;</div>
+<h2>👥 Client Management</h2>
+<p>Add, edit, or remove your clients. Link reconciliations to clients.</p>
+<div id="clientsError" class="error-msg"></div>
+<div id="clientsSuccess" class="success-msg"></div>
+
+<!-- Search -->
+<div style="display:flex;gap:8px;margin-bottom:16px">
+<input class="input-field" id="clientSearch" placeholder="Search by name, GSTIN, or PAN..." oninput="searchClients()" style="flex:1">
+<button class="btn-full green" onclick="showAddClient()" style="width:auto;padding:10px 20px">➕ Add Client</button>
+</div>
+
+<!-- Add/Edit Form (hidden by default) -->
+<div id="clientForm" style="display:none;background:var(--surface2);padding:20px;border-radius:12px;margin-bottom:16px">
+<h3 id="clientFormTitle" style="margin-bottom:16px;font-size:16px">Add Client</h3>
+<input type="hidden" id="editClientId">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div><label class="input-label">Name *</label><input class="input-field" id="cName" placeholder="Business Name"></div>
+<div><label class="input-label">GSTIN</label><input class="input-field" id="cGstin" placeholder="07AAACR1234F1Z5" maxlength="15" style="font-family:var(--font-mono);text-transform:uppercase"></div>
+<div><label class="input-label">PAN</label><input class="input-field" id="cPan" placeholder="AAACR1234F" maxlength="10" style="font-family:var(--font-mono);text-transform:uppercase"></div>
+<div><label class="input-label">Email</label><input class="input-field" id="cEmail" type="email" placeholder="client@example.com"></div>
+<div><label class="input-label">Phone</label><input class="input-field" id="cPhone" placeholder="+91 98765 43210"></div>
+<div><label class="input-label">Status</label>
+<select class="input-field" id="cStatus"><option value="active">Active</option><option value="inactive">Inactive</option></select>
+</div>
+</div>
+<div style="margin-top:12px"><label class="input-label">Address</label><textarea class="input-field" id="cAddress" rows="2" placeholder="Full address"></textarea></div>
+<div style="margin-top:12px"><label class="input-label">Notes</label><textarea class="input-field" id="cNotes" rows="2" placeholder="Internal notes"></textarea></div>
+<div style="display:flex;gap:8px;margin-top:16px">
+<button class="btn-full green" onclick="saveClient()" id="clientSaveBtn">Save Client</button>
+<button class="btn-full" onclick="cancelClientForm()" style="background:var(--surface);color:var(--text2)">Cancel</button>
+</div>
+</div>
+
+<!-- Client List -->
+<div id="clientList" style="max-height:400px;overflow-y:auto">Loading...</div>
+</div>
+</div>
+</div>
+
+<script>
+// Client Management
+async function openClients(){
+    document.getElementById('clientsModal').classList.add('show');
+    await loadClients();
+}
+function closeClients(){
+    document.getElementById('clientsModal').classList.remove('show');
+    cancelClientForm();
+}
+async function loadClients(){
+    const list=document.getElementById('clientList');
+    list.innerHTML='<div style="text-align:center;padding:20px;color:var(--text3)">Loading...</div>';
+    try{
+        const r=await fetch('/api/clients');
+        const d=await r.json();
+        if(!d.success){list.innerHTML='<div style="text-align:center;padding:20px;color:var(--text3)">Failed to load clients</div>';return}
+        renderClients(d.clients||[]);
+    }catch(e){
+        list.innerHTML='<div style="text-align:center;padding:20px;color:var(--text3)">Error: '+e.message+'</div>';
+    }
+}
+function renderClients(clients){
+    const list=document.getElementById('clientList');
+    if(clients.length===0){
+        list.innerHTML='<div style="text-align:center;padding:30px;color:var(--text3)"><div style="font-size:40px;margin-bottom:10px">\U0001f465</div>No clients yet.<br>Click "Add Client" to get started.</div>';
+        return;
+    }
+    let h='';
+    clients.forEach(c=>{
+        const active=c.status==='active';
+        h+='<div style="display:flex;align-items:center;gap:12px;padding:14px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--surface);transition:all .2s">';
+        h+='<div style="width:40px;height:40px;border-radius:10px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex-shrink:0">'+c.name.charAt(0).toUpperCase()+'</div>';
+        h+='<div style="flex:1;min-width:0">';
+        h+='<div style="font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(c.name)+'</span>';
+        h+='<span style="background:'+(active?'var(--accent2)':'var(--text3)')+';color:#fff;font-size:9px;padding:2px 8px;border-radius:8px;text-transform:uppercase">'+c.status+'</span></div>';
+        h+='<div style="font-size:11px;color:var(--text3);font-family:var(--font-mono)">'+(c.gstin||'No GSTIN')+(c.pan?' \u00b7 '+c.pan:'')+'</div>';
+        h+='<div style="font-size:11px;color:var(--text3)">'+(c.email||c.phone||'No contact')+'</div>';
+        h+='</div>';
+        h+='<div style="display:flex;gap:6px;flex-shrink:0">';
+        h+='<button onclick="editClient('+c.id+')" style="background:var(--accent);color:#fff;border:none;padding:6px 12px;border-radius:6px;font-size:11px;cursor:pointer">\u270f\ufe0f Edit</button>';
+        h+='<button onclick="deleteClient('+c.id+',\''+esc(c.name).replace(/'/g,"\\'")+'\')" style="background:var(--danger);color:#fff;border:none;padding:6px 12px;border-radius:6px;font-size:11px;cursor:pointer">\U0001f5d1 Delete</button>';
+        h+='</div></div>';
+    });
+    list.innerHTML=h;
+}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function showAddClient(){
+    document.getElementById('clientForm').style.display='block';
+    document.getElementById('clientFormTitle').textContent='Add Client';
+    document.getElementById('editClientId').value='';
+    document.getElementById('cName').value='';
+    document.getElementById('cGstin').value='';
+    document.getElementById('cPan').value='';
+    document.getElementById('cEmail').value='';
+    document.getElementById('cPhone').value='';
+    document.getElementById('cAddress').value='';
+    document.getElementById('cNotes').value='';
+    document.getElementById('cStatus').value='active';
+    document.getElementById('cName').focus();
+}
+function cancelClientForm(){
+    document.getElementById('clientForm').style.display='none';
+}
+async function editClient(id){
+    try{
+        const r=await fetch('/api/clients/'+id);
+        const d=await r.json();
+        if(!d.success){toastError('Failed to load client');return}
+        const c=d.client;
+        document.getElementById('clientForm').style.display='block';
+        document.getElementById('clientFormTitle').textContent='Edit Client';
+        document.getElementById('editClientId').value=c.id;
+        document.getElementById('cName').value=c.name;
+        document.getElementById('cGstin').value=c.gstin;
+        document.getElementById('cPan').value=c.pan;
+        document.getElementById('cEmail').value=c.email;
+        document.getElementById('cPhone').value=c.phone;
+        document.getElementById('cAddress').value=c.address;
+        document.getElementById('cNotes').value=c.notes;
+        document.getElementById('cStatus').value=c.status;
+        document.getElementById('cName').focus();
+    }catch(e){toastError('Error: '+e.message)}
+}
+async function saveClient(){
+    const id=document.getElementById('editClientId').value;
+    const data={
+        name:document.getElementById('cName').value.trim(),
+        gstin:document.getElementById('cGstin').value.trim().toUpperCase(),
+        pan:document.getElementById('cPan').value.trim().toUpperCase(),
+        email:document.getElementById('cEmail').value.trim(),
+        phone:document.getElementById('cPhone').value.trim(),
+        address:document.getElementById('cAddress').value.trim(),
+        notes:document.getElementById('cNotes').value.trim()
+    };
+    if(!data.name){toastError('Client name is required');return}
+    if(data.gstin && data.gstin.length!==15){toastError('GSTIN must be 15 characters');return}
+    if(data.pan && data.pan.length!==10){toastError('PAN must be 10 characters');return}
+
+    const btn=document.getElementById('clientSaveBtn');
+    btn.disabled=true;btn.textContent='Saving...';
+    try{
+        const url=id?'/api/clients/'+id:'/api/clients';
+        const method=id?'PUT':'POST';
+        const r=await fetch(url,{method:method,headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+        const d=await r.json();
+        if(d.success){
+            toastSuccess(id?'Client updated!':'Client added!');
+            cancelClientForm();
+            await loadClients();
+        }else{
+            toastError(d.detail||'Failed to save');
+        }
+    }catch(e){toastError('Error: '+e.message)}
+    btn.disabled=false;btn.textContent='Save Client';
+}
+async function deleteClient(id,name){
+    if(!confirm('Delete client "'+name+'"? This cannot be undone.')){return}
+    try{
+        const r=await fetch('/api/clients/'+id,{method:'DELETE'});
+        const d=await r.json();
+        if(d.success){toastSuccess('Client deleted');await loadClients();}
+        else{toastError('Failed to delete')}
+    }catch(e){toastError('Error: '+e.message)}
+}
+async function searchClients(){
+    const q=document.getElementById('clientSearch').value.trim();
+    if(!q){await loadClients();return}
+    try{
+        const r=await fetch('/api/clients/search?q='+encodeURIComponent(q));
+        const d=await r.json();
+        if(d.success)renderClients(d.clients||[]);
+    }catch(e){}
 }
 </script>
 </body>
