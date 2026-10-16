@@ -186,6 +186,7 @@ table tr:hover td{background:rgba(255,255,255,.02)}
 <div class="tab" onclick="switchTab('activity',this)">📋 Activity</div>
 <div class="tab" onclick="switchTab('settings',this)">⚙️ Settings</div>
 <div class="tab" onclick="switchTab('health',this)">🔧 System</div>
+<div class="tab" onclick="switchTab('enquiries',this)">📨 Enquiries</div>
 </div>
 
 <!-- ========== OVERVIEW TAB ========== -->
@@ -437,7 +438,7 @@ let selectedUserId=null;
 function switchTab(tab, el){
 document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
 el.classList.add('active');
-['overview','users','payments','activity','settings','health'].forEach(t=>{
+['overview','users','payments','activity','settings','health','enquiries'].forEach(t=>{
 const el=document.getElementById('tab'+t.charAt(0).toUpperCase()+t.slice(1));
 if(el)el.style.display=t===tab?'':'none';
 });
@@ -446,6 +447,7 @@ if(tab==='activity')loadActivity(1);
 if(tab==='payments')loadPayments(1);
 if(tab==='settings')loadSettings();
 if(tab==='health')loadHealth();
+if(tab==='enquiries')loadEnquiries();
 }
 
 function closeModal(id){document.getElementById(id).classList.remove('show')}
@@ -890,6 +892,97 @@ showToast('Expired sessions cleaned');
 
 // ==================== INIT ====================
 document.addEventListener('DOMContentLoaded',loadAdmin);
+</script>
+
+<!-- ========== ENQUIRIES TAB ========== -->
+<div id="tabEnquiries" style="display:none">
+<div class="card">
+<h3>
+<span>📨 Service Enquiries</span>
+<span style="font-size:12px;color:var(--text3)" id="enquiryCount">0 enquiries</span>
+</h3>
+<p style="font-size:12px;color:var(--text3);margin-bottom:16px">Part-Time Accounting &amp; Compliance service enquiries. Contact within 24 hours.</p>
+<div id="enquiryStats" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"></div>
+<div class="search-bar">
+<select id="enquiryFilter" onchange="loadEnquiries()">
+<option value="">All Status</option>
+<option value="new">New</option>
+<option value="contacted">Contacted</option>
+<option value="converted">Converted</option>
+<option value="rejected">Rejected</option>
+</select>
+<button class="btn btn-primary" onclick="loadEnquiries()">Filter</button>
+<button class="btn btn-outline" onclick="document.getElementById('enquiryFilter').value='';loadEnquiries()">Clear</button>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Company</th><th>City</th><th>Message</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead>
+<tbody id="enquiriesBody">
+<tr><td colspan="10" style="text-align:center;color:var(--text3)">Loading...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script>
+async function loadEnquiries(){
+    const tb=document.getElementById('enquiriesBody');
+    if(!tb)return;
+    tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">Loading...</td></tr>';
+    const status=document.getElementById('enquiryFilter')?document.getElementById('enquiryFilter').value:'';
+    try{
+        const r=await fetch('/api/admin/service-inquiries?key=reconcile2026'+(status?'&status='+status:''));
+        const d=await r.json();
+        if(!d.success){tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">Failed to load</td></tr>';return}
+        const stats=d.stats||{};
+        const se=document.getElementById('enquiryStats');
+        if(se){
+            se.innerHTML=
+            '<div style="background:var(--surface2);padding:8px 14px;border-radius:8px;font-size:12px"><strong>'+(stats.total||0)+'</strong> Total</div>'+
+            '<div style="background:rgba(245,158,11,.15);padding:8px 14px;border-radius:8px;font-size:12px;color:#f59e0b"><strong>'+(stats.new||0)+'</strong> New</div>'+
+            '<div style="background:rgba(59,130,246,.15);padding:8px 14px;border-radius:8px;font-size:12px;color:#3b82f6"><strong>'+(stats.contacted||0)+'</strong> Contacted</div>'+
+            '<div style="background:rgba(52,211,153,.15);padding:8px 14px;border-radius:8px;font-size:12px;color:#22c55e"><strong>'+(stats.converted||0)+'</strong> Converted</div>';
+        }
+        const cnt=document.getElementById('enquiryCount');
+        if(cnt)cnt.textContent=(d.inquiries||[]).length+' enquiries';
+        const inquiries=d.inquiries||[];
+        if(inquiries.length===0){
+            tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">No enquiries found</td></tr>';
+            return;
+        }
+        const colors={new:'orange',contacted:'blue',converted:'green',rejected:'red'};
+        tb.innerHTML=inquiries.map(e=>
+            '<tr>'+
+            '<td>'+e.id+'</td>'+
+            '<td><strong>'+e.name+'</strong></td>'+
+            '<td>'+e.email+'</td>'+
+            '<td>'+(e.phone||'-')+'</td>'+
+            '<td>'+(e.company||'-')+'</td>'+
+            '<td>'+(e.city||'-')+'</td>'+
+            '<td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px">'+(e.message||'-')+'</td>'+
+            '<td><span class="badge '+(colors[e.status]||'gray')+'">'+e.status+'</span></td>'+
+            '<td style="font-size:11px">'+e.created_at+'</td>'+
+            '<td>'+
+            (e.status==='new'?'<button class="btn btn-primary btn-sm" onclick="updateEnquiry('+e.id+',\'contacted\')">\u260e\ufe0f Contacted</button> ':'')+
+            (e.status!=='converted'?'<button class="btn btn-success btn-sm" onclick="updateEnquiry('+e.id+',\'converted\')">\u2705 Won</button> ':'')+
+            (e.status!=='rejected'?'<button class="btn btn-danger btn-sm" onclick="updateEnquiry('+e.id+',\'rejected\')">\u274c</button>':'')+
+            '</td>'+
+            '</tr>'
+        ).join('');
+    }catch(e){
+        tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">Error: '+e.message+'</td></tr>';
+    }
+}
+async function updateEnquiry(id,status){
+    if(!confirm('Mark as "'+status+'"?'))return;
+    try{
+        const r=await fetch('/api/admin/service-inquiries/'+id+'?key=reconcile2026',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:status,notes:''})});
+        const d=await r.json();
+        if(d.success){showToast('Enquiry updated');loadEnquiries();}
+        else{showToast('Failed to update',true)}
+    }catch(e){showToast('Error: '+e.message,true)}
+}
 </script>
 </body>
 </html>

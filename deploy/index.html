@@ -498,6 +498,14 @@ td,th{padding:8px 10px}
 <div class="price-card"><div class="pc-icon">🧮</div><h3>GSTR-3B Preparation</h3><div class="pc-price">₹499</div><div class="pc-desc">Auto-compute tax liability</div></div>
 <div class="price-card" style="border-color:var(--accent2)"><div class="pc-icon">📱</div><h3>UPI Reconciliation</h3><div class="pc-price">₹499</div><div class="pc-desc">Match UPI transactions. Auto-detect UTR, UPI app, failed &amp; reversed</div></div>
 <div class="price-card featured" style="border-color:var(--accent);background:rgba(79,140,255,.05);position:relative"><div style="position:absolute;top:-10px;right:12px;background:var(--accent);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:12px">BEST VALUE</div><div class="pc-icon">📚</div><h3>Complete Bookkeeping</h3><div class="pc-price">₹2,999</div><div class="pc-desc">Run 21 automated pipelines. Accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory &amp; final report.</div></div>
+<div class="price-card" style="border-color:#a78bfa;background:rgba(167,139,250,.05);position:relative">
+<div style="position:absolute;top:-10px;right:12px;background:#a78bfa;color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:12px">HUMAN EXPERT</div>
+<div class="pc-icon">💼</div>
+<h3>Part-Time Accounting &amp; Compliance</h3>
+<div class="pc-price">₹9,999<span style="font-size:13px;font-weight:400;color:var(--text3)">/month</span></div>
+<div class="pc-desc"><strong>4 visits/month.</strong> Manual accounting, GST &amp; TDS filing, income tax returns, compliance management, financial statements &amp; advisory by experienced CA team.</div>
+<button onclick="openServiceInquiry()" style="margin-top:14px;width:100%;padding:12px;background:#a78bfa;color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.3px">Book Free Consultation →</button>
+</div>
 </div>
 </div>
 </section>
@@ -1617,6 +1625,101 @@ return '<div class="paywall-overlay"><div class="paywall-lock">\U0001f512</div><
 function unlockFullReport(){
     sessionStorage.setItem('paid_'+currentType,'true');
     if(currentResults)showResults(currentResults);
+}
+</script>
+
+<!-- Service Enquiry Modal -->
+<div class="modal-overlay" id="serviceInquiryModal">
+<div class="modal" style="max-width:520px;text-align:left">
+<div class="auth-modal">
+<div class="close-btn" onclick="closeServiceInquiry()">&times;</div>
+<h2>💼 Book Free Consultation</h2>
+<p style="color:var(--text2);font-size:13px">Part-Time Accounting, Tax &amp; Compliance — ₹9,999/month. 4 visits/month. Tell us about your business and we will call you within 24 hours.</p>
+<div id="serviceInquiryError" class="error-msg"></div>
+<div id="serviceInquirySuccess" class="success-msg"></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+<div><label class="input-label">Your Name *</label><input class="input-field" id="siName" placeholder="Full name"></div>
+<div><label class="input-label">Email *</label><input class="input-field" id="siEmail" type="email" placeholder="you@example.com"></div>
+<div><label class="input-label">Phone</label><input class="input-field" id="siPhone" placeholder="+91 98765 43210"></div>
+<div><label class="input-label">City</label><input class="input-field" id="siCity" placeholder="Delhi, Mumbai..."></div>
+<div><label class="input-label">Company / Firm</label><input class="input-field" id="siCompany" placeholder="Business name"></div>
+<div><label class="input-label">GSTIN (optional)</label><input class="input-field" id="siGstin" placeholder="07AAACR1234F1Z5" maxlength="15" style="font-family:var(--font-mono);text-transform:uppercase"></div>
+</div>
+<div style="margin-top:12px"><label class="input-label">Preferred Visit Time</label>
+<select class="input-field" id="siTime">
+<option value="">Select preferred time</option>
+<option value="morning">Morning (9 AM - 12 PM)</option>
+<option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+<option value="evening">Evening (4 PM - 7 PM)</option>
+<option value="weekend">Weekend only</option>
+</select>
+</div>
+<div style="margin-top:12px"><label class="input-label">Message / Requirements</label><textarea class="input-field" id="siMessage" rows="3" placeholder="Tell us about your accounting needs, business type, current challenges..."></textarea></div>
+<button class="btn-full green" id="siSubmitBtn" onclick="submitServiceInquiry()" style="margin-top:16px">Submit Enquiry — Free Consultation</button>
+<div style="margin-top:10px;font-size:11px;color:var(--text3);text-align:center">No commitment required. We will call to understand your needs first.</div>
+</div>
+</div>
+</div>
+
+<script>
+function openServiceInquiry(){
+    document.getElementById('serviceInquiryError').textContent='';
+    document.getElementById('serviceInquirySuccess').textContent='';
+    document.getElementById('siName').value='';
+    document.getElementById('siEmail').value='';
+    document.getElementById('siPhone').value='';
+    document.getElementById('siCity').value='';
+    document.getElementById('siCompany').value='';
+    document.getElementById('siGstin').value='';
+    document.getElementById('siTime').value='';
+    document.getElementById('siMessage').value='';
+    const s=getSettings();
+    if(s.businessName)document.getElementById('siCompany').value=s.businessName;
+    if(s.gstin)document.getElementById('siGstin').value=s.gstin;
+    if(s.email)document.getElementById('siEmail').value=s.email;
+    document.getElementById('serviceInquiryModal').classList.add('show');
+}
+function closeServiceInquiry(){
+    document.getElementById('serviceInquiryModal').classList.remove('show');
+}
+async function submitServiceInquiry(){
+    const errEl=document.getElementById('serviceInquiryError');
+    const sucEl=document.getElementById('serviceInquirySuccess');
+    errEl.textContent='';sucEl.textContent='';
+    const data={
+        service_type:'manual_accounting',
+        name:document.getElementById('siName').value.trim(),
+        email:document.getElementById('siEmail').value.trim(),
+        phone:document.getElementById('siPhone').value.trim(),
+        city:document.getElementById('siCity').value.trim(),
+        company:document.getElementById('siCompany').value.trim(),
+        gstin:document.getElementById('siGstin').value.trim().toUpperCase(),
+        preferred_time:document.getElementById('siTime').value,
+        message:document.getElementById('siMessage').value.trim()
+    };
+    if(!data.name){toastError('Name is required');return}
+    if(!data.email||!data.email.includes('@')){toastError('Valid email is required');return}
+    const btn=document.getElementById('siSubmitBtn');
+    btn.disabled=true;btn.textContent='Submitting...';
+    try{
+        const r=await fetch('/api/service-inquiry',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+        const d=await r.json();
+        if(d.success){
+            toastSuccess('Enquiry submitted! We will call you within 24 hours.');
+            sucEl.textContent='\u2705 '+d.message;
+            sucEl.style.display='block';
+            setTimeout(()=>{closeServiceInquiry()},2500);
+        }else{
+            toastError(d.detail||'Failed to submit');
+            errEl.textContent=d.detail||'Failed to submit';
+            errEl.style.display='block';
+        }
+    }catch(e){
+        toastError('Error: '+e.message);
+        errEl.textContent='Error: '+e.message;
+        errEl.style.display='block';
+    }
+    btn.disabled=false;btn.textContent='Submit Enquiry \u2014 Free Consultation';
 }
 </script>
 </body>
