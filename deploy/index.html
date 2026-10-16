@@ -446,7 +446,8 @@ td,th{padding:8px 10px}
 <div id="filingSection"></div>
 
 <div class="download-section">
-<button class="btn-primary" onclick="openPayment()">Download Full Report — ₹499</button>
+<div id="paymentConfirmStatus" style="margin-bottom:16px;display:none"></div>
+<button class="btn-primary" id="downloadReportBtn" onclick="handleDownloadClick()">Download Full Report — ₹499</button>
 </div>
 </div>
 </section>
@@ -916,9 +917,82 @@ function closeFiling(){document.getElementById('filingModal').classList.remove('
 // =====================================================
 function openPayment(){document.getElementById('paymentModal').classList.add('show')}
 function closePayment(){document.getElementById('paymentModal').classList.remove('show')}
+let currentPaymentSessionId=null;
+let paymentPollTimer=null;
+
 async function submitPayment(e){
-e.preventDefault();const u=document.getElementById('utrNumber').value;const em=document.getElementById('userEmail').value;const s=document.getElementById('paymentStatus');
-try{await fetch('/api/payment/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({utr_number:u,amount:199,recon_type:currentType,email:em,session_id:'sess_'+Date.now()})});s.textContent='Payment submitted! Report will be sent to your email.';s.style.display='block'}catch(e){s.textContent='Error: '+e.message;s.style.display='block';s.style.color='var(--danger)'}
+e.preventDefault();
+const u=document.getElementById('utrNumber').value;
+const em=document.getElementById('userEmail').value;
+const s=document.getElementById('paymentStatus');
+currentPaymentSessionId='sess_'+currentType+'_'+Date.now();
+try{
+const r=await fetch('/api/payment/submit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({utr_number:u,amount:currentPrice,recon_type:currentType,email:em,session_id:currentPaymentSessionId})});
+const d=await r.json();
+if(d.error){s.textContent=d.error;s.style.display='block';s.style.color='var(--danger)';return}
+s.innerHTML='<div style="display:flex;align-items:center;gap:8px"><div style="width:16px;height:16px;border:2px solid var(--accent);border-top-color:transparent;border-radius:50%;animation:spin 1s linear infinite"></div><strong>Payment submitted!</strong></div><div style="margin-top:8px;color:var(--text2)">\u23f3 Waiting for admin confirmation. You can download once confirmed.</div>';
+s.style.display='block';
+startPaymentPolling();
+}catch(e){s.textContent='Error: '+e.message;s.style.display='block';s.style.color='var(--danger)'}
+}
+
+function startPaymentPolling(){
+if(paymentPollTimer)clearInterval(paymentPollTimer);
+updatePaymentUI('pending');
+paymentPollTimer=setInterval(async()=>{
+if(!currentPaymentSessionId){clearInterval(paymentPollTimer);return}
+try{
+const r=await fetch('/api/payment/status/'+currentPaymentSessionId);
+const d=await r.json();
+if(d.status==='verified'){
+clearInterval(paymentPollTimer);
+updatePaymentUI('verified');
+toastSuccess('Payment confirmed! Download is now available.');
+}else if(d.status==='rejected'){
+clearInterval(paymentPollTimer);
+updatePaymentUI('rejected');
+toastError('Payment was rejected. Please contact support.');
+}
+}catch(e){}
+},5000);
+}
+
+function updatePaymentUI(status){
+const ds=document.getElementById('paymentConfirmStatus');
+const btn=document.getElementById('downloadReportBtn');
+if(!ds||!btn)return;
+if(status==='pending'){
+ds.style.display='block';
+ds.innerHTML='<div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.3);color:#f59e0b;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">\u23f3</div><div><strong>Waiting for admin confirmation</strong><div style="font-size:12px;margin-top:4px">Your payment UTR has been submitted. Admin will verify shortly. This page auto-updates.</div></div></div>';
+btn.disabled=true;
+btn.style.opacity='0.5';
+btn.style.cursor='not-allowed';
+btn.textContent='\U0001f512 Download Locked \u2014 Awaiting Confirmation';
+}else if(status==='verified'){
+ds.style.display='block';
+ds.innerHTML='<div style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);color:#34d399;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">\u2705</div><div><strong>Payment confirmed!</strong><div style="font-size:12px;margin-top:4px">Full report is now available for download.</div></div></div>';
+btn.disabled=false;
+btn.style.opacity='1';
+btn.style.cursor='pointer';
+btn.textContent='\U0001f4e5 Download Full Report';
+unlockFullReport();
+}else if(status==='rejected'){
+ds.style.display='block';
+ds.innerHTML='<div style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#ef4444;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">\u274c</div><div><strong>Payment rejected</strong><div style="font-size:12px;margin-top:4px">Please contact support with your UTR number.</div></div></div>';
+btn.disabled=true;
+btn.style.opacity='0.5';
+btn.style.cursor='not-allowed';
+btn.textContent='\u274c Payment Rejected';
+}
+}
+
+function handleDownloadClick(){
+if(document.getElementById('downloadReportBtn').disabled)return;
+if(sessionStorage.getItem('paid_'+currentType)==='true'){
+downloadReport();
+}else{
+openPayment();
+}
 }
 
 // =====================================================
@@ -1531,7 +1605,14 @@ function isPaidOrFree(){
     return paid==='true';
 }
 function getPaywallHTML(){
-    return '<div class="paywall-overlay"><div class="paywall-lock">\U0001f512</div><h3>Unlock Full Report</h3><p>See detailed transaction-level results, download CSV, and get complete analysis.</p><button class="btn-primary" onclick="openPayment()" style="margin:0 auto">\U0001f4b0 Unlock Full Report \u20b9499</button><div style="margin-top:12px;font-size:11px;color:var(--text3)">Summary results above are always free.</div></div>';
+    if(currentPaymentSessionId){
+const status=await fetch('/api/payment/status/'+currentPaymentSessionId).then(r=>r.json()).catch(()=>({}));
+if(status.status==='verified')return h;
+if(status.status==='pending'){
+return '<div class="paywall-overlay"><div style="font-size:40px;margin-bottom:10px">\u23f3</div><h3>Waiting for Admin Confirmation</h3><p>Your payment has been submitted. Full report will be available once admin confirms.</p><div style="background:rgba(245,158,11,.1);padding:12px;border-radius:8px;color:#f59e0b;font-size:13px">Payment submitted \u2014 auto-checking every 5 seconds</div></div>';
+}
+}
+return '<div class="paywall-overlay"><div class="paywall-lock">\U0001f512</div><h3>Unlock Full Report</h3><p>See detailed transaction-level results, download CSV, and get complete analysis.</p><button class="btn-primary" onclick="openPayment()" style="margin:0 auto">\U0001f4b0 Unlock Full Report \u20b9499</button><div style="margin-top:12px;font-size:11px;color:var(--text3)">Summary results above are always free.</div></div>';
 }
 function unlockFullReport(){
     sessionStorage.setItem('paid_'+currentType,'true');

@@ -1,7 +1,7 @@
 import sqlite3
 import os
 from datetime import datetime
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from pydantic import BaseModel
 
 router = APIRouter()
@@ -115,7 +115,19 @@ async def payment_status(session_id: str):
 # ===== ADMIN ENDPOINTS =====
 
 @router.get("/api/admin/payments")
-async def list_payments(key: str = ""):
+async def list_payments(request: Request, key: str = ""):
+    if not key:
+        token = request.cookies.get("session_token", "")
+        if token:
+            try:
+                from app.services.auth_service import get_user_by_token
+                user = await get_user_by_token(token)
+                if user and user.get("is_admin"):
+                    key = "session_admin"
+            except Exception:
+                pass
+    if key != "reconcile2026" and key != "session_admin":
+        return {"error": "Unauthorized"}
     if key != ADMIN_KEY:
         raise HTTPException(status_code=403, detail="Invalid admin key")
     conn = get_db()
@@ -129,7 +141,20 @@ async def list_payments(key: str = ""):
 
 
 @router.post("/api/admin/verify/{payment_id}")
-async def verify_payment(payment_id: int, key: str = ""):
+async def verify_payment(payment_id: int, request: Request, key: str = ""):
+    # Accept both key-based and session-based auth
+    if not key:
+        token = request.cookies.get("session_token", "")
+        if token:
+            try:
+                from app.services.auth_service import get_user_by_token
+                user = await get_user_by_token(token)
+                if user and user.get("is_admin"):
+                    key = "session_admin"
+            except Exception:
+                pass
+    if key != "reconcile2026" and key != "session_admin":
+        return {"error": "Unauthorized"}
     if key != ADMIN_KEY:
         raise HTTPException(status_code=403, detail="Invalid admin key")
     conn = get_db()
@@ -145,7 +170,19 @@ async def verify_payment(payment_id: int, key: str = ""):
 
 
 @router.post("/api/admin/reject/{payment_id}")
-async def reject_payment(payment_id: int, key: str = ""):
+async def reject_payment(payment_id: int, request: Request, key: str = ""):
+    if not key:
+        token = request.cookies.get("session_token", "")
+        if token:
+            try:
+                from app.services.auth_service import get_user_by_token
+                user = await get_user_by_token(token)
+                if user and user.get("is_admin"):
+                    key = "session_admin"
+            except Exception:
+                pass
+    if key != "reconcile2026" and key != "session_admin":
+        return {"error": "Unauthorized"}
     if key != ADMIN_KEY:
         raise HTTPException(status_code=403, detail="Invalid admin key")
     conn = get_db()
