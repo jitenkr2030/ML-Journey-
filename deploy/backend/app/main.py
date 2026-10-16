@@ -59,6 +59,14 @@ async def startup():
 async def root():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "index.html"))
 
+@app.get("/admin.html")
+async def admin_html():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
+
+@app.get("/dashboard.html")
+async def dashboard_html():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
+
 @app.get("/admin")
 async def serve_admin():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
