@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Markup vs Margin Calculator — Profit Percentage Converter | ReconcileAI</title>
+<meta name="description" content="Free markup vs margin calculator. Convert between markup and margin. Calculate selling price, profit amount, profit percentage. For businesses & retailers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#fff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}.hero p{color:var(--text2);font-size:16px;max-width:540px;margin:0 auto}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:32px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.form-group{margin-bottom:18px}.form-group label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:8px}
+.form-group label .val{color:var(--accent);font-family:var(--font-mono);font-size:14px;text-transform:none;letter-spacing:0}
+.input-wrap{position:relative}.currency-symbol{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:16px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:12px 16px 12px 36px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:18px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+input[type=range]{width:100%;height:6px;-webkit-appearance:none;appearance:none;background:var(--surface2);border-radius:3px;outline:none;cursor:pointer;margin-top:8px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid var(--bg)}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
+.result-box .icon{font-size:24px;margin-bottom:8px}.result-box .val{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--accent)}
+.result-box .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-top:4px}
+.result-box.green .val{color:var(--accent2)}.result-box.orange .val{color:var(--accent3)}
+.result-card{margin-top:20px;padding:24px;background:var(--surface2);border:1px solid var(--border);border-radius:16px}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-label{font-size:14px;color:var(--text2)}.result-value{font-family:var(--font-mono);font-size:16px;font-weight:700}
+.result-row.total .result-value{font-size:20px;color:var(--accent)}
+.info-box{margin-top:16px;padding:16px;background:rgba(79,140,255,.06);border:1px solid rgba(79,140,255,.15);border-radius:12px;font-size:12px;color:var(--text2);line-height:1.8}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:20px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:16px 20px;font-size:13px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:20px}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/tools" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a><div class="nav-right"><button class="theme-toggle" onclick="toggleTheme()">☀️</button><a href="/" class="cta-btn">Try ReconcileAI Free →</a></div></div></nav>
+<div class="container">
+<div class="hero"><h1>Free <em>Markup vs Margin</em> Calculator</h1><p>Convert between markup and margin. Calculate selling price, profit, and profit percentage instantly.</p></div>
+<div class="calc-card">
+<div class="form-group"><label>Cost Price (CP)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="costPrice" value="1000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Markup % (on cost) OR Margin % (on selling price)</label><div class="input-wrap"><input type="number" class="input-field" id="percent" value="25" oninput="calculate()" step="0.5" style="padding-left:16px"></div></div>
+<div class="form-group"><label>Calculate From</label><div style="display:flex;gap:8px">
+<button class="mode-btn active" id="markupBtn" onclick="setMode('markup')" style="flex:1;padding:12px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;background:var(--surface2);color:var(--text2)">Markup (on Cost)</button>
+<button class="mode-btn" id="marginBtn" onclick="setMode('margin')" style="flex:1;padding:12px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;background:var(--surface2);color:var(--text2)">Margin (on Selling Price)</button>
+</div></div>
+<div class="result-grid">
+<div class="result-box green"><div class="icon">💰</div><div class="val" id="sellingPrice">₹0</div><div class="label">Selling Price</div></div>
+<div class="result-box orange"><div class="icon">📊</div><div class="val" id="profitAmount">₹0</div><div class="label">Profit Amount</div></div>
+<div class="result-box"><div class="icon">📈</div><div class="val" id="profitPct">₹0</div><div class="label">Profit Percentage</div></div>
+</div>
+<div class="result-card">
+<div class="result-row"><span class="result-label">Cost Price (CP)</span><span class="result-value" id="cpResult">₹0</span></div>
+<div class="result-row"><span class="result-label">Profit (SP - CP)</span><span class="result-value" id="profitResult">₹0</span></div>
+<div class="result-row"><span class="result-label">Markup % (on Cost)</span><span class="result-value" id="markupPct">₹0</span></div>
+<div class="result-row"><span class="result-label">Margin % (on Selling Price)</span><span class="result-value" id="marginPct">₹0</span></div>
+<div class="result-row total"><span class="result-label">Selling Price (SP)</span><span class="result-value" id="spResult">₹0</span></div>
+</div>
+<div class="info-box"><strong>Markup vs Margin:</strong> Markup = Profit / Cost Price × 100. Margin = Profit / Selling Price × 100. For the same product: 25% markup = 20% margin. Markup is always higher than margin for the same profit.</div>
+</div>
+<h2 class="section-title">FAQ</h2>
+<details class="faq"><summary>What is the difference between markup and margin?</summary><div class="faq-body"><strong>Markup</strong> = (Profit / Cost Price) × 100. Used to set prices from cost.<br><strong>Margin</strong> = (Profit / Selling Price) × 100. Used to measure profitability.<br><br>Example: CP = ₹800, SP = ₹1000. Profit = ₹200. Markup = 25%, Margin = 20%.</div></details>
+<details class="faq"><summary>How do I convert markup to margin?</summary><div class="faq-body">Margin = Markup / (1 + Markup). Example: 25% markup = 0.25 / 1.25 = 20% margin.<br>Conversely: Markup = Margin / (1 - Margin). Example: 20% margin = 0.20 / 0.80 = 25% markup.</div></details>
+<details class="faq"><summary>Which one should I use?</summary><div class="faq-body">Use <strong>markup</strong> when pricing (setting selling price from cost). Use <strong>margin</strong> when analyzing profitability (comparing across products/periods). Most businesses should track margin.</div></details>
+<details class="faq"><summary>Is this calculator free?</summary><div class="faq-body">Yes! For GST & bank reconciliation automation, try <a href="/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+<div class="funnel-banner"><h3>Need GST & Bank Reconciliation?</h3><p>Automate compliance with AI. 2 free reconciliations per month.</p><a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a></div>
+</div>
+<footer><p>Free Calculator by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p><p style="margin-top:6px">For educational purposes. Verify with your CA.</p></footer>
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+function fmt(n){return '\u20b9'+Math.round(n).toLocaleString('en-IN')}
+function fmtLakh(n){if(n>=10000000)return '\u20b9'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '\u20b9'+(n/100000).toFixed(2)+' L';return '\u20b9'+Math.round(n).toLocaleString('en-IN')}
+let calcMode='markup';
+function setMode(m){calcMode=m;
+document.getElementById('markupBtn').style.borderColor=m==='markup'?'var(--accent)':'var(--border)';
+document.getElementById('markupBtn').style.color=m==='markup'?'var(--accent)':'var(--text2)';
+document.getElementById('marginBtn').style.borderColor=m==='margin'?'var(--accent)':'var(--border)';
+document.getElementById('marginBtn').style.color=m==='margin'?'var(--accent)':'var(--text2)';
+calculate()}
+function calculate(){
+const cp=parseFloat(document.getElementById('costPrice').value)||0;
+const pct=parseFloat(document.getElementById('percent').value)||0;
+let sp,profit,markupPct,marginPct;
+if(calcMode==='markup'){
+profit=cp*(pct/100);
+sp=cp+profit;
+markupPct=pct;
+marginPct=sp>0?(profit/sp*100):0;
+}else{
+sp=cp/(1-pct/100);
+profit=sp-cp;
+marginPct=pct;
+markupPct=cp>0?(profit/cp*100):0;
+}
+document.getElementById('sellingPrice').textContent=fmt(sp);
+document.getElementById('profitAmount').textContent=fmt(profit);
+document.getElementById('profitPct').textContent=marginPct.toFixed(2)+'%';
+document.getElementById('cpResult').textContent=fmt(cp);
+document.getElementById('profitResult').textContent=fmt(profit);
+document.getElementById('markupPct').textContent=markupPct.toFixed(2)+'%';
+document.getElementById('marginPct').textContent=marginPct.toFixed(2)+'%';
+document.getElementById('spResult').textContent=fmt(sp);
+}
+calculate();
+</script>
+</body>
+</html>

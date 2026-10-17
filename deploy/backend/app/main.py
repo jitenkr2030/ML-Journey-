@@ -131,6 +131,19 @@ async def advance_tax_calculator():
 async def depreciation_calculator():
     return _serve_page("free-tools", "depreciation-calculator", "index.html")
 
+
+@app.get("/tools/gratuity-calculator")
+async def gratuity_calculator():
+    return _serve_page("free-tools", "gratuity-calculator", "index.html")
+
+@app.get("/tools/pf-calculator")
+async def pf_calculator():
+    return _serve_page("free-tools", "pf-calculator", "index.html")
+
+@app.get("/tools/markup-calculator")
+async def markup_calculator():
+    return _serve_page("free-tools", "markup-calculator", "index.html")
+
 @app.get("/api/types")
 async def list_types():
     return {
