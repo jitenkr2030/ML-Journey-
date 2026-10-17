@@ -339,6 +339,230 @@ td,th{padding:8px 10px}
 .paywall-lock{font-size:40px;margin-bottom:10px}
 .limit-warning{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--danger);padding:12px 16px;border-radius:10px;font-size:13px;margin:12px 0;display:flex;align-items:center;gap:10px}
 .limit-warning .icon{font-size:20px}
+
+/* ============================================ */
+/* THEME SYSTEM (Dark + Light)                  */
+/* ============================================ */
+[data-theme="light"]{
+--bg:#f8f7f4;
+--surface:#ffffff;
+--surface2:#f0eeea;
+--border:#e2e0da;
+--accent:#2563eb;
+--accent2:#059669;
+--accent3:#d97706;
+--danger:#dc2626;
+--purple:#7c3aed;
+--text:#1a1a1f;
+--text2:#5c5c66;
+--text3:#9898a0;
+}
+
+[data-theme="light"] nav{
+background:rgba(248,247,244,.88);
+border-bottom:1px solid var(--border);
+}
+
+[data-theme="light"] .free-banner{
+background:linear-gradient(135deg,rgba(5,150,105,.08),rgba(37,99,235,.08));
+border-color:rgba(5,150,105,.25);
+}
+
+[data-theme="light"] .paywall-overlay{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .limit-warning{
+background:rgba(220,38,38,.08);
+border-color:rgba(220,38,38,.2);
+}
+
+[data-theme="light"] .upload-box{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .upload-box:hover{
+border-color:var(--accent);
+background:rgba(37,99,235,.03);
+}
+
+[data-theme="light"] .summary-card{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .summary-card.total{background:rgba(37,99,235,.06);border-color:rgba(37,99,235,.15)}
+[data-theme="light"] .summary-card.matched{background:rgba(5,150,105,.06);border-color:rgba(5,150,105,.15)}
+[data-theme="light"] .summary-card.unmatched{background:rgba(220,38,38,.06);border-color:rgba(220,38,38,.15)}
+[data-theme="light"] .summary-card.rate{background:rgba(217,119,6,.06);border-color:rgba(217,119,6,.15)}
+
+[data-theme="light"] .modal{
+background:var(--surface);
+box-shadow:0 20px 60px rgba(0,0,0,.12);
+}
+
+[data-theme="light"] .modal-overlay{
+background:rgba(248,247,244,.8);
+}
+
+[data-theme="light"] .toast{
+background:var(--surface);
+border-color:var(--border);
+box-shadow:0 8px 30px rgba(0,0,0,.1);
+}
+
+[data-theme="light"] .pipeline-item{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .pipeline-item.running{
+background:rgba(37,99,235,.06);
+border-color:var(--accent);
+}
+
+[data-theme="light"] .progress-bar-bg{
+background:var(--surface2);
+}
+
+[data-theme="light"] .free-counter{
+background:var(--surface2);
+border:1px solid var(--border);
+}
+
+[data-theme="light"] .price-card{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .price-card:hover{
+border-color:var(--accent);
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+[data-theme="light"] .feature-card{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .feature-card:hover{
+border-color:var(--accent);
+box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+[data-theme="light"] .gstr3b-summary{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] .gstr3b-item{
+background:var(--surface2);
+border-color:var(--border);
+}
+
+[data-theme="light"] .table-tab{
+background:var(--surface2);
+border-color:var(--border);
+}
+
+[data-theme="light"] .table-tab.active{
+background:var(--accent);
+}
+
+[data-theme="light"] table{
+background:var(--surface);
+}
+
+[data-theme="light"] th{
+background:var(--surface2);
+color:var(--text2);
+border-color:var(--border);
+}
+
+[data-theme="light"] td{
+border-color:var(--border);
+}
+
+[data-theme="light"] tr:hover td{
+background:var(--surface2);
+}
+
+[data-theme="light"] .loading-overlay{
+background:rgba(248,247,244,.92);
+}
+
+[data-theme="light"] .spinner{
+border-color:var(--border);
+border-top-color:var(--accent);
+}
+
+[data-theme="light"] .stat-card{
+background:var(--surface);
+border-color:var(--border);
+}
+
+[data-theme="light"] footer{
+border-top:1px solid var(--border);
+background:var(--surface);
+}
+
+[data-theme="light"] .hero{
+background:radial-gradient(ellipse at 20% 50%,rgba(37,99,235,.05),transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(5,150,105,.04),transparent 50%),var(--bg);
+}
+
+[data-theme="light"] .section-label{
+color:var(--accent);
+}
+
+[data-theme="light"] .type-tab{
+background:var(--surface);
+border-color:var(--border);
+color:var(--text2);
+}
+
+[data-theme="light"] .type-tab.active{
+background:var(--accent);
+color:#fff;
+}
+
+[data-theme="light"] .type-tab:hover{
+border-color:var(--accent);
+}
+
+[data-theme="light"] .hero-stat .num{
+color:var(--accent);
+}
+
+/* Theme transition */
+body,.modal,.modal-overlay,.upload-box,table,th,td,.summary-card,.price-card,.feature-card,.toast,.pipeline-item,.progress-bar-bg,.free-counter,nav,.gstr3b-summary,.gstr3b-item,.table-tab,footer{
+transition:background-color .3s ease,border-color .3s ease,color .3s ease,box-shadow .3s ease;
+}
+
+/* Theme toggle button */
+.theme-toggle{
+background:var(--surface2);
+border:1px solid var(--border);
+color:var(--text);
+width:36px;height:36px;
+border-radius:10px;
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;font-size:16px;
+transition:all .3s ease;
+position:relative;overflow:hidden;
+}
+.theme-toggle:hover{
+border-color:var(--accent);
+transform:scale(1.05);
+}
+.theme-toggle .theme-icon{
+transition:transform .5s cubic-bezier(.4,0,.2,1),opacity .3s;
+display:block;
+}
+.theme-toggle:hover .theme-icon{
+transform:rotate(30deg);
+}
 </style>
 </head>
 <body>
@@ -358,6 +582,7 @@ td,th{padding:8px 10px}
 <span id="userName" style="color:var(--text2);font-size:13px"></span>
 <a href="#" onclick="openSettings()" title="Settings" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">⚙️</a>
 <a href="#" onclick="openClients()" title="Clients" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">👥</a>
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="themeToggle"><span class="theme-icon" id="themeIcon">☀️</span></button>
 <a href="#" onclick="openHistory()" title="History" style="color:var(--text2);font-size:18px;cursor:pointer;padding:4px 8px">📋</a>
 <a href="#" class="nav-cta" onclick="showDashboard()" style="background:var(--accent2)">Dashboard</a>
 <a href="#" class="nav-cta" onclick="logoutUser()" style="background:var(--danger,#ef4444)">Logout</a>
@@ -1228,6 +1453,13 @@ function toastInfo(msg,d){showToast(msg,'info',d)}
 <input class="input-field" id="setEmail" type="email" placeholder="ca@firm.com">
 <button class="btn-full green" onclick="saveSettings()">Save Preferences</button>
 <button class="btn-full" onclick="clearSettings()" style="margin-top:8px;background:var(--surface2);color:var(--text2)">Clear All</button>
+<div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+<label class="input-label">Theme</label>
+<div style="display:flex;gap:8px">
+<button onclick="applyTheme('dark')" id="themeDarkBtn" style="flex:1;padding:10px;border:2px solid var(--border);border-radius:10px;background:var(--surface2);color:var(--text);cursor:pointer;font-size:13px">🌙 Dark</button>
+<button onclick="applyTheme('light')" id="themeLightBtn" style="flex:1;padding:10px;border:2px solid var(--border);border-radius:10px;background:var(--surface2);color:var(--text);cursor:pointer;font-size:13px">☀️ Light</button>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1720,6 +1952,65 @@ async function submitServiceInquiry(){
         errEl.style.display='block';
     }
     btn.disabled=false;btn.textContent='Submit Enquiry \u2014 Free Consultation';
+}
+</script>
+
+<script>
+// ============================================
+// THEME SYSTEM (Dark + Light)
+// ============================================
+function getPreferredTheme(){
+    const saved=localStorage.getItem('reconcileai_theme');
+    if(saved)return saved;
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)return 'light';
+    return 'dark';
+}
+
+function applyTheme(theme){
+    document.documentElement.setAttribute('data-theme',theme);
+    localStorage.setItem('reconcileai_theme',theme);
+    const icon=document.getElementById('themeIcon');
+    if(icon){
+        icon.style.transform='rotate(180deg)';
+        icon.style.opacity='0';
+        setTimeout(()=>{
+            icon.textContent=theme==='light'?'☀️':'🌙';
+            icon.style.transform='rotate(0deg)';
+            icon.style.opacity='1';
+        },150);
+    }
+}
+
+function toggleTheme(){
+    const current=document.documentElement.getAttribute('data-theme');
+    const next=current==='light'?'dark':'light';
+    applyTheme(next);
+    toastInfo(next==='light'?'Light mode enabled':'Dark mode enabled');
+}
+
+// Initialize theme on load
+(function(){
+    const theme=getPreferredTheme();
+    document.documentElement.setAttribute('data-theme',theme);
+    // Set icon after DOM ready
+    document.addEventListener('DOMContentLoaded',()=>{
+        const icon=document.getElementById('themeIcon');
+        if(icon)icon.textContent=theme==='light'?'☀️':'🌙';
+    });
+    // Also set immediately (in case DOM already loaded)
+    setTimeout(()=>{
+        const icon=document.getElementById('themeIcon');
+        if(icon)icon.textContent=theme==='light'?'☀️':'🌙';
+    },50);
+})();
+
+// Listen for OS theme changes
+if(window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change',(e)=>{
+        if(!localStorage.getItem('reconcileai_theme')){
+            applyTheme(e.matches?'light':'dark');
+        }
+    });
 }
 </script>
 </body>
