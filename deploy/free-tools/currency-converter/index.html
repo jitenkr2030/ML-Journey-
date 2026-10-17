@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Currency Converter — INR to USD, EUR, GBP, AED | ReconcileAI</title>
+<meta name="description" content="Free currency converter for India. INR to USD, EUR, GBP, AED, JPY and more. Exchange rates for business. Import/export pricing. No signup required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#fff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}.hero p{color:var(--text2);font-size:16px;max-width:540px;margin:0 auto}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:32px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.form-group{margin-bottom:18px}.form-group label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:8px}
+.form-group label .val{color:var(--accent);font-family:var(--font-mono);font-size:14px;text-transform:none;letter-spacing:0}
+.input-wrap{position:relative}.currency-symbol{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:16px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:12px 16px 12px 36px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:18px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+.input-field:focus{border-color:var(--accent)}
+select.input-field{padding:12px 16px;font-family:var(--font-body);cursor:pointer;appearance:auto}
+.mode-switch{display:flex;gap:8px;margin-bottom:20px}
+.mode-btn{flex:1;padding:12px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;background:var(--surface2);transition:all .2s;text-align:center}
+.mode-btn:hover{border-color:var(--accent)}.mode-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(79,140,255,.08)}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
+.result-box .icon{font-size:24px;margin-bottom:8px}.result-box .val{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--accent)}
+.result-box .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-top:4px}
+.result-box.green .val{color:var(--accent2)}.result-box.orange .val{color:var(--accent3)}
+.result-card{margin-top:20px;padding:24px;background:var(--surface2);border:1px solid var(--border);border-radius:16px}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-label{font-size:14px;color:var(--text2)}.result-value{font-family:var(--font-mono);font-size:16px;font-weight:700}
+.result-row.total .result-value{font-size:20px;color:var(--accent)}
+.info-box{margin-top:16px;padding:16px;background:rgba(79,140,255,.06);border:1px solid rgba(79,140,255,.15);border-radius:12px;font-size:12px;color:var(--text2);line-height:1.8}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:20px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:16px 20px;font-size:13px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:20px}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/tools" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a><div class="nav-right"><button class="theme-toggle" onclick="toggleTheme()">☀️</button><a href="/" class="cta-btn">Try ReconcileAI Free →</a></div></div></nav>
+<div class="container">
+<div class="hero"><h1>Free <em>Currency Converter</em></h1><p>Convert INR to USD, EUR, GBP, AED and more. Reference rates for import/export businesses.</p></div>
+<div class="calc-card">
+<div class="form-group"><label>Amount</label><div class="input-wrap"><span class="currency-symbol" id="fromSymbol">$</span><input type="number" class="input-field" id="amount" value="1000" oninput="calculate()"></div></div>
+<div class="form-group"><label>From Currency</label><select class="input-field" id="fromCurrency" onchange="onCurrencyChange()"><option value="USD">USD - US Dollar</option><option value="INR" selected>INR - Indian Rupee</option><option value="EUR">EUR - Euro</option><option value="GBP">GBP - British Pound</option><option value="AED">AED - UAE Dirham</option><option value="JPY">JPY - Japanese Yen</option><option value="CAD">CAD - Canadian Dollar</option><option value="AUD">AUD - Australian Dollar</option><option value="SGD">SGD - Singapore Dollar</option><option value="CNY">CNY - Chinese Yuan</option></select></div>
+<div style="text-align:center;margin:16px 0"><button onclick="swapCurrencies()" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:20px;transition:all .3s">⇅</button></div>
+<div class="form-group"><label>To Currency</label><select class="input-field" id="toCurrency" onchange="onCurrencyChange()"><option value="USD" selected>USD - US Dollar</option><option value="INR">INR - Indian Rupee</option><option value="EUR">EUR - Euro</option><option value="GBP">GBP - British Pound</option><option value="AED">AED - UAE Dirham</option><option value="JPY">JPY - Japanese Yen</option><option value="CAD">CAD - Canadian Dollar</option><option value="AUD">AUD - Australian Dollar</option><option value="SGD">SGD - Singapore Dollar</option><option value="CNY">CNY - Chinese Yuan</option></select></div>
+<div class="result-grid">
+<div class="result-box green"><div class="icon">💱</div><div class="val" id="convertedAmount">$0</div><div class="label">Converted Amount</div></div>
+<div class="result-box orange"><div class="icon">📊</div><div class="val" id="exchangeRate">1 = 0</div><div class="label">Exchange Rate</div></div>
+<div class="result-box"><div class="icon">🌐</div><div class="val" id="reverseRate">0</div><div class="label">Reverse Rate</div></div>
+</div>
+<div class="info-box"><strong>Note:</strong> Rates are approximate and for reference only. Actual rates vary by bank, forex service, and transaction type. For business forex needs, check with your bank for live rates. Rates updated: Jan 2026 (approximate).</div>
+<div class="result-card">
+<div class="result-row"><span class="result-label">1 <span id="fromName">INR</span> =</span><span class="result-value" id="rate1">0 USD</span></div>
+<div class="result-row"><span class="result-label">100 <span id="fromName2">INR</span> =</span><span class="result-value" id="rate100">0 USD</span></div>
+<div class="result-row"><span class="result-label">1,000 <span id="fromName3">INR</span> =</span><span class="result-value" id="rate1000">0 USD</span></div>
+<div class="result-row total"><span class="result-label"><span id="amountDisplay">1,000</span> <span id="fromName4">INR</span> =</span><span class="result-value" id="finalResult">0 USD</span></div>
+</div>
+</div>
+<h2 class="section-title">FAQ</h2>
+<details class="faq"><summary>Are these live exchange rates?</summary><div class="faq-body">These are approximate reference rates. Actual rates vary by bank, forex service (Thomas Cook, BookMyForex), and transaction type. For business transactions, always confirm with your bank.</div></details>
+<details class="faq"><summary>What is the difference between buy rate and sell rate?</summary><div class="faq-body">The <strong>buy rate</strong> is what the bank pays you when you sell foreign currency. The <strong>sell rate</strong> is what you pay when buying foreign currency. The bank's margin (spread) is typically 1-3%.</div></details>
+<details class="faq"><summary>Which currencies are supported?</summary><div class="faq-body">INR (Indian Rupee), USD (US Dollar), EUR (Euro), GBP (British Pound), AED (UAE Dirham), JPY (Japanese Yen), CAD (Canadian Dollar), AUD (Australian Dollar), SGD (Singapore Dollar), CNY (Chinese Yuan).</div></details>
+<details class="faq"><summary>Is this converter free?</summary><div class="faq-body">Yes! For GST & bank reconciliation automation, try <a href="/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+<div class="funnel-banner"><h3>Need GST & Bank Reconciliation?</h3><p>Automate compliance with AI. 2 free reconciliations per month.</p><a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a></div>
+</div>
+<footer><p>Free Calculator by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p><p style="margin-top:6px">For educational purposes. Verify with your CA.</p></footer>
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+function fmt(n){return '\u20b9'+Math.round(n).toLocaleString('en-IN')}
+function fmtLakh(n){if(n>=10000000)return '\u20b9'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '\u20b9'+(n/100000).toFixed(2)+' L';return '\u20b9'+Math.round(n).toLocaleString('en-IN')}
+const RATES={USD:1,INR:83.5,EUR:0.92,GBP:0.79,AED:3.67,JPY:149.5,CAD:1.36,AUD:1.53,SGD:1.34,CNY:7.24};
+const SYMBOLS={USD:'$',INR:'\u20b9',EUR:'\u20ac',GBP:'\u00a3',AED:'\u062f.\u0625',JPY:'\u00a5',CAD:'C$',AUD:'A$',SGD:'S$',CNY:'\u00a5'};
+function onCurrencyChange(){
+const from=document.getElementById('fromCurrency').value;
+document.getElementById('fromSymbol').textContent=SYMBOLS[from]||from;
+calculate();
+}
+function swapCurrencies(){
+const from=document.getElementById('fromCurrency').value;
+const to=document.getElementById('toCurrency').value;
+document.getElementById('fromCurrency').value=to;
+document.getElementById('toCurrency').value=from;
+onCurrencyChange();
+}
+function calculate(){
+const amount=parseFloat(document.getElementById('amount').value)||0;
+const from=document.getElementById('fromCurrency').value;
+const to=document.getElementById('toCurrency').value;
+const rate=RATES[from]/RATES[to];
+const converted=amount*rate;
+const symbol=SYMBOLS[to]||to;
+const fromSymbol=SYMBOLS[from]||from;
+document.getElementById('convertedAmount').textContent=symbol+converted.toLocaleString('en-IN',{maximumFractionDigits:2});
+document.getElementById('exchangeRate').textContent='1 '+from+' = '+rate.toFixed(4)+' '+to;
+document.getElementById('reverseRate').textContent='1 '+to+' = '+(1/rate).toFixed(4)+' '+from;
+document.getElementById('rate1').textContent=symbol+(1*rate).toFixed(4);
+document.getElementById('rate100').textContent=symbol+(100*rate).toFixed(2);
+document.getElementById('rate1000').textContent=symbol+(1000*rate).toFixed(2);
+document.getElementById('finalResult').textContent=symbol+converted.toLocaleString('en-IN',{maximumFractionDigits:2});
+document.getElementById('amountDisplay').textContent=amount.toLocaleString('en-IN');
+['fromName','fromName2','fromName3','fromName4'].forEach(id=>{document.getElementById(id).textContent=from});
+}
+onCurrencyChange();
+calculate();
+</script>
+</body>
+</html>

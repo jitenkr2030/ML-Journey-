@@ -144,6 +144,23 @@ async def pf_calculator():
 async def markup_calculator():
     return _serve_page("free-tools", "markup-calculator", "index.html")
 
+
+@app.get("/tools/break-even-calculator")
+async def break_even_calculator():
+    return _serve_page("free-tools", "break-even-calculator", "index.html")
+
+@app.get("/tools/roi-calculator")
+async def roi_calculator():
+    return _serve_page("free-tools", "roi-calculator", "index.html")
+
+@app.get("/tools/interest-calculator")
+async def interest_calculator():
+    return _serve_page("free-tools", "interest-calculator", "index.html")
+
+@app.get("/tools/currency-converter")
+async def currency_converter():
+    return _serve_page("free-tools", "currency-converter", "index.html")
+
 @app.get("/api/types")
 async def list_types():
     return {
