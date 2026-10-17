@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import logging
 from dotenv import load_dotenv
 load_dotenv()
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from pathlib import Path
 
 from app.routes import reconcile
@@ -79,21 +79,44 @@ async def serve_dashboard():
 
 
 # ==================== FREE TOOLS ====================
+
+def _serve_page(*parts):
+    """Safely serve a static page with fallback paths."""
+    base = Path(__file__).resolve().parent.parent.parent
+    for root in [base, base.parent, Path.cwd() / "deploy"]:
+        p = root.joinpath(*parts)
+        if p.exists():
+            return FileResponse(str(p))
+    return HTMLResponse(f"<h1>404 - Page not found</h1><p>Looking for: {'/'.join(parts)}</p>", status_code=404)
+
 @app.get("/tools")
 async def tools_index():
-    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "tools.html"))
+    return _serve_page("tools.html")
 
 @app.get("/tools/gst-calculator")
 async def gst_calculator():
-    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "free-tools" / "gst-calculator" / "index.html"))
+    return _serve_page("free-tools", "gst-calculator", "index.html")
 
 @app.get("/tools/tds-calculator")
 async def tds_calculator():
-    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "free-tools" / "tds-calculator" / "index.html"))
+    return _serve_page("free-tools", "tds-calculator", "index.html")
 
 @app.get("/tools/income-tax-calculator")
 async def income_tax_calculator():
-    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "free-tools" / "income-tax-calculator" / "index.html"))
+    return _serve_page("free-tools", "income-tax-calculator", "index.html")
+
+
+@app.get("/tools/hra-calculator")
+async def hra_calculator():
+    return _serve_page("free-tools", "hra-calculator", "index.html")
+
+@app.get("/tools/emi-calculator")
+async def emi_calculator():
+    return _serve_page("free-tools", "emi-calculator", "index.html")
+
+@app.get("/tools/fd-calculator")
+async def fd_calculator():
+    return _serve_page("free-tools", "fd-calculator", "index.html")
 
 @app.get("/api/types")
 async def list_types():

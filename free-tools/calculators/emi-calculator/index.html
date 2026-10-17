@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free EMI Calculator — Home, Car, Personal Loan (Amortization Schedule) | ReconcileAI</title>
+<meta name="description" content="Free EMI calculator for India. Calculate loan EMI, total interest, total amount. Home loan, car loan, personal loan. Full amortization schedule. Visual charts.">
+<meta name="keywords" content="EMI calculator, home loan EMI calculator, car loan EMI, personal loan EMI, loan calculator India, EMI calculation formula, amortization schedule">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#ffffff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:960px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:960px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--text2);font-size:16px;max-width:540px;margin:0 auto}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:32px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.loan-type-switch{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.loan-type-btn{padding:10px 18px;background:var(--surface2);border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;transition:all .2s}
+.loan-type-btn:hover{border-color:var(--accent);color:var(--text)}
+.loan-type-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.form-group{margin-bottom:18px}
+.form-group label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:8px}
+.form-group label .val{color:var(--accent);font-family:var(--font-mono);font-size:14px;text-transform:none;letter-spacing:0}
+.input-wrap{position:relative}
+.currency-symbol{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:16px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:12px 16px 12px 36px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:18px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+input[type="range"]{width:100%;height:6px;-webkit-appearance:none;appearance:none;background:var(--surface2);border-radius:3px;outline:none;cursor:pointer;margin-top:8px}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid var(--bg);box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
+.result-box .icon{font-size:24px;margin-bottom:8px}
+.result-box .val{font-family:var(--font-mono);font-size:22px;font-weight:700;color:var(--accent)}
+.result-box .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-top:4px}
+.chart-bar{display:flex;height:40px;border-radius:10px;overflow:hidden;margin:20px 0;border:1px solid var(--border)}
+.chart-bar .principal{background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .5s}
+.chart-bar .interest{background:var(--accent3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .5s}
+.chart-legend{display:flex;gap:20px;justify-content:center;font-size:12px;color:var(--text2)}
+.chart-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px}
+.sched-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:16px}
+.sched-table th{background:var(--surface2);padding:8px 12px;text-align:right;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);border-bottom:2px solid var(--border)}
+.sched-table th:first-child{text-align:left}
+.sched-table td{padding:8px 12px;border-bottom:1px solid var(--border);text-align:right;font-family:var(--font-mono)}
+.sched-table td:first-child{text-align:left}
+.sched-table tr:hover td{background:var(--surface2)}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:20px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:16px 20px;font-size:13px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}
+.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:20px}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="/tools" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a>
+<div class="nav-right">
+<button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+<a href="/" class="cta-btn">Try ReconcileAI Free →</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="hero">
+<h1>Free <em>EMI Calculator</em></h1>
+<p>Calculate loan EMI, total interest & amortization schedule. Home, car, personal, education loans.</p>
+</div>
+
+<div class="calc-card">
+<!-- Loan Type -->
+<div class="loan-type-switch">
+<button class="loan-type-btn active" onclick="setLoanType('home',this)">🏠 Home Loan</button>
+<button class="loan-type-btn" onclick="setLoanType('car',this)">🚗 Car Loan</button>
+<button class="loan-type-btn" onclick="setLoanType('personal',this)">💳 Personal Loan</button>
+<button class="loan-type-btn" onclick="setLoanType('education',this)">🎓 Education Loan</button>
+<button class="loan-type-btn" onclick="setLoanType('business',this)">💼 Business Loan</button>
+</div>
+
+<!-- Loan Amount -->
+<div class="form-group">
+<label>Loan Amount <span class="val" id="loanAmountVal">₹25,00,000</span></label>
+<div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="loanAmount" value="2500000" oninput="calculate()"></div>
+<input type="range" id="loanAmountRange" min="50000" max="50000000" step="50000" value="2500000" oninput="document.getElementById('loanAmount').value=this.value;calculate()">
+</div>
+
+<!-- Interest Rate -->
+<div class="form-group">
+<label>Interest Rate (Annual) <span class="val" id="rateVal">8.50%</span></label>
+<div class="input-wrap"><input type="number" class="input-field" id="rate" value="8.5" oninput="calculate()" step="0.05" style="padding-left:16px"></div>
+<input type="range" id="rateRange" min="5" max="24" step="0.05" value="8.5" oninput="document.getElementById('rate').value=this.value;calculate()">
+</div>
+
+<!-- Tenure -->
+<div class="form-group">
+<label>Loan Tenure <span class="val" id="tenureVal">20 Years (240 months)</span></label>
+<div class="input-wrap"><input type="number" class="input-field" id="tenure" value="20" oninput="calculate()" style="padding-left:16px"></div>
+<input type="range" id="tenureRange" min="1" max="30" step="1" value="20" oninput="document.getElementById('tenure').value=this.value;calculate()">
+</div>
+
+<!-- Results -->
+<div class="result-grid">
+<div class="result-box">
+<div class="icon">💰</div>
+<div class="val" id="emiAmount">₹0</div>
+<div class="label">Monthly EMI</div>
+</div>
+<div class="result-box">
+<div class="icon">📊</div>
+<div class="val" id="totalInterest">₹0</div>
+<div class="label">Total Interest</div>
+</div>
+<div class="result-box">
+<div class="icon">🏦</div>
+<div class="val" id="totalAmount">₹0</div>
+<div class="label">Total Payment</div>
+</div>
+</div>
+
+<!-- Chart -->
+<div class="chart-bar">
+<div class="principal" id="principalBar" style="width:60%">Principal</div>
+<div class="interest" id="interestBar" style="width:40%">Interest</div>
+</div>
+<div class="chart-legend">
+<span><span class="dot" style="background:var(--accent)"></span>Principal: <strong id="principalPct">60%</strong></span>
+<span><span class="dot" style="background:var(--accent3)"></span>Interest: <strong id="interestPct">40%</strong></span>
+</div>
+
+<!-- Schedule -->
+<div style="margin-top:24px">
+<button onclick="toggleSchedule()" style="background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:10px 20px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600" id="schedBtn">📊 Show Amortization Schedule (Yearly)</button>
+<div id="scheduleContainer" style="display:none;max-height:400px;overflow-y:auto;margin-top:12px">
+<table class="sched-table">
+<thead><tr><th>Year</th><th>Principal Paid</th><th>Interest Paid</th><th>Total Paid</th><th>Balance</th></tr></thead>
+<tbody id="scheduleBody"></tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- FAQ -->
+<h2 class="section-title">EMI Calculator — FAQ</h2>
+<details class="faq"><summary>How is EMI calculated?</summary><div class="faq-body">EMI = P × r × (1+r)^n / ((1+r)^n − 1)<br><br>Where: P = Principal (loan amount), r = Monthly interest rate (annual rate / 12 / 100), n = Number of monthly installments.<br><br>Example: ₹25,00,000 at 8.5% for 20 years → EMI = ₹21,672/month.</div></details>
+<details class="faq"><summary>What is an amortization schedule?</summary><div class="faq-body">An amortization schedule shows how each EMI payment is split between principal repayment and interest payment over the loan tenure. In the early years, most of the EMI goes toward interest. Later, more goes toward the principal.</div></details>
+<details class="faq"><summary>Can I reduce my EMI?</summary><div class="faq-body">Yes! Options include: (1) Increase tenure (lower EMI but more total interest), (2) Negotiate lower interest rate, (3) Make part-prepayment to reduce principal, (4) Transfer balance to a lower-rate lender, (5) Make higher down payment.</div></details>
+<details class="faq"><summary>What is the typical interest rate in 2026?</summary><div class="faq-body"><strong>Home Loan:</strong> 8.25% – 9.50%<br><strong>Car Loan:</strong> 8.50% – 12%<br><strong>Personal Loan:</strong> 10.50% – 24%<br><strong>Education Loan:</strong> 8.50% – 13%<br><strong>Business Loan:</strong> 11% – 18%<br>Rates vary by bank, credit score, and loan amount.</div></details>
+<details class="faq"><summary>Is this EMI calculator free?</summary><div class="faq-body">Yes! Completely free. For GST & bank reconciliation automation, try <a href="/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+
+<div class="funnel-banner">
+<h3>Need GST & Bank Reconciliation?</h3>
+<p>Automate compliance with AI. 2 free reconciliations per month.</p>
+<a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a>
+</div>
+</div>
+
+<footer>
+<p>Free EMI Calculator by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p>
+<p style="margin-top:6px">For educational purposes. Verify with your bank/CA.</p>
+</footer>
+
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+
+const LOAN_PRESETS={
+home:{amount:2500000,rate:8.5,tenure:20},
+car:{amount:800000,rate:9.5,tenure:7},
+personal:{amount:500000,rate:14,tenure:5},
+education:{amount:1500000,rate:10,tenure:10},
+business:{amount:2000000,rate:13,tenure:5}
+};
+
+function setLoanType(type,el){
+document.querySelectorAll('.loan-type-btn').forEach(b=>b.classList.remove('active'));
+el.classList.add('active');
+const p=LOAN_PRESETS[type];
+document.getElementById('loanAmount').value=p.amount;
+document.getElementById('loanAmountRange').value=p.amount;
+document.getElementById('rate').value=p.rate;
+document.getElementById('rateRange').value=p.rate;
+document.getElementById('tenure').value=p.tenure;
+document.getElementById('tenureRange').value=p.tenure;
+calculate();
+}
+
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function fmtLakh(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';return '₹'+Math.round(n).toLocaleString('en-IN')}
+
+function calculate(){
+const P=parseFloat(document.getElementById('loanAmount').value)||0;
+const annualRate=parseFloat(document.getElementById('rate').value)||0;
+const years=parseFloat(document.getElementById('tenure').value)||1;
+const months=years*12;
+const r=annualRate/12/100;
+
+// Update labels
+document.getElementById('loanAmountVal').textContent=fmtLakh(P);
+document.getElementById('rateVal').textContent=annualRate.toFixed(2)+'%';
+document.getElementById('tenureVal').textContent=years+' Years ('+months+' months)';
+
+// EMI formula
+let emi=0;
+if(r>0){emi=P*r*Math.pow(1+r,months)/(Math.pow(1+r,months)-1)}
+else{emi=P/months}
+
+const totalAmount=emi*months;
+const totalInterest=totalAmount-P;
+
+// Update results
+document.getElementById('emiAmount').textContent=fmt(emi);
+document.getElementById('totalInterest').textContent=fmt(totalInterest);
+document.getElementById('totalAmount').textContent=fmt(totalAmount);
+
+// Chart
+const pPct=P/totalAmount*100;
+const iPct=100-pPct;
+document.getElementById('principalBar').style.width=pPct+'%';
+document.getElementById('interestBar').style.width=iPct+'%';
+document.getElementById('principalPct').textContent=pPct.toFixed(1)+'%';
+document.getElementById('interestPct').textContent=iPct.toFixed(1)+'%';
+
+// Amortization schedule (yearly)
+let balance=P;
+let rows='';
+for(let y=1;y<=years;y++){
+let yearPrincipal=0,yearInterest=0,yearTotal=0;
+for(let m=0;m<12&&(y-1)*12+m<months;m++){
+const interest=balance*r;
+const principal=emi-interest;
+yearPrincipal+=principal;
+yearInterest+=interest;
+yearTotal+=emi;
+balance-=principal;
+}
+rows+='<tr><td>Year '+y+'</td><td>'+fmt(yearPrincipal)+'</td><td>'+fmt(yearInterest)+'</td><td>'+fmt(yearTotal)+'</td><td>'+fmt(Math.max(0,balance))+'</td></tr>';
+}
+document.getElementById('scheduleBody').innerHTML=rows;
+}
+
+function toggleSchedule(){
+const c=document.getElementById('scheduleContainer');
+const b=document.getElementById('schedBtn');
+if(c.style.display==='none'){c.style.display='block';b.textContent='📊 Hide Amortization Schedule'}
+else{c.style.display='none';b.textContent='📊 Show Amortization Schedule (Yearly)'}
+}
+
+calculate();
+</script>
+</body>
+</html>

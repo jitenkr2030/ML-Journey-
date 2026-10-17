@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free FD Calculator — Fixed Deposit Maturity Amount & Interest | ReconcileAI</title>
+<meta name="description" content="Free fixed deposit calculator India. Calculate FD maturity amount, interest earned, TDS impact. Cumulative vs quarterly payout. Senior citizen rates. All major banks.">
+<meta name="keywords" content="FD calculator, fixed deposit calculator, FD maturity calculator, FD interest calculator, SBI FD calculator, HDFC FD calculator, senior citizen FD">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#ffffff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--text2);font-size:16px;max-width:540px;margin:0 auto}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:32px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.form-group{margin-bottom:18px}
+.form-group label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:8px}
+.form-group label .val{color:var(--accent);font-family:var(--font-mono);font-size:14px;text-transform:none;letter-spacing:0}
+.input-wrap{position:relative}
+.currency-symbol{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:16px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:12px 16px 12px 36px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:18px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+.input-field:focus{border-color:var(--accent)}
+input[type="range"]{width:100%;height:6px;-webkit-appearance:none;appearance:none;background:var(--surface2);border-radius:3px;outline:none;cursor:pointer;margin-top:8px}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid var(--bg)}
+.mode-switch{display:flex;gap:8px;margin-bottom:20px}
+.mode-btn{flex:1;padding:12px;border:2px solid var(--border);border-radius:10px;font-size:13px;font-weight:600;color:var(--text2);cursor:pointer;background:var(--surface2);transition:all .2s;text-align:center}
+.mode-btn:hover{border-color:var(--accent)}
+.mode-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(79,140,255,.08)}
+.toggle-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.toggle-row label{font-size:13px;color:var(--text2);min-width:180px}
+.toggle{width:48px;height:26px;background:var(--surface2);border:2px solid var(--border);border-radius:20px;cursor:pointer;position:relative;transition:all .3s;flex-shrink:0}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:var(--text3);transition:all .3s}
+.toggle.on{background:var(--accent);border-color:var(--accent)}
+.toggle.on::after{left:24px;background:#fff}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
+.result-box .icon{font-size:24px;margin-bottom:8px}
+.result-box .val{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--accent)}
+.result-box .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-top:4px}
+.result-box.green .val{color:var(--accent2)}
+.result-box.orange .val{color:var(--accent3)}
+.growth-chart{display:flex;align-items:flex-end;gap:4px;height:120px;margin:20px 0;padding:0 8px}
+.growth-bar{flex:1;background:var(--accent);border-radius:4px 4px 0 0;transition:height .5s;position:relative;min-width:20px}
+.growth-bar:hover{opacity:.8}
+.growth-bar .tooltip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border);padding:4px 8px;border-radius:6px;font-size:10px;white-space:nowrap;display:none;z-index:5}
+.growth-bar:hover .tooltip{display:block}
+.year-labels{display:flex;gap:4px;padding:0 8px;font-size:9px;color:var(--text3);text-align:center}
+.year-labels span{flex:1;min-width:20px}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:20px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:16px 20px;font-size:13px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}
+.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:20px}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="/tools" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a>
+<div class="nav-right">
+<button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+<a href="/" class="cta-btn">Try ReconcileAI Free →</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="hero">
+<h1>Free <em>FD Calculator</em> India</h1>
+<p>Calculate Fixed Deposit maturity amount, interest earned, and year-by-year growth. Cumulative & payout options.</p>
+</div>
+
+<div class="calc-card">
+<!-- FD Amount -->
+<div class="form-group">
+<label>FD Amount <span class="val" id="fdAmountVal">₹5,00,000</span></label>
+<div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="fdAmount" value="500000" oninput="calculate()"></div>
+<input type="range" id="fdAmountRange" min="1000" max="10000000" step="1000" value="500000" oninput="document.getElementById('fdAmount').value=this.value;calculate()">
+</div>
+
+<!-- Interest Rate -->
+<div class="form-group">
+<label>Interest Rate (Annual) <span class="val" id="rateVal">7.10%</span></label>
+<div class="input-wrap"><input type="number" class="input-field" id="rate" value="7.1" oninput="calculate()" step="0.05" style="padding-left:16px"></div>
+<input type="range" id="rateRange" min="3" max="12" step="0.05" value="7.1" oninput="document.getElementById('rate').value=this.value;calculate()">
+</div>
+
+<!-- Tenure -->
+<div class="form-group">
+<label>FD Tenure <span class="val" id="tenureVal">5 Years (60 months)</span></label>
+<div class="input-wrap"><input type="number" class="input-field" id="tenure" value="5" oninput="calculate()" step="0.5" style="padding-left:16px"></div>
+<input type="range" id="tenureRange" min="0.5" max="10" step="0.5" value="5" oninput="document.getElementById('tenure').value=this.value;calculate()">
+</div>
+
+<!-- Payout Mode -->
+<div class="form-group">
+<label>Payout Mode</label>
+<div class="mode-switch">
+<button class="mode-btn active" id="cumulativeBtn" onclick="setMode('cumulative')">📈 Cumulative (Compounded)</button>
+<button class="mode-btn" id="quarterlyBtn" onclick="setMode('quarterly')">💰 Quarterly Interest Payout</button>
+<button class="mode-btn" id="monthlyBtn" onclick="setMode('monthly')">📅 Monthly Interest Payout</button>
+</div>
+</div>
+
+<!-- Senior Citizen -->
+<div class="toggle-row">
+<label>Senior Citizen (60+ years)<br><small style="font-size:10px;color:var(--text3)">+0.50% additional interest</small></label>
+<div class="toggle" id="toggleSenior" onclick="this.classList.toggle('on');calculate()"></div>
+</div>
+
+<!-- TDS -->
+<div class="toggle-row">
+<label>Show TDS Impact<br><small style="font-size:10px;color:var(--text3)">TDS 10% if interest > ₹40,000/yr (₹50,000 senior)</small></label>
+<div class="toggle on" id="toggleTds" onclick="this.classList.toggle('on');calculate()"></div>
+</div>
+
+<!-- Results -->
+<div class="result-grid">
+<div class="result-box green">
+<div class="icon">💰</div>
+<div class="val" id="maturityAmount">₹0</div>
+<div class="label">Maturity Amount</div>
+</div>
+<div class="result-box orange">
+<div class="icon">📊</div>
+<div class="val" id="totalInterest">₹0</div>
+<div class="label">Total Interest Earned</div>
+</div>
+<div class="result-box">
+<div class="icon">🏦</div>
+<div class="val" id="tdsAmount">₹0</div>
+<div class="label">TDS Deducted (10%)</div>
+</div>
+</div>
+
+<!-- Growth Chart -->
+<div style="margin-top:16px">
+<div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-bottom:12px">Year-by-Year Growth</div>
+<div class="growth-chart" id="growthChart"></div>
+<div class="year-labels" id="yearLabels"></div>
+</div>
+</div>
+
+<!-- FAQ -->
+<h2 class="section-title">FD Calculator — FAQ</h2>
+<details class="faq"><summary>How is FD interest calculated?</summary><div class="faq-body"><strong>Cumulative FD:</strong> Interest is compounded quarterly and paid at maturity. Maturity = P × (1 + r/4)^(4×n).<br><br><strong>Quarterly Payout:</strong> Interest is paid every quarter. No compounding.<br><br><strong>Monthly Payout:</strong> Interest is paid monthly at a slightly lower effective rate.</div></details>
+<details class="faq"><summary>What is the TDS on FD interest?</summary><div class="faq-body">TDS at 10% if total interest income exceeds ₹40,000 per year (₹50,000 for senior citizens). If PAN is not provided, TDS is 20%. You can submit Form 15G/15H if total income is below taxable limit.</div></details>
+<details class="faq"><summary>What are current FD rates in India (2026)?</summary><div class="faq-body"><strong>Major Banks:</strong> 6.50% – 7.50% (general), 7.00% – 8.00% (senior citizen).<br><strong>Small Finance Banks:</strong> 7.50% – 9.00%.<br><strong>NBFCs:</strong> 7.00% – 8.50%.<br>Rates vary by tenure. 1-3 year tenure typically offers the best rates.</div></details>
+<details class="faq"><summary>Is FD interest taxable?</summary><div class="faq-body">Yes, FD interest is fully taxable as "Income from Other Sources" at your applicable slab rate. Form 26AS shows the TDS deducted. Declare FD interest in ITR even if TDS was deducted.</div></details>
+<details class="faq"><summary>Is this FD calculator free?</summary><div class="faq-body">Yes! Completely free. For GST & bank reconciliation automation, try <a href="/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+
+<div class="funnel-banner">
+<h3>Need GST & Bank Reconciliation?</h3>
+<p>Automate compliance with AI. 2 free reconciliations per month.</p>
+<a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a>
+</div>
+</div>
+
+<footer>
+<p>Free FD Calculator by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p>
+<p style="margin-top:6px">For educational purposes. Verify with your bank/CA.</p>
+</footer>
+
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+
+let mode='cumulative';
+function setMode(m){
+mode=m;
+document.getElementById('cumulativeBtn').classList.toggle('active',m==='cumulative');
+document.getElementById('quarterlyBtn').classList.toggle('active',m==='quarterly');
+document.getElementById('monthlyBtn').classList.toggle('active',m==='monthly');
+calculate();
+}
+
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function fmtLakh(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';return '₹'+Math.round(n).toLocaleString('en-IN')}
+
+function calculate(){
+const P=parseFloat(document.getElementById('fdAmount').value)||0;
+let rate=parseFloat(document.getElementById('rate').value)||0;
+const years=parseFloat(document.getElementById('tenure').value)||1;
+const isSenior=document.getElementById('toggleSenior').classList.contains('on');
+const showTds=document.getElementById('toggleTds').classList.contains('on');
+
+// Senior citizen bonus
+if(isSenior)rate+=0.5;
+
+const months=Math.round(years*12);
+
+// Update labels
+document.getElementById('fdAmountVal').textContent=fmtLakh(P);
+document.getElementById('rateVal').textContent=rate.toFixed(2)+'%' + (isSenior?' (Senior)':'');
+document.getElementById('tenureVal').textContent=years+' Years ('+months+' months)';
+
+let maturity=0,totalInterest=0,monthlyPayout=0;
+
+if(mode==='cumulative'){
+// Quarterly compounding: A = P(1+r/4)^(4n)
+maturity=P*Math.pow(1+rate/400,4*years);
+totalInterest=maturity-P;
+}else if(mode==='quarterly'){
+// Simple quarterly payout
+const quarterlyInterest=P*(rate/100)/4;
+totalInterest=quarterlyInterest*4*years;
+maturity=P+totalInterest;
+monthlyPayout=quarterlyInterest/3;
+}else{
+// Monthly payout
+monthlyPayout=P*(rate/100)/12;
+totalInterest=monthlyPayout*months;
+maturity=P+totalInterest;
+}
+
+// TDS calculation
+let tds=0;
+if(showTds){
+const annualInterest=totalInterest/years;
+const threshold=isSenior?50000:40000;
+if(annualInterest>threshold){
+const taxableExcess=totalInterest-(threshold*years);
+tds=Math.max(0,taxableExcess*0.10);
+}
+}
+
+// Update results
+document.getElementById('maturityAmount').textContent=fmt(maturity);
+document.getElementById('totalInterest').textContent=fmt(totalInterest);
+document.getElementById('tdsAmount').textContent=showTds?fmt(tds):'—';
+
+// Growth chart
+const chart=document.getElementById('growthChart');
+const labels=document.getElementById('yearLabels');
+let chartHtml='',labelsHtml='';
+const yInt=Math.ceil(years);
+for(let y=1;y<=yInt;y++){
+let val;
+if(mode==='cumulative'){
+val=P*Math.pow(1+rate/400,4*Math.min(y,years));
+}else{
+val=P+(totalInterest/years)*Math.min(y,years);
+}
+const pct=(val/(P+totalInterest||1))*100;
+chartHtml+='<div class="growth-bar" style="height:'+Math.max(10,pct)+'%"><div class="tooltip">Year '+y+': '+fmtLakh(val)+'</div></div>';
+labelsHtml+='<span>'+y+'</span>';
+}
+chart.innerHTML=chartHtml;
+labels.innerHTML=labelsHtml;
+}
+
+calculate();
+</script>
+</body>
+</html>
