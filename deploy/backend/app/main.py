@@ -77,6 +77,24 @@ async def serve_admin():
 async def serve_dashboard():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
 
+
+# ==================== FREE TOOLS ====================
+@app.get("/tools")
+async def tools_index():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "tools.html"))
+
+@app.get("/tools/gst-calculator")
+async def gst_calculator():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "free-tools" / "gst-calculator" / "index.html"))
+
+@app.get("/tools/tds-calculator")
+async def tds_calculator():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "free-tools" / "tds-calculator" / "index.html"))
+
+@app.get("/tools/income-tax-calculator")
+async def income_tax_calculator():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "free-tools" / "income-tax-calculator" / "index.html"))
+
 @app.get("/api/types")
 async def list_types():
     return {

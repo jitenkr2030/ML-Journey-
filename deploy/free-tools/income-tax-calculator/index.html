@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Income Tax Calculator FY 2026-27 — New vs Old Regime Comparison | ReconcileAI</title>
+<meta name="description" content="Free income tax calculator India FY 2026-27 (AY 2027-28). Compare New vs Old tax regime. Calculate tax on salary, capital gains, other income. With cess, surcharge, rebate u/s 87A. No signup.">
+<meta name="keywords" content="income tax calculator, income tax calculator 2026-27, new regime vs old regime, tax calculator India, salary tax calculator, 80C deduction calculator">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#ffffff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:960px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:960px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--text2);font-size:16px;max-width:580px;margin:0 auto}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+@media(max-width:768px){.two-col{grid-template-columns:1fr}}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:6px}
+.input-wrap{position:relative}
+.currency-symbol{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:15px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:10px 14px 10px 32px;background:var(--surface2);border:2px solid var(--border);border-radius:10px;font-size:16px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+.input-field:focus{border-color:var(--accent)}
+.card-title{font-family:var(--font-display);font-size:22px;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.card-title .badge{font-family:var(--font-mono);font-size:10px;padding:3px 10px;border-radius:8px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.badge.recommended{background:rgba(54,211,153,.15);color:var(--accent2);border:1px solid rgba(54,211,153,.3)}
+.badge.deduction{background:rgba(245,158,11,.15);color:var(--accent3);border:1px solid rgba(245,158,11,.3)}
+.compare-bar{display:flex;height:32px;border-radius:8px;overflow:hidden;margin:20px 0;border:1px solid var(--border)}
+.compare-bar .new{background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .5s ease}
+.compare-bar .old{background:var(--accent3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .5s ease}
+.savings-banner{background:rgba(54,211,153,.1);border:1px solid rgba(54,211,153,.25);border-radius:12px;padding:16px 20px;text-align:center;margin:20px 0}
+.savings-banner .amount{font-family:var(--font-mono);font-size:28px;font-weight:700;color:var(--accent2)}
+.savings-banner .label{font-size:12px;color:var(--text2);margin-top:4px}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px}
+.result-row:last-child{border-bottom:none}
+.result-label{color:var(--text2)}
+.result-value{font-family:var(--font-mono);font-weight:700}
+.result-row.total{margin-top:8px;padding-top:14px;border-top:2px solid var(--border);font-size:16px}
+.result-row.total .result-value{font-size:20px;color:var(--accent)}
+.slab-table{width:100%;border-collapse:collapse;font-size:12px;margin:12px 0}
+.slab-table th{background:var(--surface2);padding:8px 12px;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);border-bottom:2px solid var(--border)}
+.slab-table td{padding:8px 12px;border-bottom:1px solid var(--border)}
+.slab-table tr:hover td{background:var(--surface2)}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:14px 18px;cursor:pointer;font-weight:600;font-size:13px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:18px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:14px 18px;font-size:12px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}
+.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:18px}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="/" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a>
+<div class="nav-right">
+<button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+<a href="https://reconcileai.de.deplexo.com/" class="cta-btn">Try ReconcileAI Free →</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="hero">
+<h1>Free <em>Income Tax Calculator</em> FY 2026-27</h1>
+<p>Compare New vs Old Tax Regime side by side. Know exactly which regime saves you more tax.</p>
+</div>
+
+<div class="two-col">
+<!-- INPUTS -->
+<div class="calc-card">
+<div class="card-title">💰 Your Income</div>
+<div class="form-group"><label>Annual Salary (Gross)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="salary" value="1200000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Annual House Rent Paid</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="hraPaid" value="240000" oninput="calculate()"></div></div>
+<div class="form-group"><label>HRA Received (from employer)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="hraReceived" value="240000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Basic Salary</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="basicSalary" value="600000" oninput="calculate()"></div></div>
+
+<div class="card-title" style="margin-top:20px;font-size:16px"><span class="badge deduction">Old Regime Only</span> Deductions</div>
+<div class="form-group"><label>Section 80C (PF, PPF, ELSS, LIC)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="d80c" value="150000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Section 80D (Health Insurance)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="d80d" value="25000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Section 80CCD(1B) — NPS</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="d80ccd" value="50000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Section 24(b) — Home Loan Interest</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="d24b" value="0" oninput="calculate()"></div></div>
+<div class="form-group"><label>Other Deductions (80E, 80G, etc.)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="dOther" value="0" oninput="calculate()"></div></div>
+</div>
+
+<!-- RESULTS -->
+<div>
+<div class="calc-card" style="margin-bottom:24px">
+<div class="card-title"><span class="badge recommended">Recommended</span> Tax Comparison</div>
+
+<div style="display:flex;gap:16px;margin-bottom:12px">
+<div style="flex:1;text-align:center;padding:16px;background:rgba(79,140,255,.08);border-radius:12px">
+<div style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3)">New Regime</div>
+<div style="font-family:var(--font-mono);font-size:24px;font-weight:700;color:var(--accent)" id="newRegimeTax">₹0</div>
+</div>
+<div style="flex:1;text-align:center;padding:16px;background:rgba(245,158,11,.08);border-radius:12px">
+<div style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3)">Old Regime</div>
+<div style="font-family:var(--font-mono);font-size:24px;font-weight:700;color:var(--accent3)" id="oldRegimeTax">₹0</div>
+</div>
+</div>
+
+<div class="compare-bar">
+<div class="new" id="compareNew" style="width:50%">NEW</div>
+<div class="old" id="compareOld" style="width:50%">OLD</div>
+</div>
+
+<div class="savings-banner">
+<div class="amount" id="savingsAmount">₹0</div>
+<div class="label" id="savingsLabel">Tax savings with New Regime</div>
+</div>
+
+<div class="result-row"><span class="result-label">Total Income</span><span class="result-value" id="totalIncome">₹0</span></div>
+<div class="result-row"><span class="result-label">Total Deductions (Old)</span><span class="result-value" id="totalDeductions">₹0</span></div>
+<div class="result-row"><span class="result-label">Taxable Income (New)</span><span class="result-value" id="taxableNew">₹0</span></div>
+<div class="result-row"><span class="result-label">Taxable Income (Old)</span><span class="result-value" id="taxableOld">₹0</span></div>
+<div class="result-row"><span class="result-label">Tax Before Cess (New)</span><span class="result-value" id="taxBeforeCessNew">₹0</span></div>
+<div class="result-row"><span class="result-label">Tax Before Cess (Old)</span><span class="result-value" id="taxBeforeCessOld">₹0</span></div>
+<div class="result-row"><span class="result-label">Rebate u/s 87A (New)</span><span class="result-value" id="rebateNew">₹0</span></div>
+<div class="result-row"><span class="result-label">Rebate u/s 87A (Old)</span><span class="result-value" id="rebateOld">₹0</span></div>
+<div class="result-row"><span class="result-label">Surcharge</span><span class="result-value" id="surcharge">₹0</span></div>
+<div class="result-row"><span class="result-label">Health & Edu Cess (4%)</span><span class="result-value" id="cess">₹0</span></div>
+<div class="result-row total"><span class="result-label">Monthly Tax (TDS)</span><span class="result-value" id="monthlyTax">₹0</span></div>
+</div>
+
+<!-- Slab Table -->
+<div class="calc-card">
+<div class="card-title">📊 Tax Slab Comparison</div>
+<div style="overflow-x:auto">
+<table class="slab-table">
+<thead><tr><th>Income Slab</th><th style="color:var(--accent)">New Regime</th><th style="color:var(--accent3)">Old Regime</th></tr></thead>
+<tbody>
+<tr><td>₹0 — ₹3,00,000</td><td>0%</td><td>0%</td></tr>
+<tr><td>₹3,00,001 — ₹6,00,000</td><td>5%</td><td>5%</td></tr>
+<tr><td>₹6,00,001 — ₹9,00,000</td><td>10%</td><td>20%</td></tr>
+<tr><td>₹9,00,001 — ₹12,00,000</td><td>15%</td><td>30%</td></tr>
+<tr><td>₹12,00,001 — ₹15,00,000</td><td>20%</td><td>30%</td></tr>
+<tr><td>₹15,00,000+</td><td>30%</td><td>30%</td></tr>
+</tbody>
+</table>
+</div>
+<div style="font-size:11px;color:var(--text3);margin-top:8px">*New regime is default. Standard deduction: ₹50,000 (Old) / ₹75,000 (New). Rebate u/s 87A: Up to ₹7,00,000 (New) / ₹5,00,000 (Old).</div>
+</div>
+</div>
+</div>
+
+<!-- FAQ -->
+<h2 class="section-title">Income Tax Calculator — FAQ</h2>
+<details class="faq"><summary>Which regime is better for me?</summary><div class="faq-body">The New Regime (default) is better if you have fewer deductions. The Old Regime is better if you claim HRA, 80C, 80D, home loan interest, and other deductions totaling more than ₹4-5 lakhs. Use this calculator to compare both instantly.</div></details>
+<details class="faq"><summary>What is standard deduction in the new regime?</summary><div class="faq-body">The standard deduction in the New Regime is ₹75,000 (increased from ₹50,000 in Budget 2024). In the Old Regime, it remains ₹50,000. This is automatically deducted from salary income.</div></details>
+<details class="faq"><summary>What is rebate u/s 87A?</summary><div class="faq-body"><strong>New Regime:</strong> Tax rebate up to ₹25,000 if taxable income ≤ ₹7,00,000 (effectively zero tax).<br><strong>Old Regime:</strong> Tax rebate up to ₹12,500 if taxable income ≤ ₹5,00,000.</div></details>
+<details class="faq"><summary>Is this calculator free?</summary><div class="faq-body">Yes! Completely free. For GST & bank reconciliation automation, try <a href="https://reconcileai.de.deplexo.com/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+
+<div class="funnel-banner">
+<h3>Need GST & Bank Reconciliation?</h3>
+<p>Go beyond tax calculation. Automate your compliance with AI.<br>2 free reconciliations per month.</p>
+<a href="https://reconcileai.de.deplexo.com/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a>
+</div>
+</div>
+
+<footer>
+<p>Free Income Tax Calculator by <a href="https://reconcileai.de.deplexo.com/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p>
+<p style="margin-top:6px">For educational purposes. Verify with your CA.</p>
+</footer>
+
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+
+function calcSlabNew(income){
+const slabs=[[300000,0],[600000,5],[900000,10],[1200000,15],[1500000,20],[Infinity,30]];
+let tax=0,prev=0;
+for(const [limit,rate] of slabs){
+if(income<=prev)break;
+const taxable=Math.min(income,limit)-prev;
+tax+=taxable*(rate/100);
+prev=limit;
+}
+return tax;
+}
+
+function calcSlabOld(income){
+const slabs=[[250000,0],[500000,5],[1000000,20],[Infinity,30]];
+let tax=0,prev=0;
+for(const [limit,rate] of slabs){
+if(income<=prev)break;
+const taxable=Math.min(income,limit)-prev;
+tax+=taxable*(rate/100);
+prev=limit;
+}
+return tax;
+}
+
+function calculate(){
+const salary=parseFloat(document.getElementById('salary').value)||0;
+const hraPaid=parseFloat(document.getElementById('hraPaid').value)||0;
+const hraReceived=parseFloat(document.getElementById('hraReceived').value)||0;
+const basic=parseFloat(document.getElementById('basicSalary').value)||0;
+const d80c=Math.min(150000,parseFloat(document.getElementById('d80c').value)||0);
+const d80d=Math.min(100000,parseFloat(document.getElementById('d80d').value)||0);
+const d80ccd=Math.min(50000,parseFloat(document.getElementById('d80ccd').value)||0);
+const d24b=Math.min(200000,parseFloat(document.getElementById('d24b').value)||0);
+const dOther=parseFloat(document.getElementById('dOther').value)||0;
+
+// HRA exemption
+const hraExempt=Math.min(hraReceived, hraPaid-0.1*basic, 0.5*basic);
+
+// New Regime
+const stdDedNew=75000;
+const taxableNew=Math.max(0,salary-stdDedNew);
+let taxNew=calcSlabNew(taxableNew);
+let rebateNew=taxableNew<=700000?Math.min(taxNew,25000):0;
+taxNew-=rebateNew;
+
+// Old Regime
+const stdDedOld=50000;
+const totalDed=hraExempt+d80c+d80d+d80ccd+d24b+dOther+stdDedOld;
+const taxableOld=Math.max(0,salary-totalDed);
+let taxOld=calcSlabOld(taxableOld);
+let rebateOld=taxableOld<=500000?Math.min(taxOld,12500):0;
+taxOld-=rebateOld;
+
+// Surcharge
+const surchargeNew=taxableNew>50000000?taxNew*0.1:taxableNew>20000000?taxNew*0.05:0;
+const surchargeOld=taxableOld>50000000?taxOld*0.1:taxableOld>20000000?taxOld*0.05:0;
+
+// Cess
+const cessNew=(taxNew+surchargeNew)*0.04;
+const cessOld=(taxOld+surchargeOld)*0.04;
+
+const totalNew=taxNew+surchargeNew+cessNew;
+const totalOld=taxOld+surchargeOld+cessOld;
+
+// UI
+document.getElementById('newRegimeTax').textContent=fmt(totalNew);
+document.getElementById('oldRegimeTax').textContent=fmt(totalOld);
+document.getElementById('totalIncome').textContent=fmt(salary);
+document.getElementById('totalDeductions').textContent=fmt(totalDed);
+document.getElementById('taxableNew').textContent=fmt(taxableNew);
+document.getElementById('taxableOld').textContent=fmt(taxableOld);
+document.getElementById('taxBeforeCessNew').textContent=fmt(taxNew);
+document.getElementById('taxBeforeCessOld').textContent=fmt(taxOld);
+document.getElementById('rebateNew').textContent=fmt(rebateNew);
+document.getElementById('rebateOld').textContent=fmt(rebateOld);
+document.getElementById('surcharge').textContent=fmt(surchargeNew+surchargeOld>0?Math.max(surchargeNew,surchargeOld):0);
+document.getElementById('cess').textContent=fmt(Math.max(cessNew,cessOld));
+
+const better=totalNew<=totalOld?'new':'old';
+const diff=Math.abs(totalNew-totalOld);
+document.getElementById('savingsAmount').textContent=fmt(diff);
+document.getElementById('savingsLabel').innerHTML=diff===0?'Both regimes give same tax':'Tax savings with <strong>'+(better==='new'?'New Regime':'Old Regime')+'</strong>';
+document.getElementById('monthlyTax').textContent=fmt(Math.min(totalNew,totalOld)/12);
+
+// Compare bar
+const total=totalNew+totalOld||1;
+const newPct=(totalNew/total*100).toFixed(0);
+document.getElementById('compareNew').style.width=newPct+'%';
+document.getElementById('compareOld').style.width=(100-newPct)+'%';
+}
+
+calculate();
+</script>
+</body>
+</html>

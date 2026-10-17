@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free GST, TDS & Tax Calculators — 34 Free Tools for Indian CAs | ReconcileAI</title>
+<meta name="description" content="Free online calculators for India. GST calculator, TDS calculator, income tax calculator, HRA, EMI, FD, SIP and more. No signup required. Built by ReconcileAI.">
+<meta name="keywords" content="free calculators India, GST calculator, TDS calculator, income tax calculator, HRA calculator, EMI calculator, free CA tools">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#ffffff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:1000px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--text2);font-size:16px;max-width:580px;margin:0 auto}
+.badge-row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.badge{padding:6px 14px;border-radius:20px;font-size:11px;font-weight:600;background:var(--surface2);border:1px solid var(--border);color:var(--text2)}
+.badge.green{background:rgba(54,211,153,.1);border-color:rgba(54,211,153,.25);color:var(--accent2)}
+.tool-category{margin:36px 0 16px;display:flex;align-items:center;gap:12px}
+.tool-category h2{font-family:var(--font-display);font-size:24px;letter-spacing:-.01em}
+.tool-category .line{flex:1;height:1px;background:var(--border)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.tool-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:24px;transition:all .3s;position:relative;overflow:hidden}
+.tool-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+[data-theme="light"] .tool-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.06)}
+.tool-card .icon{font-size:32px;margin-bottom:12px}
+.tool-card h3{font-size:17px;font-weight:700;margin-bottom:6px}
+.tool-card p{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:16px}
+.tool-card .open-btn{display:inline-flex;align-items:center;gap:6px;color:var(--accent);font-size:13px;font-weight:600;text-decoration:none;transition:gap .2s}
+.tool-card .open-btn:hover{gap:10px}
+.tool-card .soon{position:absolute;top:12px;right:12px;background:var(--surface2);border:1px solid var(--border);color:var(--text3);font-size:9px;padding:3px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.05em}
+.tool-card.live .soon{background:rgba(54,211,153,.12);border-color:rgba(54,211,153,.25);color:var(--accent2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:32px;text-align:center;margin:48px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:26px;margin-bottom:8px}
+.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.tools-grid{grid-template-columns:1fr}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<a href="/" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a>
+<div class="nav-right">
+<button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+<a href="/" class="cta-btn">← Back to ReconcileAI</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+<div class="hero">
+<h1>34 <em>Free Tools</em> for Indian CAs & Businesses</h1>
+<p>GST, TDS, Income Tax calculators, validators, generators and more. No signup. No credit card. Free forever.</p>
+<div class="badge-row">
+<span class="badge green">100% Free</span>
+<span class="badge">No Signup</span>
+<span class="badge">Mobile Friendly</span>
+<span class="badge">Dark + Light Theme</span>
+<span class="badge">Made for India 🇮🇳</span>
+</div>
+</div>
+
+<!-- CALCULATORS -->
+<div class="tool-category"><h2>🧮 Calculators</h2><div class="line"></div></div>
+<div class="tools-grid">
+<div class="tool-card live">
+<div class="soon">Live</div>
+<div class="icon">🧾</div>
+<h3>GST Calculator</h3>
+<p>Add or remove GST. CGST, SGST, IGST breakdown. All rates (0-28%). Intra & inter-state.</p>
+<a href="/tools/gst-calculator" class="open-btn">Open Tool →</a>
+</div>
+<div class="tool-card live">
+<div class="soon">Live</div>
+<div class="icon">📋</div>
+<h3>TDS Calculator</h3>
+<p>All sections (192, 194C, 194H, 194I, 194J). FY 2026-27 rates. PAN & non-resident options.</p>
+<a href="/tools/tds-calculator" class="open-btn">Open Tool →</a>
+</div>
+<div class="tool-card live">
+<div class="soon">Live</div>
+<div class="icon">💰</div>
+<h3>Income Tax Calculator</h3>
+<p>New vs Old regime comparison. 80C, 80D, HRA, home loan. Surcharge, cess, rebate 87A.</p>
+<a href="/tools/income-tax-calculator" class="open-btn">Open Tool →</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🏠</div>
+<h3>HRA Calculator</h3>
+<p>HRA exemption u/s 10(13A). Metro vs non-metro. Basic salary + DA rules.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🏦</div>
+<h3>EMI Calculator</h3>
+<p>Loan EMI, total interest, amortization schedule. Home, car, personal, education loans.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📈</div>
+<h3>FD Calculator</h3>
+<p>Fixed deposit maturity amount. Cumulative vs quarterly interest. Senior citizen rates.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📊</div>
+<h3>SIP Calculator</h3>
+<p>Systematic investment plan returns. Monthly SIP. Step-up SIP. Wealth creation projection.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">💸</div>
+<h3>Advance Tax Calculator</h3>
+<p>Quarterly advance tax installments. Interest u/s 234B/234C. Due dates.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📉</div>
+<h3>Depreciation Calculator</h3>
+<p>WDV & SLM methods. Companies Act vs Income Tax rates. Block of assets.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🎯</div>
+<h3>Gratuity Calculator</h3>
+<p>Gratuity amount as per Payment of Gratuity Act. 15 days wages formula.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">💼</div>
+<h3>PF Calculator</h3>
+<p>EPF maturity amount. Employee + employer contribution. Interest rate 2026-27.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">⚡</div>
+<h3>Break-Even Calculator</h3>
+<p>Break-even point in units & rupees. Fixed cost, variable cost, selling price.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🔄</div>
+<h3>Markup vs Margin Calculator</h3>
+<p>Convert between markup and margin. Profit percentage. Selling price calculator.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📈</div>
+<h3>ROI Calculator</h3>
+<p>Return on investment. Annualized ROI. CAGR calculator. Payback period.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🔢</div>
+<h3>Interest Calculator</h3>
+<p>Simple interest & compound interest. Daily compounding. PPF/NSC interest.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🌍</div>
+<h3>Currency Converter</h3>
+<p>INR to USD, EUR, GBP, AED. Live rates. For export/import businesses.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+</div>
+
+<!-- VALIDATORS -->
+<div class="tool-category"><h2>✅ Validators</h2><div class="line"></div></div>
+<div class="tools-grid">
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📄</div>
+<h3>Bank Statement CSV Validator</h3>
+<p>Upload any bank CSV. Auto-detect format, columns, encoding. Validate before reconciliation.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🏷️</div>
+<h3>GSTIN Validator</h3>
+<p>Validate GSTIN format & check digit. State code lookup. Bulk validation.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🪪</div>
+<h3>PAN Validator</h3>
+<p>Validate PAN format. Entity type (company, firm, individual). Check digit verification.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🧾</div>
+<h3>Invoice Number Checker</h3>
+<p>Validate invoice numbering as per GST rules. 16-char limit. Financial year format.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🏦</div>
+<h3>IFSC Code Finder</h3>
+<p>Look up bank branch by IFSC code. Bank name, branch, address, MICR.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+</div>
+
+<!-- GENERATORS -->
+<div class="tool-category"><h2>📄 Generators</h2><div class="line"></div></div>
+<div class="tools-grid">
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🧾</div>
+<h3>Invoice Generator</h3>
+<p>Generate GST-compliant invoices. PDF download. CGST/SGST/IGST auto-calc. HSN codes.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">✅</div>
+<h3>Receipt Generator</h3>
+<p>Generate payment receipts. Professional PDF format. For cash, UPI, bank transfers.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📦</div>
+<h3>Purchase Order Generator</h3>
+<p>Generate PO documents. Item details, GSTIN, terms. PDF export.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🚛</div>
+<h3>Delivery Challan Generator</h3>
+<p>Generate delivery challans. GST compliant. E-way bill reference.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+</div>
+
+<!-- CONVERTERS -->
+<div class="tool-category"><h2>🔄 Converters</h2><div class="line"></div></div>
+<div class="tools-grid">
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📊</div>
+<h3>CSV to JSON</h3>
+<p>Convert CSV files to JSON. Preview data. Download result.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📑</div>
+<h3>Excel to CSV</h3>
+<p>Convert Excel (.xlsx/.xls) to CSV. Multi-sheet support. Smart header detection.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📋</div>
+<h3>JSON to CSV</h3>
+<p>Convert JSON data to CSV. Handle nested objects. Download result.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📕</div>
+<h3>PDF Table to CSV</h3>
+<p>Extract tables from PDF bank statements. Auto-detect columns. CSV export.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+</div>
+
+<!-- REFERENCE -->
+<div class="tool-category"><h2>📚 Reference</h2><div class="line"></div></div>
+<div class="tools-grid">
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🔍</div>
+<h3>GST Rate Finder</h3>
+<p>Search GST rate by HSN/SAC code. 1000+ items. Latest rates.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📊</div>
+<h3>TDS Rate Chart</h3>
+<p>Complete TDS rate chart FY 2026-27. All sections. Threshold limits.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">📅</div>
+<h3>Due Date Calendar</h3>
+<p>GST, TDS, Income Tax due dates. Monthly & quarterly reminders.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">🏷️</div>
+<h3>HSN Code Search</h3>
+<p>Search HSN codes. Chapter, heading, sub-heading. GST rate for each code.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+<div class="tool-card">
+<div class="soon">Coming Soon</div>
+<div class="icon">⚠️</div>
+<h3>Penalty Calculator</h3>
+<p>Late fee for GST returns. Interest u/s 234A/234B/234C. TDS late filing penalty.</p>
+<a href="#" class="open-btn" style="opacity:.5">Coming Soon</a>
+</div>
+</div>
+
+<!-- Funnel Banner -->
+<div class="funnel-banner">
+<h3>Need AI-Powered Reconciliation & Bookkeeping?</h3>
+<p>Go beyond calculators. Automate GST filings, bank reconciliation & 21-pipeline bookkeeping with AI.<br>2 free reconciliations per month. No credit card needed.</p>
+<a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a>
+</div>
+
+</div>
+
+<footer>
+<p>Free Tools by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation + Bookkeeping Platform</p>
+<p style="margin-top:6px">For educational purposes. Verify with your CA for compliance. <a href="/admin?key=reconcile2026">Admin</a></p>
+</footer>
+
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+</script>
+</body>
+</html>
