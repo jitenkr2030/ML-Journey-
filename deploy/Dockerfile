@@ -6,6 +6,8 @@ COPY backend/ ./backend/
 COPY index.html .
 COPY admin.html .
 COPY dashboard.html .
+COPY tools.html .
+COPY free-tools/ ./free-tools/
 EXPOSE 8000
 WORKDIR /app/backend
 CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
