@@ -118,6 +118,19 @@ async def emi_calculator():
 async def fd_calculator():
     return _serve_page("free-tools", "fd-calculator", "index.html")
 
+
+@app.get("/tools/sip-calculator")
+async def sip_calculator():
+    return _serve_page("free-tools", "sip-calculator", "index.html")
+
+@app.get("/tools/advance-tax-calculator")
+async def advance_tax_calculator():
+    return _serve_page("free-tools", "advance-tax-calculator", "index.html")
+
+@app.get("/tools/depreciation-calculator")
+async def depreciation_calculator():
+    return _serve_page("free-tools", "depreciation-calculator", "index.html")
+
 @app.get("/api/types")
 async def list_types():
     return {

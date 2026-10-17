@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free SIP Calculator — Mutual Fund Returns & Wealth Projection | ReconcileAI</title>
+<meta name="description" content="Free SIP calculator India. Calculate mutual fund SIP returns, maturity amount, wealth gain. Step-up SIP. Monthly investment. Year-by-year growth chart.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#fff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p{color:var(--text2);font-size:16px;max-width:540px;margin:0 auto}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:32px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.form-group{margin-bottom:18px}
+.form-group label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:8px}
+.form-group label .val{color:var(--accent);font-family:var(--font-mono);font-size:14px;text-transform:none;letter-spacing:0}
+.input-wrap{position:relative}
+.currency-symbol{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:16px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:12px 16px 12px 36px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:18px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+input[type=range]{width:100%;height:6px;-webkit-appearance:none;appearance:none;background:var(--surface2);border-radius:3px;outline:none;cursor:pointer;margin-top:8px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--accent);cursor:pointer;border:3px solid var(--bg)}
+.toggle-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.toggle-row label{font-size:13px;color:var(--text2);min-width:180px}
+.toggle{width:48px;height:26px;background:var(--surface2);border:2px solid var(--border);border-radius:20px;cursor:pointer;position:relative;transition:all .3s;flex-shrink:0}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:var(--text3);transition:all .3s}
+.toggle.on{background:var(--accent);border-color:var(--accent)}
+.toggle.on::after{left:24px;background:#fff}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+.result-box{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center}
+.result-box .icon{font-size:24px;margin-bottom:8px}
+.result-box .val{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--accent)}
+.result-box .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-top:4px}
+.result-box.green .val{color:var(--accent2)}
+.result-box.orange .val{color:var(--accent3)}
+.chart-bar{display:flex;height:40px;border-radius:10px;overflow:hidden;margin:20px 0;border:1px solid var(--border)}
+.chart-bar .invested{background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .5s}
+.chart-bar .returns{background:var(--accent2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;transition:width .5s}
+.chart-legend{display:flex;gap:20px;justify-content:center;font-size:12px;color:var(--text2)}
+.chart-legend .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:6px}
+.growth-chart{display:flex;align-items:flex-end;gap:6px;height:140px;margin:20px 0;padding:0 8px}
+.growth-bar{flex:1;border-radius:4px 4px 0 0;transition:height .5s;position:relative;cursor:pointer;min-width:24px;background:var(--accent2)}
+.growth-bar .inv-bar{position:absolute;bottom:0;left:0;right:0;background:var(--accent);border-radius:4px 4px 0 0}
+.growth-bar .tooltip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border);padding:6px 10px;border-radius:6px;font-size:10px;white-space:nowrap;display:none;z-index:5}
+.growth-bar:hover .tooltip{display:block}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:20px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:16px 20px;font-size:13px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}
+.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:20px}.hero{padding:24px 0 20px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/tools" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a><div class="nav-right"><button class="theme-toggle" onclick="toggleTheme()">☀️</button><a href="/" class="cta-btn">Try ReconcileAI Free →</a></div></div></nav>
+<div class="container">
+<div class="hero"><h1>Free <em>SIP Calculator</em> India</h1><p>Calculate mutual fund SIP returns, wealth gain, and year-by-year growth. Step-up SIP supported.</p></div>
+<div class="calc-card">
+<div class="form-group"><label>Monthly SIP Amount <span class="val" id="sipVal">₹10,000</span></label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="sipAmount" value="10000" oninput="calculate()"></div><input type="range" id="sipRange" min="500" max="500000" step="500" value="10000" oninput="document.getElementById('sipAmount').value=this.value;calculate()"></div>
+<div class="form-group"><label>Expected Return Rate (Annual) <span class="val" id="rateVal">12.00%</span></label><div class="input-wrap"><input type="number" class="input-field" id="rate" value="12" oninput="calculate()" step="0.5" style="padding-left:16px"></div><input type="range" id="rateRange" min="1" max="30" step="0.5" value="12" oninput="document.getElementById('rate').value=this.value;calculate()"></div>
+<div class="form-group"><label>Investment Period <span class="val" id="yearsVal">15 Years</span></label><div class="input-wrap"><input type="number" class="input-field" id="years" value="15" oninput="calculate()" style="padding-left:16px"></div><input type="range" id="yearsRange" min="1" max="40" step="1" value="15" oninput="document.getElementById('years').value=this.value;calculate()"></div>
+<div class="toggle-row"><label>Step-Up SIP (Annual increase)<br><small style="font-size:10px;color:var(--text3)">Increase SIP amount every year</small></label><div class="toggle" id="toggleStepup" onclick="this.classList.toggle('on');document.getElementById('stepupRow').style.display=this.classList.contains('on')?'flex':'none';calculate()"></div></div>
+<div class="toggle-row" id="stepupRow" style="display:none"><label>Annual Step-Up %</label><div style="flex:1"><input type="number" class="input-field" id="stepupPct" value="10" oninput="calculate()" step="1" min="0" max="50" style="width:100px;padding-left:12px"></div></div>
+<div class="result-grid">
+<div class="result-box green"><div class="icon">💰</div><div class="val" id="maturityAmount">₹0</div><div class="label">Maturity Value</div></div>
+<div class="result-box orange"><div class="icon">📊</div><div class="val" id="wealthGain">₹0</div><div class="label">Wealth Gain</div></div>
+<div class="result-box"><div class="icon">🏦</div><div class="val" id="totalInvested">₹0</div><div class="label">Total Invested</div></div>
+</div>
+<div class="chart-bar"><div class="invested" id="investedBar" style="width:50%">Invested</div><div class="returns" id="returnsBar" style="width:50%">Returns</div></div>
+<div class="chart-legend"><span><span class="dot" style="background:var(--accent)"></span>Invested: <strong id="invPct">50%</strong></span><span><span class="dot" style="background:var(--accent2)"></span>Returns: <strong id="retPct">50%</strong></span></div>
+<div style="margin-top:20px"><div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);margin-bottom:12px">Year-by-Year Growth</div><div class="growth-chart" id="growthChart"></div></div>
+</div>
+<h2 class="section-title">SIP Calculator — FAQ</h2>
+<details class="faq"><summary>How does SIP work?</summary><div class="faq-body">SIP (Systematic Investment Plan) lets you invest a fixed amount in mutual funds at regular intervals. It uses rupee cost averaging — you buy more units when prices are low and fewer when high, reducing average cost over time.</div></details>
+<details class="faq"><summary>What is Step-Up SIP?</summary><div class="faq-body">Step-Up SIP increases your SIP amount by a fixed percentage every year. For example, ₹10,000/month with 10% step-up becomes ₹11,000 in year 2, ₹12,100 in year 3. This helps investments grow with your income.</div></details>
+<details class="faq"><summary>What returns can I expect?</summary><div class="faq-body">Historically, equity mutual funds delivered 12-15% CAGR over 10+ years. Debt funds: 6-8%. Hybrid funds: 9-12%. Past returns don't guarantee future performance.</div></details>
+<details class="faq"><summary>Is this calculator free?</summary><div class="faq-body">Yes! Completely free. For GST & bank reconciliation automation, try <a href="/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+<div class="funnel-banner"><h3>Need GST & Bank Reconciliation?</h3><p>Automate compliance with AI. 2 free reconciliations per month.</p><a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a></div>
+</div>
+<footer><p>Free SIP Calculator by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p><p style="margin-top:6px">For educational purposes. Mutual fund investments are subject to market risks.</p></footer>
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function fmtLakh(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';return '₹'+Math.round(n).toLocaleString('en-IN')}
+function calculate(){
+const sip=parseFloat(document.getElementById('sipAmount').value)||0;
+const rate=parseFloat(document.getElementById('rate').value)||0;
+const years=parseFloat(document.getElementById('years').value)||1;
+const stepupOn=document.getElementById('toggleStepup').classList.contains('on');
+const stepupPct=stepupOn?(parseFloat(document.getElementById('stepupPct').value)||0)/100:0;
+document.getElementById('sipVal').textContent=fmt(sip);
+document.getElementById('rateVal').textContent=rate.toFixed(2)+'%';
+document.getElementById('yearsVal').textContent=years+' Years ('+(years*12)+' months)';
+const r=rate/12/100;
+let totalInvested=0,maturity=0,currentSip=sip,yearData=[];
+for(let y=0;y<years;y++){
+for(let m=0;m<12;m++){maturity=(maturity+currentSip)*(1+r);totalInvested+=currentSip}
+yearData.push({inv:totalInvested,mat:maturity,year:y+1});
+if(stepupOn)currentSip*=(1+stepupPct);
+}
+const wealthGain=maturity-totalInvested;
+document.getElementById('maturityAmount').textContent=fmtLakh(maturity);
+document.getElementById('wealthGain').textContent=fmtLakh(wealthGain);
+document.getElementById('totalInvested').textContent=fmtLakh(totalInvested);
+const invPct=(totalInvested/maturity*100).toFixed(1);
+document.getElementById('investedBar').style.width=invPct+'%';
+document.getElementById('returnsBar').style.width=(100-invPct).toFixed(1)+'%';
+document.getElementById('invPct').textContent=invPct+'%';
+document.getElementById('retPct').textContent=(100-invPct).toFixed(1)+'%';
+let html='';const maxMat=maturity||1;
+for(const d of yearData){
+const totalH=(d.mat/maxMat)*100;const invH=(d.inv/maxMat)*100;
+html+='<div class="growth-bar" style="height:'+Math.max(8,totalH)+'%"><div class="inv-bar" style="height:'+Math.max(8,invH)+'%"></div><div class="tooltip">Year '+d.year+': '+fmtLakh(d.mat)+'<br>Invested: '+fmtLakh(d.inv)+'</div></div>';
+}
+document.getElementById('growthChart').innerHTML=html;
+}
+calculate();
+</script>
+</body>
+</html>

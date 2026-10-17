@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Advance Tax Calculator — Quarterly Installments FY 2026-27 | ReconcileAI</title>
+<meta name="description" content="Free advance tax calculator India FY 2026-27. Quarterly installments, due dates, interest u/s 234B & 234C. New vs Old regime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#fff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.theme-toggle:hover{border-color:var(--accent);transform:scale(1.05)}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:900px;margin:0 auto;padding:32px 20px 60px}
+.hero{text-align:center;padding:40px 0 32px}
+.hero h1{font-family:var(--font-display);font-size:clamp(32px,5vw,48px);line-height:1.15;margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--accent)}.hero p{color:var(--text2);font-size:16px;max-width:540px;margin:0 auto}
+.calc-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px;margin-bottom:32px;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+[data-theme="light"] .calc-card{box-shadow:0 8px 40px rgba(0,0,0,.06)}
+.form-group{margin-bottom:18px}.form-group label{display:block;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text2);margin-bottom:8px}
+.input-wrap{position:relative}.currency-symbol{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-family:var(--font-mono);font-size:16px;color:var(--accent);font-weight:700}
+.input-field{width:100%;padding:12px 16px 12px 36px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:18px;font-family:var(--font-mono);color:var(--text);outline:none;transition:border-color .2s;font-weight:600}
+.select-field{width:100%;padding:12px 16px;background:var(--surface2);border:2px solid var(--border);border-radius:12px;font-size:15px;font-family:var(--font-body);color:var(--text);outline:none;cursor:pointer}
+.result-card{margin-top:28px;padding:24px;background:var(--surface2);border:1px solid var(--border);border-radius:16px}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)}
+.result-row:last-child{border-bottom:none}
+.result-label{font-size:14px;color:var(--text2)}.result-value{font-family:var(--font-mono);font-size:16px;font-weight:700}
+.result-row.total .result-value{font-size:20px;color:var(--accent)}
+.result-row.interest .result-value{color:var(--danger)}
+.installment-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:13px}
+.installment-table th{background:var(--surface);padding:10px 14px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);border-bottom:2px solid var(--border)}
+.installment-table td{padding:10px 14px;border-bottom:1px solid var(--border)}
+.installment-table .due{color:var(--accent3);font-weight:600}.installment-table .amt{font-family:var(--font-mono);font-weight:700;color:var(--accent)}
+.installment-table tr:hover td{background:var(--surface2)}
+.section-title{font-family:var(--font-display);font-size:clamp(22px,3vw,32px);margin:40px 0 16px}
+.faq{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px}
+.faq summary{padding:16px 20px;cursor:pointer;font-weight:600;font-size:14px;background:var(--surface);list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:'+';font-size:20px;color:var(--accent);transition:transform .3s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq .faq-body{padding:16px 20px;font-size:13px;color:var(--text2);line-height:1.8;background:var(--surface2)}
+.funnel-banner{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:28px;text-align:center;margin:40px 0}
+.funnel-banner h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}.funnel-banner p{color:var(--text2);font-size:14px;margin-bottom:16px}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.calc-card{padding:20px}.hero{padding:24px 0 20px}.installment-table{font-size:11px}.installment-table td,.installment-table th{padding:8px 6px}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/tools" class="logo">Reconcile<span>AI</span> <span style="font-size:10px;font-family:var(--font-mono);opacity:.6;margin-left:6px">FREE TOOLS</span></a><div class="nav-right"><button class="theme-toggle" onclick="toggleTheme()">☀️</button><a href="/" class="cta-btn">Try ReconcileAI Free →</a></div></div></nav>
+<div class="container">
+<div class="hero"><h1>Free <em>Advance Tax Calculator</em></h1><p>Quarterly advance tax installments, due dates & late payment interest. FY 2026-27.</p></div>
+<div class="calc-card">
+<div class="form-group"><label>Estimated Total Income for FY 2026-27</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="totalIncome" value="1500000" oninput="calculate()"></div></div>
+<div class="form-group"><label>Tax Regime</label><select class="select-field" id="regime" onchange="calculate()"><option value="new" selected>New Regime (Default)</option><option value="old">Old Regime (with deductions)</option></select></div>
+<div class="form-group"><label>Total Deductions (Old Regime)</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="deductions" value="250000" oninput="calculate()"></div></div>
+<div class="form-group"><label>TDS/TCS Already Deducted</label><div class="input-wrap"><span class="currency-symbol">₹</span><input type="number" class="input-field" id="tdsDeducted" value="50000" oninput="calculate()"></div></div>
+<div class="result-card">
+<div class="result-row"><span class="result-label">Total Taxable Income</span><span class="result-value" id="taxableIncome">₹0</span></div>
+<div class="result-row"><span class="result-label">Total Tax Liability (incl. cess)</span><span class="result-value" id="taxLiability">₹0</span></div>
+<div class="result-row"><span class="result-label">Less: TDS/TCS</span><span class="result-value" id="tdsAmount">₹0</span></div>
+<div class="result-row total"><span class="result-label">Advance Tax Payable</span><span class="result-value" id="advanceTax">₹0</span></div>
+</div>
+<h3 style="margin-top:28px;font-family:var(--font-display);font-size:20px">Quarterly Installment Schedule</h3>
+<table class="installment-table">
+<thead><tr><th>Quarter</th><th>Due Date</th><th>%</th><th>Installment</th><th>Cumulative</th></tr></thead>
+<tbody>
+<tr><td>Q1 (Apr-Jun)</td><td class="due">15 June 2026</td><td>15%</td><td class="amt" id="q1">₹0</td><td id="q1c">₹0</td></tr>
+<tr><td>Q2 (Jul-Sep)</td><td class="due">15 September 2026</td><td>45%</td><td class="amt" id="q2">₹0</td><td id="q2c">₹0</td></tr>
+<tr><td>Q3 (Oct-Dec)</td><td class="due">15 December 2026</td><td>75%</td><td class="amt" id="q3">₹0</td><td id="q3c">₹0</td></tr>
+<tr><td>Q4 (Jan-Mar)</td><td class="due">15 March 2027</td><td>100%</td><td class="amt" id="q4">₹0</td><td id="q4c">₹0</td></tr>
+</tbody>
+</table>
+<div class="result-card" style="margin-top:16px">
+<div class="result-row interest"><span class="result-label">⚠️ Interest u/s 234B (if not paid by 31 March)</span><span class="result-value" id="interest234b">₹0</span></div>
+<div class="result-row interest"><span class="result-label">⚠️ Interest u/s 234C (per quarter delay)</span><span class="result-value" id="interest234c">₹0</span></div>
+</div>
+</div>
+<h2 class="section-title">Advance Tax — FAQ</h2>
+<details class="faq"><summary>Who needs to pay advance tax?</summary><div class="faq-body">Anyone whose estimated tax liability exceeds ₹10,000 after TDS. Includes business owners, professionals, freelancers, and those with capital gains or rental income. Salaried employees with only salary income don't need to pay separately.</div></details>
+<details class="faq"><summary>What is interest u/s 234B and 234C?</summary><div class="faq-body"><strong>234B:</strong> 1% per month if 90% of tax not paid by 31st March.<br><strong>234C:</strong> 1% per month for each quarter's shortfall (15%/45%/75%/100% cumulative).</div></details>
+<details class="faq"><summary>What about capital gains in Q4?</summary><div class="faq-body">For capital gains in the last quarter (Jan-Mar), pay tax on that gain in the Q4 installment (by 15 March) without interest. Calculate other income's advance tax normally.</div></details>
+<details class="faq"><summary>Is this free?</summary><div class="faq-body">Yes! For GST & bank reconciliation automation, try <a href="/" style="color:var(--accent)">ReconcileAI</a>.</div></details>
+<div class="funnel-banner"><h3>Need GST & Bank Reconciliation?</h3><p>Automate compliance with AI. 2 free reconciliations per month.</p><a href="/" class="cta-btn" style="padding:12px 28px;font-size:15px">Try ReconcileAI Free →</a></div>
+</div>
+<footer><p>Free Advance Tax Calculator by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p><p style="margin-top:6px">For educational purposes. Verify with your CA.</p></footer>
+<script>
+function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function calcTaxNew(income){const slabs=[[300000,0],[600000,5],[900000,10],[1200000,15],[1500000,20],[Infinity,30]];let tax=0,prev=0;for(const[l,r]of slabs){if(income<=prev)break;tax+=(Math.min(income,l)-prev)*(r/100);prev=l}return tax}
+function calcTaxOld(income){const slabs=[[250000,0],[500000,5],[1000000,20],[Infinity,30]];let tax=0,prev=0;for(const[l,r]of slabs){if(income<=prev)break;tax+=(Math.min(income,l)-prev)*(r/100);prev=l}return tax}
+function calculate(){
+const totalIncome=parseFloat(document.getElementById('totalIncome').value)||0;
+const regime=document.getElementById('regime').value;
+const deductions=parseFloat(document.getElementById('deductions').value)||0;
+const tds=parseFloat(document.getElementById('tdsDeducted').value)||0;
+let taxable,tax;
+if(regime==='new'){taxable=Math.max(0,totalIncome-75000);tax=calcTaxNew(taxable);if(taxable<=700000)tax=Math.min(tax,25000)}
+else{taxable=Math.max(0,totalIncome-50000-deductions);tax=calcTaxOld(taxable);if(taxable<=500000)tax=Math.min(tax,12500)}
+tax+=tax*0.04;
+const advanceTax=Math.max(0,tax-tds);
+document.getElementById('taxableIncome').textContent=fmt(taxable);
+document.getElementById('taxLiability').textContent=fmt(tax);
+document.getElementById('tdsAmount').textContent=fmt(tds);
+document.getElementById('advanceTax').textContent=fmt(advanceTax);
+const cum=[0.15,0.45,0.75,1.0];let prevAmt=0;
+for(let i=0;i<4;i++){const cumAmt=advanceTax*cum[i];const inst=cumAmt-prevAmt;document.getElementById('q'+(i+1)).textContent=fmt(inst);document.getElementById('q'+(i+1)+'c').textContent=fmt(cumAmt);prevAmt=cumAmt}
+document.getElementById('interest234b').textContent=fmt(advanceTax*0.01*12);
+document.getElementById('interest234c').textContent=fmt(advanceTax*0.01*3);
+}
+calculate();
+</script>
+</body>
+</html>
