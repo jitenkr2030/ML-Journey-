@@ -161,6 +161,14 @@ async def interest_calculator():
 async def currency_converter():
     return _serve_page("free-tools", "currency-converter", "index.html")
 
+
+@app.get("/blog")
+async def blog_index():
+    return _serve_page("blog", "index.html")
+
+@app.get("/blog/{slug}")
+async def blog_post(slug: str):
+    return _serve_page("blog", f"{slug}.html")
 @app.get("/api/types")
 async def list_types():
     return {

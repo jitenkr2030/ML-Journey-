@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GSTR-2B Mismatch Resolution — How to Fix ITC Discrepancies | ReconcileAI Blog</title>
+<meta name="description" content="Step-by-step guide to resolve GSTR-2B mismatches. ITC eligible vs blocked analysis. Missing invoices, wrong GSTIN, amount differences.">
+<meta property="og:title" content="GSTR-2B Mismatch Resolution — How to Fix ITC Discrepancies"><meta property="og:description" content="Step-by-step guide to resolve GSTR-2B mismatches. ITC eligible vs blocked analysis. Missing invoices, wrong GSTIN, amount differences.">
+<link rel="canonical" href="https://reconcileai.de.deplexo.com/blog/gstr-2b-mismatch-resolution">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0b;--surface:#131316;--surface2:#1a1a1f;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--danger:#ef4444;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif;--font-mono:'JetBrains Mono',monospace}
+[data-theme="light"]{--bg:#f8f7f4;--surface:#fff;--surface2:#f0eeea;--border:#e2e0da;--accent:#2563eb;--accent2:#059669;--accent3:#d97706;--danger:#dc2626;--text:#1a1a1f;--text2:#5c5c66;--text3:#9898a0}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:10;backdrop-filter:blur(20px)}
+.nav-inner{max-width:800px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none}.logo span{color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.theme-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .3s}
+.cta-btn{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.container{max-width:800px;margin:0 auto;padding:32px 20px 60px}
+.article-header{text-align:center;padding:40px 0 32px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.article-header .category{font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);background:rgba(79,140,255,.1);padding:5px 14px;border-radius:10px;display:inline-block;margin-bottom:16px}
+.article-header h1{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);line-height:1.2;margin-bottom:16px}
+.article-header .meta{font-family:var(--font-mono);font-size:12px;color:var(--text3);display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.article-body{font-size:16px;line-height:1.8;color:var(--text)}
+.article-body h2{font-family:var(--font-display);font-size:28px;margin:36px 0 16px}
+.article-body h3{font-family:var(--font-body);font-size:20px;font-weight:700;margin:24px 0 12px}
+.article-body p{margin-bottom:16px;color:var(--text2)}
+.article-body ul,.article-body ol{margin:12px 0 20px 24px;color:var(--text2)}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--text)}
+.article-body a{color:var(--accent);text-decoration:underline;text-decoration-color:rgba(79,140,255,.3);text-underline-offset:3px}
+.callout{padding:20px 24px;border-radius:14px;margin:24px 0;font-size:14px;line-height:1.7}
+.callout.info{background:rgba(79,140,255,.08);border:1px solid rgba(79,140,255,.2);border-left:4px solid var(--accent)}
+.callout.tip{background:rgba(54,211,153,.08);border:1px solid rgba(54,211,153,.2);border-left:4px solid var(--accent2)}
+.callout.warn{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-left:4px solid var(--accent3)}
+.callout .callout-title{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.callout.info .callout-title{color:var(--accent)}.callout.tip .callout-title{color:var(--accent2)}.callout.warn .callout-title{color:var(--accent3)}
+.data-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.data-table th{background:var(--surface);padding:12px 16px;text-align:left;font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);border-bottom:2px solid var(--border)}
+.data-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:var(--text2)}
+.data-table tr:hover td{background:var(--surface2)}
+.mid-cta{background:linear-gradient(135deg,rgba(79,140,255,.1),rgba(54,211,153,.06));border:1px solid rgba(79,140,255,.2);border-radius:16px;padding:24px;margin:32px 0;text-align:center}
+.mid-cta h3{font-family:var(--font-display);font-size:22px;margin-bottom:8px}.mid-cta p{font-size:14px;color:var(--text2);margin-bottom:16px}
+.end-cta{background:linear-gradient(135deg,rgba(79,140,255,.12),rgba(54,211,153,.08));border:1px solid rgba(79,140,255,.25);border-radius:16px;padding:32px;margin:40px 0;text-align:center}
+.end-cta h3{font-family:var(--font-display);font-size:24px;margin-bottom:8px}.end-cta p{font-size:15px;color:var(--text2);margin-bottom:20px}
+.related-posts{margin:40px 0}.related-posts h2{font-family:var(--font-display);font-size:24px;margin-bottom:16px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:600px){.related-grid{grid-template-columns:1fr}}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;text-decoration:none;color:var(--text);transition:all .3s}
+.related-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.related-card .cat{font-family:var(--font-mono);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+.related-card h4{font-family:var(--font-display);font-size:16px;margin:8px 0;line-height:1.3}
+.related-card .time{font-family:var(--font-mono);font-size:11px;color:var(--text3)}
+.share-row{display:flex;gap:12px;margin:32px 0;padding:20px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.share-btn{padding:8px 16px;border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:600;color:var(--text2);text-decoration:none;transition:all .2s}
+.share-btn:hover{border-color:var(--accent);color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:12px;color:var(--text3)}
+footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="/" class="logo">Reconcile<span>AI</span></a><div class="nav-right"><a href="/blog" style="color:var(--text2);text-decoration:none;font-size:13px;font-weight:600">Blog</a><a href="/tools" style="color:var(--text2);text-decoration:none;font-size:13px;font-weight:600">Free Tools</a><a href="https://bizcfo.fadehost.app/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:none;font-size:13px;font-weight:600">BizCFO</a>
+<button class="theme-toggle" onclick="toggleTheme()">☀️</button><a href="/" class="cta-btn">Try Free →</a></div></div></nav>
+<div class="container">
+<div class="article-header"><div class="category">GST</div><h1>GSTR-2B Mismatch Resolution — How to Fix ITC Discrepancies</h1><div class="meta"><span>January 10, 2026</span><span>7 min read</span><span>By ReconcileAI Team</span></div></div>
+<div class="article-body">
+<p>If your books show more ITC than GSTR-2B, or your GSTR-2B has invoices you don't recognize, you have a mismatch. This guide covers exactly how to identify, categorize, and resolve every type of GSTR-2B mismatch.</p>
+
+<h2>Types of GSTR-2B Mismatches</h2>
+<table class="data-table">
+<thead><tr><th>Mismatch Type</th><th>What It Means</th><th>Root Cause</th></tr></thead>
+<tbody>
+<tr><td><strong>Invoice in books, not in 2B</strong></td><td>You claimed ITC but supplier hasn't filed</td><td>Supplier default</td></tr>
+<tr><td><strong>Invoice in 2B, not in books</strong></td><td>Supplier filed but you haven't recorded</td><td>Missing purchase entry</td></tr>
+<tr><td><strong>Tax amount mismatch</strong></td><td>Same invoice, different tax amounts</td><td>Wrong tax rate, rounding, amendments</td></tr>
+<tr><td><strong>Duplicate in 2B</strong></td><td>Same invoice appears twice</td><td>Supplier filed duplicate GSTR-1</td></tr>
+<tr><td><strong>Amended invoice</strong></td><td>Original + amended both in 2B</td><td>Supplier amended GSTR-1</td></tr>
+</tbody>
+</table>
+
+<h2>Step-by-Step Resolution Process</h2>
+
+<h3>Step 1: Categorize All Mismatches</h3>
+<p>Sort every mismatched invoice into one of the categories above. This determines the resolution action.</p>
+
+<h3>Step 2: Missing Supplier Filings</h3>
+<p>For invoices in your books but not in GSTR-2B:</p>
+<ol>
+<li>Contact the supplier immediately</li>
+<li>Ask them to file GSTR-1 (or amend if already filed with wrong details)</li>
+<li>Set a follow-up reminder (7 days)</li>
+<li>If supplier doesn't respond, <strong>do not claim ITC</strong> until 2B shows the invoice</li>
+</ol>
+
+<div class="callout warn">
+<div class="callout-title">ITC Rule 36(4)</div>
+You can only claim ITC that appears in GSTR-2B. If the supplier hasn't filed, the ITC is not available this month. Claim it in the month it appears in 2B. Do not risk claiming unmatched ITC — it will be reversed and you'll pay interest.
+</div>
+
+<h3>Step 3: Missing Purchase Entries</h3>
+<p>For invoices in GSTR-2B but not in your books:</p>
+<ol>
+<li>Check if the invoice was received but not recorded</li>
+<li>Check if the invoice is from a different entity (wrong GSTIN mapping)</li>
+<li>Record the missing purchase entry in your books</li>
+<li>Claim the ITC in GSTR-3B</li>
+</ol>
+
+<h3>Step 4: Tax Amount Mismatches</h3>
+<p>When the same invoice has different amounts in books vs 2B:</p>
+<ul>
+<li><strong>Small differences (< ₹1):</strong> Rounding adjustment. Acceptable.</li>
+<li><strong>Tax rate difference:</strong> Verify the correct HSN code and rate. Ask supplier to amend.</li>
+<li><strong>Valuation difference:</strong> Check if there are additional charges (freight, insurance) included.</li>
+<li><strong>Amendment difference:</strong> Supplier amended the invoice. Match with amended version.</li>
+</ul>
+
+<h3>Step 5: Handle Credit Notes</h3>
+<p>Credit notes in GSTR-2B reduce your ITC. Make sure:</p>
+<ul>
+<li>Every credit note is recorded in your purchase returns</li>
+<li>Debit notes are matched against original invoices</li>
+<li>Net ITC position is calculated correctly</li>
+</ul>
+
+<div class="mid-cta">
+<h3>Auto-Fix GSTR-2B Mismatches</h3>
+<p>ReconcileAI identifies every mismatch automatically and suggests resolution actions.</p>
+<a href="/tools/gst-calculator" class="cta-btn" style="padding:12px 24px;font-size:14px;display:inline-block;text-decoration:none">Try GST Calculator Free →</a>
+</div>
+
+<h2>Preventing Future Mismatches</h2>
+<ol>
+<li><strong>Monthly reconciliation:</strong> Don't wait until year-end. Reconcile every month.</li>
+<li><strong>Supplier scorecard:</strong> Track which suppliers consistently fail to file on time.</li>
+<li><strong>Invoice verification:</strong> Record invoices immediately when received.</li>
+<li><strong>Use automated tools:</strong> Manual matching is error-prone. Automation catches what humans miss.</li>
+</ol>
+
+<div class="callout tip">
+<div class="callout-title">Best Practice</div>
+Download GSTR-2B on the 14th (when it's generated), reconcile by the 20th, and follow up with suppliers by the 25th. This gives enough buffer before GSTR-3B filing (20th of next month).
+</div>
+</div>
+<div class="end-cta"><h3>Automate GST Reconciliation with AI</h3><p>ReconcileAI does GSTR-2B reconciliation in 30 seconds. 95%+ accuracy.</p><a href="/" class="cta-btn" style="padding:14px 32px;font-size:15px">Try ReconcileAI Free →</a></div>
+<div class="related-posts"><h2>Related Articles</h2><div class="related-grid">
+<a href="/blog/gst-reconciliation-process-guide" class="related-card"><h4>GST Reconciliation Step by Step</h4></a>
+<a href="/blog/tds-rate-chart-2026-27" class="related-card"><h4>TDS Rate Chart 2026-27</h4></a>
+<a href="/blog/manual-vs-automated-bank-reconciliation" class="related-card"><h4>Manual vs Automated Bank Recon</h4></a>
+</div></div>
+<div class="share-row"><span style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--text3);align-self:center">Share:</span><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://reconcileai.de.deplexo.com/blog/gstr-2b-mismatch-resolution" class="share-btn" target="_blank">LinkedIn</a><a href="https://wa.me/?text=GSTR-2B%20Mismatch%20Resolution%20—%20How%20to%20Fix%20ITC%20Discrepancies%20https://reconcileai.de.deplexo.com/blog/gstr-2b-mismatch-resolution" class="share-btn" target="_blank">WhatsApp</a></div>
+</div>
+<footer><p>Blog by <a href="/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p><p style="margin-top:6px"><a href="/">Home</a> · <a href="/tools">Free Tools</a> · <a href="/blog">Blog</a></p></footer>
+<script>function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
+function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
+function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
+applyTheme(getTheme());</script>
+</body>
+</html>

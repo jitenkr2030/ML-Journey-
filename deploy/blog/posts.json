@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "gst-reconciliation-process-guide",
+    "title": "GST Reconciliation Process Step by Step — Complete Guide 2026",
+    "excerpt": "Learn the complete GST reconciliation process in India. Match your books with GSTR-2B, resolve ITC mismatches, and file accurate returns. Updated for FY 2026-27.",
+    "category": "GST",
+    "date": "2026-01-15",
+    "read_time": "8 min read",
+    "icon": "📋",
+    "style": "formal"
+  },
+  {
+    "slug": "tds-rate-chart-2026-27",
+    "title": "TDS Rate Chart 2026-27 — Complete Section-Wise Rates for India",
+    "excerpt": "Complete TDS rate chart for FY 2026-27. All sections — 192, 194C, 194H, 194I, 194J, 194A, 194B. With PAN and without PAN rates. Updated budget 2026.",
+    "category": "Tax",
+    "date": "2026-01-12",
+    "read_time": "6 min read",
+    "icon": "💰",
+    "style": "formal"
+  },
+  {
+    "slug": "gstr-2b-mismatch-resolution",
+    "title": "GSTR-2B Mismatch Resolution — How to Fix ITC Discrepancies",
+    "excerpt": "Step-by-step guide to resolve GSTR-2B mismatches. ITC eligible vs blocked analysis. How to handle missing invoices, wrong GSTIN, and amount differences.",
+    "category": "GST",
+    "date": "2026-01-10",
+    "read_time": "7 min read",
+    "icon": "📥",
+    "style": "formal"
+  },
+  {
+    "slug": "manual-vs-automated-bank-reconciliation",
+    "title": "Manual vs Automated Bank Reconciliation — A Honest Comparison",
+    "excerpt": "I spent weeks talking to CAs about bank reconciliation. Here's what I learned about why manual reconciliation is broken and what automation actually fixes. Real numbers, not marketing.",
+    "category": "Bank Recon",
+    "date": "2026-01-08",
+    "read_time": "5 min read",
+    "icon": "🏦",
+    "style": "casual"
+  },
+  {
+    "slug": "why-indian-smbs-need-automation",
+    "title": "Har Indian SMB Ko Automation Kyun Chahiye — An Honest Take",
+    "excerpt": "India mein 63 million SMBs hain. Most of them are still doing accounting manually. Here's why that needs to change — and how AI is making it possible for everyone. Not a sales pitch. Just honest numbers.",
+    "category": "Insights",
+    "date": "2026-01-05",
+    "read_time": "6 min read",
+    "icon": "🇮🇳",
+    "style": "casual"
+  }
+]
