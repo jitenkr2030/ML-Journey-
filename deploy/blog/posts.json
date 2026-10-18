@@ -1,5 +1,50 @@
 [
   {
+    "slug": "section-80c-deductions-guide",
+    "title": "Section 80C Deductions Guide",
+    "category": "Tax",
+    "date": "2026-01-13",
+    "read_time": "7 min read",
+    "icon": "💰",
+    "style": "formal"
+  },
+  {
+    "slug": "itr-filing-process-2026",
+    "title": "ITR Filing Process 2026",
+    "category": "Tax",
+    "date": "2026-01-14",
+    "read_time": "8 min read",
+    "icon": "📄",
+    "style": "formal"
+  },
+  {
+    "slug": "gstr-1-filing-process-guide",
+    "title": "GSTR-1 Filing Process Guide",
+    "category": "GST",
+    "date": "2026-01-16",
+    "read_time": "8 min read",
+    "icon": "📋",
+    "style": "formal"
+  },
+  {
+    "slug": "new-vs-old-tax-regime",
+    "title": "New vs Old Tax Regime",
+    "category": "Tax",
+    "date": "2026-01-17",
+    "read_time": "7 min read",
+    "icon": "🔄",
+    "style": "formal"
+  },
+  {
+    "slug": "income-tax-slab-rates-2026-27",
+    "title": "Income Tax Slab Rates 2026-27",
+    "category": "Tax",
+    "date": "2026-01-18",
+    "read_time": "8 min read",
+    "icon": "📊",
+    "style": "formal"
+  },
+  {
     "slug": "gst-reconciliation-process-guide",
     "title": "GST Reconciliation Process Step by Step — Complete Guide 2026",
     "excerpt": "Learn the complete GST reconciliation process in India. Match your books with GSTR-2B, resolve ITC mismatches, and file accurate returns. Updated for FY 2026-27.",
