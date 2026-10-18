@@ -1,5 +1,50 @@
 [
   {
+    "slug": "bank-reconciliation-statement-format",
+    "title": "Bank Reconciliation Statement Format",
+    "category": "Bank Recon",
+    "date": "2026-01-23",
+    "read_time": "7 min read",
+    "icon": "🏦",
+    "style": "formal"
+  },
+  {
+    "slug": "capital-gains-tax-property-sale",
+    "title": "Capital Gains Tax on Property Sale",
+    "category": "Tax",
+    "date": "2026-01-22",
+    "read_time": "8 min read",
+    "icon": "🏦",
+    "style": "formal"
+  },
+  {
+    "slug": "hra-exemption-rules-calculation",
+    "title": "HRA Exemption Rules & Calculation",
+    "category": "Tax",
+    "date": "2026-01-21",
+    "read_time": "7 min read",
+    "icon": "🏠",
+    "style": "formal"
+  },
+  {
+    "slug": "gstr-3b-filing-guide",
+    "title": "GSTR-3B Filing Complete Guide",
+    "category": "GST",
+    "date": "2026-01-19",
+    "read_time": "8 min read",
+    "icon": "📋",
+    "style": "formal"
+  },
+  {
+    "slug": "gst-registration-process-online",
+    "title": "GST Registration Process Online 2026",
+    "category": "GST",
+    "date": "2026-01-20",
+    "read_time": "8 min read",
+    "icon": "📝",
+    "style": "formal"
+  },
+  {
     "slug": "section-80c-deductions-guide",
     "title": "Section 80C Deductions Guide",
     "category": "Tax",
