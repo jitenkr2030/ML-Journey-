@@ -92,10 +92,10 @@ function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
 function applyTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('free_tools_theme',t);document.querySelector('.theme-toggle').textContent=t==='light'?'🌙':'☀️'}
 function toggleTheme(){applyTheme(getTheme()==='light'?'dark':'light')}
 applyTheme(getTheme());
-function fmt(n){return '\u20b9'+Math.round(n).toLocaleString('en-IN')}
-function fmtLakh(n){if(n>=10000000)return '\u20b9'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '\u20b9'+(n/100000).toFixed(2)+' L';return '\u20b9'+Math.round(n).toLocaleString('en-IN')}
+function fmt(n){return '₹'+Math.round(n).toLocaleString('en-IN')}
+function fmtLakh(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';return '₹'+Math.round(n).toLocaleString('en-IN')}
 const RATES={USD:1,INR:83.5,EUR:0.92,GBP:0.79,AED:3.67,JPY:149.5,CAD:1.36,AUD:1.53,SGD:1.34,CNY:7.24};
-const SYMBOLS={USD:'$',INR:'\u20b9',EUR:'\u20ac',GBP:'\u00a3',AED:'\u062f.\u0625',JPY:'\u00a5',CAD:'C$',AUD:'A$',SGD:'S$',CNY:'\u00a5'};
+const SYMBOLS={USD:'$',INR:'₹',EUR:'\u20ac',GBP:'\u00a3',AED:'\u062f.\u0625',JPY:'\u00a5',CAD:'C$',AUD:'A$',SGD:'S$',CNY:'\u00a5'};
 function onCurrencyChange(){
 const from=document.getElementById('fromCurrency').value;
 document.getElementById('fromSymbol').textContent=SYMBOLS[from]||from;

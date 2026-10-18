@@ -710,12 +710,12 @@ tb.innerHTML=pending.map(p=>
 <td>${p.id}</td>
 <td>${p.email||'-'}</td>
 <td style="font-family:var(--font-mono);font-size:11px">${p.utr||p.utr_number||'-'}</td>
-<td style="font-weight:700;color:var(--green)">\u20b9${p.amount||499}</td>
+<td style="font-weight:700;color:var(--green)">₹${p.amount||499}</td>
 <td>${p.recon_type||'-'}</td>
 <td style="font-size:11px">${p.created_at||'-'}</td>
 <td>
-<button class="btn btn-success btn-sm" onclick="confirmPayment(${p.id})">\u2705 Confirm</button>
-<button class="btn btn-danger btn-sm" onclick="rejectPayment(${p.id})">\u274c Reject</button>
+<button class="btn btn-success btn-sm" onclick="confirmPayment(${p.id})">✅ Confirm</button>
+<button class="btn btn-danger btn-sm" onclick="rejectPayment(${p.id})">❌ Reject</button>
 </td>
 </tr>`).join('');
 }catch(e){
@@ -965,8 +965,8 @@ async function loadEnquiries(){
             '<td style="font-size:11px">'+e.created_at+'</td>'+
             '<td>'+
             (e.status==='new'?'<button class="btn btn-primary btn-sm" onclick="updateEnquiry('+e.id+',\'contacted\')">\u260e\ufe0f Contacted</button> ':'')+
-            (e.status!=='converted'?'<button class="btn btn-success btn-sm" onclick="updateEnquiry('+e.id+',\'converted\')">\u2705 Won</button> ':'')+
-            (e.status!=='rejected'?'<button class="btn btn-danger btn-sm" onclick="updateEnquiry('+e.id+',\'rejected\')">\u274c</button>':'')+
+            (e.status!=='converted'?'<button class="btn btn-success btn-sm" onclick="updateEnquiry('+e.id+',\'converted\')">✅ Won</button> ':'')+
+            (e.status!=='rejected'?'<button class="btn btn-danger btn-sm" onclick="updateEnquiry('+e.id+',\'rejected\')">❌</button>':'')+
             '</td>'+
             '</tr>'
         ).join('');

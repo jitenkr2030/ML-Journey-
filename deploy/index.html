@@ -861,7 +861,7 @@ gstr1:{name:'GSTR-1 Preparation',endpoint:'/api/gst/gstr1/prepare',price:199,des
 gstr2b:{name:'GSTR-2B Reconciliation',endpoint:'/api/gst/gstr2b/reconcile',price:199,desc:'Reconcile GSTR-2B with purchase register. Identify ITC eligible, blocked, and mismatched.',files:[{key:'books_file',label:'Purchase Register',desc:'From accounting software',icon:'📄'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📥'}],extra:[{key:'client_gstin',label:'GSTIN (optional)',ph:'07AAACR1234F1Z5'}]},
 gstr3b:{name:'GSTR-3B Preparation',endpoint:'/api/gst/gstr3b/prepare',price:199,desc:'Auto-compute GSTR-3B from sales, purchases, and GSTR-2B. Know exact tax liability.',files:[{key:'sales_file',label:'Sales Register',desc:'From accounting software',icon:'📤'},{key:'purchase_file',label:'Purchase Register',desc:'From accounting software',icon:'📥'},{key:'gstr2b_file',label:'GSTR-2B',desc:'From GST portal',icon:'📋'}],extra:[{key:'period',label:'Period',ph:'042026 (MMYYYY)'},{key:'client_gstin',label:'GSTIN',ph:'07AAACR1234F1Z5'}],canFile:true},
 bookkeeping:{name:'Complete Bookkeeping',endpoint:'/api/bookkeeping/upload',price:2999,desc:'Run 21 automated pipelines. Full bookkeeping: accounting, bank, GST, TDS, ledgers, financial statements, compliance, tax, risk analysis, advisory, and final report.',files:[{key:'bank_statement',label:'Bank Statement',desc:'SBI/HDFC/ICICI CSV',icon:'🏦'},{key:'daybook',label:'Tally Daybook',desc:'Tally export CSV',icon:'📖'}],extra:[],isBookkeeping:true},
-upi:{name:'UPI Reconciliation',endpoint:'/api/reconcile/upi',price:499,desc:'Match UPI transactions between books and bank. Auto-detects UTR, UPI app, failed and reversed transactions.',files:[{key:'book_file',label:'UPI Book / Register',desc:'Your UPI transaction records',icon:'\U0001f4cb'},{key:'bank_file',label:'Bank Statement',desc:'Bank statement with UPI entries',icon:'\U0001f3e6'}],extra:[]}
+upi:{name:'UPI Reconciliation',endpoint:'/api/reconcile/upi',price:499,desc:'Match UPI transactions between books and bank. Auto-detects UTR, UPI app, failed and reversed transactions.',files:[{key:'book_file',label:'UPI Book / Register',desc:'Your UPI transaction records',icon:'📋'},{key:'bank_file',label:'Bank Statement',desc:'Bank statement with UPI entries',icon:'🏦'}],extra:[]}
 };
 
 function selectType(t){
@@ -964,7 +964,7 @@ async function startBookkeeping(){
         pipelines.forEach((p,i)=>{
             const item=document.getElementById('pipe_'+i);
             if(item){
-                const icon=p.status==='completed'?'\u2705':p.status==='failed'?'\u274c':'\u23ed\ufe0f';
+                const icon=p.status==='completed'?'✅':p.status==='failed'?'❌':'\u23ed\ufe0f';
                 const cls=p.status==='completed'?'done':p.status==='failed'?'failed':'done';
                 item.className='pipeline-item '+cls;
                 item.innerHTML='<span class="pipeline-icon">'+icon+'</span><span class="pipeline-name">'+p.name+'</span><span class="pipeline-time">'+p.status+'</span>';
@@ -1288,22 +1288,22 @@ ds.innerHTML='<div style="background:rgba(245,158,11,.1);border:1px solid rgba(2
 btn.disabled=true;
 btn.style.opacity='0.5';
 btn.style.cursor='not-allowed';
-btn.textContent='\U0001f512 Download Locked \u2014 Awaiting Confirmation';
+btn.textContent='\U0001f512 Download Locked — Awaiting Confirmation';
 }else if(status==='verified'){
 ds.style.display='block';
-ds.innerHTML='<div style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);color:#34d399;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">\u2705</div><div><strong>Payment confirmed!</strong><div style="font-size:12px;margin-top:4px">Full report is now available for download.</div></div></div>';
+ds.innerHTML='<div style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);color:#34d399;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">✅</div><div><strong>Payment confirmed!</strong><div style="font-size:12px;margin-top:4px">Full report is now available for download.</div></div></div>';
 btn.disabled=false;
 btn.style.opacity='1';
 btn.style.cursor='pointer';
-btn.textContent='\U0001f4e5 Download Full Report';
+btn.textContent='📥 Download Full Report';
 unlockFullReport();
 }else if(status==='rejected'){
 ds.style.display='block';
-ds.innerHTML='<div style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#ef4444;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">\u274c</div><div><strong>Payment rejected</strong><div style="font-size:12px;margin-top:4px">Please contact support with your UTR number.</div></div></div>';
+ds.innerHTML='<div style="background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#ef4444;padding:14px 20px;border-radius:12px;display:flex;align-items:center;gap:12px"><div style="font-size:24px">❌</div><div><strong>Payment rejected</strong><div style="font-size:12px;margin-top:4px">Please contact support with your UTR number.</div></div></div>';
 btn.disabled=true;
 btn.style.opacity='0.5';
 btn.style.cursor='not-allowed';
-btn.textContent='\u274c Payment Rejected';
+btn.textContent='❌ Payment Rejected';
 }
 }
 
@@ -1742,7 +1742,7 @@ function renderClients(clients){
         h+='<div style="flex:1;min-width:0">';
         h+='<div style="font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(c.name)+'</span>';
         h+='<span style="background:'+(active?'var(--accent2)':'var(--text3)')+';color:#fff;font-size:9px;padding:2px 8px;border-radius:8px;text-transform:uppercase">'+c.status+'</span></div>';
-        h+='<div style="font-size:11px;color:var(--text3);font-family:var(--font-mono)">'+(c.gstin||'No GSTIN')+(c.pan?' \u00b7 '+c.pan:'')+'</div>';
+        h+='<div style="font-size:11px;color:var(--text3);font-family:var(--font-mono)">'+(c.gstin||'No GSTIN')+(c.pan?' · '+c.pan:'')+'</div>';
         h+='<div style="font-size:11px;color:var(--text3)">'+(c.email||c.phone||'No contact')+'</div>';
         h+='</div>';
         h+='<div style="display:flex;gap:6px;flex-shrink:0">';
@@ -1893,7 +1893,7 @@ function updateFreeCounters(){
         const remaining=getFreeRemaining(type);
         const total=FREE_LIMITS[type].limit;
         const cls=remaining===0?'warn':'';
-        const icon=type==='brs'?'\U0001f3e6':type==='gst'?'\U0001f4cb':'\U0001f4f1';
+        const icon=type==='brs'?'🏦':type==='gst'?'📋':'📱';
         h+='<div class="free-counter"><span>'+icon+'</span><span class="num '+cls+'">'+remaining+'</span>/'+total+' free '+FREE_LIMITS[type].label.split(' ')[0]+' left</div>';
     });
     el.innerHTML=h;
@@ -1918,7 +1918,7 @@ function showLimitWarning(type){
 }
 
 function showLimitBanner(){
-    return '<div class="limit-warning"><span class="icon">\u26a0\ufe0f</span><div><strong>Free limit reached.</strong> Upgrade to ₹499/reconciliation for unlimited access.</div></div>';
+    return '<div class="limit-warning"><span class="icon">⚠️</span><div><strong>Free limit reached.</strong> Upgrade to ₹499/reconciliation for unlimited access.</div></div>';
 }
 
 // Initialize on load
@@ -1937,10 +1937,10 @@ function getPaywallHTML(){
 const status=await fetch('/api/payment/status/'+currentPaymentSessionId).then(r=>r.json()).catch(()=>({}));
 if(status.status==='verified')return h;
 if(status.status==='pending'){
-return '<div class="paywall-overlay"><div style="font-size:40px;margin-bottom:10px">\u23f3</div><h3>Waiting for Admin Confirmation</h3><p>Your payment has been submitted. Full report will be available once admin confirms.</p><div style="background:rgba(245,158,11,.1);padding:12px;border-radius:8px;color:#f59e0b;font-size:13px">Payment submitted \u2014 auto-checking every 5 seconds</div></div>';
+return '<div class="paywall-overlay"><div style="font-size:40px;margin-bottom:10px">\u23f3</div><h3>Waiting for Admin Confirmation</h3><p>Your payment has been submitted. Full report will be available once admin confirms.</p><div style="background:rgba(245,158,11,.1);padding:12px;border-radius:8px;color:#f59e0b;font-size:13px">Payment submitted — auto-checking every 5 seconds</div></div>';
 }
 }
-return '<div class="paywall-overlay"><div class="paywall-lock">\U0001f512</div><h3>Unlock Full Report</h3><p>See detailed transaction-level results, download CSV, and get complete analysis.</p><button class="btn-primary" onclick="openPayment()" style="margin:0 auto">\U0001f4b0 Unlock Full Report \u20b9499</button><div style="margin-top:12px;font-size:11px;color:var(--text3)">Summary results above are always free.</div></div>';
+return '<div class="paywall-overlay"><div class="paywall-lock">\U0001f512</div><h3>Unlock Full Report</h3><p>See detailed transaction-level results, download CSV, and get complete analysis.</p><button class="btn-primary" onclick="openPayment()" style="margin:0 auto">💰 Unlock Full Report ₹499</button><div style="margin-top:12px;font-size:11px;color:var(--text3)">Summary results above are always free.</div></div>';
 }
 function unlockFullReport(){
     sessionStorage.setItem('paid_'+currentType,'true');
@@ -2026,7 +2026,7 @@ async function submitServiceInquiry(){
         const d=await r.json();
         if(d.success){
             toastSuccess('Enquiry submitted! We will call you within 24 hours.');
-            sucEl.textContent='\u2705 '+d.message;
+            sucEl.textContent='✅ '+d.message;
             sucEl.style.display='block';
             setTimeout(()=>{closeServiceInquiry()},2500);
         }else{
@@ -2039,7 +2039,7 @@ async function submitServiceInquiry(){
         errEl.textContent='Error: '+e.message;
         errEl.style.display='block';
     }
-    btn.disabled=false;btn.textContent='Submit Enquiry \u2014 Free Consultation';
+    btn.disabled=false;btn.textContent='Submit Enquiry — Free Consultation';
 }
 </script>
 
