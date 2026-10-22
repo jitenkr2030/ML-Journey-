@@ -9,6 +9,7 @@ COPY dashboard.html .
 COPY tools.html .
 COPY free-tools/ ./free-tools/
 COPY blog/ ./blog/
+COPY templates/ ./templates/
 COPY sitemap.xml .
 COPY robots.txt .
 EXPOSE 8000

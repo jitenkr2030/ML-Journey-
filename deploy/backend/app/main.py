@@ -184,6 +184,33 @@ async def robots():
     _base = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "robots.txt")
     return _FR(_base, media_type="text/plain")
 
+
+# ===== Excel Template Downloads =====
+import os as _os
+from fastapi.responses import FileResponse as _FileResp
+
+_TPL_BASE = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "templates")
+
+@app.get("/templates")
+async def templates_index():
+    return _serve_page("templates", "index.html")
+
+@app.get("/templates/download/{slug}")
+async def download_template(slug: str):
+    fpath = _os.path.join(_TPL_BASE, f"{slug}.xlsx")
+    if not _os.path.exists(fpath):
+        return {"error": "Template not found"}
+    return _FileResp(
+        fpath,
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        filename=f"{slug}.xlsx",
+        headers={"Content-Disposition": f'attachment; filename="{slug}.xlsx"'}
+    )
+
+@app.get("/templates/{slug}")
+async def template_page(slug: str):
+    return _serve_page("templates", slug, "index.html")
+
 @app.get("/api/types")
 async def list_types():
     return {
