@@ -169,6 +169,21 @@ async def blog_index():
 @app.get("/blog/{slug}")
 async def blog_post(slug: str):
     return _serve_page("blog", f"{slug}.html")
+
+@app.get("/sitemap.xml")
+async def sitemap():
+    import os as _os
+    from fastapi.responses import FileResponse as _FR
+    _base = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "sitemap.xml")
+    return _FR(_base, media_type="application/xml")
+
+@app.get("/robots.txt")
+async def robots():
+    import os as _os
+    from fastapi.responses import FileResponse as _FR
+    _base = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "robots.txt")
+    return _FR(_base, media_type="text/plain")
+
 @app.get("/api/types")
 async def list_types():
     return {
