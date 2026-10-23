@@ -28,6 +28,71 @@ app = FastAPI(
     version="3.0.0",
 )
 
+# ===== Security Middleware: Block Scanner Bots =====
+import time as _time
+from collections import defaultdict as _ddict
+
+_BLOCKED_PATHS = [
+    '.env', '.git', 'wp-admin', 'wp-login', 'wp-includes', 'wp-content',
+    'phpinfo', 'info.php', 'php.php', 'p.php', 'i.php', 'debug.php',
+    'test.php', 'pinfo.php', 'server-info', 'server-status',
+    'service-account.json', 'credentials.json', 'sa.json',
+    'gcp-key.json', 'google-credentials.json', 'firebase-adminsdk',
+    'application_default_credentials', 'keyfile.json',
+    'cache.php', '.DS_Store', 'web.config', 'elmah.axd',
+    'xmlrpc.php', 'wlwmanifest.xml', 'install.php',
+    '.htaccess', '.htpasswd', 'passwd', 'shadow',
+    'etc/passwd', 'proc/self', 'boot.ini', 'win.ini',
+    'config.json', 'settings.py', 'database.yml',
+    'phpmyadmin', 'adminer', 'pma', 'myadmin',
+    '.svn', '.hg', '.bzr', 'CVS',
+    'actuator', 'jmx-console', 'manager/html',
+    'shell', 'cmd', 'eval', 'exec',
+]
+
+_RATE_LIMIT = {}  # ip -> [timestamps]
+_RATE_LIMIT_WINDOW = 60  # seconds
+_RATE_LIMIT_MAX = 120  # requests per window per IP
+
+@app.middleware("http")
+async def security_middleware(request, call_next):
+    path = request.url.path.lower()
+    client_ip = request.client.host if request.client else "unknown"
+
+    # Block scanner paths immediately
+    for blocked in _BLOCKED_PATHS:
+        if blocked in path:
+            return JSONResponse(
+                status_code=403,
+                content={"error": "Forbidden"}
+            )
+
+    # Rate limiting per IP
+    now = _time.time()
+    if client_ip not in _RATE_LIMIT:
+        _RATE_LIMIT[client_ip] = []
+
+    # Clean old timestamps
+    _RATE_LIMIT[client_ip] = [t for t in _RATE_LIMIT[client_ip] if now - t < _RATE_LIMIT_WINDOW]
+
+    if len(_RATE_LIMIT[client_ip]) >= _RATE_LIMIT_MAX:
+        return JSONResponse(
+            status_code=429,
+            content={"error": "Too many requests"}
+        )
+
+    _RATE_LIMIT[client_ip].append(now)
+
+    # Periodic cleanup of old IPs (every 1000 requests)
+    if len(_RATE_LIMIT) > 1000:
+        for ip in list(_RATE_LIMIT.keys()):
+            if not any(now - t < _RATE_LIMIT_WINDOW for t in _RATE_LIMIT[ip]):
+                del _RATE_LIMIT[ip]
+
+    response = await call_next(request)
+    return response
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -89,6 +154,21 @@ def _serve_page(*parts):
             return FileResponse(str(p))
     return HTMLResponse(f"<h1>404 - Page not found</h1><p>Looking for: {'/'.join(parts)}</p>", status_code=404)
 
+
+@app.get("/favicon.ico")
+async def favicon():
+    import os as _f_os
+    from fastapi.responses import FileResponse as _f_FR
+    _f_base = _f_os.path.join(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.abspath(__file__)))), "favicon.svg")
+    return _f_FR(_f_base, media_type="image/svg+xml")
+
+@app.get("/favicon.svg")
+async def favicon_svg():
+    import os as _f_os
+    from fastapi.responses import FileResponse as _f_FR
+    _f_base = _f_os.path.join(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.abspath(__file__)))), "favicon.svg")
+    return _f_FR(_f_base, media_type="image/svg+xml")
+
 @app.get("/tools")
 async def tools_index():
     return _serve_page("tools.html")
@@ -109,6 +189,11 @@ async def income_tax_calculator():
 @app.get("/tools/hra-calculator")
 async def hra_calculator():
     return _serve_page("free-tools", "hra-calculator", "index.html")
+
+
+@app.get("/tools/capital-gains-calculator")
+async def capital_gains_calc():
+    return _serve_page("free-tools", "capital-gains-calculator", "index.html")
 
 @app.get("/tools/emi-calculator")
 async def emi_calculator():
@@ -162,13 +247,38 @@ async def currency_converter():
     return _serve_page("free-tools", "currency-converter", "index.html")
 
 
+
+# ===== Global Exception Handler: Never Crash =====
+import traceback as _tb
+import logging as _logging
+
+_crash_logger = _logging.getLogger("crash_handler")
+_crash_logger.setLevel(_logging.ERROR)
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request, exc):
+    _crash_logger.error(f"UNHANDLED ERROR on {request.url.path}: {exc}")
+    _crash_logger.error(_tb.format_exc())
+    return JSONResponse(
+        status_code=500,
+        content={
+            "error": "Internal server error",
+            "detail": str(exc) if "DEBUG" in str(exc) else "Something went wrong. Please try again.",
+            "path": str(request.url.path)
+        }
+    )
+
 @app.get("/blog")
 async def blog_index():
     return _serve_page("blog", "index.html")
 
 @app.get("/blog/{slug}")
 async def blog_post(slug: str):
-    return _serve_page("blog", f"{slug}.html")
+    try:
+        return _serve_page("blog", f"{slug}.html")
+    except Exception as e:
+        _crash_logger.error(f"Blog post error: {slug} - {e}")
+        return JSONResponse(status_code=404, content={"error": "Post not found"})
 
 @app.get("/sitemap.xml")
 async def sitemap():
@@ -197,15 +307,18 @@ async def templates_index():
 
 @app.get("/templates/download/{slug}")
 async def download_template(slug: str):
-    fpath = _os.path.join(_TPL_BASE, f"{slug}.xlsx")
-    if not _os.path.exists(fpath):
-        return {"error": "Template not found"}
-    return _FileResp(
-        fpath,
-        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        filename=f"{slug}.xlsx",
-        headers={"Content-Disposition": f'attachment; filename="{slug}.xlsx"'}
-    )
+    try:
+        fpath = _os.path.join(_TPL_BASE, f"{slug}.xlsx")
+        if not _os.path.exists(fpath):
+            return JSONResponse(status_code=404, content={"error": "Template not found"})
+        return _FileResp(
+            fpath,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            filename=f"{slug}.xlsx",
+            headers={"Content-Disposition": f'attachment; filename="{slug}.xlsx"'}
+        )
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 @app.get("/templates/{slug}")
 async def template_page(slug: str):
