@@ -59,13 +59,33 @@ async def security_middleware(request, call_next):
     path = request.url.path.lower()
     client_ip = request.client.host if request.client else "unknown"
 
-    # Block scanner paths immediately
-    for blocked in _BLOCKED_PATHS:
-        if blocked in path:
-            return JSONResponse(
-                status_code=403,
-                content={"error": "Forbidden"}
-            )
+    # ALWAYS allow search engine bots (check User-Agent)
+    user_agent = request.headers.get("user-agent", "").lower()
+    _GOOD_BOTS = ["googlebot", "bingbot", "slurp", "duckduckbot",
+                  "baiduspider", "yandexbot", "facebookexternalhit",
+                  "twitterbot", "linkedinbot", "whatsapp", "telegrambot",
+                  "applebot", "petalbot", "sogou"]
+
+    is_good_bot = any(bot in user_agent for bot in _GOOD_BOTS)
+
+    # Block scanner paths (but NOT for search engine bots)
+    if not is_good_bot:
+        for blocked in _BLOCKED_PATHS:
+            if blocked in path:
+                return JSONResponse(
+                    status_code=403,
+                    content={"error": "Forbidden"}
+                )
+
+    # Rate limiting per IP (skip for search engine bots)
+    if not is_good_bot:
+        now = _time.time()
+        if client_ip not in _RATE_LIMIT:
+            _RATE_LIMIT[client_ip] = []
+        _RATE_LIMIT[client_ip] = [t for t in _RATE_LIMIT[client_ip] if now - t < _RATE_LIMIT_WINDOW]
+        if len(_RATE_LIMIT[client_ip]) >= _RATE_LIMIT_MAX:
+            return JSONResponse(status_code=429, content={"error": "Too many requests"})
+        _RATE_LIMIT[client_ip].append(now)
 
     # Rate limiting per IP
     now = _time.time()
