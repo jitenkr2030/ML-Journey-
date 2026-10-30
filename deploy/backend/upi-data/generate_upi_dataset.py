@@ -98,7 +98,7 @@ def generate_amount():
     amounts = [100, 200, 250, 500, 750, 1000, 1200, 1500, 2000, 2500, 3000,
                5000, 7500, 10000, 15000, 20000, 25000, 50000, 75000, 100000,
                150, 350, 450, 550, 650, 850, 950, 1100, 1300, 1750, 2250,
-               499, 999, 1499, 1999, 2999, 3999, 4999, 9999, 14999, 19999]
+               299, 999, 1499, 1999, 2999, 3999, 4999, 5999, 14999, 19999]
     return random.choice(amounts)
 
 
@@ -107,7 +107,7 @@ def generate_reference():
 
 
 def generate_cheque():
-    return f"CHQ{random.randint(1000, 9999)}" if random.random() > 0.7 else ""
+    return f"CHQ{random.randint(1000, 5999)}" if random.random() > 0.7 else ""
 
 
 def generate_date():
