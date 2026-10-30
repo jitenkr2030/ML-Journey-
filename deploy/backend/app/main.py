@@ -137,10 +137,16 @@ app.include_router(inquiries_router)
 
 @app.on_event("startup")
 async def startup():
-    from app.services.auth_service import create_admin_user, get_pool
-    await get_pool()
-    await create_admin_user()
-
+    try:
+        from app.services.auth_service import create_admin_user, get_pool
+        await get_pool()
+        await create_admin_user()
+    except Exception as e:
+        print(f"WARNING: Startup error (non-fatal): {e}")
+        import traceback
+        traceback.print_exc()
+        print("App started despite errors. Some features may be limited.")
+        print("If DB is down: Power ON at Aiven dashboard!")
 
 @app.get("/")
 async def root():
