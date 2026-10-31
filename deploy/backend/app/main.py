@@ -172,13 +172,38 @@ async def serve_dashboard():
 # ==================== FREE TOOLS ====================
 
 def _serve_page(*parts):
-    """Safely serve a static page with fallback paths."""
-    base = Path(__file__).resolve().parent.parent.parent
-    for root in [base, base.parent, Path.cwd() / "deploy"]:
-        p = root.joinpath(*parts)
-        if p.exists():
-            return FileResponse(str(p))
-    return HTMLResponse(f"<h1>404 - Page not found</h1><p>Looking for: {'/'.join(parts)}</p>", status_code=404)
+    """Serve an HTML page from the correct directory."""
+    import os as _os
+
+    # Try multiple base paths (handles Docker + local)
+    _bases = [
+        _os.path.join(APP_ROOT, *parts),      # /app/blog/slug.html (Docker)
+        _os.path.join(BASE_DIR, *parts),       # backend/blog/slug.html (local)
+        _os.path.join(APP_ROOT, "..", *parts), # One more level up
+    ]
+
+    for fpath in _bases:
+        fpath = _os.path.normpath(fpath)
+        if _os.path.exists(fpath) and _os.path.isfile(fpath):
+            return FileResponse(fpath, media_type="text/html")
+
+    # Try with .html extension
+    for fpath in _bases:
+        fpath = _os.path.normpath(fpath)
+        if not fpath.endswith('.html'):
+            fpath_with_ext = fpath + '.html'
+            if _os.path.exists(fpath_with_ext):
+                return FileResponse(fpath_with_ext, media_type="text/html")
+
+    # Try as directory with index.html
+    for fpath in _bases:
+        fpath = _os.path.normpath(fpath)
+        index_path = _os.path.join(fpath, 'index.html')
+        if _os.path.exists(index_path):
+            return FileResponse(index_path, media_type="text/html")
+
+    return JSONResponse(status_code=404, content={"error": f"Page not found: {parts}"})
+
 
 
 @app.get("/favicon.ico")
