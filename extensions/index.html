@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extensions & Integrations | ReconcileAI — Tally, BUSY, Zoho Connectors</title>
+    <meta name="description" content="Supercharge ReconcileAI with extensions. Tally Connector, BUSY Connector, CA Firm Manager, Chrome Extension & more. From ₹499/year.">
+    <link rel="canonical" href="https://reconcileai.in/extensions">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#0d0d0d;--surface:#1a1a1a;--surface2:#222;--accent:#e8c547;--accent2:#f0a030;--accent3:#22c55e;--text1:#f0ece4;--text2:#b0aca4;--text3:#7a7570;--border:rgba(255,255,255,0.08);--card-radius:16px}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{background:var(--bg);color:var(--text1);font-family:'DM Mono',monospace;line-height:1.7;overflow-x:hidden}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .hero{padding:140px 0 60px;text-align:center;background:radial-gradient(ellipse at 30% 20%,rgba(232,197,71,0.08) 0%,transparent 60%),radial-gradient(ellipse at 70% 80%,rgba(99,102,241,0.05) 0%,transparent 50%)}
+        .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(232,197,71,0.1);border:1px solid rgba(232,197,71,0.2);padding:6px 16px;border-radius:50px;font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px}
+        .hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-2px}
+        .hero h1 .gradient{background:linear-gradient(135deg,#e8c547,#f0a030,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .hero p{font-size:16px;color:var(--text2);max-width:600px;margin:0 auto 32px;line-height:1.8}
+        .hero-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+        .hero-stat .num{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--accent)}
+        .hero-stat .label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:1px}
+        .section-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;text-align:center;margin-bottom:12px;letter-spacing:-1px}
+        .section-sub{text-align:center;color:var(--text3);font-size:13px;margin-bottom:48px;max-width:500px;margin-left:auto;margin-right:auto}
+        .ext-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px;margin:40px 0}
+        .ext-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--card-radius);padding:32px;transition:all 0.3s ease;position:relative;overflow:hidden}
+        .ext-card:hover{border-color:rgba(232,197,71,0.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+        .ext-card.featured{border-color:rgba(232,197,71,0.3);background:linear-gradient(135deg,rgba(232,197,71,0.05),rgba(232,197,71,0.02))}
+        .ext-card.featured::before{content:'MOST POPULAR';position:absolute;top:16px;right:-30px;background:var(--accent);color:#0d0d0d;padding:4px 40px;font-size:9px;font-weight:700;letter-spacing:1px;transform:rotate(45deg)}
+        .ext-icon{font-size:48px;margin-bottom:16px}
+        .ext-badge{display:inline-block;padding:3px 10px;border-radius:6px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+        .badge-available{background:rgba(34,197,94,0.15);color:#22c55e}
+        .badge-coming{background:rgba(99,102,241,0.15);color:#6366f1}
+        .badge-free{background:rgba(232,197,71,0.15);color:#e8c547}
+        .ext-card h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px}
+        .ext-card .desc{color:var(--text2);font-size:13px;line-height:1.7;margin-bottom:16px}
+        .ext-features{list-style:none;margin-bottom:20px}
+        .ext-features li{padding:4px 0;font-size:12px;color:var(--text2);display:flex;align-items:center;gap:8px}
+        .ext-features li::before{content:'✓';color:var(--accent3);font-weight:700}
+        .ext-footer{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--border)}
+        .ext-price{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--accent)}
+        .ext-price .period{font-family:'DM Mono',monospace;font-size:12px;color:var(--text3);font-weight:400}
+        .ext-btn{padding:10px 24px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.2s ease;cursor:pointer;border:none;font-family:inherit}
+        .ext-btn.primary{background:linear-gradient(135deg,#e8c547,#f0a030);color:#0d0d0d}
+        .ext-btn.primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,197,71,0.3)}
+        .ext-btn.secondary{background:rgba(255,255,255,0.08);color:var(--text1);border:1px solid var(--border)}
+        .ext-btn.secondary:hover{background:rgba(255,255,255,0.12)}
+        .bundle-banner{background:linear-gradient(135deg,rgba(232,197,71,0.1),rgba(34,197,94,0.1));border:1px solid rgba(232,197,71,0.2);border-radius:20px;padding:48px;margin:60px 0;text-align:center}
+        .bundle-banner h2{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;margin-bottom:12px}
+        .bundle-banner p{color:var(--text2);font-size:15px;max-width:500px;margin:0 auto 24px}
+        .bundle-price{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;color:var(--accent);margin-bottom:8px}
+        .bundle-old{font-size:18px;color:var(--text3);text-decoration:line-through;margin-bottom:24px}
+        .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;margin:40px 0}
+        .cat-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;transition:all 0.2s ease;text-decoration:none;color:inherit}
+        .cat-card:hover{border-color:rgba(232,197,71,0.3);transform:translateY(-2px)}
+        .cat-icon{font-size:36px;margin-bottom:12px}
+        .cat-card h4{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px}
+        .cat-card p{font-size:12px;color:var(--text3);line-height:1.6}
+        .cat-count{display:inline-block;background:rgba(232,197,71,0.1);color:var(--accent);padding:2px 8px;border-radius:6px;font-size:10px;font-weight:700;margin-top:8px}
+        .cta-section{text-align:center;padding:80px 0}
+        .cta-section h2{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;margin-bottom:16px}
+        .cta-section p{color:var(--text2);font-size:15px;max-width:500px;margin:0 auto 32px}
+        .btn-large{padding:16px 40px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;display:inline-block;background:linear-gradient(135deg,#e8c547,#f0a030);color:#0d0d0d;transition:all 0.2s ease}
+        .btn-large:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(232,197,71,0.3)}
+        .simple-footer{text-align:center;padding:40px 0;border-top:1px solid var(--border);color:var(--text3);font-size:12px}
+        .waitlist-box{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:24px;margin:40px 0}
+        .waitlist-box h3{font-family:'Syne',sans-serif;font-size:20px;margin-bottom:8px}
+        .waitlist-box p{color:var(--text2);font-size:13px;margin-bottom:16px}
+        .waitlist-form{display:flex;gap:12px;max-width:500px}
+        .waitlist-form input{flex:1;padding:12px 16px;border-radius:10px;border:1px solid var(--border);background:var(--bg);color:var(--text1);font-family:inherit;font-size:13px}
+        .waitlist-form button{padding:12px 24px;border-radius:10px;background:var(--accent);color:#0d0d0d;font-weight:700;border:none;cursor:pointer;font-family:inherit}
+        @media(max-width:768px){.ext-grid{grid-template-columns:1fr}.hero-stats{gap:20px}.bundle-banner{padding:32px 20px}.waitlist-form{flex-direction:column}}
+    </style>
+</head>
+<body>
+<nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">🔮</span>
+            <span class="logo-text">ReconcileAI</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('resourcesMenu')">
+                    📚 Resources <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="resourcesMenu">
+                    <a href="/tools" class="dropdown-item">
+                        <span class="dd-icon">🛠️</span>
+                        <div><div class="dd-title">Free Tools</div><div class="dd-desc">12+ calculators (GST, TDS, Tax & more)</div></div>
+                    </a>
+                    <a href="/templates" class="dropdown-item">
+                        <span class="dd-icon">📊</span>
+                        <div><div class="dd-title">Templates</div><div class="dd-desc">15+ Excel templates for businesses</div></div>
+                    </a>
+                    <a href="/blog" class="dropdown-item">
+                        <span class="dd-icon">📝</span>
+                        <div><div class="dd-title">Blog</div><div class="dd-desc">GST, tax & accounting guides</div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('extensionsMenu')">
+                    🧩 Extensions <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="extensionsMenu">
+                    <a href="/extensions#tally" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">Tally Connector</div><div class="dd-desc">Sync Tally with ReconcileAI <span class="badge-new">NEW</span></div></div>
+                    </a>
+                    <a href="/extensions#busy" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">BUSY Connector</div><div class="dd-desc">Sync BUSY with ReconcileAI <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#zoho" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">Zoho Books Connector</div><div class="dd-desc">Sync Zoho with ReconcileAI <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#chrome" class="dropdown-item">
+                        <span class="dd-icon">🧩</span>
+                        <div><div class="dd-title">Chrome Extension</div><div class="dd-desc">Quick recon from browser <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#ca-firm" class="dropdown-item">
+                        <span class="dd-icon">📋</span>
+                        <div><div class="dd-title">CA Firm Manager</div><div class="dd-desc">Office + client management <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions" class="dropdown-item view-all">
+                        <span class="dd-icon">🛒</span>
+                        <div><div class="dd-title">View All Extensions</div><div class="dd-desc">Browse the complete store</div></div>
+                    </a>
+                </div>
+            </div>
+            <a href="/#pricing" class="nav-link">Pricing</a>
+            <a href="/dashboard" class="nav-link nav-login">Login</a>
+            <a href="/#reconcile" class="nav-btn">Get Started</a>
+        </div>
+    </div>
+</nav>
+<style>
+.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,13,13,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 20px}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:65px}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:20px;font-weight:800;color:#fff}
+.logo-icon{font-size:28px}
+.logo-text{background:linear-gradient(135deg,#e8c547,#f0a030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Syne',sans-serif;letter-spacing:-0.5px}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{color:#b0aca4;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:14px;font-weight:500;transition:all 0.2s ease;background:none;border:none;cursor:pointer;font-family:inherit}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,0.06)}
+.nav-login{border:1px solid rgba(255,255,255,0.15)}
+.nav-btn{background:linear-gradient(135deg,#e8c547,#f0a030)!important;color:#0d0d0d!important;padding:8px 20px!important;border-radius:8px!important;font-weight:700!important;text-decoration:none!important;transition:all 0.2s ease!important}
+.nav-btn:hover{transform:translateY(-1px)!important;box-shadow:0 4px 20px rgba(232,197,71,0.3)!important}
+.nav-dropdown{position:relative}
+.dropdown-toggle{display:flex;align-items:center;gap:4px}
+.dropdown-arrow{font-size:10px;transition:transform 0.2s ease}
+.nav-dropdown:hover .dropdown-arrow,.nav-dropdown.active .dropdown-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:320px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:all 0.25s ease;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;text-decoration:none;color:#d0ccc4;transition:all 0.15s ease}
+.dropdown-item:hover{background:rgba(232,197,71,0.1);color:#fff}
+.dd-icon{font-size:24px;width:36px;text-align:center}
+.dd-title{font-size:14px;font-weight:600;color:#fff}
+.dd-desc{font-size:11px;color:#7a7570;margin-top:2px}
+.dropdown-item.view-all{border-top:1px solid rgba(255,255,255,0.08);margin-top:4px;padding-top:12px}
+.badge-new{background:#22c55e;color:#fff;padding:1px 6px;border-radius:4px;font-size:9px;font-weight:700;vertical-align:middle}
+.badge-soon{background:#6366f1;color:#fff;padding:1px 6px;border-radius:4px;font-size:9px;font-weight:700;vertical-align:middle}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-toggle span{width:24px;height:2px;background:#fff;transition:all 0.3s ease}
+@media(max-width:768px){.mobile-toggle{display:flex}.nav-links{display:none;position:absolute;top:65px;left:0;right:0;background:#1a1a1a;flex-direction:column;padding:20px;gap:8px;border-bottom:1px solid rgba(255,255,255,0.1)}.nav-links.active{display:flex}.dropdown-menu{position:static;transform:none;min-width:100%;box-shadow:none;opacity:1;visibility:visible;display:none}.nav-dropdown.active .dropdown-menu{display:block}.nav-dropdown:hover .dropdown-menu{transform:none}}
+</style>
+<script>
+function toggleDropdown(id){var m=document.getElementById(id),p=m.parentElement;document.querySelectorAll('.nav-dropdown').forEach(function(d){if(d!==p)d.classList.remove('active')});p.classList.toggle('active')}
+function toggleMobileNav(){document.getElementById('navLinks').classList.toggle('active')}
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown').forEach(function(d){d.classList.remove('active')})}});
+</script>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">🧩 Extension Store</div>
+            <h1>Supercharge Your<br><span class="gradient">Accounting Workflow</span></h1>
+            <p>Connect ReconcileAI with Tally, BUSY, Zoho &amp; more. Plus tools to manage your CA firm, automate compliance &amp; grow your practice.</p>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="num">12+</div><div class="label">Extensions</div></div>
+                <div class="hero-stat"><div class="num">6+</div><div class="label">Integrations</div></div>
+                <div class="hero-stat"><div class="num">₹499</div><div class="label">Starting From</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding:60px 20px">
+        <h2 class="section-title">🔌 Accounting Software Connectors</h2>
+        <p class="section-sub">Sync your accounting data with ReconcileAI. Import, reconcile &amp; export — all in one click.</p>
+        <div class="ext-grid">
+            <div class="ext-card featured" id="tally">
+                <div class="ext-icon">🔗</div>
+                <div class="ext-badge badge-available">AVAILABLE NOW</div>
+                <h3>Tally Connector</h3>
+                <p class="desc">Two-way sync between Tally ERP/Prime and ReconcileAI. Import vouchers, bank entries &amp; ledger data. Export reconciliation results back to Tally.</p>
+                <ul class="ext-features">
+                    <li>Import Tally data via XML/ODBC</li>
+                    <li>Auto-match bank entries with vouchers</li>
+                    <li>Export reconciliation to Tally</li>
+                    <li>GST data sync (GSTR-1, 2B, 3B)</li>
+                    <li>Real-time sync support</li>
+                    <li>Works with Tally ERP 9 + Tally Prime</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹1,999<span class="period">/year</span></div>
+                    <button class="ext-btn primary" onclick="alert('Coming soon! Join waitlist below.')">Get Extension</button>
+                </div>
+            </div>
+            <div class="ext-card" id="busy">
+                <div class="ext-icon">🔗</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>BUSY Connector</h3>
+                <p class="desc">Connect BUSY accounting software with ReconcileAI. Import data, reconcile bank statements &amp; export results seamlessly.</p>
+                <ul class="ext-features">
+                    <li>Import BUSY data (company/branch)</li>
+                    <li>Bank reconciliation sync</li>
+                    <li>GST data integration</li>
+                    <li>Export results to BUSY</li>
+                    <li>Works with BUSY 21+</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹1,999<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="zoho">
+                <div class="ext-icon">🔗</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>Zoho Books Connector</h3>
+                <p class="desc">API-based integration with Zoho Books. Auto-import transactions, reconcile &amp; sync back. Perfect for cloud-first businesses.</p>
+                <ul class="ext-features">
+                    <li>Zoho Books API integration</li>
+                    <li>Auto-import transactions</li>
+                    <li>Cloud-to-cloud sync</li>
+                    <li>Multi-company support</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹1,499<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="quickbooks">
+                <div class="ext-icon">🔗</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>QuickBooks Connector</h3>
+                <p class="desc">Connect QuickBooks with ReconcileAI for seamless bank reconciliation, GST matching &amp; financial reporting.</p>
+                <ul class="ext-features">
+                    <li>QuickBooks API integration</li>
+                    <li>Auto bank matching</li>
+                    <li>Financial report export</li>
+                    <li>Multi-currency support</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹2,499<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="marg">
+                <div class="ext-icon">🔗</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>Marg ERP Connector</h3>
+                <p class="desc">Sync Marg ERP data with ReconcileAI. Perfect for pharma, FMCG &amp; retail businesses using Marg.</p>
+                <ul class="ext-features">
+                    <li>Marg ERP data import</li>
+                    <li>GST reconciliation sync</li>
+                    <li>Inventory data matching</li>
+                    <li>Export to Marg</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹1,999<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="vyapar">
+                <div class="ext-icon">🔗</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>Vyapar Connector</h3>
+                <p class="desc">Perfect for small businesses using Vyapar. Import data, reconcile &amp; manage GST — all from ReconcileAI.</p>
+                <ul class="ext-features">
+                    <li>Vyapar data import</li>
+                    <li>Small business focus</li>
+                    <li>GST auto-matching</li>
+                    <li>Simple setup</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹999<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="bundle-banner">
+            <h2>🎁 Connector Bundle — Save 40%!</h2>
+            <p>Get ALL connectors (Tally + BUSY + Zoho + QuickBooks + Marg + Vyapar) at one low price. Everything you need to connect ReconcileAI with any accounting software.</p>
+            <div class="bundle-price">₹9,999<span style="font-size:18px;color:var(--text3);font-weight:400">/year</span></div>
+            <div class="bundle-old">₹16,994/year if bought separately</div>
+            <a href="#waitlist" class="btn-large">Get Bundle — Save ₹6,995!</a>
+        </div>
+    </section>
+
+    <section class="container" style="padding:60px 20px">
+        <h2 class="section-title">⚡ Productivity &amp; Management Tools</h2>
+        <p class="section-sub">Tools to manage your CA firm, automate compliance &amp; grow your practice.</p>
+        <div class="ext-grid">
+            <div class="ext-card featured" id="ca-firm">
+                <div class="ext-icon">📋</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>CA Firm Manager</h3>
+                <p class="desc">Complete office &amp; client management for CA firms. Track clients, deadlines, assignments, billing &amp; team — all in one dashboard.</p>
+                <ul class="ext-features">
+                    <li>Client management (CRM)</li>
+                    <li>Task &amp; deadline tracking</li>
+                    <li>Team assignment &amp; workload</li>
+                    <li>Client billing &amp; invoicing</li>
+                    <li>Document management</li>
+                    <li>GST/TDS deadline calendar</li>
+                    <li>Client portal (share reports)</li>
+                    <li>WhatsApp notifications</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹4,999<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="chrome">
+                <div class="ext-icon">🧩</div>
+                <div class="ext-badge badge-free">FREE</div>
+                <h3>Chrome Extension</h3>
+                <p class="desc">Quick bank statement capture, one-click reconciliation from browser &amp; GST portal helper. Your ReconcileAI companion!</p>
+                <ul class="ext-features">
+                    <li>Quick bank statement capture</li>
+                    <li>One-click reconciliation</li>
+                    <li>GST portal helper</li>
+                    <li>Auto-fill GST returns</li>
+                    <li>Works on any website</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">FREE</div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Coming Soon</button>
+                </div>
+            </div>
+            <div class="ext-card" id="compliance">
+                <div class="ext-icon">🔔</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>Compliance Reminder System</h3>
+                <p class="desc">Never miss a GST, TDS or Income Tax deadline! Smart reminders via email, WhatsApp &amp; push notifications.</p>
+                <ul class="ext-features">
+                    <li>GST filing reminders (GSTR-1, 3B)</li>
+                    <li>TDS due date alerts</li>
+                    <li>Income tax deadline alerts</li>
+                    <li>WhatsApp + Email notifications</li>
+                    <li>Custom reminder schedules</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹499<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="whatsapp-bot">
+                <div class="ext-icon">🤖</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>AI WhatsApp Bot</h3>
+                <p class="desc">Your AI accountant on WhatsApp! Ask questions, get reports, check GST status — all from WhatsApp chat.</p>
+                <ul class="ext-features">
+                    <li>"What's my GST due date?"</li>
+                    <li>"Show unmatched transactions"</li>
+                    <li>"Generate reconciliation report"</li>
+                    <li>Natural language queries</li>
+                    <li>Works 24/7</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹999<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="reporting">
+                <div class="ext-icon">📊</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>Advanced Reporting</h3>
+                <p class="desc">Custom reports, dashboard analytics, trend analysis &amp; export to Excel/PDF. Know your numbers inside out.</p>
+                <ul class="ext-features">
+                    <li>Custom report builder</li>
+                    <li>Dashboard analytics</li>
+                    <li>Trend analysis</li>
+                    <li>Export to Excel/PDF</li>
+                    <li>Scheduled reports</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹1,499<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+            <div class="ext-card" id="mobile">
+                <div class="ext-icon">📱</div>
+                <div class="ext-badge badge-coming">COMING SOON</div>
+                <h3>Mobile App (iOS + Android)</h3>
+                <p class="desc">Reconcile on the go! Scan receipts, check reports, get notifications &amp; manage your accounting from anywhere.</p>
+                <ul class="ext-features">
+                    <li>Receipt scanning (camera)</li>
+                    <li>On-the-go reconciliation</li>
+                    <li>Push notifications</li>
+                    <li>Offline mode</li>
+                    <li>iOS + Android</li>
+                </ul>
+                <div class="ext-footer">
+                    <div class="ext-price">₹499<span class="period">/year</span></div>
+                    <button class="ext-btn secondary" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Notify Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding:60px 20px">
+        <h2 class="section-title">📦 More Products</h2>
+        <p class="section-sub">Courses, premium templates &amp; more to grow your accounting practice.</p>
+        <div class="cat-grid">
+            <a href="#waitlist" class="cat-card">
+                <div class="cat-icon">📚</div>
+                <h4>Video Courses</h4>
+                <p>Learn GST, Tax &amp; Accounting from experts. Certificate included.</p>
+                <div class="cat-count">Coming Soon</div>
+            </a>
+            <a href="#waitlist" class="cat-card">
+                <div class="cat-icon">📊</div>
+                <h4>Premium Templates</h4>
+                <p>Advanced Excel packs for CAs &amp; accountants. 50+ templates.</p>
+                <div class="cat-count">Coming Soon</div>
+            </a>
+            <a href="#waitlist" class="cat-card">
+                <div class="cat-icon">📖</div>
+                <h4>E-Books &amp; Guides</h4>
+                <p>Tax planning guides, GST handbooks &amp; compliance checklists.</p>
+                <div class="cat-count">Coming Soon</div>
+            </a>
+            <a href="#waitlist" class="cat-card">
+                <div class="cat-icon">🤝</div>
+                <h4>Partner Products</h4>
+                <p>Curated tools &amp; software recommended by ReconcileAI.</p>
+                <div class="cat-count">Coming Soon</div>
+            </a>
+        </div>
+    </section>
+
+    <section class="container" id="waitlist">
+        <div class="waitlist-box">
+            <h3>🔔 Join the Waitlist</h3>
+            <p>Be the first to know when new extensions launch. Get early access + exclusive discounts!</p>
+            <div class="waitlist-form">
+                <input type="email" placeholder="your@email.com" id="waitlistEmail">
+                <button onclick="joinWaitlist()">Notify Me</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Supercharge Your Workflow?</h2>
+            <p>Start with ReconcileAI free tools or explore the complete extension store.</p>
+            <a href="/" class="btn-large">Try ReconcileAI Free →</a>
+        </div>
+    </section>
+
+    <footer class="simple-footer">
+        <div class="container">
+            <p>© 2026 ReconcileAI — Bank, GST &amp; UPI Reconciliation Platform. Built for Indian businesses. 🇮🇳</p>
+        </div>
+    </footer>
+
+    <script>
+    function joinWaitlist() {
+        var email = document.getElementById('waitlistEmail').value;
+        if (email && email.includes('@')) {
+            alert('Thank you! You are on the waitlist. We will notify you at: ' + email);
+            document.getElementById('waitlistEmail').value = '';
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    }
+    </script>
+</body>
+</html>

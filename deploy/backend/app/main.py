@@ -319,6 +319,15 @@ async def global_exception_handler(request, exc):
         }
     )
 
+
+# ===== Extensions Store =====
+@app.get("/extensions")
+async def extensions_page():
+    try:
+        return _serve_page("extensions", "index.html")
+    except Exception as e:
+        return JSONResponse(status_code=404, content={"error": "Page not found"})
+
 @app.get("/blog")
 async def blog_index():
     return _serve_page("blog", "index.html")

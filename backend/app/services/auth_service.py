@@ -15,13 +15,31 @@ _pool: Optional[Pool] = None
 async def get_pool() -> Pool:
     global _pool
     if _pool is None:
-        url = os.getenv("DATABASE_URL", "")
+        url = os.environ.get("DATABASE_URL", "")
         if not url:
-            raise ValueError("DATABASE_URL not set in .env")
-        _pool = await asyncpg.create_pool(url, min_size=1, max_size=5, ssl='require')
-        await _create_tables(_pool)
-        logger.info("Auth database initialized (PostgreSQL/Aiven)")
+            print("WARNING: DATABASE_URL not set. Auth features disabled.")
+            return None
+
+        for attempt in range(5):
+            try:
+                _pool = await asyncpg.create_pool(
+                    url, min_size=1, max_size=5,
+                    ssl='require', command_timeout=10
+                )
+                print(f"Database connected (attempt {attempt + 1})")
+                await _create_tables(_pool)
+                return _pool
+            except Exception as e:
+                print(f"DB attempt {attempt + 1}/5 failed: {e}")
+                if attempt < 4:
+                    import asyncio
+                    await asyncio.sleep(3)
+                else:
+                    print("WARNING: Database unavailable after 5 attempts.")
+                    print("App will start without auth. Power ON at Aiven!")
+                    return None
     return _pool
+
 
 async def _create_tables(pool: Pool):
     async with pool.acquire() as conn:

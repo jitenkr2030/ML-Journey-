@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8"><meta name="robots" content="noindex, nofollow"><link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin Panel — ReconcileAI</title>
 <style>
@@ -105,17 +105,109 @@ table tr:hover td{background:rgba(255,255,255,.02)}
 </head>
 <body>
 
-<nav>
-<div class="container">
-<a href="/" class="logo">Reconcile<span>AI</span><span class="admin-tag">ADMIN</span></a>
-<div style="display:flex;gap:12px;align-items:center">
-<span id="adminName" style="color:var(--text2);font-size:13px"></span>
-<a href="/" class="btn btn-outline">Main App</a>
-<a href="/dashboard" class="btn btn-outline">User Dashboard</a>
-<button class="btn btn-danger" onclick="logout()">Logout</button>
-</div>
-</div>
+<nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">🔮</span>
+            <span class="logo-text">ReconcileAI</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('resourcesMenu')">
+                    📚 Resources <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="resourcesMenu">
+                    <a href="/tools" class="dropdown-item">
+                        <span class="dd-icon">🛠️</span>
+                        <div><div class="dd-title">Free Tools</div><div class="dd-desc">12+ calculators (GST, TDS, Tax & more)</div></div>
+                    </a>
+                    <a href="/templates" class="dropdown-item">
+                        <span class="dd-icon">📊</span>
+                        <div><div class="dd-title">Templates</div><div class="dd-desc">15+ Excel templates for businesses</div></div>
+                    </a>
+                    <a href="/blog" class="dropdown-item">
+                        <span class="dd-icon">📝</span>
+                        <div><div class="dd-title">Blog</div><div class="dd-desc">GST, tax & accounting guides</div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('extensionsMenu')">
+                    🧩 Extensions <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="extensionsMenu">
+                    <a href="/extensions#tally" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">Tally Connector</div><div class="dd-desc">Sync Tally with ReconcileAI <span class="badge-new">NEW</span></div></div>
+                    </a>
+                    <a href="/extensions#busy" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">BUSY Connector</div><div class="dd-desc">Sync BUSY with ReconcileAI <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#zoho" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">Zoho Books Connector</div><div class="dd-desc">Sync Zoho with ReconcileAI <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#chrome" class="dropdown-item">
+                        <span class="dd-icon">🧩</span>
+                        <div><div class="dd-title">Chrome Extension</div><div class="dd-desc">Quick recon from browser <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#ca-firm" class="dropdown-item">
+                        <span class="dd-icon">📋</span>
+                        <div><div class="dd-title">CA Firm Manager</div><div class="dd-desc">Office + client management <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions" class="dropdown-item view-all">
+                        <span class="dd-icon">🛒</span>
+                        <div><div class="dd-title">View All Extensions</div><div class="dd-desc">Browse the complete store</div></div>
+                    </a>
+                </div>
+            </div>
+            <a href="/#pricing" class="nav-link">Pricing</a>
+            <a href="/dashboard" class="nav-link nav-login">Login</a>
+            <a href="/#reconcile" class="nav-btn">Get Started</a>
+        </div>
+    </div>
 </nav>
+<style>
+.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,13,13,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 20px}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:65px}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:20px;font-weight:800;color:#fff}
+.logo-icon{font-size:28px}
+.logo-text{background:linear-gradient(135deg,#e8c547,#f0a030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Syne',sans-serif;letter-spacing:-0.5px}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{color:#b0aca4;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:14px;font-weight:500;transition:all 0.2s ease;background:none;border:none;cursor:pointer;font-family:inherit}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,0.06)}
+.nav-login{border:1px solid rgba(255,255,255,0.15)}
+.nav-btn{background:linear-gradient(135deg,#e8c547,#f0a030)!important;color:#0d0d0d!important;padding:8px 20px!important;border-radius:8px!important;font-weight:700!important;text-decoration:none!important;transition:all 0.2s ease!important}
+.nav-btn:hover{transform:translateY(-1px)!important;box-shadow:0 4px 20px rgba(232,197,71,0.3)!important}
+.nav-dropdown{position:relative}
+.dropdown-toggle{display:flex;align-items:center;gap:4px}
+.dropdown-arrow{font-size:10px;transition:transform 0.2s ease}
+.nav-dropdown:hover .dropdown-arrow,.nav-dropdown.active .dropdown-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:320px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:all 0.25s ease;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;text-decoration:none;color:#d0ccc4;transition:all 0.15s ease}
+.dropdown-item:hover{background:rgba(232,197,71,0.1);color:#fff}
+.dd-icon{font-size:24px;width:36px;text-align:center}
+.dd-title{font-size:14px;font-weight:600;color:#fff}
+.dd-desc{font-size:11px;color:#7a7570;margin-top:2px}
+.dropdown-item.view-all{border-top:1px solid rgba(255,255,255,0.08);margin-top:4px;padding-top:12px}
+.badge-new{background:#22c55e;color:#fff;padding:1px 6px;border-radius:4px;font-size:9px;font-weight:700;vertical-align:middle}
+.badge-soon{background:#6366f1;color:#fff;padding:1px 6px;border-radius:4px;font-size:9px;font-weight:700;vertical-align:middle}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-toggle span{width:24px;height:2px;background:#fff;transition:all 0.3s ease}
+@media(max-width:768px){.mobile-toggle{display:flex}.nav-links{display:none;position:absolute;top:65px;left:0;right:0;background:#1a1a1a;flex-direction:column;padding:20px;gap:8px;border-bottom:1px solid rgba(255,255,255,0.1)}.nav-links.active{display:flex}.dropdown-menu{position:static;transform:none;min-width:100%;box-shadow:none;opacity:1;visibility:visible;display:none}.nav-dropdown.active .dropdown-menu{display:block}.nav-dropdown:hover .dropdown-menu{transform:none}}
+</style>
+<script>
+function toggleDropdown(id){var m=document.getElementById(id),p=m.parentElement;document.querySelectorAll('.nav-dropdown').forEach(function(d){if(d!==p)d.classList.remove('active')});p.classList.toggle('active')}
+function toggleMobileNav(){document.getElementById('navLinks').classList.toggle('active')}
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown').forEach(function(d){d.classList.remove('active')})}});
+</script>
+
 
 <div class="toast" id="toast"></div>
 
@@ -186,6 +278,7 @@ table tr:hover td{background:rgba(255,255,255,.02)}
 <div class="tab" onclick="switchTab('activity',this)">📋 Activity</div>
 <div class="tab" onclick="switchTab('settings',this)">⚙️ Settings</div>
 <div class="tab" onclick="switchTab('health',this)">🔧 System</div>
+<div class="tab" onclick="switchTab('enquiries',this)">📨 Enquiries</div>
 </div>
 
 <!-- ========== OVERVIEW TAB ========== -->
@@ -268,13 +361,26 @@ table tr:hover td{background:rgba(255,255,255,.02)}
 <div class="card">
 <h3>📊 Pricing</h3>
 <table>
-<tr><td>Bank Reconciliation</td><td style="text-align:right;font-weight:600">₹499</td></tr>
-<tr><td>GST Reconciliation</td><td style="text-align:right;font-weight:600">₹499</td></tr>
+<tr><td>Bank Reconciliation</td><td style="text-align:right;font-weight:600">₹299</td></tr>
+<tr><td>GST Reconciliation</td><td style="text-align:right;font-weight:600">₹299</td></tr>
 <tr><td>Complete Bookkeeping</td><td style="text-align:right;font-weight:600">₹2,999</td></tr>
 <tr><td>Tally Push (add-on)</td><td style="text-align:right;font-weight:600">+₹300</td></tr>
 </table>
 </div>
 </div>
+<div class="card" style="margin-bottom:20px;border-left:4px solid #f59e0b">
+<h3>⏳ Pending Payment Confirmations</h3>
+<p style="font-size:12px;color:var(--text3);margin-bottom:12px">Review and confirm user payments. User can download reports after confirmation.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>ID</th><th>User</th><th>UTR</th><th>Amount</th><th>Service</th><th>Submitted</th><th>Actions</th></tr></thead>
+<tbody id="pendingPaymentsBody">
+<tr><td colspan="7" style="text-align:center;color:var(--text3)">Loading...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
 <div class="card">
 <h3>📋 Payment History</h3>
 <div class="table-wrap">
@@ -331,8 +437,8 @@ table tr:hover td{background:rgba(255,255,255,.02)}
 </div>
 <div class="card">
 <h3>💰 Pricing</h3>
-<div class="setting-row"><label>Bank Reconciliation (₹)</label><input type="number" id="setBrsPrice" value="499"></div>
-<div class="setting-row"><label>GST Reconciliation (₹)</label><input type="number" id="setGstPrice" value="499"></div>
+<div class="setting-row"><label>Bank Reconciliation (₹)</label><input type="number" id="setBrsPrice" value="299"></div>
+<div class="setting-row"><label>GST Reconciliation (₹)</label><input type="number" id="setGstPrice" value="299"></div>
 <div class="setting-row"><label>Bookkeeping (₹)</label><input type="number" id="setBookPrice" value="2999"></div>
 <div class="setting-row"><label>Tally Push Add-on (₹)</label><input type="number" id="setTallyPrice" value="300"></div>
 </div>
@@ -424,7 +530,7 @@ let selectedUserId=null;
 function switchTab(tab, el){
 document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
 el.classList.add('active');
-['overview','users','payments','activity','settings','health'].forEach(t=>{
+['overview','users','payments','activity','settings','health','enquiries'].forEach(t=>{
 const el=document.getElementById('tab'+t.charAt(0).toUpperCase()+t.slice(1));
 if(el)el.style.display=t===tab?'':'none';
 });
@@ -433,6 +539,7 @@ if(tab==='activity')loadActivity(1);
 if(tab==='payments')loadPayments(1);
 if(tab==='settings')loadSettings();
 if(tab==='health')loadHealth();
+if(tab==='enquiries')loadEnquiries();
 }
 
 function closeModal(id){document.getElementById(id).classList.remove('show')}
@@ -679,7 +786,63 @@ if(d.success){closeModal('editUserModal');showToast('User updated');loadUsers(cu
 }
 
 // ==================== PAYMENTS ====================
+async function loadPendingPayments(){
+const tb=document.getElementById('pendingPaymentsBody');
+if(!tb)return;
+try{
+const r=await fetch('/api/admin/payments?key=reconcile2026');
+const d=await r.json();
+const pending=(d.payments||[]).filter(p=>p.status==='pending');
+if(pending.length===0){
+tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--text3)">No pending payments</td></tr>';
+return;
+}
+tb.innerHTML=pending.map(p=>
+`<tr>
+<td>${p.id}</td>
+<td>${p.email||'-'}</td>
+<td style="font-family:var(--font-mono);font-size:11px">${p.utr||p.utr_number||'-'}</td>
+<td style="font-weight:700;color:var(--green)">₹${p.amount||299}</td>
+<td>${p.recon_type||'-'}</td>
+<td style="font-size:11px">${p.created_at||'-'}</td>
+<td>
+<button class="btn btn-success btn-sm" onclick="confirmPayment(${p.id})">✅ Confirm</button>
+<button class="btn btn-danger btn-sm" onclick="rejectPayment(${p.id})">❌ Reject</button>
+</td>
+</tr>`).join('');
+}catch(e){
+tb.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--text3)">Error loading payments</td></tr>';
+}
+}
+
+async function confirmPayment(id){
+if(!confirm('Confirm this payment? User will be able to download full report.'))return;
+try{
+const r=await fetch('/api/admin/verify/'+id+'?key=reconcile2026',{method:'POST'});
+const d=await r.json();
+if(d.success||d.message){
+showToast('Payment confirmed! User can now download.');
+loadPendingPayments();
+loadPayments(1);
+}else{showToast('Failed to confirm',true)}
+}catch(e){showToast('Error: '+e.message,true)}
+}
+
+async function rejectPayment(id){
+if(!confirm('Reject this payment? User will be notified.'))return;
+try{
+const r=await fetch('/api/admin/reject/'+id+'?key=reconcile2026',{method:'POST'});
+const d=await r.json();
+if(d.success||d.message){
+showToast('Payment rejected.');
+loadPendingPayments();
+loadPayments(1);
+}else{showToast('Failed to reject',true)}
+}catch(e){showToast('Error: '+e.message,true)}
+}
+
 async function loadPayments(page){
+loadPendingPayments();
 currentPaymentsPage=page;
 try{
 const r=await fetch('/api/admin/payments?page='+page);
@@ -821,6 +984,97 @@ showToast('Expired sessions cleaned');
 
 // ==================== INIT ====================
 document.addEventListener('DOMContentLoaded',loadAdmin);
+</script>
+
+<!-- ========== ENQUIRIES TAB ========== -->
+<div id="tabEnquiries" style="display:none">
+<div class="card">
+<h3>
+<span>📨 Service Enquiries</span>
+<span style="font-size:12px;color:var(--text3)" id="enquiryCount">0 enquiries</span>
+</h3>
+<p style="font-size:12px;color:var(--text3);margin-bottom:16px">Part-Time Accounting &amp; Compliance service enquiries. Contact within 24 hours.</p>
+<div id="enquiryStats" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px"></div>
+<div class="search-bar">
+<select id="enquiryFilter" onchange="loadEnquiries()">
+<option value="">All Status</option>
+<option value="new">New</option>
+<option value="contacted">Contacted</option>
+<option value="converted">Converted</option>
+<option value="rejected">Rejected</option>
+</select>
+<button class="btn btn-primary" onclick="loadEnquiries()">Filter</button>
+<button class="btn btn-outline" onclick="document.getElementById('enquiryFilter').value='';loadEnquiries()">Clear</button>
+</div>
+<div class="table-wrap">
+<table>
+<thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Company</th><th>City</th><th>Message</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead>
+<tbody id="enquiriesBody">
+<tr><td colspan="10" style="text-align:center;color:var(--text3)">Loading...</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<script>
+async function loadEnquiries(){
+    const tb=document.getElementById('enquiriesBody');
+    if(!tb)return;
+    tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">Loading...</td></tr>';
+    const status=document.getElementById('enquiryFilter')?document.getElementById('enquiryFilter').value:'';
+    try{
+        const r=await fetch('/api/admin/service-inquiries?key=reconcile2026'+(status?'&status='+status:''));
+        const d=await r.json();
+        if(!d.success){tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">Failed to load</td></tr>';return}
+        const stats=d.stats||{};
+        const se=document.getElementById('enquiryStats');
+        if(se){
+            se.innerHTML=
+            '<div style="background:var(--surface2);padding:8px 14px;border-radius:8px;font-size:12px"><strong>'+(stats.total||0)+'</strong> Total</div>'+
+            '<div style="background:rgba(245,158,11,.15);padding:8px 14px;border-radius:8px;font-size:12px;color:#f59e0b"><strong>'+(stats.new||0)+'</strong> New</div>'+
+            '<div style="background:rgba(59,130,246,.15);padding:8px 14px;border-radius:8px;font-size:12px;color:#3b82f6"><strong>'+(stats.contacted||0)+'</strong> Contacted</div>'+
+            '<div style="background:rgba(52,211,153,.15);padding:8px 14px;border-radius:8px;font-size:12px;color:#22c55e"><strong>'+(stats.converted||0)+'</strong> Converted</div>';
+        }
+        const cnt=document.getElementById('enquiryCount');
+        if(cnt)cnt.textContent=(d.inquiries||[]).length+' enquiries';
+        const inquiries=d.inquiries||[];
+        if(inquiries.length===0){
+            tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">No enquiries found</td></tr>';
+            return;
+        }
+        const colors={new:'orange',contacted:'blue',converted:'green',rejected:'red'};
+        tb.innerHTML=inquiries.map(e=>
+            '<tr>'+
+            '<td>'+e.id+'</td>'+
+            '<td><strong>'+e.name+'</strong></td>'+
+            '<td>'+e.email+'</td>'+
+            '<td>'+(e.phone||'-')+'</td>'+
+            '<td>'+(e.company||'-')+'</td>'+
+            '<td>'+(e.city||'-')+'</td>'+
+            '<td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px">'+(e.message||'-')+'</td>'+
+            '<td><span class="badge '+(colors[e.status]||'gray')+'">'+e.status+'</span></td>'+
+            '<td style="font-size:11px">'+e.created_at+'</td>'+
+            '<td>'+
+            (e.status==='new'?'<button class="btn btn-primary btn-sm" onclick="updateEnquiry('+e.id+',\'contacted\')">\u260e\ufe0f Contacted</button> ':'')+
+            (e.status!=='converted'?'<button class="btn btn-success btn-sm" onclick="updateEnquiry('+e.id+',\'converted\')">✅ Won</button> ':'')+
+            (e.status!=='rejected'?'<button class="btn btn-danger btn-sm" onclick="updateEnquiry('+e.id+',\'rejected\')">❌</button>':'')+
+            '</td>'+
+            '</tr>'
+        ).join('');
+    }catch(e){
+        tb.innerHTML='<tr><td colspan="10" style="text-align:center;color:var(--text3)">Error: '+e.message+'</td></tr>';
+    }
+}
+async function updateEnquiry(id,status){
+    if(!confirm('Mark as "'+status+'"?'))return;
+    try{
+        const r=await fetch('/api/admin/service-inquiries/'+id+'?key=reconcile2026',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:status,notes:''})});
+        const d=await r.json();
+        if(d.success){showToast('Enquiry updated');loadEnquiries();}
+        else{showToast('Failed to update',true)}
+    }catch(e){showToast('Error: '+e.message,true)}
+}
 </script>
 </body>
 </html>

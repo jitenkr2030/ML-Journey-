@@ -4,6 +4,7 @@ Allow: /
 Allow: /blog/
 Allow: /tools/
 Allow: /templates/
+Allow: /extensions/
 Allow: /sitemap.xml
 
 # Block admin/private pages

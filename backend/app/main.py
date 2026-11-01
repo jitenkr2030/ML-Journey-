@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import logging
 from dotenv import load_dotenv
 load_dotenv()
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from pathlib import Path
 
 from app.routes import reconcile
@@ -18,6 +18,7 @@ from app.routes.upi import router as upi_router
 from app.routes.history import router as history_router
 from app.routes.clients import router as clients_router
 from app.routes.usage import router as usage_router
+from app.routes.service_inquiries import router as inquiries_router
 
 logger = logging.getLogger(__name__)
 
@@ -26,6 +27,91 @@ app = FastAPI(
     description="AI-powered reconciliation and GST compliance for Indian businesses",
     version="3.0.0",
 )
+
+# ===== Security Middleware: Block Scanner Bots =====
+import time as _time
+from collections import defaultdict as _ddict
+
+_BLOCKED_PATHS = [
+    '.env', '.git', 'wp-admin', 'wp-login', 'wp-includes', 'wp-content',
+    'phpinfo', 'info.php', 'php.php', 'p.php', 'i.php', 'debug.php',
+    'test.php', 'pinfo.php', 'server-info', 'server-status',
+    'service-account.json', 'credentials.json', 'sa.json',
+    'gcp-key.json', 'google-credentials.json', 'firebase-adminsdk',
+    'application_default_credentials', 'keyfile.json',
+    'cache.php', '.DS_Store', 'web.config', 'elmah.axd',
+    'xmlrpc.php', 'wlwmanifest.xml', 'install.php',
+    '.htaccess', '.htpasswd', 'passwd', 'shadow',
+    'etc/passwd', 'proc/self', 'boot.ini', 'win.ini',
+    'config.json', 'settings.py', 'database.yml',
+    'phpmyadmin', 'adminer', 'pma', 'myadmin',
+    '.svn', '.hg', '.bzr', 'CVS',
+    'actuator', 'jmx-console', 'manager/html',
+    'shell', 'cmd', 'eval', 'exec',
+]
+
+_RATE_LIMIT = {}  # ip -> [timestamps]
+_RATE_LIMIT_WINDOW = 60  # seconds
+_RATE_LIMIT_MAX = 120  # requests per window per IP
+
+@app.middleware("http")
+async def security_middleware(request, call_next):
+    path = request.url.path.lower()
+    client_ip = request.client.host if request.client else "unknown"
+
+    # ALWAYS allow search engine bots (check User-Agent)
+    user_agent = request.headers.get("user-agent", "").lower()
+    _GOOD_BOTS = ["googlebot", "bingbot", "slurp", "duckduckbot",
+                  "baiduspider", "yandexbot", "facebookexternalhit",
+                  "twitterbot", "linkedinbot", "whatsapp", "telegrambot",
+                  "applebot", "petalbot", "sogou"]
+
+    is_good_bot = any(bot in user_agent for bot in _GOOD_BOTS)
+
+    # Block scanner paths (but NOT for search engine bots)
+    if not is_good_bot:
+        for blocked in _BLOCKED_PATHS:
+            if blocked in path:
+                return JSONResponse(
+                    status_code=403,
+                    content={"error": "Forbidden"}
+                )
+
+    # Rate limiting per IP (skip for search engine bots)
+    if not is_good_bot:
+        now = _time.time()
+        if client_ip not in _RATE_LIMIT:
+            _RATE_LIMIT[client_ip] = []
+        _RATE_LIMIT[client_ip] = [t for t in _RATE_LIMIT[client_ip] if now - t < _RATE_LIMIT_WINDOW]
+        if len(_RATE_LIMIT[client_ip]) >= _RATE_LIMIT_MAX:
+            return JSONResponse(status_code=429, content={"error": "Too many requests"})
+        _RATE_LIMIT[client_ip].append(now)
+
+    # Rate limiting per IP
+    now = _time.time()
+    if client_ip not in _RATE_LIMIT:
+        _RATE_LIMIT[client_ip] = []
+
+    # Clean old timestamps
+    _RATE_LIMIT[client_ip] = [t for t in _RATE_LIMIT[client_ip] if now - t < _RATE_LIMIT_WINDOW]
+
+    if len(_RATE_LIMIT[client_ip]) >= _RATE_LIMIT_MAX:
+        return JSONResponse(
+            status_code=429,
+            content={"error": "Too many requests"}
+        )
+
+    _RATE_LIMIT[client_ip].append(now)
+
+    # Periodic cleanup of old IPs (every 1000 requests)
+    if len(_RATE_LIMIT) > 1000:
+        for ip in list(_RATE_LIMIT.keys()):
+            if not any(now - t < _RATE_LIMIT_WINDOW for t in _RATE_LIMIT[ip]):
+                del _RATE_LIMIT[ip]
+
+    response = await call_next(request)
+    return response
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -47,17 +133,32 @@ app.include_router(upi_router)
 app.include_router(history_router)
 app.include_router(clients_router)
 app.include_router(usage_router)
+app.include_router(inquiries_router)
 
 @app.on_event("startup")
 async def startup():
-    from app.services.auth_service import create_admin_user, get_pool
-    await get_pool()
-    await create_admin_user()
-
+    try:
+        from app.services.auth_service import create_admin_user, get_pool
+        await get_pool()
+        await create_admin_user()
+    except Exception as e:
+        print(f"WARNING: Startup error (non-fatal): {e}")
+        import traceback
+        traceback.print_exc()
+        print("App started despite errors. Some features may be limited.")
+        print("If DB is down: Power ON at Aiven dashboard!")
 
 @app.get("/")
 async def root():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "index.html"))
+
+@app.get("/admin.html")
+async def admin_html():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "admin.html"))
+
+@app.get("/dashboard.html")
+async def dashboard_html():
+    return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
 
 @app.get("/admin")
 async def serve_admin():
@@ -66,6 +167,222 @@ async def serve_admin():
 @app.get("/dashboard")
 async def serve_dashboard():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "dashboard.html"))
+
+
+# ==================== FREE TOOLS ====================
+
+def _serve_page(*parts):
+    """Serve an HTML page from the correct directory."""
+    import os as _os
+
+    # Try multiple base paths (handles Docker + local)
+    _bases = [
+        _os.path.join(APP_ROOT, *parts),      # /app/blog/slug.html (Docker)
+        _os.path.join(BASE_DIR, *parts),       # backend/blog/slug.html (local)
+        _os.path.join(APP_ROOT, "..", *parts), # One more level up
+    ]
+
+    for fpath in _bases:
+        fpath = _os.path.normpath(fpath)
+        if _os.path.exists(fpath) and _os.path.isfile(fpath):
+            return FileResponse(fpath, media_type="text/html")
+
+    # Try with .html extension
+    for fpath in _bases:
+        fpath = _os.path.normpath(fpath)
+        if not fpath.endswith('.html'):
+            fpath_with_ext = fpath + '.html'
+            if _os.path.exists(fpath_with_ext):
+                return FileResponse(fpath_with_ext, media_type="text/html")
+
+    # Try as directory with index.html
+    for fpath in _bases:
+        fpath = _os.path.normpath(fpath)
+        index_path = _os.path.join(fpath, 'index.html')
+        if _os.path.exists(index_path):
+            return FileResponse(index_path, media_type="text/html")
+
+    return JSONResponse(status_code=404, content={"error": f"Page not found: {parts}"})
+
+
+
+@app.get("/favicon.ico")
+async def favicon():
+    import os as _f_os
+    from fastapi.responses import FileResponse as _f_FR
+    _f_base = _f_os.path.join(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.abspath(__file__)))), "favicon.svg")
+    return _f_FR(_f_base, media_type="image/svg+xml")
+
+@app.get("/favicon.svg")
+async def favicon_svg():
+    import os as _f_os
+    from fastapi.responses import FileResponse as _f_FR
+    _f_base = _f_os.path.join(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.dirname(_f_os.path.abspath(__file__)))), "favicon.svg")
+    return _f_FR(_f_base, media_type="image/svg+xml")
+
+@app.get("/tools")
+async def tools_index():
+    return _serve_page("tools.html")
+
+@app.get("/tools/gst-calculator")
+async def gst_calculator():
+    return _serve_page("free-tools", "gst-calculator", "index.html")
+
+@app.get("/tools/tds-calculator")
+async def tds_calculator():
+    return _serve_page("free-tools", "tds-calculator", "index.html")
+
+@app.get("/tools/income-tax-calculator")
+async def income_tax_calculator():
+    return _serve_page("free-tools", "income-tax-calculator", "index.html")
+
+
+@app.get("/tools/hra-calculator")
+async def hra_calculator():
+    return _serve_page("free-tools", "hra-calculator", "index.html")
+
+
+@app.get("/tools/capital-gains-calculator")
+async def capital_gains_calc():
+    return _serve_page("free-tools", "capital-gains-calculator", "index.html")
+
+@app.get("/tools/emi-calculator")
+async def emi_calculator():
+    return _serve_page("free-tools", "emi-calculator", "index.html")
+
+@app.get("/tools/fd-calculator")
+async def fd_calculator():
+    return _serve_page("free-tools", "fd-calculator", "index.html")
+
+
+@app.get("/tools/sip-calculator")
+async def sip_calculator():
+    return _serve_page("free-tools", "sip-calculator", "index.html")
+
+@app.get("/tools/advance-tax-calculator")
+async def advance_tax_calculator():
+    return _serve_page("free-tools", "advance-tax-calculator", "index.html")
+
+@app.get("/tools/depreciation-calculator")
+async def depreciation_calculator():
+    return _serve_page("free-tools", "depreciation-calculator", "index.html")
+
+
+@app.get("/tools/gratuity-calculator")
+async def gratuity_calculator():
+    return _serve_page("free-tools", "gratuity-calculator", "index.html")
+
+@app.get("/tools/pf-calculator")
+async def pf_calculator():
+    return _serve_page("free-tools", "pf-calculator", "index.html")
+
+@app.get("/tools/markup-calculator")
+async def markup_calculator():
+    return _serve_page("free-tools", "markup-calculator", "index.html")
+
+
+@app.get("/tools/break-even-calculator")
+async def break_even_calculator():
+    return _serve_page("free-tools", "break-even-calculator", "index.html")
+
+@app.get("/tools/roi-calculator")
+async def roi_calculator():
+    return _serve_page("free-tools", "roi-calculator", "index.html")
+
+@app.get("/tools/interest-calculator")
+async def interest_calculator():
+    return _serve_page("free-tools", "interest-calculator", "index.html")
+
+@app.get("/tools/currency-converter")
+async def currency_converter():
+    return _serve_page("free-tools", "currency-converter", "index.html")
+
+
+
+# ===== Global Exception Handler: Never Crash =====
+import traceback as _tb
+import logging as _logging
+
+_crash_logger = _logging.getLogger("crash_handler")
+_crash_logger.setLevel(_logging.ERROR)
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request, exc):
+    _crash_logger.error(f"UNHANDLED ERROR on {request.url.path}: {exc}")
+    _crash_logger.error(_tb.format_exc())
+    return JSONResponse(
+        status_code=500,
+        content={
+            "error": "Internal server error",
+            "detail": str(exc) if "DEBUG" in str(exc) else "Something went wrong. Please try again.",
+            "path": str(request.url.path)
+        }
+    )
+
+
+# ===== Extensions Store =====
+@app.get("/extensions")
+async def extensions_page():
+    try:
+        return _serve_page("extensions", "index.html")
+    except Exception as e:
+        return JSONResponse(status_code=404, content={"error": "Page not found"})
+
+@app.get("/blog")
+async def blog_index():
+    return _serve_page("blog", "index.html")
+
+@app.get("/blog/{slug}")
+async def blog_post(slug: str):
+    try:
+        return _serve_page("blog", f"{slug}.html")
+    except Exception as e:
+        _crash_logger.error(f"Blog post error: {slug} - {e}")
+        return JSONResponse(status_code=404, content={"error": "Post not found"})
+
+@app.get("/sitemap.xml")
+async def sitemap():
+    import os as _os
+    from fastapi.responses import FileResponse as _FR
+    _base = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "sitemap.xml")
+    return _FR(_base, media_type="application/xml")
+
+@app.get("/robots.txt")
+async def robots():
+    import os as _os
+    from fastapi.responses import FileResponse as _FR
+    _base = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "robots.txt")
+    return _FR(_base, media_type="text/plain")
+
+
+# ===== Excel Template Downloads =====
+import os as _os
+from fastapi.responses import FileResponse as _FileResp
+
+_TPL_BASE = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "templates")
+
+@app.get("/templates")
+async def templates_index():
+    return _serve_page("templates", "index.html")
+
+@app.get("/templates/download/{slug}")
+async def download_template(slug: str):
+    try:
+        fpath = _os.path.join(_TPL_BASE, f"{slug}.xlsx")
+        if not _os.path.exists(fpath):
+            return JSONResponse(status_code=404, content={"error": "Template not found"})
+        return _FileResp(
+            fpath,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            filename=f"{slug}.xlsx",
+            headers={"Content-Disposition": f'attachment; filename="{slug}.xlsx"'}
+        )
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+@app.get("/templates/{slug}")
+async def template_page(slug: str):
+    return _serve_page("templates", slug, "index.html")
 
 @app.get("/api/types")
 async def list_types():
@@ -77,7 +394,7 @@ async def list_types():
                 "description": "Match bank statement against bank ledger",
                 "icon": "🏦",
                 "category": "reconciliation",
-                "price": 499,
+                "price": 299,
                 "enabled": True,
                 "files": [
                     {"role": "book_file", "label": "Bank Ledger (Tally)", "required": True},
@@ -91,7 +408,7 @@ async def list_types():
                 "description": "Match books against GSTR-2B with auto-classification",
                 "icon": "📋",
                 "category": "reconciliation",
-                "price": 499,
+                "price": 299,
                 "enabled": True,
                 "files": [
                     {"role": "books_file", "label": "Purchase Register / Books", "required": True},
@@ -106,7 +423,7 @@ async def list_types():
                 "description": "Prepare and file GSTR-1 from sales data",
                 "icon": "📤",
                 "category": "gst_returns",
-                "price": 499,
+                "price": 299,
                 "enabled": True,
                 "files": [
                     {"role": "sales_file", "label": "Sales Register / Invoices", "required": True},
@@ -119,7 +436,7 @@ async def list_types():
                 "description": "Reconcile GSTR-2B with purchase register for ITC",
                 "icon": "📥",
                 "category": "gst_returns",
-                "price": 499,
+                "price": 299,
                 "enabled": True,
                 "files": [
                     {"role": "books_file", "label": "Purchase Register / Books", "required": True},
@@ -133,7 +450,7 @@ async def list_types():
                 "description": "Prepare and file GSTR-3B with auto-computed tax liability",
                 "icon": "🧮",
                 "category": "gst_returns",
-                "price": 499,
+                "price": 299,
                 "enabled": True,
                 "files": [
                     {"role": "sales_file", "label": "Sales Register", "required": True},
@@ -148,7 +465,7 @@ async def list_types():
                 "description": "Match books against Form 26AS / TRACES",
                 "icon": "📄",
                 "category": "reconciliation",
-                "price": 499,
+                "price": 299,
                 "enabled": False,
                 "coming_soon": True,
                 "files": [],
@@ -160,7 +477,7 @@ async def list_types():
                 "description": "Match customer ledger against customer statements",
                 "icon": "👥",
                 "category": "reconciliation",
-                "price": 499,
+                "price": 299,
                 "enabled": False,
                 "coming_soon": True,
                 "files": [],
@@ -172,7 +489,7 @@ async def list_types():
                 "description": "Match vendor ledger against vendor statements",
                 "icon": "🏭",
                 "category": "reconciliation",
-                "price": 499,
+                "price": 299,
                 "enabled": False,
                 "coming_soon": True,
                 "files": [],
@@ -184,7 +501,7 @@ async def list_types():
                 "description": "Match Amazon/Flipkart settlement against sales ledger",
                 "icon": "🛒",
                 "category": "reconciliation",
-                "price": 499,
+                "price": 299,
                 "enabled": False,
                 "coming_soon": True,
                 "files": [],

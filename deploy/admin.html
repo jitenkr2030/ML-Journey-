@@ -105,17 +105,109 @@ table tr:hover td{background:rgba(255,255,255,.02)}
 </head>
 <body>
 
-<nav>
-<div class="container">
-<a href="/" class="logo">Reconcile<span>AI</span><span class="admin-tag">ADMIN</span></a>
-<div style="display:flex;gap:12px;align-items:center">
-<span id="adminName" style="color:var(--text2);font-size:13px"></span>
-<a href="/" class="btn btn-outline">Main App</a>
-<a href="/dashboard" class="btn btn-outline">User Dashboard</a>
-<button class="btn btn-danger" onclick="logout()">Logout</button>
-</div>
-</div>
+<nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">🔮</span>
+            <span class="logo-text">ReconcileAI</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="navLinks">
+            <a href="/" class="nav-link">Home</a>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('resourcesMenu')">
+                    📚 Resources <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="resourcesMenu">
+                    <a href="/tools" class="dropdown-item">
+                        <span class="dd-icon">🛠️</span>
+                        <div><div class="dd-title">Free Tools</div><div class="dd-desc">12+ calculators (GST, TDS, Tax & more)</div></div>
+                    </a>
+                    <a href="/templates" class="dropdown-item">
+                        <span class="dd-icon">📊</span>
+                        <div><div class="dd-title">Templates</div><div class="dd-desc">15+ Excel templates for businesses</div></div>
+                    </a>
+                    <a href="/blog" class="dropdown-item">
+                        <span class="dd-icon">📝</span>
+                        <div><div class="dd-title">Blog</div><div class="dd-desc">GST, tax & accounting guides</div></div>
+                    </a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('extensionsMenu')">
+                    🧩 Extensions <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" id="extensionsMenu">
+                    <a href="/extensions#tally" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">Tally Connector</div><div class="dd-desc">Sync Tally with ReconcileAI <span class="badge-new">NEW</span></div></div>
+                    </a>
+                    <a href="/extensions#busy" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">BUSY Connector</div><div class="dd-desc">Sync BUSY with ReconcileAI <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#zoho" class="dropdown-item">
+                        <span class="dd-icon">🔗</span>
+                        <div><div class="dd-title">Zoho Books Connector</div><div class="dd-desc">Sync Zoho with ReconcileAI <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#chrome" class="dropdown-item">
+                        <span class="dd-icon">🧩</span>
+                        <div><div class="dd-title">Chrome Extension</div><div class="dd-desc">Quick recon from browser <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions#ca-firm" class="dropdown-item">
+                        <span class="dd-icon">📋</span>
+                        <div><div class="dd-title">CA Firm Manager</div><div class="dd-desc">Office + client management <span class="badge-soon">SOON</span></div></div>
+                    </a>
+                    <a href="/extensions" class="dropdown-item view-all">
+                        <span class="dd-icon">🛒</span>
+                        <div><div class="dd-title">View All Extensions</div><div class="dd-desc">Browse the complete store</div></div>
+                    </a>
+                </div>
+            </div>
+            <a href="/#pricing" class="nav-link">Pricing</a>
+            <a href="/dashboard" class="nav-link nav-login">Login</a>
+            <a href="/#reconcile" class="nav-btn">Get Started</a>
+        </div>
+    </div>
 </nav>
+<style>
+.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(13,13,13,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 20px}
+.nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:65px}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-size:20px;font-weight:800;color:#fff}
+.logo-icon{font-size:28px}
+.logo-text{background:linear-gradient(135deg,#e8c547,#f0a030);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Syne',sans-serif;letter-spacing:-0.5px}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-link{color:#b0aca4;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:14px;font-weight:500;transition:all 0.2s ease;background:none;border:none;cursor:pointer;font-family:inherit}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,0.06)}
+.nav-login{border:1px solid rgba(255,255,255,0.15)}
+.nav-btn{background:linear-gradient(135deg,#e8c547,#f0a030)!important;color:#0d0d0d!important;padding:8px 20px!important;border-radius:8px!important;font-weight:700!important;text-decoration:none!important;transition:all 0.2s ease!important}
+.nav-btn:hover{transform:translateY(-1px)!important;box-shadow:0 4px 20px rgba(232,197,71,0.3)!important}
+.nav-dropdown{position:relative}
+.dropdown-toggle{display:flex;align-items:center;gap:4px}
+.dropdown-arrow{font-size:10px;transition:transform 0.2s ease}
+.nav-dropdown:hover .dropdown-arrow,.nav-dropdown.active .dropdown-arrow{transform:rotate(180deg)}
+.dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);min-width:320px;background:#1a1a1a;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:8px;opacity:0;visibility:hidden;transition:all 0.25s ease;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
+.nav-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-item{display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:10px;text-decoration:none;color:#d0ccc4;transition:all 0.15s ease}
+.dropdown-item:hover{background:rgba(232,197,71,0.1);color:#fff}
+.dd-icon{font-size:24px;width:36px;text-align:center}
+.dd-title{font-size:14px;font-weight:600;color:#fff}
+.dd-desc{font-size:11px;color:#7a7570;margin-top:2px}
+.dropdown-item.view-all{border-top:1px solid rgba(255,255,255,0.08);margin-top:4px;padding-top:12px}
+.badge-new{background:#22c55e;color:#fff;padding:1px 6px;border-radius:4px;font-size:9px;font-weight:700;vertical-align:middle}
+.badge-soon{background:#6366f1;color:#fff;padding:1px 6px;border-radius:4px;font-size:9px;font-weight:700;vertical-align:middle}
+.mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.mobile-toggle span{width:24px;height:2px;background:#fff;transition:all 0.3s ease}
+@media(max-width:768px){.mobile-toggle{display:flex}.nav-links{display:none;position:absolute;top:65px;left:0;right:0;background:#1a1a1a;flex-direction:column;padding:20px;gap:8px;border-bottom:1px solid rgba(255,255,255,0.1)}.nav-links.active{display:flex}.dropdown-menu{position:static;transform:none;min-width:100%;box-shadow:none;opacity:1;visibility:visible;display:none}.nav-dropdown.active .dropdown-menu{display:block}.nav-dropdown:hover .dropdown-menu{transform:none}}
+</style>
+<script>
+function toggleDropdown(id){var m=document.getElementById(id),p=m.parentElement;document.querySelectorAll('.nav-dropdown').forEach(function(d){if(d!==p)d.classList.remove('active')});p.classList.toggle('active')}
+function toggleMobileNav(){document.getElementById('navLinks').classList.toggle('active')}
+document.addEventListener('click',function(e){if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown').forEach(function(d){d.classList.remove('active')})}});
+</script>
+
 
 <div class="toast" id="toast"></div>
 
