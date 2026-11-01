@@ -1,373 +1,545 @@
-<nav class="main-nav" id="mainNav">
-    <div class="nav-container">
-        <a href="/" class="nav-logo">
-            <img src="/favicon.svg" alt="ReconcileAI" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-            <span class="logo-fallback" style="display:none">🔮</span>
-            <span class="logo-text">ReconcileAI</span>
+<!-- ===== DESKTOP NAV ===== -->
+<nav class="rai-nav" id="raiNav">
+    <div class="rai-nav-inner">
+        <a href="/" class="rai-logo">
+            <img src="/favicon.svg" alt="ReconcileAI" class="rai-logo-img">
+            <span class="rai-logo-text">ReconcileAI</span>
         </a>
-        <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileNav()" aria-label="Menu">
-            <span class="bar1"></span>
-            <span class="bar2"></span>
-            <span class="bar3"></span>
-        </button>
-        <div class="nav-links" id="navLinks">
-            <a href="/" class="nav-link">Home</a>
-            <div class="nav-dropdown">
-                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('resourcesMenu')">
-                    📚 Resources <span class="dropdown-arrow">▼</span>
+
+        <div class="rai-desktop-links">
+            <a href="/" class="rai-link">Home</a>
+            <div class="rai-drop">
+                <button class="rai-link rai-drop-btn" onclick="raiToggleDrop(this)">
+                    📚 Resources <span class="rai-arrow">▾</span>
                 </button>
-                <div class="dropdown-menu" id="resourcesMenu">
-                    <a href="/tools" class="dropdown-item">
-                        <span class="dd-icon">🛠️</span>
-                        <div><div class="dd-title">Free Tools</div><div class="dd-desc">12+ calculators (GST, TDS, Tax & more)</div></div>
-                    </a>
-                    <a href="/templates" class="dropdown-item">
-                        <span class="dd-icon">📊</span>
-                        <div><div class="dd-title">Templates</div><div class="dd-desc">15+ Excel templates for businesses</div></div>
-                    </a>
-                    <a href="/blog" class="dropdown-item">
-                        <span class="dd-icon">📝</span>
-                        <div><div class="dd-title">Blog</div><div class="dd-desc">GST, tax & accounting guides</div></div>
-                    </a>
+                <div class="rai-drop-menu">
+                    <a href="/tools" class="rai-drop-item"><span>🛠️</span><div><b>Free Tools</b><small>12+ calculators</small></div></a>
+                    <a href="/templates" class="rai-drop-item"><span>📊</span><div><b>Templates</b><small>15+ Excel templates</small></div></a>
+                    <a href="/blog" class="rai-drop-item"><span>📝</span><div><b>Blog</b><small>GST, tax & accounting</small></div></a>
                 </div>
             </div>
-            <div class="nav-dropdown">
-                <button class="nav-link dropdown-toggle" onclick="toggleDropdown('extensionsMenu')">
-                    🧩 Extensions <span class="dropdown-arrow">▼</span>
+            <div class="rai-drop">
+                <button class="rai-link rai-drop-btn" onclick="raiToggleDrop(this)">
+                    🧩 Extensions <span class="rai-arrow">▾</span>
                 </button>
-                <div class="dropdown-menu" id="extensionsMenu">
-                    <a href="/extensions#tally" class="dropdown-item">
-                        <span class="dd-icon">🔗</span>
-                        <div><div class="dd-title">Tally Connector</div><div class="dd-desc">Sync Tally with ReconcileAI <span class="badge-new">NEW</span></div></div>
-                    </a>
-                    <a href="/extensions#busy" class="dropdown-item">
-                        <span class="dd-icon">🔗</span>
-                        <div><div class="dd-title">BUSY Connector</div><div class="dd-desc">Sync BUSY with ReconcileAI <span class="badge-soon">SOON</span></div></div>
-                    </a>
-                    <a href="/extensions#zoho" class="dropdown-item">
-                        <span class="dd-icon">🔗</span>
-                        <div><div class="dd-title">Zoho Books Connector</div><div class="dd-desc">Sync Zoho with ReconcileAI <span class="badge-soon">SOON</span></div></div>
-                    </a>
-                    <a href="/extensions#chrome" class="dropdown-item">
-                        <span class="dd-icon">🧩</span>
-                        <div><div class="dd-title">Chrome Extension</div><div class="dd-desc">Quick recon from browser <span class="badge-soon">SOON</span></div></div>
-                    </a>
-                    <a href="/extensions#ca-firm" class="dropdown-item">
-                        <span class="dd-icon">📋</span>
-                        <div><div class="dd-title">CA Firm Manager</div><div class="dd-desc">Office + client management <span class="badge-soon">SOON</span></div></div>
-                    </a>
-                    <a href="/extensions" class="dropdown-item view-all">
-                        <span class="dd-icon">🛒</span>
-                        <div><div class="dd-title">View All Extensions</div><div class="dd-desc">Browse the complete store</div></div>
-                    </a>
+                <div class="rai-drop-menu">
+                    <a href="/extensions#tally" class="rai-drop-item"><span>🔗</span><div><b>Tally Connector</b><small>Sync Tally <em class="rai-badge-new">NEW</em></small></div></a>
+                    <a href="/extensions#busy" class="rai-drop-item"><span>🔗</span><div><b>BUSY Connector</b><small>Sync BUSY <em class="rai-badge-soon">SOON</em></small></div></a>
+                    <a href="/extensions#zoho" class="rai-drop-item"><span>🔗</span><div><b>Zoho Books</b><small>Sync Zoho <em class="rai-badge-soon">SOON</em></small></div></a>
+                    <a href="/extensions#chrome" class="rai-drop-item"><span>🧩</span><div><b>Chrome Extension</b><small>Browser recon <em class="rai-badge-soon">SOON</em></small></div></a>
+                    <a href="/extensions#ca-firm" class="rai-drop-item"><span>📋</span><div><b>CA Firm Manager</b><small>Office management <em class="rai-badge-soon">SOON</em></small></div></a>
+                    <a href="/extensions" class="rai-drop-item rai-view-all"><span>🛒</span><div><b>View All Extensions</b><small>Browse the store</small></div></a>
                 </div>
             </div>
-            <a href="/#pricing" class="nav-link">Pricing</a>
-            <a href="/dashboard" class="nav-link nav-login">Login</a>
-            <a href="/#reconcile" class="nav-btn">Get Started</a>
+            <a href="/#pricing" class="rai-link">Pricing</a>
         </div>
+
+        <div class="rai-nav-cta">
+            <a href="#" class="rai-btn-ghost" onclick="openAuthModal('login');return false;">Login</a>
+            <a href="#" class="rai-btn-gold" onclick="openAuthModal('register');return false;">Get Started</a>
+        </div>
+
+        <button class="rai-burger" id="raiBurger" onclick="raiToggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
 
+<!-- ===== MOBILE DRAWER (Separate Element!) ===== -->
+<div class="rai-m-overlay" id="raiMOverlay" onclick="raiToggleMenu()"></div>
+<div class="rai-m-drawer" id="raiMDrawer">
+    <div class="rai-m-header">
+        <a href="/" class="rai-logo">
+            <img src="/favicon.svg" alt="ReconcileAI" class="rai-logo-img">
+            <span class="rai-logo-text">ReconcileAI</span>
+        </a>
+        <button class="rai-m-close" onclick="raiToggleMenu()" aria-label="Close">✕</button>
+    </div>
+
+    <div class="rai-m-body">
+        <a href="/" class="rai-m-link">
+            <span class="rai-m-icon">🏠</span>
+            <span>Home</span>
+        </a>
+
+        <div class="rai-m-section">
+            <button class="rai-m-link rai-m-toggle" onclick="raiMAccordion(this)">
+                <span class="rai-m-icon">📚</span>
+                <span>Resources</span>
+                <span class="rai-m-arrow">▾</span>
+            </button>
+            <div class="rai-m-sub">
+                <a href="/tools" class="rai-m-sub-link">🛠️ Free Tools</a>
+                <a href="/templates" class="rai-m-sub-link">📊 Templates</a>
+                <a href="/blog" class="rai-m-sub-link">📝 Blog</a>
+            </div>
+        </div>
+
+        <div class="rai-m-section">
+            <button class="rai-m-link rai-m-toggle" onclick="raiMAccordion(this)">
+                <span class="rai-m-icon">🧩</span>
+                <span>Extensions</span>
+                <span class="rai-m-arrow">▾</span>
+            </button>
+            <div class="rai-m-sub">
+                <a href="/extensions#tally" class="rai-m-sub-link">🔗 Tally Connector <em class="rai-badge-new">NEW</em></a>
+                <a href="/extensions#busy" class="rai-m-sub-link">🔗 BUSY Connector <em class="rai-badge-soon">SOON</em></a>
+                <a href="/extensions#zoho" class="rai-m-sub-link">🔗 Zoho Books <em class="rai-badge-soon">SOON</em></a>
+                <a href="/extensions#chrome" class="rai-m-sub-link">🧩 Chrome Extension <em class="rai-badge-soon">SOON</em></a>
+                <a href="/extensions#ca-firm" class="rai-m-sub-link">📋 CA Firm Manager <em class="rai-badge-soon">SOON</em></a>
+                <a href="/extensions" class="rai-m-sub-link rai-view-all-m">🛒 View All Extensions</a>
+            </div>
+        </div>
+
+        <a href="/#pricing" class="rai-m-link">
+            <span class="rai-m-icon">💰</span>
+            <span>Pricing</span>
+        </a>
+    </div>
+
+    <div class="rai-m-cta">
+        <a href="#" class="rai-m-btn-outline" onclick="openAuthModal('login');return false;">Login</a>
+        <a href="#" class="rai-m-btn-gold" onclick="openAuthModal('register');return false;">Get Started →</a>
+    </div>
+</div>
+
 <style>
-.main-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-    background: #0d0d0d;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    padding: 0 16px;
+/* ===== DESKTOP NAV ===== */
+.rai-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(13, 13, 13, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.nav-container {
-    max-width: 1200px; margin: 0 auto;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 60px;
+.rai-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 20px;
 }
-.nav-logo {
-    display: flex; align-items: center; gap: 10px;
-    text-decoration: none; color: #fff;
-    font-size: 20px; font-weight: 800;
-    flex-shrink: 0;
+.rai-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    z-index: 10;
 }
-.logo-img {
-    width: 36px; height: 36px;
+.rai-logo-img {
+    width: 34px; height: 34px;
     border-radius: 8px;
     object-fit: contain;
 }
-.logo-fallback { font-size: 32px; }
-.logo-text {
+.rai-logo-text {
     background: linear-gradient(135deg, #e8c547, #f0a030);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-family: 'Syne', sans-serif;
+    font-size: 20px; font-weight: 800;
     letter-spacing: -0.5px;
-    font-size: 22px;
 }
-.nav-links {
-    display: flex; align-items: center; gap: 2px;
+.rai-desktop-links {
+    display: flex;
+    align-items: center;
+    gap: 2px;
 }
-.nav-link {
-    color: #b0aca4; text-decoration: none;
-    padding: 8px 14px; border-radius: 8px;
-    font-size: 14px; font-weight: 500;
-    transition: all 0.2s ease;
-    background: none; border: none; cursor: pointer;
-    font-family: inherit; white-space: nowrap;
-}
-.nav-link:hover {
-    color: #fff; background: rgba(255,255,255,0.06);
-}
-.nav-login {
-    border: 1px solid rgba(255,255,255,0.15);
-}
-.nav-btn {
-    background: linear-gradient(135deg, #e8c547, #f0a030) !important;
-    color: #0d0d0d !important;
-    padding: 8px 20px !important;
-    border-radius: 8px !important;
-    font-weight: 700 !important;
-    text-decoration: none !important;
-    transition: all 0.2s ease !important;
+.rai-link {
+    color: #b0aca4;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
     white-space: nowrap;
 }
-.nav-btn:hover {
-    transform: translateY(-1px) !important;
-    box-shadow: 0 4px 20px rgba(232, 197, 71, 0.3) !important;
+.rai-link:hover { color: #fff; background: rgba(255,255,255,0.06); }
+.rai-nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.nav-dropdown { position: relative; }
-.dropdown-toggle {
-    display: flex; align-items: center; gap: 4px;
+.rai-btn-ghost {
+    color: #b0aca4;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
 }
-.dropdown-arrow {
-    font-size: 10px; transition: transform 0.2s ease;
-    display: inline-block;
+.rai-btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+.rai-btn-gold {
+    background: linear-gradient(135deg, #e8c547, #f0a030);
+    color: #0d0d0d;
+    padding: 8px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
 }
-.nav-dropdown:hover .dropdown-arrow,
-.nav-dropdown.active .dropdown-arrow {
-    transform: rotate(180deg);
+.rai-btn-gold:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(232,197,71,0.3);
 }
-.dropdown-menu {
-    position: absolute; top: calc(100% + 8px); left: 50%;
+
+/* Desktop dropdown */
+.rai-drop { position: relative; }
+.rai-drop-btn { display: flex; align-items: center; gap: 4px; }
+.rai-arrow { font-size: 10px; transition: transform 0.2s; display: inline-block; }
+.rai-drop:hover .rai-arrow { transform: rotate(180deg); }
+.rai-drop-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
     transform: translateX(-50%);
-    min-width: 300px;
+    min-width: 280px;
     background: #1a1a1a;
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 14px;
     padding: 8px;
-    opacity: 0; visibility: hidden;
-    transition: all 0.25s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s;
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
 }
-.nav-dropdown:hover .dropdown-menu {
-    opacity: 1; visibility: visible;
+.rai-drop:hover .rai-drop-menu { opacity: 1; visibility: visible; }
+.rai-drop-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #d0ccc4;
+    transition: all 0.15s;
 }
-.dropdown-item {
-    display: flex; align-items: center; gap: 12px;
-    padding: 10px 14px; border-radius: 10px;
-    text-decoration: none; color: #d0ccc4;
-    transition: all 0.15s ease;
-}
-.dropdown-item:hover {
-    background: rgba(232, 197, 71, 0.1);
-    color: #fff;
-}
-.dd-icon { font-size: 22px; width: 32px; text-align: center; flex-shrink: 0; }
-.dd-title { font-size: 13px; font-weight: 600; color: #fff; }
-.dd-desc { font-size: 11px; color: #7a7570; margin-top: 1px; }
-.dropdown-item.view-all {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    margin-top: 4px; padding-top: 12px;
-}
-.badge-new {
+.rai-drop-item:hover { background: rgba(232,197,71,0.1); color: #fff; }
+.rai-drop-item span { font-size: 22px; width: 32px; text-align: center; }
+.rai-drop-item b { display: block; font-size: 13px; color: #fff; }
+.rai-drop-item small { font-size: 11px; color: #7a7570; }
+.rai-view-all { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 4px; padding-top: 12px; }
+.rai-badge-new {
     background: #22c55e; color: #fff;
     padding: 1px 6px; border-radius: 4px;
-    font-size: 9px; font-weight: 700;
-    vertical-align: middle;
+    font-size: 9px; font-style: normal; font-weight: 700;
 }
-.badge-soon {
+.rai-badge-soon {
     background: #6366f1; color: #fff;
     padding: 1px 6px; border-radius: 4px;
-    font-size: 9px; font-weight: 700;
-    vertical-align: middle;
+    font-size: 9px; font-style: normal; font-weight: 700;
 }
 
-/* ===== HAMBURGER BUTTON ===== */
-.mobile-toggle {
+/* Hamburger button */
+.rai-burger {
     display: none;
+    width: 44px; height: 44px;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1002;
-    width: 44px;
-    height: 44px;
     align-items: center;
+    gap: 5px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0;
 }
-.mobile-toggle .bar1,
-.mobile-toggle .bar2,
-.mobile-toggle .bar3 {
-    width: 22px;
-    height: 2px;
+.rai-burger span {
+    width: 20px; height: 2px;
     background: #e8c547;
     border-radius: 2px;
-    transition: all 0.3s ease;
-    display: block;
+    transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
-.mobile-toggle.active .bar1 {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.mobile-toggle.active .bar2 {
+.rai-burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.rai-burger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.rai-burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ===== MOBILE OVERLAY ===== */
+.rai-m-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 2000;
     opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease;
 }
-.mobile-toggle.active .bar3 {
-    transform: rotate(-45deg) translate(5px, -5px);
+.rai-m-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===== MOBILE DRAWER ===== */
+.rai-m-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 82%;
+    max-width: 340px;
+    background: #111;
+    z-index: 2001;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -15px 0 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.rai-m-drawer.active {
+    right: 0;
+}
+
+/* Mobile header */
+.rai-m-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    flex-shrink: 0;
+}
+.rai-m-close {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.05);
+    color: #b0aca4;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.rai-m-close:active {
+    background: rgba(232,197,71,0.15);
+    color: #e8c547;
+}
+
+/* Mobile body (scrollable) */
+.rai-m-body {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 12px 0;
+}
+
+/* Mobile links */
+.rai-m-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    color: #e0ddd8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+    min-height: 56px;
+}
+.rai-m-link:active {
+    background: rgba(232, 197, 71, 0.08);
+}
+.rai-m-icon {
+    font-size: 22px;
+    width: 32px;
+    text-align: center;
+    flex-shrink: 0;
+}
+.rai-m-arrow {
+    margin-left: auto;
+    font-size: 12px;
+    color: #7a7570;
+    transition: transform 0.3s;
+}
+
+/* Mobile accordion */
+.rai-m-section { }
+.rai-m-section.open .rai-m-arrow {
+    transform: rotate(180deg);
+    color: #e8c547;
+}
+.rai-m-sub {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    background: rgba(255,255,255,0.02);
+}
+.rai-m-section.open .rai-m-sub {
+    max-height: 500px;
+}
+.rai-m-sub-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px 13px 56px;
+    color: #b0aca4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.15s;
+    min-height: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.rai-m-sub-link:active {
+    background: rgba(232, 197, 71, 0.1);
+    color: #e8c547;
+}
+.rai-view-all-m {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: #e8c547 !important;
+    font-weight: 600;
+}
+
+/* Mobile CTA (bottom) */
+.rai-m-cta {
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.rai-m-btn-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #e0ddd8;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    min-height: 52px;
+    transition: all 0.2s;
+}
+.rai-m-btn-outline:active {
+    background: rgba(255,255,255,0.08);
+}
+.rai-m-btn-gold {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e8c547, #f0a030);
+    color: #0d0d0d;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    min-height: 52px;
+    transition: all 0.2s;
+}
+.rai-m-btn-gold:active {
+    transform: scale(0.97);
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .mobile-toggle {
-        display: flex !important;
-    }
-    .nav-links {
-        display: none !important;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #0d0d0d;
-        flex-direction: column;
-        padding: 20px 16px;
-        gap: 4px;
-        overflow-y: auto;
-        z-index: 999;
-        -webkit-overflow-scrolling: touch;
-    }
-    .nav-links.active {
-        display: flex !important;
-    }
-    .nav-link {
-        width: 100%;
-        text-align: left;
-        padding: 14px 16px;
-        font-size: 16px;
-        color: #f0ece4;
-        border-radius: 10px;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .nav-link:hover {
-        background: rgba(232, 197, 71, 0.1);
-        color: #e8c547;
-    }
-    .nav-dropdown {
-        width: 100%;
-    }
-    .dropdown-toggle {
-        width: 100%;
-        justify-content: space-between;
-    }
-    .dropdown-menu {
-        position: static;
-        transform: none;
-        min-width: 100%;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-        display: none;
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.06);
-        border-radius: 12px;
-        margin-top: 4px;
-    }
-    .nav-dropdown.active .dropdown-menu {
-        display: block;
-    }
-    .dropdown-item {
-        padding: 12px 16px;
-    }
-    .dd-title { color: #f0ece4; }
-    .dd-desc { color: #7a7570; }
-    .nav-login {
-        width: 100%;
-        text-align: center;
-        padding: 14px;
-        font-size: 16px;
-        margin-top: 8px;
-    }
-    .nav-btn {
-        width: 100%;
-        text-align: center;
-        padding: 14px !important;
-        font-size: 16px !important;
-        margin-top: 8px;
-    }
+    .rai-desktop-links { display: none; }
+    .rai-nav-cta { display: none; }
+    .rai-burger { display: flex; }
 }
-
 @media (min-width: 769px) {
-    .nav-links {
-        display: flex !important;
-    }
+    .rai-m-drawer { display: none; }
+    .rai-m-overlay { display: none; }
 }
 </style>
 
 <script>
-function toggleDropdown(id) {
-    var menu = document.getElementById(id);
-    if (!menu) return;
-    var parent = menu.parentElement;
-    var wasActive = parent.classList.contains('active');
-    var allDropdowns = document.querySelectorAll('.nav-dropdown');
-    for (var i = 0; i < allDropdowns.length; i++) {
-        allDropdowns[i].classList.remove('active');
+// Desktop dropdown
+function raiToggleDrop(btn) {
+    var parent = btn.parentElement;
+    var allDrops = document.querySelectorAll('.rai-drop');
+    for (var i = 0; i < allDrops.length; i++) {
+        if (allDrops[i] !== parent) allDrops[i].classList.remove('rai-open');
     }
-    if (!wasActive) {
-        parent.classList.add('active');
-    }
+    parent.classList.toggle('rai-open');
 }
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.rai-drop')) {
+        var allDrops = document.querySelectorAll('.rai-drop');
+        for (var i = 0; i < allDrops.length; i++) allDrops[i].classList.remove('rai-open');
+    }
+});
 
-function toggleMobileNav() {
-    var navLinks = document.getElementById('navLinks');
-    var toggle = document.getElementById('mobileToggle');
-    if (navLinks) {
-        navLinks.classList.toggle('active');
-    }
-    if (toggle) {
-        toggle.classList.toggle('active');
-    }
-    if (navLinks && navLinks.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
+// Mobile menu toggle
+function raiToggleMenu() {
+    var drawer = document.getElementById('raiMDrawer');
+    var overlay = document.getElementById('raiMOverlay');
+    var burger = document.getElementById('raiBurger');
+
+    if (!drawer) return;
+
+    var isOpen = drawer.classList.contains('active');
+
+    if (isOpen) {
+        drawer.classList.remove('active');
+        overlay.classList.remove('active');
+        burger.classList.remove('active');
+        document.body.style.overflow = '';
     } else {
-        document.body.style.overflow = '';
+        drawer.classList.add('active');
+        overlay.classList.add('active');
+        burger.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 }
 
+// Mobile accordion
+function raiMAccordion(btn) {
+    var section = btn.parentElement;
+    var isOpen = section.classList.contains('open');
+
+    // Close all sections
+    var allSections = document.querySelectorAll('.rai-m-section');
+    for (var i = 0; i < allSections.length; i++) {
+        allSections[i].classList.remove('open');
+    }
+
+    // Open this one (if wasn't open)
+    if (!isOpen) {
+        section.classList.add('open');
+    }
+}
+
+// Close mobile menu when a sub-link is tapped
 document.addEventListener('click', function(e) {
-    if (!e.target.closest('.nav-dropdown')) {
-        var allDropdowns = document.querySelectorAll('.nav-dropdown');
-        for (var i = 0; i < allDropdowns.length; i++) {
-            allDropdowns[i].classList.remove('active');
-        }
+    if (e.target.closest('.rai-m-sub-link') || e.target.closest('.rai-m-body > .rai-m-link')) {
+        raiToggleMenu();
     }
 });
 
-document.addEventListener('click', function(e) {
-    if (e.target.closest('.nav-links a') || e.target.closest('.nav-links .nav-btn')) {
-        var navLinks = document.getElementById('navLinks');
-        var toggle = document.getElementById('mobileToggle');
-        if (navLinks) navLinks.classList.remove('active');
-        if (toggle) toggle.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-});
-
+// Close on desktop resize
 window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
-        var navLinks = document.getElementById('navLinks');
-        var toggle = document.getElementById('mobileToggle');
-        if (navLinks) navLinks.classList.remove('active');
-        if (toggle) toggle.classList.remove('active');
+        var drawer = document.getElementById('raiMDrawer');
+        var overlay = document.getElementById('raiMOverlay');
+        var burger = document.getElementById('raiBurger');
+        if (drawer) drawer.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        if (burger) burger.classList.remove('active');
         document.body.style.overflow = '';
     }
 });
