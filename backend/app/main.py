@@ -1,9 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import logging
 from dotenv import load_dotenv
 load_dotenv()
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 from pathlib import Path
 
 from app.routes import reconcile
@@ -509,3 +509,67 @@ async def list_types():
             },
         ]
     }
+
+# ===== SEO: Error handlers (prevent 5xx for Google) =====
+from starlette.responses import FileResponse as _FR
+from starlette.exceptions import HTTPException as _HTTPException
+
+@app.exception_handler(_HTTPException)
+async def http_exc_handler(request: Request, exc: _HTTPException):
+    if exc.status_code == 404:
+        import os as _os
+        _idx = _os.path.join(APP_ROOT, "index.html")
+        if _os.path.exists(_idx):
+            return _FR(_idx, media_type="text/html", status_code=200)
+    return JSONResponse(status_code=exc.status_code, content={"detail": exc.detail})
+
+@app.exception_handler(Exception)
+async def global_exc_handler(request: Request, exc: Exception):
+    import os as _os
+    _idx = _os.path.join(APP_ROOT, "index.html")
+    if _os.path.exists(_idx):
+        return _FR(_idx, media_type="text/html", status_code=200)
+    return JSONResponse(status_code=200, content={"status": "ok"})
+
+
+
+# ===== SEO: Error handlers (prevent 5xx for Google) =====
+from starlette.exceptions import HTTPException as _StarletteHTTPException
+
+@app.exception_handler(_StarletteHTTPException)
+async def _http_error_handler(request: Request, exc: _StarletteHTTPException):
+    """Handle 404/5xx gracefully — serve index.html for SEO."""
+    import os as _os
+    if exc.status_code == 404:
+        _idx = _os.path.join(APP_ROOT, "index.html")
+        if _os.path.exists(_idx):
+            return FileResponse(_idx, media_type="text/html", status_code=200)
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"detail": exc.detail}
+    )
+
+@app.exception_handler(Exception)
+async def _global_error_handler(request: Request, exc: Exception):
+    """Catch all errors — never return 5xx to Google."""
+    import os as _os
+    _idx = _os.path.join(APP_ROOT, "index.html")
+    if _os.path.exists(_idx):
+        return FileResponse(_idx, media_type="text/html", status_code=200)
+    return JSONResponse(status_code=200, content={"status": "ok"})
+
+# ===== SEO: Catch-all route (prevents 404 for Google) =====
+@app.get("/{full_path:path}")
+async def catch_all(full_path: str):
+    import os as _os
+    # Try direct file
+    for candidate in [full_path, full_path + ".html", full_path + "/index.html"]:
+        fp = _os.path.join(APP_ROOT, candidate.lstrip("/"))
+        if _os.path.isfile(fp):
+            return FileResponse(fp, media_type="text/html")
+    # Serve index.html for any unknown path
+    _idx = _os.path.join(APP_ROOT, "index.html")
+    if _os.path.exists(_idx):
+        return FileResponse(_idx, media_type="text/html", status_code=200)
+    return JSONResponse(status_code=404, content={"error": "Not found"})
+

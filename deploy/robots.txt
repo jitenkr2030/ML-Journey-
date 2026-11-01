@@ -1,13 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /tools/
-Allow: /templates/
-Allow: /blog/
-Allow: /extensions/
 
 Sitemap: https://reconcileai.in/sitemap.xml
-
-# Block low-value paths
-Disallow: /api/
-Disallow: /data/
-Disallow: /admin/api
