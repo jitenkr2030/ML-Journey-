@@ -1,42 +1,13 @@
-# ReconcileAI - robots.txt
 User-agent: *
 Allow: /
-Allow: /blog/
 Allow: /tools/
 Allow: /templates/
+Allow: /blog/
 Allow: /extensions/
-Allow: /sitemap.xml
 
-# Block admin/private pages
-Disallow: /admin
-Disallow: /dashboard
-Disallow: /api/auth/
-Disallow: /api/admin/
-Disallow: /api/payments/
-
-# Block scanner bots (save resources)
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-# Allow search engines fully
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-# Sitemap
 Sitemap: https://reconcileai.in/sitemap.xml
-Sitemap: https://reconcileai.de.deplexo.com/sitemap.xml
+
+# Block low-value paths
+Disallow: /api/
+Disallow: /data/
+Disallow: /admin/api
