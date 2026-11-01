@@ -28,7 +28,7 @@ BACKEND = os.path.join(ROOT, "backend")
 ROOT_FILES = [
     'index.html', 'admin.html', 'dashboard.html', 'tools.html',
     'robots.txt', 'sitemap.xml', 'favicon.svg', 'favicon.ico',
-    'price_migration.sql',
+    'price_migration.sql', 'new_nav.html',
 ]
 
 ROOT_DIRS = [
