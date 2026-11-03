@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <link rel="canonical" href="https://reconcileai.in/templates/expense-tracker-template">
-    <meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta charset="UTF-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Business Expense Tracker Excel Template | Free Excel Template — ReconcileAI</title><meta name="description" content="Monthly business expense tracker with GST input credit tracking. Categories, payment modes, and ITC eligibility. Free download.">
 <meta property="og:title" content="Business Expense Tracker Excel Template — Free Download"><meta property="og:description" content="Monthly business expense tracker with GST input credit tracking. Categories, payment modes, and ITC eligibility. Free download.">
 
@@ -85,8 +85,8 @@
             </button>
             <div class="rai-m-sub">
                 <a href="/tools" class="rai-m-sub-link">🛠️ Free Tools</a>
-                <a href="/templates" class="rai-m-sub-link">📊 Templates</a>
-                <a href="/blog" class="rai-m-sub-link">📝 Blog</a>
+                <a href="/templates">📊 Templates</a>
+                <a href="/blog">📝 Blog</a>
             </div>
         </div>
 
@@ -558,6 +558,88 @@ window.addEventListener('resize', function() {
         document.body.style.overflow = '';
     }
 });
+
+// Auto-close mobile menu when any link is clicked
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.href && !link.href.includes('#')) {
+        var drawer = document.getElementById('raiMDrawer');
+        if (drawer && drawer.classList.contains('active')) {
+            raiToggleMenu();
+        }
+    }
+});
+
+// Close mobile menu when navigating
+function raiCloseOnNav() {
+    var drawer = document.getElementById('raiMDrawer');
+    if (drawer && drawer.classList.contains('active')) {
+        raiToggleMenu();
+    }
+}
+
+// Attach to all links in mobile drawer
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.closest('#raiMDrawer')) {
+        raiCloseOnNav();
+        // Let the link navigate normally
+    }
+});
+
+// ===== FIX: Mobile drawer navigation =====
+(function() {
+    // When ANY link inside mobile drawer is clicked
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+
+        var drawer = document.getElementById('raiMDrawer');
+        if (!drawer) return;
+
+        // If link is inside the mobile drawer
+        if (drawer.contains(link)) {
+            var href = link.getAttribute('href');
+
+            // Close the menu first
+            drawer.classList.remove('active');
+            var overlay = document.getElementById('raiMOverlay');
+            if (overlay) overlay.classList.remove('active');
+            var burger = document.getElementById('raiBurger');
+            if (burger) burger.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Then navigate (small delay for animation)
+            if (href && href !== '#' && !href.startsWith('javascript:')) {
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 100);
+            }
+        }
+    });
+
+    // Also handle the accordion sub-links
+    document.querySelectorAll('.rai-m-sub-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                // Close menu
+                var drawer = document.getElementById('raiMDrawer');
+                if (drawer) {
+                    drawer.classList.remove('active');
+                    var overlay = document.getElementById('raiMOverlay');
+                    if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                // Navigate
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 150);
+            }
+        });
+    });
+})();
 </script>
 
 <style>
@@ -594,6 +676,88 @@ window.addEventListener('resize', function() {
 function toggleDropdown(id){var m=document.getElementById(id),p=m.parentElement;document.querySelectorAll('.nav-dropdown').forEach(function(d){if(d!==p)d.classList.remove('active')});p.classList.toggle('active')}
 function toggleMobileNav(){document.getElementById('navLinks').classList.toggle('active')}
 document.addEventListener('click',function(e){if(!e.target.closest('.nav-dropdown')){document.querySelectorAll('.nav-dropdown').forEach(function(d){d.classList.remove('active')})}});
+
+// Auto-close mobile menu when any link is clicked
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.href && !link.href.includes('#')) {
+        var drawer = document.getElementById('raiMDrawer');
+        if (drawer && drawer.classList.contains('active')) {
+            raiToggleMenu();
+        }
+    }
+});
+
+// Close mobile menu when navigating
+function raiCloseOnNav() {
+    var drawer = document.getElementById('raiMDrawer');
+    if (drawer && drawer.classList.contains('active')) {
+        raiToggleMenu();
+    }
+}
+
+// Attach to all links in mobile drawer
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.closest('#raiMDrawer')) {
+        raiCloseOnNav();
+        // Let the link navigate normally
+    }
+});
+
+// ===== FIX: Mobile drawer navigation =====
+(function() {
+    // When ANY link inside mobile drawer is clicked
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+
+        var drawer = document.getElementById('raiMDrawer');
+        if (!drawer) return;
+
+        // If link is inside the mobile drawer
+        if (drawer.contains(link)) {
+            var href = link.getAttribute('href');
+
+            // Close the menu first
+            drawer.classList.remove('active');
+            var overlay = document.getElementById('raiMOverlay');
+            if (overlay) overlay.classList.remove('active');
+            var burger = document.getElementById('raiBurger');
+            if (burger) burger.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Then navigate (small delay for animation)
+            if (href && href !== '#' && !href.startsWith('javascript:')) {
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 100);
+            }
+        }
+    });
+
+    // Also handle the accordion sub-links
+    document.querySelectorAll('.rai-m-sub-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                // Close menu
+                var drawer = document.getElementById('raiMDrawer');
+                if (drawer) {
+                    drawer.classList.remove('active');
+                    var overlay = document.getElementById('raiMOverlay');
+                    if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                // Navigate
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 150);
+            }
+        });
+    });
+})();
 </script>
 
 
@@ -629,7 +793,89 @@ document.addEventListener('click',function(e){if(!e.target.closest('.nav-dropdow
 </div>
 </div>
 <footer><p>Free Templates by <a href="/">ReconcileAI</a> — Bank, GST & UPI Reconciliation Platform</p><p style="margin-top:6px"><a href="/">Home</a> · <a href="/blog">Blog</a> · <a href="/tools">Free Tools</a> · <a href="/templates">Templates</a></p></footer>
-<script>function getTheme(){return localStorage.getItem("free_tools_theme")||"dark"}function applyTheme(t){document.documentElement.setAttribute("data-theme",t);localStorage.setItem("free_tools_theme",t);document.querySelector(".theme-toggle").textContent=t==="light"?"🌙":"☀️"}function toggleTheme(){applyTheme(getTheme()==="light"?"dark":"light")}applyTheme(getTheme());</script>
+<script>function getTheme(){return localStorage.getItem("free_tools_theme")||"dark"}function applyTheme(t){document.documentElement.setAttribute("data-theme",t);localStorage.setItem("free_tools_theme",t);document.querySelector(".theme-toggle").textContent=t==="light"?"🌙":"☀️"}function toggleTheme(){applyTheme(getTheme()==="light"?"dark":"light")}applyTheme(getTheme());
+// Auto-close mobile menu when any link is clicked
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.href && !link.href.includes('#')) {
+        var drawer = document.getElementById('raiMDrawer');
+        if (drawer && drawer.classList.contains('active')) {
+            raiToggleMenu();
+        }
+    }
+});
+
+// Close mobile menu when navigating
+function raiCloseOnNav() {
+    var drawer = document.getElementById('raiMDrawer');
+    if (drawer && drawer.classList.contains('active')) {
+        raiToggleMenu();
+    }
+}
+
+// Attach to all links in mobile drawer
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.closest('#raiMDrawer')) {
+        raiCloseOnNav();
+        // Let the link navigate normally
+    }
+});
+
+// ===== FIX: Mobile drawer navigation =====
+(function() {
+    // When ANY link inside mobile drawer is clicked
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+
+        var drawer = document.getElementById('raiMDrawer');
+        if (!drawer) return;
+
+        // If link is inside the mobile drawer
+        if (drawer.contains(link)) {
+            var href = link.getAttribute('href');
+
+            // Close the menu first
+            drawer.classList.remove('active');
+            var overlay = document.getElementById('raiMOverlay');
+            if (overlay) overlay.classList.remove('active');
+            var burger = document.getElementById('raiBurger');
+            if (burger) burger.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Then navigate (small delay for animation)
+            if (href && href !== '#' && !href.startsWith('javascript:')) {
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 100);
+            }
+        }
+    });
+
+    // Also handle the accordion sub-links
+    document.querySelectorAll('.rai-m-sub-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                // Close menu
+                var drawer = document.getElementById('raiMDrawer');
+                if (drawer) {
+                    drawer.classList.remove('active');
+                    var overlay = document.getElementById('raiMOverlay');
+                    if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                // Navigate
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 150);
+            }
+        });
+    });
+})();
+</script>
 
 <div class="auth-overlay" id="authOverlay" onclick="closeAuthModal(event)">
     <div class="auth-modal" onclick="event.stopPropagation()">
@@ -690,6 +936,88 @@ function showRegister(){var l=document.getElementById('loginForm'),r=document.ge
 async function handleLogin(){var e=document.getElementById('loginEmail').value.trim(),p=document.getElementById('loginPassword').value,er=document.getElementById('loginError'),b=document.querySelector('#loginForm .auth-btn');if(!e||!p){er.textContent='Please fill all fields.';return}b.disabled=true;b.textContent='Logging in...';try{var r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:e,password:p})});var d=await r.json();if(r.ok){er.textContent='Login successful! Redirecting...';er.className='auth-error success';if(d.token)localStorage.setItem('rai_token',d.token);if(d.user)localStorage.setItem('rai_user',JSON.stringify(d.user));setTimeout(function(){window.location.href='/dashboard'},800)}else{er.textContent=d.detail||d.error||'Login failed.';er.className='auth-error'}}catch(e){er.textContent='Network error.';er.className='auth-error'}b.disabled=false;b.textContent='Login →'}
 async function handleRegister(){var n=document.getElementById('regName').value.trim(),e=document.getElementById('regEmail').value.trim(),p=document.getElementById('regPassword').value,er=document.getElementById('registerError'),b=document.querySelector('#registerForm .auth-btn');if(!n||!e||!p){er.textContent='Please fill all fields.';return}if(p.length<6){er.textContent='Password min 6 characters.';return}b.disabled=true;b.textContent='Creating...';try{var r=await fetch('/api/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,email:e,password:p})});var d=await r.json();if(r.ok){er.textContent='Account created! Redirecting...';er.className='auth-error success';if(d.token)localStorage.setItem('rai_token',d.token);if(d.user)localStorage.setItem('rai_user',JSON.stringify(d.user));setTimeout(function(){window.location.href='/dashboard'},800)}else{er.textContent=d.detail||d.error||'Registration failed.';er.className='auth-error'}}catch(e){er.textContent='Network error.';er.className='auth-error'}b.disabled=false;b.textContent='Create Account →'}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAuthModal()});
+
+// Auto-close mobile menu when any link is clicked
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.href && !link.href.includes('#')) {
+        var drawer = document.getElementById('raiMDrawer');
+        if (drawer && drawer.classList.contains('active')) {
+            raiToggleMenu();
+        }
+    }
+});
+
+// Close mobile menu when navigating
+function raiCloseOnNav() {
+    var drawer = document.getElementById('raiMDrawer');
+    if (drawer && drawer.classList.contains('active')) {
+        raiToggleMenu();
+    }
+}
+
+// Attach to all links in mobile drawer
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (link && link.closest('#raiMDrawer')) {
+        raiCloseOnNav();
+        // Let the link navigate normally
+    }
+});
+
+// ===== FIX: Mobile drawer navigation =====
+(function() {
+    // When ANY link inside mobile drawer is clicked
+    document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+
+        var drawer = document.getElementById('raiMDrawer');
+        if (!drawer) return;
+
+        // If link is inside the mobile drawer
+        if (drawer.contains(link)) {
+            var href = link.getAttribute('href');
+
+            // Close the menu first
+            drawer.classList.remove('active');
+            var overlay = document.getElementById('raiMOverlay');
+            if (overlay) overlay.classList.remove('active');
+            var burger = document.getElementById('raiBurger');
+            if (burger) burger.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // Then navigate (small delay for animation)
+            if (href && href !== '#' && !href.startsWith('javascript:')) {
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 100);
+            }
+        }
+    });
+
+    // Also handle the accordion sub-links
+    document.querySelectorAll('.rai-m-sub-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href && href !== '#') {
+                e.preventDefault();
+                // Close menu
+                var drawer = document.getElementById('raiMDrawer');
+                if (drawer) {
+                    drawer.classList.remove('active');
+                    var overlay = document.getElementById('raiMOverlay');
+                    if (overlay) overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                // Navigate
+                setTimeout(function() {
+                    window.location.href = href;
+                }, 150);
+            }
+        });
+    });
+})();
 </script>
 
 <style>

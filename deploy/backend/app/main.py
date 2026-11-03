@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import logging
@@ -53,6 +54,35 @@ _BLOCKED_PATHS = [
 _RATE_LIMIT = {}  # ip -> [timestamps]
 _RATE_LIMIT_WINDOW = 60  # seconds
 _RATE_LIMIT_MAX = 120  # requests per window per IP
+
+
+import os as _os_serve
+
+def _find_html_root():
+    """Find where HTML files are located."""
+    _candidates = [
+        _os_serve.path.join(_os_serve.path.dirname(_os_serve.path.abspath(__file__)), "static"),
+        _os_serve.path.dirname(_os_serve.path.abspath(__file__)),
+        _os_serve.path.dirname(_os_serve.path.dirname(_os_serve.path.abspath(__file__))),
+        _os_serve.path.join(_os_serve.path.dirname(_os_serve.path.dirname(_os_serve.path.abspath(__file__))), "deploy"),
+        "/app",
+    ]
+    for _c in _candidates:
+        if _os_serve.path.exists(_os_serve.path.join(_c, "index.html")):
+            return _c
+    return _os_serve.path.dirname(_os_serve.path.dirname(_os_serve.path.abspath(__file__)))
+
+
+# ===== APP_ROOT: Where HTML files live =====
+
+# ===== APP_ROOT: Where HTML files are located =====
+APP_ROOT = r"/root/ml-projects/stock-prediction"
+# Auto-detect for Docker deployment:
+for _p in ["/app", r"/root/ml-projects/stock-prediction", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"), os.path.dirname(os.path.dirname(os.path.abspath(__file__))), os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))]:
+    if os.path.exists(os.path.join(_p, "index.html")) and os.path.exists(os.path.join(_p, "tools.html")):
+        APP_ROOT = _p
+        break
+
 
 @app.middleware("http")
 async def security_middleware(request, call_next):
@@ -170,41 +200,31 @@ async def serve_dashboard():
 
 
 # ==================== FREE TOOLS ====================
-
 def _serve_page(*parts):
-    """Serve an HTML page from the correct directory."""
-    import os as _os
+    """Serve HTML page from APP_ROOT."""
+    import os as _osp
+    from fastapi.responses import FileResponse, JSONResponse
 
-    # Try multiple base paths (handles Docker + local)
-    _bases = [
-        _os.path.join(APP_ROOT, *parts),      # /app/blog/slug.html (Docker)
-        _os.path.join(BASE_DIR, *parts),       # backend/blog/slug.html (local)
-        _os.path.join(APP_ROOT, "..", *parts), # One more level up
-    ]
+    # Build the file path
+    file_path = _osp.path.join(APP_ROOT, *parts)
 
-    for fpath in _bases:
-        fpath = _os.path.normpath(fpath)
-        if _os.path.exists(fpath) and _os.path.isfile(fpath):
-            return FileResponse(fpath, media_type="text/html")
+    # If directory, look for index.html inside
+    if _osp.path.isdir(file_path):
+        file_path = _osp.path.join(file_path, "index.html")
 
-    # Try with .html extension
-    for fpath in _bases:
-        fpath = _os.path.normpath(fpath)
-        if not fpath.endswith('.html'):
-            fpath_with_ext = fpath + '.html'
-            if _os.path.exists(fpath_with_ext):
-                return FileResponse(fpath_with_ext, media_type="text/html")
+    # If no .html extension and file doesn't exist, try adding .html
+    if not file_path.endswith(".html") and not _osp.path.isfile(file_path):
+        file_path += ".html"
 
-    # Try as directory with index.html
-    for fpath in _bases:
-        fpath = _os.path.normpath(fpath)
-        index_path = _os.path.join(fpath, 'index.html')
-        if _os.path.exists(index_path):
-            return FileResponse(index_path, media_type="text/html")
+    # Serve the file
+    if _osp.path.isfile(file_path):
+        return FileResponse(file_path, media_type="text/html")
 
-    return JSONResponse(status_code=404, content={"error": f"Page not found: {parts}"})
-
-
+    # File not found — return 404 (NOT index.html!)
+    return JSONResponse(
+        status_code=404,
+        content={"error": "Page not found: " + "/".join(parts)}
+    )
 
 @app.get("/favicon.ico")
 async def favicon():
@@ -296,7 +316,6 @@ async def interest_calculator():
 @app.get("/tools/currency-converter")
 async def currency_converter():
     return _serve_page("free-tools", "currency-converter", "index.html")
-
 
 
 # ===== Global Exception Handler: Never Crash =====
@@ -510,27 +529,36 @@ async def list_types():
         ]
     }
 
-# ===== SEO: Error handlers (prevent 5xx for Google) =====
-from starlette.responses import FileResponse as _FR
-from starlette.exceptions import HTTPException as _HTTPException
+# ===== SEO: Safe error handler =====
+from starlette.exceptions import HTTPException as _StarletteHTTPException
 
-@app.exception_handler(_HTTPException)
-async def http_exc_handler(request: Request, exc: _HTTPException):
-    if exc.status_code == 404:
-        import os as _os
-        _idx = _os.path.join(APP_ROOT, "index.html")
-        if _os.path.exists(_idx):
-            return _FR(_idx, media_type="text/html", status_code=200)
+@app.exception_handler(_StarletteHTTPException)
+async def _http_error_handler(request: Request, exc: _StarletteHTTPException):
+    """Handle 404s — only serve index.html for truly unknown paths."""
+    _path = request.url.path
+    # Never intercept these known routes:
+    _skip = ['/api/', '/data/', '/static', '/favicon', '/sitemap', '/robots',
+             '/tools', '/blog', '/templates', '/extensions', '/free-tools',
+             '/dashboard', '/admin']
+    for _s in _skip:
+        if _path.startswith(_s):
+            return JSONResponse(status_code=exc.status_code, content={"detail": exc.detail})
+
+    # For truly unknown paths, serve index.html (SPA behavior)
+    try:
+        _idx = os.path.join(APP_ROOT, "index.html")
+        if os.path.exists(_idx):
+            return FileResponse(_idx, media_type="text/html", status_code=200)
+    except:
+        pass
     return JSONResponse(status_code=exc.status_code, content={"detail": exc.detail})
 
 @app.exception_handler(Exception)
-async def global_exc_handler(request: Request, exc: Exception):
-    import os as _os
-    _idx = _os.path.join(APP_ROOT, "index.html")
-    if _os.path.exists(_idx):
-        return _FR(_idx, media_type="text/html", status_code=200)
-    return JSONResponse(status_code=200, content={"status": "ok"})
-
+async def _global_error_handler(request: Request, exc: Exception):
+    """Log and return 500."""
+    import logging
+    logging.error(f"Error on {request.url.path}: {exc}")
+    return JSONResponse(status_code=500, content={"error": str(exc)})
 
 
 # ===== SEO: Error handlers (prevent 5xx for Google) =====
@@ -557,19 +585,3 @@ async def _global_error_handler(request: Request, exc: Exception):
     if _os.path.exists(_idx):
         return FileResponse(_idx, media_type="text/html", status_code=200)
     return JSONResponse(status_code=200, content={"status": "ok"})
-
-# ===== SEO: Catch-all route (prevents 404 for Google) =====
-@app.get("/{full_path:path}")
-async def catch_all(full_path: str):
-    import os as _os
-    # Try direct file
-    for candidate in [full_path, full_path + ".html", full_path + "/index.html"]:
-        fp = _os.path.join(APP_ROOT, candidate.lstrip("/"))
-        if _os.path.isfile(fp):
-            return FileResponse(fp, media_type="text/html")
-    # Serve index.html for any unknown path
-    _idx = _os.path.join(APP_ROOT, "index.html")
-    if _os.path.exists(_idx):
-        return FileResponse(_idx, media_type="text/html", status_code=200)
-    return JSONResponse(status_code=404, content={"error": "Not found"})
-
