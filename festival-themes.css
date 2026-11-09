@@ -1,0 +1,238 @@
+/* =============================================
+   ReconcileAI - Festival Auto-Theme Styles v1.0
+   ============================================= */
+
+/* ===== BANNER ===== */
+.festival-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 55px 13px 24px;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  z-index: 9999;
+  animation: fest-banner-in 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  cursor: default;
+}
+.festival-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    var(--fest-primary, #d4a017),
+    var(--fest-secondary, #f97316),
+    var(--fest-accent, #fbbf24));
+  z-index: -1;
+}
+.festival-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    transparent, rgba(255,255,255,0.12), transparent);
+  animation: fest-shimmer 3s ease-in-out infinite;
+  z-index: -1;
+}
+.festival-banner-text {
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.festival-banner-close {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 2;
+}
+.festival-banner-close:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-50%) scale(1.1);
+}
+
+@keyframes fest-banner-in {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fest-banner-out {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100%); opacity: 0; }
+}
+@keyframes fest-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ===== PARTICLES CONTAINER ===== */
+.festival-particles {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  overflow: hidden;
+}
+.festival-particles .fp {
+  position: absolute;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+/* ===== SPARKLE (Diwali, New Year, etc.) ===== */
+.fp-sparkle .fp {
+  width: var(--fp-size, 4px);
+  height: var(--fp-size, 4px);
+  background: var(--fest-accent, #fbbf24);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--fest-accent, #fbbf24),
+              0 0 12px var(--fest-primary, #d4a017);
+  animation: fp-sparkle var(--fp-dur, 3s) var(--fp-delay, 0s) ease-in-out infinite;
+}
+@keyframes fp-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  25% { opacity: 0.6; transform: scale(0.5) rotate(90deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+  75% { opacity: 0.6; transform: scale(0.5) rotate(270deg); }
+}
+
+/* ===== SNOW (Christmas) ===== */
+.fp-snow .fp {
+  width: var(--fp-size, 6px);
+  height: var(--fp-size, 6px);
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255,255,255,0.5);
+  animation: fp-snow var(--fp-dur, 6s) var(--fp-delay, 0s) linear infinite;
+}
+@keyframes fp-snow {
+  0% { opacity: 0; transform: translateY(-10px) translateX(0) rotate(0deg); }
+  10% { opacity: 0.9; }
+  50% { transform: translateY(50vh) translateX(30px) rotate(180deg); }
+  90% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(105vh) translateX(-20px) rotate(360deg); }
+}
+
+/* ===== CONFETTI (Independence Day, New Year) ===== */
+.fp-confetti .fp {
+  width: var(--fp-size, 8px);
+  height: calc(var(--fp-size, 8px) * 0.6);
+  background: var(--fp-color, var(--fest-primary, #FF9933));
+  border-radius: 2px;
+  animation: fp-confetti var(--fp-dur, 5s) var(--fp-delay, 0s) linear infinite;
+}
+@keyframes fp-confetti {
+  0% { opacity: 0; transform: translateY(-10px) rotate(0deg) scale(0.5); }
+  10% { opacity: 1; transform: translateY(0) rotate(45deg) scale(1); }
+  90% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(105vh) rotate(720deg) scale(0.8); }
+}
+
+/* ===== FLOAT (Holi, Janmashtami, Makar Sankranti) ===== */
+.fp-float .fp {
+  width: var(--fp-size, 10px);
+  height: var(--fp-size, 10px);
+  background: var(--fp-color, var(--fest-primary, #ec4899));
+  border-radius: 50%;
+  opacity: 0;
+  animation: fp-float var(--fp-dur, 6s) var(--fp-delay, 0s) ease-in-out infinite;
+}
+@keyframes fp-float {
+  0% { opacity: 0; transform: translateY(100vh) scale(0.3); }
+  15% { opacity: 0.7; }
+  50% { opacity: 0.5; transform: translateY(50vh) translateX(20px) scale(0.8); }
+  85% { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-50px) translateX(-10px) scale(1); }
+}
+
+/* ===== STAR (Eid, Guru Nanak, etc.) ===== */
+.fp-star .fp {
+  width: 0; height: 0;
+  border-left: calc(var(--fp-size, 5px)) solid transparent;
+  border-right: calc(var(--fp-size, 5px)) solid transparent;
+  border-bottom: calc(var(--fp-size, 5px) * 1.2) solid var(--fest-accent, #d4a017);
+  filter: drop-shadow(0 0 6px var(--fest-accent, #d4a017));
+  animation: fp-star var(--fp-dur, 4s) var(--fp-delay, 0s) ease-in-out infinite;
+}
+@keyframes fp-star {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  30% { opacity: 0.8; transform: scale(1.1) rotate(72deg); }
+  60% { opacity: 1; transform: scale(1) rotate(144deg); }
+}
+
+/* ===== PETAL (Onam, Ganesh Chaturthi, etc.) ===== */
+.fp-petal .fp {
+  width: var(--fp-size, 8px);
+  height: calc(var(--fp-size, 8px) * 1.3);
+  background: var(--fp-color, var(--fest-accent, #f97316));
+  border-radius: 50% 0 50% 50%;
+  animation: fp-petal var(--fp-dur, 7s) var(--fp-delay, 0s) linear infinite;
+}
+@keyframes fp-petal {
+  0% { opacity: 0; transform: translateY(-10px) translateX(0) rotate(0deg); }
+  10% { opacity: 0.8; }
+  30% { transform: translateY(30vh) translateX(40px) rotate(120deg); }
+  60% { transform: translateY(60vh) translateX(-30px) rotate(240deg); }
+  90% { opacity: 0.5; }
+  100% { opacity: 0; transform: translateY(105vh) translateX(10px) rotate(360deg); }
+}
+
+/* ===== GLOW (Navratri, Durga Puja, Good Friday) ===== */
+.fp-glow .fp {
+  width: var(--fp-size, 12px);
+  height: var(--fp-size, 12px);
+  background: var(--fest-primary, #dc2626);
+  border-radius: 50%;
+  animation: fp-glow var(--fp-dur, 4s) var(--fp-delay, 0s) ease-in-out infinite;
+}
+@keyframes fp-glow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+    box-shadow: 0 0 10px var(--fest-primary, #dc2626);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.6);
+    box-shadow: 0 0 40px var(--fest-primary, #dc2626),
+                0 0 80px var(--fest-secondary, #f97316);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .festival-banner {
+    font-size: 13px;
+    padding: 11px 45px 11px 16px;
+  }
+  .festival-banner-close {
+    width: 26px; height: 26px;
+    font-size: 12px;
+  }
+}
+
+/* ===== REDUCE MOTION (accessibility) ===== */
+@media (prefers-reduced-motion: reduce) {
+  .festival-particles { display: none !important; }
+  .festival-banner { animation: none; }
+}

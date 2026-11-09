@@ -178,6 +178,20 @@ async def startup():
         print("App started despite errors. Some features may be limited.")
         print("If DB is down: Power ON at Aiven dashboard!")
 
+
+# ===== Festival Auto-Theme System =====
+@app.get("/festival-themes.css")
+def _festival_css():
+    return FileResponse(os.path.join(APP_ROOT, "festival-themes.css"), media_type="text/css")
+
+@app.get("/festival-config.js")
+def _festival_config():
+    return FileResponse(os.path.join(APP_ROOT, "festival-config.js"), media_type="application/javascript")
+
+@app.get("/festival-engine.js")
+def _festival_engine():
+    return FileResponse(os.path.join(APP_ROOT, "festival-engine.js"), media_type="application/javascript")
+
 @app.get("/")
 async def root():
     return FileResponse(str(Path(__file__).resolve().parent.parent.parent / "index.html"))
