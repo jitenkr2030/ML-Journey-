@@ -1,4 +1,24 @@
+# ReconcileAI robots.txt
+# Updated: 2026-11-09
+# Fixing all 6 "Blocked by robots.txt" issues!
+
 User-agent: *
 Allow: /
 
+# Google gets full access!
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Block sensitive paths from ALL bots
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+
+# Sitemap location
 Sitemap: https://reconcileai.in/sitemap.xml
