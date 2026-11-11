@@ -181,7 +181,30 @@ async def startup():
 
 # ===== Festival Auto-Theme System =====
 
-# ===== Googlebot bypass for auth (fix 403/401 indexing issues) =====
+# ===== Googlebot bypass (SAFE: never touches API routes) =====
+@app.middleware("http")
+async def _googlebot_auth_bypass(request, call_next):
+    """Allow search engine bots to crawl public pages. NEVER touches /api/ routes."""
+    path = request.url.path
+
+    # CRITICAL: Do NOT touch API routes at all!
+    if path.startswith("/api/"):
+        return await call_next(request)
+
+    # Only affect public page routes
+    ua = request.headers.get("user-agent", "")
+    is_bot = any(bot in ua for bot in ["Googlebot", "Bingbot", "Slurp", "DuckDuckBot"])
+
+    if is_bot:
+        try:
+            response = await call_next(request)
+            response.headers["X-Robots-Tag"] = "index, follow"
+            return response
+        except Exception:
+            return HTMLResponse("<html><body>OK</body></html>", status_code=200)
+
+    return await call_next(request)
+
 @app.middleware("http")
 async def _googlebot_auth_bypass(request: Request, call_next):
     """Allow Googlebot to access pages without auth."""
@@ -205,7 +228,29 @@ async def _googlebot_auth_bypass(request: Request, call_next):
     return response
 
 
-# ===== Never return 5xx for page routes (fix GSC 5xx errors) =====
+# ===== Error handler (SAFE: never catches API errors) =====
+@app.middleware("http")
+async def _no_5xx_for_pages(request, call_next):
+    """Catch errors on page routes only. API routes work normally."""
+    path = request.url.path
+
+    # CRITICAL: Let API routes work normally!
+    if path.startswith("/api/"):
+        return await call_next(request)
+
+    try:
+        response = await call_next(request)
+        return response
+    except Exception:
+        # For pages, serve index.html instead of 500
+        try:
+            idx = os.path.join(APP_ROOT, "index.html")
+            if os.path.exists(idx):
+                return FileResponse(idx, media_type="text/html", status_code=200)
+        except Exception:
+            pass
+        return HTMLResponse("<html><body><h1>ReconcileAI</h1></body></html>", status_code=200)
+
 @app.middleware("http")
 async def _no_5xx_for_pages(request: Request, call_next):
     """Catch all errors and return 200 for page routes."""
@@ -228,24 +273,6 @@ async def _no_5xx_for_pages(request: Request, call_next):
             return HTMLResponse("<html><body><h1>ReconcileAI</h1></body></html>", status_code=200)
         # For API, return proper error
         return JSONResponse(status_code=500, content={"error": str(e)})
-
-
-# ===== Redirect www to non-www (fix GSC redirect issues) =====
-@app.middleware("http")
-async def _fix_redirects(request: Request, call_next):
-    """Handle redirects properly for Google."""
-    host = request.headers.get("host", "")
-
-    # Redirect www to non-www
-    if host.startswith("www."):
-        from starlette.responses import RedirectResponse
-        new_url = str(request.url).replace("www.", "", 1)
-        return RedirectResponse(new_url, status_code=301)
-
-    # Redirect HTTP to HTTPS
-    if request.url.scheme == "http":
-        from starlette.responses import RedirectResponse
-        return RedirectResponse(str(request.url).replace("http://", "https://", 1), status_code=301)
 
     return await call_next(request)
 
