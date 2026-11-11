@@ -250,6 +250,15 @@ async def _fix_redirects(request: Request, call_next):
     return await call_next(request)
 
 
+
+@app.get("/compare")
+async def compare_page():
+    return _serve_page("compare.html")
+
+@app.get("/best-reconciliation-software-india")
+async def best_recon_page():
+    return _serve_page("best-reconciliation-software-india.html")
+
 @app.get("/faq")
 async def faq_page():
     return _serve_page("faq.html")
