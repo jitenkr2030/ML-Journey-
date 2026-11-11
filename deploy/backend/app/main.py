@@ -249,6 +249,11 @@ async def _fix_redirects(request: Request, call_next):
 
     return await call_next(request)
 
+
+@app.get("/faq")
+async def faq_page():
+    return _serve_page("faq.html")
+
 @app.get("/festival-themes.css")
 def _festival_css():
     return FileResponse(os.path.join(APP_ROOT, "festival-themes.css"), media_type="text/css")
