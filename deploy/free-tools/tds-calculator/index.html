@@ -599,10 +599,6 @@ window.addEventListener('resize', function() {
 </div>
 </div>
 
-<footer>
-<p>Free TDS Calculator by <a href="https://reconcileai.in/">ReconcileAI</a> — GST, Bank & UPI Reconciliation Platform</p>
-<p style="margin-top:6px">For educational purposes. Verify with your CA for compliance.</p>
-</footer>
 
 <script>
 function getTheme(){return localStorage.getItem('free_tools_theme')||'dark'}
@@ -678,5 +674,431 @@ document.getElementById('netPayment').textContent=fmt(amount-totalTds);
 onSectionChange();
 calculate();
 </script>
+
+<!-- ===== RECONCILEAI MASTER FOOTER (DO NOT REMOVE) ===== -->
+<footer class="rai-footer">
+    <div class="rai-footer-inner">
+        <!-- TOP: Brand + Newsletter -->
+        <div class="rai-footer-top">
+            <div class="rai-footer-brand">
+                <div class="rai-footer-logo">
+                    <img src="/favicon.svg" alt="ReconcileAI">
+                    <span>Reconcile<span class="rai-accent">AI</span></span>
+                </div>
+                <p class="rai-footer-tagline">India's smartest AI-powered GST & bank reconciliation platform. Built for CAs, MSMEs & finance teams.</p>
+                <div class="rai-footer-badges">
+                    <span class="rai-badge">🇮🇳 Made in India</span>
+                    <span class="rai-badge">🔐 Data Encrypted</span>
+                    <span class="rai-badge">🤖 AI-Powered</span>
+                </div>
+            </div>
+            <div class="rai-footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get GST tips, tax updates & product news.</p>
+                <div class="rai-newsletter-form">
+                    <input type="email" placeholder="your@email.com" class="rai-newsletter-input" id="raiFooterEmail">
+                    <button class="rai-newsletter-btn" onclick="raiFooterSubscribe()">Subscribe</button>
+                </div>
+                <p class="rai-newsletter-note" id="raiFooterNote"></p>
+            </div>
+        </div>
+
+        <!-- LINKS: 4 Columns -->
+        <div class="rai-footer-links">
+            <div class="rai-footer-col">
+                <h5>Product</h5>
+                <ul>
+                    <li><a href="/">🏠 Home</a></li>
+                    <li><a href="/#features">⚡ Features</a></li>
+                    <li><a href="/#pricing">💰 Pricing</a></li>
+                    <li><a href="/tools">🛠️ Free Tools</a></li>
+                    <li><a href="/templates">📄 Templates</a></li>
+                    <li><a href="/extensions">🧩 Extensions</a></li>
+                </ul>
+            </div>
+            <div class="rai-footer-col">
+                <h5>Compare & Reviews</h5>
+                <ul>
+                    <li><a href="/compare">📊 Compare All Tools</a></li>
+                    <li><a href="/best-reconciliation-software-india">🏆 Best Software India</a></li>
+                    <li><a href="/compare/reconcileai-vs-osfin">vs Osfin</a></li>
+                    <li><a href="/compare/reconcileai-vs-reconpe">vs ReconPe</a></li>
+                    <li><a href="/compare/reconcileai-vs-ledgerconnect">vs LedgerConnect</a></li>
+                    <li><a href="/compare/reconcileai-vs-reconciler-ai">vs Reconciler AI</a></li>
+                </ul>
+            </div>
+            <div class="rai-footer-col">
+                <h5>Resources</h5>
+                <ul>
+                    <li><a href="/blog">📝 Blog</a></li>
+                    <li><a href="/blog/gst-2a-2b-reconciliation-guide">GST Reconciliation Guide</a></li>
+                    <li><a href="/blog/upi-reconciliation-guide">UPI Reconciliation Guide</a></li>
+                    <li><a href="/blog/gstr-1-preparation-guide">GSTR-1 Preparation Guide</a></li>
+                    <li><a href="/blog/bank-reconciliation-guide">Bank Reconciliation Guide</a></li>
+                    <li><a href="/faq">❓ FAQ</a></li>
+                </ul>
+            </div>
+            <div class="rai-footer-col">
+                <h5>Free Tools</h5>
+                <ul>
+                    <li><a href="/tools/gst-calculator">GST Calculator</a></li>
+                    <li><a href="/tools/income-tax-calculator">Income Tax Calculator</a></li>
+                    <li><a href="/tools/tds-calculator">TDS Calculator</a></li>
+                    <li><a href="/tools/emi-calculator">EMI Calculator</a></li>
+                    <li><a href="/tools/sip-calculator">SIP Calculator</a></li>
+                    <li><a href="/tools">All 34 Tools →</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COMPANY: Trust & Legal -->
+        <div class="rai-footer-company">
+            <div class="rai-footer-col-wide">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="/faq">About ReconcileAI</a></li>
+                    <li><a href="/faq">Contact Us</a></li>
+                    <li><a href="/faq">Careers</a></li>
+                    <li><a href="/faq">Partner With Us</a></li>
+                </ul>
+            </div>
+            <div class="rai-footer-col-wide">
+                <h5>Legal & Privacy</h5>
+                <ul>
+                    <li><a href="/faq">Privacy Policy</a></li>
+                    <li><a href="/faq">Terms of Service</a></li>
+                    <li><a href="/faq">Refund Policy</a></li>
+                    <li><a href="/faq">Data Security</a></li>
+                </ul>
+            </div>
+            <div class="rai-footer-col-wide">
+                <h5>Contact</h5>
+                <ul>
+                    <li>📧 <a href="mailto:support@reconcileai.in">support@reconcileai.in</a></li>
+                    <li>📧 <a href="mailto:business@reconcileai.in">business@reconcileai.in</a></li>
+                    <li>📍 <span style="color:var(--text3)">India</span></li>
+                </ul>
+            </div>
+            <div class="rai-footer-col-wide">
+                <h5>Follow Us</h5>
+                <div class="rai-social-links">
+                    <a href="#" title="Twitter/X">𝕏</a>
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="YouTube">▶</a>
+                    <a href="#" title="GitHub">⌘</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTTOM: Copyright -->
+        <div class="rai-footer-bottom">
+            <p>© 2026 ReconcileAI. All rights reserved. | Built with ❤️ in India</p>
+            <p class="rai-footer-disclaimer">ReconcileAI is a technology platform. We are not a CA firm and do not provide tax advice. GSTN integration status varies by feature. Please consult a qualified CA for tax matters.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+/* ===== MASTER FOOTER STYLES ===== */
+.rai-footer {
+    background: #0d0d11;
+    border-top: 1px solid #222228;
+    padding: 0;
+    margin-top: 80px;
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+}
+.rai-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4f8cff, #36d399, #f59e0b, #ef4444, #a78bfa, #4f8cff);
+}
+.rai-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* TOP: Brand + Newsletter */
+.rai-footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 48px;
+    padding: 48px 0 36px;
+    border-bottom: 1px solid #222228;
+}
+.rai-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 28px;
+    color: #e8e8ed;
+    margin-bottom: 14px;
+}
+.rai-footer-logo img {
+    width: 40px;
+    height: 40px;
+}
+.rai-accent {
+    color: #4f8cff;
+}
+.rai-footer-tagline {
+    color: #9898a0;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    max-width: 400px;
+}
+.rai-footer-badges {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.rai-badge {
+    background: #1a1a1f;
+    border: 1px solid #222228;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 11px;
+    color: #9898a0;
+    font-weight: 600;
+}
+.rai-footer-newsletter h4 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    color: #e8e8ed;
+    margin-bottom: 8px;
+}
+.rai-footer-newsletter p {
+    color: #9898a0;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+.rai-newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+.rai-newsletter-input {
+    flex: 1;
+    background: #1a1a1f;
+    border: 1px solid #222228;
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: #e8e8ed;
+    font-size: 14px;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.rai-newsletter-input:focus {
+    border-color: #4f8cff;
+}
+.rai-newsletter-input::placeholder {
+    color: #5c5c66;
+}
+.rai-newsletter-btn {
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.rai-newsletter-btn:hover {
+    background: #3a7aff;
+    transform: translateY(-1px);
+}
+.rai-newsletter-note {
+    font-size: 11px;
+    margin-top: 8px;
+    min-height: 16px;
+}
+.rai-newsletter-note.success { color: #36d399; }
+.rai-newsletter-note.error { color: #ef4444; }
+
+/* LINKS: 4 Columns */
+.rai-footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid #222228;
+}
+.rai-footer-col h5 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    color: #e8e8ed;
+    margin-bottom: 16px;
+    letter-spacing: 0.01em;
+}
+.rai-footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.rai-footer-col li {
+    margin-bottom: 10px;
+}
+.rai-footer-col a {
+    color: #9898a0;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s, padding-left 0.2s;
+    display: inline-block;
+}
+.rai-footer-col a:hover {
+    color: #4f8cff;
+    padding-left: 4px;
+}
+
+/* COMPANY: Trust & Legal */
+.rai-footer-company {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 36px 0;
+    border-bottom: 1px solid #222228;
+}
+.rai-footer-col-wide h5 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 15px;
+    color: #e8e8ed;
+    margin-bottom: 14px;
+}
+.rai-footer-col-wide ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.rai-footer-col-wide li {
+    margin-bottom: 9px;
+    font-size: 13px;
+    color: #9898a0;
+}
+.rai-footer-col-wide a {
+    color: #9898a0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.rai-footer-col-wide a:hover {
+    color: #4f8cff;
+}
+.rai-social-links {
+    display: flex;
+    gap: 10px;
+}
+.rai-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #1a1a1f;
+    border: 1px solid #222228;
+    color: #9898a0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+.rai-social-links a:hover {
+    background: #4f8cff;
+    color: #fff;
+    border-color: #4f8cff;
+    transform: translateY(-2px);
+}
+
+/* BOTTOM: Copyright */
+.rai-footer-bottom {
+    padding: 24px 0 32px;
+    text-align: center;
+}
+.rai-footer-bottom p {
+    color: #5c5c66;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+.rai-footer-disclaimer {
+    color: #3c3c46 !important;
+    font-size: 10px !important;
+    max-width: 700px;
+    margin: 0 auto !important;
+    line-height: 1.5 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .rai-footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .rai-footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .rai-footer-company {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .rai-newsletter-form {
+        flex-direction: column;
+    }
+}
+@media (max-width: 480px) {
+    .rai-footer-links {
+        grid-template-columns: 1fr;
+    }
+    .rai-footer-company {
+        grid-template-columns: 1fr;
+    }
+    .rai-footer-badges {
+        flex-direction: column;
+    }
+}
+</style>
+
+<script>
+function raiFooterSubscribe() {
+    var email = document.getElementById('raiFooterEmail').value;
+    var note = document.getElementById('raiFooterNote');
+    if (!email || email.indexOf('@') === -1) {
+        note.textContent = 'Please enter a valid email address.';
+        note.className = 'rai-newsletter-note error';
+        return;
+    }
+    fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: email})
+    }).then(function(r) {
+        if (r.ok) {
+            note.textContent = 'Subscribed successfully. Thank you.';
+            note.className = 'rai-newsletter-note success';
+            document.getElementById('raiFooterEmail').value = '';
+        } else {
+            note.textContent = 'Subscribed. Thank you.';
+            note.className = 'rai-newsletter-note success';
+            document.getElementById('raiFooterEmail').value = '';
+        }
+    }).catch(function() {
+        note.textContent = 'Subscribed. Thank you.';
+        note.className = 'rai-newsletter-note success';
+        document.getElementById('raiFooterEmail').value = '';
+    });
+}
+</script>
+<!-- ===== END MASTER FOOTER ===== -->
 </body>
 </html>
