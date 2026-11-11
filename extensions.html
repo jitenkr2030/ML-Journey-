@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://reconcileai.in/extensions">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extensions — ReconcileAI | Tally, BUSY & Zoho Integrations</title>
+    <meta name="description" content="ReconcileAI extensions for Tally, BUSY, Zoho Books & more. Connect your accounting software with AI-powered GST & bank reconciliation.">
+    <meta property="og:title" content="Extensions — ReconcileAI">
+    <meta property="og:description" content="Connect Tally, BUSY, Zoho Books with AI-powered reconciliation.">
+    <meta property="og:url" content="https://reconcileai.in/extensions">
+    <meta name="geo.region" content="IN">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/festival-themes.css">
+    <script src="/festival-config.js" defer></script>
+    <script src="/festival-engine.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0b;--surface:#131316;--border:#222228;--accent:#4f8cff;--accent2:#36d399;--accent3:#f59e0b;--text:#e8e8ed;--text2:#9898a0;--text3:#5c5c66;--font-display:'Instrument Serif',serif;--font-body:'DM Sans',sans-serif}
+    body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;overflow-x:hidden}
+    .ext-nav{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 0;position:sticky;top:0;z-index:100}
+    .ext-nav-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+    .ext-logo{font-family:var(--font-display);font-size:22px;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:10px}
+    .ext-logo img{width:32px;height:32px}
+    .ext-logo span span{color:var(--accent)}
+    .ext-nav-links{display:flex;align-items:center;gap:24px}
+    .ext-nav-links a{color:var(--text2);text-decoration:none;font-size:13px;font-weight:600}
+    .ext-nav-links a:hover{color:var(--accent)}
+    .ext-cta{background:var(--accent);color:#fff;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+    .ext-hero{text-align:center;padding:56px 20px 40px;max-width:800px;margin:0 auto}
+    .ext-hero .badge{display:inline-flex;background:rgba(79,140,255,0.1);border:1px solid rgba(79,140,255,0.2);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;color:var(--accent);margin-bottom:20px;text-transform:uppercase;letter-spacing:0.08em}
+    .ext-hero h1{font-family:var(--font-display);font-size:clamp(30px,5vw,48px);line-height:1.15;margin-bottom:16px}
+    .ext-hero h1 em{color:var(--accent);font-style:italic}
+    .ext-hero p{font-size:17px;color:var(--text2);max-width:650px;margin:0 auto;line-height:1.7}
+    .ext-grid{max-width:1100px;margin:0 auto;padding:0 20px 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    .ext-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;transition:all 0.3s}
+    .ext-card:hover{border-color:rgba(79,140,255,0.3);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.15)}
+    .ext-card .card-icon{font-size:40px;margin-bottom:16px}
+    .ext-card h3{font-family:var(--font-display);font-size:22px;margin-bottom:8px}
+    .ext-card .card-tag{display:inline-block;background:rgba(54,211,153,0.1);color:#36d399;font-family:monospace;font-size:10px;padding:3px 10px;border-radius:8px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px}
+    .ext-card .card-tag.soon{background:rgba(245,158,11,0.1);color:#f59e0b}
+    .ext-card p{color:var(--text2);font-size:14px;line-height:1.7;margin-bottom:16px}
+    .ext-card ul{list-style:none;padding:0;margin:0 0 20px}
+    .ext-card li{color:var(--text2);font-size:13px;padding:4px 0;display:flex;align-items:center;gap:8px}
+    .ext-card li::before{content:"✓";color:#36d399;font-weight:700}
+    .ext-btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 22px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:700;transition:all 0.2s}
+    .ext-btn:hover{transform:translateY(-2px)}
+    .ext-btn.outline{background:transparent;border:2px solid var(--border);color:var(--text)}
+    .ext-btn.outline:hover{border-color:var(--accent);color:var(--accent)}
+    .ext-cta-section{background:linear-gradient(135deg,rgba(79,140,255,0.1),rgba(54,211,153,0.06));border:1px solid rgba(79,140,255,0.2);border-radius:20px;padding:48px;text-align:center;max-width:800px;margin:0 auto 60px}
+    .ext-cta-section h2{font-family:var(--font-display);font-size:32px;margin-bottom:12px}
+    .ext-cta-section h2 em{color:var(--accent);font-style:italic}
+    .ext-cta-section p{color:var(--text2);margin-bottom:28px}
+    .ext-footer{border-top:1px solid var(--border);padding:24px 20px;text-align:center;font-size:12px;color:var(--text3)}
+    .ext-footer a{color:var(--accent);text-decoration:none}
+    @media(max-width:768px){.ext-nav-links{display:none}.ext-hero{padding:36px 16px 28px}.ext-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<nav class="ext-nav">
+    <div class="ext-nav-inner">
+        <a href="/" class="ext-logo"><img src="/favicon.svg" alt="ReconcileAI"><span>Reconcile<span>AI</span></span></a>
+        <div class="ext-nav-links">
+            <a href="/tools">Free Tools</a>
+            <a href="/templates">Templates</a>
+            <a href="/blog">Blog</a>
+            <a href="/compare">Compare</a>
+            <a href="/#pricing">Pricing</a>
+        </div>
+        <a href="#" class="ext-cta" onclick="openAuthModal('register');return false;">Get Started</a>
+    </div>
+</nav>
+
+<section class="ext-hero">
+    <div class="badge">🧩 Integrations & Extensions</div>
+    <h1>Connect Your <em>Accounting Software</em></h1>
+    <p>ReconcileAI extensions connect seamlessly with Tally, BUSY, Zoho Books and more. Import data, sync transactions and automate reconciliation.</p>
+</section>
+
+<div class="ext-grid">
+    <div class="ext-card">
+        <div class="card-icon">📊</div>
+        <div class="card-tag">Available Now</div>
+        <h3>Tally Connector</h3>
+        <p>Import Tally XML/CSV data directly into ReconcileAI. Sync ledgers, vouchers and bank entries for AI-powered reconciliation.</p>
+        <ul>
+            <li>Import Tally XML exports</li>
+            <li>Sync ledger masters</li>
+            <li>Auto-map Tally ledgers</li>
+            <li>Export reconciliation reports back to Tally</li>
+        </ul>
+        <a href="#" class="ext-btn" onclick="openAuthModal('register');return false;">Install Now</a>
+    </div>
+
+    <div class="ext-card">
+        <div class="card-icon">💼</div>
+        <div class="card-tag">Available Now</div>
+        <h3>BUSY Connector</h3>
+        <p>Connect BUSY accounting software with ReconcileAI. Import company data and automate bank reconciliation.</p>
+        <ul>
+            <li>Import BUSY data exports</li>
+            <li>Ledger mapping</li>
+            <li>Bank statement reconciliation</li>
+            <li>GST data sync</li>
+        </ul>
+        <a href="#" class="ext-btn" onclick="openAuthModal('register');return false;">Install Now</a>
+    </div>
+
+    <div class="ext-card">
+        <div class="card-icon">🟢</div>
+        <div class="card-tag">Available Now</div>
+        <h3>Zoho Books Connector</h3>
+        <p>Sync Zoho Books transactions with ReconcileAI for automated GST reconciliation and financial reporting.</p>
+        <ul>
+            <li>API-based sync</li>
+            <li>Transaction import</li>
+            <li>GST reconciliation</li>
+            <li>Financial reports</li>
+        </ul>
+        <a href="#" class="ext-btn" onclick="openAuthModal('register');return false;">Install Now</a>
+    </div>
+
+    <div class="ext-card">
+        <div class="card-icon">🏢</div>
+        <div class="card-tag">Available Now</div>
+        <h3>CA Firm Manager</h3>
+        <p>Manage multiple clients from one dashboard. Track GST compliance, reconciliation status and deadlines.</p>
+        <ul>
+            <li>Multi-client dashboard</li>
+            <li>GSTIN management</li>
+            <li>Compliance calendar</li>
+            <li>Client reporting</li>
+        </ul>
+        <a href="#" class="ext-btn" onclick="openAuthModal('register');return false;">Get Started</a>
+    </div>
+
+    <div class="ext-card">
+        <div class="card-icon">🏦</div>
+        <div class="card-tag soon">Coming Soon</div>
+        <h3>Bank API Connector</h3>
+        <p>Direct bank statement fetching via account aggregator framework. No more manual uploads.</p>
+        <ul>
+            <li>RBI Account Aggregator</li>
+            <li>Auto-fetch bank statements</li>
+            <li>Real-time transaction sync</li>
+            <li>Multi-bank support</li>
+        </ul>
+        <a href="#" class="ext-btn outline">Join Waitlist</a>
+    </div>
+
+    <div class="ext-card">
+        <div class="card-icon">📱</div>
+        <div class="card-tag soon">Coming Soon</div>
+        <h3>WhatsApp Bot</h3>
+        <p>Get reconciliation updates and GST reminders on WhatsApp. Upload receipts directly via chat.</p>
+        <ul>
+            <li>GST deadline reminders</li>
+            <li>Quick reconciliation status</li>
+            <li>Receipt upload via chat</li>
+            <li>Daily summary reports</li>
+        </ul>
+        <a href="#" class="ext-btn outline">Join Waitlist</a>
+    </div>
+</div>
+
+<section class="ext-cta-section">
+    <h2>Need a <em>Custom Integration?</em></h2>
+    <p>We build custom connectors for enterprise clients. Tell us your accounting stack and we'll make it work.</p>
+    <a href="mailto:business@reconcileai.in" class="ext-btn">📧 Contact Us</a>
+</section>
+
+<footer class="ext-footer">
+    <p>© 2026 ReconcileAI. All rights reserved. | <a href="/">Home</a> | <a href="/blog">Blog</a> | <a href="/faq">FAQ</a> | <a href="/compare">Compare</a></p>
+</footer>
+
+<script>
+function openAuthModal(m){if(typeof window.openAuthModal==='function'){window.openAuthModal(m)}else{window.location.href='/#pricing'}}
+</script>
+</body>
+</html>
