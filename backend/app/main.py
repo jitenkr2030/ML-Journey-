@@ -278,6 +278,100 @@ async def _no_5xx_for_pages(request: Request, call_next):
 
 
 
+
+# ===== Safe middleware: only for pages, NEVER touches /api/ =====
+@app.middleware("http")
+async def _safe_pages_only(request, call_next):
+    """Handle page errors gracefully. API routes work 100% normally."""
+    path = request.url.path
+
+    # NEVER touch API routes - let them work perfectly
+    if path.startswith("/api/"):
+        return await call_next(request)
+
+    try:
+        response = await call_next(request)
+        return response
+    except Exception:
+        try:
+            idx = os.path.join(APP_ROOT, "index.html")
+            if os.path.exists(idx):
+                return FileResponse(idx, media_type="text/html", status_code=200)
+        except Exception:
+            pass
+        return HTMLResponse("<html><body><h1>ReconcileAI</h1></body></html>", status_code=200)
+
+
+
+
+# ===== 404 handler: return proper 404 for unknown paths =====
+from starlette.exceptions import HTTPException as StarletteHTTPException
+
+@app.exception_handler(404)
+async def custom_404(request, exc):
+    """Return 404 for unknown paths. Never serve index.html for files."""
+    path = request.url.path
+
+    # For API paths, return JSON 404
+    if path.startswith("/api/"):
+        return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    # For suspicious file extensions, return 404
+    suspicious = ['.zip', '.tar', '.gz', '.rar', '.sql', '.bak', '.dump', '.dmp',
+                  '.rdb', '.env', '.git', '.php', '.py', '.sh', '.exe', '.7z']
+    for ext in suspicious:
+        if path.lower().endswith(ext):
+            return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    # For page paths, try to serve HTML
+    try:
+        html_file = os.path.join(APP_ROOT, path.strip("/") + ".html")
+        if os.path.isfile(html_file):
+            return FileResponse(html_file, media_type="text/html")
+    except Exception:
+        pass
+
+    # Return simple 404
+    return HTMLResponse(
+        '<html><body style="background:#0a0a0b;color:#e8e8ed;font-family:sans-serif;text-align:center;padding:80px 20px"><h1>404</h1><p>Page not found</p><a href="/" style="color:#4f8cff">Go Home</a></body></html>',
+        status_code=404
+    )
+
+
+# ===== Scanner/Hacker Blocker =====
+@app.middleware("http")
+async def _block_scanners(request, call_next):
+    """Block common scanner/hacker probes. Return 404 for suspicious files."""
+    path = request.url.path.lower()
+
+    # Suspicious file extensions - never serve these
+    suspicious_ext = ['.zip', '.tar.gz', '.rar', '.sql', '.bak', '.dump', '.dmp',
+                      '.rdb', '.psql', '.pgsql', '.7z', '.tar', '.gz',
+                      '.env', '.git', '.svn', '.htaccess', '.htpasswd']
+
+    for ext in suspicious_ext:
+        if path.endswith(ext):
+            return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    # Suspicious paths
+    suspicious_paths = ['wp-admin', 'wp-content', 'wp-login', 'wp-includes',
+                        'phpmyadmin', 'adminer', '.git', '.svn', '.env',
+                        'backup', 'database', 'dump', 'config.php',
+                        'xmlrpc.php', 'install.php', 'setup.php']
+
+    for sp in suspicious_paths:
+        if sp in path:
+            return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    # Let everything else through
+    return await call_next(request)
+
+
+
+@app.get("/config")
+async def get_config():
+    return {"app_name": "ReconcileAI", "version": "2.0"}
+
 @app.get("/compare")
 async def compare_page():
     return _serve_page("compare.html")
@@ -709,3 +803,5 @@ async def _global_error_handler(request: Request, exc: Exception):
     if _os.path.exists(_idx):
         return FileResponse(_idx, media_type="text/html", status_code=200)
     return JSONResponse(status_code=200, content={"status": "ok"})
+
+

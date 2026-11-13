@@ -2281,8 +2281,8 @@ document.addEventListener('click', function(e) {
 <p>Login to access your dashboard and history.</p>
 <div class="error-msg" id="loginError"></div>
 <div class="success-msg" id="loginSuccess"></div>
-<input class="input-field" id="loginEmail" type="email" placeholder="Email address">
-<input class="input-field" id="loginPassword" type="password" placeholder="Password">
+<input class="input-field" id="oldLoginEmail" type="email" placeholder="Email address">
+<input class="input-field" id="oldLoginPassword" type="password" placeholder="Password">
 <button class="btn-full" onclick="loginUser()">Login &rarr;</button>
 <div class="switch-link">Don't have an account? <a onclick="closeModal('loginModal');openModal('registerModal')">Sign Up Free</a></div>
 </div>
@@ -2805,7 +2805,7 @@ async function openHistory(){
         let h='';
         entries.forEach(e=>{
             const icons={brs:'🏦',gst:'📋',upi:'📱',bookkeeping:'📚',gstr1:'📤',gstr2b:'📥',gstr3b:'🧮'};
-            h+='<div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--surface);transition:all .2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">';
+            h+='<div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;background:var(--surface);transition:all .2s" onmouseover="this.style.borderColor=\'var(--accent)\'" onmouseout="this.style.borderColor=\'var(--border)\'">';
             h+='<span style="font-size:22px">'+(icons[e.recon_type]||'🔍')+'</span>';
             h+='<div style="flex:1">';
             h+='<div style="font-weight:600;font-size:13px;text-transform:capitalize">'+e.recon_type.replace('_',' ')+'</div>';
@@ -3343,13 +3343,13 @@ document.addEventListener('click', function(e) {
 </script>
 
 <script>
-function isPaidOrFree(){
+async function isPaidOrFree(){
     // Free tier: show summary free, details require payment
     // For now, show details to paying users or after payment
     const paid=sessionStorage.getItem('paid_'+currentType);
     return paid==='true';
 }
-function getPaywallHTML(){
+async function getPaywallHTML(){
     if(currentPaymentSessionId){
 const status=await fetch('/api/payment/status/'+currentPaymentSessionId).then(r=>r.json()).catch(()=>({}));
 if(status.status==='verified')return h;
@@ -3997,20 +3997,28 @@ function showRegister() {
 }
 
 async function handleLogin() {
-    var email = document.getElementById('loginEmail').value.trim();
-    var password = document.getElementById('loginPassword').value;
-    var errDiv = document.getElementById('loginError');
-    var btn = document.querySelector('#loginForm .auth-btn');
+    var emailEl = document.getElementById('loginEmail') || document.getElementById('authEmail') || document.getElementById('email');
+    var passEl = document.getElementById('loginPassword') || document.getElementById('authPassword') || document.getElementById('password');
+    var errEl = document.getElementById('authError') || document.getElementById('loginError');
+    var btnEl = document.querySelector('.auth-btn') || document.querySelector('#loginBtn');
 
-    if (!email || !password) {
-        errDiv.textContent = 'Please fill in all fields.';
-        errDiv.className = 'auth-error';
+    if (!emailEl || !passEl) {
+        console.error('Login form fields not found');
+        alert('Login form not found. Please refresh the page.');
         return;
     }
 
-    btn.disabled = true;
-    btn.textContent = 'Logging in...';
-    errDiv.textContent = '';
+    var email = emailEl.value.trim();
+    var password = passEl.value;
+
+    if (!email || !password) {
+        if (errEl) { errEl.textContent = 'Please enter email and password.'; errEl.style.display = 'block'; }
+        else { alert('Please enter email and password.'); }
+        return;
+    }
+
+    if (btnEl) { btnEl.disabled = true; btnEl.textContent = 'Logging in...'; }
+    if (errEl) { errEl.style.display = 'none'; }
 
     try {
         var resp = await fetch('/api/auth/login', {
@@ -4018,26 +4026,101 @@ async function handleLogin() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email, password: password })
         });
+
         var data = await resp.json();
+        console.log('Login response:', data);
 
-        if (resp.ok) {
-            errDiv.textContent = 'Login successful! Redirecting...';
-            errDiv.className = 'auth-error success';
-            if (data.token) localStorage.setItem('rai_token', data.token);
-            if (data.user) localStorage.setItem('rai_user', JSON.stringify(data.user));
-            setTimeout(function() { window.location.href = '/dashboard'; }, 800);
+        if (data.success && (data.token || data.access_token)) {
+            var token = data.token || data.access_token;
+
+            // Save token
+            localStorage.setItem('token', token);
+            localStorage.setItem('token', token);
+
+            // Save user info
+            if (data.user) {
+                localStorage.setItem('user', JSON.stringify(data.user));
+            } else if (data.email) {
+                localStorage.setItem('user', JSON.stringify(data));
+            }
+
+            // Close modal
+            var modal = document.getElementById('authModal') || document.getElementById('loginModal') || document.getElementById('authModalOverlay');
+            if (modal) { modal.style.display = 'none'; }
+
+            // Update UI to show logged-in state
+            //updateAuthUI(token);
+
+            // Redirect to dashboard if available
+            if (true) {
+                window.location.href = '/dashboard';
+            } else {
+                window.location.reload();
+            }
         } else {
-            errDiv.textContent = data.detail || data.error || 'Login failed. Check your credentials.';
-            errDiv.className = 'auth-error';
+            var msg = data.detail || data.message || 'Invalid email or password.';
+            if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
+            else { alert(msg); }
         }
-    } catch(e) {
-        errDiv.textContent = 'Network error. Is the server running?';
-        errDiv.className = 'auth-error';
+    } catch (err) {
+        console.error('Login error:', err);
+        var msg = 'Login failed. Please check your connection and try again.';
+        if (errEl) { errEl.textContent = msg; errEl.style.display = 'block'; }
+        else { alert(msg); }
+    } finally {
+        if (btnEl) { btnEl.disabled = false; btnEl.textContent = 'Login \u2192'; }
     }
-
-    btn.disabled = false;
-    btn.textContent = 'Login →';
 }
+
+function updateAuthUI(token) {
+    // Show logged-in state in nav
+    var loginBtns = document.querySelectorAll('[onclick*="openAuthModal"]');
+    loginBtns.forEach(function(btn) {
+        if (btn.textContent.includes('Login') || btn.textContent.includes('Get Started')) {
+            btn.textContent = 'Dashboard';
+            btn.setAttribute('onclick', "window.location.href='/dashboard.html'");
+        }
+    });
+}
+
+function getAuthHeaders() {
+    var token = localStorage.getItem('token') || localStorage.getItem('access_token');
+    var headers = { 'Content-Type': 'application/json' };
+    if (token) { headers['Authorization'] = 'Bearer ' + token; }
+    return headers;
+}
+
+async function handleLogout() {
+    var token = localStorage.getItem('token') || localStorage.getItem('access_token');
+    try {
+        await fetch('/api/auth/logout', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token }
+        });
+    } catch(e) {}
+    localStorage.removeItem('token');
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('user');
+    window.location.href = '/';
+}
+
+// Check login status on page load
+(function() {
+    var token = localStorage.getItem('token') || localStorage.getItem('access_token');
+    if (token) {
+        fetch('/api/auth/me', { headers: { 'Authorization': 'Bearer ' + token } })
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data && (data.email || data.user)) {
+                    //updateAuthUI(token);
+                } else {
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('access_token');
+                }
+            })
+            .catch(function() {});
+    }
+})();
 
 async function handleRegister() {
     var name = document.getElementById('regName').value.trim();

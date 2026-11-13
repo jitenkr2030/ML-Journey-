@@ -41,6 +41,15 @@ async def login(req: LoginReq, response: Response):
         response.set_cookie(key="session_token", value=result["token"], httponly=True, max_age=2592000, samesite="lax")
     return result
 
+
+@router.get("/login")
+async def login_get():
+    """Handle GET to login (e.g. from browser link). Return helpful message."""
+    return JSONResponse(status_code=405, content={
+        "success": False,
+        "detail": "Please use POST method with email and password to login."
+    })
+
 @router.get("/me")
 async def me(request: Request):
     token = request.cookies.get("session_token", "")

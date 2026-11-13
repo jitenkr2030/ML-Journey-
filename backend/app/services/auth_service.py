@@ -109,7 +109,7 @@ async def register_user(email: str, password: str, name: str, firm_name: str = "
         exp = datetime.utcnow() + timedelta(days=30)
         await conn.execute("INSERT INTO sessions(user_id,token,expires_at) VALUES($1,$2,$3)", uid, token, exp)
         await conn.execute("INSERT INTO activity(user_id,action,service_type,details) VALUES($1,'register','auth','New account created')", uid)
-        return {"success": True, "token": token, "user": {"id": uid, "email": email, "name": name, "firm_name": firm_name}}
+        return {"success": True, "token": token, "user": {"id": uid, "email": email, "name": name, "firm_name": firm_name, "is_admin": False}}
 
 async def login_user(email: str, password: str) -> dict:
     pool = await get_pool()
@@ -122,7 +122,7 @@ async def login_user(email: str, password: str) -> dict:
         await conn.execute("INSERT INTO sessions(user_id,token,expires_at) VALUES($1,$2,$3)", u['id'], token, exp)
         await conn.execute("UPDATE users SET last_login=NOW() WHERE id=$1", u['id'])
         await conn.execute("INSERT INTO activity(user_id,action,service_type,details) VALUES($1,'login','auth','Successful login')", u['id'])
-        return {"success": True, "token": token, "user": {"id": u['id'], "email": u['email'], "name": u['name'], "firm_name": u['firm_name']}}
+        return {"success": True, "token": token, "user": {"id": u['id'], "email": u['email'], "name": u['name'], "firm_name": u['firm_name'], "is_admin": u['is_admin']}}
 
 async def get_user_by_token(token: str) -> Optional[dict]:
     pool = await get_pool()
